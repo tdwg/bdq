@@ -201,6 +201,11 @@ The following namespace abbreviations are used in this document:
 | bdqenh:      | https://rs.tdwg.org/bdqenh/terms/           |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
+| bdqtestargument:  | https://rs.tdwg.org/bdqtest/argument/ |
+| bdqtestinformationelement: | https://rs.tdwg.org/bdqtest/informationelement/ |
+| bdqtestmethod:    | https://rs.tdwg.org/bdqtest/method/ |
+| bdqtestpolicy:    | https://rs.tdwg.org/bdqtest/policy/ |
+| bdqtestspecification: | https://rs.tdwg.org/bdqtest/specification/ |
 | bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
 | dcat:        | http://www.w3.org/ns/dcat#                  |
@@ -407,7 +412,7 @@ bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134 a bdqffdq:Validation ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/21" ;
     skos:note "Non-country information such as \"high seas\" will fail this Test (high seas should use dwc:countryCode = \"XZ\" and have dwc:country empty). Getty Place Types for administrative level \"nation\" are 81010 nation, 81011 independent sovereign nation, and 81012 independent nation. Multiple values in the dwc:country field (whether to signify on a border or in a list of possibilities) will fail this Test. Locations outside of a jurisdiction covered by a country code should not have a value in the field dwc:countryCode. This Test should find any matches at the Getty \"nation\" level including internationalized names and historical representations of that nation (where boundaries are same). This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters." ;
     skos:prefLabel "Validation dwc:country Found for SingleRecord" ;
-    bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/30db5994-81fa-4684-ac54-cfc226209d27> ;
+    bdqffdq:hasActedUponInformationElement bdqtestinformationelement:30db5994-81fa-4684-ac54-cfc226209d27 ;
     bdqffdq:hasCriterion bdqcrit:Found ;
     bdqffdq:hasDataQualityDimension bdqdim:Conformance ;
     bdqffdq:hasResourceType bdqffdq:SingleRecord .
@@ -418,7 +423,7 @@ bdqcrit:Found a bdqffdq:Criterion ;
 bdqdim:Conformance a bdqffdq:DataQualityDimension ;
     rdfs:label "Conformance" .
 
-<https://rs.tdwg.org/bdqtest/informationelement/30db5994-81fa-4684-ac54-cfc226209d27> a bdqffdq:ActedUpon ;
+bdqtestinformationelement:30db5994-81fa-4684-ac54-cfc226209d27 a bdqffdq:ActedUpon ;
     owl:sameAs <urn:uuid:30db5994-81fa-4684-ac54-cfc226209d27> ;
     rdfs:label "Information Element ActedUpon dwc:country" ;
     skos:prefLabel "Information Element ActedUpon dwc:country" ;
@@ -433,7 +438,7 @@ bdqffdq:SingleRecord a bdqffdq:ResourceType ;
 <https://www.getty.edu/research/tools/vocabularies/tgn/index.html> a dcterms:BibliographicResource ;
     dcterms:bibliographicCitation "Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html" .
 
-<https://rs.tdwg.org/bdqtest/method/04cee4e0-0c83-40cc-8de2-e7391f0a97a9> a bdqffdq:ValidationMethod ;
+bdqtestmethod:04cee4e0-0c83-40cc-8de2-e7391f0a97a9 a bdqffdq:ValidationMethod ;
     owl:sameAs <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> ;
     rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
     skos:historyNote "Source: ALA, GBIF" ;
@@ -442,19 +447,19 @@ bdqffdq:SingleRecord a bdqffdq:ResourceType ;
         "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE" ;
     skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
     bdqffdq:forValidation bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134 ;
-    bdqffdq:hasSpecification <https://rs.tdwg.org/bdqtest/specification/051f6ad7-1a4b-4e6c-8a1d-2af76de24848> .
+    bdqffdq:hasSpecification bdqtestspecification:051f6ad7-1a4b-4e6c-8a1d-2af76de24848 .
 
-<https://rs.tdwg.org/bdqtest/specification/051f6ad7-1a4b-4e6c-8a1d-2af76de24848> a bdqffdq:Specification ;
+bdqtestspecification:051f6ad7-1a4b-4e6c-8a1d-2af76de24848 a bdqffdq:Specification ;
     owl:sameAs <urn:uuid:051f6ad7-1a4b-4e6c-8a1d-2af76de24848> ;
     rdfs:label "Specification for: VALIDATION_COUNTRY_FOUND" ;
     dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdqval:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
     skos:example "dwc:country=\"Eswatini\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country is a valid country name in the bdqval:sourceAuthority\"",
         "dwc:country=\"Tasmania\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"Tasmania is not found at the level of national in the bdqval:sourceAuthority\"" ;
-    bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/3e00109a-13d3-416d-9a91-127c99b47473> ;
+    bdqffdq:hasArgument bdqtestargument:3e00109a-13d3-416d-9a91-127c99b47473 ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdqval:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of \"nation\" in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT" .
 
-<https://rs.tdwg.org/bdqtest/argument/3e00109a-13d3-416d-9a91-127c99b47473> a bdqffdq:Argument ;
+bdqtestargument:3e00109a-13d3-416d-9a91-127c99b47473 a bdqffdq:Argument ;
     owl:sameAs <urn:uuid:3e00109a-13d3-416d-9a91-127c99b47473> ;
     rdfs:label "Default value for bdqval:sourceAuthority:\"The Getty Thesaurus of Geographic Names (TGN)\"" ;
     bdqffdq:hasArgumentValue "The Getty Thesaurus of Geographic Names (TGN)" ;
@@ -462,7 +467,7 @@ bdqffdq:SingleRecord a bdqffdq:ResourceType ;
 
 bdqval:sourceAuthority a bdqffdq:Parameter .
 
-<https://rs.tdwg.org/bdqtest/policy/0348eccf-fc7f-49b3-88b6-1d911e98cbbb> a bdqffdq:ValidationPolicy ;
+bdqtestpolicy:0348eccf-fc7f-49b3-88b6-1d911e98cbbb a bdqffdq:ValidationPolicy ;
     owl:sameAs <urn:uuid:0348eccf-fc7f-49b3-88b6-1d911e98cbbb> ;
     rdfs:label "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
     skos:prefLabel "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
@@ -649,7 +654,7 @@ bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25 a bdqffdq:Measure ;
   skos:note "For Quality Assurance, filter record set until this measure is COMPLETE." ;
   bdqffdq:hasDataQualityDimension bdqdim:Conformance ;
   dcterms:description "Measure if all VALIDATION_COUNTRY_FOUND in a record set are COMPLIANT." ;
-  bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/4d7d45ed-da78-44b0-8e93-e8c0423aa4a9> ;
+  bdqffdq:hasActedUponInformationElement bdqtestinformationelement:4d7d45ed-da78-44b0-8e93-e8c0423aa4a9 ;
   dcterms:modified "2025-03-07"^^xsd:date ;
   dcterms:references <https://doi.org/10.1371/journal.pone.0178731> ;
   skos:historyNote "https://github.com/tdwg/bdq/issues/295" ;
@@ -657,7 +662,7 @@ bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25 a bdqffdq:Measure ;
   dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07> ;
   skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:country Found for MultiRecord" .
 
-<https://rs.tdwg.org/bdqtest/informationelement/4d7d45ed-da78-44b0-8e93-e8c0423aa4a9> a bdqffdq:ActedUpon ;
+bdqtestinformationelement:4d7d45ed-da78-44b0-8e93-e8c0423aa4a9 a bdqffdq:ActedUpon ;
   owl:sameAs <urn:uuid:4d7d45ed-da78-44b0-8e93-e8c0423aa4a9> ;
   bdqffdq:composedOf bdqval:AggregatedTestResponseOutcomes ;
   bdqffdq:aggregatesResponsesFrom bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134 ;
@@ -1506,6 +1511,7 @@ And `Issue Method`: Let `ISM(is)` be the set of `Specifications` for an `Issue` 
 ISM(is) = { s | s ∈ S ⋀ (is, s) ∈ rel_ISM }
 
 ism(is1) = {s1, s2}
+```
 
 Example competency question for a `Validation Method`: "Which Specifications are the methods for a given Validation?" expressed as sparql:
 ```sparql
@@ -1930,7 +1936,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### Argument
 
 - Name: [bdqffdq:Argument](../../list/bdqffdq/index.md#Argument)
-- Definition: A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner.
+- Definition: A value that, when provided to a [Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner.
 - SubClass Of: [SolutionsConcept](../../list/bdqffdq/index.md#SolutionsConcept)
 
 ********************
@@ -2567,7 +2573,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasArgumentValue
 
 - Name: [bdqffdq:hasArgumentValue](../../list/bdqffdq/index.md#hasArgumentValue)
-- Definition: The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a Formal Parameter to determine the behavior of the bdqffdq:Specification.
+- Definition: The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a [Formal Parameter](<../../../index.md#glossary_Formal_Parameter> "A placeholder defined in the function or method signature. It represents the input that the function expects. In the function fx = x^2, x is a formal parameter of the function f. In 'VALIDATION_GENUS_FOUND', bdqval:sour…") to determine the behavior of the bdqffdq:Specification.
 
 ********************
 
@@ -2761,7 +2767,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-13>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-13>
 
 **Biodiversity Information Standards (TDWG)**
 
