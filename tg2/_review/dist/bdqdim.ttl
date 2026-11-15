@@ -1,0 +1,100 @@
+@prefix bdqdim: <https://rs.tdwg.org/bdqdim/terms/> .
+@prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tdwgutility: <http://rs.tdwg.org/dwc/terms/attributes/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rs.tdwg.org/bdqdim/terms/version/Completeness-2024-09-30> a bdqffdq:DataQualityDimension ;
+    rdfs:label "Completeness"@en ;
+    dcterms:isPartOf bdqdim: ;
+    dcterms:isVersionOf bdqdim:Completeness ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Completeness" ;
+    rdfs:comment "The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use."@en ;
+    rdfs:isDefinedBy bdqdim: ;
+    skos:definition "The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use."@en ;
+    skos:inScheme bdqdim: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Completeness"@en .
+
+<https://rs.tdwg.org/bdqdim/terms/version/Conformance-2024-09-30> a bdqffdq:DataQualityDimension ;
+    rdfs:label "Conformance"@en ;
+    dcterms:isPartOf bdqdim: ;
+    dcterms:isVersionOf bdqdim:Conformance ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Conformance" ;
+    rdfs:comment "Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard."@en ;
+    rdfs:isDefinedBy bdqdim: ;
+    skos:definition "Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard."@en ;
+    skos:inScheme bdqdim: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Conformance"@en .
+
+<https://rs.tdwg.org/bdqdim/terms/version/Consistency-2024-09-30> a bdqffdq:DataQualityDimension ;
+    rdfs:label "Consistency"@en ;
+    dcterms:isPartOf bdqdim: ;
+    dcterms:isVersionOf bdqdim:Consistency ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Consistency" ;
+    rdfs:comment "Agreement among related bdqffdq:InformationElements that are present in the data. Note that missing bdqffdq:InformationElements do not make a test inconsistent."@en ;
+    rdfs:isDefinedBy bdqdim: ;
+    skos:definition "Agreement among related bdqffdq:InformationElements that are present in the data. Note that missing bdqffdq:InformationElements do not make a test inconsistent."@en ;
+    skos:inScheme bdqdim: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Consistency"@en .
+
+<https://rs.tdwg.org/bdqdim/terms/version/Likeliness-2024-09-30> a bdqffdq:DataQualityDimension ;
+    rdfs:label "Likeliness"@en ;
+    dcterms:isPartOf bdqdim: ;
+    dcterms:isVersionOf bdqdim:Likeliness ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Likeliness" ;
+    rdfs:comment "The likelihood of one or more Darwin Core Terms having a true or expected values."@en ;
+    rdfs:isDefinedBy bdqdim: ;
+    skos:definition "The likelihood of one or more Darwin Core Terms having a true or expected values."@en ;
+    skos:inScheme bdqdim: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Likeliness"@en .
+
+<https://rs.tdwg.org/bdqdim/terms/version/Reliability-2024-09-30> a bdqffdq:DataQualityDimension ;
+    rdfs:label "Reliability"@en ;
+    dcterms:isPartOf bdqdim: ;
+    dcterms:isVersionOf bdqdim:Reliability ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Reliability" ;
+    rdfs:comment "A measure of the degree to which data values agree with and describe an identified source of truth (object, event or any abstract or real 'thing')."@en ;
+    rdfs:isDefinedBy bdqdim: ;
+    skos:definition "A measure of the degree to which data values agree with and describe an identified source of truth (object, event or any abstract or real 'thing')."@en ;
+    skos:inScheme bdqdim: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Reliability"@en .
+
+<https://rs.tdwg.org/bdqdim/terms/version/Resolution-2024-09-30> a bdqffdq:DataQualityDimension ;
+    rdfs:label "Resolution"@en ;
+    dcterms:isPartOf bdqdim: ;
+    dcterms:isVersionOf bdqdim:Resolution ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Resolution" ;
+    rdfs:comment "The extent to which the data have sufficiently detailed information. A measure of the granularity of the data, or the smallest measurable increment."@en ;
+    rdfs:isDefinedBy bdqdim: ;
+    skos:definition "The extent to which the data have sufficiently detailed information. A measure of the granularity of the data, or the smallest measurable increment."@en ;
+    skos:inScheme bdqdim: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Resolution"@en .
+
+bdqdim: a foaf:document ;
+    dc:creator "Biodiversity Information Standards (TDWG)" ;
+    dc:format "application/rdf+xml" ;
+    dcterms:references bdqdim: .
+

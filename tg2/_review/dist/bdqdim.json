@@ -1,0 +1,461 @@
+[
+  {
+    "@id": "https://rs.tdwg.org/bdqdim/terms/",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/document"
+    ],
+    "http://purl.org/dc/elements/1.1/creator": [
+      {
+        "@value": "Biodiversity Information Standards (TDWG)"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/format": [
+      {
+        "@value": "application/rdf+xml"
+      }
+    ],
+    "http://purl.org/dc/terms/references": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqdim/terms/version/Completeness-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/Completeness"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Completeness"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Completeness"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The extent to which data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Completeness"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqdim/terms/version/Conformance-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/Conformance"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Conformance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Conformance"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Where data in a bdqffdq:InformationElement conform to a format, syntax, data type, range, or standard."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Conformance"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqdim/terms/version/Consistency-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/Consistency"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Consistency"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Agreement among related bdqffdq:InformationElements that are present in the data. Note that missing bdqffdq:InformationElements do not make a test inconsistent."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Consistency"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Agreement among related bdqffdq:InformationElements that are present in the data. Note that missing bdqffdq:InformationElements do not make a test inconsistent."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Consistency"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqdim/terms/version/Likeliness-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/Likeliness"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Likeliness"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The likelihood of one or more Darwin Core Terms having a true or expected values."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Likeliness"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The likelihood of one or more Darwin Core Terms having a true or expected values."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension).</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Likeliness"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqdim/terms/version/Reliability-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/Reliability"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Reliability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A measure of the degree to which data values agree with and describe an identified source of truth (object, event or any abstract or real 'thing')."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Reliability"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A measure of the degree to which data values agree with and describe an identified source of truth (object, event or any abstract or real 'thing')."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Reliability"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqdim/terms/version/Resolution-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/Resolution"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Resolution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The extent to which the data have sufficiently detailed information. A measure of the granularity of the data, or the smallest measurable increment."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Resolution"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The extent to which the data have sufficiently detailed information. A measure of the granularity of the data, or the smallest measurable increment."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqdim/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Definition from the Fitness for Use Framework: Data Quality Dimensions Document https://github.com/tdwg/bdq/wiki/TG2-Data-Quality-Dimension.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Resolution"
+      }
+    ]
+  }
+]

@@ -109,15 +109,29 @@ The set of information most relevant to the BDQ Tests can be found in the follow
 ### 1.4 Term List Distributions (non-normative)
 
 <!--- This same table appears in bdqtest_landing_header. Edit here, edit there. --->
-| Description | IRI | Download URL | Notes | 
-| ----------- | --- | -----------  | ----- | 
-| HTML file   | TBD | [BDQ Tests List of Terms](../../list/bdqtest/index.md) | Complete term list for the `bdqtest:` vocabulary as a web page. | 
-| RDF/XML file | TBD | [Tests in RDF/XML](../../../dist/bdqtest.xml) | An RDF representation of the Tests in an RDF/XML serialization. | 
-| Turtle file | TBD | [Tests in Turtle](../../../dist/bdqtest.ttl) | An RDF representation of the Tests in a Turtle serialization. | 
-| JSON-LD file | TBD | [Tests in JSON/LD](../../../dist/bdqtest.json) | An RDF representation of the Tests in a JSON-LD serialization. | 
-| CSV file | TBD | [Tests in CSV](../../../vocabulary/bdqtest_term_versions.csv) | CSV file listing all BDQ Tests. | 
-| Single Record Test CSV file | TBD | [Single Record Tests in CSV](../../../dist/bdqtest_singlerecord_tests_current.csv) | CSV file listing just the `Single Record` Tests. |
-| Multi Record Test CSV file | TBD | [Multi Record Tests in CSV](../../../dist/bdqtest_multirecord_tests_current.csv) | CSV file listing just the 		`Multi Record` Tests. |
+The Tests are available as the following downloads:
+
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| HTML download of the BDQ Tests List of Terms | [https://rs.tdwg.org/bdqtest/doc/list/](https://rs.tdwg.org/bdqtest/doc/list/) | [https://bdq.tdwg.org/draft/docs/list/bdqtest/index.md](https://bdq.tdwg.org/draft/docs/list/bdqtest/index.md) |
+| RDF/XML download of all Tests (the current graph of each Test) | [https://bdq.tdwg.org/draft/dist/bdqtest.xml](https://bdq.tdwg.org/draft/dist/bdqtest.xml) | [https://bdq.tdwg.org/draft/dist/bdqtest.xml](https://bdq.tdwg.org/draft/dist/bdqtest.xml) |
+| Turtle download of all Tests (the current graph of each Test) | [https://bdq.tdwg.org/draft/dist/bdqtest.ttl](https://bdq.tdwg.org/draft/dist/bdqtest.ttl) | [https://bdq.tdwg.org/draft/dist/bdqtest.ttl](https://bdq.tdwg.org/draft/dist/bdqtest.ttl) |
+| JSON-LD download of all Tests (the current graph of each Test) | [https://bdq.tdwg.org/draft/dist/bdqtest.json](https://bdq.tdwg.org/draft/dist/bdqtest.json) | [https://bdq.tdwg.org/draft/dist/bdqtest.json](https://bdq.tdwg.org/draft/dist/bdqtest.json) |
+| CSV download of all Tests, all versions | [https://bdq.tdwg.org/draft/vocabulary/bdqtest_term_versions.csv](https://bdq.tdwg.org/draft/vocabulary/bdqtest_term_versions.csv) | [https://bdq.tdwg.org/draft/vocabulary/bdqtest_term_versions.csv](https://bdq.tdwg.org/draft/vocabulary/bdqtest_term_versions.csv) |
+| CSV download of the current SingleRecord Tests | [https://bdq.tdwg.org/draft/dist/bdqtest_singlerecord_tests_current.csv](https://bdq.tdwg.org/draft/dist/bdqtest_singlerecord_tests_current.csv) | [https://bdq.tdwg.org/draft/dist/bdqtest_singlerecord_tests_current.csv](https://bdq.tdwg.org/draft/dist/bdqtest_singlerecord_tests_current.csv) |
+| CSV download of the current MultiRecord Tests | [https://bdq.tdwg.org/draft/dist/bdqtest_multirecord_tests_current.csv](https://bdq.tdwg.org/draft/dist/bdqtest_multirecord_tests_current.csv) | [https://bdq.tdwg.org/draft/dist/bdqtest_multirecord_tests_current.csv](https://bdq.tdwg.org/draft/dist/bdqtest_multirecord_tests_current.csv) |
+| CSV download of the current Tests, one row per Test property | [https://bdq.tdwg.org/draft/dist/bdqtest_tests_vertical.csv](https://bdq.tdwg.org/draft/dist/bdqtest_tests_vertical.csv) | [https://bdq.tdwg.org/draft/dist/bdqtest_tests_vertical.csv](https://bdq.tdwg.org/draft/dist/bdqtest_tests_vertical.csv) |
+
+The Tests and the elements of their graphs (Methods, Specifications, Arguments, information elements, and Policies) are organized in six term lists. Each term list IRI returns the term list's record by content negotiation: its metadata, its versions, and the IRIs of its members, but not their descriptions. The records are available as the following downloads:
+
+| Term list | IRI | Turtle download | JSON-LD download | RDF/XML download |
+| --------- | --- | --------------- | ---------------- | ---------------- |
+| Tests | [https://rs.tdwg.org/bdqtest/terms/](https://rs.tdwg.org/bdqtest/terms/) | [https://rs.tdwg.org/bdqtest/terms.ttl](https://rs.tdwg.org/bdqtest/terms.ttl) | [https://rs.tdwg.org/bdqtest/terms.json](https://rs.tdwg.org/bdqtest/terms.json) | [https://rs.tdwg.org/bdqtest/terms.rdf](https://rs.tdwg.org/bdqtest/terms.rdf) |
+| Methods | [https://rs.tdwg.org/bdqtest/method/](https://rs.tdwg.org/bdqtest/method/) | [https://rs.tdwg.org/bdqtest/method.ttl](https://rs.tdwg.org/bdqtest/method.ttl) | [https://rs.tdwg.org/bdqtest/method.json](https://rs.tdwg.org/bdqtest/method.json) | [https://rs.tdwg.org/bdqtest/method.rdf](https://rs.tdwg.org/bdqtest/method.rdf) |
+| Specifications | [https://rs.tdwg.org/bdqtest/specification/](https://rs.tdwg.org/bdqtest/specification/) | [https://rs.tdwg.org/bdqtest/specification.ttl](https://rs.tdwg.org/bdqtest/specification.ttl) | [https://rs.tdwg.org/bdqtest/specification.json](https://rs.tdwg.org/bdqtest/specification.json) | [https://rs.tdwg.org/bdqtest/specification.rdf](https://rs.tdwg.org/bdqtest/specification.rdf) |
+| Arguments | [https://rs.tdwg.org/bdqtest/argument/](https://rs.tdwg.org/bdqtest/argument/) | [https://rs.tdwg.org/bdqtest/argument.ttl](https://rs.tdwg.org/bdqtest/argument.ttl) | [https://rs.tdwg.org/bdqtest/argument.json](https://rs.tdwg.org/bdqtest/argument.json) | [https://rs.tdwg.org/bdqtest/argument.rdf](https://rs.tdwg.org/bdqtest/argument.rdf) |
+| Information elements | [https://rs.tdwg.org/bdqtest/informationelement/](https://rs.tdwg.org/bdqtest/informationelement/) | [https://rs.tdwg.org/bdqtest/informationelement.ttl](https://rs.tdwg.org/bdqtest/informationelement.ttl) | [https://rs.tdwg.org/bdqtest/informationelement.json](https://rs.tdwg.org/bdqtest/informationelement.json) | [https://rs.tdwg.org/bdqtest/informationelement.rdf](https://rs.tdwg.org/bdqtest/informationelement.rdf) |
+| Policies | [https://rs.tdwg.org/bdqtest/policy/](https://rs.tdwg.org/bdqtest/policy/) | [https://rs.tdwg.org/bdqtest/policy.ttl](https://rs.tdwg.org/bdqtest/policy.ttl) | [https://rs.tdwg.org/bdqtest/policy.json](https://rs.tdwg.org/bdqtest/policy.json) | [https://rs.tdwg.org/bdqtest/policy.rdf](https://rs.tdwg.org/bdqtest/policy.rdf) |
 
 ### 1.5 Status of the Content of this Document (normative)
 

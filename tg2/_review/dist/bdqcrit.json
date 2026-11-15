@@ -1,0 +1,607 @@
+[
+  {
+    "@id": "https://rs.tdwg.org/bdqcrit/terms/",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/document"
+    ],
+    "http://purl.org/dc/elements/1.1/creator": [
+      {
+        "@value": "Biodiversity Information Standards (TDWG)"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/format": [
+      {
+        "@value": "application/rdf+xml"
+      }
+    ],
+    "http://purl.org/dc/terms/references": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqcrit/terms/version/Complete-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Criterion"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/Complete"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Complete"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data are present and sufficiently comprehensive for use."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Complete"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data are present and sufficiently comprehensive for use."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. Corresponding dimension is bdqdim:Completeness.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Complete"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Criterion"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/Consistent"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Consistent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data are internally consistent and consistent with any authorities consulted."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Consistent"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data are internally consistent and consistent with any authorities consulted."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A set of bdqffdq:InformationElements and bdqval:sourceAuthorities are consistent.  Corresponding dimension is bdqdim:Consistency.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Consistent"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqcrit/terms/version/Found-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Criterion"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/Found"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Found"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data conform to the values in an authority."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Found"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data conform to the values in an authority."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement conform to a bdqval:sourceAuthority. Corresponding dimension is bdqdim:Conformance.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Found"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqcrit/terms/version/InRange-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Criterion"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/InRange"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "InRange"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data conform to an expected range of values."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "In Range"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data conform to an expected range of values."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement conform to an expected range of values. Corresponding dimension is bdqdim:Conformance.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "In Range"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqcrit/terms/version/Likely-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Criterion"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/Likely"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Likely"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data are likely to be true or expected values."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Likely"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data are likely to be true or expected values."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement is likely to be true or expected values. Corresponding dimension is bdqdim:Likeliness.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Likely"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqcrit/terms/version/NotEmpty-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Criterion"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/NotEmpty"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "NotEmpty"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Some data value is present."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Not Empty"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Some data value is present."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some value is present in a bdqffdq:InformationElement. Corresponding dimension is bdqdim:Completeness. See also bdqval:Empty and bdqval:NotEmpty.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Not Empty"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqcrit/terms/version/Standard-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Criterion"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/Standard"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Standard"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data conform to a format, syntax, data type, or standard."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Standard"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data conform to a format, syntax, data type, or standard."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard. Corresponding dimension is bdqdim:Conformance.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Standard"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqcrit/terms/version/Unambiguous-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Criterion"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/Unambiguous"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Unambiguous"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data adequately identify a unique entity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Unambiguous"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data adequately identify a unique entity."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqcrit/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement adequately identifies a unique entity. Corresponding dimension is bdqdim:Conformance.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Unambiguous"
+      }
+    ]
+  }
+]

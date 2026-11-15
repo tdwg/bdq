@@ -78,9 +78,14 @@ Information about the Fitness For Use Framework Ontology, its usage, and its ext
 
 #### 1.3.1 Distributions (non-normative)
 
-| Description | IRI | Download URL | Notes | 
-| ----------- | --- | -----------  | ----- | 
-| OWL ontology | TBD | [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../vocabulary/bdqffdq.owl) | The formal RDF/OWL representation of the vocabulary. |
+The ontology is identified by [https://rs.tdwg.org/bdqffdq/](https://rs.tdwg.org/bdqffdq/), the IRI of the bdqffdq vocabulary. This document and the ontology are available as the following downloads:
+
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| HTML download of this document | [https://rs.tdwg.org/bdqffdq/doc/ontology/](https://rs.tdwg.org/bdqffdq/doc/ontology/) | [https://bdq.tdwg.org/draft/docs/bdqffdq/index.md](https://bdq.tdwg.org/draft/docs/bdqffdq/index.md) |
+| Turtle download of the ontology | [https://bdq.tdwg.org/draft/dist/bdqffdq.ttl](https://bdq.tdwg.org/draft/dist/bdqffdq.ttl) | [https://bdq.tdwg.org/draft/dist/bdqffdq.ttl](https://bdq.tdwg.org/draft/dist/bdqffdq.ttl) |
+| RDF/XML download of the ontology | [https://bdq.tdwg.org/draft/dist/bdqffdq.rdf](https://bdq.tdwg.org/draft/dist/bdqffdq.rdf) | [https://bdq.tdwg.org/draft/dist/bdqffdq.rdf](https://bdq.tdwg.org/draft/dist/bdqffdq.rdf) |
+| JSON-LD download of the ontology | [https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld](https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld) | [https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld](https://bdq.tdwg.org/draft/dist/bdqffdq.jsonld) |
 
 ### 1.4 Namespace abbreviations (non-normative)
 

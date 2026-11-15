@@ -1,0 +1,86 @@
+@prefix bdqenh: <https://rs.tdwg.org/bdqenh/terms/> .
+@prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tdwgutility: <http://rs.tdwg.org/dwc/terms/attributes/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30> a bdqffdq:Enhancement ;
+    rdfs:label "Assumed Default"@en ;
+    dcterms:isPartOf bdqenh: ;
+    dcterms:isVersionOf bdqenh:AssumedDefault ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "AssumedDefault" ;
+    rdfs:comment "Data could be improved by setting an empty value to a default value."@en ;
+    rdfs:isDefinedBy bdqenh: ;
+    skos:definition "Data could be improved by setting an empty value to a default value."@en ;
+    skos:inScheme bdqenh: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value. Corresponding dimension is bdqdim:Completeness.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Assumed Default"@en .
+
+<https://rs.tdwg.org/bdqenh/terms/version/Converted-2024-09-30> a bdqffdq:Enhancement ;
+    rdfs:label "Converted"@en ;
+    dcterms:isPartOf bdqenh: ;
+    dcterms:isVersionOf bdqenh:Converted ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Converted" ;
+    rdfs:comment "Data could be improved by converting from one representation to another."@en ;
+    rdfs:isDefinedBy bdqenh: ;
+    skos:definition "Data could be improved by converting from one representation to another."@en ;
+    skos:inScheme bdqenh: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">As in spatial coordinate transformations. Data in a bdqffdq:InformationElement that do not conform to some specification may be proposed to be replaced with a conforming value. Corresponding dimension is bdqdim:Conformance.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Converted"@en .
+
+<https://rs.tdwg.org/bdqenh/terms/version/FilledInFrom-2024-09-30> a bdqffdq:Enhancement ;
+    rdfs:label "Fill In From"@en ;
+    dcterms:isPartOf bdqenh: ;
+    dcterms:isVersionOf bdqenh:FilledInFrom ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "FilledInFrom" ;
+    rdfs:comment "Data could be improved by using one data value to fill in the empty value in another."@en ;
+    rdfs:isDefinedBy bdqenh: ;
+    skos:definition "Data could be improved by using one data value to fill in the empty value in another."@en ;
+    skos:inScheme bdqenh: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">As in filling in from verbatim terms. Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in by interpretation of values in one or more other terms. Corresponding dimension is bdqdim:Completeness.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Fill In From"@en .
+
+<https://rs.tdwg.org/bdqenh/terms/version/Standardized-2024-09-30> a bdqffdq:Enhancement ;
+    rdfs:label "Standardized"@en ;
+    dcterms:isPartOf bdqenh: ;
+    dcterms:isVersionOf bdqenh:Standardized ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Standardized" ;
+    rdfs:comment "Data could be improved by conforming them to a standard representation."@en ;
+    rdfs:isDefinedBy bdqenh: ;
+    skos:definition "Data could be improved by conforming them to a standard representation."@en ;
+    skos:inScheme bdqenh: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement that do not conform to some format, syntax, data type, or standard may be proposed to be replaced with a conforming value. Corresponding dimension is bdqdim:Conformance.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Standardized"@en .
+
+<https://rs.tdwg.org/bdqenh/terms/version/Transposed-2024-09-30> a bdqffdq:Enhancement ;
+    rdfs:label "Transposed"@en ;
+    dcterms:isPartOf bdqenh: ;
+    dcterms:isVersionOf bdqenh:Transposed ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Transposed" ;
+    rdfs:comment "Data could be improved by switching values between two or more fields."@en ;
+    rdfs:isDefinedBy bdqenh: ;
+    skos:definition "Data could be improved by switching values between two or more fields."@en ;
+    skos:inScheme bdqenh: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a set of at least two bdqffdq:InformationElements that do not conform to expectations may be proposed to have their values switched in order to produce conforming values. Corresponding dimension is bdqdim:Consistency.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Transposed"@en .
+
+bdqenh: a foaf:document ;
+    dc:creator "Biodiversity Information Standards (TDWG)" ;
+    dc:format "application/rdf+xml" ;
+    dcterms:references bdqenh: .
+

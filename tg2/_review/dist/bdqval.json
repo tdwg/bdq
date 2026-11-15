@@ -1,0 +1,1572 @@
+[
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/document"
+    ],
+    "http://purl.org/dc/elements/1.1/creator": [
+      {
+        "@value": "Biodiversity Information Standards (TDWG)"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/format": [
+      {
+        "@value": "application/rdf+xml"
+      }
+    ],
+    "http://purl.org/dc/terms/references": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-23"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "AggregatedTestResponseOutcomes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a MultiRecord in a single DataQualityReport. This Information Element is intended for use as a component of a bdqffdq:ActedUpon node for MultiRecord Measures that aggregate Response outcomes from other Tests."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "AggregatedTestResponseOutcomes"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An abstract InformationElement representing the set of outcomes (Response instances with their Response.status and Response.result values) produced by running a particular SingleRecord Test across the members of a MultiRecord in a single DataQualityReport. This Information Element is intended for use as a component of a bdqffdq:ActedUpon node for MultiRecord Measures that aggregate Response outcomes from other Tests."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used to indicate that a MultiRecord Measure is concerned with Response outcomes (report data) rather than raw source-data terms. Pair with bdqffdq:aggregatesResponsesFrom to identify which Test produced the aggregated Responses.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "AggregatedTestResponseOutcomes"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-11-12",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/AllAmendmentTestsRunOnSingleRecord"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-11-12"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "AllAmendmentTestsRunOnSingleRecord"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An Abstract Information Element composed of the bdqffdq:AmendmentResponses of the bdqffdq:Amendment Tests run on a bdqffdq:SingleRecord in a single bdqffdq:DataQualityReport, forming the input to another Test."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "AllAmendmentTestsRunOnSingleRecord"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An Abstract Information Element composed of the bdqffdq:AmendmentResponses of the bdqffdq:Amendment Tests run on a bdqffdq:SingleRecord in a single bdqffdq:DataQualityReport, forming the input to another Test."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Measure of Single Record Tests</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "AllAmendmentTestsRunOnSingleRecord"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-11-12",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/AllValidationTestsRunOnSingleRecord"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-11-12"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "AllValidationTestsRunOnSingleRecord"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An Abstract Information Element composed of the bdqffdq:ValidationResponses of the bdqffdq:Validation Tests run on a bdqffdq:SingleRecord in a single bdqffdq:DataQualityReport, forming the input to another Test."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "AllValidationTestsRunOnSingleRecord"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An Abstract Information Element composed of the bdqffdq:ValidationResponses of the bdqffdq:Validation Tests run on a bdqffdq:SingleRecord in a single bdqffdq:DataQualityReport, forming the input to another Test."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Measure of Single Record Tests</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "AllValidationTestsRunOnSingleRecord"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/Empty"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Empty"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Empty"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">See also: bdqval:NotEmpty. In the BDQ standard, bdqval:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdqval:Empty is defined to be more broadly usable than just with bdqtest:. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdqval:NotEmpty and their invalidity must be separately detected. The definition of bdqval:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdqval:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdqval:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Empty"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/NotEmpty"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "NotEmpty"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An evaluation of a value, which in the context of the evaluation, returns true if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns false."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "NotEmpty"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An evaluation of a value, which in the context of the evaluation, returns true if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns false."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">See also: bdqval:Empty. In the BDQ standard, bdqval:NotEmpty is used to evaluate bdqffdq:InformationElements within a Test specification. Common string serializations of null such as '\\N', 'NA', 'NaN', and NULL are treated as bdqval:NotEmpty. If '\\N' is present in a dataset, Tests are expected to explicitly treat that value as bdqval:NotEmpty, and then try to evaluate it against whatever other criteria may apply. The term bdqval:NotEmpty is defined to be more broadly usable than the scope of BDQ Tests. </div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "NotEmpty"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/annotationAlertIf"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "annotationAlertIf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "annotationAlertIf"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ANNOTATION_ISSUE_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "annotationAlertIf"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/annotationSystem"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "annotationSystem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's \"oa:Annotation\""
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "annotationSystem"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's \"oa:Annotation\""
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ANNOTATION_ISSUE_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "annotationSystem"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "assumptionOnUnknownBiome"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either \"marine\" or \"nonmarine\") to assume, with the default being \"noassumption\"."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "assumptionOnUnknownBiome"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either \"marine\" or \"nonmarine\") to assume, with the default being \"noassumption\"."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380).</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "assumptionOnUnknownBiome"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/defaultGeodeticDatum"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "defaultGeodeticDatum"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the default dwc:geodeticDatum in a bdqval:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "defaultGeodeticDatum"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the default dwc:geodeticDatum in a bdqval:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">See Test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7).</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "defaultGeodeticDatum"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/defaultOccurrenceStatus-2026-04-27",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/defaultOccurrenceStatus"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-27"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "defaultOccurrenceStatus"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A provided default value for dwc:occurrenceStatus that is used when a required dwc:occurrenceStatus is bdqval:Empty."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "defaultOccurrenceStatus"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A provided default value for dwc:occurrenceStatus that is used when a required dwc:occurrenceStatus is bdqval:Empty."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "defaultOccurrenceStatus"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/earliestValidDate"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "earliestValidDate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the earliest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "earliestValidDate"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the earliest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "earliestValidDate"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/geospatialLand-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/geospatialLand"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "geospatialLand"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A bdqval:sourceAuthority consisting of polygons that have been derived from a union of Natural Earth vectors for Land and for Minor Islands at 1:10,000,000 resolution."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "geospatialLand"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A bdqval:sourceAuthority consisting of polygons that have been derived from a union of Natural Earth vectors for Land and for Minor Islands at 1:10,000,000 resolution."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380)</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "geospatialLand"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/includeEventDate"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "includeEventDate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Allows dwc:eventDate to be excluded in a bdqval:ParameterizedTest. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "includeEventDate"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Allows dwc:eventDate to be excluded in a bdqval:ParameterizedTest. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"VALIDATION_DATEIDENTIFIED_INRANGE\" (bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e).</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "includeEventDate"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/latestValidDate"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "latestValidDate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the latest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "latestValidDate"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the latest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "latestValidDate"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "maximumValidDepthInMeters"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the maximum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "maximumValidDepthInMeters"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the maximum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "maximumValidDepthInMeters"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "maximumValidElevationInMeters"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the highest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "maximumValidElevationInMeters"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the highest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "maximumValidElevationInMeters"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/minimumValidDepthInMeters"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "minimumValidDepthInMeters"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the minimum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "minimumValidDepthInMeters"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the minimum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "minimumValidDepthInMeters"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/minimumValidElevationInMeters"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "minimumValidElevationInMeters"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the lowest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "minimumValidElevationInMeters"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Optionally establishes the lowest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "minimumValidElevationInMeters"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/sourceAuthority"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "sourceAuthority"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An authority using the \"bdqval\" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority (\"bdqval:sourceAuthority default = xxx\") is specified."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "sourceAuthority"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An authority using the \"bdqval\" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority (\"bdqval:sourceAuthority default = xxx\") is specified."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "sourceAuthority"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/spatialBufferInMeters-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "spatialBufferInMeters"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A buffer, in meters, from a polygon (geopolitical boundary, coastline, etc.)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "spatialBufferInMeters"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A buffer, in meters, from a polygon (geopolitical boundary, coastline, etc.)."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "spatialBufferInMeters"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/taxonIsMarine-2026-04-22",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://rs.tdwg.org/bdqffdq/terms/Parameter"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/taxonIsMarine"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-04-22"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "taxonIsMarine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A bdqval:sourceAuthority that uses dwc:scientificName to determine the \"marine\" or \"non-marine\" status of a dwc:Taxon using the \"Environment\" term obtained from the World Register of Marine Species (WORMS) database."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "taxonIsMarine"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A bdqval:sourceAuthority that uses dwc:scientificName to determine the \"marine\" or \"non-marine\" status of a dwc:Taxon using the \"Environment\" term obtained from the World Register of Marine Species (WORMS) database."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqval/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380).</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "taxonIsMarine"
+      }
+    ]
+  }
+]

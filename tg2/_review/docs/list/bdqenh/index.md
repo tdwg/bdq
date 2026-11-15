@@ -98,10 +98,22 @@ For the list and links to all associated documents see [The Biodiversity Data Qu
 
 ### 1.5 Term List Distributions (non-normative)
 
-| Description | IRI | Download URL | Notes | 
-| ----------- | --- | -----------  | ----- | 
-| HTML file   | https://rs.tdwg.org/bdqenh/doc/list/ | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/docs/list/bdqenh/index.md | This file | 
-| RDF/XML file | TBD | https://raw.githubusercontent.com/tdwg/bdq/master/tg2/_review/dist/bdqenh.xml | Example for submission, to be generated | 
+The complete term list, with the definitions and other properties of all terms, is available as the following downloads:
+
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| HTML download of this document | [https://rs.tdwg.org/bdqenh/doc/list/](https://rs.tdwg.org/bdqenh/doc/list/) | [https://bdq.tdwg.org/draft/docs/list/bdqenh/index.md](https://bdq.tdwg.org/draft/docs/list/bdqenh/index.md) |
+| RDF/XML download of all terms | [https://bdq.tdwg.org/draft/dist/bdqenh.xml](https://bdq.tdwg.org/draft/dist/bdqenh.xml) | [https://bdq.tdwg.org/draft/dist/bdqenh.xml](https://bdq.tdwg.org/draft/dist/bdqenh.xml) |
+| Turtle download of all terms | [https://bdq.tdwg.org/draft/dist/bdqenh.ttl](https://bdq.tdwg.org/draft/dist/bdqenh.ttl) | [https://bdq.tdwg.org/draft/dist/bdqenh.ttl](https://bdq.tdwg.org/draft/dist/bdqenh.ttl) |
+| JSON-LD download of all terms | [https://bdq.tdwg.org/draft/dist/bdqenh.json](https://bdq.tdwg.org/draft/dist/bdqenh.json) | [https://bdq.tdwg.org/draft/dist/bdqenh.json](https://bdq.tdwg.org/draft/dist/bdqenh.json) |
+
+The term list itself is identified by [https://rs.tdwg.org/bdqenh/terms/](https://rs.tdwg.org/bdqenh/terms/), which returns its record by content negotiation. The record contains the term list's metadata, its versions, and the IRIs of its member terms, but not the terms' definitions. It is available as the following downloads:
+
+| Description | IRI | Download URL |
+| ----------- | --- | ------------ |
+| Turtle download of the term list record | [https://rs.tdwg.org/bdqenh/terms.ttl](https://rs.tdwg.org/bdqenh/terms.ttl) | [https://rs.tdwg.org/bdqenh/terms.ttl](https://rs.tdwg.org/bdqenh/terms.ttl) |
+| JSON-LD download of the term list record | [https://rs.tdwg.org/bdqenh/terms.json](https://rs.tdwg.org/bdqenh/terms.json) | [https://rs.tdwg.org/bdqenh/terms.json](https://rs.tdwg.org/bdqenh/terms.json) |
+| RDF/XML download of the term list record | [https://rs.tdwg.org/bdqenh/terms.rdf](https://rs.tdwg.org/bdqenh/terms.rdf) | [https://rs.tdwg.org/bdqenh/terms.rdf](https://rs.tdwg.org/bdqenh/terms.rdf) |
 
 ### 1.6 Status of the Content of this Document (normative)
 

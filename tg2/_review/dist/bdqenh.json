@@ -1,0 +1,388 @@
+[
+  {
+    "@id": "https://rs.tdwg.org/bdqenh/terms/",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/document"
+    ],
+    "http://purl.org/dc/elements/1.1/creator": [
+      {
+        "@value": "Biodiversity Information Standards (TDWG)"
+      }
+    ],
+    "http://purl.org/dc/elements/1.1/format": [
+      {
+        "@value": "application/rdf+xml"
+      }
+    ],
+    "http://purl.org/dc/terms/references": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Enhancement"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/AssumedDefault"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "AssumedDefault"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data could be improved by setting an empty value to a default value."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Assumed Default"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data could be improved by setting an empty value to a default value."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in with a default value. Corresponding dimension is bdqdim:Completeness.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Assumed Default"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqenh/terms/version/Converted-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Enhancement"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/Converted"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Converted"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data could be improved by converting from one representation to another."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Converted"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data could be improved by converting from one representation to another."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">As in spatial coordinate transformations. Data in a bdqffdq:InformationElement that do not conform to some specification may be proposed to be replaced with a conforming value. Corresponding dimension is bdqdim:Conformance.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Converted"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqenh/terms/version/FilledInFrom-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Enhancement"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/FilledInFrom"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "FilledInFrom"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data could be improved by using one data value to fill in the empty value in another."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fill In From"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data could be improved by using one data value to fill in the empty value in another."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">As in filling in from verbatim terms. Data in a bdqffdq:InformationElement are absent and may be proposed to be filled in by interpretation of values in one or more other terms. Corresponding dimension is bdqdim:Completeness.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Fill In From"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqenh/terms/version/Standardized-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Enhancement"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/Standardized"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Standardized"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data could be improved by conforming them to a standard representation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Standardized"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data could be improved by conforming them to a standard representation."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement that do not conform to some format, syntax, data type, or standard may be proposed to be replaced with a conforming value. Corresponding dimension is bdqdim:Conformance.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Standardized"
+      }
+    ]
+  },
+  {
+    "@id": "https://rs.tdwg.org/bdqenh/terms/version/Transposed-2024-09-30",
+    "@type": [
+      "https://rs.tdwg.org/bdqffdq/terms/Enhancement"
+    ],
+    "http://purl.org/dc/terms/isPartOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://purl.org/dc/terms/isVersionOf": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/Transposed"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2024-09-30"
+      }
+    ],
+    "http://rs.tdwg.org/dwc/terms/attributes/status": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "recommended"
+      }
+    ],
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+      {
+        "@value": "Transposed"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Data could be improved by switching values between two or more fields."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Transposed"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Data could be improved by switching values between two or more fields."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://rs.tdwg.org/bdqenh/terms/"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a set of at least two bdqffdq:InformationElements that do not conform to expectations may be proposed to have their values switched in order to produce conforming values. Corresponding dimension is bdqdim:Consistency.</div>"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Transposed"
+      }
+    ]
+  }
+]

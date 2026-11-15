@@ -1,0 +1,128 @@
+@prefix bdqcrit: <https://rs.tdwg.org/bdqcrit/terms/> .
+@prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tdwgutility: <http://rs.tdwg.org/dwc/terms/attributes/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rs.tdwg.org/bdqcrit/terms/version/Complete-2024-09-30> a bdqffdq:Criterion ;
+    rdfs:label "Complete"@en ;
+    dcterms:isPartOf bdqcrit: ;
+    dcterms:isVersionOf bdqcrit:Complete ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Complete" ;
+    rdfs:comment "Data are present and sufficiently comprehensive for use."@en ;
+    rdfs:isDefinedBy bdqcrit: ;
+    skos:definition "Data are present and sufficiently comprehensive for use."@en ;
+    skos:inScheme bdqcrit: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. Corresponding dimension is bdqdim:Completeness.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Complete"@en .
+
+<https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30> a bdqffdq:Criterion ;
+    rdfs:label "Consistent"@en ;
+    dcterms:isPartOf bdqcrit: ;
+    dcterms:isVersionOf bdqcrit:Consistent ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Consistent" ;
+    rdfs:comment "Data are internally consistent and consistent with any authorities consulted."@en ;
+    rdfs:isDefinedBy bdqcrit: ;
+    skos:definition "Data are internally consistent and consistent with any authorities consulted."@en ;
+    skos:inScheme bdqcrit: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">A set of bdqffdq:InformationElements and bdqval:sourceAuthorities are consistent.  Corresponding dimension is bdqdim:Consistency.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Consistent"@en .
+
+<https://rs.tdwg.org/bdqcrit/terms/version/Found-2024-09-30> a bdqffdq:Criterion ;
+    rdfs:label "Found"@en ;
+    dcterms:isPartOf bdqcrit: ;
+    dcterms:isVersionOf bdqcrit:Found ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Found" ;
+    rdfs:comment "Data conform to the values in an authority."@en ;
+    rdfs:isDefinedBy bdqcrit: ;
+    skos:definition "Data conform to the values in an authority."@en ;
+    skos:inScheme bdqcrit: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement conform to a bdqval:sourceAuthority. Corresponding dimension is bdqdim:Conformance.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Found"@en .
+
+<https://rs.tdwg.org/bdqcrit/terms/version/InRange-2024-09-30> a bdqffdq:Criterion ;
+    rdfs:label "In Range"@en ;
+    dcterms:isPartOf bdqcrit: ;
+    dcterms:isVersionOf bdqcrit:InRange ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "InRange" ;
+    rdfs:comment "Data conform to an expected range of values."@en ;
+    rdfs:isDefinedBy bdqcrit: ;
+    skos:definition "Data conform to an expected range of values."@en ;
+    skos:inScheme bdqcrit: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement conform to an expected range of values. Corresponding dimension is bdqdim:Conformance.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "In Range"@en .
+
+<https://rs.tdwg.org/bdqcrit/terms/version/Likely-2024-09-30> a bdqffdq:Criterion ;
+    rdfs:label "Likely"@en ;
+    dcterms:isPartOf bdqcrit: ;
+    dcterms:isVersionOf bdqcrit:Likely ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Likely" ;
+    rdfs:comment "Data are likely to be true or expected values."@en ;
+    rdfs:isDefinedBy bdqcrit: ;
+    skos:definition "Data are likely to be true or expected values."@en ;
+    skos:inScheme bdqcrit: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement is likely to be true or expected values. Corresponding dimension is bdqdim:Likeliness.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Likely"@en .
+
+<https://rs.tdwg.org/bdqcrit/terms/version/NotEmpty-2024-09-30> a bdqffdq:Criterion ;
+    rdfs:label "Not Empty"@en ;
+    dcterms:isPartOf bdqcrit: ;
+    dcterms:isVersionOf bdqcrit:NotEmpty ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "NotEmpty" ;
+    rdfs:comment "Some data value is present."@en ;
+    rdfs:isDefinedBy bdqcrit: ;
+    skos:definition "Some data value is present."@en ;
+    skos:inScheme bdqcrit: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Some value is present in a bdqffdq:InformationElement. Corresponding dimension is bdqdim:Completeness. See also bdqval:Empty and bdqval:NotEmpty.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Not Empty"@en .
+
+<https://rs.tdwg.org/bdqcrit/terms/version/Standard-2024-09-30> a bdqffdq:Criterion ;
+    rdfs:label "Standard"@en ;
+    dcterms:isPartOf bdqcrit: ;
+    dcterms:isVersionOf bdqcrit:Standard ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Standard" ;
+    rdfs:comment "Data conform to a format, syntax, data type, or standard."@en ;
+    rdfs:isDefinedBy bdqcrit: ;
+    skos:definition "Data conform to a format, syntax, data type, or standard."@en ;
+    skos:inScheme bdqcrit: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement conform to a format, syntax, data type, or standard. Corresponding dimension is bdqdim:Conformance.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Standard"@en .
+
+<https://rs.tdwg.org/bdqcrit/terms/version/Unambiguous-2024-09-30> a bdqffdq:Criterion ;
+    rdfs:label "Unambiguous"@en ;
+    dcterms:isPartOf bdqcrit: ;
+    dcterms:isVersionOf bdqcrit:Unambiguous ;
+    dcterms:issued "2024-09-30"^^xsd:date ;
+    tdwgutility:status "recommended"^^xsd:string ;
+    rdf:value "Unambiguous" ;
+    rdfs:comment "Data adequately identify a unique entity."@en ;
+    rdfs:isDefinedBy bdqcrit: ;
+    skos:definition "Data adequately identify a unique entity."@en ;
+    skos:inScheme bdqcrit: ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement adequately identifies a unique entity. Corresponding dimension is bdqdim:Conformance.</div>"^^rdf:XMLLiteral ;
+    skos:prefLabel "Unambiguous"@en .
+
+bdqcrit: a foaf:document ;
+    dc:creator "Biodiversity Information Standards (TDWG)" ;
+    dc:format "application/rdf+xml" ;
+    dcterms:references bdqcrit: .
+
