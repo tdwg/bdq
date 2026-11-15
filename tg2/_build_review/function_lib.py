@@ -205,6 +205,9 @@ def build_term_key(term_concept_dictionary, terms_sorted_by_localname) :
                 elif not isinstance(example, str):
                     example = str(example)
 
+                if key == 'SpecificationGuid' and example.startswith('urn:uuid:') :
+                   # the Specification's term IRI in rs.tdwg.org (plan Section 10.9.9)
+                   example = 'https://rs.tdwg.org/bdqtest/specification/' + example[len('urn:uuid:'):]
                 if example and example.find(' ') == -1 and len(example) > 20 : 
                    # long string without spaces
                    if example.startswith('https://') or example.startswith('http://') : 

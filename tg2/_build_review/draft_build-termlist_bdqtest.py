@@ -355,14 +355,19 @@ for term in termLists:
                            text += '\t\t\t<td>{}</td>\n'.format(column)
                         if (column == 'AuthoritiesDefaults') and row[column] :
                            text += '\t\t\t<td><code>{}</code></td><!--- NO LINK LINE --->\n'.format(row[column])
+                        elif column == 'SpecificationGuid' :
+                           # the Specification's term IRI in rs.tdwg.org (plan Section 10.9.9)
+                           spec_iri = 'https://rs.tdwg.org/bdqtest/specification/' + row[column].replace('urn:uuid:', '')
+                           text += '\t\t\t<td><a href="{0}">{0}</a></td>\n'.format(spec_iri)
                         else :
                            text += '\t\t\t<td>{}</td>\n'.format(row[column])
                         text += '\t\t</tr>\n'
 
             testType = row['Type']
 
-            iri = row['term_localName'] + '-' + row['issued']
-            sparql = prefixes + "SELECT ?method ?predicate ?label ?specification ?specificationLabel  WHERE {  ?specification rdfs:label ?specificationLabel .  ?method bdqffdq:hasSpecification ?specification .  ?method ?predicate ?label .  ?method  bdqffdq:for"+testType+" bdqtest:"+iri+" .  FILTER ( ?predicate = rdfs:label ) }"
+            # dist/bdqtest is the current graph (plan Section 10.9.9): the Method of the Test term
+            iri = 'https://rs.tdwg.org/bdqtest/terms/' + row['term_localName']
+            sparql = prefixes + "SELECT ?method ?predicate ?label ?specification ?specificationLabel  WHERE {  ?specification rdfs:label ?specificationLabel .  ?method bdqffdq:hasSpecification ?specification .  ?method ?predicate ?label .  ?method  bdqffdq:for"+testType+" <"+iri+"> .  FILTER ( ?predicate = rdfs:label ) }"
             queryResult = graph.query(sparql)
             if debug :
                 print(sparql)
@@ -370,6 +375,10 @@ for term in termLists:
                 text += '\t\t<tr>\n'
                 text += '\t\t\t<td>'+testType+'Method label</td>\n'
                 text += '\t\t\t<td>' + str(r['label']) + '</td>\n'
+                text += '\t\t</tr>\n'
+                text += '\t\t<tr>\n'
+                text += '\t\t\t<td>'+testType+'Method IRI</td>\n'
+                text += '\t\t\t<td><a href="{0}">{0}</a></td>\n'.format(str(r['method']))
                 text += '\t\t</tr>\n'
                 text += '\t\t<tr>\n'
                 text += '\t\t\t<td>Specification label</td>\n'
