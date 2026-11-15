@@ -72,6 +72,33 @@ def first_heading_title(text: str) -> str:
     return "Biodiversity Data Quality (BDQ)"
 
 
+# This function applies a text transformation to a Markdown document everywhere except in fenced code
+# blocks, which are passed through unchanged: link rewriting must not alter code such as RDF examples, where
+# <https://rs.tdwg.org/...> is an IRI, not a Markdown autolink.
+def outside_fenced_code(text: str, transform) -> str:
+    fenced_re = re.compile(r"^([ \t]*)(```|~~~)")
+    parts = []          # (is_code, text)
+    current = []
+    in_fence = False
+    fence_marker = None
+    for line in text.splitlines(keepends=True):
+        fence_match = fenced_re.match(line)
+        if fence_match and (not in_fence or fence_match.group(2) == fence_marker):
+            if not in_fence:
+                parts.append((False, "".join(current)))
+                current = [line]
+                in_fence, fence_marker = True, fence_match.group(2)
+            else:
+                current.append(line)
+                parts.append((True, "".join(current)))
+                current = []
+                in_fence, fence_marker = False, None
+            continue
+        current.append(line)
+    parts.append((in_fence, "".join(current)))
+    return "".join(part if is_code else transform(part) for is_code, part in parts)
+
+
 # This function applies bare-URL linkification to a whole Markdown document before Markdown conversion.
 # It skips fenced code blocks entirely. For ordinary Markdown lines it produces Markdown links, while for
 # lines containing raw HTML it produces HTML anchor tags in the text nodes between tags.  It also respects
@@ -485,7 +512,10 @@ def main() -> None:
 
     for path in list(site.rglob("*.md")) + list(site.rglob("*.html")):
         text = path.read_text(encoding="utf-8")
-        text = rewrite_markdown_links(text)
+        if path.suffix == ".md":
+            text = outside_fenced_code(text, rewrite_markdown_links)
+        else:
+            text = rewrite_markdown_links(text)
         text = rewrite_html_links(text)
         text = replace_emoji_shortcodes(text)
 
