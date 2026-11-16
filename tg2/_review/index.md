@@ -277,7 +277,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
         <strong><a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a></strong><br>
 		Explains the normative concepts and logic for describing data quality needs and reports.<br>
 		See also the Fitness For Use Framework <a href="./docs/list/bdqffdq/index.md">bdqffdq: Term List</a>
-		and <a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>.
+		and <a href="./dist/bdqffdq.owl">OWL Ontology</a>.
       </td>
     </tr>
     <tr>
@@ -497,7 +497,7 @@ Test Confomance Testing Data are intended for implementers to use to evaluate wh
 
 The Fitness For Use Framework is provided as an [OWL](<index.md#glossary_OWL> "Web Ontology Language. A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace owl:") ontology.
 
-- [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](dist/bdqffdq.owl)
 
 #### 3.5.4 RDF Serializations of Supporting Controlled Vocabularies (non-normative)
 

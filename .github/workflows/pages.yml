@@ -105,11 +105,6 @@ jobs:
           rsync -a tg2/_review/ site/draft/ \
             --exclude 'docs/terms/bdqtest/index.md'
 
-          # Provide the Turtle serialization of the owl ontology with a .ttl extension for better content-type handling
-          if [ -f site/draft/vocabulary/bdqffdq.owl ]; then
-              cp site/draft/vocabulary/bdqffdq.owl site/draft/vocabulary/bdqffdq.ttl
-          fi
-
           # Static site resources
           cp _site_resources/assets/site.css site/assets/css/site.css
           cp _site_resources/assets/toc.js site/assets/js/toc.js
@@ -149,7 +144,7 @@ jobs:
           test -f site/draft/index.html
           test -f site/bdq/index.html
           test -f site/assets/img/tdwg-logo-short.svg
-          test -f site/draft/vocabulary/bdqffdq.ttl
+          test -f site/draft/dist/bdqffdq.ttl
           test -f site/CNAME
           # Confirm the pre-built QRG HTML is present at its publication path
           test -f site/draft/docs/terms/bdqtest/index.html

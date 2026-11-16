@@ -6,7 +6,7 @@ What it does
 ------------
 - Loads the RDF graphs:
   - tg2/_review/dist/bdqtest.ttl
-  - tg2/_review/vocabulary/bdqffdq.owl   (this file is Turtle syntax in this repo)
+  - tg2/_review/dist/bdqffdq.owl   (this file is Turtle syntax in this repo)
   into a single rdflib.Graph "triplestore" (in-memory).
 - Extracts SPARQL code blocks from:
   - tg2/_build_review/templates/supplement/supplement-header.md
@@ -96,7 +96,7 @@ TEMPLATE_PATHS = [
 
 # RDF inputs (relative to tg2/_build_review/tools/)
 BDQTEST_TTL = Path("../../_review/dist/bdqtest.ttl")
-BDQFFDQ_OWL_TTL = Path("../../_review/vocabulary/bdqffdq.owl")
+BDQFFDQ_OWL_TTL = Path("../../_review/dist/bdqffdq.owl")
 
 
 # If you want to inject shared PREFIX lines into queries that omit them, put them here.

@@ -35,7 +35,7 @@ def test_rewrite_target_readme():
 
 def test_rewrite_target_owl_to_ttl():
     # Special case handling for owl ontology, rename as ttl so that site delivers with correct content type
-    assert rs.rewrite_target("../../../vocabulary/bdqffdq.owl") == "../../../vocabulary/bdqffdq.ttl"
+    assert rs.rewrite_target("../../../dist/bdqffdq.owl") == "../../../dist/bdqffdq.ttl"
 
 
 def test_rewrite_target_external_unchanged():
@@ -141,9 +141,9 @@ def test_rewrite_html_links_relative_md_with_fragment():
 
 
 def test_rewrite_html_links_owl_to_ttl():
-    src = '<a href="./vocabulary/bdqffdq.owl">OWL Ontology</a>'
+    src = '<a href="./dist/bdqffdq.owl">OWL Ontology</a>'
     out = rs.rewrite_html_links(src)
-    assert out == '<a href="./vocabulary/bdqffdq.ttl">OWL Ontology</a>'
+    assert out == '<a href="./dist/bdqffdq.ttl">OWL Ontology</a>'
     # only rewrite .owl extension, not .xml
     src = '<a href="./vocabulary/bdqtest.xml">Tests as RDF/XML</a>'
     out = rs.rewrite_html_links(src)

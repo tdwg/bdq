@@ -9,7 +9,7 @@ Enhancement (requested):
 
 Usage (from tg2/_build_review):
   python3 tools/audit_bdqffdq_vs_bdqtest.py \
-    --owl ../_review/vocabulary/bdqffdq.owl \
+    --owl ../_review/dist/bdqffdq.owl \
     --ttl ../_review/dist/bdqtest.ttl
 
 @author GitHub CoPilot with human review by Paul Morris

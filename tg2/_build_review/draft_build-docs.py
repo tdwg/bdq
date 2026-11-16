@@ -59,7 +59,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/>
 PREFIX bdqdim: <https://rs.tdwg.org/bdqdim/terms/>
 """
-inputTermsOwlFilename = "../_review/vocabulary/bdqffdq.owl"
+inputTermsOwlFilename = "../_review/dist/bdqffdq.owl"
 bdqffdqOwlDocument = 'https://raw.githubusercontent.com/tdwg/bdq/refs/heads/master/tg2/_review/{}'.format(inputTermsOwlFilename)
 
 # referencesFileName = "references.md"

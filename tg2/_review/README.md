@@ -33,11 +33,11 @@ Within the practical perspective there are two basic audiences, Users and Implem
 - [**Guide to Marking and Identifying Synthetic and Modified Data**](docs/guide/synthetic/index.md)
 
 ### C. Documents emphasizing **BDQ in Theory (the Framework)**:
-The theoretical perspective is formally based on the [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](vocabulary/bdqffdq.owl). The following documents explain the ontology and how it is extended for use with the BDQ Tests and Assertions (the Tests):
+The theoretical perspective is formally based on the [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](dist/bdqffdq.owl). The following documents explain the ontology and how it is extended for use with the BDQ Tests and Assertions (the Tests):
 
 - [**Fitness For Use Framework: Concepts and Use**](docs/guide/bdqffdq/index.md)
 - [**Fitness For Use Framework Vocabulary Extension**](docs/extension/bdqffdq/index.md)
-- [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](vocabulary/bdqffdq.owl)
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](dist/bdqffdq.owl)
 - [**Fitness For Use Ontology**](docs/bdqffdq/index.md) (minimal landing page)
 
 ### D. Vocabularies

@@ -13,7 +13,7 @@ inside the tg2/_build_review/tools/ directory of the BDQ repository:
 
     --data    ../../_review/dist/bdqtest.ttl
     --shapes  ../../core/bdqffdq_SHACL_constraints.ttl
-    --ont     ../../_review/vocabulary/bdqffdq.owl
+    --ont     ../../_review/dist/bdqffdq.owl
     --usecase ../../_review/dist/bdquc.xml
 
 Requirements:
@@ -84,7 +84,7 @@ _HERE = Path(__file__).parent
 
 DEFAULT_DATA    = _HERE / "../../_review/dist/bdqtest.ttl"
 DEFAULT_SHAPES  = _HERE / "../../core/bdqffdq_SHACL_constraints.ttl"
-DEFAULT_ONT     = _HERE / "../../_review/vocabulary/bdqffdq.owl"
+DEFAULT_ONT     = _HERE / "../../_review/dist/bdqffdq.owl"
 DEFAULT_USECASE = _HERE / "../../_review/dist/bdquc.xml"
 
 
@@ -502,7 +502,7 @@ def build_parser():
 
               --data    ../../_review/dist/bdqtest.ttl
               --shapes  ../../core/bdqffdq_SHACL_constraints.ttl
-              --ont     ../../_review/vocabulary/bdqffdq.owl
+              --ont     ../../_review/dist/bdqffdq.owl
               --usecase ../../_review/dist/bdquc.xml
 
             Running with no arguments uses all of the above defaults.
