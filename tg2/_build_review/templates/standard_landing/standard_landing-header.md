@@ -362,52 +362,52 @@ The Supporting Vocabularies are controlled vocabularies used in the technical de
 
 #### 3.3.3 Landing Page IRIs (non-normative)
 
-The parts of the standard are identified by the IRIs below, served by rs.tdwg.org. When HTML is requested, a document IRI redirects to the document's page on this site, and a vocabulary, term list, or vocabulary extension IRI returns a description of it. The RDF metadata (Turtle) of each is available by content negotiation or by replacing the final `/` of the IRI with `.ttl` (e.g. `https://rs.tdwg.org/bdqval.ttl`); the RDF of the vocabulary extension includes its axioms.
+The parts of the standard are identified by the IRIs below, served by rs.tdwg.org. When HTML is requested, a document IRI redirects to the document's page on this site, and a vocabulary, term list, or vocabulary extension IRI returns a description of it. The RDF metadata (Turtle) of each is available by content negotiation or by replacing the final `/` of the IRI with `.ttl` (e.g. `https://rs.tdwg.org/bdqval.ttl`), which the graph icon after each IRI links to; the RDF of the vocabulary extension includes its axioms.
 
-Note: **For the public review, these IRIs are served at bdq-public-review.rs.tdwg.org**, and the links below go there; they will resolve at rs.tdwg.org after ratification. The standard IRI is a placeholder until a standard number is assigned. The `bdqtest:` vocabulary, its term list, and its List of Terms are not yet served for the review.
+Note: **For the public review, these IRIs are served at bdq-public-review.rs.tdwg.org**, and the links below go there; they will resolve at rs.tdwg.org after ratification. The standard IRI is a placeholder until a standard number is assigned.
 
 - **The Biodiversity Data Quality (BDQ) Standard** - Overview of the BDQ standard. This page.
   - Standard IRI: http://www.tdwg.org/standards/YYY
 - **The Fitness For Use Framework Ontology (bdqffdq:)**
-  - Vocabulary (ontology) IRI: https://rs.tdwg.org/bdqffdq/
-  - Term list IRI: https://rs.tdwg.org/bdqffdq/terms/
-  - Vocabulary extension IRI: https://rs.tdwg.org/bdqffdq/extension/
-  - [Fitness For Use Framework Ontology](docs/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/ontology/
-  - [List of Terms](docs/list/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/list/
-  - [Vocabulary Extension](docs/extension/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/extension/
-  - [Fitness For Use Framework Ontology: Concepts and Use](docs/guide/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/guide/
+  - Vocabulary (ontology) IRI: https://rs.tdwg.org/bdqffdq/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq.ttl "RDF (Turtle)")
+  - Term list IRI: https://rs.tdwg.org/bdqffdq/terms/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms.ttl "RDF (Turtle)")
+  - Vocabulary extension IRI: https://rs.tdwg.org/bdqffdq/extension/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/extension.ttl "RDF (Turtle)")
+  - [Fitness For Use Framework Ontology](docs/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/ontology/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/doc/ontology.ttl "RDF (Turtle)")
+  - [List of Terms](docs/list/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/list/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/doc/list.ttl "RDF (Turtle)")
+  - [Vocabulary Extension](docs/extension/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/extension/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/doc/extension.ttl "RDF (Turtle)")
+  - [Fitness For Use Framework Ontology: Concepts and Use](docs/guide/bdqffdq/index.md): https://rs.tdwg.org/bdqffdq/doc/guide/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/doc/guide.ttl "RDF (Turtle)")
 - **The Tests (bdqtest:)**
-  - Vocabulary IRI: https://rs.tdwg.org/bdqtest/
-  - Term list IRI: https://rs.tdwg.org/bdqtest/terms/
-  - [List of Terms](docs/list/bdqtest/index.md): https://rs.tdwg.org/bdqtest/doc/list/
-  - [BDQ Tests: Concepts and Use](docs/guide/bdqtest/index.md): https://rs.tdwg.org/bdqtest/doc/guide/
-  - [BDQ Tests Quick Reference Guide](docs/terms/bdqtest/index.md): https://rs.tdwg.org/bdqtest/doc/qrg/
+  - Vocabulary IRI: https://rs.tdwg.org/bdqtest/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqtest.ttl "RDF (Turtle)")
+  - Term list IRI: https://rs.tdwg.org/bdqtest/terms/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqtest/terms.ttl "RDF (Turtle)")
+  - [List of Terms](docs/list/bdqtest/index.md): https://rs.tdwg.org/bdqtest/doc/list/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqtest/doc/list.ttl "RDF (Turtle)")
+  - [BDQ Tests: Concepts and Use](docs/guide/bdqtest/index.md): https://rs.tdwg.org/bdqtest/doc/guide/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqtest/doc/guide.ttl "RDF (Turtle)")
+  - [BDQ Tests Quick Reference Guide](docs/terms/bdqtest/index.md): https://rs.tdwg.org/bdqtest/doc/qrg/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqtest/doc/qrg.ttl "RDF (Turtle)")
 - **BDQ Controlled Vocabulary (bdqval:)**
-  - Vocabulary IRI: https://rs.tdwg.org/bdqval/
-  - Term list IRI: https://rs.tdwg.org/bdqval/terms/
-  - [List of Terms](docs/list/bdqval/index.md): https://rs.tdwg.org/bdqval/doc/list/
+  - Vocabulary IRI: https://rs.tdwg.org/bdqval/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqval.ttl "RDF (Turtle)")
+  - Term list IRI: https://rs.tdwg.org/bdqval/terms/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqval/terms.ttl "RDF (Turtle)")
+  - [List of Terms](docs/list/bdqval/index.md): https://rs.tdwg.org/bdqval/doc/list/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqval/doc/list.ttl "RDF (Turtle)")
 - **Data Quality Criterion Controlled Vocabulary (bdqcrit:)**
-  - Vocabulary IRI: https://rs.tdwg.org/bdqcrit/
-  - Term list IRI: https://rs.tdwg.org/bdqcrit/terms/
-  - [List of Terms](docs/list/bdqcrit/index.md): https://rs.tdwg.org/bdqcrit/doc/list/
+  - Vocabulary IRI: https://rs.tdwg.org/bdqcrit/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqcrit.ttl "RDF (Turtle)")
+  - Term list IRI: https://rs.tdwg.org/bdqcrit/terms/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqcrit/terms.ttl "RDF (Turtle)")
+  - [List of Terms](docs/list/bdqcrit/index.md): https://rs.tdwg.org/bdqcrit/doc/list/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqcrit/doc/list.ttl "RDF (Turtle)")
 - **Data Quality Dimension Controlled Vocabulary (bdqdim:)**
-  - Vocabulary IRI: https://rs.tdwg.org/bdqdim/
-  - Term list IRI: https://rs.tdwg.org/bdqdim/terms/
-  - [List of Terms](docs/list/bdqdim/index.md): https://rs.tdwg.org/bdqdim/doc/list/
+  - Vocabulary IRI: https://rs.tdwg.org/bdqdim/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqdim.ttl "RDF (Turtle)")
+  - Term list IRI: https://rs.tdwg.org/bdqdim/terms/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqdim/terms.ttl "RDF (Turtle)")
+  - [List of Terms](docs/list/bdqdim/index.md): https://rs.tdwg.org/bdqdim/doc/list/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqdim/doc/list.ttl "RDF (Turtle)")
 - **Data Quality Enhancement Controlled Vocabulary (bdqenh:)**
-  - Vocabulary IRI: https://rs.tdwg.org/bdqenh/
-  - Term list IRI: https://rs.tdwg.org/bdqenh/terms/
-  - [List of Terms](docs/list/bdqenh/index.md): https://rs.tdwg.org/bdqenh/doc/list/
+  - Vocabulary IRI: https://rs.tdwg.org/bdqenh/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqenh.ttl "RDF (Turtle)")
+  - Term list IRI: https://rs.tdwg.org/bdqenh/terms/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqenh/terms.ttl "RDF (Turtle)")
+  - [List of Terms](docs/list/bdqenh/index.md): https://rs.tdwg.org/bdqenh/doc/list/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqenh/doc/list.ttl "RDF (Turtle)")
 - **BDQ Use Case Controlled Vocabulary (bdquc:)**
-  - Vocabulary IRI: https://rs.tdwg.org/bdquc/
-  - Term list IRI: https://rs.tdwg.org/bdquc/terms/
-  - [List of Terms](docs/list/bdquc/index.md): https://rs.tdwg.org/bdquc/doc/list/
+  - Vocabulary IRI: https://rs.tdwg.org/bdquc/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdquc.ttl "RDF (Turtle)")
+  - Term list IRI: https://rs.tdwg.org/bdquc/terms/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdquc/terms.ttl "RDF (Turtle)")
+  - [List of Terms](docs/list/bdquc/index.md): https://rs.tdwg.org/bdquc/doc/list/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdquc/doc/list.ttl "RDF (Turtle)")
 - **Guides and other documents**
-  - [BDQ User's Guide](docs/guide/users/index.md): https://rs.tdwg.org/bdq/doc/users/
-  - [BDQ Implementer's Guide](docs/guide/implementers/index.md): https://rs.tdwg.org/bdq/doc/implementers/
-  - [Guide to Marking and Identifying Synthetic and Modified Data](docs/guide/synthetic/index.md): https://rs.tdwg.org/bdq/doc/synthetic/
-  - [BDQ Supplemental Information](docs/supplement/index.md): https://rs.tdwg.org/bdq/doc/supplement/
-  - [Tutorial: From Use Case to Test](docs/tutorial/index.md): https://rs.tdwg.org/bdq/doc/tutorial/
+  - [BDQ User's Guide](docs/guide/users/index.md): https://rs.tdwg.org/bdq/doc/users/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdq/doc/users.ttl "RDF (Turtle)")
+  - [BDQ Implementer's Guide](docs/guide/implementers/index.md): https://rs.tdwg.org/bdq/doc/implementers/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdq/doc/implementers.ttl "RDF (Turtle)")
+  - [Guide to Marking and Identifying Synthetic and Modified Data](docs/guide/synthetic/index.md): https://rs.tdwg.org/bdq/doc/synthetic/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdq/doc/synthetic.ttl "RDF (Turtle)")
+  - [BDQ Supplemental Information](docs/supplement/index.md): https://rs.tdwg.org/bdq/doc/supplement/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdq/doc/supplement.ttl "RDF (Turtle)")
+  - [Tutorial: From Use Case to Test](docs/tutorial/index.md): https://rs.tdwg.org/bdq/doc/tutorial/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdq/doc/tutorial.ttl "RDF (Turtle)")
 
 ### 3.4 Additional Documents (non-normative)
 

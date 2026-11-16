@@ -35,6 +35,12 @@ SIMPLE_MARKDOWN_LINK_WITH_TITLE_RE = re.compile(
     r'(?P<prefix>!?\[[^\]]*\]\()(?P<target><[^>]+>|[^)\s]+)(?P<ws>\s+)(?P<title>"[^"]*"|\'[^\']*\'|\([^\)]*\))(?P<suffix>\))'
 )
 
+# A link whose label is an image, e.g. an icon: [![alt](icon.svg){: .class }](target "title").
+# The simple patterns above do not allow ] in the label, so this form is handled first.
+NESTED_IMAGE_LINK_RE = re.compile(
+    r'(?P<prefix>\[!\[[^\]]*\]\([^)\s]+(?:\s+"[^"]*")?\)(?:\{[^}]*\})?\]\()(?P<target>[^)\s]+)(?P<rest>(?:\s+"[^"]*")?\))'
+)
+
 # Links to rs.tdwg.org/bdq* should be handled specially until those resources are live on rs.tdwg.org.
 # "plain": such IRIs are shown as text and not rendered as clickable links.
 # "rewrite": the IRI is still shown as text, but the link goes to the same path on BDQ_RS_BASE.
@@ -323,6 +329,15 @@ def rewrite_markdown_links(text: str) -> str:
         return f"[{url}]({rewrite_bdq_rs_uri(url)})"
 
     text = BDQ_RS_AUTOLINK_RE.sub(repl_bdq_autolink, text)
+
+    # Then links whose label is an image (an icon): rewrite the target, keep the image.
+    def repl_nested_image(match):
+        target = match.group("target")
+        if bdq_rs_shown_plain(target):
+            return match.group(0)
+        return f"{match.group('prefix')}{rewrite_target(target)}{match.group('rest')}"
+
+    text = NESTED_IMAGE_LINK_RE.sub(repl_nested_image, text)
 
     # Then handle links with destination + title.
     def repl_with_title(match):

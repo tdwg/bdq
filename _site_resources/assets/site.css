@@ -569,3 +569,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size:  9pt;
   }
 }
+
+/* Graph icon linking an rs.tdwg.org IRI to its RDF (Turtle), e.g. on the standard landing page. */
+.rdf-icon { width: 1em; height: 1em; vertical-align: text-bottom; margin-left: 0.25em; }
+a.rdf-link { text-decoration: none; }

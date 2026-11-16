@@ -517,3 +517,13 @@ def test_placeholder_standard_iri_plain():
         assert rs.linkify_bare_urls_in_markdown_line("Standard IRI: http://www.tdwg.org/standards/YYY") == "Standard IRI: http://www.tdwg.org/standards/YYY"
         # other TDWG standard IRIs are linked as usual
         assert rs.rewrite_markdown_links("<http://www.tdwg.org/standards/450>") == "<http://www.tdwg.org/standards/450>"
+
+
+def test_image_link_target_is_rewritten():
+    # An icon linking to the Turtle of an rs.tdwg.org IRI, as on the standard landing page.
+    src = 'Term list IRI: https://rs.tdwg.org/bdqffdq/terms/ [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms.ttl "RDF (Turtle)")'
+    with bdq_rs_links("rewrite"):
+        out = rs.rewrite_markdown_links(src)
+    assert '[![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://bdq-public-review.rs.tdwg.org/bdqffdq/terms.ttl "RDF (Turtle)")' in out
+    with bdq_rs_links("keep"):
+        assert rs.rewrite_markdown_links(src) == src
