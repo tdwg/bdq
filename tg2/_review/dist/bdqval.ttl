@@ -80,34 +80,34 @@
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">See also: bdqval:Empty. In the BDQ standard, bdqval:NotEmpty is used to evaluate bdqffdq:InformationElements within a Test specification. Common string serializations of null such as '\\N', 'NA', 'NaN', and NULL are treated as bdqval:NotEmpty. If '\\N' is present in a dataset, Tests are expected to explicitly treat that value as bdqval:NotEmpty, and then try to evaluate it against whatever other criteria may apply. The term bdqval:NotEmpty is defined to be more broadly usable than the scope of BDQ Tests. </div>"^^rdf:XMLLiteral ;
     skos:prefLabel "NotEmpty"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-11-16> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "annotationAlertIf"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:annotationAlertIf ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-16"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "annotationAlertIf" ;
     rdfs:comment "Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"@en ;
     rdfs:isDefinedBy bdqval: ;
     skos:definition "Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"@en ;
     skos:inScheme bdqval: ;
-    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ANNOTATION_ISSUE_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"^^rdf:XMLLiteral ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ISSUE_ANNOTATION_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "annotationAlertIf"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-11-16> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "annotationSystem"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:annotationSystem ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-16"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "annotationSystem" ;
-    rdfs:comment "Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's \"oa:Annotation\""@en ;
+    rdfs:comment "Optionally establishes the system of annotations queried in a bdqval:ParameterizedTest: a system that holds annotations and can be queried for those with an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation, identified for example by the IRI of a W3C Web Annotation Protocol container or of a published oa:AnnotationCollection. The default, \"W3C Web Annotation\", names the W3C Web Annotation Data Model, not a system that can be queried."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's \"oa:Annotation\""@en ;
+    skos:definition "Optionally establishes the system of annotations queried in a bdqval:ParameterizedTest: a system that holds annotations and can be queried for those with an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation, identified for example by the IRI of a W3C Web Annotation Protocol container or of a published oa:AnnotationCollection. The default, \"W3C Web Annotation\", names the W3C Web Annotation Data Model, not a system that can be queried."@en ;
     skos:inScheme bdqval: ;
-    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ANNOTATION_ISSUE_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"^^rdf:XMLLiteral ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ISSUE_ANNOTATION_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "annotationSystem"@en .
 
 <https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22> a owl:NamedIndividual,

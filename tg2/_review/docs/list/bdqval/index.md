@@ -6,7 +6,7 @@
 BDQ Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2026-11-12
+2026-11-16
 
 **Date created**<br>
 2026-04-22
@@ -18,13 +18,13 @@ BDQ Controlled Vocabulary List of Terms
 bdqval
 
 **This version**<br>
-<https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
+<https://rs.tdwg.org/bdqval/doc/list/2026-11-16>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqval/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqval/doc/list/2026-04-27>
+<https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard. It covers some terms used in Test Specifications, and especially values used as bdqffdq:Parameters.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard. It covers some terms used in 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-11-16>
 
 **Status**<br>
 Draft Standard for Review
@@ -392,11 +392,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-16</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-11-16">https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-11-16</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -408,7 +408,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
+			<td>Used in Test "ISSUE_ANNOTATION_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -438,11 +438,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-16</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-11-16">https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-11-16</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -450,11 +450,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</td>
+			<td>Optionally establishes the system of annotations queried in a bdqval:ParameterizedTest: a system that holds annotations and can be queried for those with an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation, identified for example by the IRI of a W3C Web Annotation Protocol container or of a published oa:AnnotationCollection. The default, "W3C Web Annotation", names the W3C Web Annotation Data Model, not a system that can be queried.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
+			<td>Used in Test "ISSUE_ANNOTATION_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -1229,7 +1229,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-11-16>
 
 **Biodiversity Information Standards (TDWG)**
 

@@ -386,7 +386,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-11-16",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -404,7 +404,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-16"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -449,7 +449,7 @@
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
-        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ANNOTATION_ISSUE_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ISSUE_ANNOTATION_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -460,7 +460,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-11-16",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -478,7 +478,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-16"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -495,7 +495,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's \"oa:Annotation\""
+        "@value": "Optionally establishes the system of annotations queried in a bdqval:ParameterizedTest: a system that holds annotations and can be queried for those with an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation, identified for example by the IRI of a W3C Web Annotation Protocol container or of a published oa:AnnotationCollection. The default, \"W3C Web Annotation\", names the W3C Web Annotation Data Model, not a system that can be queried."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -512,7 +512,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's \"oa:Annotation\""
+        "@value": "Optionally establishes the system of annotations queried in a bdqval:ParameterizedTest: a system that holds annotations and can be queried for those with an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation, identified for example by the IRI of a W3C Web Annotation Protocol container or of a published oa:AnnotationCollection. The default, \"W3C Web Annotation\", names the W3C Web Annotation Data Model, not a system that can be queried."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -523,7 +523,7 @@
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
-        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ANNOTATION_ISSUE_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ISSUE_ANNOTATION_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
