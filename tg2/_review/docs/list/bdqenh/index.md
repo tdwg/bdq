@@ -203,7 +203,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/AssumedDefault">https://rs.tdwg.org/bdqenh/terms/AssumedDefault</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/AssumedDefault">https://rs.tdwg.org/bdqenh/terms/AssumedDefault</a> <a href="https://rs.tdwg.org/bdqenh/terms/AssumedDefault.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -211,7 +211,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30</a> <a href="https://rs.tdwg.org/bdqenh/terms/version/AssumedDefault-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -249,7 +249,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/Converted">https://rs.tdwg.org/bdqenh/terms/Converted</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/Converted">https://rs.tdwg.org/bdqenh/terms/Converted</a> <a href="https://rs.tdwg.org/bdqenh/terms/Converted.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -257,7 +257,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/Converted-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/Converted-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/Converted-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/Converted-2024-09-30</a> <a href="https://rs.tdwg.org/bdqenh/terms/version/Converted-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -295,7 +295,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/FilledInFrom">https://rs.tdwg.org/bdqenh/terms/FilledInFrom</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/FilledInFrom">https://rs.tdwg.org/bdqenh/terms/FilledInFrom</a> <a href="https://rs.tdwg.org/bdqenh/terms/FilledInFrom.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -303,7 +303,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/FilledInFrom-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/FilledInFrom-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/FilledInFrom-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/FilledInFrom-2024-09-30</a> <a href="https://rs.tdwg.org/bdqenh/terms/version/FilledInFrom-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -341,7 +341,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/Standardized">https://rs.tdwg.org/bdqenh/terms/Standardized</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/Standardized">https://rs.tdwg.org/bdqenh/terms/Standardized</a> <a href="https://rs.tdwg.org/bdqenh/terms/Standardized.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -349,7 +349,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/Standardized-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/Standardized-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/Standardized-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/Standardized-2024-09-30</a> <a href="https://rs.tdwg.org/bdqenh/terms/version/Standardized-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -387,7 +387,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/Transposed">https://rs.tdwg.org/bdqenh/terms/Transposed</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/Transposed">https://rs.tdwg.org/bdqenh/terms/Transposed</a> <a href="https://rs.tdwg.org/bdqenh/terms/Transposed.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -395,7 +395,7 @@ An instance of `bdqffdq:Validation`, `bdqffdq:Issue`, or `bdqffdq:Measure` SHOUL
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/Transposed-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/Transposed-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqenh/terms/version/Transposed-2024-09-30">https://rs.tdwg.org/bdqenh/terms/version/Transposed-2024-09-30</a> <a href="https://rs.tdwg.org/bdqenh/terms/version/Transposed-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>

@@ -330,23 +330,57 @@ footer = ""
 #############################################################
 # Document 2: Term-index document
 
-# Term IRI and Term Version IRI of each term, linked to rs.tdwg.org, each with a graph icon linking its
-# RDF (Turtle) representation ({IRI}.ttl); the version IRIs are from the term-version file exported
-# from rs.tdwg.org.
+# Each term is a table in the form of the other Lists of Terms (draft_build-termlist.py): Term IRI, Modified,
+# Term version IRI (each IRI with the graph icon linking its RDF (Turtle) representation in rs.tdwg.org), Label,
+# Preferred label, Definition, Comments, then the rows particular to the ontology.  Modified, the version IRI,
+# Label, Status, and Controlled value are from the term-version file exported from rs.tdwg.org.  The anchor of
+# each table is the term's local name, to which rs.tdwg.org redirects (e.g. #Validation).
+import html as html_module
 term_versions_file = '../_review/vocabulary/bdqffdq_term_versions.csv'
-term_version_iris = {}
+term_versions = {}
 for _, row in pd.read_csv(term_versions_file, dtype=str, na_filter=False).iterrows():
-	term_version_iris[row['term_iri']] = row['iri']
+	term_versions[row['term_iri']] = row
 
-def rdf_icon(iri):
-	return ' [![RDF (Turtle)](/assets/img/rdf-graph.svg){{: .rdf-icon }}]({}.ttl "RDF (Turtle)")'.format(iri)
+def html_text(value):
+	if value is None:
+		return ''
+	value = str(value).replace("\n\n", "\n")
+	return html_module.escape(value, quote=False).replace("\n", "<br>\n")
 
-def term_iri_lines(term_iri):
-	lines = "- Term IRI: [{}]({}){}\n".format(term_iri, term_iri, rdf_icon(term_iri))
-	version_iri = term_version_iris.get(term_iri)
-	if version_iri:
-		lines = lines + "- Term Version IRI: [{}]({}){}\n".format(version_iri, version_iri, rdf_icon(version_iri))
-	return lines
+def curies(value):
+	return html_text(str(value).replace("https://rs.tdwg.org/bdqffdq/terms/", "bdqffdq:")
+		.replace("http://www.w3.org/2002/07/owl#", "owl:"))
+
+def term_table(subject, rows):
+	"""A term table: subject is the term IRI; rows are (label, html) pairs after the common rows."""
+	subject = str(subject)
+	local_name = subject.replace("https://rs.tdwg.org/bdqffdq/terms/", "")
+	version = term_versions.get(subject)
+	table = '<table>\n\t<thead>\n\t\t<tr>\n'
+	table += '\t\t\t<th colspan="2"><a id="{}"></a>Term Name  bdqffdq:{}</th>\n'.format(local_name, local_name)
+	table += '\t\t</tr>\n\t</thead>\n\t<tbody>\n'
+	common = [('Term IRI', function_lib.iri_cell_html(subject))]
+	if version is not None:
+		common.append(('Modified', version['issued']))
+		common.append(('Term version IRI', function_lib.iri_cell_html(version['iri'])))
+		common.append(('Label', html_text(version['label'])))
+	# Status, Controlled value, Type last, in that order, as in the other Lists of Terms.
+	tail = [row for row in rows if row[0] in ('Controlled value', 'Type')]
+	rows = [row for row in rows if row[0] not in ('Controlled value', 'Type')]
+	status = [('Status', version['status'])] if version is not None else []
+	for label, value in common + rows + status + tail:
+		if value is None or value == '':
+			continue
+		table += '\t\t<tr>\n\t\t\t<td>{}</td>\n\t\t\t<td>{}</td>\n\t\t</tr>\n'.format(label, value)
+	table += '\t</tbody>\n</table>\n\n'
+	return table
+
+def status_and_value(subject, rows):
+	"""Append the Controlled value (named individuals) to rows."""
+	version = term_versions.get(str(subject))
+	if version is not None and version['controlled_value_string']:
+		rows.append(('Controlled value', html_text(version['controlled_value_string'])))
+	return rows
 
 # Configuration: Files 
 outputDirectory = "../_review/docs/list/bdqffdq/"
@@ -482,18 +516,13 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	term = entity.replace("bdqffdq:","");
-	text = text + "#### {}\n\n".format(term)
-	text = text + "- Name: {}\n".format(entity)
-	text = text + term_iri_lines(str(r.subject))
-	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
-	text = text + "- Definition: {}\n".format(r.definition)
-	if (r.parents) :
-		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
-	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
-	# if a scopeNote exists, include it
-	if (r.scopeNote) :
-		text = text + "- Scope Note: {}\n".format(optional_replace(r.scopeNote,"\n\n","\n").replace("\n","  \n"))
-	text = text + "\n********************\n\n"
+	text = text + term_table(r.subject, [
+		('Preferred label', html_text(r.prefLabel)),
+		('Definition', html_text(r.definition)),
+		('Comments', html_text(r.comment)),
+		('Scope note', html_text(r.scopeNote)),
+		('SubClass Of', curies(r.parents) if r.parents else ''),
+		('Type', 'owl:Class')])
 
 text = text + "### 4.2 ObjectProperty terms (normative)\n"
 sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?range ?restrictedRange ?restriction  (GROUP_CONCAT(?parent; SEPARATOR='; ') AS ?parents)  WHERE {  ?subject a owl:ObjectProperty . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject rdfs:subPropertyOf ?parent } . OPTIONAL { ?subject rdfs:range ?range . optional { ?range a owl:Restriction . ?range owl:onProperty ?restrictedRange . ?range  ?restriction ?x . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) }  } . OPTIONAL { ?subject skos:note ?comment } } GROUP BY ?subject ?prefLabel ?definition ?comment ORDER BY ?subject"
@@ -502,20 +531,12 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	term = entity.replace("bdqffdq:","");
-	text = text + "#### {}\n\n".format(term)
-	text = text + "- Name: {}\n".format(entity)
-	text = text + term_iri_lines(str(r.subject))
-	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
-	text = text + "- Definition: {}\n".format(r.definition)
-	if (r.parents) :
-		text = text + "- SubClass Of: {}\n".format(r.parents.replace("https://rs.tdwg.org/bdqffdq/terms/",""))
-	#if (r.range) :
-	#	if (r.restriction) :
-	#		text = text + "- Range [ {} {} ]\n".format(r.restriction.replace("http://www.w3.org/2002/07/owl#","owl:"), r.restrictedRange.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
-	#	else :
-	#		text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:"))
-	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
-	text = text + "\n********************\n\n"
+	text = text + term_table(r.subject, [
+		('Preferred label', html_text(r.prefLabel)),
+		('Definition', html_text(r.definition)),
+		('Comments', html_text(r.comment)),
+		('SubProperty Of', curies(r.parents) if r.parents else ''),
+		('Type', 'owl:ObjectProperty')])
 
 
 text = text + "### 4.3 DataProperty terms (normative)\n"
@@ -525,15 +546,11 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:")
 	term = entity.replace("bdqffdq:","")
-	text = text + "#### {}\n\n".format(term)
-	text = text + "- Name: {}\n".format(entity)
-	text = text + term_iri_lines(str(r.subject))
-	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
-	text = text + "- Definition: {}\n".format(r.definition)
-	#if (r.range) :
-	#	text = text + "- Range {}\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
-	text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
-	text = text + "\n********************\n\n"
+	text = text + term_table(r.subject, [
+		('Preferred label', html_text(r.prefLabel)),
+		('Definition', html_text(r.definition)),
+		('Comments', html_text(r.comment)),
+		('Type', 'owl:DatatypeProperty')])
 
 text = text + "### 4.4 NamedIndividual terms (normative)\n"
 sparql = prefixes + "SELECT DISTINCT ?subject ?prefLabel ?definition ?comment ?type  WHERE {  ?subject a owl:NamedIndividual . ?subject a ?type . ?subject rdfs:comment ?definition . ?subject skos:prefLabel ?prefLabel . OPTIONAL { ?subject skos:note ?comment } . FILTER ( ?type != owl:NamedIndividual) . }  ORDER BY ?type ?subject"
@@ -542,21 +559,10 @@ for r in queryResult :
 	entity = r.subject
 	entity = entity.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	term = entity.replace("bdqffdq:","");
-	text = text + "#### {}\n\n".format(term)
-	text = text + "- Name: {}\n".format(entity)
-	text = text + term_iri_lines(str(r.subject))
-	rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-	text = text + "- Type: {}\n".format(rtype)
-	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
-	#if (r.differentFrom) :
-	#	different = r.differentFrom.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
-	#	text = text + "- DifferentFrom: {}\n".format(different)
-	text = text + "- Definition: {}\n".format(r.definition)
-	if r.comment is None:
-		text = text + "- Comments:\n"
-	else:
-		text = text + "- Comments: {}\n".format(optional_replace(r.comment,"\n\n","\n").replace("\n","  \n"))
-	text = text + "\n********************\n\n"
+	text = text + term_table(r.subject, status_and_value(r.subject, [
+		('Preferred label', html_text(r.prefLabel)),
+		('Definition', html_text(r.definition)),
+		('Comments', html_text(r.comment))]) + [('Type', curies(r.type))])
 
 ## Produce a table of contents from the headings 
 toc = generate_markdown_toc((header+text+footer).splitlines())

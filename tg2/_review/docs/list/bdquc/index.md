@@ -200,7 +200,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/Alien-Species">https://rs.tdwg.org/bdquc/terms/Alien-Species</a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/Alien-Species">https://rs.tdwg.org/bdquc/terms/Alien-Species</a> <a href="https://rs.tdwg.org/bdquc/terms/Alien-Species.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -208,7 +208,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Alien-Species-2026-04-22">https://rs.tdwg.org/bdquc/terms/version/Alien-Species-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Alien-Species-2026-04-22">https://rs.tdwg.org/bdquc/terms/version/Alien-Species-2026-04-22</a> <a href="https://rs.tdwg.org/bdquc/terms/version/Alien-Species-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -254,7 +254,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns">https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns</a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns">https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns</a> <a href="https://rs.tdwg.org/bdquc/terms/Spatial-Temporal_Patterns.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -262,7 +262,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-04-22">https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-04-22">https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-04-22</a> <a href="https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -308,7 +308,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/Species-Distribution-Modeling-Trees">https://rs.tdwg.org/bdquc/terms/Species-Distribution-Modeling-Trees</a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/Species-Distribution-Modeling-Trees">https://rs.tdwg.org/bdquc/terms/Species-Distribution-Modeling-Trees</a> <a href="https://rs.tdwg.org/bdquc/terms/Species-Distribution-Modeling-Trees.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -316,7 +316,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26">https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26</a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26">https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26</a> <a href="https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -362,7 +362,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/Taxon-Management">https://rs.tdwg.org/bdquc/terms/Taxon-Management</a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/Taxon-Management">https://rs.tdwg.org/bdquc/terms/Taxon-Management</a> <a href="https://rs.tdwg.org/bdquc/terms/Taxon-Management.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -370,7 +370,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-04-22">https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-04-22">https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-04-22</a> <a href="https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>

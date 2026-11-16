@@ -600,3 +600,15 @@ def with_bdqtest_current_version_iris(frame):
     version IRI (bdqtest_current_version_iri), and return the dataframe."""
     frame['iri'] = [bdqtest_current_version_iri(n, i) for n, i in zip(frame['term_localName'], frame['issued'])]
     return frame
+
+RDF_ICON_SRC = '/assets/img/rdf-graph.svg'
+
+def rdf_icon_html(iri):
+    """HTML for the graph icon linking the RDF (Turtle) representation of a resource in rs.tdwg.org,
+    which serves {IRI}.ttl (as on the landing page, Section 3.3.3)."""
+    return '<a href="{}.ttl" title="RDF (Turtle)"><img src="{}" alt="RDF (Turtle)" class="rdf-icon"></a>'.format(iri, RDF_ICON_SRC)
+
+def iri_cell_html(iri):
+    """The content of a term list table cell for a term IRI or term version IRI: the IRI, linked,
+    followed by the graph icon linking its RDF (Turtle) representation."""
+    return '<a href="{0}">{0}</a> {1}'.format(iri, rdf_icon_html(iri))

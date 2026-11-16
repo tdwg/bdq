@@ -315,13 +315,28 @@ for term in termLists:
             text += '\t\t</tr>\n'
             text += '\t</thead>\n'
             text += '\t<tbody>\n'
+            # The rows that begin every term table in the Lists of Terms (as in draft_build-termlist.py):
+            # Term IRI, Modified, Term version IRI (each IRI with the graph icon linking its Turtle), Label.
+            text += '\t\t<tr>\n'
+            text += '\t\t\t<td>Term IRI</td>\n'
+            text += '\t\t\t<td>' + function_lib.iri_cell_html(row['term_iri']) + '</td>\n'
+            text += '\t\t</tr>\n'
+            text += '\t\t<tr>\n'
+            text += '\t\t\t<td>Modified</td>\n'
+            text += '\t\t\t<td>' + row['issued'] + '</td>\n'
+            text += '\t\t</tr>\n'
+            if row['iri'] :
+                text += '\t\t<tr>\n'
+                text += '\t\t\t<td>Term version IRI</td>\n'
+                text += '\t\t\t<td>' + function_lib.iri_cell_html(row['iri']) + '</td>\n'
+                text += '\t\t</tr>\n'
             text += '\t\t<tr>\n'
             text += '\t\t\t<td>Label</td>\n'
             text += '\t\t\t<td>' + row['Label'] + '</td>\n'
             text += '\t\t</tr>\n'
 
             for column in full_column_ordered_list : 
-                if column != "term_localName" and column != "#" and column != "Label" and column != "IssueState" and column!="issueNumber" and column!="IE Class"  : 
+                if column not in ("term_localName", "#", "Label", "IssueState", "issueNumber", "IE Class", "term_iri", "issued", "iri") : 
                     if row[column] : 
                         text += '\t\t<tr>\n'
                         if column in term_concept_dictionary.keys() : 

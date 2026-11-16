@@ -208,7 +208,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Complete">https://rs.tdwg.org/bdqcrit/terms/Complete</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Complete">https://rs.tdwg.org/bdqcrit/terms/Complete</a> <a href="https://rs.tdwg.org/bdqcrit/terms/Complete.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -216,7 +216,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Complete-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Complete-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Complete-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Complete-2024-09-30</a> <a href="https://rs.tdwg.org/bdqcrit/terms/version/Complete-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -254,7 +254,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Consistent">https://rs.tdwg.org/bdqcrit/terms/Consistent</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Consistent">https://rs.tdwg.org/bdqcrit/terms/Consistent</a> <a href="https://rs.tdwg.org/bdqcrit/terms/Consistent.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -262,7 +262,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30</a> <a href="https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -300,7 +300,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Found">https://rs.tdwg.org/bdqcrit/terms/Found</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Found">https://rs.tdwg.org/bdqcrit/terms/Found</a> <a href="https://rs.tdwg.org/bdqcrit/terms/Found.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -308,7 +308,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Found-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Found-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Found-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Found-2024-09-30</a> <a href="https://rs.tdwg.org/bdqcrit/terms/version/Found-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -346,7 +346,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/InRange">https://rs.tdwg.org/bdqcrit/terms/InRange</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/InRange">https://rs.tdwg.org/bdqcrit/terms/InRange</a> <a href="https://rs.tdwg.org/bdqcrit/terms/InRange.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -354,7 +354,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/InRange-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/InRange-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/InRange-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/InRange-2024-09-30</a> <a href="https://rs.tdwg.org/bdqcrit/terms/version/InRange-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -392,7 +392,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Likely">https://rs.tdwg.org/bdqcrit/terms/Likely</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Likely">https://rs.tdwg.org/bdqcrit/terms/Likely</a> <a href="https://rs.tdwg.org/bdqcrit/terms/Likely.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -400,7 +400,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Likely-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Likely-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Likely-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Likely-2024-09-30</a> <a href="https://rs.tdwg.org/bdqcrit/terms/version/Likely-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -438,7 +438,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/NotEmpty">https://rs.tdwg.org/bdqcrit/terms/NotEmpty</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/NotEmpty">https://rs.tdwg.org/bdqcrit/terms/NotEmpty</a> <a href="https://rs.tdwg.org/bdqcrit/terms/NotEmpty.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -446,7 +446,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/NotEmpty-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/NotEmpty-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/NotEmpty-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/NotEmpty-2024-09-30</a> <a href="https://rs.tdwg.org/bdqcrit/terms/version/NotEmpty-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -484,7 +484,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Standard">https://rs.tdwg.org/bdqcrit/terms/Standard</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Standard">https://rs.tdwg.org/bdqcrit/terms/Standard</a> <a href="https://rs.tdwg.org/bdqcrit/terms/Standard.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -492,7 +492,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Standard-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Standard-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Standard-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Standard-2024-09-30</a> <a href="https://rs.tdwg.org/bdqcrit/terms/version/Standard-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -530,7 +530,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Unambiguous">https://rs.tdwg.org/bdqcrit/terms/Unambiguous</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/Unambiguous">https://rs.tdwg.org/bdqcrit/terms/Unambiguous</a> <a href="https://rs.tdwg.org/bdqcrit/terms/Unambiguous.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -538,7 +538,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Unambiguous-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Unambiguous-2024-09-30</a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Unambiguous-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Unambiguous-2024-09-30</a> <a href="https://rs.tdwg.org/bdqcrit/terms/version/Unambiguous-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>

@@ -565,7 +565,7 @@ for term in termLists:
             text += '\t\t\t<td>Term IRI</td>\n'
             uri = row['term_iri']
             # uri = "https://rs.tdwg.org/bdqdim/terms/" + row['term_localName']
-            text += '\t\t\t<td><a href="' + uri + '">' + uri + '</a></td>\n'
+            text += '\t\t\t<td>' + function_lib.iri_cell_html(uri) + '</td>\n'
             text += '\t\t</tr>\n'
             text += '\t\t<tr>\n'
             text += '\t\t\t<td>Modified</td>\n'
@@ -575,7 +575,7 @@ for term in termLists:
             if row['iri'] != '':
                 text += '\t\t<tr>\n'
                 text += '\t\t\t<td>Term version IRI</td>\n'
-                text += '\t\t\t<td><a href="' + row['iri'] + '">' + row['iri'] + '</a></td>\n'
+                text += '\t\t\t<td>' + function_lib.iri_cell_html(row['iri']) + '</td>\n'
                 text += '\t\t</tr>\n'
     
             text += '\t\t<tr>\n'

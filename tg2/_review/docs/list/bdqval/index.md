@@ -250,7 +250,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes">https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes">https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes</a> <a href="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -258,7 +258,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23">https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23">https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23</a> <a href="https://rs.tdwg.org/bdqval/terms/version/AggregatedTestResponseOutcomes-2026-04-23.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -296,7 +296,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/AllAmendmentTestsRunOnSingleRecord">https://rs.tdwg.org/bdqval/terms/AllAmendmentTestsRunOnSingleRecord</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/AllAmendmentTestsRunOnSingleRecord">https://rs.tdwg.org/bdqval/terms/AllAmendmentTestsRunOnSingleRecord</a> <a href="https://rs.tdwg.org/bdqval/terms/AllAmendmentTestsRunOnSingleRecord.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -304,7 +304,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-11-12">https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-11-12</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-11-12">https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-11-12</a> <a href="https://rs.tdwg.org/bdqval/terms/version/AllAmendmentTestsRunOnSingleRecord-2026-11-12.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -342,7 +342,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/AllValidationTestsRunOnSingleRecord">https://rs.tdwg.org/bdqval/terms/AllValidationTestsRunOnSingleRecord</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/AllValidationTestsRunOnSingleRecord">https://rs.tdwg.org/bdqval/terms/AllValidationTestsRunOnSingleRecord</a> <a href="https://rs.tdwg.org/bdqval/terms/AllValidationTestsRunOnSingleRecord.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -350,7 +350,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-11-12">https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-11-12</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-11-12">https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-11-12</a> <a href="https://rs.tdwg.org/bdqval/terms/version/AllValidationTestsRunOnSingleRecord-2026-11-12.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -388,7 +388,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/annotationAlertIf">https://rs.tdwg.org/bdqval/terms/annotationAlertIf</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/annotationAlertIf">https://rs.tdwg.org/bdqval/terms/annotationAlertIf</a> <a href="https://rs.tdwg.org/bdqval/terms/annotationAlertIf.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -396,7 +396,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -434,7 +434,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/annotationSystem">https://rs.tdwg.org/bdqval/terms/annotationSystem</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/annotationSystem">https://rs.tdwg.org/bdqval/terms/annotationSystem</a> <a href="https://rs.tdwg.org/bdqval/terms/annotationSystem.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -442,7 +442,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -480,7 +480,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome">https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome">https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome</a> <a href="https://rs.tdwg.org/bdqval/terms/assumptionOnUnknownBiome.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -488,7 +488,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -526,7 +526,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/defaultGeodeticDatum">https://rs.tdwg.org/bdqval/terms/defaultGeodeticDatum</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/defaultGeodeticDatum">https://rs.tdwg.org/bdqval/terms/defaultGeodeticDatum</a> <a href="https://rs.tdwg.org/bdqval/terms/defaultGeodeticDatum.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -534,7 +534,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -572,7 +572,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/defaultOccurrenceStatus">https://rs.tdwg.org/bdqval/terms/defaultOccurrenceStatus</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/defaultOccurrenceStatus">https://rs.tdwg.org/bdqval/terms/defaultOccurrenceStatus</a> <a href="https://rs.tdwg.org/bdqval/terms/defaultOccurrenceStatus.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -580,7 +580,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultOccurrenceStatus-2026-04-27">https://rs.tdwg.org/bdqval/terms/version/defaultOccurrenceStatus-2026-04-27</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultOccurrenceStatus-2026-04-27">https://rs.tdwg.org/bdqval/terms/version/defaultOccurrenceStatus-2026-04-27</a> <a href="https://rs.tdwg.org/bdqval/terms/version/defaultOccurrenceStatus-2026-04-27.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -618,7 +618,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/earliestValidDate">https://rs.tdwg.org/bdqval/terms/earliestValidDate</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/earliestValidDate">https://rs.tdwg.org/bdqval/terms/earliestValidDate</a> <a href="https://rs.tdwg.org/bdqval/terms/earliestValidDate.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -626,7 +626,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -664,7 +664,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/Empty">https://rs.tdwg.org/bdqval/terms/Empty</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/Empty">https://rs.tdwg.org/bdqval/terms/Empty</a> <a href="https://rs.tdwg.org/bdqval/terms/Empty.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -672,7 +672,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -710,7 +710,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/geospatialLand">https://rs.tdwg.org/bdqval/terms/geospatialLand</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/geospatialLand">https://rs.tdwg.org/bdqval/terms/geospatialLand</a> <a href="https://rs.tdwg.org/bdqval/terms/geospatialLand.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -718,7 +718,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/geospatialLand-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/geospatialLand-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/geospatialLand-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/geospatialLand-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/geospatialLand-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -756,7 +756,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/includeEventDate">https://rs.tdwg.org/bdqval/terms/includeEventDate</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/includeEventDate">https://rs.tdwg.org/bdqval/terms/includeEventDate</a> <a href="https://rs.tdwg.org/bdqval/terms/includeEventDate.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -764,7 +764,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -802,7 +802,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/latestValidDate">https://rs.tdwg.org/bdqval/terms/latestValidDate</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/latestValidDate">https://rs.tdwg.org/bdqval/terms/latestValidDate</a> <a href="https://rs.tdwg.org/bdqval/terms/latestValidDate.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -810,7 +810,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -848,7 +848,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters">https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters">https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters</a> <a href="https://rs.tdwg.org/bdqval/terms/maximumValidDepthInMeters.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -856,7 +856,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -894,7 +894,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters">https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters">https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters</a> <a href="https://rs.tdwg.org/bdqval/terms/maximumValidElevationInMeters.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -902,7 +902,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -940,7 +940,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/minimumValidDepthInMeters">https://rs.tdwg.org/bdqval/terms/minimumValidDepthInMeters</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/minimumValidDepthInMeters">https://rs.tdwg.org/bdqval/terms/minimumValidDepthInMeters</a> <a href="https://rs.tdwg.org/bdqval/terms/minimumValidDepthInMeters.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -948,7 +948,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -986,7 +986,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/minimumValidElevationInMeters">https://rs.tdwg.org/bdqval/terms/minimumValidElevationInMeters</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/minimumValidElevationInMeters">https://rs.tdwg.org/bdqval/terms/minimumValidElevationInMeters</a> <a href="https://rs.tdwg.org/bdqval/terms/minimumValidElevationInMeters.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -994,7 +994,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1032,7 +1032,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/NotEmpty">https://rs.tdwg.org/bdqval/terms/NotEmpty</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/NotEmpty">https://rs.tdwg.org/bdqval/terms/NotEmpty</a> <a href="https://rs.tdwg.org/bdqval/terms/NotEmpty.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -1040,7 +1040,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1078,7 +1078,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/sourceAuthority">https://rs.tdwg.org/bdqval/terms/sourceAuthority</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/sourceAuthority">https://rs.tdwg.org/bdqval/terms/sourceAuthority</a> <a href="https://rs.tdwg.org/bdqval/terms/sourceAuthority.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -1086,7 +1086,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1124,7 +1124,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters">https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters">https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters</a> <a href="https://rs.tdwg.org/bdqval/terms/spatialBufferInMeters.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -1132,7 +1132,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/spatialBufferInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/spatialBufferInMeters-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/spatialBufferInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/spatialBufferInMeters-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/spatialBufferInMeters-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1170,7 +1170,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 	<tbody>
 		<tr>
 			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/taxonIsMarine">https://rs.tdwg.org/bdqval/terms/taxonIsMarine</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/taxonIsMarine">https://rs.tdwg.org/bdqval/terms/taxonIsMarine</a> <a href="https://rs.tdwg.org/bdqval/terms/taxonIsMarine.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Modified</td>
@@ -1178,7 +1178,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/taxonIsMarine-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/taxonIsMarine-2026-04-22</a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/taxonIsMarine-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/taxonIsMarine-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/taxonIsMarine-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
