@@ -483,5 +483,9 @@ for templatePath, document in directories.items() :
 	for file in glob.glob('{}*.csv'.format(sourceDirectory)):
 		print(file)
 		shutil.copy(file, outputDirectory)
+	# JSON-LD files (e.g. the annotation test fixture beside the test validation data)
+	for file in glob.glob('{}*.jsonld'.format(sourceDirectory)):
+		print(file)
+		shutil.copy(file, outputDirectory)
 
 print('done ({})'.format(__file__))

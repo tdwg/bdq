@@ -63,7 +63,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-15>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-16>
 
 **Biodiversity Information Standards (TDWG)**
 

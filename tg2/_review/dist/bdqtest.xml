@@ -1145,8 +1145,8 @@
     <bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/method/0dacd2f5-591c-47c1-9d05-2de81675b6cc">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/0dacd2f5-591c-47c1-9d05-2de81675b6cc-2024-09-17"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-17</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/0dacd2f5-591c-47c1-9d05-2de81675b6cc-2026-11-16"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-16</dcterms:modified>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
     <rdfs:label>IssueMethod: ISSUE_ANNOTATION_NOTEMPTY with Specification Specification for: ISSUE_ANNOTATION_NOTEMPTY</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:0dacd2f5-591c-47c1-9d05-2de81675b6cc"/>
@@ -1918,15 +1918,6 @@
     <bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/47ee20d9-5087-4f76-a494-6fea05e50b8b"/>
     <bdqffdq:hasSpecification rdf:resource="https://rs.tdwg.org/bdqtest/specification/728b4db4-aff0-484f-9a5d-976b1f36cfb4"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b-2024-09-17"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-17</dcterms:modified>
-    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"/>
-    <rdfs:label>IssuePolicy: (1) issues  in UseCase bdquc:Taxon-Management</rdfs:label>
-    <owl:sameAs rdf:resource="urn:uuid:966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b"/>
-    <bdqffdq:hasUseCase rdf:resource="https://rs.tdwg.org/bdquc/terms/Taxon-Management"/>
-    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e">
     <dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; COMPLIANT if the value of dwc:pathway is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. bdqval:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</dcterms:description>
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/specification/version/c7c92ef0-284e-4c5d-8fc9-f1480bfe0b8e-2024-02-09"/>
@@ -1939,6 +1930,23 @@
     <bdqffdq:hasArgument rdf:resource="https://rs.tdwg.org/bdqtest/argument/136039c5-6ceb-41ec-90b3-eb1cd37d6eed"/>
     <bdqffdq:hasAuthoritiesDefaults>bdqval:sourceAuthority default = "Pathway Controlled Vocabulary List of Terms" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}</bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; COMPLIANT if the value of dwc:pathway is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT.</bdqffdq:hasExpectedResponse>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275">
+    <dcterms:description>Is there a value in dwc:decimalLatitude?</dcterms:description>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:modified>
+    <dcterms:references rdf:resource="https://doi.org/10.15468/doc-gg7h-s853"/>
+    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+    <rdfs:label>VALIDATION_DECIMALLATITUDE_NOTEMPTY</rdfs:label>
+    <owl:sameAs rdf:resource="urn:uuid:7d2485d5-1ba7-4f25-90cb-f4480ff1a275"/>
+    <skos:historyNote>https://github.com/tdwg/bdq/issues/119</skos:historyNote>
+    <skos:note></skos:note>
+    <skos:prefLabel>Validation dwc:decimalLatitude Not Empty for SingleRecord</skos:prefLabel>
+    <bdqffdq:hasActedUponInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/e7528e9b-e4d8-42bf-b6e1-169587ca69b8"/>
+    <bdqffdq:hasCriterion rdf:resource="https://rs.tdwg.org/bdqcrit/terms/NotEmpty"/>
+    <bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Completeness"/>
+    <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</bdqffdq:hasDateLastUpdated>
+    <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/d001ff0b-ade0-4a73-b281-e92ae0129bec">
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/d001ff0b-ade0-4a73-b281-e92ae0129bec-2025-03-07"/>
@@ -1965,23 +1973,6 @@
     <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/c6adf2ea-3051-4498-97f4-4b2f8a105f57"/>
     <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf"/>
     <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/f51e15a6-a67d-4729-9c28-3766299d2985"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/7d2485d5-1ba7-4f25-90cb-f4480ff1a275">
-    <dcterms:description>Is there a value in dwc:decimalLatitude?</dcterms:description>
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:modified>
-    <dcterms:references rdf:resource="https://doi.org/10.15468/doc-gg7h-s853"/>
-    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
-    <rdfs:label>VALIDATION_DECIMALLATITUDE_NOTEMPTY</rdfs:label>
-    <owl:sameAs rdf:resource="urn:uuid:7d2485d5-1ba7-4f25-90cb-f4480ff1a275"/>
-    <skos:historyNote>https://github.com/tdwg/bdq/issues/119</skos:historyNote>
-    <skos:note></skos:note>
-    <skos:prefLabel>Validation dwc:decimalLatitude Not Empty for SingleRecord</skos:prefLabel>
-    <bdqffdq:hasActedUponInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/e7528e9b-e4d8-42bf-b6e1-169587ca69b8"/>
-    <bdqffdq:hasCriterion rdf:resource="https://rs.tdwg.org/bdqcrit/terms/NotEmpty"/>
-    <bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Completeness"/>
-    <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</bdqffdq:hasDateLastUpdated>
-    <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/informationelement/ba87601b-dcc0-424d-973d-3869f35586d0">
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/version/ba87601b-dcc0-424d-973d-3869f35586d0-2024-09-16"/>
@@ -4806,6 +4797,15 @@
     <bdqffdq:aggregatesResponsesFrom rdf:resource="https://rs.tdwg.org/bdqtest/terms/ac2b7648-d5f9-48ca-9b07-8ad5879a2536"/>
     <bdqffdq:composedOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b">
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b-2026-11-16"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-16</dcterms:modified>
+    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"/>
+    <rdfs:label>IssuePolicy: (1) issues  in UseCase bdquc:Taxon-Management</rdfs:label>
+    <owl:sameAs rdf:resource="urn:uuid:966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b"/>
+    <bdqffdq:hasUseCase rdf:resource="https://rs.tdwg.org/bdquc/terms/Taxon-Management"/>
+    <bdqffdq:includedInPolicy rdf:resource="https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/374b091a-fc90-4791-91e5-c1557c649169">
     <dcterms:description>Is there a value in dc:type?</dcterms:description>
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07"/>
@@ -5596,8 +5596,8 @@
     <bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_DECIMALLONGITUDE_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/c06368d9-fff3-4b51-8283-e0e4803d1cf3">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/c06368d9-fff3-4b51-8283-e0e4803d1cf3-2025-03-07"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-07</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/c06368d9-fff3-4b51-8283-e0e4803d1cf3-2026-11-16"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-16</dcterms:modified>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"/>
     <rdfs:label>IssuePolicy: (2) issues  in UseCase bdquc:Alien-Species</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:c06368d9-fff3-4b51-8283-e0e4803d1cf3"/>
@@ -8853,20 +8853,6 @@
     <bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_PHYLUM_FOUND in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
   </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/1999e4e0-ce3a-46e3-b131-24412bd94bd1">
-    <dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE. bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}</dcterms:description>
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/specification/version/1999e4e0-ce3a-46e3-b131-24412bd94bd1-2023-09-18"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</dcterms:modified>
-    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
-    <rdfs:label>Specification for: ISSUE_ANNOTATION_NOTEMPTY</rdfs:label>
-    <owl:sameAs rdf:resource="urn:uuid:1999e4e0-ce3a-46e3-b131-24412bd94bd1"/>
-    <skos:example>bdqval:annotationAlertIf="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:Empty"</skos:example>
-    <skos:example>bdqval:annotationAlertIf="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:NotEmpty"</skos:example>
-    <bdqffdq:hasArgument rdf:resource="https://rs.tdwg.org/bdqtest/argument/8c52d108-f9fe-4835-9939-6acc4430c9ee"/>
-    <bdqffdq:hasArgument rdf:resource="https://rs.tdwg.org/bdqtest/argument/de022674-06c8-48cf-86b6-2cd362e24667"/>
-    <bdqffdq:hasAuthoritiesDefaults>bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}</bdqffdq:hasAuthoritiesDefaults>
-    <bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.</bdqffdq:hasExpectedResponse>
-  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/2a9d4cfd-815a-46e0-bb51-60724582b762">
     <dcterms:description>Measure if all VALIDATION_TAXON_NOTEMPTY in a record set are COMPLIANT.</dcterms:description>
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06"/>
@@ -11413,8 +11399,8 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1">
     <dcterms:description>Are there any annotations associated with the record?</dcterms:description>
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2024-09-17"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-17</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-16"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-16</dcterms:modified>
     <dcterms:references rdf:resource="urn:uuid:3c0146df-5ce2-4f35-a066-5cf14de8c79a"/>
     <dcterms:references rdf:resource="urn:uuid:71c9c3d1-fb9d-4774-8f31-63bc7a4ef49b"/>
     <dcterms:references rdf:resource="urn:uuid:e9d0f3c8-848c-409e-9af3-70425650a575"/>
@@ -11422,12 +11408,12 @@
     <rdfs:label>ISSUE_ANNOTATION_NOTEMPTY</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1"/>
     <skos:historyNote>https://github.com/tdwg/bdq/issues/29</skos:historyNote>
-    <skos:note>While there is a W3C standard on 'web annotation', there is no TDWG recommendation on how this standard could be applied to annotating Darwin Core records. While implementation of this Test is currently problematic, TG2 considers annotations attached to any aspect of a Darwin Core record justifies this Test as a placeholder in the hope of future developments.</skos:note>
+    <skos:note>While there is a W3C standard on 'web annotation', there is no TDWG recommendation on how this standard could be applied to annotating Darwin Core records. While implementation of this Test is currently problematic, TG2 considers annotations attached to any aspect of a Darwin Core record justifies this Test as a placeholder in the hope of future developments. The Test queries the bdqval:annotationSystem; the execution framework supplies oa:hasTarget, an IRI identifying the bdqffdq:SingleRecord under evaluation (for example dwc:occurrenceID when it is an IRI, or the IRI of the record in its data source), that is, the IRI that annotations on the record would have as their oa:hasTarget. The value of bdqval:annotationSystem identifies an annotation system that can be queried, for example the IRI of a W3C Web Annotation Protocol container or of a published oa:AnnotationCollection {[https://www.w3.org/TR/annotation-protocol/]}. The default, "W3C Web Annotation", names the data model, not a system that can be queried, so with the default the Response.status is EXTERNAL_PREREQUISITES_NOT_MET unless the implementation is configured with an annotation system. The Test validation data use a static oa:AnnotationCollection, https://bdq.tdwg.org/draft/docs/guide/implementers/annotation_test_fixture.jsonld, as the bdqval:annotationSystem.</skos:note>
     <skos:prefLabel>Issue Annotation Not Empty for SingleRecord</skos:prefLabel>
     <bdqffdq:hasConsultedInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/b7a02234-c4d0-40fd-a437-af8330cc700f"/>
     <bdqffdq:hasCriterion rdf:resource="https://rs.tdwg.org/bdqcrit/terms/NotEmpty"/>
     <bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Reliability"/>
-    <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</bdqffdq:hasDateLastUpdated>
+    <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-16</bdqffdq:hasDateLastUpdated>
     <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/informationelement/92a6c199-f1d7-493e-b643-57d09c5131dd">
@@ -11471,6 +11457,20 @@
     <skos:example>dwc:taxonRank="genus": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:taxonRank is bdqval:NotEmpty"</skos:example>
     <bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>COMPLIANT if dwc:taxonRank is bdqval:NotEmpty; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/1999e4e0-ce3a-46e3-b131-24412bd94bd1">
+    <dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; INTERNAL_PREREQUISITES_NOT_MET if oa:hasTarget is bdqval:Empty; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE. bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}</dcterms:description>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/specification/version/1999e4e0-ce3a-46e3-b131-24412bd94bd1-2026-11-16"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-16</dcterms:modified>
+    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
+    <rdfs:label>Specification for: ISSUE_ANNOTATION_NOTEMPTY</rdfs:label>
+    <owl:sameAs rdf:resource="urn:uuid:1999e4e0-ce3a-46e3-b131-24412bd94bd1"/>
+    <skos:example>oa:hasTarget="https://example.org/bdq/test/occurrence/1", bdqval:annotationSystem default: Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.comment="The bdqval:annotationSystem is not available"</skos:example>
+    <skos:example>oa:hasTarget="https://example.org/bdq/test/occurrence/1", bdqval:annotationSystem="https://bdq.tdwg.org/draft/docs/guide/implementers/annotation_test_fixture.jsonld": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="An annotation in the bdqval:annotationSystem has an oa:hasTarget referencing the record"</skos:example>
+    <bdqffdq:hasArgument rdf:resource="https://rs.tdwg.org/bdqtest/argument/8c52d108-f9fe-4835-9939-6acc4430c9ee"/>
+    <bdqffdq:hasArgument rdf:resource="https://rs.tdwg.org/bdqtest/argument/de022674-06c8-48cf-86b6-2cd362e24667"/>
+    <bdqffdq:hasAuthoritiesDefaults>bdqval:annotationSystem default = "W3C Web Annotation" {[https://www.w3.org/annotation/]} {"oa:Annotation vocabulary" [https://www.w3.org/TR/annotation-vocab/]},bdqval:annotationAlertIf default = "oa:Annotation with oa:hasTarget having as object any dwciri:term instance that is part of the SingleRecord under Test." {[https://www.w3.org/TR/annotation-vocab/]}</bdqffdq:hasAuthoritiesDefaults>
+    <bdqffdq:hasExpectedResponse>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; INTERNAL_PREREQUISITES_NOT_MET if oa:hasTarget is bdqval:Empty; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.</bdqffdq:hasExpectedResponse>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/method/69a7c952-ecf0-4cb0-b005-b244926e8f03">
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/69a7c952-ecf0-4cb0-b005-b244926e8f03-2025-03-06"/>
