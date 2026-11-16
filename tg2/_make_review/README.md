@@ -138,7 +138,7 @@ _review/
 	├── bdqdim_term_versions.csv  Term version file for `bdqdim:` Dimension vocabulary.
 	├── bdqenh_term_versions.csv  Term version file for `bdqenh:` Enhancement vocabulary.
 	├── bdquc_term_versions.csv  Term version file for `bdquc:` Use Case vocabulary.
-	├── bdqffdq_term_versions.csv  Term version file for `bdqffdq:` ontology terms (the whole ontology is dist/bdqffdq.owl).
+	├── bdqffdq_term_versions.csv  Term version file for `bdqffdq:` ontology terms (the whole ontology is in dist/: bdqffdq.ttl, bdqffdq.owl as RDF/XML, bdqffdq.rdf, bdqffdq.jsonld).
 	└── bdqtest_term_versions.csv  Term version file for `bdqtest:` Test vocabulary.
 </pre>
 

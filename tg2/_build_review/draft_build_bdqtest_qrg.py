@@ -40,7 +40,7 @@ from function_lib import build_term_key, build_authors_contributors_markdown, bu
 
 # Vocabulary file
 inputTermsCsvFilename = "../_review/vocabulary/bdqtest_term_versions.csv"
-inputTermsOwlFilename = "../_review/dist/bdqffdq.owl"
+inputTermsOwlFilename = "../_review/dist/bdqffdq.ttl"
 # output file 
 outputDirectory = "../_review/docs/terms/bdqtest/"
 outputFilename = "{}index.md".format(outputDirectory)

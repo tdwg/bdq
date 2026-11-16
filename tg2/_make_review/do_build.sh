@@ -5,7 +5,7 @@ set -eu
 cd ../_build_review/
 
 echo "Running bdqffdq/bdqtest consistency audit..."
-python3 tools/audit_bdqffdq_vs_bdqtest.py --owl ../_review/dist/bdqffdq.owl --ttl ../_review/dist/bdqtest.ttl
+python3 tools/audit_bdqffdq_vs_bdqtest.py --owl ../_review/dist/bdqffdq.ttl --ttl ../_review/dist/bdqtest.ttl
 
 echo "Running bdqtest vocabulary usage audit..."
 python3 tools/audit_bdqtest_vocab_usage.py --bdqtest _review/dist/bdqtest.ttl --bdqval _review/dist/bdqval.xml --bdqcrit _review/dist/bdqcrit.xml --bdqdim _review/dist/bdqdim.xml --bdqenh _review/dist/bdqenh.xml

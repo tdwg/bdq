@@ -670,7 +670,7 @@ def main() -> int:
         raise SystemExit("One or more target files do not exist:\n- " + "\n- ".join(str(p) for p in missing))
 
     vocab_index: Dict[str, QualifiedTerm] = {}
-    bdqffdq_owl = review_root / "dist/bdqffdq.owl"
+    bdqffdq_owl = review_root / "dist/bdqffdq.ttl"
     if not bdqffdq_owl.exists():
         raise SystemExit(f"bdqffdq owl not found: {bdqffdq_owl}")
     vocab_index.update(load_bdqffdq_qualified_terms(bdqffdq_owl))

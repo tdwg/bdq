@@ -123,11 +123,7 @@ def rewrite_target(url: str) -> str:
 
     path = parts.path
 
-    if path.endswith("bdqffdq.owl"):
-        # Link the Turtle copy of the OWL file (dist/bdqffdq.ttl, identical content, written by the baseline export)
-        # so that the content type is correctly recognized when delivered from the site.
-        new_path = path[:-3] + "ttl"
-    elif path.endswith("README.md"):
+    if path.endswith("README.md"):
         new_path = path[:-9] + "index.html"
     elif path.endswith(".md"):
         new_path = path[:-3] + ".html"

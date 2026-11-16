@@ -33,9 +33,9 @@ def test_rewrite_target_readme():
     assert rs.rewrite_target("foo/README.md") == "foo/index.html"
 
 
-def test_rewrite_target_owl_to_ttl():
-    # Special case handling for owl ontology, rename as ttl so that site delivers with correct content type
-    assert rs.rewrite_target("../../../dist/bdqffdq.owl") == "../../../dist/bdqffdq.ttl"
+def test_rewrite_target_owl_unchanged():
+    # dist/bdqffdq.owl is RDF/XML, served as application/rdf+xml, so its links are not rewritten
+    assert rs.rewrite_target("../../../dist/bdqffdq.owl") == "../../../dist/bdqffdq.owl"
 
 
 def test_rewrite_target_external_unchanged():
@@ -140,15 +140,16 @@ def test_rewrite_html_links_relative_md_with_fragment():
     assert out == '<a href="./docs/guide/users/index.html#31-test-types-non-normative">Test Types</a>'
 
 
-def test_rewrite_html_links_owl_to_ttl():
+def test_rewrite_html_links_rdf_files_unchanged():
+    # dist/bdqffdq.owl is RDF/XML, served as application/rdf+xml, so it is linked as it is
     src = '<a href="./dist/bdqffdq.owl">OWL Ontology</a>'
     out = rs.rewrite_html_links(src)
-    assert out == '<a href="./dist/bdqffdq.ttl">OWL Ontology</a>'
-    # only rewrite .owl extension, not .xml
+    assert out == '<a href="./dist/bdqffdq.owl">OWL Ontology</a>'
+    # nor .xml
     src = '<a href="./vocabulary/bdqtest.xml">Tests as RDF/XML</a>'
     out = rs.rewrite_html_links(src)
     assert out == '<a href="./vocabulary/bdqtest.xml">Tests as RDF/XML</a>'
-    # only rewrite .owl extension, not .ttl
+    # nor .ttl
     src = '<a href="./vocabulary/bdqtest.ttl">Tests as turtle</a>'
     out = rs.rewrite_html_links(src)
     assert out == '<a href="./vocabulary/bdqtest.ttl">Tests as turtle</a>'

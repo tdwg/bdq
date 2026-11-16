@@ -3,10 +3,10 @@
   "repository": "https://github.com/tdwg/rs.tdwg.org",
   "ref": "bdq",
   "commit": "2cb4bba7a29c210b46015074a1cca27da9df748a",
-  "exported": "2026-11-16T01:48:13Z",
+  "exported": "2026-11-16T13:19:24Z",
   "files": {
     "tg2/_review/dist/bdqffdq.jsonld": "2f00caf2034069c7f6b4b5bbab731258fdb580d37b3d2b6fafbbe78c13340db6",
-    "tg2/_review/dist/bdqffdq.owl": "6febee44abb5ea1ccce2b743466987f6b11a231664c21e4de92816a3113527d5",
+    "tg2/_review/dist/bdqffdq.owl": "b831439bdcba869877bde489c69e910e5648f500c52bdaa8def4682ca16285cc",
     "tg2/_review/dist/bdqffdq.rdf": "b831439bdcba869877bde489c69e910e5648f500c52bdaa8def4682ca16285cc",
     "tg2/_review/dist/bdqffdq.ttl": "6febee44abb5ea1ccce2b743466987f6b11a231664c21e4de92816a3113527d5",
     "tg2/_review/dist/bdqffdq_terms.jsonld": "0a5ce6fe7d33823242e603f5ace2e2cd7878aa96835e568a7f15a549e578c0a1",

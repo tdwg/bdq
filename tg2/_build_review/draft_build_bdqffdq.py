@@ -45,7 +45,7 @@ PREFIX bdqenh: <https://rs.tdwg.org/bdqenh/terms/>
 """
 
 # Vocabulary file
-inputTermsOwlFilename = "../_review/dist/bdqffdq.owl"
+inputTermsOwlFilename = "../_review/dist/bdqffdq.ttl"
 bdqffdqOwlDocument = 'https://raw.githubusercontent.com/tdwg/bdq/refs/heads/master/tg2/_review/{}'.format(inputTermsOwlFilename)
 
 # Common Files and information

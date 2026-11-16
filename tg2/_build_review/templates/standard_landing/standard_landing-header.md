@@ -227,7 +227,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
         <strong><a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a></strong><br>
 		Explains the normative concepts and logic for describing data quality needs and reports.<br>
 		See also the Fitness For Use Framework <a href="./docs/list/bdqffdq/index.md">bdqffdq: Term List</a>
-		and the OWL Ontology: <a href="./dist/bdqffdq.owl">Turtle</a>, <a href="./dist/bdqffdq.rdf">RDF/XML</a>, <a href="./dist/bdqffdq.jsonld">JSON-LD</a>.
+		and the OWL Ontology: <a href="./dist/bdqffdq.ttl">Turtle</a>, <a href="./dist/bdqffdq.owl">RDF/XML</a>, <a href="./dist/bdqffdq.jsonld">JSON-LD</a>.
       </td>
     </tr>
     <tr>
@@ -447,8 +447,8 @@ Test Confomance Testing Data are intended for implementers to use to evaluate wh
 
 The Fitness For Use Framework is provided as an OWL ontology.
 
-- [**Biodiversity Data Quality Fitness For Use Framework (Ontology) in Turtle**](dist/bdqffdq.owl)
-- [**Biodiversity Data Quality Fitness For Use Framework (Ontology) in RDF/XML**](dist/bdqffdq.rdf)
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology) in Turtle**](dist/bdqffdq.ttl)
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology) in RDF/XML**](dist/bdqffdq.owl)
 - [**Biodiversity Data Quality Fitness For Use Framework (Ontology) in JSON-LD**](dist/bdqffdq.jsonld)
 
 #### 3.5.4 RDF Serializations of Supporting Controlled Vocabularies (non-normative)

@@ -19,7 +19,7 @@
 * audit_bdqffdq_vs_bdqtest.py - compare the BDQ FFDQ and BDQ Test RDF files to identify differences in use cases, tests, and information elements.  **Must Pass for Build to Succeed**
 
 ```
-python3 audit_bdqffdq_vs_bdqtest.py --owl ../_review/dist/bdqffdq.owl --ttl ../_review/dist/bdqtest.ttl
+python3 audit_bdqffdq_vs_bdqtest.py --owl ../_review/dist/bdqffdq.ttl --ttl ../_review/dist/bdqtest.ttl
 ```
 
 * audit_bdqtest_vocab_usage.py - analyze the usage of vocabulary terms in the BDQ Test RDF file to identify any inconsistencies or missing terms. **Must Pass for Build to Succeed**
@@ -38,7 +38,7 @@ Default paths are set relative to the expected location of this script inside th
 ```
     --data    ../../_review/dist/bdqtest.ttl
     --shapes  ../../core/bdqffdq_SHACL_constraints.ttl
-    --ont     ../../_review/dist/bdqffdq.owl
+    --ont     ../../_review/dist/bdqffdq.ttl
     --usecase ../../_review/dist/bdquc.xml
 ```
 

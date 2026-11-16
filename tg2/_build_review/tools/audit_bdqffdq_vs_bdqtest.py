@@ -9,7 +9,7 @@ Enhancement (requested):
 
 Usage (from tg2/_build_review):
   python3 tools/audit_bdqffdq_vs_bdqtest.py \
-    --owl ../_review/dist/bdqffdq.owl \
+    --owl ../_review/dist/bdqffdq.ttl \
     --ttl ../_review/dist/bdqtest.ttl
 
 @author GitHub CoPilot with human review by Paul Morris
@@ -184,7 +184,7 @@ def run_audit(owl_path: Path, ttl_path: Path) -> Tuple[List[Finding], List[Findi
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--owl", required=True, help="Path to bdqffdq.owl (Turtle)")
+    ap.add_argument("--owl", required=True, help="Path to the bdqffdq ontology in Turtle (dist/bdqffdq.ttl)")
     ap.add_argument("--ttl", required=True, help="Path to bdqtest.ttl (Turtle)")
     args = ap.parse_args()
 
