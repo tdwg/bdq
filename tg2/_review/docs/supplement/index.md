@@ -1544,13 +1544,13 @@ The specifications for the BDQ Tests were developed in Markdown Tables in GitHub
 The preparation for public review of the BDQ standard was built with the following three sets of shell scripts:
 
 - [bdq_issue_to_csv/make_test_csv.sh](https://github.com/kurator-org/bdq_issue_to_csv/blob/v1.0.0/make_test_csv.sh)
-- [bdq/tg2/\_make_review/copy_files.sh](../../../_make_review/copy_files.sh)
-- [bdq/tg2/\_make_review/do_build.sh](../../../_make_review/do_build.sh)
+- [bdq/tg2/\_make_review/copy_files.sh](https://github.com/tdwg/bdq/blob/master/tg2/_make_review/copy_files.sh)
+- [bdq/tg2/\_make_review/do_build.sh](https://github.com/tdwg/bdq/blob/master/tg2/_make_review/do_build.sh)
 
 For details on the Test Conformance Testing Data (which we historically called the Test Validation Data) see: 
 
 - `bdqtestrunner` [README](https://github.com/FilteredPush/bdqtestrunner/blob/master/README.md)
-- [bdq/tg2/core/squish_validation_data.py](https://bdq.tdwg.org/tg2/core/squish_validation_data.py) [github](https://github.com/tdwg/bdq/blob/e2baf5825feadc42f6e0385b1498b44410b6e065/tg2/core/squish_validation_data.py)
+- [bdq/tg2/core/squish_validation_data.py](https://github.com/tdwg/bdq/blob/master/tg2/core/squish_validation_data.py)
 
 For more information see the following README files: 
 

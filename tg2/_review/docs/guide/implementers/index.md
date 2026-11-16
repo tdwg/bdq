@@ -78,7 +78,7 @@ Draft Standard for Review
     - [3.4.1 Amendment Response.result ordering (normative)](#341-amendment-responseresult-ordering-normative)
   - [3.5 Describing additional Tests (normative)](#35-describing-additional-tests-normative)
   - [3.6 Parameterized Tests: default behavior and unsupported values (normative)](#36-parameterized-tests-default-behavior-and-unsupported-values-normative)
-  - [3.7 Bulk / non-Framework execution (normative)](#37-bulk-/-non-framework-execution-normative)
+  - [3.7 Bulk / non-Framework execution (normative)](#37-bulk-non-framework-execution-normative)
 
 - [4 Extension Points (normative)](#4-extension-points-normative)
 

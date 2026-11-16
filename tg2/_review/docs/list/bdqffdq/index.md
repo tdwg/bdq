@@ -299,7 +299,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="AbstractInformationElement"></a>Term Name  bdqffdq:AbstractInformationElement</th>
+			<th colspan="2"><a id="AbstractInformationElement"></a><a id="abstractinformationelement"></a>Term Name  bdqffdq:AbstractInformationElement</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -349,7 +349,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ActedUpon"></a>Term Name  bdqffdq:ActedUpon</th>
+			<th colspan="2"><a id="ActedUpon"></a><a id="actedupon"></a>Term Name  bdqffdq:ActedUpon</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -399,7 +399,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Amendment"></a>Term Name  bdqffdq:Amendment</th>
+			<th colspan="2"><a id="Amendment"></a><a id="amendment"></a>Term Name  bdqffdq:Amendment</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -453,7 +453,7 @@ AM = { am | am = &lt; ie, e, d, rt &gt;, ie ∈ IE, e ∈ E, d ∈ D ⋀ rt ∈ 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="AmendmentConcept"></a>Term Name  bdqffdq:AmendmentConcept</th>
+			<th colspan="2"><a id="AmendmentConcept"></a><a id="amendmentconcept"></a>Term Name  bdqffdq:AmendmentConcept</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -495,7 +495,7 @@ AM = { am | am = &lt; ie, e, d, rt &gt;, ie ∈ IE, e ∈ E, d ∈ D ⋀ rt ∈ 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="AmendmentMethod"></a>Term Name  bdqffdq:AmendmentMethod</th>
+			<th colspan="2"><a id="AmendmentMethod"></a><a id="amendmentmethod"></a>Term Name  bdqffdq:AmendmentMethod</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -546,7 +546,7 @@ AMM(am) = { s | s ∈ S ⋀ (am, s) ∈ rel_AMM }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="AmendmentPolicy"></a>Term Name  bdqffdq:AmendmentPolicy</th>
+			<th colspan="2"><a id="AmendmentPolicy"></a><a id="amendmentpolicy"></a>Term Name  bdqffdq:AmendmentPolicy</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -597,7 +597,7 @@ AP(u) = { am | am ∈ AM ⋀ (u, am) ∈ rel_AP }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="AmendmentResponse"></a>Term Name  bdqffdq:AmendmentResponse</th>
+			<th colspan="2"><a id="AmendmentResponse"></a><a id="amendmentresponse"></a>Term Name  bdqffdq:AmendmentResponse</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -649,7 +649,7 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Argument"></a>Term Name  bdqffdq:Argument</th>
+			<th colspan="2"><a id="Argument"></a><a id="argument"></a>Term Name  bdqffdq:Argument</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -699,7 +699,7 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Consulted"></a>Term Name  bdqffdq:Consulted</th>
+			<th colspan="2"><a id="Consulted"></a><a id="consulted"></a>Term Name  bdqffdq:Consulted</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -749,7 +749,7 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Criterion"></a>Term Name  bdqffdq:Criterion</th>
+			<th colspan="2"><a id="Criterion"></a><a id="criterion"></a>Term Name  bdqffdq:Criterion</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -799,7 +799,7 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="DataQualityDimension"></a>Term Name  bdqffdq:DataQualityDimension</th>
+			<th colspan="2"><a id="DataQualityDimension"></a><a id="dataqualitydimension"></a>Term Name  bdqffdq:DataQualityDimension</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -849,7 +849,7 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="DataQualityMethod"></a>Term Name  bdqffdq:DataQualityMethod</th>
+			<th colspan="2"><a id="DataQualityMethod"></a><a id="dataqualitymethod"></a>Term Name  bdqffdq:DataQualityMethod</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -899,7 +899,7 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="DataQualityNeed"></a>Term Name  bdqffdq:DataQualityNeed</th>
+			<th colspan="2"><a id="DataQualityNeed"></a><a id="dataqualityneed"></a>Term Name  bdqffdq:DataQualityNeed</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -949,7 +949,7 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="DataQualityProfile"></a>Term Name  bdqffdq:DataQualityProfile</th>
+			<th colspan="2"><a id="DataQualityProfile"></a><a id="dataqualityprofile"></a>Term Name  bdqffdq:DataQualityProfile</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1000,7 +1000,7 @@ DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="DataQualityReport"></a>Term Name  bdqffdq:DataQualityReport</th>
+			<th colspan="2"><a id="DataQualityReport"></a><a id="dataqualityreport"></a>Term Name  bdqffdq:DataQualityReport</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1050,7 +1050,7 @@ DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="DataResource"></a>Term Name  bdqffdq:DataResource</th>
+			<th colspan="2"><a id="DataResource"></a><a id="dataresource"></a>Term Name  bdqffdq:DataResource</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1102,7 +1102,7 @@ DR = { dr | dr = &lt; id, rt, v &gt;, id ∈ ID, rt ∈ RT ⋀ v ∈ V }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Enhancement"></a>Term Name  bdqffdq:Enhancement</th>
+			<th colspan="2"><a id="Enhancement"></a><a id="enhancement"></a>Term Name  bdqffdq:Enhancement</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1152,7 +1152,7 @@ DR = { dr | dr = &lt; id, rt, v &gt;, id ∈ ID, rt ∈ RT ⋀ v ∈ V }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="FundamentalConcept"></a>Term Name  bdqffdq:FundamentalConcept</th>
+			<th colspan="2"><a id="FundamentalConcept"></a><a id="fundamentalconcept"></a>Term Name  bdqffdq:FundamentalConcept</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1198,7 +1198,7 @@ DR = { dr | dr = &lt; id, rt, v &gt;, id ∈ ID, rt ∈ RT ⋀ v ∈ V }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Implementation"></a>Term Name  bdqffdq:Implementation</th>
+			<th colspan="2"><a id="Implementation"></a><a id="implementation"></a>Term Name  bdqffdq:Implementation</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1249,7 +1249,7 @@ I(s) = { m | m ∈ M ⋀ (s, m) ∈ rel_I }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ImprovementTarget"></a>Term Name  bdqffdq:ImprovementTarget</th>
+			<th colspan="2"><a id="ImprovementTarget"></a><a id="improvementtarget"></a>Term Name  bdqffdq:ImprovementTarget</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1300,7 +1300,7 @@ IT(am) = { x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ (am, x) ∈ rel_IT }</td
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="InformationElement"></a>Term Name  bdqffdq:InformationElement</th>
+			<th colspan="2"><a id="InformationElement"></a><a id="informationelement"></a>Term Name  bdqffdq:InformationElement</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1350,7 +1350,7 @@ IT(am) = { x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ (am, x) ∈ rel_IT }</td
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Issue"></a>Term Name  bdqffdq:Issue</th>
+			<th colspan="2"><a id="Issue"></a><a id="issue"></a>Term Name  bdqffdq:Issue</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1401,7 +1401,7 @@ IS = { is | is = &lt; ie, c, d, rt &gt;, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="IssueConcept"></a>Term Name  bdqffdq:IssueConcept</th>
+			<th colspan="2"><a id="IssueConcept"></a><a id="issueconcept"></a>Term Name  bdqffdq:IssueConcept</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1447,7 +1447,7 @@ IS = { is | is = &lt; ie, c, d, rt &gt;, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="IssueMethod"></a>Term Name  bdqffdq:IssueMethod</th>
+			<th colspan="2"><a id="IssueMethod"></a><a id="issuemethod"></a>Term Name  bdqffdq:IssueMethod</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1497,7 +1497,7 @@ IS = { is | is = &lt; ie, c, d, rt &gt;, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="IssuePolicy"></a>Term Name  bdqffdq:IssuePolicy</th>
+			<th colspan="2"><a id="IssuePolicy"></a><a id="issuepolicy"></a>Term Name  bdqffdq:IssuePolicy</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1547,7 +1547,7 @@ IS = { is | is = &lt; ie, c, d, rt &gt;, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="IssueResponse"></a>Term Name  bdqffdq:IssueResponse</th>
+			<th colspan="2"><a id="IssueResponse"></a><a id="issueresponse"></a>Term Name  bdqffdq:IssueResponse</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1599,7 +1599,7 @@ DQI(dr) = { dqi | dqi ∈ RespI ⋀ (dr, dqi) ∈ rel_DQI }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Measure"></a>Term Name  bdqffdq:Measure</th>
+			<th colspan="2"><a id="Measure"></a><a id="measure"></a>Term Name  bdqffdq:Measure</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1654,7 +1654,7 @@ MEaq(u) = { me | me ∈ ME ⋀ me ∈ MP(u) ⋀ u ∈ U ⋀ resultType(me) = cat
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="MeasurementConcept"></a>Term Name  bdqffdq:MeasurementConcept</th>
+			<th colspan="2"><a id="MeasurementConcept"></a><a id="measurementconcept"></a>Term Name  bdqffdq:MeasurementConcept</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1696,7 +1696,7 @@ MEaq(u) = { me | me ∈ ME ⋀ me ∈ MP(u) ⋀ u ∈ U ⋀ resultType(me) = cat
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="MeasurementMethod"></a>Term Name  bdqffdq:MeasurementMethod</th>
+			<th colspan="2"><a id="MeasurementMethod"></a><a id="measurementmethod"></a>Term Name  bdqffdq:MeasurementMethod</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1747,7 +1747,7 @@ MM(me) = { s | s ∈ S ⋀ (me, s) ∈ rel_MM }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="MeasurementPolicy"></a>Term Name  bdqffdq:MeasurementPolicy</th>
+			<th colspan="2"><a id="MeasurementPolicy"></a><a id="measurementpolicy"></a>Term Name  bdqffdq:MeasurementPolicy</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1798,7 +1798,7 @@ MP(u) = { me | me ∈ ME ⋀ (u, me) ∈ rel_MP }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="MeasurementResponse"></a>Term Name  bdqffdq:MeasurementResponse</th>
+			<th colspan="2"><a id="MeasurementResponse"></a><a id="measurementresponse"></a>Term Name  bdqffdq:MeasurementResponse</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1850,7 +1850,7 @@ DQM(dr) = { dqm | dqm ∈ RespM ⋀ (dr, dqm) ∈ rel_DQM }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Mechanism"></a>Term Name  bdqffdq:Mechanism</th>
+			<th colspan="2"><a id="Mechanism"></a><a id="mechanism"></a>Term Name  bdqffdq:Mechanism</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1901,7 +1901,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="NeedConcept"></a>Term Name  bdqffdq:NeedConcept</th>
+			<th colspan="2"><a id="NeedConcept"></a><a id="needconcept"></a>Term Name  bdqffdq:NeedConcept</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1947,7 +1947,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Parameter"></a>Term Name  bdqffdq:Parameter</th>
+			<th colspan="2"><a id="Parameter"></a><a id="parameter"></a>Term Name  bdqffdq:Parameter</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -1997,7 +1997,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Policy"></a>Term Name  bdqffdq:Policy</th>
+			<th colspan="2"><a id="Policy"></a><a id="policy"></a>Term Name  bdqffdq:Policy</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2047,7 +2047,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="QualityAssurance"></a>Term Name  bdqffdq:QualityAssurance</th>
+			<th colspan="2"><a id="QualityAssurance"></a><a id="qualityassurance"></a>Term Name  bdqffdq:QualityAssurance</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2101,7 +2101,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="QualityControl"></a>Term Name  bdqffdq:QualityControl</th>
+			<th colspan="2"><a id="QualityControl"></a><a id="qualitycontrol"></a>Term Name  bdqffdq:QualityControl</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2155,7 +2155,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ReportConcept"></a>Term Name  bdqffdq:ReportConcept</th>
+			<th colspan="2"><a id="ReportConcept"></a><a id="reportconcept"></a>Term Name  bdqffdq:ReportConcept</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2201,7 +2201,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ResourceType"></a>Term Name  bdqffdq:ResourceType</th>
+			<th colspan="2"><a id="ResourceType"></a><a id="resourcetype"></a>Term Name  bdqffdq:ResourceType</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2251,7 +2251,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Response"></a>Term Name  bdqffdq:Response</th>
+			<th colspan="2"><a id="Response"></a><a id="response"></a>Term Name  bdqffdq:Response</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2301,7 +2301,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ResponseQualifier"></a>Term Name  bdqffdq:ResponseQualifier</th>
+			<th colspan="2"><a id="ResponseQualifier"></a><a id="responsequalifier"></a>Term Name  bdqffdq:ResponseQualifier</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2351,7 +2351,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ResponseResult"></a>Term Name  bdqffdq:ResponseResult</th>
+			<th colspan="2"><a id="ResponseResult"></a><a id="responseresult"></a>Term Name  bdqffdq:ResponseResult</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2402,7 +2402,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ResponseStatus"></a>Term Name  bdqffdq:ResponseStatus</th>
+			<th colspan="2"><a id="ResponseStatus"></a><a id="responsestatus"></a>Term Name  bdqffdq:ResponseStatus</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2452,7 +2452,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="SolutionsConcept"></a>Term Name  bdqffdq:SolutionsConcept</th>
+			<th colspan="2"><a id="SolutionsConcept"></a><a id="solutionsconcept"></a>Term Name  bdqffdq:SolutionsConcept</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2498,7 +2498,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Specification"></a>Term Name  bdqffdq:Specification</th>
+			<th colspan="2"><a id="Specification"></a><a id="specification"></a>Term Name  bdqffdq:Specification</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2548,7 +2548,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="UseCase"></a>Term Name  bdqffdq:UseCase</th>
+			<th colspan="2"><a id="UseCase"></a><a id="usecase"></a>Term Name  bdqffdq:UseCase</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2598,7 +2598,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="Validation"></a>Term Name  bdqffdq:Validation</th>
+			<th colspan="2"><a id="Validation"></a><a id="validation"></a>Term Name  bdqffdq:Validation</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2651,7 +2651,7 @@ VA = { va | va = &lt; ie, c, d, rt &gt;, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ValidationConcept"></a>Term Name  bdqffdq:ValidationConcept</th>
+			<th colspan="2"><a id="ValidationConcept"></a><a id="validationconcept"></a>Term Name  bdqffdq:ValidationConcept</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2697,7 +2697,7 @@ VA = { va | va = &lt; ie, c, d, rt &gt;, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ValidationMethod"></a>Term Name  bdqffdq:ValidationMethod</th>
+			<th colspan="2"><a id="ValidationMethod"></a><a id="validationmethod"></a>Term Name  bdqffdq:ValidationMethod</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2748,7 +2748,7 @@ VM(va) = { s | s ∈ S ⋀ (va, s) ∈ rel_VM }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ValidationPolicy"></a>Term Name  bdqffdq:ValidationPolicy</th>
+			<th colspan="2"><a id="ValidationPolicy"></a><a id="validationpolicy"></a>Term Name  bdqffdq:ValidationPolicy</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2799,7 +2799,7 @@ VP(u) = { va | va ∈ VA ⋀ (u, va) ∈ rel_VP }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="ValidationResponse"></a>Term Name  bdqffdq:ValidationResponse</th>
+			<th colspan="2"><a id="ValidationResponse"></a><a id="validationresponse"></a>Term Name  bdqffdq:ValidationResponse</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2852,7 +2852,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="aggregatesResponsesFrom"></a>Term Name  bdqffdq:aggregatesResponsesFrom</th>
+			<th colspan="2"><a id="aggregatesResponsesFrom"></a><a id="aggregatesresponsesfrom"></a>Term Name  bdqffdq:aggregatesResponsesFrom</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2898,7 +2898,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="amendmentProperty"></a>Term Name  bdqffdq:amendmentProperty</th>
+			<th colspan="2"><a id="amendmentProperty"></a><a id="amendmentproperty"></a>Term Name  bdqffdq:amendmentProperty</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2944,7 +2944,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="appliesTo"></a>Term Name  bdqffdq:appliesTo</th>
+			<th colspan="2"><a id="appliesTo"></a><a id="appliesto"></a>Term Name  bdqffdq:appliesTo</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -2990,7 +2990,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="composedOf"></a>Term Name  bdqffdq:composedOf</th>
+			<th colspan="2"><a id="composedOf"></a><a id="composedof"></a>Term Name  bdqffdq:composedOf</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3036,7 +3036,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="containsResponse"></a>Term Name  bdqffdq:containsResponse</th>
+			<th colspan="2"><a id="containsResponse"></a><a id="containsresponse"></a>Term Name  bdqffdq:containsResponse</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3082,7 +3082,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="forAmendment"></a>Term Name  bdqffdq:forAmendment</th>
+			<th colspan="2"><a id="forAmendment"></a><a id="foramendment"></a>Term Name  bdqffdq:forAmendment</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3132,7 +3132,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="forDataQualityNeed"></a>Term Name  bdqffdq:forDataQualityNeed</th>
+			<th colspan="2"><a id="forDataQualityNeed"></a><a id="fordataqualityneed"></a>Term Name  bdqffdq:forDataQualityNeed</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3178,7 +3178,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="forIssue"></a>Term Name  bdqffdq:forIssue</th>
+			<th colspan="2"><a id="forIssue"></a><a id="forissue"></a>Term Name  bdqffdq:forIssue</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3228,7 +3228,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="forMeasure"></a>Term Name  bdqffdq:forMeasure</th>
+			<th colspan="2"><a id="forMeasure"></a><a id="formeasure"></a>Term Name  bdqffdq:forMeasure</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3278,7 +3278,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="forValidation"></a>Term Name  bdqffdq:forValidation</th>
+			<th colspan="2"><a id="forValidation"></a><a id="forvalidation"></a>Term Name  bdqffdq:forValidation</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3328,7 +3328,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasActedUponInformationElement"></a>Term Name  bdqffdq:hasActedUponInformationElement</th>
+			<th colspan="2"><a id="hasActedUponInformationElement"></a><a id="hasacteduponinformationelement"></a>Term Name  bdqffdq:hasActedUponInformationElement</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3378,7 +3378,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasArgument"></a>Term Name  bdqffdq:hasArgument</th>
+			<th colspan="2"><a id="hasArgument"></a><a id="hasargument"></a>Term Name  bdqffdq:hasArgument</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3424,7 +3424,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasConsultedInformationElement"></a>Term Name  bdqffdq:hasConsultedInformationElement</th>
+			<th colspan="2"><a id="hasConsultedInformationElement"></a><a id="hasconsultedinformationelement"></a>Term Name  bdqffdq:hasConsultedInformationElement</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3474,7 +3474,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasCriterion"></a>Term Name  bdqffdq:hasCriterion</th>
+			<th colspan="2"><a id="hasCriterion"></a><a id="hascriterion"></a>Term Name  bdqffdq:hasCriterion</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3524,7 +3524,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasDataQualityDimension"></a>Term Name  bdqffdq:hasDataQualityDimension</th>
+			<th colspan="2"><a id="hasDataQualityDimension"></a><a id="hasdataqualitydimension"></a>Term Name  bdqffdq:hasDataQualityDimension</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3575,7 +3575,7 @@ Under the original formulation of the Framework, only Measures have Dimensions.<
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasEnhancement"></a>Term Name  bdqffdq:hasEnhancement</th>
+			<th colspan="2"><a id="hasEnhancement"></a><a id="hasenhancement"></a>Term Name  bdqffdq:hasEnhancement</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3625,7 +3625,7 @@ Under the original formulation of the Framework, only Measures have Dimensions.<
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasInformationElement"></a>Term Name  bdqffdq:hasInformationElement</th>
+			<th colspan="2"><a id="hasInformationElement"></a><a id="hasinformationelement"></a>Term Name  bdqffdq:hasInformationElement</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3676,7 +3676,7 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasParameter"></a>Term Name  bdqffdq:hasParameter</th>
+			<th colspan="2"><a id="hasParameter"></a><a id="hasparameter"></a>Term Name  bdqffdq:hasParameter</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3722,7 +3722,7 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasResourceType"></a>Term Name  bdqffdq:hasResourceType</th>
+			<th colspan="2"><a id="hasResourceType"></a><a id="hasresourcetype"></a>Term Name  bdqffdq:hasResourceType</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3768,7 +3768,7 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasResponseQualifier"></a>Term Name  bdqffdq:hasResponseQualifier</th>
+			<th colspan="2"><a id="hasResponseQualifier"></a><a id="hasresponsequalifier"></a>Term Name  bdqffdq:hasResponseQualifier</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3818,7 +3818,7 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasResponseResult"></a>Term Name  bdqffdq:hasResponseResult</th>
+			<th colspan="2"><a id="hasResponseResult"></a><a id="hasresponseresult"></a>Term Name  bdqffdq:hasResponseResult</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3869,7 +3869,7 @@ If bdqffdq:ResponseResults are not objects, use the datatype property bdqffdq:ha
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasResponseStatus"></a>Term Name  bdqffdq:hasResponseStatus</th>
+			<th colspan="2"><a id="hasResponseStatus"></a><a id="hasresponsestatus"></a>Term Name  bdqffdq:hasResponseStatus</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3920,7 +3920,7 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasSpecification"></a>Term Name  bdqffdq:hasSpecification</th>
+			<th colspan="2"><a id="hasSpecification"></a><a id="hasspecification"></a>Term Name  bdqffdq:hasSpecification</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -3966,7 +3966,7 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasUseCase"></a>Term Name  bdqffdq:hasUseCase</th>
+			<th colspan="2"><a id="hasUseCase"></a><a id="hasusecase"></a>Term Name  bdqffdq:hasUseCase</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4012,7 +4012,7 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="implementedBy"></a>Term Name  bdqffdq:implementedBy</th>
+			<th colspan="2"><a id="implementedBy"></a><a id="implementedby"></a>Term Name  bdqffdq:implementedBy</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4058,7 +4058,7 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="improvedBy"></a>Term Name  bdqffdq:improvedBy</th>
+			<th colspan="2"><a id="improvedBy"></a><a id="improvedby"></a>Term Name  bdqffdq:improvedBy</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4105,7 +4105,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="includedInPolicy"></a>Term Name  bdqffdq:includedInPolicy</th>
+			<th colspan="2"><a id="includedInPolicy"></a><a id="includedinpolicy"></a>Term Name  bdqffdq:includedInPolicy</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4151,7 +4151,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="issueProperty"></a>Term Name  bdqffdq:issueProperty</th>
+			<th colspan="2"><a id="issueProperty"></a><a id="issueproperty"></a>Term Name  bdqffdq:issueProperty</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4197,7 +4197,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="measurementProperty"></a>Term Name  bdqffdq:measurementProperty</th>
+			<th colspan="2"><a id="measurementProperty"></a><a id="measurementproperty"></a>Term Name  bdqffdq:measurementProperty</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4243,7 +4243,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="producesResponse"></a>Term Name  bdqffdq:producesResponse</th>
+			<th colspan="2"><a id="producesResponse"></a><a id="producesresponse"></a>Term Name  bdqffdq:producesResponse</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4289,7 +4289,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="reportProperty"></a>Term Name  bdqffdq:reportProperty</th>
+			<th colspan="2"><a id="reportProperty"></a><a id="reportproperty"></a>Term Name  bdqffdq:reportProperty</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4335,7 +4335,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="targetedIssue"></a>Term Name  bdqffdq:targetedIssue</th>
+			<th colspan="2"><a id="targetedIssue"></a><a id="targetedissue"></a>Term Name  bdqffdq:targetedIssue</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4381,7 +4381,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="targetedMeasure"></a>Term Name  bdqffdq:targetedMeasure</th>
+			<th colspan="2"><a id="targetedMeasure"></a><a id="targetedmeasure"></a>Term Name  bdqffdq:targetedMeasure</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4427,7 +4427,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="targetedValidation"></a>Term Name  bdqffdq:targetedValidation</th>
+			<th colspan="2"><a id="targetedValidation"></a><a id="targetedvalidation"></a>Term Name  bdqffdq:targetedValidation</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4477,7 +4477,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="usesSpecification"></a>Term Name  bdqffdq:usesSpecification</th>
+			<th colspan="2"><a id="usesSpecification"></a><a id="usesspecification"></a>Term Name  bdqffdq:usesSpecification</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4523,7 +4523,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="validationProperty"></a>Term Name  bdqffdq:validationProperty</th>
+			<th colspan="2"><a id="validationProperty"></a><a id="validationproperty"></a>Term Name  bdqffdq:validationProperty</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4570,7 +4570,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasArgumentValue"></a>Term Name  bdqffdq:hasArgumentValue</th>
+			<th colspan="2"><a id="hasArgumentValue"></a><a id="hasargumentvalue"></a>Term Name  bdqffdq:hasArgumentValue</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4612,7 +4612,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasAuthoritiesDefaults"></a>Term Name  bdqffdq:hasAuthoritiesDefaults</th>
+			<th colspan="2"><a id="hasAuthoritiesDefaults"></a><a id="hasauthoritiesdefaults"></a>Term Name  bdqffdq:hasAuthoritiesDefaults</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4658,7 +4658,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasDateLastUpdated"></a>Term Name  bdqffdq:hasDateLastUpdated</th>
+			<th colspan="2"><a id="hasDateLastUpdated"></a><a id="hasdatelastupdated"></a>Term Name  bdqffdq:hasDateLastUpdated</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4704,7 +4704,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasExpectedResponse"></a>Term Name  bdqffdq:hasExpectedResponse</th>
+			<th colspan="2"><a id="hasExpectedResponse"></a><a id="hasexpectedresponse"></a>Term Name  bdqffdq:hasExpectedResponse</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4750,7 +4750,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasFitnessRequirements"></a>Term Name  bdqffdq:hasFitnessRequirements</th>
+			<th colspan="2"><a id="hasFitnessRequirements"></a><a id="hasfitnessrequirements"></a>Term Name  bdqffdq:hasFitnessRequirements</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4796,7 +4796,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasResponseComment"></a>Term Name  bdqffdq:hasResponseComment</th>
+			<th colspan="2"><a id="hasResponseComment"></a><a id="hasresponsecomment"></a>Term Name  bdqffdq:hasResponseComment</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4842,7 +4842,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="hasResponseResultValue"></a>Term Name  bdqffdq:hasResponseResultValue</th>
+			<th colspan="2"><a id="hasResponseResultValue"></a><a id="hasresponseresultvalue"></a>Term Name  bdqffdq:hasResponseResultValue</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4889,7 +4889,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="MultiRecord"></a>Term Name  bdqffdq:MultiRecord</th>
+			<th colspan="2"><a id="MultiRecord"></a><a id="multirecord"></a>Term Name  bdqffdq:MultiRecord</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4935,7 +4935,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="SingleRecord"></a>Term Name  bdqffdq:SingleRecord</th>
+			<th colspan="2"><a id="SingleRecord"></a><a id="singlerecord"></a>Term Name  bdqffdq:SingleRecord</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -4982,7 +4982,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="COMPLETE"></a>Term Name  bdqffdq:COMPLETE</th>
+			<th colspan="2"><a id="COMPLETE"></a><a id="complete"></a>Term Name  bdqffdq:COMPLETE</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5032,7 +5032,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="COMPLIANT"></a>Term Name  bdqffdq:COMPLIANT</th>
+			<th colspan="2"><a id="COMPLIANT"></a><a id="compliant"></a>Term Name  bdqffdq:COMPLIANT</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5078,7 +5078,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="IS_ISSUE"></a>Term Name  bdqffdq:IS_ISSUE</th>
+			<th colspan="2"><a id="IS_ISSUE"></a><a id="is_issue"></a>Term Name  bdqffdq:IS_ISSUE</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5128,7 +5128,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="NOT_COMPLETE"></a>Term Name  bdqffdq:NOT_COMPLETE</th>
+			<th colspan="2"><a id="NOT_COMPLETE"></a><a id="not_complete"></a>Term Name  bdqffdq:NOT_COMPLETE</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5178,7 +5178,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="NOT_COMPLIANT"></a>Term Name  bdqffdq:NOT_COMPLIANT</th>
+			<th colspan="2"><a id="NOT_COMPLIANT"></a><a id="not_compliant"></a>Term Name  bdqffdq:NOT_COMPLIANT</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5224,7 +5224,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="NOT_ISSUE"></a>Term Name  bdqffdq:NOT_ISSUE</th>
+			<th colspan="2"><a id="NOT_ISSUE"></a><a id="not_issue"></a>Term Name  bdqffdq:NOT_ISSUE</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5274,7 +5274,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="POTENTIAL_ISSUE"></a>Term Name  bdqffdq:POTENTIAL_ISSUE</th>
+			<th colspan="2"><a id="POTENTIAL_ISSUE"></a><a id="potential_issue"></a>Term Name  bdqffdq:POTENTIAL_ISSUE</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5324,7 +5324,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="AMENDED"></a>Term Name  bdqffdq:AMENDED</th>
+			<th colspan="2"><a id="AMENDED"></a><a id="amended"></a>Term Name  bdqffdq:AMENDED</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5374,7 +5374,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="EXTERNAL_PREREQUISITES_NOT_MET"></a>Term Name  bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET</th>
+			<th colspan="2"><a id="EXTERNAL_PREREQUISITES_NOT_MET"></a><a id="external_prerequisites_not_met"></a>Term Name  bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5420,7 +5420,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="FILLED_IN"></a>Term Name  bdqffdq:FILLED_IN</th>
+			<th colspan="2"><a id="FILLED_IN"></a><a id="filled_in"></a>Term Name  bdqffdq:FILLED_IN</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5466,7 +5466,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="INTERNAL_PREREQUISITES_NOT_MET"></a>Term Name  bdqffdq:INTERNAL_PREREQUISITES_NOT_MET</th>
+			<th colspan="2"><a id="INTERNAL_PREREQUISITES_NOT_MET"></a><a id="internal_prerequisites_not_met"></a>Term Name  bdqffdq:INTERNAL_PREREQUISITES_NOT_MET</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5512,7 +5512,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="NOT_AMENDED"></a>Term Name  bdqffdq:NOT_AMENDED</th>
+			<th colspan="2"><a id="NOT_AMENDED"></a><a id="not_amended"></a>Term Name  bdqffdq:NOT_AMENDED</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -5562,7 +5562,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="RUN_HAS_RESULT"></a>Term Name  bdqffdq:RUN_HAS_RESULT</th>
+			<th colspan="2"><a id="RUN_HAS_RESULT"></a><a id="run_has_result"></a>Term Name  bdqffdq:RUN_HAS_RESULT</th>
 		</tr>
 	</thead>
 	<tbody>

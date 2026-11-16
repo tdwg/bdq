@@ -62,7 +62,7 @@ Draft Standard for Review
   - [2.4 Responses (non-normative)](#24-responses-non-normative)
   - [2.4.1 Properties of Responses (normative)](#241-properties-of-responses-normative)
     - [2.4.1.1 Table of Representations of Response Properties (non-normative)](#2411-table-of-representations-of-response-properties-non-normative)
-  - [2.5 Organization of the bdqffdq: classes  (non-normative)](#25-organization-of-the-bdqffdq-classes--non-normative)
+  - [2.5 Organization of the bdqffdq: classes  (non-normative)](#25-organization-of-the-bdqffdq-classes-non-normative)
   - [2.6 Example representation of a BDQ Test (non-normative)](#26-example-representation-of-a-bdq-test-non-normative)
   - [2.7 Some Other Related Standards (non-normative)](#27-some-other-related-standards-non-normative)
     - [2.7.1 The W3C Web Annotation Data Model (non-normative)](#271-the-w3c-web-annotation-data-model-non-normative)
@@ -113,7 +113,7 @@ Draft Standard for Review
       - [4.4.3.1 Validation Method and Issue Method (normative)](#4431-validation-method-and-issue-method-normative)
       - [4.4.3.2 Measurement Method (normative)](#4432-measurement-method-normative)
       - [4.4.3.3 Amendment Method (normative)](#4433-amendment-method-normative)
-      - [4.4.3.4 Implementation  (normative)](#4434-implementation--normative)
+      - [4.4.3.4 Implementation  (normative)](#4434-implementation-normative)
       - [4.4.3.5 Mechanism Coverage (normative)](#4435-mechanism-coverage-normative)
     - [4.4.4 Data Quality Reports (normative)](#444-data-quality-reports-normative)
       - [4.4.4.1 Data Resource (normative)](#4441-data-resource-normative)
@@ -544,7 +544,7 @@ See also the [Use of Terms (normative)](../../list/bdqffdq/index.md#2-use-of-ter
 
 The (non-normative) diagram below illustrating `Validation` related concepts across needs, solutions, and reports areas of the framework is intended to help understand the normative statements in [3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative).  The diagram shows the expected relationships among `Validation`, `ValidationMethod`, and `Specification` classes, as well as their expected connections to other subclasses of `Data Quality Need`, `Data Quality Solution`, and `Data Quality Report`.  Section [3 Use of Ontology Terms (normative)](#3-use-of-ontology-terms-normative) provides normative guidance on how properties are expected to be used to relate instances of these classes in a consistent way, as expectations limiting the open world assumptions of the RDF/[OWL](<../../../index.md#glossary_OWL> "Web Ontology Language. A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace owl:") modeling of the `bdqffdq:` vocabulary.
 
-![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](../guide/bdqffdq/bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
+![Diagram of Validation, ValidationMethod, and ValidationResponse with related classes](bdqffdq_data_quality_needs_solutions_report_validation.svg "Validation concepts in the Needs, Solutions, and Reports levels.")
 
 The use of classes and properties in the `bdqtest:` vocabulary (see [BDQ Tests as RDF](../../../dist/bdqtest.ttl)) follow the guidance provided in this section.  The `Data Quality Needs` (blue here; `Need Concept`) and Data Quality Solutions (green here; `Solutions Concept`) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `Data Quality Reports` (tan here; `Report Concept`) concepts in the diagram illustrate how a `Validation Response` in a `Data Quality Report` can be related to a `Validation` and its `Specification`.  The minimal use of `rdfs:range` and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
 
@@ -585,7 +585,7 @@ Labels of instances of subclasses of `bdqffdq:DataQualityNeed` SHOULD follow the
 * Tests that have a `bdqffdq:hasResourceType` of [bdqffdq:MultiRecord](<../../list/bdqffdq/index.md#MultiRecord> "A set of one or more bdqffdq:SingleRecords.") SHOULD have "MULTIRECORD_" as the first element in their `rdfs:label`, and MAY follow the pattern MULTIRECORD_TESTTYPE_COUNT_RESULT_INFORMATIONELEMENT_EVALUATION, or MULTIRECORD_TESTTYPE_QA_INFORMATIONELEMENT_EVALUATION. 
     * For example: [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY](../../terms/bdqtest/index.md#MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY) and
 [MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY](../../terms/bdqtest/index.md#MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY).
-* See [Naming Conventions](../../supplement/index.md#21-naming-conventions-normative) in the `bdqffdq:` term list for more details on naming conventions.
+* See [3.12 Naming Conventions](../../supplement/index.md#312-naming-conventions-non-normative) in the BDQ Supplemental Information for more details on naming conventions.
 
 Each instance of a subclass of `bdqffdq:DataQualityNeed` MUST have exactly one `bdqffdq:hasResourceType` object property linking it to a `bdqffdq:SingleRecord` or a `bdqffdq:MultiRecord`.
 

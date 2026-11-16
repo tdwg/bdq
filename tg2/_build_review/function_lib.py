@@ -47,6 +47,20 @@ def generate_markdown_toc(markdown_lines):
     return "\n".join(toc_lines)
 
 # Given a string containing a markdown heading, construct markdown for a link to that heading
+def site_heading_anchor(heading_text):
+    """The (lowercase) anchor that the site renderer (_site_resources/render_site.py, add_heading_ids and
+    slugify) gives a heading with this Markdown text: the text as rendered (inline code and backslash
+    escapes reduced to their text, & as &amp;), lowercased, with characters other than letters, digits,
+    underscores, spaces and hyphens removed, and each run of whitespace replaced by one hyphen."""
+    text = heading_text.strip()
+    text = re.sub(r"\\([\\`*_{}\[\]()#+\-.!])", r"\1", text)   # backslash escapes
+    text = text.replace("`", "")                                   # inline code
+    text = text.replace("&", "&amp;")                              # as in the rendered HTML
+    text = text.lower()
+    text = re.sub(r"[^\w\s-]", "", text)
+    text = re.sub(r"\s+", "-", text)
+    return text
+
 def markdown_heading_to_link(input_heading):
     if not input_heading or not input_heading.strip().startswith("#"):
         return None
@@ -54,10 +68,7 @@ def markdown_heading_to_link(input_heading):
     level = len(input_heading) - len(input_heading.lstrip('#'))
     heading_text = input_heading.lstrip('#').strip()
 
-    # Create anchor
-    anchor = heading_text.lower()
-    anchor = anchor.replace(" ", "-")
-    anchor = anchor.translate(str.maketrans("", "", "():,.?`'\""))
+    anchor = site_heading_anchor(heading_text)
 
     link = f"[{heading_text}](#{anchor})"
     return link

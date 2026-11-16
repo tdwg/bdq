@@ -45,11 +45,13 @@ Normative requirements for the structure of Responses/Assertions (status/result/
   - [3.4 Amendment Tests](guide/bdqtest/index.md#34-amendment-tests-normative)
   - [4 Use of Terms](guide/bdqtest/index.md#4-use-of-terms-normative)
   - [4.1 Structure of Response](guide/bdqtest/index.md#41-structure-of-response-normative)
-- **BDQ User's Guide**: [guide/users/index.md](guide/users/index.md)
-  - [3.2.3 Outputs: Responses from Tests](guide/users/index.md#323-outputs-responses-from-tests-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
   - [2.4.1 Properties of Responses](guide/bdqffdq/index.md#241-properties-of-responses-normative)
-  - [3.1.6 Properties relating Data Quality Reports](guide/bdqffdq/index.md#316-properties-relating-data-quality-reports-normative)
+  - [4.4 Derived Concepts](guide/bdqffdq/index.md#44-derived-concepts-normative)
+  - [4.4.1 General](guide/bdqffdq/index.md#441-general-normative)
+  - [4.4.1.1 Validation](guide/bdqffdq/index.md#4411-validation-normative)
+  - [4.4.2.7 Acceptable Data Quality Measure](guide/bdqffdq/index.md#4427-acceptable-data-quality-measure-normative)
+  - [4.4.4.6 Quality Control](guide/bdqffdq/index.md#4446-quality-control-normative)
 
 ### Response.status and Response.result controlled values
 
@@ -68,6 +70,8 @@ Normative requirements for controlled vocabulary values used in Responses (RUN_H
   - [3.1 Use of Properties](guide/bdqffdq/index.md#31-use-of-properties-normative)
   - [3.1.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#312-properties-relating-to-data-quality-needs-normative)
   - [3.1.2.1 Properties For MultiRecord Measures](guide/bdqffdq/index.md#3121-properties-for-multirecord-measures-normative)
+  - [4.4.2.7 Acceptable Data Quality Measure](guide/bdqffdq/index.md#4427-acceptable-data-quality-measure-normative)
+  - [4.4.4.6 Quality Control](guide/bdqffdq/index.md#4446-quality-control-normative)
 
 ### Data Quality Reports and Annotations (packaging and identification)
 
@@ -107,6 +111,7 @@ Normative statements about what must be present in Data Quality Reports, and how
   - [3.4.1 Test Parameters in Reports](guide/users/index.md#341-test-parameters-in-reports-normative)
 - **Fitness For Use Framework Ontology List of Terms**: [list/bdqffdq/index.md](list/bdqffdq/index.md)
   - [4 Vocabulary](list/bdqffdq/index.md#4-vocabulary-normative)
+  - [4.1 Class terms](list/bdqffdq/index.md#41-class-terms-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
   - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
   - [3.1 Use of Properties](guide/bdqffdq/index.md#31-use-of-properties-normative)
@@ -114,14 +119,27 @@ Normative statements about what must be present in Data Quality Reports, and how
   - [3.1.2.1 Properties For MultiRecord Measures](guide/bdqffdq/index.md#3121-properties-for-multirecord-measures-normative)
   - [3.1.5 Properties relating to data quality solutions provided by an implementation](guide/bdqffdq/index.md#315-properties-relating-to-data-quality-solutions-provided-by-an-implementation-normative)
   - [3.1.6 Properties relating Data Quality Reports](guide/bdqffdq/index.md#316-properties-relating-data-quality-reports-normative)
+  - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
+  - [4.3 Notation](guide/bdqffdq/index.md#43-notation-normative)
+  - [4.3.1 Use of upper and lower case symbols](guide/bdqffdq/index.md#431-use-of-upper-and-lower-case-symbols-normative)
+  - [4.4 Derived Concepts](guide/bdqffdq/index.md#44-derived-concepts-normative)
+  - [4.4.1 General](guide/bdqffdq/index.md#441-general-normative)
   - [4.4.4 Data Quality Reports](guide/bdqffdq/index.md#444-data-quality-reports-normative)
+  - [4.4.4.1 Data Resource](guide/bdqffdq/index.md#4441-data-resource-normative)
+  - [4.4.4.5 Data Quality Report](guide/bdqffdq/index.md#4445-data-quality-report-normative)
+  - [4.4.4.6 Quality Control](guide/bdqffdq/index.md#4446-quality-control-normative)
+  - [4.4.4.8 Identifying External Prerequisite Failures in Data Quality Reports](guide/bdqffdq/index.md#4448-identifying-external-prerequisite-failures-in-data-quality-reports-normative)
 
 ### Validation Tests (normative behavior)
 
 Normative requirements and semantics specific to Validation Tests and their expected Responses.
 
 - **BDQ Implementer's Guide**: [guide/implementers/index.md](guide/implementers/index.md)
+  - [2.3.4 Handling Leading and Trailing Whitespace](guide/implementers/index.md#234-handling-leading-and-trailing-whitespace-normative)
   - [3 Compliant Implementation](guide/implementers/index.md#3-compliant-implementation-normative)
+  - [6 Guidelines for Implementers](guide/implementers/index.md#6-guidelines-for-implementers-normative)
+  - [6.4 Order of Test Execution](guide/implementers/index.md#64-order-of-test-execution-normative)
+  - [6.4.1 Phases: Pre-Amendment, Amendment, Post-Amendment](guide/implementers/index.md#641-phases-pre-amendment-amendment-post-amendment-normative)
   - [8 Conformance Testing Implementations](guide/implementers/index.md#8-conformance-testing-implementations-normative)
 - **BDQ Tests: Concepts and Use**: [guide/bdqtest/index.md](guide/bdqtest/index.md)
   - [3.1 Validation Tests](guide/bdqtest/index.md#31-validation-tests-normative)
@@ -130,8 +148,14 @@ Normative requirements and semantics specific to Validation Tests and their expe
   - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
   - [3.1 Use of Properties](guide/bdqffdq/index.md#31-use-of-properties-normative)
   - [3.1.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#312-properties-relating-to-data-quality-needs-normative)
+  - [3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#313-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
   - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
   - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
+  - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
+  - [4.2 Properties](guide/bdqffdq/index.md#42-properties-normative)
+  - [4.2.1 Primitive Associational Relations](guide/bdqffdq/index.md#421-primitive-associational-relations-normative)
+  - [4.4 Derived Concepts](guide/bdqffdq/index.md#44-derived-concepts-normative)
+  - [4.4.2.8 Improvement Target](guide/bdqffdq/index.md#4428-improvement-target-normative)
 
 ### Issue Tests (normative behavior)
 
@@ -148,9 +172,11 @@ Normative requirements and semantics specific to Issue Tests and their expected 
   - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
   - [3.1 Use of Properties](guide/bdqffdq/index.md#31-use-of-properties-normative)
   - [3.1.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#312-properties-relating-to-data-quality-needs-normative)
+  - [3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#313-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
   - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
   - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
+  - [4.4.2.8 Improvement Target](guide/bdqffdq/index.md#4428-improvement-target-normative)
 
 ### Measure Tests (normative behavior)
 
@@ -159,6 +185,8 @@ Normative requirements and semantics specific to Measure Tests, including numeri
 - **BDQ Implementer's Guide**: [guide/implementers/index.md](guide/implementers/index.md)
   - [3 Compliant Implementation](guide/implementers/index.md#3-compliant-implementation-normative)
   - [4 Extension Points](guide/implementers/index.md#4-extension-points-normative)
+  - [5 Responses from Tests](guide/implementers/index.md#5-responses-from-tests-normative)
+  - [5.1 The Response Object](guide/implementers/index.md#51-the-response-object-normative)
   - [5.1.4 Results from Measures](guide/implementers/index.md#514-results-from-measures-normative)
   - [6 Guidelines for Implementers](guide/implementers/index.md#6-guidelines-for-implementers-normative)
   - [6.4 Order of Test Execution](guide/implementers/index.md#64-order-of-test-execution-normative)
@@ -173,11 +201,12 @@ Normative requirements and semantics specific to Measure Tests, including numeri
   - [3.1 Use of Properties](guide/bdqffdq/index.md#31-use-of-properties-normative)
   - [3.1.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#312-properties-relating-to-data-quality-needs-normative)
   - [3.1.2.1 Properties For MultiRecord Measures](guide/bdqffdq/index.md#3121-properties-for-multirecord-measures-normative)
+  - [3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#313-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
+  - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
   - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
-  - [4.4 Derived Concepts](guide/bdqffdq/index.md#44-derived-concepts-normative)
-  - [4.4.2 Data Quality Needs](guide/bdqffdq/index.md#442-data-quality-needs-normative)
   - [4.4.2.7 Acceptable Data Quality Measure](guide/bdqffdq/index.md#4427-acceptable-data-quality-measure-normative)
+  - [4.4.2.8 Improvement Target](guide/bdqffdq/index.md#4428-improvement-target-normative)
 
 ### Amendment Tests (normative behavior)
 
@@ -206,8 +235,13 @@ Normative requirements and semantics specific to Amendment Tests, including AMEN
   - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
   - [3.1 Use of Properties](guide/bdqffdq/index.md#31-use-of-properties-normative)
   - [3.1.2 Properties Relating to Data Quality Needs](guide/bdqffdq/index.md#312-properties-relating-to-data-quality-needs-normative)
+  - [3.1.3 Properties Relating Data Quality Needs to Data Quality Solutions](guide/bdqffdq/index.md#313-properties-relating-data-quality-needs-to-data-quality-solutions-normative)
   - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
   - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
+  - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
+  - [4.4.1.4 Amendment](guide/bdqffdq/index.md#4414-amendment-normative)
+  - [4.4.2.8 Improvement Target](guide/bdqffdq/index.md#4428-improvement-target-normative)
+  - [4.4.4.6 Quality Control](guide/bdqffdq/index.md#4446-quality-control-normative)
 
 ### Resource Types (SingleRecord / MultiRecord)
 
@@ -242,6 +276,9 @@ Normative requirements about what Resource Type a Test operates on and constrain
   - [4.4 Derived Concepts](guide/bdqffdq/index.md#44-derived-concepts-normative)
   - [4.4.2 Data Quality Needs](guide/bdqffdq/index.md#442-data-quality-needs-normative)
   - [4.4.2.7 Acceptable Data Quality Measure](guide/bdqffdq/index.md#4427-acceptable-data-quality-measure-normative)
+  - [4.4.4 Data Quality Reports](guide/bdqffdq/index.md#444-data-quality-reports-normative)
+  - [4.4.4.6 Quality Control](guide/bdqffdq/index.md#4446-quality-control-normative)
+  - [4.4.4.7 Quality Assurance](guide/bdqffdq/index.md#4447-quality-assurance-normative)
 
 ### Test execution order and phases (Pre-Amendment / Amendment / Post-Amendment)
 
@@ -266,6 +303,7 @@ Normative requirements about ordering, phases, dependencies, and execution guida
   - [5 Design of the Tests](guide/bdqtest/index.md#5-design-of-the-tests-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
   - [2.4.1 Properties of Responses](guide/bdqffdq/index.md#241-properties-of-responses-normative)
+  - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
 
 ### Specifications and Expected Response
 
@@ -273,12 +311,13 @@ Normative guidance about Specifications and how Expected Responses are expressed
 
 - **BDQ Implementer's Guide**: [guide/implementers/index.md](guide/implementers/index.md)
   - [2 About the Tests and their Implementation](guide/implementers/index.md#2-about-the-tests-and-their-implementation-normative)
-  - [2.1 Independence](guide/implementers/index.md#21-independence-normative)
   - [2.2 The Concept of "Empty" in the BDQ Standard](guide/implementers/index.md#22-the-concept-of-empty-in-the-bdq-standard-normative)
   - [2.3.2.2 Guidance for Reading a Specification](guide/implementers/index.md#2322-guidance-for-reading-a-specification-normative)
   - [2.3.3 The Concept of "interpreted as"](guide/implementers/index.md#233-the-concept-of-interpreted-as-normative)
   - [3 Compliant Implementation](guide/implementers/index.md#3-compliant-implementation-normative)
   - [3.6 Parameterized Tests: default behavior and unsupported values](guide/implementers/index.md#36-parameterized-tests-default-behavior-and-unsupported-values-normative)
+  - [5 Responses from Tests](guide/implementers/index.md#5-responses-from-tests-normative)
+  - [5.1 The Response Object](guide/implementers/index.md#51-the-response-object-normative)
   - [6 Guidelines for Implementers](guide/implementers/index.md#6-guidelines-for-implementers-normative)
   - [6.1 Parameters and Changing the Behavior of a Test](guide/implementers/index.md#61-parameters-and-changing-the-behavior-of-a-test-normative)
   - [6.1.1 Identifying non-default Parameter values in reports](guide/implementers/index.md#611-identifying-non-default-parameter-values-in-reports-normative)
@@ -286,16 +325,14 @@ Normative guidance about Specifications and how Expected Responses are expressed
   - [6.1.4 Test departures from specifications](guide/implementers/index.md#614-test-departures-from-specifications-normative)
   - [6.4 Order of Test Execution](guide/implementers/index.md#64-order-of-test-execution-normative)
   - [6.4.2 Test Dependencies](guide/implementers/index.md#642-test-dependencies-normative)
-  - [6.4.3 Implementing a complete Test](guide/implementers/index.md#643-implementing-a-complete-test-normative)
   - [7 Presentation of Results](guide/implementers/index.md#7-presentation-of-results-normative)
   - [7.1 Data Quality Reports](guide/implementers/index.md#71-data-quality-reports-normative)
   - [7.1.2 Information Elements Acted Upon and Consulted in Results](guide/implementers/index.md#712-information-elements-acted-upon-and-consulted-in-results-normative)
   - [7.2 Annotations](guide/implementers/index.md#72-annotations-normative)
   - [8 Conformance Testing Implementations](guide/implementers/index.md#8-conformance-testing-implementations-normative)
 - **BDQ Tests List of Terms**: [list/bdqtest/index.md](list/bdqtest/index.md)
-  - [4 Vocabulary](list/bdqtest/index.md#4-vocabulary-normative)
+  - [5 Vocabulary](list/bdqtest/index.md#5-vocabulary-normative)
 - **BDQ Tests: Concepts and Use**: [guide/bdqtest/index.md](guide/bdqtest/index.md)
-  - [3.1 Validation Tests](guide/bdqtest/index.md#31-validation-tests-normative)
   - [3.2 Issue Tests](guide/bdqtest/index.md#32-issue-tests-normative)
   - [3.3 Measure Tests](guide/bdqtest/index.md#33-measure-tests-normative)
   - [3.4 Amendment Tests](guide/bdqtest/index.md#34-amendment-tests-normative)
@@ -318,6 +355,9 @@ Normative guidance about Specifications and how Expected Responses are expressed
   - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
   - [4.1 Fundamental Concepts](guide/bdqffdq/index.md#41-fundamental-concepts-normative)
+  - [4.4 Derived Concepts](guide/bdqffdq/index.md#44-derived-concepts-normative)
+  - [4.4.3.4 Implementation](guide/bdqffdq/index.md#4434-implementation-normative)
+  - [4.4.3.5 Mechanism Coverage](guide/bdqffdq/index.md#4435-mechanism-coverage-normative)
 
 ### Parameters, Arguments, and Source Authorities
 
@@ -325,6 +365,7 @@ Normative statements about Parameterization (Parameters, Arguments, default valu
 
 - **BDQ Implementer's Guide**: [guide/implementers/index.md](guide/implementers/index.md)
   - [2.3.2.4 Default Value Strings in Parameters](guide/implementers/index.md#2324-default-value-strings-in-parameters-normative)
+  - [2.3.4 Handling Leading and Trailing Whitespace](guide/implementers/index.md#234-handling-leading-and-trailing-whitespace-normative)
   - [3 Compliant Implementation](guide/implementers/index.md#3-compliant-implementation-normative)
   - [3.6 Parameterized Tests: default behavior and unsupported values](guide/implementers/index.md#36-parameterized-tests-default-behavior-and-unsupported-values-normative)
   - [6 Guidelines for Implementers](guide/implementers/index.md#6-guidelines-for-implementers-normative)
@@ -363,20 +404,15 @@ Normative guidance about traversing from Assertions to Tests/Specifications/Impl
 Normative material that formalizes the Fitness for Use Framework structure and derived concepts across Needs, Solutions, and Reports.
 
 - **BDQ Implementer's Guide**: [guide/implementers/index.md](guide/implementers/index.md)
-  - [2 About the Tests and their Implementation](guide/implementers/index.md#2-about-the-tests-and-their-implementation-normative)
-  - [2.1 Independence](guide/implementers/index.md#21-independence-normative)
   - [3 Compliant Implementation](guide/implementers/index.md#3-compliant-implementation-normative)
   - [6 Guidelines for Implementers](guide/implementers/index.md#6-guidelines-for-implementers-normative)
   - [6.4 Order of Test Execution](guide/implementers/index.md#64-order-of-test-execution-normative)
   - [6.4.6 Implementing an Abstract Test](guide/implementers/index.md#646-implementing-an-abstract-test-normative)
-  - [7 Presentation of Results](guide/implementers/index.md#7-presentation-of-results-normative)
 - **BDQ Tests: Concepts and Use**: [guide/bdqtest/index.md](guide/bdqtest/index.md)
   - [3.3 Measure Tests](guide/bdqtest/index.md#33-measure-tests-normative)
   - [4 Use of Terms](guide/bdqtest/index.md#4-use-of-terms-normative)
   - [4.1 Structure of Response](guide/bdqtest/index.md#41-structure-of-response-normative)
   - [5 Design of the Tests](guide/bdqtest/index.md#5-design-of-the-tests-normative)
-- **BDQ User's Guide**: [guide/users/index.md](guide/users/index.md)
-  - [3.2.3 Outputs: Responses from Tests](guide/users/index.md#323-outputs-responses-from-tests-normative)
 - **Fitness For Use Framework Ontology: Concepts and Use**: [guide/bdqffdq/index.md](guide/bdqffdq/index.md)
   - [3 Use of Ontology Terms](guide/bdqffdq/index.md#3-use-of-ontology-terms-normative)
   - [3.1 Use of Properties](guide/bdqffdq/index.md#31-use-of-properties-normative)
@@ -388,6 +424,9 @@ Normative material that formalizes the Fitness for Use Framework structure and d
   - [3.2 Identifying the Test that produced a Response](guide/bdqffdq/index.md#32-identifying-the-test-that-produced-a-response-normative)
   - [3.3 Properties that should be one-to-one](guide/bdqffdq/index.md#33-properties-that-should-be-one-to-one-normative)
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
+  - [4.2 Properties](guide/bdqffdq/index.md#42-properties-normative)
+  - [4.3 Notation](guide/bdqffdq/index.md#43-notation-normative)
+  - [4.4 Derived Concepts](guide/bdqffdq/index.md#44-derived-concepts-normative)
 
 ### Controlled vocabularies (bdqval:, bdqcrit:, bdqdim:, bdqenh:, bdqtest:)
 
@@ -398,7 +437,7 @@ Normative sections that define or enumerate controlled vocabulary terms and thei
   - [2.2 The Concept of "Empty" in the BDQ Standard](guide/implementers/index.md#22-the-concept-of-empty-in-the-bdq-standard-normative)
   - [6 Guidelines for Implementers](guide/implementers/index.md#6-guidelines-for-implementers-normative)
 - **BDQ Tests List of Terms**: [list/bdqtest/index.md](list/bdqtest/index.md)
-  - [4 Vocabulary](list/bdqtest/index.md#4-vocabulary-normative)
+  - [5 Vocabulary](list/bdqtest/index.md#5-vocabulary-normative)
 - **BDQ Tests: Concepts and Use**: [guide/bdqtest/index.md](guide/bdqtest/index.md)
   - [4 Use of Terms](guide/bdqtest/index.md#4-use-of-terms-normative)
   - [4.3 Parameterizing the Tests](guide/bdqtest/index.md#43-parameterizing-the-tests-normative)
@@ -438,7 +477,10 @@ This section lists the normative sections in each BDQ Document.
   - [4 Fitness For Use Framework Summary of Mathematical Formalization](guide/bdqffdq/index.md#4-fitness-for-use-framework-summary-of-mathematical-formalization-normative)
     - [4.1 Fundamental Concepts](guide/bdqffdq/index.md#41-fundamental-concepts-normative)
     - [4.2 Properties](guide/bdqffdq/index.md#42-properties-normative)
+      - [4.2.1 Primitive Associational Relations](guide/bdqffdq/index.md#421-primitive-associational-relations-normative)
     - [4.3 Notation](guide/bdqffdq/index.md#43-notation-normative)
+      - [4.3.1 Use of upper and lower case symbols](guide/bdqffdq/index.md#431-use-of-upper-and-lower-case-symbols-normative)
+      - [4.3.3 Use of examples in this section](guide/bdqffdq/index.md#433-use-of-examples-in-this-section-normative)
     - [4.4 Derived Concepts](guide/bdqffdq/index.md#44-derived-concepts-normative)
       - [4.4.1 General](guide/bdqffdq/index.md#441-general-normative)
         - [4.4.1.1 Validation](guide/bdqffdq/index.md#4411-validation-normative)
@@ -446,28 +488,29 @@ This section lists the normative sections in each BDQ Document.
         - [4.4.1.3 Measure](guide/bdqffdq/index.md#4413-measure-normative)
         - [4.4.1.4 Amendment](guide/bdqffdq/index.md#4414-amendment-normative)
       - [4.4.2 Data Quality Needs](guide/bdqffdq/index.md#442-data-quality-needs-normative)
-        - [4.4.2.1 Validation Policy](guide/bdqffdq/index.md#4421-validation-policy-normative)
+        - [4.4.2.1 Validation Policy and Issue Policy](guide/bdqffdq/index.md#4421-validation-policy-and-issue-policy-normative)
         - [4.4.2.2 Measurement Policy](guide/bdqffdq/index.md#4422-measurement-policy-normative)
-        - [4.4.2.3 Enhancement Policy](guide/bdqffdq/index.md#4423-enhancement-policy-normative)
+        - [4.4.2.3 Amendment Policy](guide/bdqffdq/index.md#4423-amendment-policy-normative)
         - [4.4.2.4 Data Quality Profile](guide/bdqffdq/index.md#4424-data-quality-profile-normative)
         - [4.4.2.5 Use Case Coverage](guide/bdqffdq/index.md#4425-use-case-coverage-normative)
         - [4.4.2.6 Valuable Information Elements](guide/bdqffdq/index.md#4426-valuable-information-elements-normative)
         - [4.4.2.7 Acceptable Data Quality Measure](guide/bdqffdq/index.md#4427-acceptable-data-quality-measure-normative)
         - [4.4.2.8 Improvement Target](guide/bdqffdq/index.md#4428-improvement-target-normative)
       - [4.4.3 Data Quality Solutions](guide/bdqffdq/index.md#443-data-quality-solutions-normative)
-        - [4.4.3.1 Validation Method](guide/bdqffdq/index.md#4431-validation-method-normative)
+        - [4.4.3.1 Validation Method and Issue Method](guide/bdqffdq/index.md#4431-validation-method-and-issue-method-normative)
         - [4.4.3.2 Measurement Method](guide/bdqffdq/index.md#4432-measurement-method-normative)
-        - [4.4.3.3 Enhancement Method](guide/bdqffdq/index.md#4433-enhancement-method-normative)
+        - [4.4.3.3 Amendment Method](guide/bdqffdq/index.md#4433-amendment-method-normative)
         - [4.4.3.4 Implementation](guide/bdqffdq/index.md#4434-implementation-normative)
         - [4.4.3.5 Mechanism Coverage](guide/bdqffdq/index.md#4435-mechanism-coverage-normative)
       - [4.4.4 Data Quality Reports](guide/bdqffdq/index.md#444-data-quality-reports-normative)
         - [4.4.4.1 Data Resource](guide/bdqffdq/index.md#4441-data-resource-normative)
-        - [4.4.4.2 ValidationResponse](guide/bdqffdq/index.md#4442-validationresponse-normative)
+        - [4.4.4.2 ValidationResponse and IssueResponse](guide/bdqffdq/index.md#4442-validationresponse-and-issueresponse-normative)
         - [4.4.4.3 MeasurementResponse](guide/bdqffdq/index.md#4443-measurementresponse-normative)
         - [4.4.4.4 AmendmentResponse](guide/bdqffdq/index.md#4444-amendmentresponse-normative)
-        - [4.4.4.5 Data Quality Assessment](guide/bdqffdq/index.md#4445-data-quality-assessment-normative)
+        - [4.4.4.5 Data Quality Report](guide/bdqffdq/index.md#4445-data-quality-report-normative)
         - [4.4.4.6 Quality Control](guide/bdqffdq/index.md#4446-quality-control-normative)
         - [4.4.4.7 Quality Assurance](guide/bdqffdq/index.md#4447-quality-assurance-normative)
+        - [4.4.4.8 Identifying External Prerequisite Failures in Data Quality Reports](guide/bdqffdq/index.md#4448-identifying-external-prerequisite-failures-in-data-quality-reports-normative)
   - [6 List of Terms with axioms in the Fitness For Use Framework ontology](guide/bdqffdq/index.md#6-list-of-terms-with-axioms-in-the-fitness-for-use-framework-ontology-normative)
     - [6.1 Class terms](guide/bdqffdq/index.md#61-class-terms-normative)
     - [6.2 ObjectProperty terms](guide/bdqffdq/index.md#62-objectproperty-terms-normative)
@@ -603,7 +646,14 @@ This section lists the normative sections in each BDQ Document.
 
 - Document: [list/bdqtest/index.md](list/bdqtest/index.md)
   - [2 Use of Terms](list/bdqtest/index.md#2-use-of-terms-normative)
-  - [4 Vocabulary](list/bdqtest/index.md#4-vocabulary-normative)
+  - [5 Vocabulary](list/bdqtest/index.md#5-vocabulary-normative)
+
+
+## BDQ Use Case Controlled Vocabulary List of Terms
+
+- Document: [list/bdquc/index.md](list/bdquc/index.md)
+  - [2 Use of Terms](list/bdquc/index.md#2-use-of-terms-normative)
+  - [4 Vocabulary](list/bdquc/index.md#4-vocabulary-normative)
 
 
 ## BDQ Controlled Vocabulary List of Terms

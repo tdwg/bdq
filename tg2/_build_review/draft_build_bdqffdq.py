@@ -357,7 +357,10 @@ def term_table(subject, rows):
 	local_name = subject.replace("https://rs.tdwg.org/bdqffdq/terms/", "")
 	version = term_versions.get(subject)
 	table = '<table>\n\t<thead>\n\t\t<tr>\n'
-	table += '\t\t\t<th colspan="2"><a id="{}"></a>Term Name  bdqffdq:{}</th>\n'.format(local_name, local_name)
+	# The anchor is the local name (rs.tdwg.org redirects to it); a lowercase alias, as the site renderer
+	# gives headings, keeps links to the lowercase form working (e.g. #composedof).
+	alias = '' if local_name.lower() == local_name else '<a id="{}"></a>'.format(local_name.lower())
+	table += '\t\t\t<th colspan="2"><a id="{}"></a>{}Term Name  bdqffdq:{}</th>\n'.format(local_name, alias, local_name)
 	table += '\t\t</tr>\n\t</thead>\n\t<tbody>\n'
 	common = [('Term IRI', function_lib.iri_cell_html(subject))]
 	if version is not None:

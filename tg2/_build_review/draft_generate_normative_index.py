@@ -170,17 +170,11 @@ class TopicDefinition:
 
 def slugify_heading(heading_text: str) -> str:
     """
-    Create a stable slug. Adjust if your renderer uses a different algorithm.
+    The anchor the site renderer gives the heading (function_lib.site_heading_anchor, which follows
+    _site_resources/render_site.py).
     """
-    text = heading_text.strip().lower()
-    text = text.replace("`", "")
-    text = re.sub(r"&[a-z]+;", "", text)
-    text = text.replace("(", "").replace(")", "")
-    text = re.sub(r"[^a-z0-9 _-]+", "", text)
-    text = text.replace("_", "-")
-    text = re.sub(r"\s+", "-", text)
-    text = re.sub(r"-{2,}", "-", text)
-    return text.strip("-")
+    import function_lib
+    return function_lib.site_heading_anchor(heading_text)
 
 
 def relpath_from_docs_root(md_path: Path) -> str:

@@ -528,3 +528,15 @@ def test_image_link_target_is_rewritten():
     assert '[![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://bdq-public-review.rs.tdwg.org/bdqffdq/terms.ttl "RDF (Turtle)")' in out
     with bdq_rs_links("keep"):
         assert rs.rewrite_markdown_links(src) == src
+
+
+def test_linkify_keeps_link_with_code_span_label_whole():
+    # A link whose text is a code span must not have its target linkified as a bare URL.
+    line = 'exported in [`tg2/_make_review/rs_tdwg_org_baseline.json`](https://github.com/tdwg/bdq/blob/master/tg2/_make_review/rs_tdwg_org_baseline.json) (see'
+    assert rs.linkify_bare_urls_in_markdown_line(line) == line
+
+
+def test_linkify_bare_url_beside_code_span_and_link():
+    line = 'See `code https://example.org/a` and [`x`](https://example.org/b) and https://example.org/c'
+    expected = 'See `code https://example.org/a` and [`x`](https://example.org/b) and [https://example.org/c](https://example.org/c)'
+    assert rs.linkify_bare_urls_in_markdown_line(line) == expected

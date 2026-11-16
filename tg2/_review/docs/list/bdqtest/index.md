@@ -57,12 +57,12 @@ Draft Standard for Review
 - [3 Test Types (non-normative)](#3-test-types-non-normative)
 
 - [4 Term Indices (non-normative)](#4-term-indices-non-normative)
-  - [3.1 Index to Validation Tests (non-normative)](#31-index-to-validation-tests-non-normative)
-  - [3.2 Index to Issue Tests (non-normative)](#32-index-to-issue-tests-non-normative)
-  - [3.3 Index to Measure Tests (non-normative)](#33-index-to-measure-tests-non-normative)
-  - [3.4 Index to Amendment Tests (non-normative)](#34-index-to-amendment-tests-non-normative)
+  - [4.1 Index to Validation Tests (non-normative)](#41-index-to-validation-tests-non-normative)
+  - [4.2 Index to Issue Tests (non-normative)](#42-index-to-issue-tests-non-normative)
+  - [4.3 Index to Measure Tests (non-normative)](#43-index-to-measure-tests-non-normative)
+  - [4.4 Index to Amendment Tests (non-normative)](#44-index-to-amendment-tests-non-normative)
 
-- [4 Vocabulary (normative)](#4-vocabulary-normative)
+- [5 Vocabulary (normative)](#5-vocabulary-normative)
 
 - [Glossary (non-normative)](#glossary-non-normative)
 
@@ -226,7 +226,7 @@ There are four types of BDQ Tests: `Validations`, `Issues`, `Measures` and `Amen
 
 
 
-### 3.1 Index to Validation Tests (non-normative)
+### 4.1 Index to Validation Tests (non-normative)
 
 [VALIDATION_BASISOFRECORD_NOTEMPTY](#bdqtest_ac2b7648-d5f9-48ca-9b07-8ad5879a2536) |
 [VALIDATION_BASISOFRECORD_STANDARD](#bdqtest_42408a00-bf71-4892-a399-4325e2bc1fb8) |
@@ -301,14 +301,14 @@ There are four types of BDQ Tests: `Validations`, `Issues`, `Measures` and `Amen
 [VALIDATION_YEAR_INRANGE](#bdqtest_ad0c8855-de69-4843-a80c-a5387d20fbc8) |
 [VALIDATION_YEAR_NOTEMPTY](#bdqtest_c09ecbf9-34e3-4f3e-b74a-8796af15e59f) 
 
-### 3.2 Index to Issue Tests (non-normative)
+### 4.2 Index to Issue Tests (non-normative)
 
 [ISSUE_ANNOTATION_NOTEMPTY](#bdqtest_fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1) |
 [ISSUE_COORDINATES_CENTEROFCOUNTRY](#bdqtest_256e51b3-1e08-4349-bb7e-5186631c3f8e) |
 [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](#bdqtest_13d5a10e-188e-40fd-a22c-dbaa87b91df2) |
 [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](#bdqtest_acc8dff2-d8d1-483a-946d-65a02a452700) 
 
-### 3.3 Index to Measure Tests (non-normative)
+### 4.3 Index to Measure Tests (non-normative)
 
 [MEASURE_AMENDMENTS_PROPOSED](#bdqtest_03049fe5-a575-404f-b564-ae63f5a1cf8b) |
 [MEASURE_EVENTDATE_DURATIONINSECONDS](#bdqtest_56b6c695-adf1-418e-95d2-da04cad7be53) |
@@ -460,7 +460,7 @@ There are four types of BDQ Tests: `Validations`, `Issues`, `Measures` and `Amen
 [MULTIRECORD_MEASURE_QA_YEAR_INRANGE](#bdqtest_a0502c5f-608b-4e59-99da-d9490bb4d93b) |
 [MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY](#bdqtest_a8fef8a8-e7c7-4a2d-adaf-7da99c896c93) 
 
-### 3.4 Index to Amendment Tests (non-normative)
+### 4.4 Index to Amendment Tests (non-normative)
 
 Including MultiRecord Measures
 
@@ -494,7 +494,7 @@ Including MultiRecord Measures
 [AMENDMENT_TAXONRANK_STANDARDIZED](#bdqtest_e39098df-ef46-464c-9aef-bcdeee2a88cb) |
 [AMENDMENT_TYPESTATUS_STANDARDIZED](#bdqtest_b3471c65-b53e-453b-8282-abfa27bf1805) 
 
-## 4 Vocabulary (normative)
+## 5 Vocabulary (normative)
 <table>
 	<thead>
 		<tr>
@@ -613,7 +613,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -728,7 +728,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -855,7 +855,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -982,7 +982,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1093,7 +1093,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1204,7 +1204,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1311,7 +1311,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1426,7 +1426,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1549,7 +1549,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1668,7 +1668,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1783,7 +1783,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -1898,7 +1898,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2013,7 +2013,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2124,7 +2124,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2239,7 +2239,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2366,7 +2366,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2481,7 +2481,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2604,7 +2604,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2715,7 +2715,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2826,7 +2826,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -2933,7 +2933,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3056,7 +3056,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3175,7 +3175,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3298,7 +3298,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3425,7 +3425,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3552,7 +3552,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3675,7 +3675,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3798,7 +3798,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -3921,7 +3921,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4036,7 +4036,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4163,7 +4163,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4274,7 +4274,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4377,7 +4377,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4472,7 +4472,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4579,7 +4579,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4674,7 +4674,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4769,7 +4769,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4864,7 +4864,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -4963,7 +4963,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5062,7 +5062,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5161,7 +5161,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5260,7 +5260,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5359,7 +5359,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5458,7 +5458,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5557,7 +5557,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5656,7 +5656,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5755,7 +5755,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5854,7 +5854,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -5953,7 +5953,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6052,7 +6052,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6151,7 +6151,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6250,7 +6250,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6349,7 +6349,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6448,7 +6448,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6547,7 +6547,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6646,7 +6646,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6745,7 +6745,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6844,7 +6844,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -6943,7 +6943,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7042,7 +7042,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7141,7 +7141,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7240,7 +7240,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7339,7 +7339,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7438,7 +7438,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7537,7 +7537,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7636,7 +7636,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7735,7 +7735,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7834,7 +7834,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -7933,7 +7933,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8032,7 +8032,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8131,7 +8131,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8230,7 +8230,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8329,7 +8329,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8428,7 +8428,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8527,7 +8527,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8626,7 +8626,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8725,7 +8725,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8824,7 +8824,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -8923,7 +8923,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9022,7 +9022,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9121,7 +9121,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9220,7 +9220,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9319,7 +9319,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9418,7 +9418,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9517,7 +9517,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9616,7 +9616,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9715,7 +9715,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9814,7 +9814,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -9913,7 +9913,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10012,7 +10012,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10111,7 +10111,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10210,7 +10210,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10309,7 +10309,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10408,7 +10408,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10507,7 +10507,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10606,7 +10606,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10705,7 +10705,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10804,7 +10804,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -10903,7 +10903,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11002,7 +11002,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11101,7 +11101,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11200,7 +11200,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11299,7 +11299,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11398,7 +11398,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11497,7 +11497,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11596,7 +11596,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11695,7 +11695,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11794,7 +11794,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11893,7 +11893,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -11992,7 +11992,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12091,7 +12091,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12190,7 +12190,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12289,7 +12289,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12388,7 +12388,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12487,7 +12487,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12586,7 +12586,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12685,7 +12685,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12784,7 +12784,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12883,7 +12883,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -12982,7 +12982,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13081,7 +13081,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13180,7 +13180,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13279,7 +13279,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13378,7 +13378,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13477,7 +13477,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13576,7 +13576,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13675,7 +13675,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13774,7 +13774,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13873,7 +13873,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -13972,7 +13972,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14071,7 +14071,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14170,7 +14170,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14269,7 +14269,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14368,7 +14368,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14467,7 +14467,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14566,7 +14566,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14665,7 +14665,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14764,7 +14764,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14863,7 +14863,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -14962,7 +14962,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15061,7 +15061,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15160,7 +15160,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15259,7 +15259,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15358,7 +15358,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15457,7 +15457,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15556,7 +15556,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15655,7 +15655,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15754,7 +15754,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15853,7 +15853,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -15952,7 +15952,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16051,7 +16051,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16150,7 +16150,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16249,7 +16249,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16348,7 +16348,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16447,7 +16447,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16546,7 +16546,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16645,7 +16645,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16744,7 +16744,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16843,7 +16843,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -16942,7 +16942,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17041,7 +17041,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17140,7 +17140,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17239,7 +17239,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17338,7 +17338,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17437,7 +17437,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17536,7 +17536,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17635,7 +17635,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17734,7 +17734,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17833,7 +17833,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -17932,7 +17932,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18031,7 +18031,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18130,7 +18130,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18229,7 +18229,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18328,7 +18328,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18427,7 +18427,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18526,7 +18526,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18625,7 +18625,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18724,7 +18724,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18823,7 +18823,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -18922,7 +18922,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19021,7 +19021,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19120,7 +19120,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19223,7 +19223,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19342,7 +19342,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19465,7 +19465,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19584,7 +19584,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19707,7 +19707,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19830,7 +19830,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -19957,7 +19957,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20068,7 +20068,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20179,7 +20179,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20286,7 +20286,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20401,7 +20401,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20516,7 +20516,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20639,7 +20639,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20762,7 +20762,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -20873,7 +20873,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21000,7 +21000,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21103,7 +21103,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21214,7 +21214,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21321,7 +21321,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21428,7 +21428,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21543,7 +21543,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21650,7 +21650,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21757,7 +21757,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21864,7 +21864,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -21967,7 +21967,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22090,7 +22090,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22201,7 +22201,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22324,7 +22324,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22447,7 +22447,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22550,7 +22550,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22661,7 +22661,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22768,7 +22768,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22875,7 +22875,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -22998,7 +22998,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23121,7 +23121,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23224,7 +23224,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23339,7 +23339,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23462,7 +23462,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23565,7 +23565,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23672,7 +23672,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23795,7 +23795,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -23906,7 +23906,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24029,7 +24029,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24152,7 +24152,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24275,7 +24275,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24382,7 +24382,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24505,7 +24505,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24612,7 +24612,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24715,7 +24715,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24818,7 +24818,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -24921,7 +24921,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25024,7 +25024,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25143,7 +25143,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25266,7 +25266,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25389,7 +25389,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25512,7 +25512,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25623,7 +25623,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25726,7 +25726,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25837,7 +25837,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -25944,7 +25944,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26067,7 +26067,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26174,7 +26174,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26297,7 +26297,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26408,7 +26408,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26531,7 +26531,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26638,7 +26638,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26761,7 +26761,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26868,7 +26868,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -26995,7 +26995,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -27118,7 +27118,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -27237,7 +27237,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 <table>
 	<thead>
 		<tr>
@@ -27340,7 +27340,7 @@ Including MultiRecord Measures
 	</tbody>
 </table>
 <br>
-<a href='#3-Term-Indices'>[🠱]</a>
+<a href='#4-term-indices-non-normative'>[🠱]</a>
 
 ## Glossary (non-normative)
 

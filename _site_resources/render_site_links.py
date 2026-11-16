@@ -420,29 +420,27 @@ def linkify_bare_urls_in_markdown_line(line: str) -> str:
     if "http://" not in line and "https://" not in line:
         return line
 
-    parts = re.split(r'(`[^`]*`)', line)
+    # Mask existing inline links over the whole line first, so that a link whose text is a code span
+    # ([`label`](https://...)) stays whole; then leave code spans as they are and linkify the rest.
+    masked_line, originals = mask_markdown_inline_spans(line)
+    parts = re.split(r'(`[^`]*`)', masked_line)
     linked_parts = []
+
+    def repl(match):
+        url = match.group("url")
+        if bdq_rs_shown_plain(url):
+            return url
+        rewritten_url = rewrite_target(url)
+        # Show the URL as written; only the link target is rewritten.
+        return f'[{url}]({rewritten_url})'
 
     for part in parts:
         if part.startswith("`") and part.endswith("`"):
             linked_parts.append(part)
             continue
+        linked_parts.append(BARE_URL_RE.sub(repl, part))
 
-        masked, originals = mask_markdown_inline_spans(part)
-
-        def repl(match):
-            url = match.group("url")
-            if bdq_rs_shown_plain(url):
-                return url
-            rewritten_url = rewrite_target(url)
-            # Show the URL as written; only the link target is rewritten.
-            return f'[{url}]({rewritten_url})'
-
-        masked = BARE_URL_RE.sub(repl, masked)
-        masked = unmask_markdown_inline_spans(masked, originals)
-        linked_parts.append(masked)
-
-    return "".join(linked_parts)
+    return unmask_markdown_inline_spans("".join(linked_parts), originals)
 
 
 # This function converts bare URLs in a line containing raw HTML into explicit HTML anchor tags.

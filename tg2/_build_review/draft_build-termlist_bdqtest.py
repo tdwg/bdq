@@ -256,7 +256,7 @@ for term in termLists:
     for category in range(0,len(display_order)):
         if organized_in_categories:
             category_counter = category_counter + 1
-            text += '### 3.' + str(category_counter) + ' '  + display_label[category] + '\n'
+            text += '### 4.' + str(category_counter) + ' '  + display_label[category] + '\n'
             if (display_comments[category]) : 
                text += '\n' + display_comments[category] + '\n'
             text += '\n'
@@ -302,7 +302,7 @@ for term in termLists:
     
     print('Generating terms table')
     # generate the Markdown for the terms table
-    text = '## 4 Vocabulary (normative)\n'
+    text = '## 5 Vocabulary (normative)\n'
     if True:
         filtered_table = terms_sorted_by_label
         for row_index,row in filtered_table.iterrows():
@@ -388,7 +388,7 @@ for term in termLists:
             text += '\t</tbody>\n'
             text += '</table>\n'
             text += '<br>\n'
-            text += "<a href='#3-Term-Indices'>[🠱]</a>"
+            text += "<a href='#4-term-indices-non-normative'>[🠱]</a>"
             text += '\n'
         text += '\n'
     term_table = text

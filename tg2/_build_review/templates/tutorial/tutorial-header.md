@@ -184,7 +184,7 @@ We are looking for existing `Validation` Tests, as we are trying to assert wheth
 
 For example, [VALIDATION_SCIENTIFICNAME_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAME_NOTEMPTY) is a BDQ Test that checks if there is a value in dwc:scientificName.
 
-There are several places we could look for existing Tests within BDQ, including the [Quick Reference Guide](../terms/bdqtest/index.md), and the [index](../list/bdqtest/index.md#31-index-to-validation-tests-non-normative) of the bdqtest: term-list document.  An easy place to look for Tests that operate on particular `Information Elements` is the Quick Reference Guide's [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md).  
+There are several places we could look for existing Tests within BDQ, including the [Quick Reference Guide](../terms/bdqtest/index.md), and the [index](../list/bdqtest/index.md#41-index-to-validation-tests-non-normative) of the bdqtest: term-list document.  An easy place to look for Tests that operate on particular `Information Elements` is the Quick Reference Guide's [BDQ Test Index by Information Element Acted Upon](../terms/bdqtest/qrg_index_by_ie_actedupon.md).  
 
 Looking here for simple presence checks for the `Information Elements` we can identify the following existing BDQ Tests (and gaps):
 
@@ -773,7 +773,7 @@ But we might or might not want to allow for http:// as well as https:// and allo
 
 #### 6.8.1 Example Complex Implementation Notes (non-normative)
 
-Notes are present when some aspects of a Test may not be obvious to the casual user or implementer. In some cases, Notes are not required, but Notes can be very helpful as in the example of the BDQ Test [VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
+Notes are present when some aspects of a Test may not be obvious to the casual user or implementer. In some cases, Notes are not required, but Notes can be very helpful as in the example of the BDQ Test [VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe):
 
 > “Locations outside of a jurisdiction covered by a country code may
 > have a value in the field dwc:countryCode, the ISO user defined codes
@@ -842,7 +842,7 @@ The description and specification of a Test may involve hidden assumptions by th
 
 See also: 
 * [Conformance Testing Implementations](../guide/implementers/index.md#8-conformance-testing-implementations-normative) in the [BDQ Implementer's Guide](../guide/implementers/index.md).
-* [Structure of Response](../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests: Concepts and Use](.../guide/bdqtest/index.md).
+* [Structure of Response](../guide/bdqtest/index.md#41-structure-of-response-normative) in the [BDQ Tests: Concepts and Use](../guide/bdqtest/index.md).
 
 #### 7.2.1 Unit Tests (non-normative)
 
@@ -882,7 +882,7 @@ The columns shown here are the human readable identifier (Label) for the Test, t
 This conformance testing data includes edge cases such as an empty value for dwc:countryCode, a valid ISO 3166-1-alpha-2 country code, some cases that are not 2 letter country codes, and edge cases taken from the notes: a valid code for high seas taken from UN/Locode, and the user-defined ISO 2-letter country code ZZ.  
 
 See also: 
-[VALIDATION_COUNTRYCODE_STANDARD](../terms/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe) in the bdqtest: term-list document.
+[VALIDATION_COUNTRYCODE_STANDARD](../list/bdqtest/index.md#bdqtest_0493bcfb-652e-4d17-815b-b0cce0742fbe) in the bdqtest: term-list document.
 [High Seas](../supplement/index.md#394-high-seas-non-normative) in the Supplement.
 
 ##### 7.2.2.2 Conformance testing data for our proposed VALIDATION_WASATTRIBUTEDTO_STANDARD Test (non-normative)
