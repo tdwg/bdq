@@ -8,6 +8,7 @@
 # This script contains a library of reusable functions to support scripts to 
 # build of documents and term lists for TDWG standards and draft standards
 
+import os
 import sys
 import re
 import rdflib     # run sparql queries on rdf 
@@ -432,10 +433,20 @@ def convert_examples(text_with_list_of_examples: str) -> str:
 # bdq-public-review.rs.tdwg.org (tdwg/bdq#340); after ratification, the branch becomes master.
 # A document with no versions in rs.tdwg.org (or if the file cannot be read) falls back to
 # doc_modified from its document_configuration.yaml, with a warning.
-RS_TDWG_ORG_BRANCH = 'bdq'
+#
+# The rs.tdwg.org source is configurable (deployment_rs_tdwg_org.md Section 13.1), as in the Darwin
+# Core build: the environment variable BDQ_RS_SOURCE is either the path of a local rs.tdwg.org
+# checkout, whose files are read as they are in its working tree (e.g. with a release under test, for
+# a draft build, tg2/_make_review/draft_build.sh), or a branch, tag, or commit of tdwg/rs.tdwg.org on
+# GitHub. The default is the bdq branch for the public review; after ratification, master.
+RS_TDWG_ORG_BRANCH = os.environ.get('BDQ_RS_SOURCE', '').strip() or 'bdq'
+RS_TDWG_ORG_LOCAL = os.path.isdir(RS_TDWG_ORG_BRANCH)
 # The landing page is not a document: it is covered by the standard record, so its header cites the
 # standard's versions (standards-versions/standards-versions.csv), matched on the standard IRI.
-RS_TDWG_ORG_BASE = 'https://raw.githubusercontent.com/tdwg/rs.tdwg.org/' + RS_TDWG_ORG_BRANCH + '/'
+if RS_TDWG_ORG_LOCAL:
+    RS_TDWG_ORG_BASE = os.path.abspath(RS_TDWG_ORG_BRANCH) + os.sep
+else:
+    RS_TDWG_ORG_BASE = 'https://raw.githubusercontent.com/tdwg/rs.tdwg.org/' + RS_TDWG_ORG_BRANCH + '/'
 RS_DOCS_VERSIONS_URL = RS_TDWG_ORG_BASE + 'docs-versions/docs-versions.csv'
 RS_STANDARDS_VERSIONS_URL = RS_TDWG_ORG_BASE + 'standards-versions/standards-versions.csv'
 _rs_tables = {}
@@ -445,8 +456,12 @@ def _read_rs_table(url):
     if url not in _rs_tables:
         import csv, io, urllib.request
         try:
-            with urllib.request.urlopen(url, timeout=60) as response:
-                _rs_tables[url] = list(csv.DictReader(io.StringIO(response.read().decode('utf-8'))))
+            if RS_TDWG_ORG_LOCAL:
+                with open(url, newline='', encoding='utf-8') as f:
+                    _rs_tables[url] = list(csv.DictReader(f))
+            else:
+                with urllib.request.urlopen(url, timeout=60) as response:
+                    _rs_tables[url] = list(csv.DictReader(io.StringIO(response.read().decode('utf-8'))))
         except Exception as e:
             print('Warning: could not read ' + url + ': ' + str(e), file=sys.stderr)
             _rs_tables[url] = []
