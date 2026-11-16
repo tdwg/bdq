@@ -330,6 +330,24 @@ footer = ""
 #############################################################
 # Document 2: Term-index document
 
+# Term IRI and Term Version IRI of each term, linked to rs.tdwg.org, each with a graph icon linking its
+# RDF (Turtle) representation ({IRI}.ttl); the version IRIs are from the term-version file exported
+# from rs.tdwg.org.
+term_versions_file = '../_review/vocabulary/bdqffdq_term_versions.csv'
+term_version_iris = {}
+for _, row in pd.read_csv(term_versions_file, dtype=str, na_filter=False).iterrows():
+	term_version_iris[row['term_iri']] = row['iri']
+
+def rdf_icon(iri):
+	return ' [![RDF (Turtle)](/assets/img/rdf-graph.svg){{: .rdf-icon }}]({}.ttl "RDF (Turtle)")'.format(iri)
+
+def term_iri_lines(term_iri):
+	lines = "- Term IRI: [{}]({}){}\n".format(term_iri, term_iri, rdf_icon(term_iri))
+	version_iri = term_version_iris.get(term_iri)
+	if version_iri:
+		lines = lines + "- Term Version IRI: [{}]({}){}\n".format(version_iri, version_iri, rdf_icon(version_iri))
+	return lines
+
 # Configuration: Files 
 outputDirectory = "../_review/docs/list/bdqffdq/"
 sourceDirectory = 'templates/list/bdqffdq/'
@@ -466,6 +484,7 @@ for r in queryResult :
 	term = entity.replace("bdqffdq:","");
 	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
+	text = text + term_iri_lines(str(r.subject))
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
 	if (r.parents) :
@@ -485,6 +504,7 @@ for r in queryResult :
 	term = entity.replace("bdqffdq:","");
 	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
+	text = text + term_iri_lines(str(r.subject))
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
 	if (r.parents) :
@@ -507,6 +527,7 @@ for r in queryResult :
 	term = entity.replace("bdqffdq:","")
 	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
+	text = text + term_iri_lines(str(r.subject))
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)
 	text = text + "- Definition: {}\n".format(r.definition)
 	#if (r.range) :
@@ -523,6 +544,7 @@ for r in queryResult :
 	term = entity.replace("bdqffdq:","");
 	text = text + "#### {}\n\n".format(term)
 	text = text + "- Name: {}\n".format(entity)
+	text = text + term_iri_lines(str(r.subject))
 	rtype = r.type.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:");
 	text = text + "- Type: {}\n".format(rtype)
 	text = text + "- Preferred Label: {}\n".format(r.prefLabel)

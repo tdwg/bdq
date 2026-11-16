@@ -299,6 +299,8 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 #### AbstractInformationElement
 
 - Name: bdqffdq:AbstractInformationElement
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement](https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/AbstractInformationElement-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/AbstractInformationElement-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/AbstractInformationElement-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Abstract Information Element
 - Definition: A bdqffdq:InformationElement described in abstract terms and not linked with any concrete terms.
 - SubClass Of: InformationElement
@@ -309,6 +311,8 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 #### ActedUpon
 
 - Name: bdqffdq:ActedUpon
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ActedUpon](https://rs.tdwg.org/bdqffdq/terms/ActedUpon) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ActedUpon.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ActedUpon-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/ActedUpon-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ActedUpon-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Acted Upon
 - Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Responses about the data quality in that bdqffdq:InformationElement.
 - SubClass Of: InformationElement
@@ -319,6 +323,8 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 #### Amendment
 
 - Name: bdqffdq:Amendment
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Amendment](https://rs.tdwg.org/bdqffdq/terms/Amendment) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Amendment.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Amendment-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Amendment-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Amendment-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Amendment
 - Definition: A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.
 - SubClass Of: AmendmentConcept; DataQualityNeed
@@ -333,6 +339,8 @@ AM = { am | am = < ie, e, d, rt >, ie ∈ IE, e ∈ E, d ∈ D ⋀ rt ∈ RT }
 #### AmendmentConcept
 
 - Name: bdqffdq:AmendmentConcept
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/AmendmentConcept](https://rs.tdwg.org/bdqffdq/terms/AmendmentConcept) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/AmendmentConcept.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/AmendmentConcept-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/AmendmentConcept-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/AmendmentConcept-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Amendment Concept
 - Definition: A term involved in proposals of changes to data or process to improve data quality to fit an expressed bdqffdq:DataQualityNeed.
 - Comments: 
@@ -342,6 +350,8 @@ AM = { am | am = < ie, e, d, rt >, ie ∈ IE, e ∈ E, d ∈ D ⋀ rt ∈ RT }
 #### AmendmentMethod
 
 - Name: bdqffdq:AmendmentMethod
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod](https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/AmendmentMethod-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/AmendmentMethod-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/AmendmentMethod-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Amendment Method
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Amendment to its bdqffdq:Specifications.
 - SubClass Of: AmendmentConcept; DataQualityMethod
@@ -353,6 +363,8 @@ AMM(am) = { s | s ∈ S ⋀ (am, s) ∈ rel_AMM }
 #### AmendmentPolicy
 
 - Name: bdqffdq:AmendmentPolicy
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy](https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/AmendmentPolicy.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/AmendmentPolicy-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/AmendmentPolicy-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/AmendmentPolicy-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Amendment Policy
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Amendments.
 - SubClass Of: AmendmentConcept; Policy
@@ -364,6 +376,8 @@ AP(u) = { am | am ∈ AM ⋀ (u, am) ∈ rel_AP }
 #### AmendmentResponse
 
 - Name: bdqffdq:AmendmentResponse
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/AmendmentResponse](https://rs.tdwg.org/bdqffdq/terms/AmendmentResponse) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/AmendmentResponse.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/AmendmentResponse-2026-04-13](https://rs.tdwg.org/bdqffdq/terms/version/AmendmentResponse-2026-04-13) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/AmendmentResponse-2026-04-13.ttl "RDF (Turtle)")
 - Preferred Label: Amendment Response
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource.
 - SubClass Of: AmendmentConcept; Response
@@ -376,6 +390,8 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }
 #### Argument
 
 - Name: bdqffdq:Argument
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Argument](https://rs.tdwg.org/bdqffdq/terms/Argument) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Argument.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Argument-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Argument-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Argument-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Argument
 - Definition: A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner.
 - SubClass Of: SolutionsConcept
@@ -386,6 +402,8 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }
 #### Consulted
 
 - Name: bdqffdq:Consulted
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Consulted](https://rs.tdwg.org/bdqffdq/terms/Consulted) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Consulted.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Consulted-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Consulted-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Consulted-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Consulted
 - Definition: A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Responses about the data quality in another bdqffdq:InformationElement.
 - SubClass Of: InformationElement
@@ -396,6 +414,8 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }
 #### Criterion
 
 - Name: bdqffdq:Criterion
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Criterion](https://rs.tdwg.org/bdqffdq/terms/Criterion) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Criterion.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Criterion-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Criterion-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Criterion-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Criterion
 - Definition: Rule against which data are evaluated for conformance to quality bdqffdq:Criteria.
 - SubClass Of: FundamentalConcept; NeedConcept
@@ -406,6 +426,8 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }
 #### DataQualityDimension
 
 - Name: bdqffdq:DataQualityDimension
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension](https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/DataQualityDimension-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/DataQualityDimension-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/DataQualityDimension-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Data Quality Dimension
 - Definition: An aspect of data quality.
 - SubClass Of: FundamentalConcept; NeedConcept
@@ -416,6 +438,8 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }
 #### DataQualityMethod
 
 - Name: bdqffdq:DataQualityMethod
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod](https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/DataQualityMethod-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/DataQualityMethod-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/DataQualityMethod-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Data Quality Method
 - Definition: A bdqffdq:SolutionsConcept that relates a bdqffdq:DataQualityNeed to a bdqffdq:Specification.
 - SubClass Of: SolutionsConcept
@@ -426,6 +450,8 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }
 #### DataQualityNeed
 
 - Name: bdqffdq:DataQualityNeed
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed](https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/DataQualityNeed-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/DataQualityNeed-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/DataQualityNeed-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Data Quality Need
 - Definition: A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.
 - SubClass Of: NeedConcept
@@ -436,6 +462,8 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }
 #### DataQualityProfile
 
 - Name: bdqffdq:DataQualityProfile
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/DataQualityProfile](https://rs.tdwg.org/bdqffdq/terms/DataQualityProfile) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/DataQualityProfile.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/DataQualityProfile-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/DataQualityProfile-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/DataQualityProfile-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Data Quality Profile
 - Definition: A bdqffdq:NeedConcept expressing the composition of bdqffdq:Policies to satisfy a bdqffdq:UseCase.
 - SubClass Of: NeedConcept
@@ -447,6 +475,8 @@ DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U
 #### DataQualityReport
 
 - Name: bdqffdq:DataQualityReport
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/DataQualityReport](https://rs.tdwg.org/bdqffdq/terms/DataQualityReport) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/DataQualityReport.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/DataQualityReport-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/DataQualityReport-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/DataQualityReport-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Data Quality Report
 - Definition: A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses.
 - SubClass Of: ReportConcept
@@ -457,6 +487,8 @@ DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U
 #### DataResource
 
 - Name: bdqffdq:DataResource
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/DataResource](https://rs.tdwg.org/bdqffdq/terms/DataResource) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/DataResource.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/DataResource-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/DataResource-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/DataResource-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Data Resource
 - Definition: An owl:Thing to which a data quality bdqffdq:Response applies.
 - SubClass Of: ReportConcept
@@ -469,6 +501,8 @@ DR = { dr | dr = < id, rt, v >, id ∈ ID, rt ∈ RT ⋀ v ∈ V }
 #### Enhancement
 
 - Name: bdqffdq:Enhancement
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Enhancement](https://rs.tdwg.org/bdqffdq/terms/Enhancement) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Enhancement.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Enhancement-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Enhancement-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Enhancement-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Enhancement
 - Definition: Description of a means by which data could be improved.
 - SubClass Of: AmendmentConcept; FundamentalConcept; NeedConcept
@@ -479,6 +513,8 @@ DR = { dr | dr = < id, rt, v >, id ∈ ID, rt ∈ RT ⋀ v ∈ V }
 #### FundamentalConcept
 
 - Name: bdqffdq:FundamentalConcept
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept](https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/FundamentalConcept-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/FundamentalConcept-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/FundamentalConcept-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Fundamental Concept
 - Definition: Category of fitness for use concepts that are not derived by composition with other concepts.
 - Comments: Contrast with derived concepts, which are compositions of two or more bdqffdq:FundamentalConcepts, see Veiga et al., 2017. Derived concepts can be organized by Test type into bdqffdq:ValidationConcept, bdqffdq:IssueConcept, bdqffdq:MeasurementConcept, or bdqffdq:AmendmentConcept. Derived concepts can also be organized by framework layer into bdqffdq:NeedConcept, bdqffdq:SolutionsConcept, and bdqffdq:ReportConcept (see Figure 3 in Veiga et al., 2017).
@@ -488,6 +524,8 @@ DR = { dr | dr = < id, rt, v >, id ∈ ID, rt ∈ RT ⋀ v ∈ V }
 #### Implementation
 
 - Name: bdqffdq:Implementation
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Implementation](https://rs.tdwg.org/bdqffdq/terms/Implementation) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Implementation.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Implementation-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Implementation-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Implementation-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Implementation
 - Definition: A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.
 - SubClass Of: SolutionsConcept
@@ -499,6 +537,8 @@ I(s) = { m | m ∈ M ⋀ (s, m) ∈ rel_I }
 #### ImprovementTarget
 
 - Name: bdqffdq:ImprovementTarget
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget](https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ImprovementTarget-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/ImprovementTarget-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ImprovementTarget-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Improvement Target
 - Definition: A specific bdqffdq:DataQualityNeed that a specific bdqffdq:Amendment is intended to improve.
 - SubClass Of: NeedConcept
@@ -510,6 +550,8 @@ IT(am) = { x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ (am, x) ∈ rel_IT }
 #### InformationElement
 
 - Name: bdqffdq:InformationElement
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/InformationElement](https://rs.tdwg.org/bdqffdq/terms/InformationElement) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/InformationElement.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/InformationElement-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/InformationElement-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/InformationElement-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Information Element
 - Definition: A portion of data with which a bdqffdq:DataQualityNeed is concerned.
 - SubClass Of: FundamentalConcept
@@ -520,6 +562,8 @@ IT(am) = { x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ (am, x) ∈ rel_IT }
 #### Issue
 
 - Name: bdqffdq:Issue
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Issue](https://rs.tdwg.org/bdqffdq/terms/Issue) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Issue.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Issue-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Issue-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Issue-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Issue
 - Definition: A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.
 - SubClass Of: DataQualityNeed; IssueConcept
@@ -531,6 +575,8 @@ IS = { is | is = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
 #### IssueConcept
 
 - Name: bdqffdq:IssueConcept
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/IssueConcept](https://rs.tdwg.org/bdqffdq/terms/IssueConcept) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/IssueConcept.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/IssueConcept-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/IssueConcept-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/IssueConcept-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Issue Concept
 - Definition: A term involved in flagging problems or potential problems in assessment of data quality that would or might prevent the data from meeting an expressed bdqffdq:DataQualityNeed.
 - Comments: A bdqffdq:Issue term is expressed in a negative sense, it identifies data that do not or may not conform to bdqffdq:DataQualityNeeds.
@@ -540,6 +586,8 @@ IS = { is | is = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
 #### IssueMethod
 
 - Name: bdqffdq:IssueMethod
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/IssueMethod](https://rs.tdwg.org/bdqffdq/terms/IssueMethod) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/IssueMethod.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/IssueMethod-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/IssueMethod-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/IssueMethod-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Issue Method
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; IssueConcept
@@ -550,6 +598,8 @@ IS = { is | is = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
 #### IssuePolicy
 
 - Name: bdqffdq:IssuePolicy
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/IssuePolicy](https://rs.tdwg.org/bdqffdq/terms/IssuePolicy) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/IssuePolicy.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/IssuePolicy-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/IssuePolicy-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/IssuePolicy-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Issue Policy
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Issues.
 - SubClass Of: IssueConcept; Policy
@@ -560,6 +610,8 @@ IS = { is | is = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
 #### IssueResponse
 
 - Name: bdqffdq:IssueResponse
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/IssueResponse](https://rs.tdwg.org/bdqffdq/terms/IssueResponse) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/IssueResponse.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/IssueResponse-2026-04-13](https://rs.tdwg.org/bdqffdq/terms/version/IssueResponse-2026-04-13) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/IssueResponse-2026-04-13.ttl "RDF (Turtle)")
 - Preferred Label: Issue Response
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
 - SubClass Of: IssueConcept; Response
@@ -572,6 +624,8 @@ DQI(dr) = { dqi | dqi ∈ RespI ⋀ (dr, dqi) ∈ rel_DQI }
 #### Measure
 
 - Name: bdqffdq:Measure
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Measure](https://rs.tdwg.org/bdqffdq/terms/Measure) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Measure.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Measure-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Measure-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Measure-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Measure
 - Definition: A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.
 - SubClass Of: DataQualityNeed; MeasurementConcept
@@ -587,6 +641,8 @@ MEaq(u) = { me | me ∈ ME ⋀ me ∈ MP(u) ⋀ u ∈ U ⋀ resultType(me) = cat
 #### MeasurementConcept
 
 - Name: bdqffdq:MeasurementConcept
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/MeasurementConcept](https://rs.tdwg.org/bdqffdq/terms/MeasurementConcept) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/MeasurementConcept.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/MeasurementConcept-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/MeasurementConcept-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/MeasurementConcept-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Measurement Concept
 - Definition: A term involved in measurement of data quality with regards to expressed bdqffdq:DataQualityNeed.
 - Comments: 
@@ -596,6 +652,8 @@ MEaq(u) = { me | me ∈ ME ⋀ me ∈ MP(u) ⋀ u ∈ U ⋀ resultType(me) = cat
 #### MeasurementMethod
 
 - Name: bdqffdq:MeasurementMethod
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod](https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/MeasurementMethod-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/MeasurementMethod-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/MeasurementMethod-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Measurement Method
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; MeasurementConcept
@@ -607,6 +665,8 @@ MM(me) = { s | s ∈ S ⋀ (me, s) ∈ rel_MM }
 #### MeasurementPolicy
 
 - Name: bdqffdq:MeasurementPolicy
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy](https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/MeasurementPolicy-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/MeasurementPolicy-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/MeasurementPolicy-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Measurement Policy
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures.
 - SubClass Of: MeasurementConcept; Policy
@@ -618,6 +678,8 @@ MP(u) = { me | me ∈ ME ⋀ (u, me) ∈ rel_MP }
 #### MeasurementResponse
 
 - Name: bdqffdq:MeasurementResponse
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/MeasurementResponse](https://rs.tdwg.org/bdqffdq/terms/MeasurementResponse) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/MeasurementResponse.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/MeasurementResponse-2026-04-13](https://rs.tdwg.org/bdqffdq/terms/version/MeasurementResponse-2026-04-13) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/MeasurementResponse-2026-04-13.ttl "RDF (Turtle)")
 - Preferred Label: Measurement Response
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
 - SubClass Of: MeasurementConcept; Response
@@ -630,6 +692,8 @@ DQM(dr) = { dqm | dqm ∈ RespM ⋀ (dr, dqm) ∈ rel_DQM }
 #### Mechanism
 
 - Name: bdqffdq:Mechanism
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Mechanism](https://rs.tdwg.org/bdqffdq/terms/Mechanism) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Mechanism.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Mechanism-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Mechanism-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Mechanism-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Mechanism
 - Definition: An entity that can execute bdqffdq:DataQualityMethods.
 - SubClass Of: FundamentalConcept; SolutionsConcept
@@ -641,6 +705,8 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 #### NeedConcept
 
 - Name: bdqffdq:NeedConcept
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/NeedConcept](https://rs.tdwg.org/bdqffdq/terms/NeedConcept) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/NeedConcept.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/NeedConcept-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/NeedConcept-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/NeedConcept-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Need Concept
 - Definition: A concept that expresses an aspect of a bdqffdq:DataQualityNeed.
 - Comments: Category of concepts forming the Need layer of the fitness for use framework (see Figure 3 in Veiga et al., 2017).
@@ -650,6 +716,8 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 #### Parameter
 
 - Name: bdqffdq:Parameter
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Parameter](https://rs.tdwg.org/bdqffdq/terms/Parameter) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Parameter.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Parameter-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Parameter-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Parameter-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Parameter
 - Definition: A placeholder for a value that, when provided to a Test bdqffdq:Specification changes the behavior of the Test in a defined manner.
 - SubClass Of: SolutionsConcept
@@ -660,6 +728,8 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 #### Policy
 
 - Name: bdqffdq:Policy
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Policy](https://rs.tdwg.org/bdqffdq/terms/Policy) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Policy.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Policy-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Policy-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Policy-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Policy
 - Definition: The set of bdqffdq:DataQualityNeeds for a bdqffdq:UseCase.
 - SubClass Of: NeedConcept
@@ -670,6 +740,8 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 #### QualityAssurance
 
 - Name: bdqffdq:QualityAssurance
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/QualityAssurance](https://rs.tdwg.org/bdqffdq/terms/QualityAssurance) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/QualityAssurance.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/QualityAssurance-2026-05-16](https://rs.tdwg.org/bdqffdq/terms/version/QualityAssurance-2026-05-16) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/QualityAssurance-2026-05-16.ttl "RDF (Turtle)")
 - Preferred Label: Quality Assurance
 - Definition: The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
 - SubClass Of: FundamentalConcept
@@ -681,6 +753,8 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 #### QualityControl
 
 - Name: bdqffdq:QualityControl
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/QualityControl](https://rs.tdwg.org/bdqffdq/terms/QualityControl) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/QualityControl.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/QualityControl-2026-05-16](https://rs.tdwg.org/bdqffdq/terms/version/QualityControl-2026-05-16) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/QualityControl-2026-05-16.ttl "RDF (Turtle)")
 - Preferred Label: Quality Control
 - Definition: The process of identifying data that are not fit for particular uses, with the goal of improving the data quality.  This includes in BDQ the operation on a bdqffdq:DataQualityReport for a specified bdqffdq:UseCase that yields the filtered subset Responses in that report required to diagnose, prioritize, and remediate detected data quality defects for that Use Case.
 - SubClass Of: FundamentalConcept
@@ -692,6 +766,8 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 #### ReportConcept
 
 - Name: bdqffdq:ReportConcept
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ReportConcept](https://rs.tdwg.org/bdqffdq/terms/ReportConcept) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ReportConcept.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ReportConcept-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/ReportConcept-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ReportConcept-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Report Concept
 - Definition: A concept concerning data quality expressed in a bdqffdq:DataQualityReport.
 - Comments: Category of concepts forming the Report layer of the fitness for use framework (see Figure 3 in Veiga et al., 2017).
@@ -701,6 +777,8 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 #### ResourceType
 
 - Name: bdqffdq:ResourceType
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ResourceType](https://rs.tdwg.org/bdqffdq/terms/ResourceType) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ResourceType.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ResourceType-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/ResourceType-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ResourceType-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Resource Type
 - Definition: Category of things that are data objects about which data quality bdqffdq:Responses may be made.
 - SubClass Of: FundamentalConcept
@@ -711,6 +789,8 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 #### Response
 
 - Name: bdqffdq:Response
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Response](https://rs.tdwg.org/bdqffdq/terms/Response) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Response.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Response-2024-04-13](https://rs.tdwg.org/bdqffdq/terms/version/Response-2024-04-13) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Response-2024-04-13.ttl "RDF (Turtle)")
 - Preferred Label: Response
 - Definition: A bdqffdq:ReportConcept produced by a bdqffdq:Implementation expressing a statement about data quality resulting from the application of the logic of a bdqffdq:Specification to a bdqffdq:DataResource.
 - SubClass Of: ReportConcept
@@ -721,6 +801,8 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 #### ResponseQualifier
 
 - Name: bdqffdq:ResponseQualifier
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ResponseQualifier](https://rs.tdwg.org/bdqffdq/terms/ResponseQualifier) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ResponseQualifier.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ResponseQualifier-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/ResponseQualifier-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ResponseQualifier-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Response Qualifier
 - Definition: A bdqffdq:ReportConcept to which additional bdqffdq:Responses providing additional information beyond that of bdqffdq:ResponseResult from the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.
 - SubClass Of: ReportConcept
@@ -731,6 +813,8 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 #### ResponseResult
 
 - Name: bdqffdq:ResponseResult
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ResponseResult](https://rs.tdwg.org/bdqffdq/terms/ResponseResult) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ResponseResult.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ResponseResult-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/ResponseResult-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ResponseResult-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Response.result
 - Definition: A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Responses about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.
 - SubClass Of: ReportConcept
@@ -742,6 +826,8 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 #### ResponseStatus
 
 - Name: bdqffdq:ResponseStatus
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ResponseStatus](https://rs.tdwg.org/bdqffdq/terms/ResponseStatus) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ResponseStatus.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ResponseStatus-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/ResponseStatus-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ResponseStatus-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Response.status
 - Definition: A bdqffdq:ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality bdqffdq:Specification by a bdqffdq:Implementation.
 - SubClass Of: ReportConcept
@@ -752,6 +838,8 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 #### SolutionsConcept
 
 - Name: bdqffdq:SolutionsConcept
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept](https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/SolutionsConcept-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/SolutionsConcept-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/SolutionsConcept-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Solutions Concept
 - Definition: A concept that expresses an aspect of a data quality solution.
 - Comments: Category of concepts forming the Solutions layer of the fitness for use framework (see Figure 3 in Veiga et al., 2017). A bdqffdq:SolutionsConcept is a tool that evaluates data against bdqffdq:NeedConcepts and express conclusions in bdqffdq:DataQualityReports.
@@ -761,6 +849,8 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 #### Specification
 
 - Name: bdqffdq:Specification
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Specification](https://rs.tdwg.org/bdqffdq/terms/Specification) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Specification.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Specification-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Specification-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Specification-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Specification
 - Definition: A specific statement about how to evaluate a bdqffdq:DataQualityNeed.
 - SubClass Of: FundamentalConcept; SolutionsConcept
@@ -771,6 +861,8 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 #### UseCase
 
 - Name: bdqffdq:UseCase
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/UseCase](https://rs.tdwg.org/bdqffdq/terms/UseCase) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/UseCase.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/UseCase-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/UseCase-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/UseCase-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Use Case
 - Definition: A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.
 - SubClass Of: FundamentalConcept; NeedConcept
@@ -781,6 +873,8 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 #### Validation
 
 - Name: bdqffdq:Validation
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/Validation](https://rs.tdwg.org/bdqffdq/terms/Validation) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/Validation.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/Validation-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/Validation-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/Validation-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Validation
 - Definition: A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.
 - SubClass Of: DataQualityNeed; ValidationConcept
@@ -794,6 +888,8 @@ VA = { va | va = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
 #### ValidationConcept
 
 - Name: bdqffdq:ValidationConcept
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ValidationConcept](https://rs.tdwg.org/bdqffdq/terms/ValidationConcept) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ValidationConcept.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ValidationConcept-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/ValidationConcept-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ValidationConcept-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Validation Concept
 - Definition: A term involved in statements about the conformance of data to expressed bdqffdq:DataQualityNeeds.
 - Comments: A bdqffdq:Validation term is expressed in a positive sense, it identifies data that conform to a bdqffdq:NeedConcept.
@@ -803,6 +899,8 @@ VA = { va | va = < ie, c, d, rt >, ie ∈ IE, c ∈ C, d ∈ D ⋀ rt ∈ RT }
 #### ValidationMethod
 
 - Name: bdqffdq:ValidationMethod
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ValidationMethod](https://rs.tdwg.org/bdqffdq/terms/ValidationMethod) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ValidationMethod.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ValidationMethod-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/ValidationMethod-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ValidationMethod-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Validation Method
 - Definition: A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.
 - SubClass Of: DataQualityMethod; ValidationConcept
@@ -814,6 +912,8 @@ VM(va) = { s | s ∈ S ⋀ (va, s) ∈ rel_VM }
 #### ValidationPolicy
 
 - Name: bdqffdq:ValidationPolicy
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy](https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ValidationPolicy-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/ValidationPolicy-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ValidationPolicy-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: Validation Policy
 - Definition: A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Validations.
 - SubClass Of: Policy; ValidationConcept
@@ -825,6 +925,8 @@ VP(u) = { va | va ∈ VA ⋀ (u, va) ∈ rel_VP }
 #### ValidationResponse
 
 - Name: bdqffdq:ValidationResponse
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/ValidationResponse](https://rs.tdwg.org/bdqffdq/terms/ValidationResponse) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/ValidationResponse.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/ValidationResponse-2026-04-13](https://rs.tdwg.org/bdqffdq/terms/version/ValidationResponse-2026-04-13) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/ValidationResponse-2026-04-13.ttl "RDF (Turtle)")
 - Preferred Label: Validation Response
 - Definition: A bdqffdq:Response expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.
 - SubClass Of: Response; ValidationConcept
@@ -838,6 +940,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### aggregatesResponsesFrom
 
 - Name: bdqffdq:aggregatesResponsesFrom
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/aggregatesResponsesFrom](https://rs.tdwg.org/bdqffdq/terms/aggregatesResponsesFrom) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/aggregatesResponsesFrom.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/aggregatesResponsesFrom-2026-04-23](https://rs.tdwg.org/bdqffdq/terms/version/aggregatesResponsesFrom-2026-04-23) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/aggregatesResponsesFrom-2026-04-23.ttl "RDF (Turtle)")
 - Preferred Label: aggregates Responses From
 - Definition: Relates an ActedUpon Information Element (typically used by a MultiRecord Measure) to the DataQualityNeed (Validation, Issue, Measure, or Amendment) whose Responses in a DataQualityReport are aggregated as inputs to that Measure.
 - Comments: This property provides an explicit machine-queryable link between an acted-upon set of aggregated Response outcomes and the upstream Test whose Responses it aggregates. It is intended to complement use of bdqffdq:hasActedUponInformationElement / bdqffdq:composedOf when the acted-upon data are Responses in a Data Quality Report, rather than raw source-data terms.
@@ -847,6 +951,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### amendmentProperty
 
 - Name: bdqffdq:amendmentProperty
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/amendmentProperty](https://rs.tdwg.org/bdqffdq/terms/amendmentProperty) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/amendmentProperty.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/amendmentProperty-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/amendmentProperty-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/amendmentProperty-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: amendment Property
 - Definition: Category of object properties that apply to bdqffdq:Amendments
 - Comments: Subproperties of this type group object properties that apply to bdqffdq:AmendmentConcepts such as bdqffdq:AmendmentPolicy (bdqffdq:DataQualityNeed), bdqffdq:AmendmentMethod (bdqffdq:DataQualityMethod) and bdqffdq:Amendment (bdqffdq:DataQualityReports).
@@ -856,6 +962,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### appliesTo
 
 - Name: bdqffdq:appliesTo
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/appliesTo](https://rs.tdwg.org/bdqffdq/terms/appliesTo) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/appliesTo.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/appliesTo-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/appliesTo-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/appliesTo-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: applies To
 - Definition: Describes the bdqffdq:DataResource about which a bdqffdq:Response is made.
 - Comments: If a bdqffdq:Response forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation. If bdqffdq:Responses are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Responses on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record.
@@ -865,6 +973,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### composedOf
 
 - Name: bdqffdq:composedOf
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/composedOf](https://rs.tdwg.org/bdqffdq/terms/composedOf) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/composedOf.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/composedOf-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/composedOf-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/composedOf-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: composed Of
 - Definition: Specific vocabulary term that comprises a bdqffdq:InformationElement that is not a bdqffdq:AbstractInformationElement.
 - Comments: Describes the properties from a controlled vocabulary that compose an InformationElement. For example, an InformationElement may be composedOf properties such as dwc:day, dwc:month and dwc:year.
@@ -874,6 +984,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### containsResponse
 
 - Name: bdqffdq:containsResponse
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/containsResponse](https://rs.tdwg.org/bdqffdq/terms/containsResponse) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/containsResponse.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/containsResponse-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/containsResponse-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/containsResponse-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: contains Response
 - Definition: Connects a bdqffdq:DataQualityReport with bdqffdq:Responses that comprise that bdqffdq:DataQualityReport.
 - Comments: Connects bdqffdq:Responses together into bdqffdq:DataQualityReports. Alternatively, bdqffdq:Responses can be contained in oa:Annotations, in which case this property is not used.
@@ -883,6 +995,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### forAmendment
 
 - Name: bdqffdq:forAmendment
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/forAmendment](https://rs.tdwg.org/bdqffdq/terms/forAmendment) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/forAmendment.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/forAmendment-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/forAmendment-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/forAmendment-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: for Amendment
 - Definition: Relates a bdqffdq:AmendmentMethod to a bdqffdq:Amendment.
 - SubClass Of: amendmentProperty; forDataQualityNeed
@@ -893,6 +1007,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### forDataQualityNeed
 
 - Name: bdqffdq:forDataQualityNeed
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/forDataQualityNeed](https://rs.tdwg.org/bdqffdq/terms/forDataQualityNeed) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/forDataQualityNeed.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/forDataQualityNeed-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/forDataQualityNeed-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/forDataQualityNeed-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: for Data Quality Need
 - Definition: Category of properties that relates a bdqffdq:DataQualityNeed to specific bdqffdq:Methods.
 - Comments: Category of properties that link Tests to their bdqffdq:Methods.
@@ -902,6 +1018,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### forIssue
 
 - Name: bdqffdq:forIssue
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/forIssue](https://rs.tdwg.org/bdqffdq/terms/forIssue) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/forIssue.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/forIssue-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/forIssue-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/forIssue-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: for Issue
 - Definition: Relates a bdqffdq:IssueMethod to a bdqffdq:Issue.
 - SubClass Of: forDataQualityNeed; issueProperty
@@ -912,6 +1030,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### forMeasure
 
 - Name: bdqffdq:forMeasure
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/forMeasure](https://rs.tdwg.org/bdqffdq/terms/forMeasure) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/forMeasure.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/forMeasure-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/forMeasure-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/forMeasure-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: for Measure
 - Definition: Relates a bdqffdq:MeasurementMethod to a bdqffdq:Measure.
 - SubClass Of: forDataQualityNeed; measurementProperty
@@ -922,6 +1042,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### forValidation
 
 - Name: bdqffdq:forValidation
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/forValidation](https://rs.tdwg.org/bdqffdq/terms/forValidation) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/forValidation.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/forValidation-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/forValidation-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/forValidation-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: for Validation
 - Definition: Relates a bdqffdq:ValidationMethod to a bdqffdq:Validation.
 - SubClass Of: forDataQualityNeed; validationProperty
@@ -932,6 +1054,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### hasActedUponInformationElement
 
 - Name: bdqffdq:hasActedUponInformationElement
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement](https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasActedUponInformationElement.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasActedUponInformationElement-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasActedUponInformationElement-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasActedUponInformationElement-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Acted Upon Information Element
 - Definition: Describes the bdqffdq:ActedUpon bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed about which bdqffdq:Responses arising from the bdqffdq:DataQualityNeed would apply.
 - SubClass Of: hasInformationElement
@@ -942,6 +1066,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### hasArgument
 
 - Name: bdqffdq:hasArgument
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasArgument](https://rs.tdwg.org/bdqffdq/terms/hasArgument) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasArgument.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasArgument-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasArgument-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasArgument-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Argument
 - Definition: Relates a bdqffdq:Specification to a bdqffdq:Argument
 - Comments: Expected to be a relationship between a bdqffdq:Specification and a bdqffdq:Argument, where the bdqffdq:Argument provides a value for a bdqffdq:Parameter (e.g., bdqval:sourceAuthority), and a bdqffdq:hasAuthoritiesDefaults for the bdqffdq:Specification may provide a default value for the bdqffdq:Parameter under that bdqffdq:Specification.
@@ -951,6 +1077,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### hasConsultedInformationElement
 
 - Name: bdqffdq:hasConsultedInformationElement
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement](https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasConsultedInformationElement.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasConsultedInformationElement-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasConsultedInformationElement-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasConsultedInformationElement-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Consulted Information Element
 - Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Responses concerning bdqffdq:ActedUpon bdqffdq:InformationElements.
 - SubClass Of: hasInformationElement
@@ -961,6 +1089,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### hasCriterion
 
 - Name: bdqffdq:hasCriterion
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasCriterion](https://rs.tdwg.org/bdqffdq/terms/hasCriterion) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasCriterion.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasCriterion-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasCriterion-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasCriterion-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Criterion
 - Definition: The bdqffdq:Criterion under which a bdqffdq:Validation or bdqffdq:Issue assesses for data quality.
 - SubClass Of: issueProperty; validationProperty
@@ -971,6 +1101,8 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
 #### hasDataQualityDimension
 
 - Name: bdqffdq:hasDataQualityDimension
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension](https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasDataQualityDimension.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasDataQualityDimension-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasDataQualityDimension-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasDataQualityDimension-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Data Quality Dimension
 - Definition: The bdqffdq:DataQualityDimension to which a bdqffdq:DataQualityNeed applies.
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
@@ -982,6 +1114,8 @@ Under the original formulation of the Framework, only Measures have Dimensions.
 #### hasEnhancement
 
 - Name: bdqffdq:hasEnhancement
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasEnhancement](https://rs.tdwg.org/bdqffdq/terms/hasEnhancement) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasEnhancement.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasEnhancement-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasEnhancement-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasEnhancement-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Enhancement
 - Definition: The bdqffdq:Enhancement that describes how a bdqffdq:Amendment may propose changes to improve data quality.
 - SubClass Of: amendmentProperty
@@ -992,6 +1126,8 @@ Under the original formulation of the Framework, only Measures have Dimensions.
 #### hasInformationElement
 
 - Name: bdqffdq:hasInformationElement
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasInformationElement](https://rs.tdwg.org/bdqffdq/terms/hasInformationElement) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasInformationElement.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasInformationElement-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasInformationElement-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasInformationElement-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Information Element
 - Definition: Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed.
 - SubClass Of: amendmentProperty; issueProperty; measurementProperty; validationProperty
@@ -1003,6 +1139,8 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
 #### hasParameter
 
 - Name: bdqffdq:hasParameter
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasParameter](https://rs.tdwg.org/bdqffdq/terms/hasParameter) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasParameter.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasParameter-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasParameter-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasParameter-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Parameter
 - Definition: Relates a bdqffdq:Argument to a bdqffdq:Parameter.
 - Comments: The bdqffdq:hasParameter property is expected to describe the Formal Parameter for which a bdqffdq:hasArgumentValue of the same bdqffdq:Argument provides the Actual Parameter. The bdqffdq:Argument is also expected to be the bdqffdq:hasArgument for a bdqffdq:Specification that provides the default value for the bdqffdq:hasArgumentValue and bdqffdq:hasParameter within a bdqffdq:hasAuthoritiesDefaults.
@@ -1012,6 +1150,8 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
 #### hasResourceType
 
 - Name: bdqffdq:hasResourceType
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasResourceType](https://rs.tdwg.org/bdqffdq/terms/hasResourceType) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasResourceType.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasResourceType-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasResourceType-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasResourceType-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Resource Type
 - Definition: The bdqffdq:ResourceType to which a bdqffdq:DataQualityNeed applies.
 - Comments: Provides additional metadata, with the bdqffdq:InformationElements, that describe the bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) on which the bdqffdq: concept operates. For example, a bdqffdq:Amendment with bdqffdq:ResourceType bdqffdq:MultiRecord defines that bdqffdq:Amendment as operating on a data set.
@@ -1021,6 +1161,8 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
 #### hasResponseQualifier
 
 - Name: bdqffdq:hasResponseQualifier
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasResponseQualifier](https://rs.tdwg.org/bdqffdq/terms/hasResponseQualifier) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasResponseQualifier.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasResponseQualifier-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasResponseQualifier-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasResponseQualifier-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Response Qualifier
 - Definition: ResponseQualifier object asserted by an Response.
 - SubClass Of: reportProperty
@@ -1031,6 +1173,8 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
 #### hasResponseResult
 
 - Name: bdqffdq:hasResponseResult
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasResponseResult](https://rs.tdwg.org/bdqffdq/terms/hasResponseResult) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasResponseResult.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasResponseResult-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasResponseResult-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasResponseResult-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Response Result
 - Definition: The bdqffdq:ResponseResult object asserted by a bdqffdq:Response.
 - SubClass Of: reportProperty
@@ -1042,6 +1186,8 @@ If bdqffdq:ResponseResults are not objects, use the datatype property bdqffdq:ha
 #### hasResponseStatus
 
 - Name: bdqffdq:hasResponseStatus
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasResponseStatus](https://rs.tdwg.org/bdqffdq/terms/hasResponseStatus) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasResponseStatus.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasResponseStatus-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasResponseStatus-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasResponseStatus-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Response Status
 - Definition: The bdqffdq:ResponseStatus object asserted by a bdqffdq:Response.
 - SubClass Of: reportProperty
@@ -1053,6 +1199,8 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 #### hasSpecification
 
 - Name: bdqffdq:hasSpecification
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasSpecification](https://rs.tdwg.org/bdqffdq/terms/hasSpecification) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasSpecification.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasSpecification-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasSpecification-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasSpecification-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Specification
 - Definition: Relates a bdqffdq:Method to a bdqffdq:Specification.
 - Comments: Describes the relationship between a derived bdqffdq: concept that is a bdqffdq:Method and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test).
@@ -1062,6 +1210,8 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 #### hasUseCase
 
 - Name: bdqffdq:hasUseCase
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasUseCase](https://rs.tdwg.org/bdqffdq/terms/hasUseCase) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasUseCase.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasUseCase-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasUseCase-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasUseCase-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Use Case
 - Definition: Relates a bdqffdq:Policy to a bdqffdq:UseCase.
 - Comments: Used by concepts in the bdqffdq:DataQualityNeed category to describe the relationship between bdqffdq:Policies (bdqffdq:ValidationPolicy, bdqffdq:MeasurementPolicy, bdqffdq:AmendmentPolicy) and an instance of a bdqffdq:UseCase.
@@ -1071,6 +1221,8 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 #### implementedBy
 
 - Name: bdqffdq:implementedBy
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/implementedBy](https://rs.tdwg.org/bdqffdq/terms/implementedBy) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/implementedBy.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/implementedBy-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/implementedBy-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/implementedBy-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: implemented By
 - Definition: The bdqffdq:Mechanism that provides a bdqffdq:Implementation
 - Comments: Describes the link between a bdqffdq:Implementation and a bdqffdq:Mechanism.
@@ -1080,6 +1232,8 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 #### improvedBy
 
 - Name: bdqffdq:improvedBy
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/improvedBy](https://rs.tdwg.org/bdqffdq/terms/improvedBy) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/improvedBy.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/improvedBy-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/improvedBy-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/improvedBy-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: improved By
 - Definition: The bdqffdq:ImprovementTarget that would have data quality improved by bdqffdq:Responses resulting from a bdqffdq:Amendment.
 - Comments: Originally had Domain: Amendment and Range: ImprovementTarget. Asserts that a bdqffdq:ImprovementTarget could be improved by the bdqffdq:Amendment.  
@@ -1090,6 +1244,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### includedInPolicy
 
 - Name: bdqffdq:includedInPolicy
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/includedInPolicy](https://rs.tdwg.org/bdqffdq/terms/includedInPolicy) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/includedInPolicy.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/includedInPolicy-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/includedInPolicy-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/includedInPolicy-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: included In Policy
 - Definition: Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy.
 - Comments: Relates bdqffdq:Policies to Tests (bdqffdq:DataQualityNeed).
@@ -1099,6 +1255,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### issueProperty
 
 - Name: bdqffdq:issueProperty
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/issueProperty](https://rs.tdwg.org/bdqffdq/terms/issueProperty) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/issueProperty.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/issueProperty-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/issueProperty-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/issueProperty-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: issue Property
 - Definition: Category of object properties that apply to bdqffdq:Issues.
 - Comments: Properties that relate bdqffdq:Issues to bdqffdq:IssueMethods, bdqffdq:Criteria, and bdqffdq:DataQualityDimensions.
@@ -1108,6 +1266,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### measurementProperty
 
 - Name: bdqffdq:measurementProperty
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/measurementProperty](https://rs.tdwg.org/bdqffdq/terms/measurementProperty) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/measurementProperty.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/measurementProperty-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/measurementProperty-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/measurementProperty-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: measurement Property
 - Definition: Category of object properties that apply to bdqffdq:Measures.
 - Comments: Subproperties of this type group object properties that apply to bdqffdq:MeasurementConcepts such as bdqffdq:MeasurementPolicy (bdqffdq:DataQualityNeed), bdqffdq:MeasurementMethod (bdqffdq:DataQualityMethod) and bdqffdq:Measure (bdqffdq:DataQualityReport).
@@ -1117,6 +1277,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### producesResponse
 
 - Name: bdqffdq:producesResponse
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/producesResponse](https://rs.tdwg.org/bdqffdq/terms/producesResponse) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/producesResponse.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/producesResponse-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/producesResponse-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/producesResponse-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: produces Response
 - Definition: Connects an entity with a bdqffdq:Response that the entity created.
 - Comments: Connects bdqffdq:Implementations (Solutions layer, see Figure 3 in Veiga et al., 2017) with the bdqffdq:Responses (Reports layer, see Figure 3 in Veiga et al., 2017) that they produce from the execution of a bdqffdq:Specification.
@@ -1126,6 +1288,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### reportProperty
 
 - Name: bdqffdq:reportProperty
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/reportProperty](https://rs.tdwg.org/bdqffdq/terms/reportProperty) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/reportProperty.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/reportProperty-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/reportProperty-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/reportProperty-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: report Property
 - Definition: Category of object properties that apply to bdqffdq:Responses.
 - Comments: Category of properties used in reports (object properties associated with response objects (bdqffdq:Responses)). See also the data properties bdqffdq:hasResponseComment and bdqffdq:hasResponseResultValue.
@@ -1135,6 +1299,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### targetedIssue
 
 - Name: bdqffdq:targetedIssue
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/targetedIssue](https://rs.tdwg.org/bdqffdq/terms/targetedIssue) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/targetedIssue.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/targetedIssue-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/targetedIssue-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/targetedIssue-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: targeted Issue
 - Definition: A bdqffdq:Issue for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
 - Comments: The bdqffdq:Issue targeted by a problem via the bdqffdq:ImprovementTarget object. Describes the relationship between a bdqffdq:ImprovementTarget and a bdqffdq:Issue.
@@ -1144,6 +1310,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### targetedMeasure
 
 - Name: bdqffdq:targetedMeasure
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/targetedMeasure](https://rs.tdwg.org/bdqffdq/terms/targetedMeasure) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/targetedMeasure.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/targetedMeasure-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/targetedMeasure-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/targetedMeasure-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: targeted Measure
 - Definition: A bdqffdq:Measure for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
 - Comments: Describes the relationship between a bdqffdq:ImprovementTarget and a bdqffdq:Measure.
@@ -1153,6 +1321,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### targetedValidation
 
 - Name: bdqffdq:targetedValidation
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/targetedValidation](https://rs.tdwg.org/bdqffdq/terms/targetedValidation) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/targetedValidation.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/targetedValidation-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/targetedValidation-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/targetedValidation-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: targeted Validation
 - Definition: A bdqffdq:Validation for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.
 - SubClass Of: http://www.w3.org/2002/07/owl#topObjectProperty
@@ -1163,6 +1333,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### usesSpecification
 
 - Name: bdqffdq:usesSpecification
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/usesSpecification](https://rs.tdwg.org/bdqffdq/terms/usesSpecification) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/usesSpecification.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/usesSpecification-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/usesSpecification-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/usesSpecification-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: uses Specification
 - Definition: The bdqffdq:Specification that a bdqffdq:Implementation implements.
 - Comments: Relates a bdqffdq:Implementation to the bdqffdq:Specification that the bdqffdq:Implementation implements.
@@ -1172,6 +1344,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### validationProperty
 
 - Name: bdqffdq:validationProperty
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/validationProperty](https://rs.tdwg.org/bdqffdq/terms/validationProperty) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/validationProperty.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/validationProperty-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/validationProperty-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/validationProperty-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: validation Property
 - Definition: Category of object properties that apply to bdqffdq:Validations.
 - Comments: Subproperties of this type group object properties that apply to bdqffdq:ValidationConcepts such as bdqffdq:ValidationPolicy (bdqffdq:DataQualityNeed), bdqffdq:ValidationMethod (bdqffdq:DataQualityMethod) and bdqffdq:Validation (bdqffdq:DataQualityReport).
@@ -1182,6 +1356,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### hasArgumentValue
 
 - Name: bdqffdq:hasArgumentValue
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue](https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasArgumentValue.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasArgumentValue-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasArgumentValue-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasArgumentValue-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Argument value
 - Definition: The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a Formal Parameter to determine the behavior of the bdqffdq:Specification.
 - Comments: 
@@ -1191,6 +1367,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### hasAuthoritiesDefaults
 
 - Name: bdqffdq:hasAuthoritiesDefaults
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults](https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasAuthoritiesDefaults-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasAuthoritiesDefaults-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasAuthoritiesDefaults-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Authorities and Defaults
 - Definition: Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
 - Comments: Details of the bdqval:sourceAuthority listed in a bdqffdq:Specification, with bdqffdq:Parameters that may affect the bdqffdq:hasExpectedResponse, and with their default values.
@@ -1200,6 +1378,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### hasDateLastUpdated
 
 - Name: bdqffdq:hasDateLastUpdated
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasDateLastUpdated](https://rs.tdwg.org/bdqffdq/terms/hasDateLastUpdated) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasDateLastUpdated.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasDateLastUpdated-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasDateLastUpdated-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasDateLastUpdated-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Date Last Updated
 - Definition: Date of the most recent dcterms:issued for this class with a change that would be pertinent to a bdqffdq:Implementation.
 - Comments: While a new instance of a resource with a new dcterms:issued is required for any change to that resource, not all changes would be pertinent to implementers, (i.e., that would required implementers to evaluate their code for changes needed to comply with the update). The bdqffdq:hasDateLastUpdated allows implementers to identify which new changes to the definition of a Test would entail changes to code, and which would not. For example, a change to the logic of a bdqffdq:Specification in the text of bdqffdq:hasExpectedResponse would imply needed changes to the logic of code implementing that bdqffdq:Specification, but a correction of a spelling mistake within the text of a bdqffdq:hasExpectedResponse would not.
@@ -1209,6 +1389,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### hasExpectedResponse
 
 - Name: bdqffdq:hasExpectedResponse
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse](https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasExpectedResponse-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasExpectedResponse-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasExpectedResponse-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Expected Response
 - Definition: Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements.
 - Comments: The description of the logic of a Test Specification. A bdqffdq:hasExpectedResponse is expected to be a data property of a Specification.
@@ -1218,6 +1400,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### hasFitnessRequirements
 
 - Name: bdqffdq:hasFitnessRequirements
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasFitnessRequirements](https://rs.tdwg.org/bdqffdq/terms/hasFitnessRequirements) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasFitnessRequirements.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasFitnessRequirements-2026-03-23](https://rs.tdwg.org/bdqffdq/terms/version/hasFitnessRequirements-2026-03-23) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasFitnessRequirements-2026-03-23.ttl "RDF (Turtle)")
 - Preferred Label: has Fitness Requirements
 - Definition: The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.
 - Comments: The bdqffdq:hasFitnessRequirements should sumarize the properties that data need to have to be fit for purpose for that bdqffdq:UseCase.   It should briefly list the general properties that bdqffdq:DataQualityNeeds associated with the UseCase need to assess (for example, stating that georeferences must be correctly formatted and have adequate metadata), and can identify particular threshold values (such as a coordinate uncertainty greater than some value) that would make data unfit for that use.   The hasFitnessRequirements property should not, however, simply list bdqffdq:DataQualityNeeds instances, but should provide a succinct human readable summary of the quality requirements.
@@ -1227,6 +1411,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### hasResponseComment
 
 - Name: bdqffdq:hasResponseComment
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasResponseComment](https://rs.tdwg.org/bdqffdq/terms/hasResponseComment) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasResponseComment.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasResponseComment-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasResponseComment-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasResponseComment-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Response Comment
 - Definition: Free text describing the bdqffdq:Response made in the response and why that conclusion was reached.
 - Comments: Intended for consumption by human readers of bdqffdq:DataQualityReports to understand why particular bdqffdq:Responses were made.
@@ -1236,6 +1422,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### hasResponseResultValue
 
 - Name: bdqffdq:hasResponseResultValue
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue](https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/hasResponseResultValue.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/hasResponseResultValue-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/hasResponseResultValue-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/hasResponseResultValue-2024-09-30.ttl "RDF (Turtle)")
 - Preferred Label: has Response Result Value
 - Definition: Data property carrying the value of a bdqffdq:Response when the value is not an object.
 - Comments: Applies to bdqffdq:AmendmentResponses. To support bdqtest: Tests, bdqffdq:hasResponseResultValue is expected to carry a key:value list where the keys are the names of bdqffdq:ActedUpon bdqffdq:InformationElements, and the values are the proposed new values (filling in or replacing the values of those terms in the input). Applies to bdqffdq:MeasurementResponses that assert a numeric value.
@@ -1246,6 +1434,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### MultiRecord
 
 - Name: bdqffdq:MultiRecord
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/MultiRecord](https://rs.tdwg.org/bdqffdq/terms/MultiRecord) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/MultiRecord.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/MultiRecord-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/MultiRecord-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/MultiRecord-2024-09-30.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResourceType
 - Preferred Label: Multi Record
 - Definition: A set of one or more bdqffdq:SingleRecords.
@@ -1256,6 +1446,8 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 #### SingleRecord
 
 - Name: bdqffdq:SingleRecord
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/SingleRecord](https://rs.tdwg.org/bdqffdq/terms/SingleRecord) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/SingleRecord.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/SingleRecord-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/SingleRecord-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/SingleRecord-2024-09-30.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResourceType
 - Preferred Label: Single Record
 - Definition: A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:DataQualityNeed.
@@ -1267,6 +1459,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### COMPLETE
 
 - Name: bdqffdq:COMPLETE
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/COMPLETE](https://rs.tdwg.org/bdqffdq/terms/COMPLETE) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/COMPLETE.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/COMPLETE-2026-11-09](https://rs.tdwg.org/bdqffdq/terms/version/COMPLETE-2026-11-09) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/COMPLETE-2026-11-09.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseResult
 - Preferred Label: COMPLETE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure that asserts that data are present and sufficiently comprehensive for use.
@@ -1277,6 +1471,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### COMPLIANT
 
 - Name: bdqffdq:COMPLIANT
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/COMPLIANT](https://rs.tdwg.org/bdqffdq/terms/COMPLIANT) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/COMPLIANT.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/COMPLIANT-2026-11-09](https://rs.tdwg.org/bdqffdq/terms/version/COMPLIANT-2026-11-09) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/COMPLIANT-2026-11-09.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseResult
 - Preferred Label: COMPLIANT
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
@@ -1287,6 +1483,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### IS_ISSUE
 
 - Name: bdqffdq:IS_ISSUE
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/IS_ISSUE](https://rs.tdwg.org/bdqffdq/terms/IS_ISSUE) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/IS_ISSUE.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/IS_ISSUE-2026-11-09](https://rs.tdwg.org/bdqffdq/terms/version/IS_ISSUE-2026-11-09) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/IS_ISSUE-2026-11-09.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseResult
 - Preferred Label: IS_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue indicating that the data do not have sufficient quality for a use.
@@ -1297,6 +1495,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### NOT_COMPLETE
 
 - Name: bdqffdq:NOT_COMPLETE
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE](https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/NOT_COMPLETE-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/NOT_COMPLETE-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/NOT_COMPLETE-2024-09-30.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseResult
 - Preferred Label: NOT_COMPLETE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for a use.
@@ -1307,6 +1507,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### NOT_COMPLIANT
 
 - Name: bdqffdq:NOT_COMPLIANT
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLIANT](https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLIANT) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLIANT.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/NOT_COMPLIANT-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/NOT_COMPLIANT-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/NOT_COMPLIANT-2024-09-30.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseResult
 - Preferred Label: NOT_COMPLIANT
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification.
@@ -1317,6 +1519,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### NOT_ISSUE
 
 - Name: bdqffdq:NOT_ISSUE
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/NOT_ISSUE](https://rs.tdwg.org/bdqffdq/terms/NOT_ISSUE) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/NOT_ISSUE.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/NOT_ISSUE-2026-11-09](https://rs.tdwg.org/bdqffdq/terms/version/NOT_ISSUE-2026-11-09) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/NOT_ISSUE-2026-11-09.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseResult
 - Preferred Label: NOT_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue where no potential problems were detected.
@@ -1327,6 +1531,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### POTENTIAL_ISSUE
 
 - Name: bdqffdq:POTENTIAL_ISSUE
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE](https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/POTENTIAL_ISSUE-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/POTENTIAL_ISSUE-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/POTENTIAL_ISSUE-2024-09-30.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseResult
 - Preferred Label: POTENTIAL_ISSUE
 - Definition: A bdqffdq:ResponseResult of a bdqffdq:Issue that indicates that the data may not have sufficient quality for a use. The user will need to evaluate if the data are fit for their particular use or not.
@@ -1337,6 +1543,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### AMENDED
 
 - Name: bdqffdq:AMENDED
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/AMENDED](https://rs.tdwg.org/bdqffdq/terms/AMENDED) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/AMENDED.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/AMENDED-2026-11-09](https://rs.tdwg.org/bdqffdq/terms/version/AMENDED-2026-11-09) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/AMENDED-2026-11-09.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:hasResponseResultValue from a bdqffdq:Amendment contains a proposed change.
@@ -1347,6 +1555,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### EXTERNAL_PREREQUISITES_NOT_MET
 
 - Name: bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/EXTERNAL_PREREQUISITES_NOT_MET](https://rs.tdwg.org/bdqffdq/terms/EXTERNAL_PREREQUISITES_NOT_MET) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/EXTERNAL_PREREQUISITES_NOT_MET.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/EXTERNAL_PREREQUISITES_NOT_MET-2026-11-09](https://rs.tdwg.org/bdqffdq/terms/version/EXTERNAL_PREREQUISITES_NOT_MET-2026-11-09) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/EXTERNAL_PREREQUISITES_NOT_MET-2026-11-09.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: EXTERNAL_PREREQUISITES_NOT_MET
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdqval:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.
@@ -1357,6 +1567,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### FILLED_IN
 
 - Name: bdqffdq:FILLED_IN
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/FILLED_IN](https://rs.tdwg.org/bdqffdq/terms/FILLED_IN) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/FILLED_IN.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/FILLED_IN-2026-11-09](https://rs.tdwg.org/bdqffdq/terms/version/FILLED_IN-2026-11-09) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/FILLED_IN-2026-11-09.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: FILLED_IN
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment contains a proposed change to a record in a bdqffdq:hasResponseResultValue where the bdqffdq:InformationElement was bdqval:Empty.
@@ -1367,6 +1579,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### INTERNAL_PREREQUISITES_NOT_MET
 
 - Name: bdqffdq:INTERNAL_PREREQUISITES_NOT_MET
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/INTERNAL_PREREQUISITES_NOT_MET](https://rs.tdwg.org/bdqffdq/terms/INTERNAL_PREREQUISITES_NOT_MET) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/INTERNAL_PREREQUISITES_NOT_MET.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/INTERNAL_PREREQUISITES_NOT_MET-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/INTERNAL_PREREQUISITES_NOT_MET-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/INTERNAL_PREREQUISITES_NOT_MET-2024-09-30.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: INTERNAL_PREREQUISITES_NOT_MET
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because values of the bdqffdq:InformationElement were insufficient to run the Test. If the Test is run at a later time on unmodified data, it should produce the same bdqffdq:ResponseStatus.
@@ -1377,6 +1591,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### NOT_AMENDED
 
 - Name: bdqffdq:NOT_AMENDED
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED](https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/NOT_AMENDED.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/NOT_AMENDED-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/NOT_AMENDED-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/NOT_AMENDED-2024-09-30.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: NOT_AMENDED
 - Definition: A bdqffdq:ResponseStatus used to indicate that a bdqffdq:Amendment proposed no change.
@@ -1387,6 +1603,8 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 #### RUN_HAS_RESULT
 
 - Name: bdqffdq:RUN_HAS_RESULT
+- Term IRI: [https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT](https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT.ttl "RDF (Turtle)")
+- Term Version IRI: [https://rs.tdwg.org/bdqffdq/terms/version/RUN_HAS_RESULT-2024-09-30](https://rs.tdwg.org/bdqffdq/terms/version/RUN_HAS_RESULT-2024-09-30) [![RDF (Turtle)](/assets/img/rdf-graph.svg){: .rdf-icon }](https://rs.tdwg.org/bdqffdq/terms/version/RUN_HAS_RESULT-2024-09-30.ttl "RDF (Turtle)")
 - Type: bdqffdq:ResponseStatus
 - Preferred Label: RUN_HAS_RESULT
 - Definition: A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.
