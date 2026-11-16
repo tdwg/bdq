@@ -12,7 +12,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-{creator}. {year}. {document_title}. {publisher}. <{current_iri}{ratification_date}>
+{creator}. {year}. {document_title}. {publisher}. <{current_iri}/version/{ratification_date}>
 
 **{publisher}**
 
