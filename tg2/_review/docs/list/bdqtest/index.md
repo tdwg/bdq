@@ -6,7 +6,7 @@
 BDQ Tests List of Terms
 
 **Date version issued**<br>
-2026-11-12
+2026-11-15
 
 **Date created**<br>
 2022-03-25
@@ -18,13 +18,13 @@ BDQ Tests List of Terms
 bdqtest
 
 **This version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-12>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqtest/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-04-24>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-12>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting the Tests in the bdqtest: vocabulary, using terms from the Fitness For Use Framework ontology.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting the Tests in the 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-12>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
 
 **Status**<br>
 Draft Standard for Review
@@ -201,7 +201,7 @@ See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../suppleme
 | Developed As GitHub Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test. | [https://github.com/tdwg/bdq/issues/ 63](https://github.com/tdwg/bdq/issues/63) |
 | GitHub Issue Labels (skos:note) | non-normative | A general note, for any purpose. In present context: Labels applied to GitHub Issue noted in the skos:historyNote. | TG2 Amendment OTHER CODED Test VOCABULARY Conformance Parameterized CORE |
 | Argument GUID (bdqffdq:Argument) | normative | A value that, when provided to a Test bdqffdq:Specification to replace a bdqffdq:Parameter changes the behavior of the Test in a defined manner. | 1b66a16a-5e76-4eca-a400-d097ac136ac1 |
-| has Use Cases (bdqffdq:hasUseCase) | non-normative | Relates a bdqffdq:Policy to a bdqffdq:UseCase. In present context: One or more Use Cases which this Test is linked to through a Policy. | bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns |
+| has Use Cases (bdqffdq:hasUseCase) | non-normative | Relates a bdqffdq:Policy to a bdqffdq:UseCase. In present context: One or more Use Cases which this Test is linked to through a Policy. | bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns |
 | References (dcterms:references) | non-normative | A related resource that is referenced, cited, or otherwise pointed to by the described resource. In present context: The minimum set of references that are required for an understanding of the nature of the Test. | <ul><li>Chapman AD and Wieczorek JR (2020) Georeferencing Best Practices. Copenhagen: GBIF Secretariat. https://doi.org/10.15468/doc-gg7h-s853</li> </ul> |
 
 
@@ -596,7 +596,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
@@ -2103,7 +2103,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2218,7 +2218,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -2583,7 +2583,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:SDM-Trees</td>
+			<td>bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -3531,7 +3531,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -4253,7 +4253,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -4942,7 +4942,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5041,7 +5041,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -5734,7 +5734,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7021,7 +7021,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7120,7 +7120,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7219,7 +7219,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7318,7 +7318,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7813,7 +7813,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -7912,7 +7912,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8803,7 +8803,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -8902,7 +8902,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:SDM-Trees</td>
+			<td>bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -9991,7 +9991,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10090,7 +10090,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10882,7 +10882,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -10981,7 +10981,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11872,7 +11872,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -11971,7 +11971,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12169,7 +12169,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -12862,7 +12862,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14149,7 +14149,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -14347,7 +14347,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -15040,7 +15040,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -16030,7 +16030,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:SDM-Trees</td>
+			<td>bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -17218,7 +17218,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -18010,7 +18010,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19000,7 +19000,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -19206,7 +19206,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -19325,7 +19325,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -20158,7 +20158,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21629,7 +21629,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21736,7 +21736,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21843,7 +21843,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -21946,7 +21946,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -22533,7 +22533,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -22640,7 +22640,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -23651,7 +23651,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns</td>
+			<td>bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -23774,7 +23774,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:SDM-Trees</td>
+			<td>bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -25007,7 +25007,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -25126,7 +25126,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -26046,7 +26046,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -26153,7 +26153,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>References</td>
@@ -26890,11 +26890,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-15</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-15</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -26930,7 +26930,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Triplex rosaria Perry, 1811", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Triplex", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="rosarium", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="Perry, 1811", dwc:taxonRank="",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. "],[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."]</td>
+			<td>[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Triplex rosaria G. Perry, 1811", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Triplex", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="rosarium", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="G. Perry, 1811", dwc:taxonRank="",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. "],[dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -27220,7 +27220,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -27323,7 +27323,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>has Use Cases</td>
-			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees</td>
+			<td>bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
@@ -27363,7 +27363,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-12>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
 
 **Biodiversity Information Standards (TDWG)**
 

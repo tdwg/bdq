@@ -184,7 +184,7 @@ dwc:basisOfRecord="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLI
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -225,7 +225,7 @@ dwc:basisOfRecord="Specimen": Response.status=RUN_HAS_RESULT, Response.result=NO
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -336,7 +336,7 @@ dcterms:license=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIA
 
 #### Use Cases
 
-bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -381,7 +381,7 @@ dcterms:license="GPL": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 
 #### Use Cases
 
-bdquc:SDM-Trees
+bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -595,7 +595,7 @@ dwc:coordinateUncertaintyInMeters="-1": Response.status=RUN_HAS_RESULT, Response
 
 #### Use Cases
 
-bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -881,7 +881,7 @@ dwc:decimalLatitude="121.0534": Response.status=RUN_HAS_RESULT, Response.result=
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -914,7 +914,7 @@ dwc:decimalLatitude="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMP
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -947,7 +947,7 @@ dwc:decimalLongitude="181.0554": Response.status=RUN_HAS_RESULT, Response.result
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -980,7 +980,7 @@ dwc:decimalLongitude=" ": Response.status=RUN_HAS_RESULT, Response.result=NOT_CO
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1574,7 +1574,7 @@ dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT,
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1607,7 +1607,7 @@ dwc:eventDate="1963-03-08T14:67-0600": Response.status=RUN_HAS_RESULT, Response.
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -1799,7 +1799,7 @@ dwc:year="9999": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, 
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -1836,7 +1836,7 @@ dwc:year="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Resp
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2073,7 +2073,7 @@ dwc:occurrenceStatus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COM
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2114,7 +2114,7 @@ dwc:occurrenceStatus="presence": Response.status=RUN_HAS_RESULT, Response.result
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -2815,7 +2815,7 @@ dwc:scientificName="Capulus intort": Response.status=RUN_HAS_RESULT, Response.re
 
 #### Use Cases
 
-bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -2852,7 +2852,7 @@ dwc:scientificName="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPL
 
 #### Use Cases
 
-bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -2975,7 +2975,7 @@ This tests for records that have no taxonomic (NAME) information. If there is an
 ###  VALIDATION_TAXON_UNAMBIGUOUS
 
 ####  Validation dwc:Taxon Unambiguous
-https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2025-03-06
+https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-15
 Acts upon  SingleRecord
 
 #### Description
@@ -3004,7 +3004,7 @@ bdqval:sourceAuthority
 
 #### Examples
 
-dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Triplex rosaria Perry, 1811", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Triplex", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="rosarium", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="Perry, 1811", dwc:taxonRank="",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. "
+dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Triplex rosaria G. Perry, 1811", dwc:higherClassification="", dwc:kingdom="Animalia", dwc:phylum="mollusca", dwc:class="Gastropoda", dwc:order="", dwc:family="Muricidae", dwc:subfamily="", dwc:genus="Chicoreus", dwc:genericName="Triplex", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="rosarium", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="G. Perry, 1811", dwc:taxonRank="",bdqval:sourceAuthority=”marinespecies.org”: Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:scientificName matched to unique taxon record in WoRMS, unique fuzzy match on name and exact match on authorship. "
 
 dwc:taxonID="", dwc:scientificNameID="", dwc:acceptedNameUsageID="", dwc:originalNameUsageID="", dwc:taxonConceptID="", dwc:scientificName="Graphis", dwc:higherClassification="", dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="", dwc:family="", dwc:subfamily="", dwc:genus="", dwc:genericName="", dwc:subgenus="", dwc:infragenericEpithet="", dwc:specificEpithet="", dwc:infraspecificEpithet="", dwc:cultivarEpithet="", dwc:vernacularName="", dwc:scientificNameAuthorship="", dwc:taxonRank="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName="Graphis" is ambiguous as could be either a lichen or a gastropod."
 
@@ -3225,7 +3225,7 @@ dwc:dataGeneralizations="": Response.status=RUN_HAS_RESULT, Response.result=NOT_
 
 #### Use Cases
 
-bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -3395,7 +3395,7 @@ dwc:basisOfRecord="FossilSpecimen": Response.status=NOT_AMENDED, Response.result
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -3481,7 +3481,7 @@ dcterms:license="X": Response.status=NOT_AMENDED, Response.result="", Response.c
 
 #### Use Cases
 
-bdquc:SDM-Trees
+bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -4021,7 +4021,7 @@ dwc:eventDate="10-28": Response.status=NOT_AMENDED, Response.result=, Response.c
 
 #### Use Cases
 
-bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -4061,7 +4061,7 @@ dwc:eventDate="2023",dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYe
 
 #### Use Cases
 
-bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -4545,7 +4545,7 @@ dwc:scientificNameID="gbif:8a", dwc:scientificName="": Response.status=NOT_AMEND
 
 #### Use Cases
 
-bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -4623,7 +4623,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -4653,7 +4653,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -4743,7 +4743,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -4773,7 +4773,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:SDM-Trees
+bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -4833,7 +4833,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -4953,7 +4953,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:SDM-Trees
+bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -5103,7 +5103,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -5313,7 +5313,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -5343,7 +5343,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -5373,7 +5373,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -5403,7 +5403,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -5853,7 +5853,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -6063,7 +6063,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -6123,7 +6123,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -6603,7 +6603,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -6633,7 +6633,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -6783,7 +6783,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -6813,7 +6813,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -6993,7 +6993,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -7143,7 +7143,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -7413,7 +7413,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -7443,7 +7443,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
@@ -7683,7 +7683,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -8193,7 +8193,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management
 
 #### Notes
 
@@ -8223,7 +8223,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Alien-Species, bdquc:SDM-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management
+bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Temporal_Patterns, bdquc:Taxon-Management
 
 #### Notes
 
@@ -8763,7 +8763,7 @@ bdqval:AggregatedTestResponseOutcomes
 
 #### Use Cases
 
-bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:SDM-Trees
+bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns, bdquc:Species-Distribution-Modeling-Trees
 
 #### Notes
 
@@ -8944,7 +8944,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-13>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-15>
 
 **Biodiversity Information Standards (TDWG)**
 

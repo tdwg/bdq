@@ -3117,11 +3117,11 @@
         bdqtest:acc8dff2-d8d1-483a-946d-65a02a452700 .
 
 <https://rs.tdwg.org/bdqtest/policy/60c7e911-e72e-421f-be9b-4fb81eef1a54> a bdqffdq:AmendmentPolicy ;
-    rdfs:label "AmendmentPolicy: (5) amendments  in UseCase bdquc:SDM-Trees" ;
+    rdfs:label "AmendmentPolicy: (5) amendments  in UseCase bdquc:Species-Distribution-Modeling-Trees" ;
     dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/60c7e911-e72e-421f-be9b-4fb81eef1a54-2025-03-07> ;
     dcterms:modified "2025-03-07"^^xsd:date ;
     owl:sameAs <urn:uuid:60c7e911-e72e-421f-be9b-4fb81eef1a54> ;
-    bdqffdq:hasUseCase bdquc:SDM-Trees ;
+    bdqffdq:hasUseCase bdquc:Species-Distribution-Modeling-Trees ;
     bdqffdq:includedInPolicy bdqtest:07c28ace-561a-476e-a9b9-3d5ad6e35933,
         bdqtest:710fe118-17e1-440f-b428-88ba3f547d6d,
         bdqtest:718dfc3c-cb52-4fca-b8e2-0e722f375da7,
@@ -3129,11 +3129,11 @@
         bdqtest:f01fb3f9-2f7e-418b-9f51-adf50f202aea .
 
 <https://rs.tdwg.org/bdqtest/policy/62aa9551-8412-4ee9-a58d-dd6baea1dc35> a bdqffdq:IssuePolicy ;
-    rdfs:label "IssuePolicy: (1) issues  in UseCase bdquc:SDM-Trees" ;
+    rdfs:label "IssuePolicy: (1) issues  in UseCase bdquc:Species-Distribution-Modeling-Trees" ;
     dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/62aa9551-8412-4ee9-a58d-dd6baea1dc35-2025-03-06> ;
     dcterms:modified "2025-03-06"^^xsd:date ;
     owl:sameAs <urn:uuid:62aa9551-8412-4ee9-a58d-dd6baea1dc35> ;
-    bdqffdq:hasUseCase bdquc:SDM-Trees ;
+    bdqffdq:hasUseCase bdquc:Species-Distribution-Modeling-Trees ;
     bdqffdq:includedInPolicy bdqtest:13d5a10e-188e-40fd-a22c-dbaa87b91df2 .
 
 <https://rs.tdwg.org/bdqtest/policy/89332ae7-a4d0-437a-9c15-b3cba92fb36d> a bdqffdq:MeasurementPolicy ;
@@ -3330,11 +3330,11 @@
     bdqffdq:includedInPolicy bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1 .
 
 <https://rs.tdwg.org/bdqtest/policy/9949edb2-4376-40af-8e7b-41547bd6bbe9> a bdqffdq:MeasurementPolicy ;
-    rdfs:label "MeasurementPolicy: (26) measures  in UseCase bdquc:SDM-Trees" ;
+    rdfs:label "MeasurementPolicy: (26) measures  in UseCase bdquc:Species-Distribution-Modeling-Trees" ;
     dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/9949edb2-4376-40af-8e7b-41547bd6bbe9-2025-03-07> ;
     dcterms:modified "2025-03-07"^^xsd:date ;
     owl:sameAs <urn:uuid:9949edb2-4376-40af-8e7b-41547bd6bbe9> ;
-    bdqffdq:hasUseCase bdquc:SDM-Trees ;
+    bdqffdq:hasUseCase bdquc:Species-Distribution-Modeling-Trees ;
     bdqffdq:includedInPolicy bdqtest:0f8b30e2-59dc-46ba-8b91-62049cd1a4e2,
         bdqtest:14a1d51f-16ed-4148-9dc8-1e90157a9868,
         bdqtest:241a279c-76d5-499b-ab49-a47ad7f8df50,
@@ -3416,12 +3416,12 @@
         bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1 .
 
 <https://rs.tdwg.org/bdqtest/policy/d001ff0b-ade0-4a73-b281-e92ae0129bec> a bdqffdq:ValidationPolicy ;
-    rdfs:label "ValidationPolicy: (17) validations  in UseCase bdquc:SDM-Trees" ;
+    rdfs:label "ValidationPolicy: (17) validations  in UseCase bdquc:Species-Distribution-Modeling-Trees" ;
     dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/d001ff0b-ade0-4a73-b281-e92ae0129bec-2025-03-07> ;
     dcterms:modified "2025-03-07"^^xsd:date ;
     owl:sameAs <urn:uuid:d001ff0b-ade0-4a73-b281-e92ae0129bec> ;
-    skos:prefLabel "ValidationPolicy: (17) validations  in UseCase bdquc:SDM-Trees" ;
-    bdqffdq:hasUseCase bdquc:SDM-Trees ;
+    skos:prefLabel "ValidationPolicy: (17) validations  in UseCase bdquc:Species-Distribution-Modeling-Trees" ;
+    bdqffdq:hasUseCase bdquc:Species-Distribution-Modeling-Trees ;
     bdqffdq:includedInPolicy bdqtest:0949110d-c06b-450e-9649-7c1374d940d1,
         bdqtest:15f78619-811a-4c6f-997a-a4c7888ad849,
         bdqtest:3136236e-04b6-49ea-8b34-a65f25e3aba1,
@@ -12071,11 +12071,11 @@ bdqtest:faca6558-dbff-4d26-a5cb-e11cdf632fe7 a bdqffdq:Measure ;
 bdquc:Alien-Species a bdqffdq:UseCase ;
     rdfs:label "bdquc:Alien-Species" .
 
-bdquc:SDM-Trees a bdqffdq:UseCase ;
-    rdfs:label "bdquc:SDM-Trees" .
-
 bdquc:Spatial-Temporal_Patterns a bdqffdq:UseCase ;
     rdfs:label "bdquc:Spatial-Temporal_Patterns" .
+
+bdquc:Species-Distribution-Modeling-Trees a bdqffdq:UseCase ;
+    rdfs:label "bdquc:Species-Distribution-Modeling-Trees" .
 
 bdquc:Taxon-Management a bdqffdq:UseCase ;
     rdfs:label "bdquc:Taxon-Management" .

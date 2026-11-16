@@ -189,7 +189,7 @@ BDQ initially defines four `Use Cases`.  Some of these use cases were based on t
 The initial BDQ `Use Cases` are:
 * [bdquc:Alien-Species](../../list/bdquc/index.md#bdquc_Alien-Species) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucalien-species)
 * [bdquc:Spatial-Temporal_Patterns](../../list/bdquc/index.md#bdquc_Spatial-Temporal_Patterns) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucspatial-temporal_patterns)
-* [bdquc:Species-Distribution-Modeling-Trees](../../list/bdquc/index.md#bdquc_SDM-Trees) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucsdm-trees)
+* [bdquc:Species-Distribution-Modeling-Trees](../../list/bdquc/index.md#bdquc_Species-Distribution-Modeling-Trees) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdqucspecies-distribution-modeling-trees)
 * [bdquc:Taxon-Management](../../list/bdquc/index.md#bdquc_Taxon-Management) [(Included Tests)](../../terms/bdqtest/qrg_index_by_usecase.md#bdquctaxon-management)
 
 Under the principle that data has quality only with respect to use, each of the BDQ Tests is allocated to at least one `Use Case`.  Note that there is a many-to-many relationship here: One BDQ Test can be in multiple `Use Cases` and one `Use Case` may have many associated BDQ Tests, with `Policies` relating Tests to `Use Cases`.  See [Compliance depends on Use Case](../implementers/index.md#31-compliance-depends-on-use-case-normative) in the Implementer's Guide for further explanation.

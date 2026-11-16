@@ -177,8 +177,8 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 **Vocabulary**
 
 [bdquc:Alien-Species](#bdquc_Alien-Species) |
-[bdquc:SDM-Trees](#bdquc_SDM-Trees) |
 [bdquc:Spatial-Temporal_Patterns](#bdquc_Spatial-Temporal_Patterns) |
+[bdquc:Species-Distribution-Modeling-Trees](#bdquc_Species-Distribution-Modeling-Trees) |
 [bdquc:Taxon-Management](#bdquc_Taxon-Management) 
 
 ### 3.2 Index By Label (non-normative)
@@ -187,7 +187,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 
 [Alien-Species](#bdquc_Alien-Species) |
 [Spatial-Temporal Patterns](#bdquc_Spatial-Temporal_Patterns) |
-[Species-Distribution-Modeling-Trees](#bdquc_SDM-Trees) |
+[Species Distribution Modeling: Trees](#bdquc_Species-Distribution-Modeling-Trees) |
 [Taxon-Management](#bdquc_Taxon-Management) 
 
 ## 4 Vocabulary (normative)
@@ -248,60 +248,6 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 <table>
 	<thead>
 		<tr>
-			<th colspan="2"><a id="bdquc_SDM-Trees"></a>Term Name  bdquc:SDM-Trees</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Term IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/SDM-Trees">https://rs.tdwg.org/bdquc/terms/SDM-Trees</a></td>
-		</tr>
-		<tr>
-			<td>Modified</td>
-			<td>2026-04-26</td>
-		</tr>
-		<tr>
-			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/version/SDM-Trees-2026-04-26">https://rs.tdwg.org/bdquc/terms/version/SDM-Trees-2026-04-26</a></td>
-		</tr>
-		<tr>
-			<td>Label</td>
-			<td>Species-Distribution-Modeling-Trees</td>
-		</tr>
-		<tr>
-			<td>Definition</td>
-			<td>A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of tree species. This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of the predictive modeling of specific tree species distributions (e.g., Eucalypts) using high-precision occurrence data and environmental variables to evaluate modeling methodologies and refine expert distribution envelopes.</td>
-		</tr>
-		<tr>
-			<td>Comments</td>
-			<td>References: <ul><li>Gill, A.M., Belbin, L. and Chippendale, G.M. (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN:  0644040815. </li><li>Phillips, S. J., Anderson, R. P., and Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. Ecological Modeling, 190(3-4), 231-259.  </li><li>Guisan, A. Edwards, T.C. and Hastie, T. (2002). Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modeling 157, 89-100.</li></ul></td>
-		</tr>
-		<tr>
-			<td>Fitness requirements</td>
-			<td>Data are fit for the use case bdquc:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></td>
-		</tr>
-		<tr>
-			<td>Scope note</td>
-			<td>Darwin Core Occurrences</td>
-		</tr>
-		<tr>
-			<td>Status</td>
-			<td>recommended</td>
-		</tr>
-		<tr>
-			<td>Controlled value</td>
-			<td>Species-Distribution-Modeling-Trees</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>bdqffdq:UseCase</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<thead>
-		<tr>
 			<th colspan="2"><a id="bdquc_Spatial-Temporal_Patterns"></a>Term Name  bdquc:Spatial-Temporal_Patterns</th>
 		</tr>
 	</thead>
@@ -345,6 +291,60 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		<tr>
 			<td>Controlled value</td>
 			<td>Spatial-Temporal Patterns</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>bdqffdq:UseCase</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<thead>
+		<tr>
+			<th colspan="2"><a id="bdquc_Species-Distribution-Modeling-Trees"></a>Term Name  bdquc:Species-Distribution-Modeling-Trees</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Term IRI</td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/Species-Distribution-Modeling-Trees">https://rs.tdwg.org/bdquc/terms/Species-Distribution-Modeling-Trees</a></td>
+		</tr>
+		<tr>
+			<td>Modified</td>
+			<td>2026-04-26</td>
+		</tr>
+		<tr>
+			<td>Term version IRI</td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26">https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26</a></td>
+		</tr>
+		<tr>
+			<td>Label</td>
+			<td>Species Distribution Modeling: Trees</td>
+		</tr>
+		<tr>
+			<td>Definition</td>
+			<td>A bdqffdq:UseCase for improving the quality of, and selecting dwc:Occurrence records suitable for predicting the spatial distribution of tree species. This Use Case filters for occurrence records that meet criteria for a known species at a known location and date.  Records can be further filtered to meet the requirements of the predictive modeling of specific tree species distributions (e.g., Eucalypts) using high-precision occurrence data and environmental variables to evaluate modeling methodologies and refine expert distribution envelopes.</td>
+		</tr>
+		<tr>
+			<td>Comments</td>
+			<td>References: <ul><li>Gill, A.M., Belbin, L. and Chippendale, G.M. (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN:  0644040815. </li><li>Phillips, S. J., Anderson, R. P., and Schapire, R. E. (2006). Maximum entropy modeling of species geographic distributions. Ecological Modeling, 190(3-4), 231-259.  </li><li>Guisan, A. Edwards, T.C. and Hastie, T. (2002). Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modeling 157, 89-100.</li></ul></td>
+		</tr>
+		<tr>
+			<td>Fitness requirements</td>
+			<td>Data are fit for the use case bdquc:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></td>
+		</tr>
+		<tr>
+			<td>Scope note</td>
+			<td>Darwin Core Occurrences</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>recommended</td>
+		</tr>
+		<tr>
+			<td>Controlled value</td>
+			<td>Species-Distribution-Modeling-Trees</td>
 		</tr>
 		<tr>
 			<td>Type</td>

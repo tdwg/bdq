@@ -221,7 +221,7 @@ The following issues describing potential Tests were tagged as [DO NOT IMPLEMENT
 
 ### 2.2 Use Case Development (non-normative)
 
-Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020) was established to review what `Use Cases` were prevalent within the community of those dealing with biodiversity data. This task group identified several fundamental `Use Cases`, including `bdquc:Spatial-Temporal_Patterns`, and `bdquc:Taxon-Management`. We later added `bdquc:Alien-Species`, and `bdquc:SDM-Trees` (and added and removed Record-Management and Biotic-Relationships `Use Cases`).
+Biodiversity Data Quality Task Group 3: Data Quality Use Cases (Rees & Nicholls 2020) was established to review what `Use Cases` were prevalent within the community of those dealing with biodiversity data. This task group identified several fundamental `Use Cases`, including `bdquc:Spatial-Temporal_Patterns`, and `bdquc:Taxon-Management`. We later added `bdquc:Alien-Species`, and `bdquc:Species-Distribution-Modeling-Trees` (and added and removed Record-Management and Biotic-Relationships `Use Cases`).
 
 These are only a sample of the many possible `Use Cases` for the biological sciences, but they provide an initial set to which all the BDQ Tests have been linked. Note that the relationship between `Use Cases` and Tests is a many-to-many relationship - with most Tests being relatable to many `Use Cases` and vice versa.
 
@@ -233,19 +233,19 @@ A `Use Case` can be defined outside of the BDQ standard, and users are encourage
 
 #### 2.2.1 Making Use Cases and BDQ Tests match by iterative refinement (non-normative)
 
-Most of the BDQ `Use Cases` are broad, with many BDQ Tests linked to each one. When we drafted a more specific `Use Case` (`bdquc:SDM-Trees`), it became much easier to see when a stated fitness requirement has no corresponding BDQ Test, or when the available Tests only check a more general condition than the `Use Case` requires.
+Most of the BDQ `Use Cases` are broad, with many BDQ Tests linked to each one. When we drafted a more specific `Use Case` (`bdquc:Species-Distribution-Modeling-Trees`), it became much easier to see when a stated fitness requirement has no corresponding BDQ Test, or when the available Tests only check a more general condition than the `Use Case` requires.
 
-The list below shows the key components of the initial phrasing of the `SDM-Trees` `Use Case`: Definition; Fitness Requirements, and the set of BDQ `Single Record` Tests we initially linked to those requirements.
+The list below shows the key components of the initial phrasing of the `Species-Distribution-Modeling-Trees` `Use Case`: Definition; Fitness Requirements, and the set of BDQ `Single Record` Tests we initially linked to those requirements.
 
 
-Name: **SDM-Trees** 
+Name: **Species Distribution Modeling: Trees** 
 
 Definition: 
 * `A bdqffdq:UseCase for selecting dwc:Occurrence records suitable for predicting the spatial distribution of a limited number of Eucalypt tree species (Gill et al. 1985). This Use Case filters for occurrence records that meet criteria for a known species at a known location and date. Filtered records are combined with environmental data derived from occurrence locations to evaluate robust spatial distribution models, including Maxent (Phillips et al. 2006) and generalized linear and additive models (Guisan et al. 2002). Models will be further assessed via systematic surveys in areas with high predicted occurrence and low record density. Project outputs are: (1) recommendations for robust species distribution modeling methods for tree species, (2) a suite of environmental variables for the selected species, and (3) improved “expert distribution” envelopes derived from modeling.`
 
 Fitness requirements: 
 ```
-Records are fit for the use case bdquc:SDM-Trees when they have valid:
+Records are fit for the use case bdquc:Species-Distribution-Modeling-Trees when they have valid:
 * dwc:scientificName identified to species level.
 * dwc:basisOfRecord = bdqval:notEmpty.
 * dwc:occurrenceStatus = "present".
@@ -276,7 +276,7 @@ Upon framing this `Use Case` we made the following key observation:
 
 Most of the included Tests evaluate for more general conditions than the specific requirements stated in the `Use Case`. For example, VALIDATION_OCCURRENCESTATUS_STANDARD checks that the value of `dwc:occurrenceStatus` is valid according to a configured source authority, but it does not check that the value is "present". Similarly, VALIDATION_COORDINATEUNCERTAINTY_INRANGE checks that the value of `dwc:coordinateUncertaintyInMeters` is within a configured numeric range, but it does not check that it is less than 500 m.
 
-This highlights the key issue: a `Use Case` can state fitness requirements that are more specific than the currently agreed BDQ Tests can check. When that happens, we have two options: (1) define additional BDQ Tests (only when broadly useful), or (2) refine the `Use Case` fitness requirements so they are expressed in terms that existing BDQ Tests can evaluate (often by relying on configurable source authorities and configurable thresholds). The updated `bdquc:SDM-Trees` example below illustrates option (2).  The [Tutorial](../tutorial/index.md) illustrates option (1) adding new tests to meet the requirements.
+This highlights the key issue: a `Use Case` can state fitness requirements that are more specific than the currently agreed BDQ Tests can check. When that happens, we have two options: (1) define additional BDQ Tests (only when broadly useful), or (2) refine the `Use Case` fitness requirements so they are expressed in terms that existing BDQ Tests can evaluate (often by relying on configurable source authorities and configurable thresholds). The updated `bdquc:Species-Distribution-Modeling-Trees` example below illustrates option (2).  The [Tutorial](../tutorial/index.md) illustrates option (1) adding new tests to meet the requirements.
 
 We also observed that:
 
@@ -301,7 +301,7 @@ Definition:
 
 Revised fitness requirements:
 ```
-Data are fit for the use case bdquc:SDM-Trees when records have:
+Data are fit for the use case bdquc:Species-Distribution-Modeling-Trees when records have:
 * A scientific name (dwc:scientificName) that can be resolved in the configured taxonomic source authority (default: GBIF Backbone Taxonomy).
 * A non-empty dwc:basisOfRecord whose value is valid in the configured basisOfRecord source authority.
 * A non-empty dwc:occurrenceStatus whose value is valid in the configured occurrenceStatus source authority.
