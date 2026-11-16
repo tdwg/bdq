@@ -227,13 +227,13 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
         <strong><a href="./docs/guide/bdqffdq/index.md">Fitness For Use Framework Ontology: Concepts and Use</a></strong><br>
 		Explains the normative concepts and logic for describing data quality needs and reports.<br>
 		See also the Fitness For Use Framework <a href="./docs/list/bdqffdq/index.md">bdqffdq: Term List</a>
-		and <a href="./dist/bdqffdq.owl">OWL Ontology</a>.
+		and the OWL Ontology: <a href="./dist/bdqffdq.owl">Turtle</a>, <a href="./dist/bdqffdq.rdf">RDF/XML</a>, <a href="./dist/bdqffdq.jsonld">JSON-LD</a>.
       </td>
     </tr>
     <tr>
       <td valign="top">
 		:blue_book:
-        <strong><a href=".docs/list/bdqtest/index.md">Test Vocabulary &amp; Definitions</a></strong><br>
+        <strong><a href="./docs/list/bdqtest/index.md">Test Vocabulary &amp; Definitions</a></strong><br>
         The bdqtest: Term-List, complete normative definitions of the Tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
 		See also the <a href="./docs/terms/bdqtest/qrg_index_by_usecase.html">Index to Tests by Use Case</a>
       </td>
@@ -447,14 +447,17 @@ Test Confomance Testing Data are intended for implementers to use to evaluate wh
 
 The Fitness For Use Framework is provided as an OWL ontology.
 
-- [**Biodiversity Data Quality Fitness For Use Framework (Ontology)**](dist/bdqffdq.owl)
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology) in Turtle**](dist/bdqffdq.owl)
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology) in RDF/XML**](dist/bdqffdq.rdf)
+- [**Biodiversity Data Quality Fitness For Use Framework (Ontology) in JSON-LD**](dist/bdqffdq.jsonld)
 
 #### 3.5.4 RDF Serializations of Supporting Controlled Vocabularies (non-normative)
 
-- [**RDF/XML serialization of the bdqval: terms**](dist/bdqval.xml)
-- [**RDF/XML serialization of the bdqcrit: terms**](dist/bdqcrit.xml)
-- [**RDF/XML serialization of the bdqdim: terms**](dist/bdqdim.xml)
-- [**RDF/XML serialization of the bdqenh: terms**](dist/bdqenh.xml)
+- **bdqval: terms**: [RDF/XML](dist/bdqval.xml), [Turtle](dist/bdqval.ttl), [JSON-LD](dist/bdqval.json)
+- **bdqcrit: terms**: [RDF/XML](dist/bdqcrit.xml), [Turtle](dist/bdqcrit.ttl), [JSON-LD](dist/bdqcrit.json)
+- **bdqdim: terms**: [RDF/XML](dist/bdqdim.xml), [Turtle](dist/bdqdim.ttl), [JSON-LD](dist/bdqdim.json)
+- **bdqenh: terms**: [RDF/XML](dist/bdqenh.xml), [Turtle](dist/bdqenh.ttl), [JSON-LD](dist/bdqenh.json)
+- **bdquc: terms**: [RDF/XML](dist/bdquc.xml), [Turtle](dist/bdquc.ttl), [JSON-LD](dist/bdquc.json)
 
 ## 4 Implementations (non-normative)
 
