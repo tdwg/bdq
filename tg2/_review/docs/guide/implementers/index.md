@@ -8,7 +8,7 @@
 BDQ Implementer's Guide
 
 **Date version issued**<br>
-2026-11-16
+2026-11-13
 
 **Date created**<br>
 2026-11-13
@@ -22,13 +22,10 @@ BDQ Implementer's Guide
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdq/doc/implementers/2026-11-16>
+<https://rs.tdwg.org/bdq/doc/implementers/2026-11-13>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdq/doc/implementers/>
-
-**Previous version**<br>
-<https://rs.tdwg.org/bdq/doc/implementers/2026-11-13>
 
 **Abstract**<br>
 This document is an implementer's guide for the BDQ standard, providing guidance for those wishing to create software implementations (bdqffdq:Mechanism) of BDQ Tests.
@@ -40,7 +37,7 @@ This document is an implementer's guide for the BDQ standard, providing guidance
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-16>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-13>
 
 **Status**<br>
 Draft Standard for Review
@@ -1471,8 +1468,7 @@ The header for the data in the Test Conformance Testing Data files includes a co
 | Response.result | The result of running the Test on the data record. For VALIDATIONS and AMENDMENTS, NULL where the Response.status is either `EXTERNAL_PREREQUISITES_NOT_MET`, `INTERNAL_PREREQUISITES_NOT_MET`. For VALIDATIONS, either `COMPLIANT` or `NOT_COMPLIANT` where Response.status is `RUN_HAS_RESULT`. For AMENDMENTS where Response.status is either `FILLED_IN` or `AMENDED`, the Response.result is a JSON structure containing a key:value list of Darwin Core terms and values for changes proposed by the AMENDMENT. For MEASURES, a resulting value or `NOT_REPORTED`. |
 | Response.comment | A human-readable example statement identifying the reason for the Test result given the input data. Implementations are not expected to produce this exact value. |
 | IssuesWithThisRow | A working column for recording issues while developing conformance testing data. Used only for management while developing Test Conformance Testing Data. |
-| oa:hasTarget | For ISSUE_ANNOTATION_NOTEMPTY: the IRI of the record under evaluation, which annotations on the record would have as their `oa:hasTarget` (e.g. `https://example.org/bdq/test/occurrence/1`). |
-| bdqval:annotationSystem | For ISSUE_ANNOTATION_NOTEMPTY: the annotation system to query; the test cases use the static annotation collection [annotation_test_fixture.jsonld](annotation_test_fixture.jsonld), which holds one annotation, of `https://example.org/bdq/test/occurrence/1`. |
+| bdqval:annotation | A placeholder for an annotation when Testing for their presence (this value does not imply the existence of the term annotation in the bdqval: namespace). |
 | bdqval:sourceAuthority | Input parameter for some Parameterized Tests. |
 
 **NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the `Input.Data` structure containing `bdqval:sourceAuthority`=`https://invalid/invalidservice`, for example:
@@ -1487,11 +1483,11 @@ The conformance testing files contain one column (e.g., `dwc:countryCode`) for e
 
 For example, given the header line for the Test Conformance Testing Data files:
 
-"LineNumber","dataID","LineForTest","GitHubIssueNo","GUID","Label","Response.status","Response.result","Response.comment","IssuesWithThisRow","oa:hasTarget","bdqval:annotationSystem","bdqval:sourceAuthority","dc:type","dcterms:license","dwc:acceptedNameUsageID","dwc:basisOfRecord","dwc:class","dwc:continent","dwc:coordinateUncertaintyInMeters","dwc:country","dwc:countryCode","dwc:county","dwc:dataGeneralizations","dwc:dateIdentified","dwc:day","dwc:decimalLatitude","dwc:decimalLongitude","dwc:endDayOfYear","dwc:establishmentMeans","dwc:eventDate","dwc:family","dwc:genus","dwc:geodeticDatum","dwc:higherClassification","dwc:higherGeography","dwc:higherGeographyID","dwc:infraspecificEpithet","dwc:island","dwc:islandGroup","dwc:kingdom","dwc:locality","dwc:locationID","dwc:maximumDepthInMeters","dwc:maximumElevationInMeters","dwc:minimumDepthInMeters","dwc:minimumElevationInMeters","dwc:month","dwc:municipality","dwc:occurrenceID","dwc:occurrenceStatus","dwc:order","dwc:originalNameUsageID","dwc:parentNameUsageID","dwc:phylum","dwc:scientificName","dwc:scientificNameAuthorship","dwc:scientificNameID","dwc:specificEpithet","dwc:startDayOfYear","dwc:stateProvince","dwc:subgenus","dwc:taxon","dwc:taxonConceptID","dwc:taxonID","dwc:taxonRank","dwc:verbatimCoordinateSystem","dwc:verbatimCoordinates","dwc:verbatimDepth","dwc:verbatimElevation","dwc:verbatimEventDate","dwc:verbatimLatitude","dwc:verbatimLocality","dwc:verbatimLongitude","dwc:verbatimSRS","dwc:vernacularName","dwc:waterBody","dwc:year","dwc:subfamily","dwc:superfamily","dwc:tribe","dwc:subtribe","dwc:genericName","dwc:infragenericEpithet","dwc:cultivarEpithet","dwc:individualCount","dwc:organismQuantity","dwc:footprintWKT","dwc:coordinatePrecision","dwc:namePublishedInYear","dwc:sex","dwc:typeStatus","dwc:pathway","dwc:degreeOfEstablishment","bdqval:taxonIsMarine","bdqval:geospatialLand","bdqval:assumptionOnUnknownBiome","bdqval:latestValidDate","bdqval:earliestValidDate"
+"LineNumber","dataID","LineForTest","GitHubIssueNo","GUID","Label","Response.status","Response.result","Response.comment","IssuesWithThisRow","bdqval:annotation","bdqval:sourceAuthority","dc:type","dcterms:license","dwc:acceptedNameUsageID","dwc:basisOfRecord","dwc:class","dwc:continent","dwc:coordinateUncertaintyInMeters","dwc:country","dwc:countryCode","dwc:county","dwc:dataGeneralizations","dwc:dateIdentified","dwc:day","dwc:decimalLatitude","dwc:decimalLongitude","dwc:endDayOfYear","dwc:establishmentMeans","dwc:eventDate","dwc:family","dwc:genus","dwc:geodeticDatum","dwc:higherClassification","dwc:higherGeography","dwc:higherGeographyID","dwc:infraspecificEpithet","dwc:island","dwc:islandGroup","dwc:kingdom","dwc:locality","dwc:locationID","dwc:maximumDepthInMeters","dwc:maximumElevationInMeters","dwc:minimumDepthInMeters","dwc:minimumElevationInMeters","dwc:month","dwc:municipality","dwc:occurrenceID","dwc:occurrenceStatus","dwc:order","dwc:originalNameUsageID","dwc:parentNameUsageID","dwc:phylum","dwc:scientificName","dwc:scientificNameAuthorship","dwc:scientificNameID","dwc:specificEpithet","dwc:startDayOfYear","dwc:stateProvince","dwc:subgenus","dwc:taxon","dwc:taxonConceptID","dwc:taxonID","dwc:taxonRank","dwc:verbatimCoordinateSystem","dwc:verbatimCoordinates","dwc:verbatimDepth","dwc:verbatimElevation","dwc:verbatimEventDate","dwc:verbatimLatitude","dwc:verbatimLocality","dwc:verbatimLongitude","dwc:verbatimSRS","dwc:vernacularName","dwc:waterBody","dwc:year","dwc:subfamily","dwc:superfamily","dwc:tribe","dwc:subtribe","dwc:genericName","dwc:infragenericEpithet","dwc:cultivarEpithet","dwc:individualCount","dwc:organismQuantity","dwc:footprintWKT","dwc:coordinatePrecision","dwc:namePublishedInYear","dwc:sex","dwc:typeStatus","dwc:pathway","dwc:degreeOfEstablishment","bdqval:taxonIsMarine","bdqval:geospatialLand","bdqval:assumptionOnUnknownBiome","bdqval:latestValidDate","bdqval:earliestValidDate",
 
 a conformance test case evaluating `bdqval:Empty`, where no `dwc:` term columns contain a value (dataID=1) would look like this:
 
-"2","1","1","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","INTERNAL_PREREQUISITES_NOT_MET","","dwc:countryCode is EMPTY","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"2","1","1","20","0493bcfb-652e-4d17-815b-b0cce0742fbe","VALIDATION_COUNTRYCODE_STANDARD","INTERNAL_PREREQUISITES_NOT_MET","","dwc:countryCode is EMPTY","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
 
 A `Validation` Test case for a `Validation` where the input data result in a `Response.result` of NOT_COMPLIANT (dataID=7) would look like this:
 
@@ -1592,7 +1588,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-16>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-13>
 
 **Biodiversity Information Standards (TDWG)**
 

@@ -63,14 +63,14 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AbstractInformationElement"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AllValidationTestsRunOnSingleRecord"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-11-16">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-16</dcterms:issued>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-22</dcterms:issued>
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">annotationAlertIf</rdfs:label>
      <skos:prefLabel xml:lang="en">annotationAlertIf</skos:prefLabel>
-     <skos:note rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">Used in Test "ISSUE_ANNOTATION_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div></skos:note>
+     <skos:note rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div></skos:note>
      <rdfs:comment xml:lang="en">Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: &lt;http://www.w3.org/ns/oa#&gt; SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget &lt;evaluated_instance_iri&gt; .  }'</rdfs:comment>
      <skos:definition xml:lang="en">Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: &lt;http://www.w3.org/ns/oa#&gt; SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget &lt;evaluated_instance_iri&gt; .  }'</skos:definition>
      <rdf:value>annotationAlertIf</rdf:value>
@@ -79,16 +79,16 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqval/terms/annotationAlertIf"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-11-16">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-16</dcterms:issued>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-22</dcterms:issued>
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">annotationSystem</rdfs:label>
      <skos:prefLabel xml:lang="en">annotationSystem</skos:prefLabel>
-     <skos:note rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">Used in Test "ISSUE_ANNOTATION_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div></skos:note>
-     <rdfs:comment xml:lang="en">Optionally establishes the system of annotations queried in a bdqval:ParameterizedTest: a system that holds annotations and can be queried for those with an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation, identified for example by the IRI of a W3C Web Annotation Protocol container or of a published oa:AnnotationCollection. The default, "W3C Web Annotation", names the W3C Web Annotation Data Model, not a system that can be queried.</rdfs:comment>
-     <skos:definition xml:lang="en">Optionally establishes the system of annotations queried in a bdqval:ParameterizedTest: a system that holds annotations and can be queried for those with an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation, identified for example by the IRI of a W3C Web Annotation Protocol container or of a published oa:AnnotationCollection. The default, "W3C Web Annotation", names the W3C Web Annotation Data Model, not a system that can be queried.</skos:definition>
+     <skos:note rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">Used in Test "ANNOTATION_ISSUE_NOTEMPTY" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div></skos:note>
+     <rdfs:comment xml:lang="en">Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</rdfs:comment>
+     <skos:definition xml:lang="en">Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</skos:definition>
      <rdf:value>annotationSystem</rdf:value>
      <skos:inScheme rdf:resource="https://rs.tdwg.org/bdqval/terms/"/>
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>

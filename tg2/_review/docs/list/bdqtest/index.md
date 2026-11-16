@@ -6,7 +6,7 @@
 BDQ Tests List of Terms
 
 **Date version issued**<br>
-2026-11-16
+2026-11-15
 
 **Date created**<br>
 2022-03-25
@@ -18,13 +18,13 @@ BDQ Tests List of Terms
 bdqtest
 
 **This version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-16>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqtest/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-12>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting the Tests in the bdqtest: vocabulary, using terms from the Fitness For Use Framework ontology.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting the Tests in the 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-16>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
 
 **Status**<br>
 Draft Standard for Review
@@ -3943,11 +3943,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-16</td>
+			<td>2024-09-17</td>
 		</tr>
 		<tr>
 			<td>Term Version IRI</td>
-			<td>https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-16</td>
+			<td>https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2024-09-17</td>
 		</tr>
 		<tr>
 			<td>Description</td>
@@ -3955,7 +3955,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Expected Response</td>
-			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; INTERNAL_PREREQUISITES_NOT_MET if oa:hasTarget is bdqval:Empty; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.</td>
+			<td>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:annotationSystem is not available; POTENTIAL_ISSUE if an annotation in the bdqval:annotationSystem exists and has an oa:hasTarget referencing the bdqffdq:SingleRecord under evaluation with matching bdqval:annotationAlertIf criteria; otherwise NOT_ISSUE.</td>
 		</tr>
 		<tr>
 			<td>Specification IRI</td>
@@ -3975,11 +3975,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Notes</td>
-			<td>While there is a W3C standard on 'web annotation', there is no TDWG recommendation on how this standard could be applied to annotating Darwin Core records. While implementation of this Test is currently problematic, TG2 considers annotations attached to any aspect of a Darwin Core record justifies this Test as a placeholder in the hope of future developments. The Test queries the bdqval:annotationSystem; the execution framework supplies oa:hasTarget, an IRI identifying the bdqffdq:SingleRecord under evaluation (for example dwc:occurrenceID when it is an IRI, or the IRI of the record in its data source), that is, the IRI that annotations on the record would have as their oa:hasTarget. The value of bdqval:annotationSystem identifies an annotation system that can be queried, for example the IRI of a W3C Web Annotation Protocol container or of a published oa:AnnotationCollection {[https://www.w3.org/TR/annotation-protocol/]}. The default, "W3C Web Annotation", names the data model, not a system that can be queried, so with the default the Response.status is EXTERNAL_PREREQUISITES_NOT_MET unless the implementation is configured with an annotation system. The Test validation data use a static oa:AnnotationCollection, https://bdq.tdwg.org/draft/docs/guide/implementers/annotation_test_fixture.jsonld, as the bdqval:annotationSystem.</td>
+			<td>While there is a W3C standard on 'web annotation', there is no TDWG recommendation on how this standard could be applied to annotating Darwin Core records. While implementation of this Test is currently problematic, TG2 considers annotations attached to any aspect of a Darwin Core record justifies this Test as a placeholder in the hope of future developments.</td>
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[oa:hasTarget="https://example.org/bdq/test/occurrence/1", bdqval:annotationSystem default: Response.status=EXTERNAL_PREREQUISITES_NOT_MET, Response.comment="The bdqval:annotationSystem is not available"],[oa:hasTarget="https://example.org/bdq/test/occurrence/1", bdqval:annotationSystem="https://bdq.tdwg.org/draft/docs/guide/implementers/annotation_test_fixture.jsonld": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="An annotation in the bdqval:annotationSystem has an oa:hasTarget referencing the record"]</td>
+			<td>[bdqval:annotationAlertIf="": Response.status=RUN_HAS_RESULT, Response.result=NOT_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:Empty"],[bdqval:annotationAlertIf="?": Response.status=RUN_HAS_RESULT, Response.result=POTENTIAL_ISSUE, Response.comment="bdqval:annotationAlertIf is bdqval:NotEmpty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -27363,7 +27363,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-16>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
 
 **Biodiversity Information Standards (TDWG)**
 
