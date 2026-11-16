@@ -126,9 +126,14 @@ In the BDQ Standard documents, IRIs are frequently abbreviated using namespace a
 | bdqenh:      | https://rs.tdwg.org/bdqenh/terms/  |
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/ |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/ |
+| bdqtestargument: | https://rs.tdwg.org/bdqtest/argument/ |
+| bdqtestinformationelement: | https://rs.tdwg.org/bdqtest/informationelement/ |
+| bdqtestmethod: | https://rs.tdwg.org/bdqtest/method/ |
+| bdqtestpolicy: | https://rs.tdwg.org/bdqtest/policy/ |
+| bdqtestspecification: | https://rs.tdwg.org/bdqtest/specification/ |
 | bdquc:       | https://rs.tdwg.org/bdquc/terms/   |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/  |
-| dc:          | https://purl.org/dc/elements/1.1/  |
+| dc:          | http://purl.org/dc/elements/1.1/   |
 | dcat:        | http://www.w3.org/ns/dcat#         |
 | dcmitype:    | http://purl.org/dc/dcmitype/       |
 | dcterms:     | http://purl.org/dc/terms/          |

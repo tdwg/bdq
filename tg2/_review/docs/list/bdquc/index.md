@@ -137,7 +137,7 @@ The following namespace abbreviations are used in this document:
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
 | **bdquc:**   | https://rs.tdwg.org/bdquc/terms/            |
-| dc:          | https://purl.org/dc/elements/1.1/           |
+| dc:          | http://purl.org/dc/elements/1.1/            |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 | rdf:         | http://www.w3.org/1999/02/22-rdf-syntax-ns# |

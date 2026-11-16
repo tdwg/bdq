@@ -152,7 +152,7 @@ The following namespace abbreviations are used in this document:
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
 | bdquc:       | https://rs.tdwg.org/bdquc/terms/            |
-| dc:          | https://purl.org/dc/elements/1.1/           |
+| dc:          | http://purl.org/dc/elements/1.1/            |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
 | oa:          | http://www.w3.org/ns/oa#                    |

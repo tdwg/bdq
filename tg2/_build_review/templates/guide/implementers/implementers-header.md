@@ -98,7 +98,7 @@ The following namespace abbreviations are used in this document:
 | bdqffdq:     | https://rs.tdwg.org/bdqffdq/terms/          |
 | bdqtest:     | https://rs.tdwg.org/bdqtest/terms/          |
 | bdqval:      | https://rs.tdwg.org/bdqval/terms/           |
-| dc:          | https://purl.org/dc/elements/1.1/           |
+| dc:          | http://purl.org/dc/elements/1.1/            |
 | dcterms:     | http://purl.org/dc/terms/                   |
 | dqv:         | http://www.w3.org/ns/dqv#                   |
 | dwc:         | http://rs.tdwg.org/dwc/terms/               |
