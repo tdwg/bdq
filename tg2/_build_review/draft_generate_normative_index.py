@@ -546,7 +546,7 @@ def render_topical_index(indices: List[DocumentNormativeIndex], topics: List[Top
             continue
 
         rendered_any = True
-        lines.append(f"### {topic.label}")
+        lines.append(f"### Topic: {topic.label}")
         if topic.description:
             lines.append("")
             lines.append(topic.description)
@@ -606,7 +606,7 @@ def render_document_index(indices: List[DocumentNormativeIndex]) -> List[str]:
         return "  " * (depth + 1)
 
     for doc in indices:
-        lines.append(f"## {doc.title}")
+        lines.append(f"### {doc.title}")
         lines.append("")
         lines.append(f"- Document: [{doc.rel_link}]({doc.rel_link})")
 
