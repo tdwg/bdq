@@ -6,7 +6,7 @@
 Fitness For Use Framework Ontology List of Terms
 
 **Date version issued**<br>
-2026-11-09
+2026-11-16
 
 **Date created**<br>
 2024-04-13
@@ -18,13 +18,13 @@ Fitness For Use Framework Ontology List of Terms
 bdqffdq
 
 **This version**<br>
-<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-09>
+<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-16>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqffdq/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqffdq/doc/list/2026-05-16>
+<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-09>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting vocabulary values in the Fitness For Use Framework Ontology, excluding additional axioms.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting vocabulary values
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-09>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-16>
 
 **Status**<br>
 Draft Standard for Review
@@ -4115,11 +4115,11 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-16</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/includedInPolicy-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/includedInPolicy-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/includedInPolicy-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/includedInPolicy-2026-11-16">https://rs.tdwg.org/bdqffdq/terms/version/includedInPolicy-2026-11-16</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/includedInPolicy-2026-11-16.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4131,7 +4131,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy.</td>
+			<td>Relates a bdqffdq:Policy to a bdqffdq:DataQualityNeed that is part of that bdqffdq:Policy.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -5630,7 +5630,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-09>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-16>
 
 **Biodiversity Information Standards (TDWG)**
 

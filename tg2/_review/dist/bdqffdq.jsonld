@@ -474,7 +474,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-11-09"
+        "@value": "2026-11-16"
       }
     ],
     "http://purl.org/dc/terms/license": [
@@ -496,7 +496,7 @@
     ],
     "http://www.w3.org/2002/07/owl#versionIRI": [
       {
-        "@id": "https://rs.tdwg.org/version/bdqffdq/2026-11-09"
+        "@id": "https://rs.tdwg.org/version/bdqffdq/2026-11-16"
       }
     ]
   },
@@ -6780,13 +6780,13 @@
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2024-09-30"
+        "@value": "2026-11-16"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy."
+        "@value": "Relates a bdqffdq:Policy to a bdqffdq:DataQualityNeed that is part of that bdqffdq:Policy."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -6803,7 +6803,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy."
+        "@value": "Relates a bdqffdq:Policy to a bdqffdq:DataQualityNeed that is part of that bdqffdq:Policy."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#note": [
@@ -6816,6 +6816,12 @@
       {
         "@language": "en",
         "@value": "included In Policy"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "The subject is the bdqffdq:Policy (e.g. a bdqffdq:ValidationPolicy) and the object is the bdqffdq:DataQualityNeed (the Test): <policy> bdqffdq:includedInPolicy bdqtest:{uuid}."
       }
     ]
   },
