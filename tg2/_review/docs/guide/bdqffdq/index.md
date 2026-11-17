@@ -8,7 +8,7 @@
 Fitness For Use Framework Ontology: Concepts and Use
 
 **Date version issued**<br>
-2026-11-16
+2026-11-17
 
 **Date created**<br>
 2026-11-13
@@ -22,13 +22,13 @@ Fitness For Use Framework Ontology: Concepts and Use
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-16>
+<https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-17>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqffdq/doc/guide/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-13>
+<https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-16>
 
 **Abstract**<br>
 This document is a guide for the BDQ standard, describing the organization of the bdqffdq: ontology and providing normative guidance on its use. The Fitness For Use Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Because of its comprehensive nature, the Fitness For Use Framework supports varied interpretations and uses by different stakeholders. The Framework also provides a base for the bdqval: and bdqtest: namespace vocabularies.
@@ -40,7 +40,7 @@ This document is a guide for the BDQ standard, describing the organization of th
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-16>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-17>
 
 **Status**<br>
 Draft Standard for Review
@@ -443,12 +443,12 @@ bdqffdq:SingleRecord a bdqffdq:ResourceType ;
 
 bdqtestmethod:04cee4e0-0c83-40cc-8de2-e7391f0a97a9 a bdqffdq:ValidationMethod ;
     owl:sameAs <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> ;
-    rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
+    rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification: Specification for: VALIDATION_COUNTRY_FOUND" ;
     skos:historyNote "Source: ALA, GBIF" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158",
         "Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)",
         "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE" ;
-    skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
+    skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification: Specification for: VALIDATION_COUNTRY_FOUND" ;
     bdqffdq:forValidation bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134 ;
     bdqffdq:hasSpecification bdqtestspecification:051f6ad7-1a4b-4e6c-8a1d-2af76de24848 .
 
@@ -2770,7 +2770,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-16>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-17>
 
 **Biodiversity Information Standards (TDWG)**
 
