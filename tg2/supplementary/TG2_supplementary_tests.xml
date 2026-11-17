@@ -94,6 +94,14 @@
 	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/InformationElement"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Issue">
+	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/IssueMethod">
+	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/SingleRecord">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ResourceType"/>
 	<rdfs:label>SingleRecord</rdfs:label>
@@ -230,14 +238,14 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:0a095f6c-34f2-4653-a777-5574954c3ec3">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMEVENTDATE_NOTEMPTY with Specification for: ISSUE_VERBATIMEVENTDATE_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMEVENTDATE_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMEVENTDATE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2547</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>TG2 Validation TIME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMEVENTDATE_NOTEMPTY with Specification for: ISSUE_VERBATIMEVENTDATE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:9bc8b105-902a-489c-aae8-3b7075e1b948"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMEVENTDATE_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMEVENTDATE_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:9bc8b105-902a-489c-aae8-3b7075e1b948"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:08c724b5-fa69-4411-b9b8-303c40710d38"/>
 </rdf:Description>
 
@@ -433,12 +441,12 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:183d3af2-867c-440a-97c7-8e710bb2212b">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMDEPTH_NOTEMPTY with Specification for: ISSUE_VERBATIMDEPTH_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMDEPTH_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMDEPTH_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMDEPTH_NOTEMPTY with Specification for: ISSUE_VERBATIMDEPTH_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:402c0a7c-2fbd-45d4-b644-61a47a887779"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMDEPTH_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMDEPTH_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:402c0a7c-2fbd-45d4-b644-61a47a887779"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4c6e843f-70bf-44b0-bc58-69c337cb6a16"/>
 </rdf:Description>
 
@@ -627,7 +635,7 @@
 <rdf:Description rdf:about="urn:uuid:286fa10a-dab0-4f73-8732-76e379c932df">
 	<dcterms:description>Is there a value in dwc:verbatimLatitude?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMLATITUDE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/251</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative or likely to return a high percentage of either bdqval:COMPLIANT or bdqval:NOT_COMPLIANT results (cf bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -941,7 +949,7 @@
 <rdf:Description rdf:about="urn:uuid:402c0a7c-2fbd-45d4-b644-61a47a887779">
 	<dcterms:description>Is there a value in dwc:verbatimDepth?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMDEPTH_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/248</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdqval:COMPLIANT or bdqval:NOT_COMPLIANT results (cf bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -1185,7 +1193,7 @@
 <rdf:Description rdf:about="urn:uuid:533118dd-eb18-4339-b2f8-0b7f71801305">
 	<dcterms:description>Is there a value in dwc:verbatimCoordinates?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMCOORDINATES_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/247</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative or likely to return a high percentage of either bdqval:COMPLIANT or bdqval:NOT_COMPLIANT results (cf bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -1471,7 +1479,7 @@
 <rdf:Description rdf:about="urn:uuid:6e62e8e3-cffd-4afe-957c-5b200a6eaa4e">
 	<dcterms:description>Is there a value in dwc:verbatimLongitude?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMLONGITUDE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/252</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdqval:ISSUE or bdqval:NOT_ISSUE results (cf. bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -1488,12 +1496,12 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:72106b24-7c9c-4a78-a5ee-b79c61ec239a">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMLONGITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLONGITUDE_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMLONGITUDE_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMLONGITUDE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMLONGITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLONGITUDE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:6e62e8e3-cffd-4afe-957c-5b200a6eaa4e"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMLONGITUDE_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMLONGITUDE_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:6e62e8e3-cffd-4afe-957c-5b200a6eaa4e"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:5340ea82-129c-4bec-a27f-cfc0c5e87038"/>
 </rdf:Description>
 
@@ -1922,19 +1930,19 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9b4675f5-52e5-47ae-b67f-af51a2730e32">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMCOORDINATES_NOTEMPTY with Specification for: ISSUE_VERBATIMCOORDINATES_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMCOORDINATES_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMCOORDINATES_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMCOORDINATES_NOTEMPTY with Specification for: ISSUE_VERBATIMCOORDINATES_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:533118dd-eb18-4339-b2f8-0b7f71801305"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMCOORDINATES_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMCOORDINATES_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:533118dd-eb18-4339-b2f8-0b7f71801305"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:a6c05ecb-7cd6-401b-92ff-8c4023f06cb6"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9bc8b105-902a-489c-aae8-3b7075e1b948">
 	<dcterms:description>Is there a value in dwc:verbatimEventDate?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMEVENTDATE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/250</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdqval:COMPLIANT or bdqval:NOT_COMPLIANT results (cf bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -1991,12 +1999,12 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9fbead44-b91b-422f-b705-064d29d8fdc1">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMLATITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLATITUDE_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMLATITUDE_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMLATITUDE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMLATITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLATITUDE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:286fa10a-dab0-4f73-8732-76e379c932df"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMLATITUDE_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMLATITUDE_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:286fa10a-dab0-4f73-8732-76e379c932df"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:862fc787-c79e-4d43-9f59-92be8d54b5a9"/>
 </rdf:Description>
 
@@ -2361,12 +2369,12 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:bddcd039-bbb5-4e5c-832d-dd27cf08ba0d">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMELEVATION_NOTEMPTY with Specification for: ISSUE_VERBATIMELEVATION_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMELEVATION_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMELEVATION_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMELEVATION_NOTEMPTY with Specification for: ISSUE_VERBATIMELEVATION_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:c9fc7ef1-7714-4dfa-8dea-589d5b43f432"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMELEVATION_NOTEMPTY with Specification Specification for: ISSUE_VERBATIMELEVATION_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:c9fc7ef1-7714-4dfa-8dea-589d5b43f432"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:63cd57d7-e686-410a-8108-4b24a2a4594f"/>
 </rdf:Description>
 
@@ -2482,7 +2490,7 @@
 <rdf:Description rdf:about="urn:uuid:c9fc7ef1-7714-4dfa-8dea-589d5b43f432">
 	<dcterms:description>Is there a value in dwc:verbatimElevation?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMELEVATION_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/249</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdqval:COMPLIANT or bdqval:NOT_COMPLIANT results (cf bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
