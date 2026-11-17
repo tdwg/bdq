@@ -74,6 +74,7 @@ TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests a
   - [3.4 Additional Documents (non-normative)](#34-additional-documents-non-normative)
     - [3.4.1 Supplemental Information (non-normative)](#341-supplemental-information-non-normative)
     - [3.4.2 Tutorial (non-normative)](#342-tutorial-non-normative)
+    - [3.4.3 Index of Normative Sections (non-normative)](#343-index-of-normative-sections-non-normative)
   - [3.5 Distribution Files (non-normative)](#35-distribution-files-non-normative)
     - [3.5.1 Tests (non-normative)](#351-tests-non-normative)
     - [3.5.2 Test Conformance Testing Data (non-normative)](#352-test-conformance-testing-data-non-normative)
@@ -477,6 +478,12 @@ The non-normative Supplemental Information includes the rationale for, the histo
 The non-normative Tutorial provides a worked through example of the thought process in defining a 'Use Case' and a Test that supports the `Use Case`.
 
 - [**BDQ Tutorial From Use Case to Test**](docs/tutorial/index.md)
+
+#### 3.4.3 Index of Normative Sections (non-normative)
+
+The Index of Normative Sections lists, for each document of the standard, the sections marked normative, with a topical index across them. It is generated from the documents and is not itself part of the standard.
+
+- [**Index of Normative Sections in the BDQ Standard**](docs/normative_index.md)
 
 ### 3.5 Distribution Files (non-normative)
 

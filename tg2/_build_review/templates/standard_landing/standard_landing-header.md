@@ -428,6 +428,12 @@ The non-normative Tutorial provides a worked through example of the thought proc
 
 - [**BDQ Tutorial From Use Case to Test**](docs/tutorial/index.md)
 
+#### 3.4.3 Index of Normative Sections (non-normative)
+
+The Index of Normative Sections lists, for each document of the standard, the sections marked normative, with a topical index across them. It is generated from the documents and is not itself part of the standard.
+
+- [**Index of Normative Sections in the BDQ Standard**](docs/normative_index.md)
+
 ### 3.5 Distribution Files (non-normative)
 
 #### 3.5.1 Tests (non-normative)
