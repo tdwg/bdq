@@ -471,7 +471,7 @@ The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is
 
 The four subclasses of `bdqffdq:DataQualityNeed` are `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Measure` and `bdqffdq:Amendment`.
 
-Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD have at least one `bdqffdq:includedInPolicy` relationship to an instance of a subclass of `bdqffdq:Policy`, which is in turn related to an instance of a `bdqffdq:UseCase`. 
+Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD be the object of at least one `bdqffdq:includedInPolicy` from an instance of a subclass of `bdqffdq:Policy`, which is in turn related to an instance of a `bdqffdq:UseCase`. 
 
 User communities MAY provide new Use Cases and MAY compose instances that are subtypes of `bdqffdq:DataQualityNeed` with instances of `bdqffdq:Policy` subclasses and instances of `bdqffdq:UseCase` with the object properties `bdqffdq:includedInPolicy` and `bdqffdq:hasUseCase` in new ways. 
 
