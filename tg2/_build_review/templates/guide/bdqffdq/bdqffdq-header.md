@@ -340,12 +340,12 @@ bdqffdq:SingleRecord a bdqffdq:ResourceType ;
 
 bdqtestmethod:04cee4e0-0c83-40cc-8de2-e7391f0a97a9 a bdqffdq:ValidationMethod ;
     owl:sameAs <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> ;
-    rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
+    rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification: Specification for: VALIDATION_COUNTRY_FOUND" ;
     skos:historyNote "Source: ALA, GBIF" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158",
         "Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)",
         "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE" ;
-    skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
+    skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification: Specification for: VALIDATION_COUNTRY_FOUND" ;
     bdqffdq:forValidation bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134 ;
     bdqffdq:hasSpecification bdqtestspecification:051f6ad7-1a4b-4e6c-8a1d-2af76de24848 .
 

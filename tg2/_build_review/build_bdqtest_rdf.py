@@ -34,8 +34,8 @@ Key behavioural invariants that mirror the Java implementation:
   - Citation GUIDs are looked up from TG2_citation_guids.csv; duplicate URLs
     also use the FIRST occurrence. Only URLs present in the citation file are
     emitted as dcterms:references / dcterms:BibliographicResource nodes.
-  - ValidationMethod labels use "with Specification for:" (no redundant word).
-    All other method types use "with Specification Specification for:".
+  - Method labels read "{Method}: {Test} with Specification: Specification for: {Test}"
+    for every kind of Method (as rs.tdwg.org from release 2026-11-17, and kurator-ffdq).
 """
 
 import argparse
@@ -771,15 +771,11 @@ def build_graph(rows: list, additional_guids: dict, ie_guids: dict,
                 g.add((method_uri, SKOS.historyNote,
                         Literal(f"Source: {source}")))
 
-            # Label / prefLabel — Validation uses "with Specification for:",
-            # all other types use "with Specification Specification for:".
+            # Label / prefLabel: "{Method}: {Test} with Specification: Specification for: {Test}"
+            # for every kind of Method.
             mn = _method_class_name(test_type)
-            if test_type == 'Validation':
-                m_label = (f"{mn}: {label}"
-                           f" with Specification for: {label}")
-            else:
-                m_label = (f"{mn}: {label}"
-                           f" with Specification Specification for: {label}")
+            m_label = (f"{mn}: {label}"
+                       f" with Specification: Specification for: {label}")
 
             g.add((method_uri, RDFS.label, Literal(m_label)))
             g.add((method_uri, SKOS.prefLabel, Literal(m_label)))
