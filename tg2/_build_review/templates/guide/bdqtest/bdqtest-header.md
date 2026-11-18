@@ -621,8 +621,8 @@ A complete description of BDQ Tests can be found in the RDF representation of th
     <skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
     <bdqffdq:hasSpecification rdf:resource="https://rs.tdwg.org/bdqtest/specification/01b96157-e4a1-4884-95d7-3bcfc5f3c047"/>
     <skos:historyNote>Source: TG2</skos:historyNote>
-    <rdfs:label>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</rdfs:label>
-    <skos:prefLabel>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</skos:prefLabel>
+    <rdfs:label>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification: Specification for: VALIDATION_COUNTRYCODE_STANDARD</rdfs:label>
+    <skos:prefLabel>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification: Specification for: VALIDATION_COUNTRYCODE_STANDARD</skos:prefLabel>
     <bdqffdq:forValidation rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe"/>
   </rdf:Description>
 

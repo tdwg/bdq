@@ -340,12 +340,12 @@ bdqffdq:SingleRecord a bdqffdq:ResourceType ;
 
 bdqtestmethod:04cee4e0-0c83-40cc-8de2-e7391f0a97a9 a bdqffdq:ValidationMethod ;
     owl:sameAs <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> ;
-    rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
+    rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification: Specification for: VALIDATION_COUNTRY_FOUND" ;
     skos:historyNote "Source: ALA, GBIF" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158",
         "Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)",
         "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE" ;
-    skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
+    skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification: Specification for: VALIDATION_COUNTRY_FOUND" ;
     bdqffdq:forValidation bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134 ;
     bdqffdq:hasSpecification bdqtestspecification:051f6ad7-1a4b-4e6c-8a1d-2af76de24848 .
 
@@ -471,7 +471,7 @@ The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is
 
 The four subclasses of `bdqffdq:DataQualityNeed` are `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Measure` and `bdqffdq:Amendment`.
 
-Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD have at least one `bdqffdq:includedInPolicy` relationship to an instance of a subclass of `bdqffdq:Policy`, which is in turn related to an instance of a `bdqffdq:UseCase`. 
+Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD be the object of at least one `bdqffdq:includedInPolicy` from an instance of a subclass of `bdqffdq:Policy`, which is in turn related to an instance of a `bdqffdq:UseCase`. 
 
 User communities MAY provide new Use Cases and MAY compose instances that are subtypes of `bdqffdq:DataQualityNeed` with instances of `bdqffdq:Policy` subclasses and instances of `bdqffdq:UseCase` with the object properties `bdqffdq:includedInPolicy` and `bdqffdq:hasUseCase` in new ways. 
 

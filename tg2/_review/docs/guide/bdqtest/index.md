@@ -8,7 +8,7 @@
 BDQ Tests: Concepts and Use
 
 **Date version issued**<br>
-2026-11-13
+2026-11-17
 
 **Date created**<br>
 2026-11-13
@@ -22,10 +22,13 @@ BDQ Tests: Concepts and Use
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdqtest/doc/guide/2026-11-13>
+<https://rs.tdwg.org/bdqtest/doc/guide/2026-11-17>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqtest/doc/guide/>
+
+**Previous version**<br>
+<https://rs.tdwg.org/bdqtest/doc/guide/2026-11-13>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, providing context for and normative guidance on use of the bdqtest: vocabulary.
@@ -37,7 +40,7 @@ This document is a reference for the BDQ standard, providing context for and nor
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-13>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-17>
 
 **Status**<br>
 Draft Standard for Review
@@ -679,8 +682,8 @@ A complete description of BDQ Tests can be found in the [RDF](<../../../index.md
     <skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
     <bdqffdq:hasSpecification rdf:resource="https://rs.tdwg.org/bdqtest/specification/01b96157-e4a1-4884-95d7-3bcfc5f3c047"/>
     <skos:historyNote>Source: TG2</skos:historyNote>
-    <rdfs:label>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</rdfs:label>
-    <skos:prefLabel>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</skos:prefLabel>
+    <rdfs:label>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification: Specification for: VALIDATION_COUNTRYCODE_STANDARD</rdfs:label>
+    <skos:prefLabel>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification: Specification for: VALIDATION_COUNTRYCODE_STANDARD</skos:prefLabel>
     <bdqffdq:forValidation rdf:resource="https://rs.tdwg.org/bdqtest/terms/0493bcfb-652e-4d17-815b-b0cce0742fbe"/>
   </rdf:Description>
 
@@ -784,7 +787,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-13>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-17>
 
 **Biodiversity Information Standards (TDWG)**
 

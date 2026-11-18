@@ -94,6 +94,14 @@
 	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/InformationElement"/>
 </rdf:Description>
 
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Issue">
+	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/IssueMethod">
+	<rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod"/>
+</rdf:Description>
+
 <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/SingleRecord">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ResourceType"/>
 	<rdfs:label>SingleRecord</rdfs:label>
@@ -113,23 +121,23 @@
 
 <rdf:Description rdf:about="urn:uuid:00609b55-b2b9-4b01-9b8d-9ec8c3d60b24">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_SUBTRIBE_FOUND with Specification for: VALIDATION_SUBTRIBE_FOUND</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_SUBTRIBE_FOUND with Specification: Specification for: VALIDATION_SUBTRIBE_FOUND</rdfs:label>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3682</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Conformance</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_SUBTRIBE_FOUND with Specification for: VALIDATION_SUBTRIBE_FOUND</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_SUBTRIBE_FOUND with Specification: Specification for: VALIDATION_SUBTRIBE_FOUND</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:4527c47e-61d9-4abb-af3e-f2999191be17"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:0e153bbb-d135-42be-aeb7-a742ea76fd5e"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:00a4e5d9-2ea6-4ab3-ba8f-e75948ad0357">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_RECORDNUMBER_NOTEMPTY with Specification for: VALIDATION_RECORDNUMBER_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_RECORDNUMBER_NOTEMPTY with Specification: Specification for: VALIDATION_RECORDNUMBER_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2793</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_RECORDNUMBER_NOTEMPTY with Specification for: VALIDATION_RECORDNUMBER_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_RECORDNUMBER_NOTEMPTY with Specification: Specification for: VALIDATION_RECORDNUMBER_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:3bd2477c-6497-43b0-94e6-b811eed1b1cb"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:2c3ba3ab-f01f-45f0-85e3-f7ad7822bbad"/>
 </rdf:Description>
@@ -191,10 +199,10 @@
 
 <rdf:Description rdf:about="urn:uuid:083fdace-7876-4b94-b692-20adc9f6630d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification: Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification: Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:21fe55e5-3190-45a4-af17-dd47cf33275e"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:487df663-096d-41a8-bbf8-e09f5580be02"/>
 </rdf:Description>
@@ -221,23 +229,23 @@
 
 <rdf:Description rdf:about="urn:uuid:09127586-aa0b-4d59-853d-00d3809313b0">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_CONTINENTWATERBODY_NOTEMPTY with Specification for: VALIDATION_CONTINENTWATERBODY_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_CONTINENTWATERBODY_NOTEMPTY with Specification: Specification for: VALIDATION_CONTINENTWATERBODY_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_CONTINENTWATERBODY_NOTEMPTY with Specification for: VALIDATION_CONTINENTWATERBODY_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_CONTINENTWATERBODY_NOTEMPTY with Specification: Specification for: VALIDATION_CONTINENTWATERBODY_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:181c51da-d5d8-41e9-94f9-1387fa5a5a2b"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:46aa4df3-8d98-4970-9172-ccaf47c1e997"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:0a095f6c-34f2-4653-a777-5574954c3ec3">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMEVENTDATE_NOTEMPTY with Specification for: ISSUE_VERBATIMEVENTDATE_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMEVENTDATE_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMEVENTDATE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2547</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>TG2 Validation TIME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMEVENTDATE_NOTEMPTY with Specification for: ISSUE_VERBATIMEVENTDATE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:9bc8b105-902a-489c-aae8-3b7075e1b948"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMEVENTDATE_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMEVENTDATE_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:9bc8b105-902a-489c-aae8-3b7075e1b948"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:08c724b5-fa69-4411-b9b8-303c40710d38"/>
 </rdf:Description>
 
@@ -367,24 +375,24 @@
 
 <rdf:Description rdf:about="urn:uuid:140f53c4-7613-4116-85e2-5066081eca36">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY with Specification for: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY with Specification: Specification for: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1358</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY with Specification for: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY with Specification: Specification for: VALIDATION_RELATIONSHIPOFRESOURCE_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:cd281f7e-13b3-43ae-8677-de06ffa70bb4"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:b643cd11-741a-4080-919f-704c88a885b5"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:15022d14-6f21-4102-ab43-c8f1a41dbbfc">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_LIFESTAGE_NOTEMPTY with Specification for: VALIDATION_LIFESTAGE_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_LIFESTAGE_NOTEMPTY with Specification: Specification for: VALIDATION_LIFESTAGE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2861</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_LIFESTAGE_NOTEMPTY with Specification for: VALIDATION_LIFESTAGE_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_LIFESTAGE_NOTEMPTY with Specification: Specification for: VALIDATION_LIFESTAGE_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:34b9eec9-03d5-4dc9-94b7-5b05ddcaaa87"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:33feb280-12bf-4aa6-80e4-17ad3741d179"/>
 </rdf:Description>
@@ -433,23 +441,23 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:183d3af2-867c-440a-97c7-8e710bb2212b">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMDEPTH_NOTEMPTY with Specification for: ISSUE_VERBATIMDEPTH_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMDEPTH_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMDEPTH_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMDEPTH_NOTEMPTY with Specification for: ISSUE_VERBATIMDEPTH_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:402c0a7c-2fbd-45d4-b644-61a47a887779"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMDEPTH_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMDEPTH_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:402c0a7c-2fbd-45d4-b644-61a47a887779"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4c6e843f-70bf-44b0-bc58-69c337cb6a16"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:19b076bb-d5d4-4572-9e08-0fe6a519d941">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_SEX_NOTEMPTY with Specification for: VALIDATION_SEX_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_SEX_NOTEMPTY with Specification: Specification for: VALIDATION_SEX_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2724</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_SEX_NOTEMPTY with Specification for: VALIDATION_SEX_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_SEX_NOTEMPTY with Specification: Specification for: VALIDATION_SEX_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:76067adf-1422-4d03-89e3-9067c3043700"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e2b614d3-a227-40fd-8277-72c0e448f771"/>
 </rdf:Description>
@@ -486,36 +494,36 @@
 
 <rdf:Description rdf:about="urn:uuid:1a9f45ac-8b01-4a57-af3f-689665bdfbf8">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_SPECIFICEPITHET_NOTEMPTY with Specification for: VALIDATION_SPECIFICEPITHET_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_SPECIFICEPITHET_NOTEMPTY with Specification: Specification for: VALIDATION_SPECIFICEPITHET_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3234</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_SPECIFICEPITHET_NOTEMPTY with Specification for: VALIDATION_SPECIFICEPITHET_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_SPECIFICEPITHET_NOTEMPTY with Specification: Specification for: VALIDATION_SPECIFICEPITHET_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:cdb37443-292e-49b6-a012-4718f0d7ba64"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:c1731d4b-e80c-4dbf-8fc0-e23c7e64737c"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1d485419-cd6f-4669-9e65-eb3de9eeaae5">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_GENUS_NOTEMPTY with Specification for: VALIDATION_GENUS_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_GENUS_NOTEMPTY with Specification: Specification for: VALIDATION_GENUS_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3554</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_GENUS_NOTEMPTY with Specification for: VALIDATION_GENUS_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_GENUS_NOTEMPTY with Specification: Specification for: VALIDATION_GENUS_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:d02c1ffd-af28-49bd-9c9c-e8e23a8b7258"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:1a2f785e-a2d3-4480-9832-07d6332d2346"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:1d5d91c6-dd56-4f79-a3f4-da10d4b7b1b1">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_OCCURRENCEID_STANDARD with Specification for: VALIDATION_OCCURRENCEID_STANDARD</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_OCCURRENCEID_STANDARD with Specification: Specification for: VALIDATION_OCCURRENCEID_STANDARD</rdfs:label>
 	<skos:historyNote>Source: VertNet</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L516</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Conformance</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_OCCURRENCEID_STANDARD with Specification for: VALIDATION_OCCURRENCEID_STANDARD</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_OCCURRENCEID_STANDARD with Specification: Specification for: VALIDATION_OCCURRENCEID_STANDARD</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:3cfe9ab4-79f8-4afd-8da5-723183ef16a3"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:2897dd53-0204-4e17-8a91-3d88c970e245"/>
 </rdf:Description>
@@ -539,10 +547,10 @@
 
 <rdf:Description rdf:about="urn:uuid:209ca5e1-1d4a-401b-89df-9fdd2179ef57">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification: Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>duplicate TG2 Validation SPACE Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification: Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:e1765718-0964-4b40-9451-a66b23ca6268"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:f3d28dd6-d57f-410a-85ae-12c63f2de9df"/>
 </rdf:Description>
@@ -592,24 +600,24 @@
 
 <rdf:Description rdf:about="urn:uuid:236fc047-0f00-4e0e-9506-58dfce3ea40c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_PREPARATIONS_NOTEMPTY with Specification for: VALIDATION_PREPARATIONS_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_PREPARATIONS_NOTEMPTY with Specification: Specification for: VALIDATION_PREPARATIONS_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2759</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_PREPARATIONS_NOTEMPTY with Specification for: VALIDATION_PREPARATIONS_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_PREPARATIONS_NOTEMPTY with Specification: Specification for: VALIDATION_PREPARATIONS_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:2aa1b7a0-0473-4a90-bf11-a02137c5c65b"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:5fba8a6e-3a3d-4719-9be7-73372df97273"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:26d3a3d9-5c2f-451e-b26b-6e2bd983326b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
-	<rdfs:label>AmendmentMethod: AMENDMENT_LIFESTAGE_STANDARDIZED with Specification Specification for: AMENDMENT_LIFESTAGE_STANDARDIZED</rdfs:label>
+	<rdfs:label>AmendmentMethod: AMENDMENT_LIFESTAGE_STANDARDIZED with Specification: Specification for: AMENDMENT_LIFESTAGE_STANDARDIZED</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1617</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Amendment OTHER CODED Test VOCABULARY Supplementary Conformance Parameterized</skos:note>
-	<skos:prefLabel>AmendmentMethod: AMENDMENT_LIFESTAGE_STANDARDIZED with Specification Specification for: AMENDMENT_LIFESTAGE_STANDARDIZED</skos:prefLabel>
+	<skos:prefLabel>AmendmentMethod: AMENDMENT_LIFESTAGE_STANDARDIZED with Specification: Specification for: AMENDMENT_LIFESTAGE_STANDARDIZED</skos:prefLabel>
 	<bdqffdq:forAmendment rdf:resource="urn:uuid:07e79079-42e9-48e9-826e-4874ae34bce3"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:1246660d-5aa0-4f17-b930-67e419a43f3c"/>
 </rdf:Description>
@@ -627,7 +635,7 @@
 <rdf:Description rdf:about="urn:uuid:286fa10a-dab0-4f73-8732-76e379c932df">
 	<dcterms:description>Is there a value in dwc:verbatimLatitude?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMLATITUDE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/251</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative or likely to return a high percentage of either bdqval:COMPLIANT or bdqval:NOT_COMPLIANT results (cf bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -710,12 +718,12 @@
 
 <rdf:Description rdf:about="urn:uuid:2d29bb3c-66ba-4a93-87d1-91fda7a3546b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_PHYLUM_NOTEMPTY with Specification for: VALIDATION_PHYLUM_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_PHYLUM_NOTEMPTY with Specification: Specification for: VALIDATION_PHYLUM_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3361</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_PHYLUM_NOTEMPTY with Specification for: VALIDATION_PHYLUM_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_PHYLUM_NOTEMPTY with Specification: Specification for: VALIDATION_PHYLUM_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:19bbd107-6b14-4c82-8d3e-f7a2a67df309"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:fe2b75e7-3ff1-4646-8eb0-0fee7dfd296c"/>
 </rdf:Description>
@@ -756,22 +764,22 @@
 
 <rdf:Description rdf:about="urn:uuid:35baf9d6-d37d-4cc1-9eda-b9ce0fd02af3">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_VERBATIMSRS_NOTEMPTY with Specification for: VALIDATION_VERBATIMSRS_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_VERBATIMSRS_NOTEMPTY with Specification: Specification for: VALIDATION_VERBATIMSRS_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_VERBATIMSRS_NOTEMPTY with Specification for: VALIDATION_VERBATIMSRS_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_VERBATIMSRS_NOTEMPTY with Specification: Specification for: VALIDATION_VERBATIMSRS_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:59d9dc66-8d86-4b8e-8f26-54b542d6c375"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:447561f8-9241-4b9a-8609-40372926870f"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:365a27b2-cf14-4783-aa22-6fb35fc867ce">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_PATHWAY_NOTEMPTY with Specification for: VALIDATION_PATHWAY_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_PATHWAY_NOTEMPTY with Specification: Specification for: VALIDATION_PATHWAY_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2515</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_PATHWAY_NOTEMPTY with Specification for: VALIDATION_PATHWAY_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_PATHWAY_NOTEMPTY with Specification: Specification for: VALIDATION_PATHWAY_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:fffdc42b-b15e-4450-9e6a-f4181a319106"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:21876377-574e-45fb-9bf3-c4d2ccdd995f"/>
 </rdf:Description>
@@ -795,10 +803,10 @@
 
 <rdf:Description rdf:about="urn:uuid:38677f78-4279-4d11-8a22-e4feb60a9dba">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_ISLAND_NOTEMPTY with Specification for: VALIDATION_ISLAND_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_ISLAND_NOTEMPTY with Specification: Specification for: VALIDATION_ISLAND_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_ISLAND_NOTEMPTY with Specification for: VALIDATION_ISLAND_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_ISLAND_NOTEMPTY with Specification: Specification for: VALIDATION_ISLAND_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:4d72c8d0-c785-4e8a-aea5-08c0a9f2d88b"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:81352c13-3714-4fbb-be0f-460d1f5e0b3f"/>
 </rdf:Description>
@@ -928,12 +936,12 @@
 
 <rdf:Description rdf:about="urn:uuid:3fbd9997-d15e-41e4-9022-e237b80eaa0c">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_TYPESTATUS_NOTEMPTY with Specification for: VALIDATION_TYPESTATUS_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_TYPESTATUS_NOTEMPTY with Specification: Specification for: VALIDATION_TYPESTATUS_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3164</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_TYPESTATUS_NOTEMPTY with Specification for: VALIDATION_TYPESTATUS_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_TYPESTATUS_NOTEMPTY with Specification: Specification for: VALIDATION_TYPESTATUS_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:cd7cae15-f255-41a3-b002-c9620c40f620"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:1819e21b-f7d2-4492-8460-8d49cc898021"/>
 </rdf:Description>
@@ -941,7 +949,7 @@
 <rdf:Description rdf:about="urn:uuid:402c0a7c-2fbd-45d4-b644-61a47a887779">
 	<dcterms:description>Is there a value in dwc:verbatimDepth?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMDEPTH_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/248</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdqval:COMPLIANT or bdqval:NOT_COMPLIANT results (cf bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -975,10 +983,10 @@
 
 <rdf:Description rdf:about="urn:uuid:4303e2b8-8296-4438-9f80-28a57781d09d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_ISLANDGROUP_NOTEMPTY with Specification for: VALIDATION_ISLANDGROUP_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_ISLANDGROUP_NOTEMPTY with Specification: Specification for: VALIDATION_ISLANDGROUP_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_ISLANDGROUP_NOTEMPTY with Specification for: VALIDATION_ISLANDGROUP_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_ISLANDGROUP_NOTEMPTY with Specification: Specification for: VALIDATION_ISLANDGROUP_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:0b90c114-5ff1-4024-a174-b866b7ca6b81"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:27781083-126f-4f98-814e-1e63083fc6cb"/>
 </rdf:Description>
@@ -992,12 +1000,12 @@
 
 <rdf:Description rdf:about="urn:uuid:435b1261-0334-4edc-bc0c-ef61d1e9ec36">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY with Specification: Specification for: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2480</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY with Specification: Specification for: VALIDATION_DEGREEOFESTABLISHMENT_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:0fa16c7e-eb9c-4add-9193-aca6087d6636"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4ef5762f-fea7-497d-a637-e4b744bebeaf"/>
 </rdf:Description>
@@ -1123,12 +1131,12 @@
 
 <rdf:Description rdf:about="urn:uuid:4a74e46c-0722-497f-9919-d8c77065bba9">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_VERNACULARNAME_NOTEMPTY with Specification for: VALIDATION_VERNACULARNAME_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_VERNACULARNAME_NOTEMPTY with Specification: Specification for: VALIDATION_VERNACULARNAME_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3125</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_VERNACULARNAME_NOTEMPTY with Specification for: VALIDATION_VERNACULARNAME_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_VERNACULARNAME_NOTEMPTY with Specification: Specification for: VALIDATION_VERNACULARNAME_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:eb9b70c7-9cf6-42ea-a708-5de527211df4"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:e78d9524-a655-40d4-b86a-73a9ee470814"/>
 </rdf:Description>
@@ -1185,7 +1193,7 @@
 <rdf:Description rdf:about="urn:uuid:533118dd-eb18-4339-b2f8-0b7f71801305">
 	<dcterms:description>Is there a value in dwc:verbatimCoordinates?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMCOORDINATES_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/247</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative or likely to return a high percentage of either bdqval:COMPLIANT or bdqval:NOT_COMPLIANT results (cf bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -1229,10 +1237,10 @@
 
 <rdf:Description rdf:about="urn:uuid:54010700-e2d0-433b-b572-bac6526d36a9">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_MINIMUMELEVATION_NOTEMPTY with Specification for: VALIDATION_MINIMUMELEVATION_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_MINIMUMELEVATION_NOTEMPTY with Specification: Specification for: VALIDATION_MINIMUMELEVATION_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_MINIMUMELEVATION_NOTEMPTY with Specification for: VALIDATION_MINIMUMELEVATION_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_MINIMUMELEVATION_NOTEMPTY with Specification: Specification for: VALIDATION_MINIMUMELEVATION_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:b8500bf0-273b-45c0-91a5-ebade24f1b04"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:3c886074-ff94-4201-884d-e24411187f82"/>
 </rdf:Description>
@@ -1253,22 +1261,22 @@
 
 <rdf:Description rdf:about="urn:uuid:5a9d71c6-bb70-4748-9406-92ca8d001916">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_DISPOSITION_NOTEMPTY with Specification for: VALIDATION_DISPOSITION_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_DISPOSITION_NOTEMPTY with Specification: Specification for: VALIDATION_DISPOSITION_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2930</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_DISPOSITION_NOTEMPTY with Specification for: VALIDATION_DISPOSITION_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_DISPOSITION_NOTEMPTY with Specification: Specification for: VALIDATION_DISPOSITION_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:b4c17611-2703-474f-b46a-93b08ecfee16"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:39dae689-174e-41bb-9c97-efdcb97adf59"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:5b02109a-3b9d-447b-a6ec-f7e629f61e07">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_STATEPROVINCE_NOTEMPTY with Specification for: VALIDATION_STATEPROVINCE_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_STATEPROVINCE_NOTEMPTY with Specification: Specification for: VALIDATION_STATEPROVINCE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_STATEPROVINCE_NOTEMPTY with Specification for: VALIDATION_STATEPROVINCE_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_STATEPROVINCE_NOTEMPTY with Specification: Specification for: VALIDATION_STATEPROVINCE_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:476d3e8e-e061-414c-b8ef-6d6da8f1ec02"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4bc6eff0-671f-471d-a659-72ed48d1d224"/>
 </rdf:Description>
@@ -1421,32 +1429,32 @@
 
 <rdf:Description rdf:about="urn:uuid:66c49f2f-2db7-4552-a1c0-07256c91b7b6">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_MINIMUMDEPTH_NOTEMPTY with Specification for: VALIDATION_MINIMUMDEPTH_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_MINIMUMDEPTH_NOTEMPTY with Specification: Specification for: VALIDATION_MINIMUMDEPTH_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_MINIMUMDEPTH_NOTEMPTY with Specification for: VALIDATION_MINIMUMDEPTH_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_MINIMUMDEPTH_NOTEMPTY with Specification: Specification for: VALIDATION_MINIMUMDEPTH_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:e10777f1-ca8c-4129-ab2a-7c81856a4ba5"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:80d63559-cce6-4b95-ba27-6b87f6fca36b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:67539533-a97a-4745-ad61-8f34192bc8dc">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification: Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>duplicate TG2 Validation SPACE Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY with Specification: Specification for: VALIDATION_GEOREFERENCEVERIFICATIONSTATUS_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:53e02d0c-93bd-444f-aa7f-68832bdd3143"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:7bc482c8-0b56-4c47-bfd6-7a76290e68c4"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:69fc0414-461e-47a8-af63-8645a9103409">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_LIFESTAGE_STANDARD with Specification for: VALIDATION_LIFESTAGE_STANDARD</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_LIFESTAGE_STANDARD with Specification: Specification for: VALIDATION_LIFESTAGE_STANDARD</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2659</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test VOCABULARY Supplementary Conformance</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_LIFESTAGE_STANDARD with Specification for: VALIDATION_LIFESTAGE_STANDARD</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_LIFESTAGE_STANDARD with Specification: Specification for: VALIDATION_LIFESTAGE_STANDARD</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:be40d19e-1fe7-42ed-b9d0-961f4cf3eb6a"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:d023b94e-a82c-4c26-8ceb-3e34e4364b25"/>
 </rdf:Description>
@@ -1460,10 +1468,10 @@
 
 <rdf:Description rdf:about="urn:uuid:6bff6603-8be1-4e48-b5f9-afa4b0f6cbfe">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_LOCALITY_NOTEMPTY with Specification for: VALIDATION_LOCALITY_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_LOCALITY_NOTEMPTY with Specification: Specification for: VALIDATION_LOCALITY_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_LOCALITY_NOTEMPTY with Specification for: VALIDATION_LOCALITY_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_LOCALITY_NOTEMPTY with Specification: Specification for: VALIDATION_LOCALITY_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:83282c46-0bd8-4f6c-a015-40506b0d5dc5"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:2007d1cb-0368-4f43-820c-7ba88443c3bb"/>
 </rdf:Description>
@@ -1471,7 +1479,7 @@
 <rdf:Description rdf:about="urn:uuid:6e62e8e3-cffd-4afe-957c-5b200a6eaa4e">
 	<dcterms:description>Is there a value in dwc:verbatimLongitude?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMLONGITUDE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/252</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdqval:ISSUE or bdqval:NOT_ISSUE results (cf. bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -1488,12 +1496,12 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:72106b24-7c9c-4a78-a5ee-b79c61ec239a">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMLONGITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLONGITUDE_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMLONGITUDE_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMLONGITUDE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMLONGITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLONGITUDE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:6e62e8e3-cffd-4afe-957c-5b200a6eaa4e"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMLONGITUDE_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMLONGITUDE_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:6e62e8e3-cffd-4afe-957c-5b200a6eaa4e"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:5340ea82-129c-4bec-a27f-cfc0c5e87038"/>
 </rdf:Description>
 
@@ -1537,10 +1545,10 @@
 
 <rdf:Description rdf:about="urn:uuid:756b673f-d28a-4e3a-aa19-e26e2e569c08">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_MAXIMUMELEVATION_NOTEMPTY with Specification for: VALIDATION_MAXIMUMELEVATION_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_MAXIMUMELEVATION_NOTEMPTY with Specification: Specification for: VALIDATION_MAXIMUMELEVATION_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_MAXIMUMELEVATION_NOTEMPTY with Specification for: VALIDATION_MAXIMUMELEVATION_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_MAXIMUMELEVATION_NOTEMPTY with Specification: Specification for: VALIDATION_MAXIMUMELEVATION_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:653d907a-af86-4c1d-9156-0e86f79cbd2a"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:a590ae97-7f36-474c-a43e-92a32097db3c"/>
 </rdf:Description>
@@ -1606,24 +1614,24 @@
 
 <rdf:Description rdf:about="urn:uuid:7ee96dae-a035-4d9e-9606-2cae52de66cd">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_ENDDAYOFYEAR_NOTEMPTY with Specification for: VALIDATION_ENDDAYOFYEAR_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_ENDDAYOFYEAR_NOTEMPTY with Specification: Specification for: VALIDATION_ENDDAYOFYEAR_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2443</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>TG2 Validation TIME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_ENDDAYOFYEAR_NOTEMPTY with Specification for: VALIDATION_ENDDAYOFYEAR_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_ENDDAYOFYEAR_NOTEMPTY with Specification: Specification for: VALIDATION_ENDDAYOFYEAR_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:0267c35f-a02b-4dc9-9a01-38797faa6b2b"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:a997dcf7-9c0d-49ed-94b6-4489db26abf7"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:80754e0b-0a3a-48f1-8f71-e9498c105f30">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_CLASS_NOTEMPTY with Specification for: VALIDATION_CLASS_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_CLASS_NOTEMPTY with Specification: Specification for: VALIDATION_CLASS_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3617</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_CLASS_NOTEMPTY with Specification for: VALIDATION_CLASS_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_CLASS_NOTEMPTY with Specification: Specification for: VALIDATION_CLASS_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:b854b179-3572-48b6-aab2-879e3172fd7d"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:5f4da325-d902-4b75-a4c0-b4366b866a42"/>
 </rdf:Description>
@@ -1683,10 +1691,10 @@
 
 <rdf:Description rdf:about="urn:uuid:84160e81-2e32-4992-8aa4-79a07941d2bc">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification: Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY with Specification: Specification for: VALIDATION_GEOREFERENCEDDATE_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:2b03e9ae-b7b9-48e6-bbf9-31bfcdcae212"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:60b5570a-b043-46f2-b8a4-641945121473"/>
 </rdf:Description>
@@ -1717,10 +1725,10 @@
 
 <rdf:Description rdf:about="urn:uuid:89262c57-d0a0-41d4-81fe-86aa0fc9d417">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_COORDINATEPRECISION_NOTEMPTY with Specification for: VALIDATION_COORDINATEPRECISION_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_COORDINATEPRECISION_NOTEMPTY with Specification: Specification for: VALIDATION_COORDINATEPRECISION_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_COORDINATEPRECISION_NOTEMPTY with Specification for: VALIDATION_COORDINATEPRECISION_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_COORDINATEPRECISION_NOTEMPTY with Specification: Specification for: VALIDATION_COORDINATEPRECISION_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:77b380ce-7c9d-498f-a2b5-3ac5c5bf23f7"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:119474df-b3b2-4846-a165-f027ff559737"/>
 </rdf:Description>
@@ -1737,23 +1745,23 @@
 
 <rdf:Description rdf:about="urn:uuid:8a7e5ab4-b7fc-4d1e-b8d2-ddba7bfe7b14">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_TRIBE_FOUND with Specification for: VALIDATION_TRIBE_FOUND</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_TRIBE_FOUND with Specification: Specification for: VALIDATION_TRIBE_FOUND</rdfs:label>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3727</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Conformance Parameterized</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_TRIBE_FOUND with Specification for: VALIDATION_TRIBE_FOUND</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_TRIBE_FOUND with Specification: Specification for: VALIDATION_TRIBE_FOUND</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:8c15f351-26d5-4edd-b38e-07541dc64fd0"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:a11ce583-71b3-4562-94ea-8b0b67b72f2f"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:8b25fbdf-a0a3-4a8a-ad15-e52dd8582040">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_RECORDEDBY_NOTEMPTY with Specification for: VALIDATION_RECORDEDBY_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_RECORDEDBY_NOTEMPTY with Specification: Specification for: VALIDATION_RECORDEDBY_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2827</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_RECORDEDBY_NOTEMPTY with Specification for: VALIDATION_RECORDEDBY_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_RECORDEDBY_NOTEMPTY with Specification: Specification for: VALIDATION_RECORDEDBY_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:986ad95d-ffa1-4e3b-a6cb-ed943c87be0d"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:9518daa1-0790-488d-bfc5-36b0828f56c6"/>
 </rdf:Description>
@@ -1772,10 +1780,10 @@
 
 <rdf:Description rdf:about="urn:uuid:8bf31492-eccc-4a7b-9121-adca77703a85">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_MAXIMUMDEPTH_NOTEMPTY with Specification for: VALIDATION_MAXIMUMDEPTH_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_MAXIMUMDEPTH_NOTEMPTY with Specification: Specification for: VALIDATION_MAXIMUMDEPTH_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_MAXIMUMDEPTH_NOTEMPTY with Specification for: VALIDATION_MAXIMUMDEPTH_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_MAXIMUMDEPTH_NOTEMPTY with Specification: Specification for: VALIDATION_MAXIMUMDEPTH_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:7236d80f-53cc-4871-9359-fbd468808136"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:f7143777-4aa3-4588-acfa-b05aac6eccc8"/>
 </rdf:Description>
@@ -1844,22 +1852,22 @@
 
 <rdf:Description rdf:about="urn:uuid:9116d7d1-5a12-4d72-aa79-82d377b4a6f6">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
-	<rdfs:label>AmendmentMethod: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED with Specification Specification for: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</rdfs:label>
+	<rdfs:label>AmendmentMethod: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED with Specification: Specification for: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Amendment OTHER Test VOCABULARY Supplementary Conformance Parameterized</skos:note>
-	<skos:prefLabel>AmendmentMethod: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED with Specification Specification for: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</skos:prefLabel>
+	<skos:prefLabel>AmendmentMethod: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED with Specification: Specification for: AMENDMENT_REPRODUCTIVECONDITION_STANDARDIZED</skos:prefLabel>
 	<bdqffdq:forAmendment rdf:resource="urn:uuid:10ef7660-3e08-4b74-95d3-66131275cf31"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:42c9c755-2f1a-4d56-b6f8-889c148049d6"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9180fd00-2c49-4793-8598-443da633363d">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
-	<rdfs:label>AmendmentMethod: AMENDMENT_MODIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_MODIFIED_STANDARDIZED</rdfs:label>
+	<rdfs:label>AmendmentMethod: AMENDMENT_MODIFIED_STANDARDIZED with Specification: Specification for: AMENDMENT_MODIFIED_STANDARDIZED</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L673</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>TG2 Amendment TIME CODED Test VOCABULARY Supplementary Conformance ISO/DCMI STANDARD</skos:note>
-	<skos:prefLabel>AmendmentMethod: AMENDMENT_MODIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_MODIFIED_STANDARDIZED</skos:prefLabel>
+	<skos:prefLabel>AmendmentMethod: AMENDMENT_MODIFIED_STANDARDIZED with Specification: Specification for: AMENDMENT_MODIFIED_STANDARDIZED</skos:prefLabel>
 	<bdqffdq:forAmendment rdf:resource="urn:uuid:dfb4a260-4cbc-45b2-bf86-28be49c2cceb"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:369904b2-1176-419c-8daa-aba5e760aa48"/>
 </rdf:Description>
@@ -1876,10 +1884,10 @@
 
 <rdf:Description rdf:about="urn:uuid:9747c7d8-f498-43d5-a664-84d09ae2e41b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY with Specification for: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY with Specification: Specification for: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY with Specification for: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY with Specification: Specification for: VALIDATION_HIGHERGEOGRAPHY_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:cfa2c8fd-e778-4f2b-8c16-2221d46e0006"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:07f8bf45-4a71-4740-bbeb-6cadbd4bdbad"/>
 </rdf:Description>
@@ -1922,19 +1930,19 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9b4675f5-52e5-47ae-b67f-af51a2730e32">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMCOORDINATES_NOTEMPTY with Specification for: ISSUE_VERBATIMCOORDINATES_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMCOORDINATES_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMCOORDINATES_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMCOORDINATES_NOTEMPTY with Specification for: ISSUE_VERBATIMCOORDINATES_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:533118dd-eb18-4339-b2f8-0b7f71801305"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMCOORDINATES_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMCOORDINATES_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:533118dd-eb18-4339-b2f8-0b7f71801305"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:a6c05ecb-7cd6-401b-92ff-8c4023f06cb6"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9bc8b105-902a-489c-aae8-3b7075e1b948">
 	<dcterms:description>Is there a value in dwc:verbatimEventDate?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-03-06</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMEVENTDATE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/250</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdqval:COMPLIANT or bdqval:NOT_COMPLIANT results (cf bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -1961,12 +1969,12 @@
 
 <rdf:Description rdf:about="urn:uuid:9ddd0e81-be7e-47f9-a3d4-fa3704750ad5">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_MODIFIED_STANDARD with Specification for: VALIDATION_MODIFIED_STANDARD</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_MODIFIED_STANDARD with Specification: Specification for: VALIDATION_MODIFIED_STANDARD</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L624</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>Validation TIME CODED Test Supplementary Conformance ISO/DCMI STANDARD</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_MODIFIED_STANDARD with Specification for: VALIDATION_MODIFIED_STANDARD</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_MODIFIED_STANDARD with Specification: Specification for: VALIDATION_MODIFIED_STANDARD</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:c253f11a-6161-4692-bfce-4328f1961630"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:aafbdb98-9875-4baa-bcd7-685bafadab82"/>
 </rdf:Description>
@@ -1991,23 +1999,23 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:9fbead44-b91b-422f-b705-064d29d8fdc1">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMLATITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLATITUDE_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMLATITUDE_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMLATITUDE_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMLATITUDE_NOTEMPTY with Specification for: ISSUE_VERBATIMLATITUDE_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:286fa10a-dab0-4f73-8732-76e379c932df"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMLATITUDE_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMLATITUDE_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:286fa10a-dab0-4f73-8732-76e379c932df"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:862fc787-c79e-4d43-9f59-92be8d54b5a9"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:a001f372-d496-4b85-a937-f93f7a976c11">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE with Specification: Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE</rdfs:label>
 	<skos:historyNote>Source: VertNet</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3817</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Conformance</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE with Specification: Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_INRANGE</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:399ef91d-425c-46f2-a6df-8a0fe4c3e86e"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:8a7dd34e-5f37-49e4-8f65-c34bfcd28dec"/>
 </rdf:Description>
@@ -2039,12 +2047,12 @@
 
 <rdf:Description rdf:about="urn:uuid:a52d618c-d593-40a1-ba29-f750486af2d6">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_TAXONID_COMPLETE with Specification for: VALIDATION_TAXONID_COMPLETE</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_TAXONID_COMPLETE with Specification: Specification for: VALIDATION_TAXONID_COMPLETE</rdfs:label>
 	<skos:historyNote>Source: TG2-Gainesville</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1878</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Conformance</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_TAXONID_COMPLETE with Specification for: VALIDATION_TAXONID_COMPLETE</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_TAXONID_COMPLETE with Specification: Specification for: VALIDATION_TAXONID_COMPLETE</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:a82c7e3a-3a50-4438-906c-6d0fefa9e984"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:48f95949-4c13-423f-98b3-d36fe91df04a"/>
 </rdf:Description>
@@ -2105,12 +2113,12 @@
 
 <rdf:Description rdf:about="urn:uuid:a974a47e-f92a-4bd8-852a-36cb8e5ba7bb">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_MONTH_NOTEMPTY with Specification for: VALIDATION_MONTH_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_MONTH_NOTEMPTY with Specification: Specification for: VALIDATION_MONTH_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2581</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>TG2 Validation TIME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_MONTH_NOTEMPTY with Specification for: VALIDATION_MONTH_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_MONTH_NOTEMPTY with Specification: Specification for: VALIDATION_MONTH_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:dc2fc946-8114-491b-8a7b-3242a274a221"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:72c4b1da-c0d1-4da6-9128-92fa14439242"/>
 </rdf:Description>
@@ -2151,24 +2159,24 @@
 
 <rdf:Description rdf:about="urn:uuid:ac48a381-f178-4daf-b75c-eb904cbbe409">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY with Specification for: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY with Specification: Specification for: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3198</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY with Specification for: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY with Specification: Specification for: VALIDATION_HIGHERCLASSIFICATION_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:72ed16f1-0587-4afd-a9fc-602c2f3f1975"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:9e1452e6-a54e-443e-970a-425fcecefdeb"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:ac515d80-749f-4e04-a324-8b6c91d985be">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_EVENTTIME_NOTEMPTY with Specification for: VALIDATION_EVENTTIME_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_EVENTTIME_NOTEMPTY with Specification: Specification for: VALIDATION_EVENTTIME_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2513</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>TG2 Validation TIME CODED Test Supplementary Completeness ISO/DCMI STANDARD</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_EVENTTIME_NOTEMPTY with Specification for: VALIDATION_EVENTTIME_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_EVENTTIME_NOTEMPTY with Specification: Specification for: VALIDATION_EVENTTIME_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:aaebbde6-a101-4665-ba1e-6d4d8c561a31"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:af43973f-9888-4ec6-8565-40a8654199cf"/>
 </rdf:Description>
@@ -2211,12 +2219,12 @@
 
 <rdf:Description rdf:about="urn:uuid:affd0db5-0f62-4ce3-acd4-8cb312815c9e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY with Specification for: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY with Specification: Specification for: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2895</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY with Specification for: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY with Specification: Specification for: VALIDATION_INDIVIDUALCOUNT_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:aff0facd-1d2a-40a5-a55a-61f950cd68a0"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:cc9d0770-9aa7-4838-8438-5d8375a58f26"/>
 </rdf:Description>
@@ -2244,10 +2252,10 @@
 
 <rdf:Description rdf:about="urn:uuid:b339c443-d4cf-4bf3-b0cc-6b4c0d019de3">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/AmendmentMethod"/>
-	<rdfs:label>AmendmentMethod: AMENDMENT_PREPARATIONS_STANDARDIZED with Specification Specification for: AMENDMENT_PREPARATIONS_STANDARDIZED</rdfs:label>
+	<rdfs:label>AmendmentMethod: AMENDMENT_PREPARATIONS_STANDARDIZED with Specification: Specification for: AMENDMENT_PREPARATIONS_STANDARDIZED</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Amendment OTHER Test VOCABULARY Supplementary Conformance Parameterized</skos:note>
-	<skos:prefLabel>AmendmentMethod: AMENDMENT_PREPARATIONS_STANDARDIZED with Specification Specification for: AMENDMENT_PREPARATIONS_STANDARDIZED</skos:prefLabel>
+	<skos:prefLabel>AmendmentMethod: AMENDMENT_PREPARATIONS_STANDARDIZED with Specification: Specification for: AMENDMENT_PREPARATIONS_STANDARDIZED</skos:prefLabel>
 	<bdqffdq:forAmendment rdf:resource="urn:uuid:8d0cbfee-4524-4da3-83d4-bebc4c4f7cd2"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:9a034f38-7d86-463e-86c1-b5b3a482dbf5"/>
 </rdf:Description>
@@ -2328,45 +2336,45 @@
 
 <rdf:Description rdf:about="urn:uuid:b8dbe448-6499-48b6-9f8d-1ded6fb3ddfc">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_STARTDAYOFYEAR_NOTEMPTY with Specification for: VALIDATION_STARTDAYOFYEAR_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_STARTDAYOFYEAR_NOTEMPTY with Specification: Specification for: VALIDATION_STARTDAYOFYEAR_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2478</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>TG2 Validation TIME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_STARTDAYOFYEAR_NOTEMPTY with Specification for: VALIDATION_STARTDAYOFYEAR_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_STARTDAYOFYEAR_NOTEMPTY with Specification: Specification for: VALIDATION_STARTDAYOFYEAR_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:167d4346-6fac-40eb-9d2e-30b7683dac04"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:c0446a29-31eb-4a79-a618-f63fc44cb38d"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:b910b4b8-a788-4548-9e3b-00c3ec5c2446">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_MODIFIED_NOTEMPTY with Specification for: VALIDATION_MODIFIED_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_MODIFIED_NOTEMPTY with Specification: Specification for: VALIDATION_MODIFIED_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L589</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>TG2 Validation TIME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_MODIFIED_NOTEMPTY with Specification for: VALIDATION_MODIFIED_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_MODIFIED_NOTEMPTY with Specification: Specification for: VALIDATION_MODIFIED_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:e17918fc-25ca-4a3a-828b-4502432b98c4"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:3eaefeb3-41e6-44de-82e5-577c03622785"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:ba6f6b9d-fc91-45b3-bb4e-a7b8f10caa6a">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_MUNICIPALITY_NOTEMPTY with Specification for: VALIDATION_MUNICIPALITY_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_MUNICIPALITY_NOTEMPTY with Specification: Specification for: VALIDATION_MUNICIPALITY_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_MUNICIPALITY_NOTEMPTY with Specification for: VALIDATION_MUNICIPALITY_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_MUNICIPALITY_NOTEMPTY with Specification: Specification for: VALIDATION_MUNICIPALITY_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:87537c73-4f70-4938-8114-7f5b149ed03c"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:9e421b82-ab79-4026-8493-35b286e112f5"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:bddcd039-bbb5-4e5c-832d-dd27cf08ba0d">
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: ISSUE_VERBATIMELEVATION_NOTEMPTY with Specification for: ISSUE_VERBATIMELEVATION_NOTEMPTY</rdfs:label>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
+	<rdfs:label>IssueMethod: ISSUE_VERBATIMELEVATION_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMELEVATION_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: ISSUE_VERBATIMELEVATION_NOTEMPTY with Specification for: ISSUE_VERBATIMELEVATION_NOTEMPTY</skos:prefLabel>
-	<bdqffdq:forValidation rdf:resource="urn:uuid:c9fc7ef1-7714-4dfa-8dea-589d5b43f432"/>
+	<skos:prefLabel>IssueMethod: ISSUE_VERBATIMELEVATION_NOTEMPTY with Specification: Specification for: ISSUE_VERBATIMELEVATION_NOTEMPTY</skos:prefLabel>
+	<bdqffdq:forIssue rdf:resource="urn:uuid:c9fc7ef1-7714-4dfa-8dea-589d5b43f432"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:63cd57d7-e686-410a-8108-4b24a2a4594f"/>
 </rdf:Description>
 
@@ -2482,7 +2490,7 @@
 <rdf:Description rdf:about="urn:uuid:c9fc7ef1-7714-4dfa-8dea-589d5b43f432">
 	<dcterms:description>Is there a value in dwc:verbatimElevation?</dcterms:description>
 	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-05</dcterms:issued>
-	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Validation"/>
+	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
 	<rdfs:label>ISSUE_VERBATIMELEVATION_NOTEMPTY</rdfs:label>
 	<skos:historyNote>https://github.com/tdwg/bdq/issues/249</skos:historyNote>
 	<skos:note>This bdqval:Supplementary test is not regarded as CORE because of one or more of the reasons: not being widely applicable; not informative; likely to return a high percentage of either bdqval:COMPLIANT or bdqval:NOT_COMPLIANT results (cf bdqval:Response.result). A Supplementary test may be implemented as CORE when a suitable Use Case exists.</skos:note>
@@ -2514,12 +2522,12 @@
 
 <rdf:Description rdf:about="urn:uuid:cc576f06-e3ea-4af9-b0db-90f639f433cc">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_ORDER_NOTEMPTY with Specification for: VALIDATION_ORDER_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_ORDER_NOTEMPTY with Specification: Specification for: VALIDATION_ORDER_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3424</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_ORDER_NOTEMPTY with Specification for: VALIDATION_ORDER_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_ORDER_NOTEMPTY with Specification: Specification for: VALIDATION_ORDER_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:d1c40fc8-d8ad-4148-82e0-b4b7ead70051"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:08d94832-46a8-434d-a1ff-9ffc2dcf5685"/>
 </rdf:Description>
@@ -2754,24 +2762,24 @@
 
 <rdf:Description rdf:about="urn:uuid:e405a2d1-aba1-46de-b5e6-74ce36546f3b">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE with Specification for: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE with Specification: Specification for: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE</rdfs:label>
 	<skos:historyNote>Source: ALA</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/addab1c1607e4a987bcb0a336e85e0dc2494272c/src/main/java/org/filteredpush/qc/date/DwCOtherDateDQ.java#L519</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush event_date_qc Library DOI: [10.5281/zenodo.596795](https://doi.org/10.5281/zenodo.596795)</skos:note>
 	<skos:note>TG2 Validation TIME CODED Test Supplementary Likeliness ISO/DCMI STANDARD</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE with Specification for: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE with Specification: Specification for: VALIDATION_DATEIDENTIFIED_AFTEREVENTDATE</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:391ca46d-3842-4a18-970c-0434cbc17f07"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:ed9b418a-d4f9-441d-8f4a-778fb1c277da"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:e4d66260-08c8-459a-aab5-d83f730ca08e">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_FAMILY_NOTEMPTY with Specification for: VALIDATION_FAMILY_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_FAMILY_NOTEMPTY with Specification: Specification for: VALIDATION_FAMILY_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3490</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_FAMILY_NOTEMPTY with Specification for: VALIDATION_FAMILY_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_FAMILY_NOTEMPTY with Specification: Specification for: VALIDATION_FAMILY_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:5bfa043c-1e19-4224-8d55-b568ced347c2"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:0e9d5cab-3b82-4dc6-8d0f-3bf0d852a2d0"/>
 </rdf:Description>
@@ -2873,12 +2881,12 @@
 
 <rdf:Description rdf:about="urn:uuid:f04eed86-ceb5-4c02-a8f4-08868caa8b20">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY with Specification for: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY with Specification: Specification for: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1393</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY with Specification for: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY with Specification: Specification for: VALIDATION_REPRODUCTIVECONDITION_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:3eefe72c-4c7d-4dee-89b6-e9d91d3f1981"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:d1aa3c91-e103-4bee-9a23-886d65b153af"/>
 </rdf:Description>
@@ -2921,23 +2929,23 @@
 
 <rdf:Description rdf:about="urn:uuid:f4ad8cd3-fa4c-4c9d-a82e-8cd611d67e41">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_SUPERFAMILY_FOUND with Specification for: VALIDATION_SUPERFAMILY_FOUND</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_SUPERFAMILY_FOUND with Specification: Specification for: VALIDATION_SUPERFAMILY_FOUND</rdfs:label>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3772</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Conformance Parameterized</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_SUPERFAMILY_FOUND with Specification for: VALIDATION_SUPERFAMILY_FOUND</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_SUPERFAMILY_FOUND with Specification: Specification for: VALIDATION_SUPERFAMILY_FOUND</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:2a45e0e9-446c-429f-992d-c3ec1d29eebb"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:13f9168b-5bab-470f-a351-aefac6ec1e29"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f4e36818-c390-4689-ad41-889070218b50">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY with Specification for: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY with Specification: Specification for: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L3298</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush sci_name_qc Library DOI: [10.5281/zenodo.7026712](https://doi.org/10.5281/zenodo.7026712)</skos:note>
 	<skos:note>TG2 Validation NAME CODED Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY with Specification for: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY with Specification: Specification for: VALIDATION_INFRASPECIFICEPITHET_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:77c6fde2-c3ca-4ad3-b2f2-3b81bba9a673"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:40565507-cb36-46f0-8396-b911d89d0270"/>
 </rdf:Description>
@@ -2954,34 +2962,34 @@
 
 <rdf:Description rdf:about="urn:uuid:f7d62ca2-f693-4364-8d1a-28fae7fa8548">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_FOOTPRINTWKT_NOTEMPTY with Specification for: VALIDATION_FOOTPRINTWKT_NOTEMPTY</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_FOOTPRINTWKT_NOTEMPTY with Specification: Specification for: VALIDATION_FOOTPRINTWKT_NOTEMPTY</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>TG2 Validation SPACE Test Supplementary Completeness</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_FOOTPRINTWKT_NOTEMPTY with Specification for: VALIDATION_FOOTPRINTWKT_NOTEMPTY</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_FOOTPRINTWKT_NOTEMPTY with Specification: Specification for: VALIDATION_FOOTPRINTWKT_NOTEMPTY</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:c6b705fc-7cf8-4af1-88ab-7a38d85f7109"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:4a09ab69-8a62-42f3-ba9c-7930240457a6"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:f93ba397-7bdf-4cb0-836b-467bc2a8a9f8">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT with Specification: Specification for: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</rdfs:label>
 	<skos:historyNote>Source: VertNet, Kurator</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/d0746151fd84c0310b5ac2a17a2e0cd249ad6b8c/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2893</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush geo_ref_qc Library  DOI: [10.5281/zenodo.14064324](https://doi.org/10.5281/zenodo.14064324)</skos:note>
 	<skos:note>TG2 Validation SPACE CODED Test VOCABULARY Supplementary Consistency Parameterized</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT with Specification: Specification for: VALIDATION_COUNTRYSTATEPROVINCE_CONSISTENT</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:e654f562-44f8-43fd-983b-2aaba4c6dda9"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:39cbb213-b33a-4e45-bfa4-967ee277455b"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="urn:uuid:fa413c93-e532-4e86-bd1a-be1ff9aed801">
 	<rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-	<rdfs:label>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_INTEGER with Specification for: VALIDATION_INDIVIDUALCOUNT_INTEGER</rdfs:label>
+	<rdfs:label>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_INTEGER with Specification: Specification for: VALIDATION_INDIVIDUALCOUNT_INTEGER</rdfs:label>
 	<skos:historyNote>Source: TG2</skos:historyNote>
 	<skos:note>Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/d742991440f2f5fc6ffc75dfe3b6d2ab5b6826b2/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2550</skos:note>
 	<skos:note>Example Implementations: Kurator/FilteredPush rec_occur_qc Library DOI: [10.5281/zenodo.14968501](https://doi.org/10.5281/zenodo.14968501)</skos:note>
 	<skos:note>TG2 Validation OTHER CODED Test Supplementary Conformance</skos:note>
-	<skos:prefLabel>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_INTEGER with Specification for: VALIDATION_INDIVIDUALCOUNT_INTEGER</skos:prefLabel>
+	<skos:prefLabel>ValidationMethod: VALIDATION_INDIVIDUALCOUNT_INTEGER with Specification: Specification for: VALIDATION_INDIVIDUALCOUNT_INTEGER</skos:prefLabel>
 	<bdqffdq:forValidation rdf:resource="urn:uuid:43abded0-c3bf-44e7-8c1f-c4207608b1fa"/>
 	<bdqffdq:hasSpecification rdf:resource="urn:uuid:326173d8-80cf-4be5-83f0-04fd67d3bb25"/>
 </rdf:Description>

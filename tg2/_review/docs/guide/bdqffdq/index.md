@@ -8,7 +8,7 @@
 Fitness For Use Framework Ontology: Concepts and Use
 
 **Date version issued**<br>
-2026-11-13
+2026-11-17
 
 **Date created**<br>
 2026-11-13
@@ -22,10 +22,13 @@ Fitness For Use Framework Ontology: Concepts and Use
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-13>
+<https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-17>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqffdq/doc/guide/>
+
+**Previous version**<br>
+<https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-16>
 
 **Abstract**<br>
 This document is a guide for the BDQ standard, describing the organization of the bdqffdq: ontology and providing normative guidance on its use. The Fitness For Use Framework ontology formally describes the terms and relationships between them for evaluating the quality of biodiversity data. Because of its comprehensive nature, the Fitness For Use Framework supports varied interpretations and uses by different stakeholders. The Framework also provides a base for the bdqval: and bdqtest: namespace vocabularies.
@@ -37,7 +40,7 @@ This document is a guide for the BDQ standard, describing the organization of th
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-13>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-17>
 
 **Status**<br>
 Draft Standard for Review
@@ -398,7 +401,7 @@ Following is a knowledge graph showing the is-a relationships between the classe
 
 ### 2.6 Example representation of a BDQ Test (non-normative)
 
-Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a `Validation`, linking an `Acted Upon` `Information Element`, a `Criterion`, and the `Resource Type` `Single Record`, with the `Validation` linked to a `Validation Method`, and from there a `Specification`. Also shown is a `Validation Policy` linking this `Validation` to a `Use Case`, but not all of the [bdqffdq:includedInPolicy](<../../list/bdqffdq/index.md#includedInPolicy> "Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy.") properties of that `Validation Policy`.
+Below is a fragment in Turtle describing VALIDATION_COUNTRY_FOUND, composed of a `Validation`, linking an `Acted Upon` `Information Element`, a `Criterion`, and the `Resource Type` `Single Record`, with the `Validation` linked to a `Validation Method`, and from there a `Specification`. Also shown is a `Validation Policy` linking this `Validation` to a `Use Case`, but not all of the [bdqffdq:includedInPolicy](<../../list/bdqffdq/index.md#includedInPolicy> "Relates a bdqffdq:Policy to a bdqffdq:DataQualityNeed that is part of that bdqffdq:Policy.") properties of that `Validation Policy`.
 
 ```turtle
 bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134 a bdqffdq:Validation ;
@@ -440,12 +443,12 @@ bdqffdq:SingleRecord a bdqffdq:ResourceType ;
 
 bdqtestmethod:04cee4e0-0c83-40cc-8de2-e7391f0a97a9 a bdqffdq:ValidationMethod ;
     owl:sameAs <urn:uuid:04cee4e0-0c83-40cc-8de2-e7391f0a97a9> ;
-    rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
+    rdfs:label "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification: Specification for: VALIDATION_COUNTRY_FOUND" ;
     skos:historyNote "Source: ALA, GBIF" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L158",
         "Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)",
         "TG2 Validation SPACE CODED Test VOCABULARY Conformance Parameterized CORE" ;
-    skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND" ;
+    skos:prefLabel "ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification: Specification for: VALIDATION_COUNTRY_FOUND" ;
     bdqffdq:forValidation bdqtest:69b2efdc-6269-45a4-aecb-4cb99c2ae134 ;
     bdqffdq:hasSpecification bdqtestspecification:051f6ad7-1a4b-4e6c-8a1d-2af76de24848 .
 
@@ -565,13 +568,13 @@ The `bdqffdq:hasUseCase` object property MAY have an individual from the `bdquc:
 
 An axiom restricts the values of `bdqffdq:hasUseCase` on a `bdqffdq:Policy` to instances of `bdqffdq:UseCase` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)). 
 
-The [bdqffdq:includedInPolicy](<../../list/bdqffdq/index.md#includedInPolicy> "Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy.") object property SHOULD have an individual that is a subclass of `bdqffdq:Policy` as its subject.
+The [bdqffdq:includedInPolicy](<../../list/bdqffdq/index.md#includedInPolicy> "Relates a bdqffdq:Policy to a bdqffdq:DataQualityNeed that is part of that bdqffdq:Policy.") object property SHOULD have an individual that is a subclass of `bdqffdq:Policy` as its subject.
 
 The `bdqffdq:includedInPolicy` object property SHOULD have an individual that is a subclass of [bdqffdq:DataQualityNeed](<../../list/bdqffdq/index.md#DataQualityNeed> "A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.") as its object.
 
 The four subclasses of `bdqffdq:DataQualityNeed` are [bdqffdq:Validation](<../../list/bdqffdq/index.md#Validation> "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use."), [bdqffdq:Issue](<../../list/bdqffdq/index.md#Issue> "A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data."), [bdqffdq:Measure](<../../list/bdqffdq/index.md#Measure> "A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.") and [bdqffdq:Amendment](<../../list/bdqffdq/index.md#Amendment> "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.").
 
-Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD have at least one `bdqffdq:includedInPolicy` relationship to an instance of a subclass of `bdqffdq:Policy`, which is in turn related to an instance of a `bdqffdq:UseCase`. 
+Each individual that is a subclass of `bdqffdq:DataQualityNeed` SHOULD be the object of at least one `bdqffdq:includedInPolicy` from an instance of a subclass of `bdqffdq:Policy`, which is in turn related to an instance of a `bdqffdq:UseCase`. 
 
 User communities MAY provide new Use Cases and MAY compose instances that are subtypes of `bdqffdq:DataQualityNeed` with instances of `bdqffdq:Policy` subclasses and instances of `bdqffdq:UseCase` with the object properties `bdqffdq:includedInPolicy` and `bdqffdq:hasUseCase` in new ways. 
 
@@ -2497,7 +2500,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### includedInPolicy
 
 - Name: [bdqffdq:includedInPolicy](../../list/bdqffdq/index.md#includedInPolicy)
-- Definition: Assserts that a bdqffdq:DataQualityNeed is part of a bdqffdq:Policy.
+- Definition: Relates a bdqffdq:Policy to a bdqffdq:DataQualityNeed that is part of that bdqffdq:Policy.
 
 ********************
 
@@ -2767,7 +2770,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-13>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/guide/2026-11-17>
 
 **Biodiversity Information Standards (TDWG)**
 

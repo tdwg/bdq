@@ -6,7 +6,7 @@
 BDQ Tests List of Terms
 
 **Date version issued**<br>
-2026-11-15
+2026-11-17
 
 **Date created**<br>
 2022-03-25
@@ -18,13 +18,13 @@ BDQ Tests List of Terms
 bdqtest
 
 **This version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-17>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqtest/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-12>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting the Tests in the bdqtest: vocabulary, using terms from the Fitness For Use Framework ontology.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting the Tests in the 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-17>
 
 **Status**<br>
 Draft Standard for Review
@@ -178,8 +178,8 @@ See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../suppleme
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. In present context: A descriptive label for humans to use to identify the Test. | AMENDMENT_BASISOFRECORD_STANDARDIZED |
 | Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. In present context: An easy to read label for the Test, similar to the Label, but in words. | Amendment dwc:basisOfRecord Standardized |
 | Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqtest/terms/ 07c28ace-561a-476e-a9b9-3d5ad6e35933](https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933) |
-| Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the Test. | 2025-03-07 |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqtest/terms/version/ 07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07](https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07) |
+| Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the Test. | 2026-11-17 |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqtest/terms/version/ 07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-17](https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-17) |
 | Description (dcterms:description) | non-normative | An account of the resource. In present context: A brief description of what the Test does. | Proposes an amendment to the value of dwc:basisOfRecord using the bdqval:sourceAuthority. |
 | Expected Response (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements. In present context: The formal definition of how the Test must be implemented. | EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED |
 | Specification IRI (bdqffdq:Specification) | normative | A specific statement about how to evaluate a bdqffdq:DataQualityNeed. | [https://rs.tdwg.org/ bdqtest/specification/ 76ee10e7-7be9-432b-ad9c-655b127bff27](https://rs.tdwg.org/bdqtest/specification/76ee10e7-7be9-432b-ad9c-655b127bff27) |
@@ -508,11 +508,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -600,7 +600,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_BASISOFRECORD_STANDARDIZED with Specification: Specification for: AMENDMENT_BASISOFRECORD_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -627,11 +627,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -715,7 +715,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COORDINATES_FROM_VERBATIM with Specification Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
+			<td>AmendmentMethod: AMENDMENT_COORDINATES_FROM_VERBATIM with Specification: Specification for: AMENDMENT_COORDINATES_FROM_VERBATIM</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -742,11 +742,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -842,7 +842,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
+			<td>AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification: Specification for: AMENDMENT_COORDINATES_TRANSPOSED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -869,11 +869,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -969,7 +969,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
+			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification: Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -996,11 +996,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1080,7 +1080,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification: Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -1107,11 +1107,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1191,7 +1191,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DATEIDENTIFIED_STANDARDIZED with Specification Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_DATEIDENTIFIED_STANDARDIZED with Specification: Specification for: AMENDMENT_DATEIDENTIFIED_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -1218,11 +1218,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1298,7 +1298,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DAY_STANDARDIZED with Specification Specification for: AMENDMENT_DAY_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_DAY_STANDARDIZED with Specification: Specification for: AMENDMENT_DAY_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -1325,11 +1325,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1413,7 +1413,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_DCTYPE_STANDARDIZED with Specification: Specification for: AMENDMENT_DCTYPE_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -1440,11 +1440,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1536,7 +1536,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED with Specification Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED with Specification: Specification for: AMENDMENT_DEGREEOFESTABLISHMENT_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -1563,11 +1563,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1655,7 +1655,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED with Specification Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED with Specification: Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -1682,11 +1682,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1770,7 +1770,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_VERBATIM with Specification Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_VERBATIM with Specification: Specification for: AMENDMENT_EVENTDATE_FROM_VERBATIM</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -1797,11 +1797,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1885,7 +1885,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY with Specification: Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -1912,11 +1912,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2000,7 +2000,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR with Specification Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR with Specification: Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -2027,11 +2027,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2111,7 +2111,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENTDATE_STANDARDIZED with Specification Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_EVENTDATE_STANDARDIZED with Specification: Specification for: AMENDMENT_EVENTDATE_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -2138,11 +2138,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2226,7 +2226,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_EVENT_FROM_EVENTDATE with Specification Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
+			<td>AmendmentMethod: AMENDMENT_EVENT_FROM_EVENTDATE with Specification: Specification for: AMENDMENT_EVENT_FROM_EVENTDATE</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -2253,11 +2253,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2353,7 +2353,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
+			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification: Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -2380,11 +2380,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2468,7 +2468,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_GEODETICDATUM_STANDARDIZED with Specification: Specification for: AMENDMENT_GEODETICDATUM_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -2495,11 +2495,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2591,7 +2591,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_LICENSE_STANDARDIZED with Specification: Specification for: AMENDMENT_LICENSE_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -2618,11 +2618,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2702,7 +2702,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
+			<td>AmendmentMethod: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM with Specification: Specification for: AMENDMENT_MINDEPTHMAXDEPTH_FROM_VERBATIM</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -2729,11 +2729,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2813,7 +2813,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
+			<td>AmendmentMethod: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM with Specification: Specification for: AMENDMENT_MINELEVATIONMAXELEVATION_FROM_VERBATIM</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -2840,11 +2840,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-24</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24">https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-04-24.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2920,7 +2920,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_MONTH_STANDARDIZED with Specification Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_MONTH_STANDARDIZED with Specification: Specification for: AMENDMENT_MONTH_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -2947,11 +2947,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3043,7 +3043,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
+			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification: Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -3070,11 +3070,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3162,7 +3162,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification: Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -3189,11 +3189,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3285,7 +3285,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_PATHWAY_STANDARDIZED with Specification Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_PATHWAY_STANDARDIZED with Specification: Specification for: AMENDMENT_PATHWAY_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -3312,11 +3312,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3412,7 +3412,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON with Specification Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
+			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON with Specification: Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -3439,11 +3439,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3539,7 +3539,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
+			<td>AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification: Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -3566,11 +3566,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3662,7 +3662,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification Specification for: AMENDMENT_SEX_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification: Specification for: AMENDMENT_SEX_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -3689,11 +3689,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3785,7 +3785,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification: Specification for: AMENDMENT_TAXONRANK_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -3812,11 +3812,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3908,7 +3908,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>AmendmentMethod label</td>
-			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
+			<td>AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification: Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED</td>
 		</tr>
 		<tr>
 			<td>AmendmentMethod IRI</td>
@@ -3935,11 +3935,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-17</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2024-09-17">https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2024-09-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2024-09-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4023,7 +4023,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>IssueMethod label</td>
-			<td>IssueMethod: ISSUE_ANNOTATION_NOTEMPTY with Specification Specification for: ISSUE_ANNOTATION_NOTEMPTY</td>
+			<td>IssueMethod: ISSUE_ANNOTATION_NOTEMPTY with Specification: Specification for: ISSUE_ANNOTATION_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>IssueMethod IRI</td>
@@ -4050,11 +4050,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4150,7 +4150,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>IssueMethod label</td>
-			<td>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
+			<td>IssueMethod: ISSUE_COORDINATES_CENTEROFCOUNTRY with Specification: Specification for: ISSUE_COORDINATES_CENTEROFCOUNTRY</td>
 		</tr>
 		<tr>
 			<td>IssueMethod IRI</td>
@@ -4177,11 +4177,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4261,7 +4261,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>IssueMethod label</td>
-			<td>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
+			<td>IssueMethod: ISSUE_DATAGENERALIZATIONS_NOTEMPTY with Specification: Specification for: ISSUE_DATAGENERALIZATIONS_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>IssueMethod IRI</td>
@@ -4288,11 +4288,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4364,7 +4364,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>IssueMethod label</td>
-			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
+			<td>IssueMethod: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY with Specification: Specification for: ISSUE_ESTABLISHMENTMEANS_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>IssueMethod IRI</td>
@@ -4391,11 +4391,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-12</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12">https://rs.tdwg.org/bdqtest/terms/version/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-12.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/03049fe5-a575-404f-b564-ae63f5a1cf8b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4459,7 +4459,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MEASURE_AMENDMENTS_PROPOSED with Specification Specification for: MEASURE_AMENDMENTS_PROPOSED</td>
+			<td>MeasurementMethod: MEASURE_AMENDMENTS_PROPOSED with Specification: Specification for: MEASURE_AMENDMENTS_PROPOSED</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -4486,11 +4486,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4566,7 +4566,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS</td>
+			<td>MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification: Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -4593,11 +4593,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-12</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12">https://rs.tdwg.org/bdqtest/terms/version/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-12.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/45fb49eb-4a1b-4b49-876f-15d5034dfc73-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4661,7 +4661,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
+			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_COMPLIANT with Specification: Specification for: MEASURE_VALIDATIONTESTS_COMPLIANT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -4688,11 +4688,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-12</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12">https://rs.tdwg.org/bdqtest/terms/version/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-12.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/453844ae-9df4-439f-8e24-c52498eca84a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4756,7 +4756,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT with Specification Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
+			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT with Specification: Specification for: MEASURE_VALIDATIONTESTS_NOTCOMPLIANT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -4783,11 +4783,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-12</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12">https://rs.tdwg.org/bdqtest/terms/version/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-12.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/49a94636-a562-4e6b-803c-665c80628a3d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4851,7 +4851,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
+			<td>MeasurementMethod: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET with Specification: Specification for: MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -4878,11 +4878,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b60c8c58-0137-4b6a-97e9-57d8ca5cf248-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4950,7 +4950,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -4977,11 +4977,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f5dd74bd-6a22-4792-b675-c7ccf2a2c103-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5049,7 +5049,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -5076,11 +5076,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a56fb342-c8ee-4611-8aab-e6c6357e8875-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/a56fb342-c8ee-4611-8aab-e6c6357e8875-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a56fb342-c8ee-4611-8aab-e6c6357e8875-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a56fb342-c8ee-4611-8aab-e6c6357e8875-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/a56fb342-c8ee-4611-8aab-e6c6357e8875-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a56fb342-c8ee-4611-8aab-e6c6357e8875-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5148,7 +5148,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -5175,11 +5175,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7270a362-5f2e-41f0-955a-d7a8eaaf0f17-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5247,7 +5247,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -5274,11 +5274,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d68dc111-9704-4fc5-a8eb-5fa084809202-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/d68dc111-9704-4fc5-a8eb-5fa084809202-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d68dc111-9704-4fc5-a8eb-5fa084809202-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d68dc111-9704-4fc5-a8eb-5fa084809202-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d68dc111-9704-4fc5-a8eb-5fa084809202-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d68dc111-9704-4fc5-a8eb-5fa084809202-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5346,7 +5346,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -5373,11 +5373,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c6c998af-6145-4361-b1e6-52c5b790340a-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/c6c998af-6145-4361-b1e6-52c5b790340a-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c6c998af-6145-4361-b1e6-52c5b790340a-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c6c998af-6145-4361-b1e6-52c5b790340a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c6c998af-6145-4361-b1e6-52c5b790340a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c6c998af-6145-4361-b1e6-52c5b790340a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5445,7 +5445,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -5472,11 +5472,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b67f41f4-198c-41e9-9419-ba3919c1be8b-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/b67f41f4-198c-41e9-9419-ba3919c1be8b-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b67f41f4-198c-41e9-9419-ba3919c1be8b-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b67f41f4-198c-41e9-9419-ba3919c1be8b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b67f41f4-198c-41e9-9419-ba3919c1be8b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b67f41f4-198c-41e9-9419-ba3919c1be8b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5544,7 +5544,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -5571,11 +5571,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0e239a55-0f19-4c68-bdbf-20580f27a647-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5643,7 +5643,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -5670,11 +5670,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2d90d94b-d384-4bac-aa68-c6800d765882-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2d90d94b-d384-4bac-aa68-c6800d765882-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2d90d94b-d384-4bac-aa68-c6800d765882-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2d90d94b-d384-4bac-aa68-c6800d765882-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5742,7 +5742,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -5769,11 +5769,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d71be8d4-1a04-4816-90c5-49808c823651-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5841,7 +5841,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -5868,11 +5868,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/38966850-3737-4a67-953c-c231469e0489-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/38966850-3737-4a67-953c-c231469e0489-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/38966850-3737-4a67-953c-c231469e0489-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/38966850-3737-4a67-953c-c231469e0489-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/38966850-3737-4a67-953c-c231469e0489-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/38966850-3737-4a67-953c-c231469e0489-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5940,7 +5940,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCODE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -5967,11 +5967,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/26b46375-df2b-4677-a2e5-f96f86b8e242-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/26b46375-df2b-4677-a2e5-f96f86b8e242-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/26b46375-df2b-4677-a2e5-f96f86b8e242-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/26b46375-df2b-4677-a2e5-f96f86b8e242-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/26b46375-df2b-4677-a2e5-f96f86b8e242-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/26b46375-df2b-4677-a2e5-f96f86b8e242-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -6039,7 +6039,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -6066,11 +6066,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8b73f37d-89ed-479a-8389-9e71ad2ac84d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -6138,7 +6138,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -6165,11 +6165,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f15c38c3-d96d-4e9c-982d-410fb71cf2bc-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -6237,7 +6237,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -6264,11 +6264,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6887c881-dc52-409b-8979-9c2f05e55569-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/6887c881-dc52-409b-8979-9c2f05e55569-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6887c881-dc52-409b-8979-9c2f05e55569-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6887c881-dc52-409b-8979-9c2f05e55569-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6887c881-dc52-409b-8979-9c2f05e55569-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6887c881-dc52-409b-8979-9c2f05e55569-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -6336,7 +6336,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -6363,11 +6363,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c72fda2d-16e1-4ded-91a5-a7094339d603-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/c72fda2d-16e1-4ded-91a5-a7094339d603-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c72fda2d-16e1-4ded-91a5-a7094339d603-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c72fda2d-16e1-4ded-91a5-a7094339d603-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c72fda2d-16e1-4ded-91a5-a7094339d603-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c72fda2d-16e1-4ded-91a5-a7094339d603-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -6435,7 +6435,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -6462,11 +6462,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/49b787eb-7dce-4ace-97f5-7cbb47cd8cb9-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -6534,7 +6534,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -6561,11 +6561,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/780480ff-8c4a-4276-aaca-cbd1248de9fa-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/780480ff-8c4a-4276-aaca-cbd1248de9fa-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/780480ff-8c4a-4276-aaca-cbd1248de9fa-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/780480ff-8c4a-4276-aaca-cbd1248de9fa-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -6633,7 +6633,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -6660,11 +6660,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c3e0100f-dfc3-4379-a855-df878eef295e-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c3e0100f-dfc3-4379-a855-df878eef295e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c3e0100f-dfc3-4379-a855-df878eef295e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c3e0100f-dfc3-4379-a855-df878eef295e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -6732,7 +6732,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DAY_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -6759,11 +6759,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f041ab17-d834-4586-aa6b-090de2e571a8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -6831,7 +6831,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -6858,11 +6858,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fbe47441-500f-44c7-a1bd-1e872edc5266-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -6930,7 +6930,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DCTYPE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -6957,11 +6957,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f0fb1c79-9e3d-4d6c-a5a9-087cf57ebd26-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -7029,7 +7029,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -7056,11 +7056,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/bceae35a-52ab-4968-846f-069ace766513-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/bceae35a-52ab-4968-846f-069ace766513-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/bceae35a-52ab-4968-846f-069ace766513-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/bceae35a-52ab-4968-846f-069ace766513-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/bceae35a-52ab-4968-846f-069ace766513-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/bceae35a-52ab-4968-846f-069ace766513-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -7128,7 +7128,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -7155,11 +7155,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c70c4950-2246-4acc-a59d-81eaa47edf2b-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/c70c4950-2246-4acc-a59d-81eaa47edf2b-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c70c4950-2246-4acc-a59d-81eaa47edf2b-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c70c4950-2246-4acc-a59d-81eaa47edf2b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c70c4950-2246-4acc-a59d-81eaa47edf2b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c70c4950-2246-4acc-a59d-81eaa47edf2b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -7227,7 +7227,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -7254,11 +7254,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f948a30e-8084-48d5-b1ca-d77c476f181f-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/f948a30e-8084-48d5-b1ca-d77c476f181f-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f948a30e-8084-48d5-b1ca-d77c476f181f-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f948a30e-8084-48d5-b1ca-d77c476f181f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f948a30e-8084-48d5-b1ca-d77c476f181f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f948a30e-8084-48d5-b1ca-d77c476f181f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -7326,7 +7326,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -7353,11 +7353,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -7425,7 +7425,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -7452,11 +7452,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7775309b-5331-4a65-b839-cbe959948d33-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/7775309b-5331-4a65-b839-cbe959948d33-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7775309b-5331-4a65-b839-cbe959948d33-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7775309b-5331-4a65-b839-cbe959948d33-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7775309b-5331-4a65-b839-cbe959948d33-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7775309b-5331-4a65-b839-cbe959948d33-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -7524,7 +7524,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -7551,11 +7551,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/130bb875-6b7c-4965-b864-d53f9d05b2cd-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/130bb875-6b7c-4965-b864-d53f9d05b2cd-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/130bb875-6b7c-4965-b864-d53f9d05b2cd-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/130bb875-6b7c-4965-b864-d53f9d05b2cd-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -7623,7 +7623,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -7650,11 +7650,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c8250600-de61-4047-9d7c-6e06a38c7994-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/c8250600-de61-4047-9d7c-6e06a38c7994-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c8250600-de61-4047-9d7c-6e06a38c7994-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c8250600-de61-4047-9d7c-6e06a38c7994-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c8250600-de61-4047-9d7c-6e06a38c7994-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c8250600-de61-4047-9d7c-6e06a38c7994-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -7722,7 +7722,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -7749,11 +7749,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3f62eaa2-747f-456b-85e6-1a6e74086a18-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3f62eaa2-747f-456b-85e6-1a6e74086a18-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3f62eaa2-747f-456b-85e6-1a6e74086a18-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3f62eaa2-747f-456b-85e6-1a6e74086a18-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -7821,7 +7821,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -7848,11 +7848,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/bffd7499-aca3-423f-bb43-f7bdc9260f4f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -7920,7 +7920,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTDATE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -7947,11 +7947,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d3e282a1-3ff3-4ed0-bd08-fa23b6b8c161-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -8019,7 +8019,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -8046,11 +8046,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1919f212-b7db-4b6e-9697-41a715001bd6-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -8118,7 +8118,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_EVENT_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -8145,11 +8145,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/97928242-11a9-4ab0-9dd7-3f0465834824-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/97928242-11a9-4ab0-9dd7-3f0465834824-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/97928242-11a9-4ab0-9dd7-3f0465834824-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/97928242-11a9-4ab0-9dd7-3f0465834824-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/97928242-11a9-4ab0-9dd7-3f0465834824-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/97928242-11a9-4ab0-9dd7-3f0465834824-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -8217,7 +8217,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_FAMILY_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -8244,11 +8244,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/977f7e75-a88e-4e29-a7b1-e8cdd35aa107-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -8316,7 +8316,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GENUS_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -8343,11 +8343,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/63fbaf3c-3d41-4ab6-bfc0-904f1b26835f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -8415,7 +8415,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -8442,11 +8442,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -8514,7 +8514,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -8541,11 +8541,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/012eade5-fc64-458a-a13a-a614491bf4e0-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/012eade5-fc64-458a-a13a-a614491bf4e0-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/012eade5-fc64-458a-a13a-a614491bf4e0-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/012eade5-fc64-458a-a13a-a614491bf4e0-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/012eade5-fc64-458a-a13a-a614491bf4e0-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/012eade5-fc64-458a-a13a-a614491bf4e0-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -8613,7 +8613,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -8640,11 +8640,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/342bd81c-e2b7-41d8-b32b-013992d19f99-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/342bd81c-e2b7-41d8-b32b-013992d19f99-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/342bd81c-e2b7-41d8-b32b-013992d19f99-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/342bd81c-e2b7-41d8-b32b-013992d19f99-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/342bd81c-e2b7-41d8-b32b-013992d19f99-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/342bd81c-e2b7-41d8-b32b-013992d19f99-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -8712,7 +8712,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_KINGDOM_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -8739,11 +8739,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/47ee20d9-5087-4f76-a494-6fea05e50b8b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -8811,7 +8811,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -8838,11 +8838,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9d5be694-f5da-465d-8c7e-27e6dac69f9f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -8910,7 +8910,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LICENSE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -8937,11 +8937,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/bac852b5-1ba6-427b-aa8e-02018e99279c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9009,7 +9009,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_LOCATION_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -9036,11 +9036,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3de8af03-05d4-4fd8-8e6d-ba886dc5446f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9108,7 +9108,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXDEPTH_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -9135,11 +9135,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6a3baf78-5ec3-4a84-8c6b-6876b3a4e3b5-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9207,7 +9207,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MAXELEVATION_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -9234,11 +9234,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9c66c116-6644-45b4-b4c7-db7a4ee7c500-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9306,7 +9306,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -9333,11 +9333,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b21256c2-4bb7-4deb-852d-a9eaa05345e7-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9405,7 +9405,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -9432,11 +9432,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/071267a0-d993-4961-a3f7-d8210810d167-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/071267a0-d993-4961-a3f7-d8210810d167-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/071267a0-d993-4961-a3f7-d8210810d167-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/071267a0-d993-4961-a3f7-d8210810d167-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/071267a0-d993-4961-a3f7-d8210810d167-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/071267a0-d993-4961-a3f7-d8210810d167-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9504,7 +9504,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -9531,11 +9531,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/be2eb717-b390-47d1-b7ba-965a1101e215-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/be2eb717-b390-47d1-b7ba-965a1101e215-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/be2eb717-b390-47d1-b7ba-965a1101e215-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/be2eb717-b390-47d1-b7ba-965a1101e215-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/be2eb717-b390-47d1-b7ba-965a1101e215-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/be2eb717-b390-47d1-b7ba-965a1101e215-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9603,7 +9603,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -9630,11 +9630,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c3b4cd93-a37f-4a0a-89dd-7ce53669f1f3-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9702,7 +9702,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_MONTH_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -9729,11 +9729,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/36ea0a78-a079-4014-aca3-2f2b3b11e822-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/36ea0a78-a079-4014-aca3-2f2b3b11e822-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/36ea0a78-a079-4014-aca3-2f2b3b11e822-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/36ea0a78-a079-4014-aca3-2f2b3b11e822-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/36ea0a78-a079-4014-aca3-2f2b3b11e822-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/36ea0a78-a079-4014-aca3-2f2b3b11e822-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9801,7 +9801,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -9828,11 +9828,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0c9a139e-5d23-44de-a495-14ec08c61a1c-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0c9a139e-5d23-44de-a495-14ec08c61a1c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0c9a139e-5d23-44de-a495-14ec08c61a1c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0c9a139e-5d23-44de-a495-14ec08c61a1c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9900,7 +9900,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -9927,11 +9927,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/298db0c9-a85a-41ee-b111-d622fd969d71-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/298db0c9-a85a-41ee-b111-d622fd969d71-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/298db0c9-a85a-41ee-b111-d622fd969d71-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/298db0c9-a85a-41ee-b111-d622fd969d71-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -9999,7 +9999,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -10026,11 +10026,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/faca6558-dbff-4d26-a5cb-e11cdf632fe7-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -10098,7 +10098,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -10125,11 +10125,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f4fa449c-4b74-4dcf-b4cf-0b73e1496375-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -10197,7 +10197,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_ORDER_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -10224,11 +10224,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/15e0da1d-1a43-4075-8454-b2e618cdd25b-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/15e0da1d-1a43-4075-8454-b2e618cdd25b-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/15e0da1d-1a43-4075-8454-b2e618cdd25b-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/15e0da1d-1a43-4075-8454-b2e618cdd25b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/15e0da1d-1a43-4075-8454-b2e618cdd25b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/15e0da1d-1a43-4075-8454-b2e618cdd25b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -10296,7 +10296,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PATHWAY_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -10323,11 +10323,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/65e66ca0-e9d1-4411-ad26-bb9c43f32afc-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -10395,7 +10395,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_PHYLUM_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -10422,11 +10422,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7da5428e-87b2-4ec2-be82-05b9398b7577-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -10494,7 +10494,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -10521,11 +10521,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/dbf3cece-1d83-426e-a5e0-8158fcf9c0cd-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -10593,7 +10593,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -10620,11 +10620,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f174ad13-3c67-49f9-8d8b-aba4e933d6f6-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -10692,7 +10692,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -10719,11 +10719,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a9962d33-ad08-453a-8938-2972425034c2-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/a9962d33-ad08-453a-8938-2972425034c2-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a9962d33-ad08-453a-8938-2972425034c2-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a9962d33-ad08-453a-8938-2972425034c2-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/a9962d33-ad08-453a-8938-2972425034c2-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a9962d33-ad08-453a-8938-2972425034c2-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -10791,7 +10791,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -10818,11 +10818,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4e70b0e4-3fd2-4899-802c-439671374eeb-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -10890,7 +10890,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -10917,11 +10917,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0f8b30e2-59dc-46ba-8b91-62049cd1a4e2-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -10989,7 +10989,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -11016,11 +11016,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/e4d35063-2366-4dda-8eaa-326340361da3-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/e4d35063-2366-4dda-8eaa-326340361da3-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/e4d35063-2366-4dda-8eaa-326340361da3-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/e4d35063-2366-4dda-8eaa-326340361da3-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/e4d35063-2366-4dda-8eaa-326340361da3-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/e4d35063-2366-4dda-8eaa-326340361da3-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -11088,7 +11088,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_SEX_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -11115,11 +11115,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/76008c6b-c56a-4233-84e3-8584950037ec-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/76008c6b-c56a-4233-84e3-8584950037ec-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/76008c6b-c56a-4233-84e3-8584950037ec-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/76008c6b-c56a-4233-84e3-8584950037ec-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -11187,7 +11187,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -11214,11 +11214,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/58fdd5c1-6201-49a1-a7cd-f49c210dc0b6-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -11286,7 +11286,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_STATEPROVINCE_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -11313,11 +11313,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/de661615-b338-4557-af5b-d44a89de40fa-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/de661615-b338-4557-af5b-d44a89de40fa-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/de661615-b338-4557-af5b-d44a89de40fa-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/de661615-b338-4557-af5b-d44a89de40fa-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/de661615-b338-4557-af5b-d44a89de40fa-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/de661615-b338-4557-af5b-d44a89de40fa-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -11385,7 +11385,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -11412,11 +11412,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/602bc457-6b1d-4f24-adef-d0d31bcdf2f0-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -11484,7 +11484,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXONRANK_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -11511,11 +11511,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/54d290e8-ac48-4f31-8af3-676363573217-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -11583,7 +11583,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -11610,11 +11610,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/782773c9-7b37-483d-8ce2-c6683ba81882-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -11682,7 +11682,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -11709,11 +11709,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b5a14d76-292e-499b-b80f-9546243311a0-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -11781,7 +11781,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TYPESTATUS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -11808,11 +11808,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/aee65eb8-8d1e-4b8f-bd37-5822e29f5734-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -11880,7 +11880,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -11907,11 +11907,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/687d3ad1-93a3-4a1f-b69f-da5a1eb761a5-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -11979,7 +11979,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12006,11 +12006,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -12078,7 +12078,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12105,11 +12105,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/241a279c-76d5-499b-ab49-a47ad7f8df50-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -12177,7 +12177,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12204,11 +12204,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a2be4734-0a93-46dc-af4a-e2125b47dbd4-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -12276,7 +12276,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_QA_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12303,11 +12303,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/21541436-641d-45a9-938c-537484d94eb7-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/21541436-641d-45a9-938c-537484d94eb7-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/21541436-641d-45a9-938c-537484d94eb7-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/21541436-641d-45a9-938c-537484d94eb7-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/21541436-641d-45a9-938c-537484d94eb7-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/21541436-641d-45a9-938c-537484d94eb7-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -12375,7 +12375,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_CLASS_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASS_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_QA_CLASS_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12402,11 +12402,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/86c28d5e-f778-4230-88d8-64cc01478601-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/86c28d5e-f778-4230-88d8-64cc01478601-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/86c28d5e-f778-4230-88d8-64cc01478601-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/86c28d5e-f778-4230-88d8-64cc01478601-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/86c28d5e-f778-4230-88d8-64cc01478601-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/86c28d5e-f778-4230-88d8-64cc01478601-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -12474,7 +12474,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_QA_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12501,11 +12501,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7a8b0af3-fa7d-416a-921a-8992d56f8233-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7a8b0af3-fa7d-416a-921a-8992d56f8233-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7a8b0af3-fa7d-416a-921a-8992d56f8233-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7a8b0af3-fa7d-416a-921a-8992d56f8233-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -12573,7 +12573,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_QA_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12600,11 +12600,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/478dee00-98d0-4154-b66c-eca64dbbf86d-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/478dee00-98d0-4154-b66c-eca64dbbf86d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/478dee00-98d0-4154-b66c-eca64dbbf86d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/478dee00-98d0-4154-b66c-eca64dbbf86d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -12672,7 +12672,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_QA_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12699,11 +12699,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/151b2d29-3460-4ba5-a226-86971dc8ad03-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -12771,7 +12771,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO with Specification: Specification for: MULTIRECORD_MEASURE_QA_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12798,11 +12798,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d94b0130-7a13-4fa8-955c-eff5c47bd9de-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -12870,7 +12870,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12897,11 +12897,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/942f63bd-d19d-4214-bf8e-cec0055b8909-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -12969,7 +12969,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -12996,11 +12996,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fedf27b2-e01d-459f-98fc-7f0f39e3d4be-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -13068,7 +13068,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCODE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -13095,11 +13095,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/57b40d9a-67d7-4916-9c27-dbb395c6c27e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -13167,7 +13167,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_QA_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -13194,11 +13194,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/23aced89-d613-479c-bc4c-837d74b73be0-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/23aced89-d613-479c-bc4c-837d74b73be0-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/23aced89-d613-479c-bc4c-837d74b73be0-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/23aced89-d613-479c-bc4c-837d74b73be0-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -13266,7 +13266,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification: Specification for: MULTIRECORD_MEASURE_QA_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -13293,11 +13293,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/388e74b3-2e18-4d78-8112-3142d1177e25-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -13365,7 +13365,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -13392,11 +13392,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9c8df974-8fba-4537-8c67-31466787f732-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/9c8df974-8fba-4537-8c67-31466787f732-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9c8df974-8fba-4537-8c67-31466787f732-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9c8df974-8fba-4537-8c67-31466787f732-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/9c8df974-8fba-4537-8c67-31466787f732-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9c8df974-8fba-4537-8c67-31466787f732-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -13464,7 +13464,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -13491,11 +13491,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6354376c-0cf2-435b-be40-850769c5a18a-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/6354376c-0cf2-435b-be40-850769c5a18a-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6354376c-0cf2-435b-be40-850769c5a18a-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6354376c-0cf2-435b-be40-850769c5a18a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6354376c-0cf2-435b-be40-850769c5a18a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6354376c-0cf2-435b-be40-850769c5a18a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -13563,7 +13563,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -13590,11 +13590,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/563872eb-f544-45a0-8f91-8098d62768d4-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/563872eb-f544-45a0-8f91-8098d62768d4-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/563872eb-f544-45a0-8f91-8098d62768d4-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/563872eb-f544-45a0-8f91-8098d62768d4-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/563872eb-f544-45a0-8f91-8098d62768d4-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/563872eb-f544-45a0-8f91-8098d62768d4-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -13662,7 +13662,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -13689,11 +13689,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/85dc5d02-9847-420f-a026-6a0e70962d2a-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/85dc5d02-9847-420f-a026-6a0e70962d2a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/85dc5d02-9847-420f-a026-6a0e70962d2a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/85dc5d02-9847-420f-a026-6a0e70962d2a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -13761,7 +13761,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_DAY_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -13788,11 +13788,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/371035f6-42b5-494f-86d9-de2f44a6cdc6-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/371035f6-42b5-494f-86d9-de2f44a6cdc6-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/371035f6-42b5-494f-86d9-de2f44a6cdc6-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/371035f6-42b5-494f-86d9-de2f44a6cdc6-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -13860,7 +13860,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DAY_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_DAY_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -13887,11 +13887,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4d999a65-a431-4a76-b591-e0d86dcf244b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -13959,7 +13959,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -13986,11 +13986,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d9493fa0-d90e-41db-95f6-d1c1d243540e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -14058,7 +14058,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_DCTYPE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -14085,11 +14085,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3c8bc478-f6b2-4533-b7ce-45bae5d186c2-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -14157,7 +14157,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -14184,11 +14184,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a2535b23-4407-40bd-b23b-30c8185d72a2-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a2535b23-4407-40bd-b23b-30c8185d72a2-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/a2535b23-4407-40bd-b23b-30c8185d72a2-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a2535b23-4407-40bd-b23b-30c8185d72a2-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -14256,7 +14256,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -14283,11 +14283,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6f7a9b82-7d34-4111-a2a6-9efe5221fa44-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -14355,7 +14355,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -14382,11 +14382,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a94e986e-dbc8-4147-872d-5f2727945654-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a94e986e-dbc8-4147-872d-5f2727945654-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/a94e986e-dbc8-4147-872d-5f2727945654-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a94e986e-dbc8-4147-872d-5f2727945654-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -14454,7 +14454,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -14481,11 +14481,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -14553,7 +14553,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -14580,11 +14580,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c04d428a-13d0-4766-9df7-4dfb2ef5d5d8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -14652,7 +14652,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -14679,11 +14679,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8dfed701-01a9-415d-a9f8-539280b75975-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8dfed701-01a9-415d-a9f8-539280b75975-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/8dfed701-01a9-415d-a9f8-539280b75975-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8dfed701-01a9-415d-a9f8-539280b75975-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -14751,7 +14751,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -14778,11 +14778,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d41a731b-2e2b-4442-9217-4c375ae92926-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d41a731b-2e2b-4442-9217-4c375ae92926-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d41a731b-2e2b-4442-9217-4c375ae92926-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d41a731b-2e2b-4442-9217-4c375ae92926-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -14850,7 +14850,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -14877,11 +14877,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c23cd67d-1b5c-4e9f-a1ce-8cc6b3e9b365-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -14949,7 +14949,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -14976,11 +14976,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/14a1d51f-16ed-4148-9dc8-1e90157a9868-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/14a1d51f-16ed-4148-9dc8-1e90157a9868-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/14a1d51f-16ed-4148-9dc8-1e90157a9868-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/14a1d51f-16ed-4148-9dc8-1e90157a9868-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -15048,7 +15048,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_EVENTDATE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -15075,11 +15075,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f22539ef-029b-4edb-ad17-add4363f7395-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -15147,7 +15147,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -15174,11 +15174,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f375a3fd-4cf5-4ef4-955e-d71762ede2d8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -15246,7 +15246,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_QA_EVENT_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -15273,11 +15273,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a07d7147-2db8-48ce-81b8-e47595ad5f17-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/a07d7147-2db8-48ce-81b8-e47595ad5f17-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a07d7147-2db8-48ce-81b8-e47595ad5f17-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a07d7147-2db8-48ce-81b8-e47595ad5f17-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/a07d7147-2db8-48ce-81b8-e47595ad5f17-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a07d7147-2db8-48ce-81b8-e47595ad5f17-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -15345,7 +15345,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_FAMILY_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_FAMILY_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_FAMILY_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_QA_FAMILY_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -15372,11 +15372,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c5c8db83-3af0-4215-806f-e2f90574b138-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/c5c8db83-3af0-4215-806f-e2f90574b138-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c5c8db83-3af0-4215-806f-e2f90574b138-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c5c8db83-3af0-4215-806f-e2f90574b138-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c5c8db83-3af0-4215-806f-e2f90574b138-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c5c8db83-3af0-4215-806f-e2f90574b138-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -15444,7 +15444,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GENUS_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_GENUS_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GENUS_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_QA_GENUS_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -15471,11 +15471,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/488c1dff-21ec-4e68-a00a-7355505e180c-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/488c1dff-21ec-4e68-a00a-7355505e180c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/488c1dff-21ec-4e68-a00a-7355505e180c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/488c1dff-21ec-4e68-a00a-7355505e180c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -15543,7 +15543,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -15570,11 +15570,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -15642,7 +15642,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -15669,11 +15669,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/465d7ac1-d193-46c0-a302-56a9ef99215f-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/465d7ac1-d193-46c0-a302-56a9ef99215f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/465d7ac1-d193-46c0-a302-56a9ef99215f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/465d7ac1-d193-46c0-a302-56a9ef99215f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -15741,7 +15741,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -15768,11 +15768,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3bc9df8b-0f57-4157-9374-b56a99090b22-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3bc9df8b-0f57-4157-9374-b56a99090b22-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3bc9df8b-0f57-4157-9374-b56a99090b22-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3bc9df8b-0f57-4157-9374-b56a99090b22-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -15840,7 +15840,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_KINGDOM_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -15867,11 +15867,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4fccf163-9336-4f48-996c-57f5f66e72db-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -15939,7 +15939,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_LICENSE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -15966,11 +15966,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/acd8d43e-7a2a-4372-b887-fb53a9972dc9-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -16038,7 +16038,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_LICENSE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -16065,11 +16065,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3b2e4791-1a5a-4087-9e8d-09c67cf8c816-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -16137,7 +16137,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_LOCATION_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -16164,11 +16164,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c73d49d1-06e4-4272-8249-6a26e7f8abca-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c73d49d1-06e4-4272-8249-6a26e7f8abca-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c73d49d1-06e4-4272-8249-6a26e7f8abca-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c73d49d1-06e4-4272-8249-6a26e7f8abca-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -16236,7 +16236,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -16263,11 +16263,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7c5a6ba0-399d-4570-878a-4a064e2406fe-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7c5a6ba0-399d-4570-878a-4a064e2406fe-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7c5a6ba0-399d-4570-878a-4a064e2406fe-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7c5a6ba0-399d-4570-878a-4a064e2406fe-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -16335,7 +16335,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_MAXELEVATION_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -16362,11 +16362,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/49d756a8-e654-4267-a290-d1def5d2c5f9-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/49d756a8-e654-4267-a290-d1def5d2c5f9-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/49d756a8-e654-4267-a290-d1def5d2c5f9-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/49d756a8-e654-4267-a290-d1def5d2c5f9-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -16434,7 +16434,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -16461,11 +16461,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fcabd2c9-392c-4841-a5d7-e2680c9587ab-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -16533,7 +16533,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH with Specification Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH with Specification: Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -16560,11 +16560,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1ba18c8b-66a6-47d9-a709-404439332dba-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/1ba18c8b-66a6-47d9-a709-404439332dba-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1ba18c8b-66a6-47d9-a709-404439332dba-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1ba18c8b-66a6-47d9-a709-404439332dba-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/1ba18c8b-66a6-47d9-a709-404439332dba-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1ba18c8b-66a6-47d9-a709-404439332dba-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -16632,7 +16632,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -16659,11 +16659,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/44f00697-ca66-43cf-8f16-646b40c0f514-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/44f00697-ca66-43cf-8f16-646b40c0f514-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/44f00697-ca66-43cf-8f16-646b40c0f514-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/44f00697-ca66-43cf-8f16-646b40c0f514-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -16731,7 +16731,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION with Specification Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION with Specification: Specification for: MULTIRECORD_MEASURE_QA_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -16758,11 +16758,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b3c2bb86-e239-4532-ae0c-b121ec1ee025-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -16830,7 +16830,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MONTH_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_MONTH_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_MONTH_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -16857,11 +16857,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/16059801-6adb-4e65-82f4-61eaa70d8df0-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/16059801-6adb-4e65-82f4-61eaa70d8df0-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/16059801-6adb-4e65-82f4-61eaa70d8df0-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/16059801-6adb-4e65-82f4-61eaa70d8df0-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -16929,7 +16929,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -16956,11 +16956,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0028ef9a-6553-467b-a344-90327ed2babf-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0028ef9a-6553-467b-a344-90327ed2babf-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0028ef9a-6553-467b-a344-90327ed2babf-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0028ef9a-6553-467b-a344-90327ed2babf-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -17028,7 +17028,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -17055,11 +17055,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d2922585-2070-4851-a033-15e51977f9dc-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/d2922585-2070-4851-a033-15e51977f9dc-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d2922585-2070-4851-a033-15e51977f9dc-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d2922585-2070-4851-a033-15e51977f9dc-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d2922585-2070-4851-a033-15e51977f9dc-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d2922585-2070-4851-a033-15e51977f9dc-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -17127,7 +17127,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -17154,11 +17154,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2fea4571-92d0-48a5-a5ba-6caecd647862-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -17226,7 +17226,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -17253,11 +17253,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/773bb288-fef3-4968-a65a-a69c74d6ecb5-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/773bb288-fef3-4968-a65a-a69c74d6ecb5-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/773bb288-fef3-4968-a65a-a69c74d6ecb5-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/773bb288-fef3-4968-a65a-a69c74d6ecb5-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/773bb288-fef3-4968-a65a-a69c74d6ecb5-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/773bb288-fef3-4968-a65a-a69c74d6ecb5-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -17325,7 +17325,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ORDER_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_ORDER_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_ORDER_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_QA_ORDER_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -17352,11 +17352,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ef31ba02-cea7-4d76-990f-99ebbd201fb4-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -17424,7 +17424,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_PATHWAY_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -17451,11 +17451,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/17364d16-37b7-4ccb-9614-bfb95ff1bca9-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -17523,7 +17523,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_QA_PHYLUM_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -17550,11 +17550,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ef05b45b-13b8-4877-9e9d-fa44b332d83c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -17622,7 +17622,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT with Specification Specification for: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT with Specification: Specification for: MULTIRECORD_MEASURE_QA_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -17649,11 +17649,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -17721,7 +17721,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -17748,11 +17748,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a9529e71-5470-4cb1-b04d-aa483926f532-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/a9529e71-5470-4cb1-b04d-aa483926f532-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a9529e71-5470-4cb1-b04d-aa483926f532-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a9529e71-5470-4cb1-b04d-aa483926f532-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/a9529e71-5470-4cb1-b04d-aa483926f532-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a9529e71-5470-4cb1-b04d-aa483926f532-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -17820,7 +17820,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE with Specification: Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -17847,11 +17847,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4cf84216-c8a7-4865-a8e1-3ffd829d5a10-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -17919,7 +17919,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -17946,11 +17946,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a8aee02c-cf7c-4104-a601-d8afc4f9cbe2-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -18018,7 +18018,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -18045,11 +18045,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b4d6a61c-64ff-4da0-974c-63a73fd20836-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -18117,7 +18117,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -18144,11 +18144,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1b3bbac4-7c00-46d6-8179-1d57c92374ad-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -18216,7 +18216,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SEX_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_SEX_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_SEX_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_SEX_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -18243,11 +18243,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8c217eee-9cd0-48c3-aea0-90151c6c5bfd-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -18315,7 +18315,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -18342,11 +18342,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9c1cdf6a-0dbf-4828-a2e3-fb368f74d194-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -18414,7 +18414,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND with Specification Specification for: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_QA_STATEPROVINCE_FOUND</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -18441,11 +18441,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/e0b8cff1-3322-40d2-b8b2-b99fc9ae130a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -18513,7 +18513,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -18540,11 +18540,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f320ca83-8487-4011-b1ff-f4b1b4dd86ec-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -18612,7 +18612,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_TAXONRANK_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -18639,11 +18639,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2a9d4cfd-815a-46e0-bb51-60724582b762-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -18711,7 +18711,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_TAXON_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -18738,11 +18738,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0df03601-3768-4805-906a-bbd0a41b0fda-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -18810,7 +18810,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS with Specification Specification for: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS with Specification: Specification for: MULTIRECORD_MEASURE_QA_TAXON_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -18837,11 +18837,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -18909,7 +18909,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD with Specification Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -18936,11 +18936,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a0502c5f-608b-4e59-99da-d9490bb4d93b-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a0502c5f-608b-4e59-99da-d9490bb4d93b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/a0502c5f-608b-4e59-99da-d9490bb4d93b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a0502c5f-608b-4e59-99da-d9490bb4d93b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19008,7 +19008,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_INRANGE with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_INRANGE with Specification: Specification for: MULTIRECORD_MEASURE_QA_YEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -19035,11 +19035,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/a8fef8a8-e7c7-4a2d-adaf-7da99c896c93-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19107,7 +19107,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>MeasureMethod label</td>
-			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY</td>
+			<td>MeasurementMethod: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY with Specification: Specification for: MULTIRECORD_MEASURE_QA_YEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>MeasureMethod IRI</td>
@@ -19134,11 +19134,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19210,7 +19210,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_BASISOFRECORD_NOTEMPTY with Specification: Specification for: VALIDATION_BASISOFRECORD_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -19237,11 +19237,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19329,7 +19329,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification: Specification for: VALIDATION_BASISOFRECORD_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -19356,11 +19356,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19452,7 +19452,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification: Specification for: VALIDATION_CLASSIFICATION_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -19479,11 +19479,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19571,7 +19571,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification for: VALIDATION_CLASS_FOUND</td>
+			<td>ValidationMethod: VALIDATION_CLASS_FOUND with Specification: Specification for: VALIDATION_CLASS_FOUND</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -19598,11 +19598,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19694,7 +19694,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT with Specification: Specification for: VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -19721,11 +19721,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19817,7 +19817,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT with Specification: Specification for: VALIDATION_COORDINATESSTATEPROVINCE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -19844,11 +19844,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19944,7 +19944,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification: Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -19971,11 +19971,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20055,7 +20055,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification for: VALIDATION_COORDINATES_NOTZERO</td>
+			<td>ValidationMethod: VALIDATION_COORDINATES_NOTZERO with Specification: Specification for: VALIDATION_COORDINATES_NOTZERO</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -20082,11 +20082,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20166,7 +20166,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_COORDINATEUNCERTAINTY_INRANGE with Specification: Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -20193,11 +20193,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20273,7 +20273,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_NOTEMPTY with Specification: Specification for: VALIDATION_COUNTRYCODE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -20300,11 +20300,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20388,7 +20388,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification: Specification for: VALIDATION_COUNTRYCODE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -20415,11 +20415,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20503,7 +20503,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification: Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -20530,11 +20530,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20626,7 +20626,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
+			<td>ValidationMethod: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS with Specification: Specification for: VALIDATION_COUNTRYSTATEPROVINCE_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -20653,11 +20653,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20749,7 +20749,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification for: VALIDATION_COUNTRY_FOUND</td>
+			<td>ValidationMethod: VALIDATION_COUNTRY_FOUND with Specification: Specification for: VALIDATION_COUNTRY_FOUND</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -20776,11 +20776,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20860,7 +20860,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_COUNTRY_NOTEMPTY with Specification: Specification for: VALIDATION_COUNTRY_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -20887,11 +20887,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20987,7 +20987,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_INRANGE with Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_INRANGE with Specification: Specification for: VALIDATION_DATEIDENTIFIED_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -21014,11 +21014,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21090,7 +21090,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_STANDARD with Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_DATEIDENTIFIED_STANDARD with Specification: Specification for: VALIDATION_DATEIDENTIFIED_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -21117,11 +21117,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21201,7 +21201,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DAY_INRANGE with Specification for: VALIDATION_DAY_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_DAY_INRANGE with Specification: Specification for: VALIDATION_DAY_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -21228,11 +21228,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21308,7 +21308,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DAY_STANDARD with Specification for: VALIDATION_DAY_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_DAY_STANDARD with Specification: Specification for: VALIDATION_DAY_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -21335,11 +21335,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21415,7 +21415,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_DCTYPE_NOTEMPTY with Specification: Specification for: VALIDATION_DCTYPE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -21442,11 +21442,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21530,7 +21530,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification for: VALIDATION_DCTYPE_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification: Specification for: VALIDATION_DCTYPE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -21557,11 +21557,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21637,7 +21637,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_INRANGE with Specification: Specification for: VALIDATION_DECIMALLATITUDE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -21664,11 +21664,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21744,7 +21744,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLATITUDE_NOTEMPTY with Specification: Specification for: VALIDATION_DECIMALLATITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -21771,11 +21771,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21851,7 +21851,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_INRANGE with Specification: Specification for: VALIDATION_DECIMALLONGITUDE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -21878,11 +21878,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21954,7 +21954,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_DECIMALLONGITUDE_NOTEMPTY with Specification: Specification for: VALIDATION_DECIMALLONGITUDE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -21981,11 +21981,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22077,7 +22077,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD with Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD with Specification: Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -22104,11 +22104,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22188,7 +22188,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_ENDDAYOFYEAR_INRANGE with Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_ENDDAYOFYEAR_INRANGE with Specification: Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -22215,11 +22215,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22311,7 +22311,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_ESTABLISHMENTMEANS_STANDARD with Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_ESTABLISHMENTMEANS_STANDARD with Specification: Specification for: VALIDATION_ESTABLISHMENTMEANS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -22338,11 +22338,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22434,7 +22434,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTDATE_INRANGE with Specification for: VALIDATION_EVENTDATE_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_EVENTDATE_INRANGE with Specification: Specification for: VALIDATION_EVENTDATE_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -22461,11 +22461,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22537,7 +22537,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification: Specification for: VALIDATION_EVENTDATE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -22564,11 +22564,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22648,7 +22648,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTDATE_STANDARD with Specification for: VALIDATION_EVENTDATE_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_EVENTDATE_STANDARD with Specification: Specification for: VALIDATION_EVENTDATE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -22675,11 +22675,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22755,7 +22755,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENTTEMPORAL_NOTEMPTY with Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_EVENTTEMPORAL_NOTEMPTY with Specification: Specification for: VALIDATION_EVENTTEMPORAL_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -22782,11 +22782,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22862,7 +22862,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_EVENT_CONSISTENT with Specification for: VALIDATION_EVENT_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_EVENT_CONSISTENT with Specification: Specification for: VALIDATION_EVENT_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -22889,11 +22889,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22985,7 +22985,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_FAMILY_FOUND with Specification for: VALIDATION_FAMILY_FOUND</td>
+			<td>ValidationMethod: VALIDATION_FAMILY_FOUND with Specification: Specification for: VALIDATION_FAMILY_FOUND</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -23012,11 +23012,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23108,7 +23108,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GENUS_FOUND with Specification for: VALIDATION_GENUS_FOUND</td>
+			<td>ValidationMethod: VALIDATION_GENUS_FOUND with Specification: Specification for: VALIDATION_GENUS_FOUND</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -23135,11 +23135,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23211,7 +23211,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_GEODETICDATUM_NOTEMPTY with Specification: Specification for: VALIDATION_GEODETICDATUM_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -23238,11 +23238,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23326,7 +23326,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_GEODETICDATUM_STANDARD with Specification: Specification for: VALIDATION_GEODETICDATUM_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -23353,11 +23353,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23449,7 +23449,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification for: VALIDATION_KINGDOM_FOUND</td>
+			<td>ValidationMethod: VALIDATION_KINGDOM_FOUND with Specification: Specification for: VALIDATION_KINGDOM_FOUND</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -23476,11 +23476,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23552,7 +23552,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_KINGDOM_NOTEMPTY with Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_KINGDOM_NOTEMPTY with Specification: Specification for: VALIDATION_KINGDOM_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -23579,11 +23579,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23659,7 +23659,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_NOTEMPTY with Specification: Specification for: VALIDATION_LICENSE_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -23686,11 +23686,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23782,7 +23782,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification for: VALIDATION_LICENSE_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification: Specification for: VALIDATION_LICENSE_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -23809,11 +23809,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23893,7 +23893,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification: Specification for: VALIDATION_LOCATION_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -23920,11 +23920,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24016,7 +24016,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification: Specification for: VALIDATION_MAXDEPTH_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -24043,11 +24043,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24139,7 +24139,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification: Specification for: VALIDATION_MAXELEVATION_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -24166,11 +24166,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24262,7 +24262,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification for: VALIDATION_MINDEPTH_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification: Specification for: VALIDATION_MINDEPTH_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -24289,11 +24289,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24369,7 +24369,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
+			<td>ValidationMethod: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH with Specification: Specification for: VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -24396,11 +24396,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24492,7 +24492,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification for: VALIDATION_MINELEVATION_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_MINELEVATION_INRANGE with Specification: Specification for: VALIDATION_MINELEVATION_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -24519,11 +24519,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24599,7 +24599,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
+			<td>ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification: Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -24626,11 +24626,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24702,7 +24702,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_MONTH_STANDARD with Specification for: VALIDATION_MONTH_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_MONTH_STANDARD with Specification: Specification for: VALIDATION_MONTH_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -24729,11 +24729,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24805,7 +24805,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY with Specification: Specification for: VALIDATION_NAMEPUBLISHEDINYEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -24832,11 +24832,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24908,7 +24908,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_OCCURRENCEID_NOTEMPTY with Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCEID_NOTEMPTY with Specification: Specification for: VALIDATION_OCCURRENCEID_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -24935,11 +24935,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25011,7 +25011,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_NOTEMPTY with Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_NOTEMPTY with Specification: Specification for: VALIDATION_OCCURRENCESTATUS_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -25038,11 +25038,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25130,7 +25130,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_OCCURRENCESTATUS_STANDARD with Specification: Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -25157,11 +25157,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25253,7 +25253,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_ORDER_FOUND with Specification for: VALIDATION_ORDER_FOUND</td>
+			<td>ValidationMethod: VALIDATION_ORDER_FOUND with Specification: Specification for: VALIDATION_ORDER_FOUND</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -25280,11 +25280,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25376,7 +25376,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_PATHWAY_STANDARD with Specification for: VALIDATION_PATHWAY_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_PATHWAY_STANDARD with Specification: Specification for: VALIDATION_PATHWAY_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -25403,11 +25403,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25499,7 +25499,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_PHYLUM_FOUND with Specification for: VALIDATION_PHYLUM_FOUND</td>
+			<td>ValidationMethod: VALIDATION_PHYLUM_FOUND with Specification: Specification for: VALIDATION_PHYLUM_FOUND</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -25526,11 +25526,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25610,7 +25610,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
+			<td>ValidationMethod: VALIDATION_POLYNOMIAL_CONSISTENT with Specification: Specification for: VALIDATION_POLYNOMIAL_CONSISTENT</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -25637,11 +25637,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25713,7 +25713,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY with Specification: Specification for: VALIDATION_SCIENTIFICNAMEAUTHORSHIP_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -25740,11 +25740,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25824,7 +25824,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_COMPLETE with Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_COMPLETE with Specification: Specification for: VALIDATION_SCIENTIFICNAMEID_COMPLETE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -25851,11 +25851,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25931,7 +25931,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY with Specification: Specification for: VALIDATION_SCIENTIFICNAMEID_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -25958,11 +25958,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26054,7 +26054,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_FOUND with Specification: Specification for: VALIDATION_SCIENTIFICNAME_FOUND</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -26081,11 +26081,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26161,7 +26161,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_SCIENTIFICNAME_NOTEMPTY with Specification: Specification for: VALIDATION_SCIENTIFICNAME_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -26188,11 +26188,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26284,7 +26284,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_SEX_STANDARD with Specification for: VALIDATION_SEX_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_SEX_STANDARD with Specification: Specification for: VALIDATION_SEX_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -26311,11 +26311,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26395,7 +26395,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_STARTDAYOFYEAR_INRANGE with Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_STARTDAYOFYEAR_INRANGE with Specification: Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -26422,11 +26422,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26518,7 +26518,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
+			<td>ValidationMethod: VALIDATION_STATEPROVINCE_FOUND with Specification: Specification for: VALIDATION_STATEPROVINCE_FOUND</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -26545,11 +26545,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26625,7 +26625,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXONRANK_NOTEMPTY with Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_TAXONRANK_NOTEMPTY with Specification: Specification for: VALIDATION_TAXONRANK_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -26652,11 +26652,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26748,7 +26748,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification for: VALIDATION_TAXONRANK_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification: Specification for: VALIDATION_TAXONRANK_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -26775,11 +26775,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26855,7 +26855,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXON_NOTEMPTY with Specification for: VALIDATION_TAXON_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_TAXON_NOTEMPTY with Specification: Specification for: VALIDATION_TAXON_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -26882,11 +26882,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-15</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-15">https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-15</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-15.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26982,7 +26982,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
+			<td>ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification: Specification for: VALIDATION_TAXON_UNAMBIGUOUS</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -27009,11 +27009,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-07</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07">https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2025-03-07.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -27105,7 +27105,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
+			<td>ValidationMethod: VALIDATION_TYPESTATUS_STANDARD with Specification: Specification for: VALIDATION_TYPESTATUS_STANDARD</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -27132,11 +27132,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -27224,7 +27224,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_YEAR_INRANGE with Specification for: VALIDATION_YEAR_INRANGE</td>
+			<td>ValidationMethod: VALIDATION_YEAR_INRANGE with Specification: Specification for: VALIDATION_YEAR_INRANGE</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -27251,11 +27251,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2025-03-06</td>
+			<td>2026-11-17</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06">https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2025-03-06.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -27327,7 +27327,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>ValidationMethod label</td>
-			<td>ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification for: VALIDATION_YEAR_NOTEMPTY</td>
+			<td>ValidationMethod: VALIDATION_YEAR_NOTEMPTY with Specification: Specification for: VALIDATION_YEAR_NOTEMPTY</td>
 		</tr>
 		<tr>
 			<td>ValidationMethod IRI</td>
@@ -27363,7 +27363,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-17>
 
 **Biodiversity Information Standards (TDWG)**
 
