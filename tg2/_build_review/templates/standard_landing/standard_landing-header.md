@@ -675,8 +675,8 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Morris PJ (2026d) FilteredPush/rec_occur_qc: Release version 1.2.0 of rec_occur_qc (v1.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386312</li>
 <li>Morris PJ (2026e) kurator-org/bdq_issue_to_csv: Release version 1.3.0 of bdq_issue_to_csv (v1.3.0). Zenodo. https://doi.org/10.5281/zenodo.24385416</li>
 <li>Morris PJ, Dou L (2026) FilteredPush/sci_name_qc: Release version 1.3.0 of sci_name_qc (v1.3.0). Zenodo. https://doi.org/10.5281/zenodo.24386308</li>
-<li>Morris PJ, Lowery D (2026a) FilteredPush/event_date_qc: Release version 3.2.0 of event_date_qc (v3.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386311</li>
-<li>Morris PJ, Lowery D (2026b) kurator-org/ffdq-api: Release version 3.0.0 of ffdq-api (v3.0.0). Zenodo. https://doi.org/10.5281/zenodo.24386294</li>
+<li>Morris PJ, Lowery D (2026) kurator-org/ffdq-api: Release version 3.0.0 of ffdq-api (v3.0.0). Zenodo. https://doi.org/10.5281/zenodo.24386294</li>
+<li>Morris PJ, Lowery D, Johaadien R (2026) FilteredPush/event_date_qc: Release version 3.2.0 of event_date_qc (v3.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386311</li>
 <li>Morris PJ, Lowery D, Morris RA (2026) kurator-org/kurator-ffdq: Release version 4.0.0 of kurator-ffdq (v4.0.0). Zenodo. https://doi.org/10.5281/zenodo.24386307</li>
 <li>Morris PJ, Lowery D, Wieczorek J (2026) FilteredPush/geo_ref_qc: Release version 2.2.0 of geo_ref_qc (v2.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386313</li>
 <li>Natural Earth (2009)  Land 10m. https//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip</li>
