@@ -2,24 +2,23 @@
 
 ## The BDQ Test descriptors
 
-These are copies of the descriptors of the BDQ Tests, originally extracted from GitHub issue markdown tables using [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv); one file contains the SingleRecord Tests, the other file the MultiRecord Measures. They are derived from _review/vocabulary/bdqtest_term_versions.csv by _make_review/copy_files.sh. **As of 2026-11-13 the source of truth for the Tests is tdwg/rs.tdwg.org, branch `bdq-source`**, and `bdqtest_term_versions.csv` and the GUID tables below are copies kept in step with it until the build reads rs.tdwg.org (see [Where the BDQ standard is maintained](../README.md#where-the-bdq-standard-is-maintained-sources-of-truth)). Do not edit these files as the place of record: change the Tests in rs.tdwg.org; the GUID tables are regenerated from it by `tg2/_make_review/export_rs_baseline.py` (with `bdqtest_term_versions.csv`, from which `copy_files.sh` derives the Test CSVs).
+These are copies of the descriptors of the BDQ Tests, originally extracted from GitHub issue markdown tables using [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv); one file contains the SingleRecord Tests, the other file the MultiRecord Measures. They are derived from _review/vocabulary/bdqtest_term_versions.csv by _make_review/copy_files.sh. **As of 2026-11-13 the source of truth for the Tests is tdwg/rs.tdwg.org, branch `bdq-source`** (see [Where the BDQ standard is maintained](../README.md#where-the-bdq-standard-is-maintained-sources-of-truth)). `bdqtest_term_versions.csv` and the GUID tables below are exported from rs.tdwg.org by `tg2/_make_review/export_rs_baseline.py`, and `copy_files.sh` derives the Test CSVs from `bdqtest_term_versions.csv`. **Generated, do not edit**: change the Tests in rs.tdwg.org, then export again.
 
 - TG2_tests.csv
 - TG2_multirecord_measure_tests.csv
 
 ### Turtle and RDF/XML representations of the Tests
 
-These are produced from the CSV files above using [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq).  See instructions in [this README](https://github.com/kurator-org/bdq_issue_to_csv/blob/master/README.md)
+The RDF of all the Tests, SingleRecord and MultiRecord, is `_review/dist/bdqtest.{ttl,xml,json}`, generated from rs.tdwg.org by `export_rs_baseline.py`.
 
-- TG2_tests.ttl (now _review/dist/bdqtests.ttl)
-- TG2_tests.xml (now _review/dist/bdqtests.xml)
+These two files are the MultiRecord Measures alone, as produced from `TG2_multirecord_measure_tests.csv` by [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (see the commented instructions in `_make_review/copy_files.sh`). They are not used by the build and are not updated with each export.
 
 - TG2_multirecord_measure_tests.ttl
 - TG2_multirecord_measure_tests.xml
 
 ### Supporting CSV files containing lists of GUIDs
 
-These files allow kurator-ffdq to preserve the identifiers of objects in the RDF when regenerating from the CSV into RDF. rs.tdwg.org keeps its own copies, in `bdqtest-graph-inputs/` of the release directories on `bdq-source` where they change, and generates the served Test graphs from them; changes are made there first.
+These files preserve the identifiers of the nodes of the Test graphs (information elements, Methods, Specifications, Arguments, Policies, citations) when the RDF is regenerated. rs.tdwg.org keeps the authoritative copies, in `bdqtest-graph-inputs/` of the release directories on `bdq-source` where they change, and generates the served Test graphs from them; changes are made there first. The copies here are exported by `export_rs_baseline.py`, except `TG2_tests_argument_guids.csv`, which bdq_issue_to_csv uses (`-a`) for the supplementary Tests.
 
 - information_element_guids.csv
 - TG2_tests_additional_guids.csv
@@ -27,7 +26,7 @@ These files allow kurator-ffdq to preserve the identifiers of objects in the RDF
 - TG2_tests_argument_guids.csv 
 - TG2_citation_guids.csv  for dcterms:BibliographciResource objects extracted from "References" columns in the TG2_tests.csv file.
 
-test_label_mappings.csv (?no longer used?)
+test_label_mappings.csv  Used only by [bdq_issue_to_csv](https://github.com/kurator-org/bdq_issue_to_csv) (`-l`), for the supplementary Tests; not used by the build.
 
 Deprecated file formerly used for test-usecase mapping, now replaced by the UseCases colunn in the TG2_tests.csv file.
 
@@ -35,10 +34,10 @@ usecase_test_list_deprecated.csv
 
 ## Test Validation Data 
 
-These files are for implementers to validate that their implementations of the BDQ Tests produce expected results.  They consist of one line per validation, with columns specifying the Test being validated by that row, one column for each of the inputs for the Information Elements and parameters for a single Test, and columns holding the expected outputs.  Each Test has multiple validation rows.  
+These files are for implementers to validate that their implementations of the BDQ Tests produce expected results. They are maintained in `tg2/_build_review/templates/guide/implementers/`, and published with the Implementer's Guide at <https://bdq.tdwg.org/draft/docs/guide/implementers/TG2_test_validation_data.csv> and <https://bdq.tdwg.org/draft/docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv>.  They consist of one line per validation, with columns specifying the Test being validated by that row, one column for each of the inputs for the Information Elements and parameters for a single Test, and columns holding the expected outputs.  Each Test has multiple validation rows.  
 
-TG2_test_validation_data.csv
-TG2_test_validation_data_nonprintingchars.csv
+- ../_build_review/templates/guide/implementers/TG2_test_validation_data.csv
+- ../_build_review/templates/guide/implementers/TG2_test_validation_data_nonprintingchars.csv
 
 ### Draft CSV of Test Validation Data 
 
@@ -53,3 +52,6 @@ Maintenance of validation data is easier in this more compact spreadsheet form, 
 - squish_validation_data.py
 - test_validation_maintainer.csv
 
+## SHACL shapes
+
+- bdqffdq_SHACL_constraints.ttl  SHACL shapes for the bdqffdq: Fitness For Use Framework, used to validate the Test RDF (`_build_review/tools/validate_bdqtest_against_shacl.py`) and data quality reports.

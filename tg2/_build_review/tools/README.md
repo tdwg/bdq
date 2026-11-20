@@ -1,4 +1,4 @@
-# Utiity scriipts for quality control of the BDQ build files
+# Utility scripts for quality control of the BDQ build files
 
 ## Scripts to check the bdqtest: source files
 
@@ -63,13 +63,14 @@ Default paths are set relative to the expected location of this script inside th
 
 * list_multirecord_measures_for_usecase_tests.py - list the `MultiRecord` `Measures` that are associated with each use case and test in the RDF data.
 * list_unique_acted_upon_information_elements.py - list the unique `InformationElements` that are acted upon by `Tests` in the RDF data by use case.
+* get_one_test.py - extract the subgraph of a single Test, by its label, from bdqtest.ttl and serialize it as ordered Turtle, RDF/XML, or JSON-LD.
 * list_use_cases_and_tests_to_csv.py - generate a CSV file listing the use cases and tests represented in the RDF data, along with their associated information elements and other relevant details.
 
 ## Other scripts
 
 * use_case_information_elements_value_requirement.py - Query bdqtest.ttl and determine, for each Use Case, which acted-upon Information Elements occur in Validation Tests, how many Tests in that Use Case involve each Information Element, and whether those Information Elements require a value.
 
-* temporary/ - a directory for working file that carry out some cleanup step not for long term use
+* temporary/ - a directory for working files that carried out some cleanup step, not for long term use. They edit `bdqtest_term_versions.csv`, which since 2026-11-14 is exported from rs.tdwg.org and must not be edited here; such changes are now made in rs.tdwg.org.
   * add_aggregatesResponsesFrom_to_bdqtest_term_versions.py - adds `bdqtest:aggregatesResponsesFrom` property to bdqtest for multirecord measures that aggregate responses from other tests, with the value being a list of the test versions that are aggregated. 
   * add_bdqtest_definitions.py - adds a constructed definition column to bdqtest term versions 
   * rewrite_ie_guid_labels_for_aggregated_responses.py - Rewrite legacy information_element_guids.csv labels for MultiRecord aggregated-response ActedUpon IEs from the pseudo-term form.

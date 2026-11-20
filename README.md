@@ -19,7 +19,7 @@ All Interest Group and Task Group documents are linked on the [**Interest Group'
 
 The Draft Biodiversity Data Quality (BDQ) Standard is currently a [draft under review](https://bdq.tdwg.org/draft/),
 
-* Entry point for (pending) public review of the draft standard [Pubic Review](https://bdq.tdwg.org/draft/README.html)
+* Entry point for the (pending) public review of the draft standard: [Public Review](https://bdq.tdwg.org/draft/README.html)
 * [Notes to the BDQ Review Manager](https://github.com/tdwg/bdq/issues/306)
 * Draft Standard in [markdown on github](https://github.com/tdwg/bdq/tree/master/tg2/_review)
 
@@ -35,17 +35,13 @@ The Draft Biodiversity Data Quality (BDQ) Standard is currently a [draft under r
 
 ## Documents related to the draft standard
 
-The standard will incorporate (placeholders in the above document) the following:
+The terms of the BDQ vocabularies, including the Tests, are maintained in [tdwg/rs.tdwg.org](https://github.com/tdwg/rs.tdwg.org) and served for the review at [bdq-public-review.rs.tdwg.org](https://bdq-public-review.rs.tdwg.org/); the text of the documents is maintained here. See [Where the BDQ standard is maintained](tg2/README.md#where-the-bdq-standard-is-maintained-sources-of-truth).
 
-[Descriptions of the CORE texts, authoriative CSV file](https://raw.githubusercontent.com/tdwg/bdq/blob/master/tg2/core/TG2_tests.csv), from which a human readable reference guide to the test descriptions will be generated (replacing the markdown tables in the github issues).
-
-[Data for validating implementations of the tests](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/core/TG2_test_validation_data.csv) and [Data including non-printing characters for validating tests that assess EMPTY](https://raw.githubusercontent.com/tdwg/bdq/master/tg2/core/TG2_test_validation_data_nonprintingchars.csv)
-
-[Rationale management for CORE tests in comments on (closed) GitHub issues, one per test](https://github.com/tdwg/bdq/issues?q=label%3ACORE)
-
-[Combined Framework and Biodiversity Data Quality vocabularies, development of definitions in github issue 152](https://github.com/tdwg/bdq/issues/152)
-
-[Draft export of Framework OWL to CSV, work in progress, definitions to be updated from Vocabularies issue 152](https://github.com/tdwg/bdq/blob/master/tg1/ffdq/frameworkconcepts.csv) and an [OWL representation of the framework](https://github.com/kurator-org/kurator-ffdq/blob/master/competencyquestions/rdf/ffdq.owl) developed in part by Robert A. Morris, definitions to be updated form Vocabularies issue #152
-
-[OLD BDQ CORE Standards Document ‐ NO LONGER IN USE](https://github.com/tdwg/bdq/wiki/OLD-BDQ-CORE-Standards-Document-%E2%80%90-NO-LONGER-IN-USE)
+- The Tests: the [Quick Reference Guide](https://bdq.tdwg.org/draft/docs/terms/bdqtest/), the [BDQ Tests List of Terms](https://bdq.tdwg.org/draft/docs/list/bdqtest/), and the RDF of all the Tests ([bdqtest.ttl](https://bdq.tdwg.org/draft/dist/bdqtest.ttl)); a CSV of the current SingleRecord Tests ([bdqtest_singlerecord_tests_current.csv](https://bdq.tdwg.org/draft/dist/bdqtest_singlerecord_tests_current.csv)).
+- [Data for validating implementations of the Tests](https://bdq.tdwg.org/draft/docs/guide/implementers/TG2_test_validation_data.csv) and [data including non-printing characters for validating Tests that assess EMPTY](https://bdq.tdwg.org/draft/docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv), described in the [Implementer's Guide](https://bdq.tdwg.org/draft/docs/guide/implementers/).
+- The Fitness For Use Framework ontology ([bdqffdq.ttl](https://bdq.tdwg.org/draft/dist/bdqffdq.ttl)), with its [guide](https://bdq.tdwg.org/draft/docs/guide/bdqffdq/).
+- [Rationale management for CORE Tests in comments on (closed) GitHub issues, one per Test](https://github.com/tdwg/bdq/issues?q=label%3ACORE)
+- [Combined Framework and Biodiversity Data Quality vocabularies, development of definitions in github issue 152](https://github.com/tdwg/bdq/issues/152)
+- Implementations, which are not part of the standard: Java libraries implementing the Tests, and applications to run and check them, listed in the [Java Implementation](https://bdq.tdwg.org/draft/#41-java-implementation-non-normative) section of the draft standard.
+- [OLD BDQ CORE Standards Document ‐ NO LONGER IN USE](https://github.com/tdwg/bdq/wiki/OLD-BDQ-CORE-Standards-Document-%E2%80%90-NO-LONGER-IN-USE)
 

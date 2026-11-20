@@ -5,7 +5,9 @@ Files used in the workflow build of the BDQ web pages for deployment on bdq.tdwg
 These apply to the BDQ Interest Group, its Task Groups, and the BDQ (draft) standard.
 
 ├── assets
+│   ├── rdf-graph.svg
 │   ├── site.css
+│   ├── TDWG-Logo_horizontal.svg
 │   ├── TDWG-Logo_horizontal-white.svg  deployed into /assets/img/
 │   ├── tdwg-logo-short.svg deployed into /assets/img/
 │   └── toc.js
@@ -16,6 +18,7 @@ These apply to the BDQ Interest Group, its Task Groups, and the BDQ (draft) stan
 ├── templates
 │   └── page.html  template for the site pages, used by render_site.py
 └── tests
+    ├── test_render_site.py unit tests for render_site.py
     └── test_render_site_links.py unit tests for the functions in render_site_links.py
 
 
@@ -24,5 +27,5 @@ These apply to the BDQ Interest Group, its Task Groups, and the BDQ (draft) stan
 Execute from the root of the bdq repository with:
 
 ```
-python -m pytest _site_resources/tests/test_render_site_links.py
+python -m pytest _site_resources/tests
 ```
