@@ -298,7 +298,7 @@ The specification of the BDQ Tests within the Framework allows the same set of T
 
 ### 2.4 Framework Competency Questions (non-normative)
 
-The development of the representation of the Fitness For Use Framework as an OWL ontology (`bdqffdq:`) was influenced by competency questions, shaped by the late Robert A. Morris, and originally written by David Lowery within the kurator-ffdq codebase (Morris, Lowery & Morris 2026); see [kurator-ffdq competency questions](https://github.com/kurator-org/kurator-ffdq/tree/master/competencyquestions) as part of the Kurator project (Morris et al. 2018). The development of the BDQ Test descriptors (the terms used to describe our Tests) led to changes in the ontology, largely in adopting a consistent naming pattern. Changes to the specifics of competency questions followed.
+The development of the representation of the Fitness For Use Framework as an OWL ontology (`bdqffdq:`) was influenced by competency questions, shaped by the late Robert A. Morris, and originally written by David Lowery within the kurator-ffdq codebase (Morris, Lowery & Morris 2026); see [kurator-ffdq competency questions](https://github.com/kurator-org/kurator-ffdq/tree/master/competencyquestions), with the earlier OWL representation of the framework ([ffdq.owl](https://github.com/kurator-org/kurator-ffdq/blob/480ed800/competencyquestions/rdf/ffdq.owl)), as part of the Kurator project (Morris et al. 2018). The development of the BDQ Test descriptors (the terms used to describe our Tests) led to changes in the ontology, largely in adopting a consistent naming pattern. Changes to the specifics of competency questions followed.
 
 Following are example competency questions that can be asked of the RDF representation of `bdqtest:`:
 
