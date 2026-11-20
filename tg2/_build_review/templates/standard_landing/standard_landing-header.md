@@ -476,7 +476,7 @@ The BDQ standard does not include implementations of Tests, but there are extern
 
 ### 4.1 Java Implementation (non-normative)
 
-While **not part of the BDQ standard**, a validated Java® implementation of the Tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries, which can be run on Darwin Core Archive files and Darwin Core Data Packages with [bdq_workbench](https://github.com/filteredpush/bdq_workbench/).  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/), which demonstrates conformance of these libraries with the provided [Test Conformance Testing Data](#352-test-conformance-testing-data-non-normative).
+While **not part of the BDQ standard**, a validated Java® implementation of the Tests is provided in the [event_date_qc](https://github.com/FilteredPush/event_date_qc), [sci_name_qc](https://github.com/FilteredPush/sci_name_qc), [geo_ref_qc](https://github.com/FilteredPush/geo_ref_qc) and [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) libraries, which can be run on Darwin Core Archive files and Darwin Core Data Packages with [bdq_workbench](https://github.com/filteredpush/bdq_workbench/) (Morris 2026b).  Use Cases and Test definitions can be authored as RDF using the bdqffdq: vocabulary with [bdq_usecase_builder](https://github.com/FilteredPush/bdq_usecase_builder) (Morris 2026a), which follows the workflow of the [BDQ Tutorial](docs/tutorial/index.md).  Also see [bdqtestrunner](https://github.com/FilteredPush/bdqtestrunner/) (Morris 2026c), which demonstrates conformance of these libraries with the provided [Test Conformance Testing Data](#352-test-conformance-testing-data-non-normative).
 
 ### 4.2 BDQEmail (non-normative)
 
@@ -667,17 +667,18 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Kennedy M, Morris PJ, Haley B, McDonald D (2024) MCZbase/MCZbase MCZbase version as of v2024Apr04 commit 53ec47f2 [Computer Software] https://doi.org/10.5281/zenodo.10929079</li>
 <li>Leiba B (2017) IETF Key words for use in RFCs to Indicate Requirement Levels (RFC 8174). https://tools.ietf.org/html/rfc8174</li>
 <li>Library of Congress (2019) Extended Date/Time Format (EDTF). https://www.loc.gov/standards/datetime/</li>
-<li>Lowery D, Morris PJ (2024) kurator-org/ffdq-api: Release of ffdq-api version 2.0.2 (v2.0.2). Zenodo. https://doi.org/10.5281/zenodo.14031588</li>
-<li>Lowery D, Morris PJ, Morris RA (2025) kurator-org/kurator-ffdq: Release of Kurator-FFDQ library version v3.2.0 (v3.2.0). Zenodo. https://doi.org/10.5281/zenodo.15375151</li>
 <li>Maptiler (2019) EPSG.io. https://epsg.io</li>
 <li>Morris P, Hanken J, Lowery D, Ludäscher B, Macklin J, McPhillips T, Wieczorek J, Zhang Q (2018) Kurator: Tools for Improving Fitness for Use of Biodiversity Data. Biodiversity Information Science and Standards 2: e26539. https://doi.org/10.3897/biss.2.26539</li>
-<li>Morris PJ (2024) FilteredPush/bdqtestrunner: Release of bdqtestrunner version v1.0.0 (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.13932178</li>
-<li>Morris PJ (2025) kurator-org/bdq_issue_to_csv: Version 1.2.0 release of bdq_issue_to_csv utility for creating bdqtest: term-version file (v1.2.0). Zenodo. https://doi.org/10.5281/zenodo.15375006</li>
-<li>Morris PJ, Dou L (2026) FilteredPush/sci_name_qc: Release version 1.2.2 of the sci_name_qc library compliant implementation of all the BDQ Standard NAME Tests (v1.2.2). Zenodo. https://doi.org/10.5281/zenodo.24296524</li>
-<li>Morris PJ (2025) FilteredPush/rec_occur_qc: Release version 1.1.0 of the rec_occur_qc library, compliant implementation of all the BDQ Standard OTHER (metadata) Tests (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.15374776</li>
-<li>Morris PJ, Lowery D (2025) FilteredPush/event_date_qc: Release version 3.1.0 of the event_date_qc library, compliant implementation of all the BDQ Standard Time Tests (v3.1.0). Zenodo. https://doi.org/10.5281/zenodo.15373615</li>
-<li>Morris PJ, Lowery D (2025b). FilteredPush/geo_ref_qc: Release version 2.1.1 of the geo_ref_qc library, compliant implementation of all the BDQ Standard Space Tests (v2.1.1). Zenodo. https://doi.org/10.5281/zenodo.15374533</li>
-<li>Morris PJ (2026). FilteredPush/bdq_workbench: </li>
+<li>Morris PJ (2026a) FilteredPush/bdq_usecase_builder: Release version 0.1.2 of bdq_usecase_builder (v0.1.2). Zenodo. https://doi.org/10.5281/zenodo.24385390</li>
+<li>Morris PJ (2026b) FilteredPush/bdq_workbench: Release version 0.2.0 of bdq_workbench (v0.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386315</li>
+<li>Morris PJ (2026c) FilteredPush/bdqtestrunner: Release version 1.1.0 of bdqtestrunner (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.24386314</li>
+<li>Morris PJ (2026d) FilteredPush/rec_occur_qc: Release version 1.2.0 of rec_occur_qc (v1.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386312</li>
+<li>Morris PJ (2026e) kurator-org/bdq_issue_to_csv: Release version 1.3.0 of bdq_issue_to_csv (v1.3.0). Zenodo. https://doi.org/10.5281/zenodo.24385416</li>
+<li>Morris PJ, Dou L (2026) FilteredPush/sci_name_qc: Release version 1.3.0 of sci_name_qc (v1.3.0). Zenodo. https://doi.org/10.5281/zenodo.24386308</li>
+<li>Morris PJ, Lowery D (2026a) FilteredPush/event_date_qc: Release version 3.2.0 of event_date_qc (v3.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386311</li>
+<li>Morris PJ, Lowery D (2026b) kurator-org/ffdq-api: Release version 3.0.0 of ffdq-api (v3.0.0). Zenodo. https://doi.org/10.5281/zenodo.24386294</li>
+<li>Morris PJ, Lowery D, Morris RA (2026) kurator-org/kurator-ffdq: Release version 4.0.0 of kurator-ffdq (v4.0.0). Zenodo. https://doi.org/10.5281/zenodo.24386307</li>
+<li>Morris PJ, Lowery D, Wieczorek J (2026) FilteredPush/geo_ref_qc: Release version 2.2.0 of geo_ref_qc (v2.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386313</li>
 <li>Natural Earth (2009)  Land 10m. https//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip</li>
 <li>Natural Earth (2009)  Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip</li>
 <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li>

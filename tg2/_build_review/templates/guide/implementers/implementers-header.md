@@ -345,7 +345,7 @@ When the parameter has a default value and a resource, and an implementation inc
 
 ##### 2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)
 
-The following code snippet in Java from the FilteredPush `rec_occur_qc` library (Morris 2025) illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of [AMENDMENT_LICENSE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_LICENSE_STANDARDIZED). The literal "Creative Commons" is accepted as a parameter value.
+The following code snippet in Java from the FilteredPush `rec_occur_qc` library (Morris 2026d) illustrates interpretation of the default value "Creative Commons" when provided as a parameter to an implementation of [AMENDMENT_LICENSE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_LICENSE_STANDARDIZED). The literal "Creative Commons" is accepted as a parameter value.
 ```java
     @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdqval:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
@@ -693,7 +693,7 @@ Implementers MAY use any approach appropriate for their language(s) and environm
 
 If a Test implementation is a function that takes Darwin Core terms as input parameters, the function (or method) call becomes the point of concern for correctly matching input Darwin Core terms to the `Parameters` of the Test (function or method).
 
-In Java, annotating method parameters and using reflection to bind between the execution framework and Test implementations works well. Following is a simplified code snippet from the FilteredPush `event_date_qc` library (Morris & Lowery 2025) that uses Java annotations, (e.g., @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which `Information Element`.
+In Java, annotating method parameters and using reflection to bind between the execution framework and Test implementations works well. Following is a simplified code snippet from the FilteredPush `event_date_qc` library (Morris & Lowery 2026a) that uses Java annotations, (e.g., @ActedUpon(value="dwc:endDayOfYear") to provide metadata about which parameter goes with which `Information Element`.
 
 ```java
     public Response validationEnddayofyearInrange(
@@ -703,7 +703,7 @@ In Java, annotating method parameters and using reflection to bind between the e
 
 An execution framework can use reflection to determine, from the annotations on the parameter, which Darwin Core term to bind to which parameter.
 
-Additional metadata can be added in Java annotations. In the following, again from the FilteredPush `event_date_qc` (Morris & Lowery 2025) library, annotations enable an implementation framework to look up a Test implementation by the Test GUID, and can provide metadata about the Test to users. For maintenance, annotations can be used to determine if an implementation is up to date with the latest version of a Test specification.
+Additional metadata can be added in Java annotations. In the following, again from the FilteredPush `event_date_qc` (Morris & Lowery 2026a) library, annotations enable an implementation framework to look up a Test implementation by the Test GUID, and can provide metadata about the Test to users. For maintenance, annotations can be used to determine if an implementation is up to date with the latest version of a Test specification.
 
 ```java
     @Validation(label="_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
@@ -840,7 +840,7 @@ hasExpectedResponse: INTERNAL_PREREQUISITES_NOT_MET if dwc:day is bdqval:Empty; 
 
 `Information Elements` `Acted Upon`: `dwc:day`
 
-Below is an example implementation from the FilteredPush `event_date_qc` library (Morris & Lowery 2024). In this implementation, Java annotations are used to provide metadata that can be used by an implementation framework to pick out a Test to run by its Term Name (the Test's UUID, `@Provides`) or by the version of the Test that it implements (`@ProvidesVersion`), and to match an input Darwin Core term to a (Java) parameter in the method signature. The version an implementation cites is the version of the Test issued on its `DateLastUpdated` (`bdqffdq:hasDateLastUpdated`), the most recent change to the behavior that implementations must follow, identified by its Term Version IRI (`https://rs.tdwg.org/bdqtest/terms/version/{Term Name}-{DateLastUpdated}`). A Test may have later versions with changes that do not affect its behavior (for VALIDATION_DAY_STANDARD, `DateLastUpdated` is 2023-09-18, and its current version is that of 2025-03-06); these do not require changes to implementations. The implementation walks through the elements of the `hasExpectedResponse` in sequence, and return the first matching response in a `Response` object, which has `Response.state`, `Response.result` (here called value), and `Response.comment` properties.
+Below is an example implementation from the FilteredPush `event_date_qc` library (Morris & Lowery 2026a). In this implementation, Java annotations are used to provide metadata that can be used by an implementation framework to pick out a Test to run by its Term Name (the Test's UUID, `@Provides`) or by the version of the Test that it implements (`@ProvidesVersion`), and to match an input Darwin Core term to a (Java) parameter in the method signature. The version an implementation cites is the version of the Test issued on its `DateLastUpdated` (`bdqffdq:hasDateLastUpdated`), the most recent change to the behavior that implementations must follow, identified by its Term Version IRI (`https://rs.tdwg.org/bdqtest/terms/version/{Term Name}-{DateLastUpdated}`). A Test may have later versions with changes that do not affect its behavior (for VALIDATION_DAY_STANDARD, `DateLastUpdated` is 2023-09-18, and its current version is that of 2025-03-06); these do not require changes to implementations. The implementation walks through the elements of the `hasExpectedResponse` in sequence, and return the first matching response in a `Response` object, which has `Response.state`, `Response.result` (here called value), and `Response.comment` properties.
 
 ```java
     @Validation(label="VALIDATION_DAY_STANDARD", description="Is the value of dwc:day an integer between 1 and 31 inclusive?")
@@ -951,7 +951,7 @@ This implementation is dependent on the schema the data are stored in, in partic
 
 This implementation does not generalize, as for example, day in a numeric data type that supports numbers in addition to integers would return incorrect values (per the Test specification, which requires day to be an integer), for values of day such as "8.5"
 
-Implementations should carefully consider the assumptions inherent in the environment on which Tests are being run. For example, the FilteredPush implementations in `event_date_qc` (Morris & Lowery 2025), `sci_name_qc` (Morris & Dou 2025), `rec_occur_qc` (Morris 2025), and `geo_ref_qc` (Morris & Lowery 2025b), expect that all data will be presented to the Test methods as strings. Therefore each Test implementation that deals with numeric values must convert the input strings to appropriate numeric types for evaluation, and can use the failure to convert the data type as a means to identify INTERNAL_PREREQUISITES_NOT_MET.
+Implementations should carefully consider the assumptions inherent in the environment on which Tests are being run. For example, the FilteredPush implementations in `event_date_qc` (Morris & Lowery 2026a), `sci_name_qc` (Morris & Dou 2026), `rec_occur_qc` (Morris 2026d), and `geo_ref_qc` (Morris, Lowery & Wieczorek 2026), expect that all data will be presented to the Test methods as strings. Therefore each Test implementation that deals with numeric values must convert the input strings to appropriate numeric types for evaluation, and can use the failure to convert the data type as a means to identify INTERNAL_PREREQUISITES_NOT_MET.
 
 ### 6.5 Common Pattern for Implementing a Test (non-normative)
 
@@ -1430,16 +1430,16 @@ For each Test in an implementation, that Test MUST produce the same results as a
 
 #### 8.6.1 Tools for Validating Test Implementations with the Conformance Testing Data (non-normative)
 
-The `bdqtestrunner` tool (Morris, 2024), written in Java, was written to validate the implementations of the BDQ Tests in various FilteredPush data quality libraries against the Test Conformance Testing Data. This tool uses Java annotations on methods that implement Tests in order to match inputs from the conformance testing data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of `ffdq-api` (Lowery and Morris 2024).
+The `bdqtestrunner` tool (Morris 2026c), written in Java, was written to validate the implementations of the BDQ Tests in various FilteredPush data quality libraries against the Test Conformance Testing Data. This tool uses Java annotations on methods that implement Tests in order to match inputs from the conformance testing data to methods under Test that implement individual Tests. The tool could be reused to validate implementations in other Java classes that follow the same use of `ffdq-api` (Morris & Lowery 2026b).
 
-Java annotations can be used to match Test implementation methods to Tests and `Information Elements` to method parameters. The [ffdq-api](https://github.com/kurator-org/ffdq-api) (Lowery and Morris 2024) provides a set of annotations intended to enable code using Java reflection to detect methods that implement particular Tests, and then again through Java reflection, bind Darwin Core terms and other `Information Elements` in input data onto appropriate method parameters.
+Java annotations can be used to match Test implementation methods to Tests and `Information Elements` to method parameters. The [ffdq-api](https://github.com/kurator-org/ffdq-api) (Morris & Lowery 2026b) provides a set of annotations intended to enable code using Java reflection to detect methods that implement particular Tests, and then again through Java reflection, bind Darwin Core terms and other `Information Elements` in input data onto appropriate method parameters.
 
 #### 8.6.2 Tools to assist with Implementations and RDF presentation (non-normative)
 
-The Test implementations listed below use Java Annotations (as shown in the example in [2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters. The Java Annotations are themselves related to Fitness For Use Framework concepts, are available in a library ffdq-api (Lowery and Morris 2024), and are intended to be used with rdfbeans to serialize Java result objects produced by Test implementations into `bdqffdq:Response` objects in RDF. In addition, a Java library, `kurator-ffdq` (Lowery et al., 2025) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java. The `kurator-ffdq` library also includes classes for generating stub methods for each Test in either Java or Python.
+The Test implementations listed below use Java Annotations (as shown in the example in [2.3.2.5 Example Interpretation of a Parameter String Default Value (non-normative)](#2325-example-interpretation-of-a-parameter-string-default-value-non-normative) to carry metadata to identify Tests and to allow binding of Darwin Core terms to Java method parameters. The Java Annotations are themselves related to Fitness For Use Framework concepts, are available in a library ffdq-api (Morris & Lowery 2026b), and are intended to be used with rdfbeans to serialize Java result objects produced by Test implementations into `bdqffdq:Response` objects in RDF. In addition, a Java library, `kurator-ffdq` (Morris et al. 2026) is available for working with Test descriptions as RDF, being an implementation of the Framework Ontology in Java. The `kurator-ffdq` library also includes classes for generating stub methods for each Test in either Java or Python.
 
-- [ffdq-api](https://github.com/kurator-org/ffdq-api) (Lowery and Morris 2024) Java annotations for decorating Test implementations.
-- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Lowery et al. 2025) Java class representation of `bdqffdq:` classes, able to produce stub code for Test implementations in Java or Python. `kurator-ffdq` is also able (code is rusty as of v3.0.0) to run Java Test implementations annotated with `ffdq-api` annotations and produce `Data Quality Report` spreadsheets.
+- [ffdq-api](https://github.com/kurator-org/ffdq-api) (Morris & Lowery 2026b) Java annotations for decorating Test implementations.
+- [kurator-ffdq](https://github.com/kurator-org/kurator-ffdq) (Morris et al. 2026) Java class representation of `bdqffdq:` classes, able to produce stub code for Test implementations in Java or Python. `kurator-ffdq` is also able (code is rusty as of v3.0.0) to run Java Test implementations annotated with `ffdq-api` annotations and produce `Data Quality Report` spreadsheets.
 
 For more information on stub method generation used by the Kurator/FilteredPush libraries, see the following README files:
 
@@ -1455,9 +1455,9 @@ These libraries are available in Maven Central, source code is archived in Zenod
 
 A set of open source Java libraries provide classes that implement each of the `bdqffdq:SingleRecord` Tests that operate directly on data. These libraries are not part of the BDQ standard, but have been implemented as part of the process of writing the standard.
 
-- [event_date_qc](https://github.com/filteredpush/event_date_qc) (Morris & Lowery 2025) Tests related to spatial terms.
-- [sci_name_qc](https://github.com/filteredpush/sci_name_qc) (Morris & Dou 2025) Tests related to taxonomy and identification terms.
-- [geo_ref_qc](https://github.com/filteredpush/geo_ref_qc) (Morris, Lowery & Wieczorek 2025b) Tests related to spatial terms.
-- [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) (Morris 2025) Tests related to metadata terms.
+- [event_date_qc](https://github.com/filteredpush/event_date_qc) (Morris & Lowery 2026a) Tests related to temporal terms.
+- [sci_name_qc](https://github.com/filteredpush/sci_name_qc) (Morris & Dou 2026) Tests related to taxonomy and identification terms.
+- [geo_ref_qc](https://github.com/filteredpush/geo_ref_qc) (Morris, Lowery & Wieczorek 2026) Tests related to spatial terms.
+- [rec_occur_qc](https://github.com/FilteredPush/rec_occur_qc) (Morris 2026d) Tests related to metadata terms.
 
 These libraries are available in Maven Central.

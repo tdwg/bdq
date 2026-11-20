@@ -616,7 +616,7 @@ A complete description of BDQ Tests can be found in the RDF representation of th
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/method/02f5a440-a473-42cf-a3f1-6c10334d5eb8">
       <owl:sameAs rdf:resource="urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ValidationMethod"/>
-    <skos:note>Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris &amp; Lowery 2025b)</skos:note>
+    <skos:note>Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery &amp; Wieczorek 2026)</skos:note>
     <skos:note>Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99</skos:note>
     <skos:note>TG2 Validation SPACE CODED Test VOCABULARY Conformance ISO/DCMI STANDARD CORE</skos:note>
     <bdqffdq:hasSpecification rdf:resource="https://rs.tdwg.org/bdqtest/specification/01b96157-e4a1-4884-95d7-3bcfc5f3c047"/>

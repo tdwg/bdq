@@ -88,6 +88,8 @@ The simpler of the two Tests examined is VALIDATION_FOOTPRINTWKT_NOTEMPTY, which
 
 By following this workflow, you move from a human-centric research need to a machine-readable technical standard.
 
+The [bdq_usecase_builder](https://github.com/FilteredPush/bdq_usecase_builder) application (Morris 2026a), which is not part of the BDQ standard, follows the workflow of this tutorial. It guides the user through defining a `Use Case`, reusing existing Tests and defining new ones, and writes the result as RDF using the bdqffdq: vocabulary.
+
 See also:
 - [BDQ Tests: An Operational Perspective](../guide/bdqtest/index.md#51-bdq-tests-an-operational-perspective-non-normative) in the bdqtest: term-list document.
 - [Framework for describing data quality](../guide/bdqffdq/index.md#2-framework-for-describing-data-quality-non-normative) in the bdqffdq: ontology guide.
