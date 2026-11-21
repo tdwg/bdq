@@ -55,10 +55,10 @@ Draft Standard for Review
 
 - [2 Axiom Index (non-normative)](#2-axiom-index-non-normative)
 
-- [4 Vocabulary Extension (normative)](#4-vocabulary-extension-normative)
-  - [4.1 Range Axioms (normative)](#41-range-axioms-normative)
-  - [4.2 Restrictions on Classes (normative)](#42-restrictions-on-classes-normative)
-  - [4.3 General Axioms (normative)](#43-general-axioms-normative)
+- [3 Vocabulary Extension (normative)](#3-vocabulary-extension-normative)
+  - [3.1 Range Axioms (normative)](#31-range-axioms-normative)
+  - [3.2 Restrictions on Classes (normative)](#32-restrictions-on-classes-normative)
+  - [3.3 General Axioms (normative)](#33-general-axioms-normative)
     - [4.3.1 Disjointness (normative)](#431-disjointness-normative)
     - [4.3.2 AllDisjointClasses (normative)](#432-alldisjointclasses-normative)
     - [4.3.3 EquivalentClass (normative)](#433-equivalentclass-normative)
@@ -151,7 +151,7 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 ### 1.8 Key to Vocabulary Terms (normative)
 
-The terminology used to describe the terms in this vocabulary follows the [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the [TDWG Standards Documentation Specification (SDS)](https://www.tdwg.org/standards/sds/). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
@@ -165,13 +165,13 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 
 ## 2 Axiom Index (non-normative)
 
-- [Range Axioms (normative)](#41-range-axioms-normative)
-- [Restrictions on Classes (normative)](#42-restrictions-on-classes-normative)
-- [General Axioms (normative)](#43-general-axioms-normative)
+- [Range Axioms (normative)](#31-range-axioms-normative)
+- [Restrictions on Classes (normative)](#32-restrictions-on-classes-normative)
+- [General Axioms (normative)](#33-general-axioms-normative)
 
-## 4 Vocabulary Extension (normative)
+## 3 Vocabulary Extension (normative)
 
-### 4.1 Range Axioms (normative)
+### 3.1 Range Axioms (normative)
 #### hasAuthoritiesDefaults
 
 | Property | Value |
@@ -244,7 +244,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 | Range | bdqffdq:Parameter |
 
 
-### 4.2 Restrictions on Classes (normative)
+### 3.2 Restrictions on Classes (normative)
 
 Each restriction is stated on a class: for each instance of the class, the values of the property are restricted as given (for owl:allValuesFrom, every value of the property is an instance of the given class).
 
@@ -360,7 +360,7 @@ Each restriction is stated on a class: for each instance of the class, the value
 | SubClass Of | [ owl:onProperty bdqffdq:forValidation ; owl:allValuesFrom bdqffdq:Validation ] |
 
 
-### 4.3 General Axioms (normative)
+### 3.3 General Axioms (normative)
 #### 4.3.1 Disjointness (normative)
 
 None

@@ -701,11 +701,11 @@ header = header.replace('{term_key}', definitionTable)
 ## Page content
 
 text = "\n"
-text = text + "- [Range Axioms (normative)](#41-range-axioms-normative)\n"
-text = text + "- [Restrictions on Classes (normative)](#42-restrictions-on-classes-normative)\n"
-text = text + "- [General Axioms (normative)](#43-general-axioms-normative)\n"
-text = text + "\n## 4 Vocabulary Extension (normative)\n"
-text = text + "\n### 4.1 Range Axioms (normative)\n"
+text = text + "- [Range Axioms (normative)](#31-range-axioms-normative)\n"
+text = text + "- [Restrictions on Classes (normative)](#32-restrictions-on-classes-normative)\n"
+text = text + "- [General Axioms (normative)](#33-general-axioms-normative)\n"
+text = text + "\n## 3 Vocabulary Extension (normative)\n"
+text = text + "\n### 3.1 Range Axioms (normative)\n"
 # ?onProperty is the restricted property, ?restriction the restriction predicate (e.g. owl:someValuesFrom), ?filler its class.
 sparql = prefixes + "SELECT ?subject ?type ?range ?restriction ?onProperty ?filler WHERE { ?subject rdf:type ?type . ?subject rdfs:range ?range. optional { ?range a owl:Restriction . ?range owl:onProperty ?onProperty . ?range  ?restriction ?filler . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type  ) } } ORDER BY ?type ?subject "
 if debug: 
@@ -727,7 +727,7 @@ for r in queryResult :
 			text = text + "| Range | {} |\n".format(r.range.replace("https://rs.tdwg.org/bdqffdq/terms/","bdqffdq:").replace("http://www.w3.org/2001/XMLSchema#","xsd:"))
 	text = text + "\n\n"
 
-text = text + "### 4.2 Restrictions on Classes (normative)\n\n"
+text = text + "### 3.2 Restrictions on Classes (normative)\n\n"
 text = text + "Each restriction is stated on a class: for each instance of the class, the values of the property are restricted as given (for owl:allValuesFrom, every value of the property is an instance of the given class).\n\n"
 sparql = prefixes + "SELECT ?class ?onProperty ?restriction ?filler WHERE { ?class rdfs:subClassOf ?r . ?r a owl:Restriction ; owl:onProperty ?onProperty ; ?restriction ?filler . FILTER ( ?restriction != owl:onProperty && ?restriction != rdf:type ) } ORDER BY ?class ?onProperty ?restriction"
 if debug: 
@@ -770,7 +770,7 @@ def render_none_if_empty(row_count):
 		return "None\n\n"
 	return ""
 
-text = text + "### 4.3 General Axioms (normative)\n"
+text = text + "### 3.3 General Axioms (normative)\n"
 
 # 4.3.1 Disjointness
 text = text + "#### 4.3.1 Disjointness (normative)\n\n"

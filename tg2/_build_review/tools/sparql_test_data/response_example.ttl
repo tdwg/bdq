@@ -1,0 +1,23 @@
+# Example Data Quality Report fragment used by validate_sparql_in_templates.py
+# to test the query in the bdqffdq guide that looks up the Test, Arguments and
+# Mechanism that produced a given Response.  Not part of the standard.
+#
+# One Implementation of the Specification of VALIDATION_MAXDEPTH_INRANGE
+# (bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939), by an example Mechanism,
+# producing one ValidationResponse.
+
+@prefix bdqffdq: <https://rs.tdwg.org/bdqffdq/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<urn:uuid:0c7a7e0e-4a8e-4d2b-9f3e-3b8a2b6f1c10> a bdqffdq:Mechanism ;
+    rdfs:label "Example Mechanism" .
+
+<urn:uuid:9b2d4e61-7f0a-4c8e-8d1f-2a6c5e3b9d47> a bdqffdq:Implementation ;
+    bdqffdq:usesSpecification <https://rs.tdwg.org/bdqtest/specification/cebc8ba0-ca02-4f1e-830e-ec693bc628e4> ;
+    bdqffdq:implementedBy <urn:uuid:0c7a7e0e-4a8e-4d2b-9f3e-3b8a2b6f1c10> ;
+    bdqffdq:producesResponse <urn:uuid:5d0f8c6e-2c1b-4c55-9a39-6a1f0f4e7b21> .
+
+<urn:uuid:5d0f8c6e-2c1b-4c55-9a39-6a1f0f4e7b21> a bdqffdq:ValidationResponse ;
+    bdqffdq:hasResponseStatus bdqffdq:RUN_HAS_RESULT ;
+    bdqffdq:hasResponseResult bdqffdq:COMPLIANT ;
+    bdqffdq:hasResponseComment "dwc:maximumDepthInMeters is in the range 0 to 11000" .

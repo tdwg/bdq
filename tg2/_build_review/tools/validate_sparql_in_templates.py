@@ -31,6 +31,18 @@ matches:
 (case-insensitive), the query block is identified and reported as SKIPPED and is
 not executed. This supports template blocks that are fragments or placeholders.
 
+Test data directive
+-------------------
+A query that needs data not in the distributed graphs (e.g., a Data Quality
+Report with Responses), or that contains a placeholder, can be tested with:
+
+  <!-- test with data: sparql_test_data/example.ttl replacing "{placeholder}" with "value" -->
+
+on the line immediately preceding the opening ```sparql fence.  The Turtle file
+(relative to this tools directory) is added to a copy of the graph for that query
+only, and each occurrence of the placeholder text in the query is replaced with
+the value before it is run.  The "replacing … with …" part is optional.
+
 Modes / options
 ---------------
 Default:
@@ -111,6 +123,12 @@ FENCE_RE = re.compile(
 
 SKIP_LINE_RE = re.compile(r"^\s*<!--\s*skip when testing\s*-->\s*$", re.IGNORECASE)
 
+TEST_DATA_LINE_RE = re.compile(
+    r'^\s*<!--\s*test with data:\s*(?P<file>\S+)'
+    r'(?:\s+replacing\s+"(?P<old>[^"]+)"\s+with\s+"(?P<new>[^"]*)")?\s*-->\s*$',
+    re.IGNORECASE,
+)
+
 
 @dataclass(frozen=True)
 class ExtractedQuery:
@@ -119,6 +137,9 @@ class ExtractedQuery:
     sparql: str
     skipped: bool = False
     skip_reason: str = ""
+    test_data: Optional[Path] = None
+    replace_old: Optional[str] = None
+    replace_new: Optional[str] = None
 
 
 def read_text(path: Path) -> str:
@@ -169,7 +190,20 @@ def extract_sparql_blocks(md_text: str, template_path: Path) -> List[ExtractedQu
                 )
             )
         else:
-            out.append(ExtractedQuery(template_path=template_path, line_number=line_number, sparql=body))
+            td = TEST_DATA_LINE_RE.match(prev_line or "")
+            if td:
+                out.append(
+                    ExtractedQuery(
+                        template_path=template_path,
+                        line_number=line_number,
+                        sparql=body,
+                        test_data=Path(td.group("file")),
+                        replace_old=td.group("old"),
+                        replace_new=td.group("new"),
+                    )
+                )
+            else:
+                out.append(ExtractedQuery(template_path=template_path, line_number=line_number, sparql=body))
 
     return out
 
@@ -210,7 +244,22 @@ def format_row(row) -> str:
 
 
 def run_one_query(g: Graph, q: ExtractedQuery):
-    sparql = (DEFAULT_PREFIXES + "\n" + q.sparql).strip() if DEFAULT_PREFIXES else q.sparql
+    sparql = q.sparql
+    if q.replace_old is not None:
+        if q.replace_old not in sparql:
+            raise ValueError(f'placeholder "{q.replace_old}" not found in query')
+        sparql = sparql.replace(q.replace_old, q.replace_new or "")
+    sparql = (DEFAULT_PREFIXES + "\n" + sparql).strip() if DEFAULT_PREFIXES else sparql
+    if q.test_data is not None:
+        if not q.test_data.exists():
+            raise FileNotFoundError(f"test data not found: {q.test_data}")
+        qg = Graph()
+        for t in g:
+            qg.add(t)
+        for prefix, ns in g.namespaces():
+            qg.bind(prefix, ns, replace=True)
+        qg.parse(q.test_data.as_posix(), format="turtle")
+        return qg.query(sparql)
     return g.query(sparql)
 
 

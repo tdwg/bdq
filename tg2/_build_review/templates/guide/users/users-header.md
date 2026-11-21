@@ -245,7 +245,7 @@ A Response.status of INTERNAL_PREREQUISITES_NOT_MET indicates that the data them
 
 `Issue` Tests can be thought of as warning flags. These Tests provide a warning that an issue may need further investigation by a human who could determine what action should be taken.
 
-If we look at the Test `ISSUE_DATAGENERALIZATIONS_NOTEMPTY`, the Test alerts users that there is value in the field that indicates that the data may have been generalized in some way.
+If we look at the Test `ISSUE_DATAGENERALIZATIONS_NOTEMPTY`, the Test alerts users that there is a value in the field that indicates that the data may have been generalized in some way.
 For example, the field for `dwc:dataGeneralizations` may say "placed on quarter degree grid". A `Response` could be:
 
 * `Response.status`=RUN_HAS_RESULT 
@@ -287,9 +287,9 @@ For example, if 17 Tests proposed amendments on a particular `Single Record`; th
 Most `Measure` Tests defined in BDQ are `Multi Record` Tests that take as input the results of `Single Record` Tests on some data set and provide metrics or filters on those data.  These Tests are central to formal application of `Quality Control` and `Quality Assurance` in the Fitness For Use Framework. See the discussion in [Quality Control and Quality Assurance](#21-quality-control-and-quality-assurance-non-normative) above.
 
 `Measures` may be: 
-- `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., MEASURE_EVENTDATE_DURATIONINSECONDS), or that count the results of other Tests on the same `Single Record` (e.g., MEASURE_AMENDMENTS_PROPOSED).
-- `Single Record` `Measures` that take the outputs of other `Single Record` Tests as their inputs and return metrics on those particular records (e.g., MEASURE_AMENDMENTS_PROPOSED).
-- `Multi Record` `Measures` that take the outputs of `Single Record` Tests as their inputs and return metrics or filters on those data (e.g., MEASURE_VALIDATIONTESTS_NOTCOMPLIANT).
+- `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., MEASURE_EVENTDATE_DURATIONINSECONDS, which returns the duration of the `dwc:eventDate` in seconds).
+- `Single Record` `Measures` that take the outputs of other `Single Record` Tests as their inputs and return metrics on those particular records (e.g., MEASURE_AMENDMENTS_PROPOSED, which counts the `Amendments` that proposed changes to a `Single Record` in the amendment phase of an analysis).
+- `Multi Record` `Measures` that take the outputs of `Single Record` Tests as their inputs and return metrics or filters on those data (e.g., MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND, which counts the `Single Records` in a `Multi Record` for which VALIDATION_COUNTRY_FOUND returned COMPLIANT).
 
 ##### 3.2.3.5 Amendment Test Reports (non-normative)
 
@@ -362,7 +362,7 @@ Thus the parameter changes the behavior of the Test to fit local needs.
 
 It is important to identify the use of non-default parameter values in reports, so that users can understand the context in the Test results.
 
-If a Test with a non-default `Parameter` value is used, this should be represented to consumers of data quality reports by combining at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE)) in combination with the `Parameter` (e.g., `bdqval:maximumValidDepthInMeters`) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example, a Data Quality Report could identify this Test as `VALIDATION_MAXDEPTH_INRANGE with bdqval:maximumValidDepthInMeters=1642` rather than simply `VALIDATION_MAXDEPTH_INRANGE`
+If a Test with a non-default `Parameter` value is used, this should be represented to consumers of data quality reports by combining at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MAXDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MAXDEPTH_INRANGE)) in combination with the `Parameter` (e.g., `bdqval:maximumValidDepthInMeters`) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example, a Data Quality Report could identify this Test as `VALIDATION_MAXDEPTH_INRANGE with bdqval:maximumValidDepthInMeters=1642` rather than simply `VALIDATION_MAXDEPTH_INRANGE`
 
 Similarly, Test Results should be accompanied by a `Response.comment` that includes text expressing something similar to "Non-default bdqval:maximumValidDepthInMeters=1642" as in the example above.  Both are important to help users understand the context of Test results, and to allow users to identify where non-default parameter values are used.
 

@@ -1092,9 +1092,9 @@ In the BDQ Fitness For Use Framework, that dataset-level view is provided by `Mu
 
 Before we focus on `Multi Record` `Measures`, it is helpful to distinguish three common patterns of `Measures` in BDQ:
 
-- `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS)).
-- `Single Record` `Measures` that summarize outcomes of other `Single Record` Tests on the same `Single Record` (e.g., `MEASURE_AMENDMENTS_PROPOSED`).
-- `Multi Record` `Measures` that take the outputs of `Single Record` Tests as their inputs and return metrics or filters across a dataset (e.g., [MEASURE_VALIDATIONTESTS_NOTCOMPLIANT](../terms/bdqtest/index.md#MEASURE_VALIDATIONTESTS_NOTCOMPLIANT)).
+- `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS), which returns the duration of the `dwc:eventDate` in seconds).
+- `Single Record` `Measures` that take the outputs of other `Single Record` Tests as their inputs and return metrics on those particular records (e.g., [MEASURE_AMENDMENTS_PROPOSED](../terms/bdqtest/index.md#MEASURE_AMENDMENTS_PROPOSED), which counts the `Amendments` that proposed changes to a `Single Record` in the amendment phase of an analysis).
+- `Multi Record` `Measures` that take the outputs of `Single Record` Tests as their inputs and return metrics or filters across a dataset (e.g., [MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND](../terms/bdqtest/index.md#MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND), which counts the `Single Records` in a `Multi Record` for which VALIDATION_COUNTRY_FOUND returned COMPLIANT).
 
 The remainder of this section focuses on `Multi Record` `Measures` that take the output of other Tests as their input, because such `Measures` are central to practical `Quality Control` workflows on datasets.
 
