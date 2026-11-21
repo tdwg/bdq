@@ -11,6 +11,12 @@
 
 The text of the documents (guides, supplement, tutorial, landing page, and the headers and footers of all documents) is maintained in this repository, in [`../_build_review/templates/`](../_build_review/templates/). Their metadata (titles, abstracts, authors and contributors with their roles, licence, dates, versions) is in rs.tdwg.org. See also the table of sources of truth in [`../README.md`](../README.md#where-the-bdq-standard-is-maintained-sources-of-truth).
 
+The files that go with the documents are maintained in the templates too, and copied into `tg2/_review/` by the build: edit the templates, never the copies.
+
+- **Images** (`.svg`, `.png`): in each document's template directory, beside its `*-header.md`, e.g. `templates/guide/bdqffdq/`, `templates/standard_landing/`. The images are their own source; no diagram sources are kept here.
+- **Test validation data**: `templates/guide/implementers/TG2_test_validation_data.csv` and `TG2_test_validation_data_nonprintingchars.csv`. The copies in `tg2/_review/docs/guide/implementers/` are what the site publishes and what bdqtestrunner reads (from `master` on GitHub), but a change made only there is lost at the next build.
+- **Site assets** (stylesheet, scripts, logos, the RDF graph icon): `_site_resources/assets/`.
+
 ## Files in this repository that are generated: do not edit
 
 - `tg2/_review/vocabulary/*_term_versions.csv`, `tg2/_review/dist/bdqffdq.*` (including `bdqffdq.owl`), `tg2/_review/dist/bdqffdq_terms.*`, `tg2/_review/dist/bdqtest.*`, and the GUID tables in `tg2/core/` (`TG2_tests_additional_guids.csv`, `information_element_guids.csv`, `TG2_policy_guids.csv`, `TG2_citation_guids.csv`): exported from rs.tdwg.org by [`../_make_review/export_rs_baseline.py`](../_make_review/export_rs_baseline.py), which records the rs.tdwg.org commit in `tg2/_make_review/rs_tdwg_org_baseline.json`. The site build fails if they differ from rs.tdwg.org's `bdq` branch.
