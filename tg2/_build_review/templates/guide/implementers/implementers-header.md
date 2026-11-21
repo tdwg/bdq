@@ -396,7 +396,7 @@ In the `hasExpectedResponse` of a `Specification` the phrase "interpreted as" SH
 2. matching a representation of a value unambiguously onto a controlled vocabulary (e.g., ‘WGS84’ to ‘EPSG:4326’), **or**
 3. interpreting the representation of a numeric value (e.g., a Roman numeral) as a number (e.g., an integer).
 
-When interpretations of strings containing Roman numerals as numbers is intended, guidance associated with the text, usually in the `skos:note` for the Test, MUST be explicit about this meaning. For example, the `skos:note` for the Test [AMENDMENT_MONTH_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_MONTH_STANDARDIZED) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use Roman numeral months to avoid language and day/month vs month/day order." This is explicit guidance for the meaning of "interpreted as" in the specification for this Test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive".
+When interpretations of strings containing Roman numerals as numbers is intended, guidance associated with the text, usually in the `skos:note` for the Test, MUST be explicit about this meaning. For example, the `skos:note` for the Test [AMENDMENT_MONTH_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_MONTH_STANDARDIZED) states: "Implementations should translate interpretable Roman numerals in the range I-XII in dwc:month as integer month values 1-12, as some natural science domains use roman numeral months to avoid language and day/month vs month/day order concerns." This is explicit guidance for the meaning of "interpreted as" in the specification for this Test: "AMENDED the value of dwc:month if it can be unambiguously interpreted as an integer between 1 and 12 inclusive".
 
 #### 2.3.4 Handling Leading and Trailing Whitespace (normative)
 
@@ -630,7 +630,7 @@ Numeric values from `Multi Record` `Measure` Tests under Quality Control MAY be 
 
 While BDQ Tests are designed to be independent and agnostic to sequence of Test execution, some `Amendment` Tests have potential interactions given the by-design redundancies in Darwin Core (Wieczorek et al. 2012). In consequence the order of execution of some `Amendment` Tests can affect results. This is a particular concern when developing workflows with parallel data streams. When `Amendment` Tests are executed in a workflow where downstream `Amendments` operate on data with the changes proposed by upstream `Amendments` applied, the following sequences SHOULD be followed.
 
-Given that `Amendment` Tests propose a value to a primary term (e.g., `dwc:eventDate`, `dwc:taxonID`) from secondary terms (e.g., `dwc:day`, `dwc:year`, `dwc:scientificName`), primary-from-secondary SHOULD be applied before secondary-from-primary. Where multiple `Amendments` on secondary terms could propose conflicting changes to a primary term, the sequence of `Amendment` Tests SHOULD be ordered. 
+Given that `Amendment` Tests propose a value to a primary term (e.g., `dwc:eventDate`, `dwc:scientificNameID`) from secondary terms (e.g., `dwc:day`, `dwc:year`, `dwc:scientificName`), primary-from-secondary SHOULD be applied before secondary-from-primary. Where multiple `Amendments` on secondary terms could propose conflicting changes to a primary term, the sequence of `Amendment` Tests SHOULD be ordered. 
 
 For `dwc:eventDate`:
 
@@ -644,7 +644,7 @@ For `dwc:eventDate`:
 
 See [Diagram of the TIME-oriented Tests and Information Elements Acted Upon (non-normative)](../../supplement/index.md#5213-diagram-of-the-time-oriented-tests-and-information-elements-acted-upon-non-normative) in [BDQ Supplemental Information](../../supplement/index.md) for the relationships between the Tests and associated `Information Elements` `Acted Upon` that operate on aspects of date and time (Darwin Core class `dwc:Event`). 
 
-Similarly, for `dwc:taxonID`:
+Similarly, for `dwc:scientificNameID`:
 
 | Order | Test |
 |-------|------|
@@ -670,13 +670,13 @@ An implementation of a Test MAY be complete as described with `bdqffdq:` terms i
 One complexity introduced by the abstraction of Tests into APIs that take [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) as input and output is to make sure that `Response` objects are correctly mapping Darwin Core terms loaded in an execution framework onto the parameters of an implementation method. Consider an implementation of the Test [VALIDATION_ENDDAYOFYEAR_INRANGE](../../terms/bdqtest/index.md#VALIDATION_ENDDAYOFYEAR_INRANGE) that has the following method signature: 
 
 ```java
-    public Response validationEnddayofyearInrange(String startDayOfYear, String eventDate)
+    public Response validationEnddayofyearInrange(String endDayOfYear, String eventDate)
 ```
 
-If an implementation framework calls this method, reversing the binding of `dwc:startDayOfYear` and `dwc:eventDate`, for example: 
+If an implementation framework calls this method, reversing the binding of `dwc:endDayOfYear` and `dwc:eventDate`, for example: 
 
 ```java
-    Response endDayTestResponse = validationEnddayofyearInrange(eventDate, startDayOfYear);
+    Response endDayTestResponse = validationEnddayofyearInrange(eventDate, endDayOfYear);
 ```
 
 the Test will not return the desired result, even if the implementation is correct. Thus correct matching of input terms to the implementation of each Test is critical. 
@@ -708,7 +708,7 @@ An execution framework can use reflection to determine, from the annotations on 
 Additional metadata can be added in Java annotations. In the following, again from the FilteredPush `event_date_qc` (Morris, Lowery & Johaadien 2026) library, annotations enable an implementation framework to look up a Test implementation by the Test GUID, and can provide metadata about the Test to users. For maintenance, annotations can be used to determine if an implementation is up to date with the latest version of a Test specification.
 
 ```java
-    @Validation(label="_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
+    @Validation(label="VALIDATION_ENDDAYOFYEAR_INRANGE", description="Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?")
     @Provides("9a39d88c-7eee-46df-b32a-c109f9f81fb8")
     @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2023-09-18")
     @Specification("INTERNAL_PREREQUISITES_NOT_MET if dwc:endDayOfYear is bdqval:Empty or if the value of dwc:endDayOfYear is equal to 366 and (dwc:eventDate is bdqval:Empty or the value of dwc:eventDate cannot be interpreted to find a single year or an end year in a range); COMPLIANT if the value of dwc:endDayOfYear is an integer between 1 and 365 inclusive, or if the value of dwc:endDayOfYear is 366 and the end year interpreted from dwc:eventDate is a leap year; otherwise NOT_COMPLIANT")
@@ -883,7 +883,7 @@ In some environments, an implementation MAY be a lightweight implementation of a
 
 Consider the `Validation` Test [VALIDATION_ENDDAYOFYEAR_INRANGE](../../terms/bdqtest/index.md#VALIDATION_ENDDAYOFYEAR_INRANGE)
 
-An SQL query that implements the abstract concept of the `dwc:enddayofyear` being in range could take the following form, using available database fields that contain data related to the abstract `Information Element`, but are not precisely mapped to the concrete `Acted Upon` and `Consulted` [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) in the specification. This query produces a `Data Quality Report` with: 
+An SQL query that implements the abstract concept of the `dwc:endDayOfYear` being in range could take the following form, using available database fields that contain data related to the abstract `Information Element`, but are not precisely mapped to the concrete `Acted Upon` and `Consulted` [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) in the specification. This query produces a `Data Quality Report` of the NOT_COMPLIANT records:
 
 ```postgresql
     SELECT collecting_event_id, enddayofyear,
@@ -907,6 +907,8 @@ An SQL query that implements the abstract concept of the `dwc:enddayofyear` bein
           )
         );
 ```
+
+Such abstract tests are similar to the concepts of Query Selectors in Morris et al. (2013) and GBIF's Rule Based Annotations (Waller 2026).
 
 #### 6.4.7 Implementing a Test in a Specific Environment (non-normative)
 
@@ -1367,7 +1369,7 @@ The header for the data in the Test Conformance Testing Data files includes a co
 | bdqval:annotation | A placeholder for an annotation when Testing for their presence (this value does not imply the existence of the term annotation in the bdqval: namespace). |
 | bdqval:sourceAuthority | Input parameter for some Parameterized Tests. |
 
-**NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the `Input.Data` structure containing `bdqval:sourceAuthority`=`https://invalid/invalidservice`, for example:
+**NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the `Input.Data` structure containing a source authority parameter (e.g., `bdqval:sourceAuthority` or `bdqval:taxonIsMarine`) set to `https://invalid/invalidservice`, for example:
 
 ```
 bdqval:taxonIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""

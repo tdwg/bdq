@@ -679,6 +679,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Morris PJ, Lowery D, Johaadien R (2026) FilteredPush/event_date_qc: Release version 3.2.0 of event_date_qc (v3.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386311</li>
 <li>Morris PJ, Lowery D, Morris RA (2026) kurator-org/kurator-ffdq: Release version 4.0.0 of kurator-ffdq (v4.0.0). Zenodo. https://doi.org/10.5281/zenodo.24386307</li>
 <li>Morris PJ, Lowery D, Wieczorek J (2026) FilteredPush/geo_ref_qc: Release version 2.2.0 of geo_ref_qc (v2.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386313</li>
+<li>Morris RA, Dou L, Hanken J, Kelly M, Lowery DB, Ludäscher B, Macklin JA, Morris PJ (2013) Semantic Annotation of Mutable Data. PLoS ONE 8(11): e76093. https://doi.org/10.1371/journal.pone.0076093</li>
 <li>Natural Earth (2009) Land 10m. https://www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip</li>
 <li>Natural Earth (2009) Minor Islands. https://www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip</li>
 <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li>
@@ -703,6 +704,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>W3C (2017) Shapes Constraint Language (SHACL) https://www.w3.org/TR/shacl/</li>
 <li>W3C (2024) Data Catalog Vocabulary (DCAT) - Version 3. https://www.w3.org/TR/vocab-dcat-3/</li>
 <li>Waller JT (2023) Processing Country Centroids at the Global Biodiversity Information Facility. Biodiversity Information Science and Standards 7: e110728. https://doi.org/10.3897/biss.7.110728</li> 
+<li>Waller JT (2026) Introducing Rule-based Annotations. GBIF Data Blog. https://data-blog.gbif.org/post/2026-01-21-rule-based-annotations/</li>
 <li>Wieczorek C and Wieczorek J (2021) Georeferencing Calculator. https://georeferencing.org/calculator/</li>
 <li>Wieczorek J, Bloom D, Guralnick R, Blum S, Döring M, Giovanni R, Robertson T, Vieglais D (2012) Darwin Core: An Evolving Community-Developed Biodiversity Data Standard. PLoS ONE 7(1): e29715. https://doi.org/10.1371/journal.pone.0029715</li>
 <li>Wikipedia (2020) Extreme points of Antarctica. https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica</li>

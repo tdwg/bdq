@@ -780,10 +780,10 @@ Notes are present when some aspects of a Test may not be obvious to the casual u
 > “Locations outside of a jurisdiction covered by a country code may
 > have a value in the field dwc:countryCode, the ISO user defined codes
 > include XZ used by the UN for installations on the high seas and
-> suitable for a marker for the high seas. Also available in the ISO
-> user defined codes is ZZ, used by GBIF to mark unknown countries. This
-> test should accept both XZ and ZZ as COMPLIANT country codes. This
-> test must return NOT_COMPLIANT if there is leading or trailing
+> recommended in Darwin Core to designate the high seas. Also available
+> in the ISO user defined codes is ZZ, used by Darwin Core and GBIF to
+> mark unknown countries. This Test should accept both XZ and ZZ as
+> COMPLIANT country codes. This Test must return NOT_COMPLIANT if there is leading or trailing
 > whitespace or there are leading or trailing non-printing characters.”
 
 ### 6.9 List the properties of the Test (non-normative)
@@ -1162,7 +1162,7 @@ This is a concern for both a Test and test suite design when data are:
 1. When a `Validation` for that term has an Expected Response that includes a clause of INTERNAL_PREREQUISITES_NOT_MET if the term under test is `bdqval:Empty` and
 1. When the accompanying `MultiRecord` `Measure` for `Quality Assurance` is phrased such that only COMPLIANT results are considered COMPLETE, and INTERNAL_PREREQUISITES_NOT_MET results are not considered COMPLETE.
 
-If some `Validation` assesses a property of some term that is expected to not contain a value, say evaluating the range of `dwc:maximumDepthInMeters`, and in order to test one thing and better distinguish between causes of problems, asserts that the prerequisites for running the test are not met if the value of the term is `bdqval:Empty`, e.g. `INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty`, then the phrasing of the accompanying `Measure` for `Quality Assurance` is important.  If the `hasExpectedResponse` of the `MultiRecord` `Measure` is phrased as: `COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.` then all data for which `dwc:maximumDepthInMeters` lacks a value will be deemed unfit for use for any `Use Case` that these Tests are composed with.   Thus, in a global data set, all terrestrial data would be unfit for use, likely not the desired conclusion.  
+If some `Validation` assesses a property of some term that is expected to not contain a value, say evaluating the range of `dwc:maximumDepthInMeters`, and in order to test one thing and better distinguish between causes of problems, asserts that the prerequisites for running the test are not met if the value of the term is `bdqval:Empty`, e.g. `INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty`, then the phrasing of the accompanying `Measure` for `Quality Assurance` is important.  If the `hasExpectedResponse` of the `MultiRecord` `Measure` is phrased as: `COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.` then all data for which `dwc:maximumDepthInMeters` lacks a value will be deemed unfit for use for any `Use Case` that these Tests are composed with.   Thus, in a global data set, all terrestrial data would be unfit for use, likely not the desired conclusion.  
 
 There are two approaches to framing tests to evaluate properties of terms that may legitimately be empty.
 * One approach is to frame `Validations` of properties of terms other than emptiness as being COMPLIANT if the term under test is `bdqval:Empty`, and then evaluate whatever property of the term (e.g. depth in range) is actually under test, and keep the accompanying `MultiRecord` `Measure` as returning COMPLETE only for COMPLIANT results.  This approach is formally correct, but causes the `Validation` to mix concerns (both empty and in range values deemed COMPLIANT) and to be less flexible in composition with `Use Cases`. 
@@ -1346,11 +1346,11 @@ And:
 
 We can quickly see two large gaps in the data: the `scientificNameID` field is completely empty, and the `prov:wasAttributedTo` field is present but does not conform to the expected standard.  These might be good targets for automated `Quality Control` efforts.  An examination of the data values or the `Response.comment` values from the underlying `Single Record` `Validations` may help identify specific problems and potential fixes.  For example, if the comment indicates that `prov:wasAttributedTo` values are present but do not match the expected ORCID format, we could look for common patterns in those values to design a mapping or transformation to fix them at scale.  We can see that 90% of records have a resolvable scientific name, so for that 90% it should be very straightforward to look up a corresponding `scientificNameID` value, so that might be a good target for an automated lookup (e.g. including [AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON) in the `Use Case` and workflow) to fix that problem at scale. 
 
-The 10% of records with an unresolvable scientific name likely require manual review and a focused data cleaning project by a domain specialist with an understanding of the taxonomy involved in order to identify why these records are not matched to the taxonomic source authority, to resolve any problems, and to, in the process, find the correct `scientificNameID` value for these records.  This focused manual review should be carried out on distinct values of `dwc:scientificName` that are not resolvable, rather than on individual records. On examination of distinct values, these 1000 records might be a single typo in a single name, or they might involve many distinct names and many distinct problems.
+The 9.5% of records (950) with a scientific name that can't be resolved likely require manual review and a focused data cleaning project by a domain specialist with an understanding of the taxonomy involved in order to identify why these records are not matched to the taxonomic source authority, to resolve any problems, and to, in the process, find the correct `scientificNameID` value for these records.  This focused manual review should be carried out on distinct values of `dwc:scientificName` that are not resolvable, rather than on individual records. On examination of distinct values, these 950 records might be a single typo in a single name, or they might involve many distinct names and many distinct problems.
 
 The 5% of records missing `dwc:footprintWKT` are a core manual task for the domain specialist curators of this data set.  They will need to find the distributions for taxa that don't have them.  
 
-The 6% of records with invalid `dwc:footprintWKT` likely need to be addressed by a GIS specialist. 
+The 1% of records (100) with an invalid `dwc:footprintWKT` likely need to be addressed by a GIS specialist. 
 
 Thus, these measure results not only provide a picture of the quality of the dataset, but also provide a starting point for a roadmap for how to improve the quality of the dataset for the `Use Case` of being a "validated distribution authority" for biodiversity science, with different types of problems that require different types of expertise to fix, and different types of fixes, some of which can be automated at scale, others of which will require manual evaluation.
 

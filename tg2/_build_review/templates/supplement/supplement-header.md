@@ -877,7 +877,7 @@ During the development of the BDQ standard, there were significant discussions a
 
 `Issues` can result in a `Response.status`="RUN_HAS_RESULT" accompanied by a `Response.result`="POTENTIAL_ISSUE" or "NOT_ISSUE".
 
-An `Issue` is the equivalent to a `Response.status`="NOT_COMPLIANT" from a `Validation` Test. A `Response.result`="NOT_ISSUE" is similar to a `Response.result`="COMPLIANT" from a `Validation` Test, but with slightly different semantics, where "COMPLIANT" means that the data are fit for some use. A `Response.result`="NOT_ISSUE" means that there was no detected reason for the data not to be fit for use. A `Response.result`="POTENTIAL_ISSUE" is the reason we incorporated `Issue`-type Tests into the BDQ standard. "POTENTIAL_ISSUE" means that the `Issue` Test revealed a concern in the data that might make it unfit for some use. Data flagged with potential issues require a human review. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) will return a `Response.result`="POTENTIAL_ISSUE" if `dwc:dataGeneralizations` contains a value. Any value in `dwc:dataGeneralizations` asserts changes have been made to generalize other [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) and requires a human review to determine whether the data are fit for purpose.
+A `Response.result`="IS_ISSUE" from an `Issue` Test is comparable to a `Response.result`="NOT_COMPLIANT" from a `Validation` Test. A `Response.result`="NOT_ISSUE" is similar to a `Response.result`="COMPLIANT" from a `Validation` Test, but with slightly different semantics, where "COMPLIANT" means that the data are fit for some use. A `Response.result`="NOT_ISSUE" means that there was no detected reason for the data not to be fit for use. A `Response.result`="POTENTIAL_ISSUE" is the reason we incorporated `Issue`-type Tests into the BDQ standard. "POTENTIAL_ISSUE" means that the `Issue` Test revealed a concern in the data that might make it unfit for some use. Data flagged with potential issues require a human review. For example, [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) will return a `Response.result`="POTENTIAL_ISSUE" if `dwc:dataGeneralizations` contains a value. Any value in `dwc:dataGeneralizations` asserts changes have been made to generalize other [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) and requires a human review to determine whether the data are fit for purpose.
 
 #### 3.1.3 Measures (non-normative)
 
@@ -931,7 +931,7 @@ In the BDQ standard, we define these `Measures` to return counts of COMPLIANT re
 
 Some `Validations` return `Response.status`="INTERNAL_PREREQUISITES_NOT_MET" when one or more of the input `Information Elements` contain `bdqval:Empty` values. For some `Use Cases`, `Empty` values in some fields make the data not fit for use (these are usually tested directly with VALIDATION...NOTEMPTY Tests), however, some `Validations` operate on sparse data or other cases where the data are fit for use even without values, but when values are present, they must comply with some restriction. For example, `dwc:minimumElevationInMeters` and `dwc:maximumElevationInMeters` are not expected to be populated for marine data, but are expected to be within range when values are supplied for terrestrial data. A subset of the `Multi Record` Quality Assurance `Measures` accommodate such cases by returning a `Response.result`="COMPLETE" for `Validations` that are either `Response.result`="COMPLIANT" or `Response.status`="INTERNAL_PREREQUISITES_NOT_MET". Thus, they can measure that all of the `Single Records` in a `Multi Record` either have for example, no value in `dwc:minimumElevationInMeters` or have an in-range value for `dwc:minimumElevationInMeters`.
 
-It is possible, but less flexible, to frame `Validations` to return `Result.response`="COMPLIANT" for either `bdqval:Empty` values or `bdqval:NotEmpty` values that satisfy other `Validation` criteria. Concerns are better separated, and individual Tests are better composed to fit particular user needs, by having the `Validations` treat `Empty` data with a `Response.status`="INTERNAL_PREREQUISITES_NOT_MET", and then framing `Multi Record` Quality Assurance `Measures` as appropriate for a given `Use Case`.
+It is possible, but less flexible, to frame `Validations` to return `Response.result`="COMPLIANT" for either `bdqval:Empty` values or `bdqval:NotEmpty` values that satisfy other `Validation` criteria. Concerns are better separated, and individual Tests are better composed to fit particular user needs, by having the `Validations` treat `Empty` data with a `Response.status`="INTERNAL_PREREQUISITES_NOT_MET", and then framing `Multi Record` Quality Assurance `Measures` as appropriate for a given `Use Case`.
 
 ### 3.3 Data Quality Dimension and "Warning Types" (non-normative)
 
@@ -945,7 +945,7 @@ A "Warning Type" for each BDQ Test was envisioned to provide insight into the na
 | Likeliness                          |           |         |            |              |         |       |        |     2    |   2   |
 | Reliability                         |           |         |            |              |         |   1   |    2   |          |   3   |
 | Resolution                          |           |         |            |              |         |   1   |    1   |          |   2   |
-| Total                               |     2     |   28    |    22      |       7      |    40   |   3   |    8   |     2    | 113   |
+| Total                               |     2     |   29    |    22      |       7      |    40   |   3   |    8   |     2    | 113   |
 
 **Table 1**: `Data Quality Dimension` vs Warning Type (as of 2023) with the number of Tests as cell values.
 
@@ -975,7 +975,7 @@ gives the following distribution of Test Types by `Dimension`, with `Multi Recor
 | Conformance            |      41    |     17    |   1   |         |         82          |
 | Consistency            |       7    |     1     |       |         |         14          |
 | Likeliness             |       2    |           |       |         |         4           |
-| Reliability            |            |           |       |    2    |                     |
+| Reliability            |            |           |   1   |    3    |                     |
 | Resolution             |            |           |   1   |    1    |                     |
 
 
@@ -1128,7 +1128,7 @@ Given that the Tests are based on Darwin Core terms, we 'piggy-back' on the comm
 
 #### 3.11.2 Principles (non-normative)
 
-**Informative**. In general, Tests have power when they are likely to yield a mix of outcomes rather than a single outcome for 0% or 100% of all records.  For example, a `Validation` Test should be expected to return neither COMPLIANT nor NOT_COMPLIANT for almost all data. Tests may, however, identify non-compliant data in a large portion of cases where we wish to highlight an important point about quality that should be, but is not currently met by the community (e.g., where `dcterms:license` is `Empty`). In other words, where a large portion of the community is not providing values for a term we consider important for data quality, or consistently providing values for a term that are inconsistent with best practices.
+**Informative**. In general, Tests have power when they are likely to yield a mix of outcomes rather than a single outcome for 0% or 100% of all records.  For example, a `Validation` Test should not be expected to return only COMPLIANT, or only NOT_COMPLIANT, for almost all data. Tests may, however, identify non-compliant data in a large portion of cases where we wish to highlight an important point about quality that should be, but is not currently met by the community (e.g., where `dcterms:license` is `Empty`). In other words, where a large portion of the community is not providing values for a term we consider important for data quality, or consistently providing values for a term that are inconsistent with best practices.
 
 **Simple**. Each Test specification must be as simple as possible. The more complex a Test, the more difficult it will be to implement and to evaluate against real-world data. While the human-readable description of the Test may be open to interpretation, Test specifications were written to allow for no ambiguity. In some cases, this has meant that some specifications are lengthy, but required if implementation and interpretation are to be accurate. For example, [VALIDATION_GEOGRAPHY_STANDARD](https://github.com/tdwg/bdq/issues/139) was proposed, but abandoned after discussion and tagged as "DO NOT IMPLEMENT" because it would be too complex to capture in a clean and simple specification. Conversely, [VALIDATION_DAY_STANDARD](../terms/bdqtest/index.md#VALIDATION_DAY_STANDARD) asks one simple question: is the value of `dwc:day` an integer in the range 1 to 31 inclusive.
 
@@ -1233,7 +1233,7 @@ If the `Information Element` is a single term (e.g. `dwc:countryCode`), the info
 
 In some cases we have departed from this simple convention in labels for more complex Tests to permit easy identification of the nature of the Test:
 * The evaluation LESSTHAN is framed in a different order as `{informationelement}_LESSTHAN_{informationelement}`. e.g. [VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH](../terms/bdqtest/index.md#VALIDATION_MINDEPTH_LESSTHAN_MAXDEPTH) 
-* Amendments that fill in a value may be framed as e.g. `AMENDMENT_{inputinformationelement}_{evaluation}_{outputinformationelement}` e.g. [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
+* Amendments that fill in a value may be framed as e.g. `AMENDMENT_{outputinformationelement}_FROM_{inputinformationelement}` e.g. [AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID](../terms/bdqtest/index.md#AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID)
 
 These conventions for forming Test labels are **simply conventions**, and neither the Evaluations nor the Labels for multiple Information Elements are a formal controlled vocabulary with a namespace (unlike the terms in `bdqval:` and the other supporting vocabularies in BDQ).
 
@@ -1247,7 +1247,7 @@ The tables below list the terms used for the Test `Types`, the Labels for multip
 | MEASURE        | A Test Type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`          | [MEASURE_AMENDMENTS_PROPOSED](../terms/bdqtest/index.md#MEASURE_AMENDMENTS_PROPOSED)        |
 | MULTIRECORD_MEASURE_COUNT      | A Test Type of `Measure` that takes as input the outputs of other Tests (usually `Validations`) across a `Multi Record`.  For example, count across MultiRecords of a VALIDATION Test that return a Response of COMPLIANT.  Provides metrics for `Quality Control`. | [MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY](../terms/bdqtest/index.md#MULTIRECORD_MEASURE_COUNT_COMPLIANT_BASISOFRECORD_NOTEMPTY)     |
 | MULTIRECORD_MEASURE_QA | Measurement over MultiRecords of a VALIDATION Test where every record complies with Quality Assurance requirements by being COMPLIANT         | [MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY](../terms/bdqtest/index.md#MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY)  |
-| VALIDATION     | A Test type that expresses how the fitness of data for some use may be measured. See `bdqffdq:Measure`      | [VALIDATION_BASISOFRECORD_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)      |
+| VALIDATION     | A Test type that expresses how data may be evaluated for fitness for use. See `bdqffdq:Validation`      | [VALIDATION_BASISOFRECORD_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_BASISOFRECORD_NOTEMPTY)      |
 | <strong><a name="abstract-information-element-labels">Labels for multiple Information Elements</a></strong> ||| <!-- *************************************************************** -->
 | CLASSIFICATION | A general category of specific `bdqffdq:InformationElements` that represents a combination of Darwin Core terms from the `dwc:Taxon` class that are used to express taxonomic classification. | [VALIDATION_CLASSIFICATION_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT) |
 | COORDINATES    | A general category of specific `bdqffdq:InformationElements` that represents the combination of the Darwin Core terms `dwc:decimalLatitude` and `dwc:decimalLongitude` and may include metadata terms including `dwc:geodeticDatum`.      | [VALIDATION_COORDINATES_NOTZERO](../terms/bdqtest/index.md#VALIDATION_COORDINATES_NOTZERO)         |
@@ -1434,7 +1434,7 @@ AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted 
 otherwise NOT_AMENDED
 ```
 
-**Data Quality Dimension** [normative]: A Test will focus on one of the following scenarios based on the Data Quality Framework: "Completeness" (the extent to which data elements are present and sufficient); "Conformance" (conforms to a format, syntax, type, range, standard or to the own nature of the `Information Element`); "Consistency" (agreement among related `Information Elements` in the data); "Likeliness" (probability that values are real); "Resolution" (is sufficient detail present in the value/s - a measure the granularity of the data). The [Data Quality Dimension](../list/bdqdim/index.md) for this Test. Example: `Conformance`
+**Data Quality Dimension** [normative]: A Test will focus on one of the following scenarios based on the Data Quality Framework: "Completeness" (the extent to which data elements are present and sufficient); "Conformance" (conforms to a format, syntax, type, range, standard or to the own nature of the `Information Element`); "Consistency" (agreement among related `Information Elements` in the data); "Likeliness" (probability that values are real); "Reliability" (the degree to which data values agree with and describe an identified source of truth); "Resolution" (is sufficient detail present in the value/s - a measure the granularity of the data). The [Data Quality Dimension](../list/bdqdim/index.md) for this Test. Example: `Conformance`
 
 **Term_Actions** [non-normative]: The last two components of the Label, useful in filtering Tests in CSV files. Example: `COUNTRYCODE_STANDARD`
 
@@ -1452,7 +1452,7 @@ Only a subset of all [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darw
 
 **Specification Last Updated**: The date of the most recent change to a normative part of the Test, such as to the wording of an Expected Response/Specification (e.g., "2023-06-23").
 
-**Examples** [non-normative]: Example of inputs and the expected output from an implementation of the Test given those outputs. ‘Pass’ and ‘Fail’ type examples are provided for clarity of each Test. All examples listed are also present in the conformance testing data suite. Example: `[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]`.
+**Examples** [non-normative]: Example of inputs and the expected output from an implementation of the Test given those inputs. ‘Pass’ and ‘Fail’ type examples are provided for clarity of each Test. All examples listed are also present in the conformance testing data suite. Example: `[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]`.
 
 **Source** [non-normative]: The origin of the concept of the Test (e.g., "The Atlas of Living Australia").
 
