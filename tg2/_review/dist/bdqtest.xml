@@ -1169,8 +1169,8 @@
     <bdqffdq:hasExpectedResponse>INTERNAL_PREREQUISITES_NOT_MET if dwc:dateIdentified is bdqval:Empty; COMPLIANT if the value of dwc:dateIdentified contains a valid ISO 8601 date; otherwise NOT_COMPLIANT</bdqffdq:hasExpectedResponse>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/method/0dacd2f5-591c-47c1-9d05-2de81675b6cc">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/0dacd2f5-591c-47c1-9d05-2de81675b6cc-2026-11-17"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-17</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/0dacd2f5-591c-47c1-9d05-2de81675b6cc-2026-11-20"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-20</dcterms:modified>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssueMethod"/>
     <rdfs:label>IssueMethod: ISSUE_ANNOTATION_NOTEMPTY with Specification: Specification for: ISSUE_ANNOTATION_NOTEMPTY</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:0dacd2f5-591c-47c1-9d05-2de81675b6cc"/>
@@ -4768,8 +4768,8 @@
     <bdqffdq:hasSpecification rdf:resource="https://rs.tdwg.org/bdqtest/specification/a90e100a-3522-4742-aa73-3b98a35ab826"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b-2026-11-17"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-17</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b-2026-11-20"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-20</dcterms:modified>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy"/>
     <rdfs:label>IssuePolicy: (1) issues  in UseCase bdquc:Taxon-Management</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b"/>
@@ -6753,6 +6753,25 @@
     <skos:prefLabel>Information Element ActedUpon bdqval:AggregatedTestResponseOutcomes for bdqtest:VALIDATION_COUNTRY_FOUND.Response</skos:prefLabel>
     <bdqffdq:aggregatesResponsesFrom rdf:resource="https://rs.tdwg.org/bdqtest/terms/69b2efdc-6269-45a4-aecb-4cb99c2ae134"/>
     <bdqffdq:composedOf rdf:resource="https://rs.tdwg.org/bdqval/terms/AggregatedTestResponseOutcomes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1">
+    <dcterms:description>Are there any annotations associated with the record?</dcterms:description>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-20"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-20</dcterms:modified>
+    <dcterms:references rdf:resource="urn:uuid:3c0146df-5ce2-4f35-a066-5cf14de8c79a"/>
+    <dcterms:references rdf:resource="urn:uuid:71c9c3d1-fb9d-4774-8f31-63bc7a4ef49b"/>
+    <dcterms:references rdf:resource="urn:uuid:e9d0f3c8-848c-409e-9af3-70425650a575"/>
+    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
+    <rdfs:label>ISSUE_ANNOTATION_NOTEMPTY</rdfs:label>
+    <owl:sameAs rdf:resource="urn:uuid:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1"/>
+    <skos:historyNote>https://github.com/tdwg/bdq/issues/29</skos:historyNote>
+    <skos:note>While there is a W3C standard on 'web annotation', there is no TDWG recommendation on how this standard could be applied to annotating Darwin Core records. While implementation of this Test is currently problematic, TG2 considers annotations attached to any aspect of a Darwin Core record justifies this Test as a placeholder in the hope of future developments.</skos:note>
+    <skos:prefLabel>Issue Annotation Not Empty for SingleRecord</skos:prefLabel>
+    <bdqffdq:hasConsultedInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/b7a02234-c4d0-40fd-a437-af8330cc700f"/>
+    <bdqffdq:hasCriterion rdf:resource="https://rs.tdwg.org/bdqcrit/terms/NotEmpty"/>
+    <bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Reliability"/>
+    <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</bdqffdq:hasDateLastUpdated>
+    <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqval/terms/geospatialLand">
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Parameter"/>
@@ -9033,25 +9052,6 @@
     <bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_SCIENTIFICNAME_FOUND in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
   </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1">
-    <dcterms:description>Are there any annotations associated with the record?</dcterms:description>
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-17"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-17</dcterms:modified>
-    <dcterms:references rdf:resource="urn:uuid:3c0146df-5ce2-4f35-a066-5cf14de8c79a"/>
-    <dcterms:references rdf:resource="urn:uuid:71c9c3d1-fb9d-4774-8f31-63bc7a4ef49b"/>
-    <dcterms:references rdf:resource="urn:uuid:e9d0f3c8-848c-409e-9af3-70425650a575"/>
-    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Issue"/>
-    <rdfs:label>ISSUE_ANNOTATION_NOTEMPTY</rdfs:label>
-    <owl:sameAs rdf:resource="urn:uuid:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1"/>
-    <skos:historyNote>https://github.com/tdwg/bdq/issues/29</skos:historyNote>
-    <skos:note>While there is a W3C standard on 'web annotation', there is no TDWG recommendation on how this standard could be applied to annotating Darwin Core records. While implementation of this Test is currently problematic, TG2 considers annotations attached to any aspect of a Darwin Core record justifies this Test as a placeholder in the hope of future developments.</skos:note>
-    <skos:prefLabel>Issue Annotation Not Empty for SingleRecord</skos:prefLabel>
-    <bdqffdq:hasConsultedInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/b7a02234-c4d0-40fd-a437-af8330cc700f"/>
-    <bdqffdq:hasCriterion rdf:resource="https://rs.tdwg.org/bdqcrit/terms/NotEmpty"/>
-    <bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Reliability"/>
-    <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</bdqffdq:hasDateLastUpdated>
-    <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SingleRecord"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/051f6ad7-1a4b-4e6c-8a1d-2af76de24848">
     <dcterms:description>EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:country is bdqval:Empty; COMPLIANT if value of dwc:country is a place type equivalent to administrative entity of "nation" in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</dcterms:description>
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/specification/version/051f6ad7-1a4b-4e6c-8a1d-2af76de24848-2024-08-19"/>
@@ -10196,15 +10196,6 @@
     <skos:example></skos:example>
     <bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_COORDINATEUNCERTAINTY_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/informationelement/b7a02234-c4d0-40fd-a437-af8330cc700f">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/version/b7a02234-c4d0-40fd-a437-af8330cc700f-2023-09-18"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</dcterms:modified>
-    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
-    <rdfs:label>Information Element Consulted oa:hasTarget</rdfs:label>
-    <owl:sameAs rdf:resource="urn:uuid:b7a02234-c4d0-40fd-a437-af8330cc700f"/>
-    <skos:prefLabel>Information Element Consulted oa:hasTarget</skos:prefLabel>
-    <bdqffdq:composedOf rdf:resource="http://www.w3.org/ns/hasTarget"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://doi.org/10.14284/628">
     <dcterms:bibliographicCitation>Flanders Marine Institute (2023) Maritime Boundaries Geodatabase, version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/628</dcterms:bibliographicCitation>
@@ -12742,6 +12733,15 @@
     <skos:example></skos:example>
     <bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
     <bdqffdq:hasExpectedResponse>Count the number of VALIDATION_COUNTRY_FOUND in the MultiRecord that have Response.result=COMPLIANT.</bdqffdq:hasExpectedResponse>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/informationelement/b7a02234-c4d0-40fd-a437-af8330cc700f">
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/version/b7a02234-c4d0-40fd-a437-af8330cc700f-2026-11-20"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-20</dcterms:modified>
+    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Consulted"/>
+    <rdfs:label>Information Element Consulted oa:hasTarget</rdfs:label>
+    <owl:sameAs rdf:resource="urn:uuid:b7a02234-c4d0-40fd-a437-af8330cc700f"/>
+    <skos:prefLabel>Information Element Consulted oa:hasTarget</skos:prefLabel>
+    <bdqffdq:composedOf rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqdim/terms/Likeliness">
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension"/>

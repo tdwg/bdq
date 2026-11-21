@@ -7440,13 +7440,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/informationelement/version/b7a02234-c4d0-40fd-a437-af8330cc700f-2023-09-18"
+        "@id": "https://rs.tdwg.org/bdqtest/informationelement/version/b7a02234-c4d0-40fd-a437-af8330cc700f-2026-11-20"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2023-09-18"
+        "@value": "2026-11-20"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -7466,7 +7466,7 @@
     ],
     "https://rs.tdwg.org/bdqffdq/terms/composedOf": [
       {
-        "@id": "http://www.w3.org/ns/hasTarget"
+        "@id": "http://www.w3.org/ns/oa#hasTarget"
       }
     ]
   },
@@ -10384,13 +10384,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/method/version/0dacd2f5-591c-47c1-9d05-2de81675b6cc-2026-11-17"
+        "@id": "https://rs.tdwg.org/bdqtest/method/version/0dacd2f5-591c-47c1-9d05-2de81675b6cc-2026-11-20"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-11-17"
+        "@value": "2026-11-20"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -24433,13 +24433,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/policy/version/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b-2026-11-17"
+        "@id": "https://rs.tdwg.org/bdqtest/policy/version/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b-2026-11-20"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-11-17"
+        "@value": "2026-11-20"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -56833,13 +56833,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-17"
+        "@id": "https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-20"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-11-17"
+        "@value": "2026-11-20"
       }
     ],
     "http://purl.org/dc/terms/references": [

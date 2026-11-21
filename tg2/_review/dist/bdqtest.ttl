@@ -8,6 +8,7 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -185,8 +186,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/0dacd2f5-591c-47c1-9d05-2de81675b6cc> a bdqffdq:IssueMethod ;
     rdfs:label "IssueMethod: ISSUE_ANNOTATION_NOTEMPTY with Specification: Specification for: ISSUE_ANNOTATION_NOTEMPTY" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/0dacd2f5-591c-47c1-9d05-2de81675b6cc-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/0dacd2f5-591c-47c1-9d05-2de81675b6cc-2026-11-20> ;
+    dcterms:modified "2026-11-20"^^xsd:date ;
     owl:sameAs <urn:uuid:0dacd2f5-591c-47c1-9d05-2de81675b6cc> ;
     skos:historyNote "Source: ALA, Lee Belbin" ;
     skos:note "TG2 Issue OTHER Test CORE" ;
@@ -3323,8 +3324,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b> a bdqffdq:IssuePolicy ;
     rdfs:label "IssuePolicy: (1) issues  in UseCase bdquc:Taxon-Management" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b-2026-11-20> ;
+    dcterms:modified "2026-11-20"^^xsd:date ;
     owl:sameAs <urn:uuid:966d36a1-f90b-4c0b-a7f7-ff3e8b547b7b> ;
     bdqffdq:hasUseCase bdquc:Taxon-Management ;
     bdqffdq:includedInPolicy bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1 .
@@ -4412,11 +4413,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/informationelement/b7a02234-c4d0-40fd-a437-af8330cc700f> a bdqffdq:Consulted ;
     rdfs:label "Information Element Consulted oa:hasTarget" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/informationelement/version/b7a02234-c4d0-40fd-a437-af8330cc700f-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/informationelement/version/b7a02234-c4d0-40fd-a437-af8330cc700f-2026-11-20> ;
+    dcterms:modified "2026-11-20"^^xsd:date ;
     owl:sameAs <urn:uuid:b7a02234-c4d0-40fd-a437-af8330cc700f> ;
     skos:prefLabel "Information Element Consulted oa:hasTarget" ;
-    bdqffdq:composedOf <http://www.w3.org/ns/hasTarget> .
+    bdqffdq:composedOf oa:hasTarget .
 
 <https://rs.tdwg.org/bdqtest/informationelement/c25c5737-ece9-4b6d-a5f2-6e661d35c325> a bdqffdq:ActedUpon ;
     rdfs:label "Information Element ActedUpon dwc:occurrenceID" ;
@@ -11411,8 +11412,8 @@ bdqtest:fbe47441-500f-44c7-a1bd-1e872edc5266 a bdqffdq:Measure ;
 bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1 a bdqffdq:Issue ;
     rdfs:label "ISSUE_ANNOTATION_NOTEMPTY" ;
     dcterms:description "Are there any annotations associated with the record?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-20> ;
+    dcterms:modified "2026-11-20"^^xsd:date ;
     dcterms:references <urn:uuid:3c0146df-5ce2-4f35-a066-5cf14de8c79a>,
         <urn:uuid:71c9c3d1-fb9d-4774-8f31-63bc7a4ef49b>,
         <urn:uuid:e9d0f3c8-848c-409e-9af3-70425650a575> ;

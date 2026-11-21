@@ -3318,7 +3318,7 @@ bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns
 ###  ISSUE_ANNOTATION_NOTEMPTY
 
 ####  Issue Annotation Not Empty
-https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-17
+https://rs.tdwg.org/bdqtest/terms/version/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1-2026-11-20
 Acts upon  SingleRecord
 
 #### Description
