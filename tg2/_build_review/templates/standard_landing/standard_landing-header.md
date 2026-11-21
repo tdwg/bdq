@@ -57,7 +57,7 @@ Beyond data availability, data quality is the most significant challenge for use
 
 <!-- Brief purpose and value proposition statement: what is the standard, why use it --->
 
-The BDQ standard establishes a community-defined, modular, and extensible environment for biodiversity data quality. BDQ defines a comprehensive set of Tests (`bdqtest:`), their inputs (`InformationElements`) and their structured output (`Responses`). BDQ initially focused on Darwin Core but structurally independent of it. BDQ is a formal Fitness for Use Framework (`bdqffdq:`) with five supporting vocabularies `bdqval:`, `bdqdim:`, `bdqcrit:`, `bdqenh:` and `bdquc:`.
+The BDQ standard establishes a community-defined, modular, and extensible environment for biodiversity data quality. BDQ defines a comprehensive set of Tests (`bdqtest:`), their inputs (`InformationElements`) and their structured output (`Responses`). BDQ initially focused on Darwin Core but is structurally independent of it. BDQ is a formal Fitness for Use Framework (`bdqffdq:`) with five supporting vocabularies `bdqval:`, `bdqdim:`, `bdqcrit:`, `bdqenh:` and `bdquc:`.
 
 At its core, BDQ focuses on the semantics of data quality.  It defines what a Test means and precisely what information a `Response` must contain. BDQ intentionally avoids prescribing execution concerns (such as data loading or parallelization of Test execution) as well as human centric concerns (such as report presentation or remediation processes).  By providing a consistent semantic layer focused on Test inputs and outputs, the standard allows for flexible application within diverse operational settings supporting both `Quality Assurance` filtering and `Quality Control` diagnostics.  The presentation and serialization of `Data Quality Reports` is intentionally flexible, so long as the required `Response` elements are available to consumers.
 
@@ -81,7 +81,7 @@ The BDQ standard is intended for:
 
 For practitioners, researchers, collection managers, and data managers, the BDQ Tests (`bdqtest:`) provide a shared, community-defined set of Test definitions that can be selected and run as suites to evaluate fitness for use for particular specified uses of biodiversity data.
 
-For developers, standards developers, and knowledge engineers, the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (`bdqval:`, `bdqdim:`, `bdqcrit:`, `bdqenh:`, and `bdquc') contribute to the common semantic model used to define Tests, identify their inputs (`Information Elements`), and represent their outputs (`Responses`) in a consistent and interoperable way (in the `bdqtest:` vocabulary).  No background in ontologies is required to understand or apply the Tests, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
+For developers, standards developers, and knowledge engineers, the Fitness For Use Framework (`bdqffdq:`) and supporting vocabularies (`bdqval:`, `bdqdim:`, `bdqcrit:`, `bdqenh:`, and `bdquc:`) contribute to the common semantic model used to define Tests, identify their inputs (`Information Elements`), and represent their outputs (`Responses`) in a consistent and interoperable way (in the `bdqtest:` vocabulary).  No background in ontologies is required to understand or apply the Tests, though familiarity with RDF/OWL will be helpful for those working directly with the ontologies or exchanging `Data Quality Reports` as RDF.
 
 ### 1.3 Contributing TDWG Interest and Task Groups (non-normative)
 
@@ -101,8 +101,8 @@ See the list of the documents that comprise the standard in [3. Parts of the Sta
 These documents are not part of the BDQ standard.
 
 * An AI generated high-level ‘podcast’-style summary of the BDQ standard [Audio File](https://github.com/tdwg/bdq/raw/refs/heads/master/tg2/products/BDQ_Overview_2025-07-26_8m.mp3).
-* Veiga AK, et. al. (2017) [A conceptual framework for quality assessment and management of biodiversity data.](https://doi.org/10.1371/journal.pone.0178731).
-* Veiga AK (2016). [A conceptual framework on biodiversity data quality.](http://www.teses.usp.br/teses/disponiveis/3/3141/tde-17032017-085248/).
+* Veiga AK, et al. (2017) [A conceptual framework for quality assessment and management of biodiversity data.](https://doi.org/10.1371/journal.pone.0178731).
+* Veiga AK (2016) [A conceptual framework on biodiversity data quality.](http://www.teses.usp.br/teses/disponiveis/3/3141/tde-17032017-085248/).
 
 ### 1.5 Status of the Content of this Document (normative)
 
@@ -160,9 +160,9 @@ In any technical treatment of the BDQ standard, a precise reference to a class o
 
 Throughout these descriptive documents, terms and phrases styled as inline code (e.g., `Validation`, `Information Element`, `Data Quality Need`) refer explicitly to classes, properties, or named individuals defined in the BDQ ontology bdqffdq: by their labels or by their term local name (e.g. `InformationElement`).  Pluralized forms (e.g., `Data Quality Reports`) refer to multiple instances of the class. 
 
-Terms in text that are specific to the BDQ Standard are Capitalised (e.g. Test, `Use Case`), but where used generally they are in lowercase (e.g. test, use case).
+Terms in text that are specific to the BDQ Standard are Capitalized (e.g. Test, `Use Case`), but where used generally they are in lowercase (e.g. test, use case).
 
-When a word that is also a bdqffdq class name is not capitalized and styled as inline code, it should be interpreted as a general English phrase or concept, not as a specific ontology term.  For example, specification is general while `Specification` means `bdqffdq:Specification`, and implementation carries the general meaning while `Implementation` means `bdqffdq:Implementation`).  This convention is also used for qualified names such as `bdqffdq:InformationElement`, terms from other vocabularies, such as `dwc:countryCode`, and to denote some software artifacts such as `sci_name_qc`.
+When a word that is also a bdqffdq class name is not capitalized and styled as inline code, it should be interpreted as a general English phrase or concept, not as a specific ontology term.  For example, specification is general while `Specification` means `bdqffdq:Specification`, and implementation carries the general meaning while `Implementation` means `bdqffdq:Implementation`.  This convention is also used for qualified names such as `bdqffdq:InformationElement`, terms from other vocabularies, such as `dwc:countryCode`, and to denote some software artifacts such as `sci_name_qc`.
 
 See also section [3.12 Naming Conventions (non-normative)](docs/supplement/index.md#312-naming-conventions-non-normative) in the [BDQ Supplemental Information](docs/supplement/index.md).
 
@@ -240,7 +240,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
 		:blue_book:
         <strong><a href="./docs/list/bdqtest/index.md">Test Vocabulary &amp; Definitions</a></strong><br>
         The bdqtest: Term-List, complete normative definitions of the Tests themselves, for readers who need exact meanings or wish to trace provenance.<br>
-		See also the <a href="./docs/terms/bdqtest/qrg_index_by_usecase.html">Index to Tests by Use Case</a>
+		See also the <a href="./docs/terms/bdqtest/qrg_index_by_usecase.md">Index to Tests by Use Case</a>
       </td>
       <td valign="top">
 		:blue_book:
@@ -250,7 +250,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
         Explanations and Normative Guidance on the Tests and their Uses. <br>
 		See also the <a href="./docs/list/bdqtest/index.md">bdqtest: Term List</a><br>
 		and serialized versions: <a href="./dist/bdqtest.xml">RDF/XML</a>, <a href="./dist/bdqtest.ttl">Turtle</a>, <a href="./dist/bdqtest.json">JSON-LD</a>,
-		and the <a href="./docs/list/bdquc/index.md">bdquc: Use Case Vocabulary</a>,
+		and the <a href="./docs/list/bdquc/index.md">bdquc: Use Case Vocabulary</a>.
       </td>
       <td valign="top">
 		:blue_book:
@@ -264,7 +264,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
       <td valign="top">
 		:orange_book:
         <strong><a href="./docs/tutorial/index.md">Tutorial: From Use Case to Test</a></strong><br>
-        Worked examples that clarifies the logic of test design.
+        Worked examples that clarify the logic of test design.
       </td>
       <td valign="top">
 		:blue_book:
@@ -351,7 +351,7 @@ The Foundational Vocabularies cover the two main parts of the standard - the pra
 
 * The Fitness For Use Framework Ontology (bdqffdq:)
   - [**Fitness For Use Framework Ontology List of Terms (bdqffdq:)**](docs/list/bdqffdq/index.md) - The definitions of terms in the bdqffdq: vocabulary.
-  - [**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic the bdqffdq: vocabulary.
+  - [**Fitness For Use Framework Ontology Vocabulary Extension**](docs/extension/bdqffdq/index.md) - The axioms that extend the logic of the basic bdqffdq: vocabulary.
 * The Tests (bdqtest:)
   - [**BDQ Tests List of Terms (bdqtest:)**](docs/list/bdqtest/index.md) - The complete list of terms that define the BDQ Tests.
 
@@ -438,7 +438,7 @@ The Index of Normative Sections lists, for each document of the standard, the se
 
 #### 3.5.1 Tests (non-normative)
 
-The Test definitions are provided in various serializations. Of these, the bdqtest_term_versions.csv is the canonical archive of all Tests versions, both recommended and historical. The documentation about the details of Tests for this standard are generated from this file.  CSV files listing just the current test versions are also provided,
+The Test definitions are provided in various serializations. Of these, the bdqtest_term_versions.csv is the canonical archive of all Test versions, both recommended and historical. The documentation about the details of Tests for this standard is generated from this file.  CSV files listing just the current test versions are also provided:
 
 - [**CSV List of all Tests (bdqtest_term_versions.csv)**](vocabulary/bdqtest_term_versions.csv)
 - [**CSV List of (current) Single Record Tests**](dist/bdqtest_singlerecord_tests_current.csv)
@@ -492,7 +492,7 @@ We'd also gratefully acknowledge the continued support of the Biodiversity Infor
 
 #### 5.1.1 Funding and Support for Meetings (non-normative)
 
-We acknowledge the financial support of The Atlas of Living Australia and Biodiversity Information Standards (TDWG) for Lee Belbin and Arthur Chapman to attend two face-to-face meetings for the development of the BDQ standard, and the Atlas of Living Australia for support of John Wieczorek to attend meetings in Canberra Australia. The Museum of Comparative Zoology provided support for Paul Morris; VertNet, Kurator, and Rauthiflor LLC provided support for John Wieczorek. The United States National Science Foundation through funding of the Kurator project, provided time for Paul Morris, Robert Morris and David Lowery for early work on the project.
+We acknowledge the financial support of The Atlas of Living Australia and Biodiversity Information Standards (TDWG) for Lee Belbin and Arthur Chapman to attend two face-to-face meetings for the development of the BDQ standard, and the Atlas of Living Australia for support of John Wieczorek to attend meetings in Canberra, Australia. The Museum of Comparative Zoology provided support for Paul Morris; VertNet, Kurator, and Rauthiflor LLC provided support for John Wieczorek. The United States National Science Foundation through funding of the Kurator project, provided time for Paul Morris, Robert Morris and David Lowery for early work on the project.
 
 The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP) provided facilities, and with the Global Biodiversity Information Facility and others, supported participants to attend the meeting in São Paulo, Brazil. The US National Science Foundation through iDigBio provided support for the meeting in Gainesville, Florida.
 
@@ -527,9 +527,9 @@ There were many people who have made notable contributions at various times duri
 
 ## 6 Glossary (non-normative)
 
-The glossary of terms used in the BDQ standard includes acronyms and these terms that are additional to the terms used in the `bdqffdq`, `bdqval:`, `bdqcrit:`, `bdqdim:`, and `bdqenh:` vocabularies or in one of the two tables that reference the [Test Vocabulary Terms](docs/list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) or the [Test Label Components](docs/supplement/index.md#313-parts-of-test-labels-non-normative). Note: ‘Darwin Core terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
+The glossary of terms used in the BDQ standard includes acronyms and these terms that are additional to the terms used in the `bdqffdq:`, `bdqval:`, `bdqcrit:`, `bdqdim:`, and `bdqenh:` vocabularies or in one of the two tables that reference the [Test Vocabulary Terms](docs/list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) or the [Test Label Components](docs/supplement/index.md#313-parts-of-test-labels-non-normative). Note: ‘Darwin Core terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
-Note: Some terms are defined differently within different documents to align with the context of those documents.  For example, in the [BDQ Supplemental Information](./docs/supplement/index.md) Document, the [Table in #5.2](.//docs/supplement/index.html#52-github-tags-and-categorizing-issues-non-normative) describes the GitHub Tags that were used when preparing the Tests. These Tags and their definitions sometimes differ from the definitions used with the BDQ Standard. The definitions in the Glossary here do however take precedence for the Standard.
+Note: Some terms are defined differently within different documents to align with the context of those documents.  For example, in the [BDQ Supplemental Information](./docs/supplement/index.md) Document, the [Table in #5.2](./docs/supplement/index.md#52-github-tags-and-categorizing-issues-non-normative) describes the GitHub Tags that were used when preparing the Tests. These Tags and their definitions sometimes differ from the definitions used with the BDQ Standard. The definitions in the Glossary here do however take precedence for the Standard.
 
 | **Label** | **Definition** | **Context** |
 | ---- | ---- | ---- |
@@ -546,7 +546,7 @@ Note: Some terms are defined differently within different documents to align wit
 | <a name="glossary_Darwin_Core"/>Darwin Core | [Darwin Core](https://dwc.tdwg.org/). A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace [dwc:](http://rs.tdwg.org/dwc/terms/) | TDWG standard |
 | <a name="glossary_Database_of_record"/>Database of record | An information system which holds an authoritative or master record of some data. Records in a database of record are held to be correct over different values for the same records that might be found in other datasets. This is in distinction from aggregated datasets, derived research dataset, datasets for portals and other holders of non-authoritative copies of the data. | BDQ standard |
 | <a name="glossary_DCMI"/>DCMI | [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/). (Dublin Core). Hosts dc:Namespace [dc:](https://purl.org/dc/elements/1.1/)| Standard |
-| <a name="glossary_DefaultSourceAuthority"/>DefaultSourceAuthority | A provided default `bdqval:sourceAuthority` that is used when a required `bdqval:Parameter` specifying a `bdqval:sourceAuthorit`y has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
+| <a name="glossary_DefaultSourceAuthority"/>DefaultSourceAuthority | A provided default `bdqval:sourceAuthority` that is used when a required `bdqval:Parameter` specifying a `bdqval:sourceAuthority` has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
 | <a name="glossary_DefaultValue"/>DefaultValue | A preselected value (e.g., year, elevation) to be used where a required `bdqval:Parameter` value has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
 | <a name="glossary_Dimension"/>Dimension | See [bdqffdq:DataQualityDimension.](docs/list/bdqffdq/index.md#dataqualitydimension) | bdqffdq: |
 | <a name="glossary_DO_NOT_IMPLEMENT"/>DO NOT IMPLEMENT | Tests that are not CORE and not recommended to be implemented with the current level of understanding for one or more reasons: Available vocabularies are ambiguous; the Test is too complex to implement concisely; implementation is expected to lead to ambiguous or inaccurate results. | Tests |
@@ -597,7 +597,7 @@ Note: Some terms are defined differently within different documents to align wit
 | Test (technical) | A composition of an instance of a subclass of `bdqffdq:DataQualityNeed` (which expresses a data quality need in the abstract) with an instance of a subclass of `bdqffdq:DataQualityMethod`, which links it to an instance of a `bdqffdq:Specification` (which spells out how to concretely evaluate the need). These class instances are composed with `bdqffdq:InformationElements`, `bdqffdq:Arguments`, and `bdqffdq:Parameters`. For example, the Test [VALIDATION_COUNTRY_FOUND](docs/terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND). | BDQ standard | 
 | <a name="glossary_TestField"/>TestField | Column heading in the Markdown of the Tests in the [tdwg/bdq GitHub](https://github.com/tdwg/bdq/issues) that list all the normative and informative metadata elements that describe a Data Quality Test. | Tests |
 | Test Type | There are four types of Tests: Validation (`bdqffdq:Validation`), Amendment (`bdqffdq:Amendment`), Issue (`bdqffdq:Issue`), and Measure (`bdqffdq:Measure`). | Tests |
-| <a name="glossary_TG1"/>TG1 | [Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality] (https://www.tdwg.org/community/bdq/tg-1/) | TDWG Task Group |
+| <a name="glossary_TG1"/>TG1 | [Biodiversity Data Quality Interest Group - Task Group 1: Framework on Data Quality](https://www.tdwg.org/community/bdq/tg-1/) | TDWG Task Group |
 | <a name="glossary_TG2"/>TG2 | [Biodiversity Data Quality Interest Group - Task Group 2: Data Quality Tests and Assertions](https://www.tdwg.org/community/bdq/tg-2/) | TDWG Task Group |
 | <a name="glossary_TG3"/>TG3 | [Biodiversity Data Quality Interest Group - Task Group 3: Data Quality Use Cases](https://www.tdwg.org/community/bdq/tg-3/) | TDWG Task Group |
 | <a name="glossary_TG4"/>TG4 | [Biodiversity Data Quality Interest Group - Task Group 4: Best Practices for Development of Vocabularies of Values](https://www.tdwg.org/community/bdq/tg-4/) | TDWG Task Group |
@@ -618,7 +618,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Albertoni R and Isaac A (2020) Introducing the Data Quality Vocabulary (DQV). Semantic Web, 12(1), 81-97, doi: 10.3233/SW-20038</li>
 <li>Belbin L, Daly J, Hirsch T, Hobern D, Salle JL (2013) A specialist’s audit of aggregated occurrence records: An ‘aggregator’s’ perspective. ZooKeys 305: 67–76. doi: 10.3897/zookeys.305.5438</li>
 <li>Biodiversity Information Standards (TDWG) (2010) TDWG GUID Applicability Statement. https://raw.githubusercontent.com/tdwg/guid-as/master/guid/tdwg_guid_applicability_statement.pdf</li>
-<li>Biodiversity Information Standards (TDWG) (n.dat) Annotations Interest Group. https://www.tdwg.org/community/annotations/</li>
+<li>Biodiversity Information Standards (TDWG) (n.dat.) Annotations Interest Group. https://www.tdwg.org/community/annotations/</li>
 <li>Biodiversity Information Standards (TDWG) (2021) Biodiversity Information Standards (TDWG) Standards Metadata http://rs.tdwg.org/index</li>
 <li>Bradner, S (1997) IETF Key words for use in RFCs to Indicate Requirement Levels (RFC 2119). https://datatracker.ietf.org/doc/html/rfc2119</li>
 <li>Chapman AD (1992) Quality control and validation of environmental resource data in Quality control and validation of environmental resource data Canberra: Commonwealth Land Information Forum pp. 1-16 [also published electronically at: https://www.researchgate.net/publication/332537824]</li> 
@@ -655,13 +655,13 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>GBIF Secretariat (2023) GBIF Backbone Taxonomy. Checklist dataset. https://doi.org/10.15468/39omei</li>
 <li>Geomatic Solutions (2026) GeoRepository. https://epsg.org/about.html</li>
 <li>Getty Research Institute (2017) Getty Thesaurus of Geographic Names Online. https://www.getty.edu/research/tools/vocabularies/tgn/index.html</li>
-<li>Gill AM, Belbin L and Chippendale GM (1985). Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN: 0644040815.</li>
+<li>Gill AM, Belbin L and Chippendale GM (1985) Phytogeography of EUCALYPTUS in Australia. Bureau of Flora and Fauna, Australian Flora and Fauna Series, 3. Canberra. 53p. ISBN: 0644040815.</li>
 <li>Google Maps Platform (2020) Reverse Geocoding API. https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse</li>
 <li>Groom Q, Desmet P, Reyserhove L, Adriaens T, Oldoni D, Vanderhoeven S, Baskauf SJ, Chapman A, McGeoch M, Walls R, Wieczorek J, Wilson JR.U, Zermoglio PFF, Simpson A (2019) Improving Darwin Core for research and management of alien species. Biodiversity Information Science and Standards 3: e38084. https://doi.org/10.3897/biss.3.38084</li>
 <li>Guisan A, Edwards TC and Hastie T (2002) Generalized linear and generalized additive models in studies of species distributions: setting the scene. Ecological Modelling 157, 89-100. https://doi.org/10.1016/S0304-3800(02)00204-9</li>
 <li>ISO (2019) ISO 8601-1:2019(en) Date and time — Representations for information interchange — Part 1: Basic rules. https://www.iso.org/obp/ui/</li>
-<li>ISO (n.dat) 3166 code search. https://www.iso.org/obp/ui/#search</li>
-<li>ISO (n.dat) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li>
+<li>ISO (n.dat.) 3166 code search. https://www.iso.org/obp/ui/#search</li>
+<li>ISO (n.dat.) 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li>
 <li>ISO (n.dat.) ISO 3166 Country Codes. https://www.iso.org/iso-3166-country-codes.html</li>
 <li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li>
 <li>Kennedy M, Morris PJ, Haley B, McDonald D (2024) MCZbase/MCZbase MCZbase version as of v2024Apr04 commit 53ec47f2 [Computer Software] https://doi.org/10.5281/zenodo.10929079</li>
@@ -691,12 +691,12 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Sanderson R, Ciccarese P and Young B (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/</li>
 <li>Shewhart, WA (1939) Statistical Methods from the Viewpoint of Quality Control. The Graduate School, U.S. Department of Agriculture.</li>
 <li>Spatial Reference (2024) What is SpatialReference.org. https://spatialreference.org</li>
-<li>Veiga AK (2016). A conceptual framework on biodiversity data quality. São Paulo : Escola Politécnica, University of São Paulo. Doctoral Thesis in Sistemas Digitais. http://www.teses.usp.br/teses/disponiveis/3/3141/tde-17032017-085248/</li>
+<li>Veiga AK (2016) A conceptual framework on biodiversity data quality. São Paulo : Escola Politécnica, University of São Paulo. Doctoral Thesis in Sistemas Digitais. http://www.teses.usp.br/teses/disponiveis/3/3141/tde-17032017-085248/</li>
 <li>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017) A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</li>
 <li>Vertnet (2022) DwC Vocabs. https://github.com/VertNet/DwCVocabs/tree/master/vocabs</li>
-<li>VLIZ (2023). Marineregions.org. https://www.marineregions.org/downloads.php#marbound</li>
-<li>Vocabulary Maintenance Specification Task Group (2017). Standards Documentation Specification. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/147</li>
-<li>Vocabulary Maintenance Specification Task Group (2017). Vocabulary Maintenance Standard. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/642</li>
+<li>VLIZ (2023) Marineregions.org. https://www.marineregions.org/downloads.php#marbound</li>
+<li>Vocabulary Maintenance Specification Task Group (2017) Standards Documentation Specification. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/147</li>
+<li>Vocabulary Maintenance Specification Task Group (2017) Vocabulary Maintenance Standard. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/642</li>
 <li>W3C (2013) PROV-O: The PROV Ontology. https://www.w3.org/TR/prov-o/</li>
 <li>W3C (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/</li>
 <li>W3C (2017) Web Annotation Data Model: Annotation. https://www.w3.org/TR/annotation-vocab/#annotation</li>

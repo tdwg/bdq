@@ -146,7 +146,7 @@ The Framework can also be conceptually divided into four vertical themes, four s
 
 In BDQ, "Test" is used as an informal umbrella term to describe these four vertical concept families (`Validation`, `Issue`, `Measure`, `Amendment`), as they connect and involve terms in both the `Data Quality Needs` and `Data Quality Solutions` layers.  See the diagram in [BDQ Tests: An Operational Perspective](../bdqtest/index.md#51-bdq-tests-an-operational-perspective-non-normative).
 
-**Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Data Quality Needs`.  The `Data Quality Needs` (i.e., `Validation`, `Measure`, `Amendment`, `Issue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific Darwin Core terms), and the `Resource Type` the requirement applies to. A 'Data Quality Need` defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such `Data Quality Needs` for BDQ purposes.
+**Data Quality Needs** begin with a `Use Case`, a formal description of a purpose for which data may be used. Each `Use Case` includes a set of `Policies`, which in turn relate to `Data Quality Needs`.  The `Data Quality Needs` (i.e., `Validation`, `Measure`, `Amendment`, `Issue`) specify the data quality requirement (Need), the relevant `Information Elements` (such as specific Darwin Core terms), and the `Resource Type` the requirement applies to. A `Data Quality Need` defines the properties data must have to be considered fit for use and may include ways to improve unfit data. The Tests described in this standard are formal specifications of such `Data Quality Needs` for BDQ purposes.
 
 **Data Quality Mechanisms** are formal descriptions of software or other tools that implement the Tests. They execute the `Specifications` defined in the Needs layer.
 
@@ -156,7 +156,7 @@ We can visualize the Framework's Needs, Solutions, and Reports layers, and then 
 
 ![Diagram Illustrating both the horizontal (Needs/Solutions/Reports) layers and the vertical Test concepts (Validations, Issues, Measures and Amendments)](bdqffdq_data_quality_layers.svg)
 
-*All four Tests concepts in the Needs Solutions, and Reports levels.*
+*All four Test concepts in the Needs, Solutions, and Reports levels.*
 
 #### 2.2.1 Data Quality Control and Data Quality Assurance (non-normative)
 
@@ -222,7 +222,7 @@ The property `bdqffdq:usesSpecification` draws a separation between the specific
 
 A Test, conceptually, is a set of classes and properties that provide a formal description of what outputs a software implementation should produce for given inputs.  The classes are a `Specification` linked through a `Data Quality Method` (`Validation Method`, `Issue Method`, `Measure Method`, and `Amendment Method`) to a `Data Quality Need` (`Validation`, `Issue`, `Measure`, or `Amendment`).  The properties associated with the `Data Quality Need` provide a general description of what aspect of data quality the Test assesses (and what its inputs are), while the properties associated with the `Specification` provide the specific details of the expected behavior of the Test needed for a developer to implement the Test.  The `bdqtest:` vocabulary provides these specific details for each Test, independent of any particular software implementation.
 
-On the other side of `bdqffdq:usesSpecification`, a software implementation of a Test produces `Responses`.  These are the outputs of Test execution, and provide an assessment of the fitness of some data for some use.  Thus The Fitness For Use Framework divides responsibilities between the specification of what is needed for data to have quality (`Use Cases` and Tests)  and the software implementations of those Tests with the actual assertions about data quality in `Responses` produced by those implementations.
+On the other side of `bdqffdq:usesSpecification`, a software implementation of a Test produces `Responses`.  These are the outputs of Test execution, and provide an assessment of the fitness of some data for some use.  Thus the Fitness For Use Framework divides responsibilities between the specification of what is needed for data to have quality (`Use Cases` and Tests)  and the software implementations of those Tests with the actual assertions about data quality in `Responses` produced by those implementations.
 
 Below is a diagram of the composition of `Validation`, `Validation Method`, and `Validation Response` illustrating the `Data Quality Needs`, `Solutions`, and `Reports` layers of the Fitness For Use Framework, identifying the responsibilities of `bdqtest:` (shown with solid lines), and implementations (shown with dashed lines).
 
@@ -268,7 +268,7 @@ In a non-RDF structured-data context (JSON, database, CSV), where `bdqffdq:Respo
 
 Labels MAY be used purely for display.
 
-This section summarizes representation choices. Full normative constraints on the response structure of `Responses` is found in [4.1 Structure of Response (normative)](../bdqtest/index.md#41-structure-of-response-normative) of the [BDQ Tests: Concepts and Use](../bdqtest/index.md) document.
+This section summarizes representation choices. Full normative constraints on the response structure of `Responses` are found in [4.1 Structure of Response (normative)](../bdqtest/index.md#41-structure-of-response-normative) of the [BDQ Tests: Concepts and Use](../bdqtest/index.md) document.
 
 ##### 2.4.1.1 Table of Representations of Response Properties (non-normative)
 
@@ -449,7 +449,7 @@ The (non-normative) diagram below illustrating `Validation` related concepts acr
 The use of classes and properties in the `bdqtest:` vocabulary (see [BDQ Tests as RDF](../../../dist/bdqtest.ttl)) follow the guidance provided in this section.  The `Data Quality Needs` (blue here; `Need Concept`) and Data Quality Solutions (green here; `Solutions Concept`) concepts in this diagram illustrate how this guidance is used in `bdqtest:` to relate the set of terms used to define a `Validation`.  The `Data Quality Reports` (tan here; `Report Concept`) concepts in the diagram illustrate how a `Validation Response` in a `Data Quality Report` can be related to a `Validation` and its `Specification`.  The minimal use of `rdfs:range` and other global axioms in `bdqffdq:` aligns with best practices for ontologies intended for reuse, integration, and extension.  This approach trades strict, machine-enforceable validation and inference for flexibility, extensibility, and a low barrier to adoption.  The normative guidance in this document mitigates the risk of inconsistent usage that is allowed by the open world design of `bdqffdq:`.
 
 
-This section describes normative expectations for the use of object and datatype properties to related instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../../dist/bdqffdq.ttl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
+This section describes normative expectations for the use of object and datatype properties to relate instances of `bdqffdq:` classes in their intended ways given the open world limited use of domains, ranges, and other axioms in the [Biodiversity Data Quality Fitness For Use Framework (Ontology)](../../../dist/bdqffdq.ttl) ontology. This guidance builds on the normative definitions of `bdqffdq:` object properties and datatype properties to describe how `bdqffdq:` terms can be composed in a useful and consistent way.
 
 Section [3.2 Identifying the Test that produced a Response (normative)](#32-identifying-the-test-that-produced-a-response-normative) highlights the importance of using the object properties with the correct cardinality to preserve the relationship between a `Response` produced by a Test and the particular Test that produced it.
 
@@ -503,7 +503,7 @@ An axiom restricts the values of `bdqffdq:hasEnhancement` on a `bdqffdq:Amendmen
 
 The `bdqffdq:hasDataQualityDimension` object property SHOULD have an individual with a type that is a subclass of `bdqffdq:DataQualityNeed` as its subject.
 
-The `bdqffdq:hasDataQualityDimension` object property MAY have an individual in the `bdqdim:` vocabulary is its object. 
+The `bdqffdq:hasDataQualityDimension` object property MAY have an individual in the `bdqdim:` vocabulary as its object. 
 
 An axiom restricts the values of `bdqffdq:hasDataQualityDimension` on a `bdqffdq:DataQualityNeed` to instances of `bdqffdq:DataQualityDimension` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 4.2](../../extension/bdqffdq/index.md#42-restrictions-on-classes-normative)).
 
@@ -611,7 +611,7 @@ An instance of `bdqffdq:Specification` SHOULD be the object of exactly one `bdqf
 
 The `bdqffdq:hasArgument` object property SHOULD have a `bdqffdq:Specification` as its subject.
 
-An axiom types the object of the `bdqffdq:hasArgument` object as a `bdqffdq:Argument`.
+An axiom types the object of the `bdqffdq:hasArgument` object property as a `bdqffdq:Argument`.
 
 Each instance of `bdqffdq:Argument` SHOULD have exactly one `bdqffdq:hasArgumentValue` literal providing the value of the argument that replaces the `bdqffdq:Parameter` in the `bdqffdq:hasExpectedResponse` of the `bdqffdq:Specification`. 
 
@@ -824,7 +824,7 @@ It is important that the chain of relationships from an instance of a `Response`
 
 ## 4 Fitness For Use Framework Summary of Mathematical Formalization (normative) 
 
-This formalization is derived from the original pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on biodiversity data quality. Tese (Doutorado) [Doctoral Thesis] Escola Politécnica da Universidade de São Paulo. Departamento de Engenharia de Computação e Sistemas Digitais.156p. 
+This formalization is derived from the original pp.89-108 in: Veiga, A.K. 2016. A conceptual framework on biodiversity data quality. Tese (Doutorado) [Doctoral Thesis] Escola Politécnica da Universidade de São Paulo. Departamento de Engenharia de Computação e Sistemas Digitais. 156p. 
 
 The following changes have been made to the original formulation: 
 
@@ -838,17 +838,17 @@ The following changes have been made to the original formulation:
 - `Issue`, `IssuePolicy`, `IssueMethod`, and `IssueResponse` added as converse of `Validation`.
 - `Dimension in Context` renamed `Measure`.
 - `Criterion in Context` renamed `Validation`.
-- `Enhancement in Context` renamed `Amendment` (The fundamental concept remains `Enhancement`, but the derived contextualized concept is now called `Amendment`.
+- `Enhancement in Context` renamed `Amendment` (the fundamental concept remains `Enhancement`, but the derived contextualized concept is now called `Amendment`).
 - `Assertion` renamed `Response`.
 - A new definition for 'Quality Assurance' as an operation reflecting current practice rather than as a set of tests.
   - In Veiga (2016) `QA(dr) = {dqv(dr)}` is defined as a set of assertions. We redefine `QA(dr,u)` as a filter producing Data Resource subsets.  This is a real change of meaning.
 - A new definition for 'Quality Control' as an operation reflecting current practice rather than as a set of tests.
-  - In Veiga (2016) `QC(dr) = {dqv ⋃ dqi}` is defined as a set of assertions. We redefine `QC(dr,u)` as a filter producing report subsets. This is a real change of meaning,
+  - In Veiga (2016) `QC(dr) = {dqv ⋃ dqi}` is defined as a set of assertions. We redefine `QC(dr,u)` as a filter producing report subsets. This is a real change of meaning.
 - A new definition is provided for `Acceptable Data Quality Measure` to support the use of `bdqffdq:Measure` for both `Quality Assurance` and `Quality Control` purposes.
   - Veiga (2016) Acceptable Measure `AM(cd) = {cc | cd ∈ CD ⋀ cc ⊂ CC}` (criteria that bound a dimension) is replaced by `MEaq(u)` (categorical measures within a policy). This is conceptually related but not the same object.
-- The set-builder expressions for parameterized derived concepts (e.g., `VP(u)`, `MM(me)`, `I(s)`, `DQV(dr)`) are stated in terms of primitive associational relations (e.g., `rel_VP`, `rel_MM`, `rel_I`, `rel_DQV`) introduced in §4.2.1, rather than with trivially-true parameter-typing conjuncts as in Appendix A of Veiga (2016). This makes the associations the expressions name (e.g., "the `Validations` included in the `Validation Policy` for `u`") definitionally explicit; The worked examples of Appendix B of Veiga (2016) remain admissible extensional interpretations of these relations.
+- The set-builder expressions for parameterized derived concepts (e.g., `VP(u)`, `MM(me)`, `I(s)`, `DQV(dr)`) are stated in terms of primitive associational relations (e.g., `rel_VP`, `rel_MM`, `rel_I`, `rel_DQV`) introduced in §4.2.1, rather than with trivially-true parameter-typing conjuncts as in Appendix A of Veiga (2016). This makes the associations the expressions name (e.g., "the `Validations` included in the `Validation Policy` for `u`") definitionally explicit; the worked examples of Appendix B of Veiga (2016) remain admissible extensional interpretations of these relations.
 
-The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how express concepts with that ontology, in particular how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
+The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how to express concepts with that ontology, in particular how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
 
 ### 4.1 Fundamental Concepts (normative)
 
@@ -1296,7 +1296,7 @@ ORDER BY ?useCase ?ie
 
 ##### 4.4.2.7 Acceptable Data Quality Measure (normative)
 
-The original formulation of this was `MEaq(me) = {va | me ∈ ME ⋀ va ⊂ VA}` ` meaq(me1) = {va1, va2}` and was intended to express the idea that a `Validation` can be expressed as a `Measure` that returns `COMPLETE` or `NOT_COMPLETE`, with an example _For the `Measure` coordinate completeness in a dataset, acceptable quality is met by all records having coordinates COMPLETE._
+The original formulation of this was `MEaq(me) = {va | me ∈ ME ⋀ va ⊂ VA}`, `meaq(me1) = {va1, va2}` and was intended to express the idea that a `Validation` can be expressed as a `Measure` that returns `COMPLETE` or `NOT_COMPLETE`, with an example _For the `Measure` coordinate completeness in a dataset, acceptable quality is met by all records having coordinates COMPLETE._
 
 We have redefined this concept to more clearly express how `Measures` can be used as a filter in `QualityAssurance` (using resultType(x) defined in [4.4.1.3 Measure](#4413-measure-normative)):
 
@@ -1372,7 +1372,7 @@ WHERE {
 ORDER BY ?amendment ?target
 ```
 
-Example competency question: "For a given `Amendment`, which `Measures`, `Validations`, and `Issues` are identified as `Improvement Targets` for that `Amendment`?" expressed as sparql, using the `Acted Upon` `Information Elements` as a rough proxy for a `Improvement Target` relationship (note that this query could be used to build a list of candidates, but will cast too wide a net to directly infer `bdqffdq:improvedBy` relationships (e.g. an `Amendment` which conforms a value in some term to a format will not improved a `Validation` that tests the same term for `bdqval:NotEmpty`)):
+Example competency question: "For a given `Amendment`, which `Measures`, `Validations`, and `Issues` are identified as `Improvement Targets` for that `Amendment`?" expressed as sparql, using the `Acted Upon` `Information Elements` as a rough proxy for an `Improvement Target` relationship (note that this query could be used to build a list of candidates, but will cast too wide a net to directly infer `bdqffdq:improvedBy` relationships (e.g. an `Amendment` which conforms a value in some term to a format will not improve a `Validation` that tests the same term for `bdqval:NotEmpty`)):
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -1484,7 +1484,7 @@ dr1 =< id1, rt1, v1 >
 
 ##### 4.4.4.2 ValidationResponse and IssueResponse (normative)
 
-A ValidationResponse 
+A ValidationResponse:
 
 ```
 DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }
@@ -1643,6 +1643,6 @@ The mathematical formalization is a coarser model than the OWL ontology.
 
 ## 6 List of Terms with axioms in the Fitness For Use Framework ontology (normative)
 
-This list brings together definitions of terms in the Fitness For Use Framework vocabulary, listed in more detail in [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md). with the additional axioms in the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md). 
+This list brings together definitions of terms in the Fitness For Use Framework vocabulary, listed in more detail in [Fitness For Use Framework Ontology List of Terms](../../list/bdqffdq/index.md), with the additional axioms in the [Fitness For Use Framework Ontology Vocabulary Extension](../../extension/bdqffdq/index.md). 
 
 {term_list}

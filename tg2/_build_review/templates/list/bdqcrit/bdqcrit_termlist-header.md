@@ -133,6 +133,6 @@ In an RDF context, a reference to a term in the `{pref_namespace_prefix}:` names
 
 Each instance of `bdqffdq:Validation` and `bdqffdq:Issue` SHOULD have exactly one `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit:` vocabulary.
 
-An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit: vocabulary`.
+An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit:` vocabulary.
 
 ## 3 Term index (non-normative)

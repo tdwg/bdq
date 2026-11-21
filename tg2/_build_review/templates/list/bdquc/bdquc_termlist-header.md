@@ -58,7 +58,7 @@ This document is intended for users who need a precise understanding of the voca
 
 - Implementers interpreting or extending BDQ Use Cases
 - Standards developers and data quality modelers working with BDQ vocabularies
-- Users who need to understand an potentially extend BDQ Use Cases, either inside or outside the BDQ standard
+- Users who need to understand and potentially extend BDQ Use Cases, either inside or outside the BDQ standard
 
 Familiarity with RDF vocabularies and the Fitness For Use Framework is recommended for full comprehension, but the document is organized to be accessible for any reader needing detailed term definitions.
 
