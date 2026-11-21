@@ -1251,8 +1251,8 @@ The following is an example of a Test response represented as an `Annotation` in
 
 This example is written to be consistent with the following expectations:
 
-* The `oa:body` of the `oa:Annotation` is the `Response`.
-* The `oa:target` of the `oa:Annotation` is the IRI of the record being annotated.
+* The `oa:hasBody` of the `oa:Annotation` is the `Response`.
+* The `oa:hasTarget` of the `oa:Annotation` is the IRI of the record being annotated.
 * The `dcterms:created` value on the `oa:Annotation` provides the annotation date.
 * The `oa:motivatedBy` value on the `oa:Annotation` provides the motivation for creating the annotation.
 * The `Implementation` is related to the `Response` it generated using `bdqffdq:producesResponse`, is related to the `Specification` it ran using `bdqffdq:usesSpecification`, and is related to the `Mechanism` that executed it using `bdqffdq:implementedBy`.
@@ -1292,14 +1292,14 @@ In a complete dataset the `Specification` is linked (via a `Data Quality Method`
 
 <https://example.org/annotation/1>
   a oa:Annotation ;
-  oa:body <https://example.org/bdq/assertion/1> ;
-  oa:target <http://example.org/dataset/record/12345> ;
+  oa:hasBody <https://example.org/bdq/assertion/1> ;
+  oa:hasTarget <http://example.org/dataset/record/12345> ;
   dcterms:created "2015-01-28T12:00:00Z"^^xsd:dateTime ;
-  oa:creator <https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1> ;
+  dcterms:creator <https://example.org/bdq/mechanism/kurator-dwcsciNameDQ-v1.0.1> ;
   oa:motivatedBy dqv:qualityAssessment .
 ```
 
-See also (Framework Competency Question including an oa:annotation](../../supplementary/index.md#242-framework-competency-question-including-an-oaannotation-non-normative) and the [discussion](../../supplement/index.md#38-amendments-and-annotations-non-normative) in the [Supplementary Material](../../supplement/index.md). 
+See also [Framework Competency Question including an oa:annotation](../../supplement/index.md#243-framework-competency-question-including-an-oaannotation-non-normative) and the [discussion](../../supplement/index.md#38-amendments-and-annotations-non-normative) in the [Supplementary Material](../../supplement/index.md). 
 
 See also [Some Other Related Standards](../bdqffdq/#27-some-other-related-standards-non-normative) in the [Fitness For Use Framework Ontology: Concepts and Use](../../guide/bdqffdq/index.md) document for a discussion of other standards that can provide metadata for BDQ Test results.
 

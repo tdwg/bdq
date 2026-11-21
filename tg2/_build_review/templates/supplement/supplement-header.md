@@ -778,8 +778,8 @@ The Fitness For Use Framework represents the results of `Validation` Tests as `R
       OPTIONAL { ?assertion bdqffdq:hasResponseResult ?responseresult . }
       ?assertion bdqffdq:hasResponseComment ?responsecomment .
       ?annotation a oa:Annotation .
-      ?annotation oa:body ?assertion .
-      ?annotation oa:target ?target .
+      ?annotation oa:hasBody ?assertion .
+      ?annotation oa:hasTarget ?target .
       OPTIONAL { ?annotation oa:motivatedBy ?motivation . } .
       OPTIONAL { ?annotation dcterms:created ?annotationdate . } .
       FILTER (?target = <https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832>)
@@ -1020,8 +1020,9 @@ BDQ `Amendment`-type Tests **propose** changes. It is the responsibility of the 
 
 The [Biodiversity Information Standards (TDWG) Annotations Interest Group](https://github.com/tdwg/annotations) has identified the W3C Web Annotation Data Model (W3C 2017) as a viable model for `Annotations`. The BDQ standard supports the W3C Annotation Data Model (W3C 2017) for reporting the results from Tests, including `Amendment`-type Tests. 
 
-A `bdqffdq:Response`, with its `Response.status`, `Response.result`, and a `Response.comment` can form the body of an annotation, which can be related to an `oa:Annotation` through `oa:body`. A competency question in [2.4 Framework Competency Questions (non-normative)](#24-framework-competency-questions-non-normative) illustrates how `Responses` made by BDQ Tests that are wrapped in `oa:Annotations` could be retrieved. One Test, [ISSUE_ANNOTATION_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY), specifically targets record `Annotations`.
+A `bdqffdq:Response`, with its `Response.status`, `Response.result`, and a `Response.comment` can form the body of an annotation, which can be related to an `oa:Annotation` through `oa:hasBody`. A competency question in [2.4 Framework Competency Questions (non-normative)](#24-framework-competency-questions-non-normative) illustrates how `Responses` made by BDQ Tests that are wrapped in `oa:Annotations` could be retrieved. One Test, [ISSUE_ANNOTATION_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY), specifically targets record `Annotations`.
 
+In the W3C Web Annotation Vocabulary, `oa:hasTarget` (`http://www.w3.org/ns/oa#hasTarget`) is a property of an `oa:Annotation` (its `rdfs:domain`): it relates the `Annotation` to the resource the `Annotation` is about. [ISSUE_ANNOTATION_NOTEMPTY](../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) consults `oa:hasTarget` as its `Information Element` in this sense: it asks whether any `oa:Annotation` in the annotation system (`bdqval:annotationSystem`) has the record under test as its target, as the `oa:Annotation` in the example below has the record `<https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832>`. What the Test evaluates is therefore the set of `Annotations` about the record, held outside the record, not a term of the record itself.
 
 Below is an example of a `bdqffdq:Response` forming the body of an `oa:Annotation`, with triples indicating the implementation that produced the `Response` and relating it back to a `bdqtest:Specification` (from which the metadata about the Test that was run can be identified).
 
@@ -1039,10 +1040,10 @@ Below is an example of a `bdqffdq:Response` forming the body of an `oa:Annotatio
         bdqffdq:appliesTo <https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832>
 
     <https://example.org/annotation/519ab16d-6c00-4a94-a3bd-5418ad391717> a oa:Annotation ;
-        oa:body <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> ;
-        oa:target <https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832> ;
+        oa:hasBody <https://example.org/bdq/assertion/51967574-7be9-4e38-938c-5dfec2d4d61d> ;
+        oa:hasTarget <https://mczbase.mcz.harvard.edu/guid/MCZ:Mala:280832> ;
         dcterms:created "2015-01-28T12:00:00Z" ;
-        oa:creator <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> ;
+        dcterms:creator <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> ;
         oa:motivatedBy oa:assessing .
 
     <urn:uuid:90516df7-838c-4d53-81d9-8131be6ac713> a bdqffdq:Mechanism ;
