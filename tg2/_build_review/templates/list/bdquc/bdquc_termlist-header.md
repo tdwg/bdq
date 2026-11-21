@@ -52,8 +52,6 @@ This term list defines the formal structure and meanings of these concepts and p
 
 ### 1.2 Audience (non-normative)
 
-TODO: Rework for just Use Cases
-
 This document is intended for users who need a precise understanding of the vocabulary elements used in the description of BDQ Use Cases. It will be useful for:
 
 - Implementers interpreting or extending BDQ Use Cases
