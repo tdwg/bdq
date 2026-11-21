@@ -907,7 +907,7 @@ A possible set of conformance testing data for our proposed `VALIDATION_WASATTRI
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007/ | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (trailing slash not allowed by regex) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007?foo=bar | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (query string not allowed by regex) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-00070 | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (extra digit at end) |
-| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-000X | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (final group must be 3 digits plus [0-9X]) |
+| VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-000Z | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (final group must be 3 digits plus [0-9X]) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | https://orcid.org/0000-0001-5000-0007X | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (unexpected extra character) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | `"https://orcid.org/0000-0001-5000-0007 "` | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (trailing whitespace not allowed) |
 | VALIDATION_WASATTRIBUTEDTO_STANDARD | `" https://orcid.org/0000-0001-5000-0007"` | RUN_HAS_RESULT | NOT_COMPLIANT | prov:wasAttributedTo does not match expected format (leading whitespace not allowed) |

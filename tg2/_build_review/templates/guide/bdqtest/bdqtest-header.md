@@ -260,7 +260,7 @@ Each `Amendment` Test is composed of an instance of `bdqffdq:Amendment` (which e
 
 An `Amendment` Test MAY propose a change to one or more Darwin Core term values, or MAY propose to fill in missing values. The `Response` produced by an `Amendment` is intended to improve one or more components of the quality of the record. The `Response.result` from an `Amendment` MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database of record when a `Data Quality Report` is used for Quality Control of an existing database of record. Consumers of `Data Quality Reports` under Quality Assurance uses MAY choose to accept all proposed `Amendments` as part of a pipeline in preparing data for an analysis. `Amendments`, under the Fitness For Use Framework, may also propose changes to procedures rather than to data values; we have not framed any in this form in the BDQ Tests at the time of first release.
 
-The response of an `Amendment` Test (an instance of a `bdqffdq:AmendmentResponse`) MUST take one of four forms.
+The response of an `Amendment` Test (an instance of a `bdqffdq:AmendmentResponse`) MUST take one of five forms.
 
 1. A `Response.status` of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., `bdqval:sourceAuthority`) is unavailable. Running the same Test on the same data at a different time may result in a different result. In this case, the Response.result MUST be empty.
 2. A `Response.status` of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the `Information Elements` are such that the Test cannot be meaningfully run. In this case, the Response.result MUST be empty.
@@ -268,6 +268,7 @@ The response of an `Amendment` Test (an instance of a `bdqffdq:AmendmentResponse
   - A `Response.result` containing a list of key-value pairs of the terms for which values are to be filled in, and the proposed new values for those terms.
 4. A `Response.status` of "AMENDED" when the prerequisites for running the Test have been met and a proposal is made to change a value for one or more input terms that were Empty, and in this situation:
   - A `Response.result` containing a list of key-value pairs of the terms for which new values are proposed, and the proposed new values for those terms.
+5. A `Response.status` of "NOT_AMENDED" when the prerequisites for running the Test have been met but no change or addition can be proposed. In this case, the `Response.result` MUST be empty.
 
 In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the Test produced this response in this case.
 
