@@ -6,7 +6,7 @@
 Fitness For Use Framework Ontology List of Terms
 
 **Date version issued**<br>
-2026-11-16
+2026-11-20
 
 **Date created**<br>
 2024-04-13
@@ -18,13 +18,13 @@ Fitness For Use Framework Ontology List of Terms
 bdqffdq
 
 **This version**<br>
-<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-16>
+<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-20>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqffdq/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-09>
+<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-16>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting vocabulary values in the Fitness For Use Framework Ontology, excluding additional axioms.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting vocabulary values
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-16>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-20>
 
 **Status**<br>
 Draft Standard for Review
@@ -1060,11 +1060,11 @@ DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/DataResource-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/DataResource-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/DataResource-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/DataResource-2026-11-20">https://rs.tdwg.org/bdqffdq/terms/version/DataResource-2026-11-20</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/DataResource-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1081,7 +1081,7 @@ DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U</td>
 		<tr>
 			<td>Comments</td>
 			<td>Describes a bdqffdq:DataResource containing terms from a vocabulary such as Darwin Core that can be related to bdqffdq:InformationElements, and represents the original values of the data operated on by a bdqffdq:Response Test (e.g., an instance of dwc:Occurrence). Ideally, bdqffdq:DataResources have persistent GUIDs.<br>
-A bdqffdq:DataResource could be the oa:target of a oa:Annotation of which a bdqffdq:Response is the oa:body.<br>
+A bdqffdq:DataResource could be the oa:hasTarget of an oa:Annotation of which a bdqffdq:Response is the oa:hasBody.<br>
 DR = { dr | dr = &lt; id, rt, v &gt;, id ∈ ID, rt ∈ RT ⋀ v ∈ V }</td>
 		</tr>
 		<tr>
@@ -2954,11 +2954,11 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/appliesTo-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/appliesTo-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/appliesTo-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/appliesTo-2026-11-20">https://rs.tdwg.org/bdqffdq/terms/version/appliesTo-2026-11-20</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/appliesTo-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2974,7 +2974,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>If a bdqffdq:Response forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation. If bdqffdq:Responses are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Responses on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record.</td>
+			<td>If a bdqffdq:Response forms the oa:hasBody of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:hasTarget of the oa:Annotation. If bdqffdq:Responses are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Responses on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -5630,7 +5630,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-16>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-20>
 
 **Biodiversity Information Standards (TDWG)**
 

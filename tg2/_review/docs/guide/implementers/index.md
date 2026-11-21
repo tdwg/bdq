@@ -8,7 +8,7 @@
 BDQ Implementer's Guide
 
 **Date version issued**<br>
-2026-11-13
+2026-11-20
 
 **Date created**<br>
 2026-11-13
@@ -22,10 +22,13 @@ BDQ Implementer's Guide
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdq/doc/implementers/2026-11-13>
+<https://rs.tdwg.org/bdq/doc/implementers/2026-11-20>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdq/doc/implementers/>
+
+**Previous version**<br>
+<https://rs.tdwg.org/bdq/doc/implementers/2026-11-13>
 
 **Abstract**<br>
 This document is an implementer's guide for the BDQ standard, providing guidance for those wishing to create software implementations (bdqffdq:Mechanism) of BDQ Tests.
@@ -37,7 +40,7 @@ This document is an implementer's guide for the BDQ standard, providing guidance
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-13>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-20>
 
 **Status**<br>
 Draft Standard for Review
@@ -1588,7 +1591,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-13>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-20>
 
 **Biodiversity Information Standards (TDWG)**
 

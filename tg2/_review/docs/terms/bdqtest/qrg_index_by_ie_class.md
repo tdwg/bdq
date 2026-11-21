@@ -569,7 +569,7 @@ MEASURE_VALIDATIONTESTS_PREREQUISITESNOTMET
 - [Term List](../../list/bdqtest/index.md#bdqtest_49a94636-a562-4e6b-803c-665c80628a3d)
 
 
-## oa:target
+## oa:Annotation
 
 ISSUE_ANNOTATION_NOTEMPTY
 - Term IRI: https://rs.tdwg.org/bdqtest/terms/fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1

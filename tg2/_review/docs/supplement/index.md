@@ -8,7 +8,7 @@
 BDQ Supplemental Information
 
 **Date version issued**<br>
-2026-11-13
+2026-11-20
 
 **Date created**<br>
 2026-11-13
@@ -22,10 +22,13 @@ BDQ Supplemental Information
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdq/doc/supplement/2026-11-13>
+<https://rs.tdwg.org/bdq/doc/supplement/2026-11-20>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdq/doc/supplement/>
+
+**Previous version**<br>
+<https://rs.tdwg.org/bdq/doc/supplement/2026-11-13>
 
 **Abstract**<br>
 This document provides information supplementary to the BDQ standard, describing some of the history of its development, and rationale management for decisions made while describing the tests.
@@ -37,7 +40,7 @@ This document provides information supplementary to the BDQ standard, describing
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/supplement/2026-11-13>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/supplement/2026-11-20>
 
 **Status**<br>
 Draft Standard for Review
@@ -1582,7 +1585,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/supplement/2026-11-13>
+[TDWG](<../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/supplement/2026-11-20>
 
 **Biodiversity Information Standards (TDWG)**
 

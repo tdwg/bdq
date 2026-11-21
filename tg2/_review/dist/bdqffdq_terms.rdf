@@ -5,6 +5,23 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/DataResource">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
+    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-20</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An owl:Thing to which a data quality bdqffdq:Response applies.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <rdfs:label xml:lang="en">Data Resource</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ReportConcept"/>
+    <skos:definition xml:lang="en">An owl:Thing to which a data quality bdqffdq:Response applies.</skos:definition>
+    <skos:note xml:lang="en">Describes a bdqffdq:DataResource containing terms from a vocabulary such as Darwin Core that can be related to bdqffdq:InformationElements, and represents the original values of the data operated on by a bdqffdq:Response Test (e.g., an instance of dwc:Occurrence). Ideally, bdqffdq:DataResources have persistent GUIDs.
+
+A bdqffdq:DataResource could be the oa:hasTarget of an oa:Annotation of which a bdqffdq:Response is the oa:hasBody.
+
+DR = { dr | dr = &lt; id, rt, v &gt;, id ∈ ID, rt ∈ RT ⋀ v ∈ V }</skos:note>
+    <skos:prefLabel xml:lang="en">Data Resource</skos:prefLabel>
+  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/hasExpectedResponse">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -117,13 +134,13 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/appliesTo">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-20</dcterms:modified>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Describes the bdqffdq:DataResource about which a bdqffdq:Response is made.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
     <rdfs:label xml:lang="en">applies To</rdfs:label>
     <skos:definition xml:lang="en">Describes the bdqffdq:DataResource about which a bdqffdq:Response is made.</skos:definition>
-    <skos:note xml:lang="en">If a bdqffdq:Response forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation. If bdqffdq:Responses are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Responses on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record.</skos:note>
+    <skos:note xml:lang="en">If a bdqffdq:Response forms the oa:hasBody of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:hasTarget of the oa:Annotation. If bdqffdq:Responses are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Responses on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record.</skos:note>
     <skos:prefLabel xml:lang="en">applies To</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Validation">
@@ -397,23 +414,6 @@ VM(va) = { s | s ∈ S ⋀ (va, s) ∈ rel_VM }</skos:note>
     <rdfs:label xml:lang="en">has Argument Value</rdfs:label>
     <skos:definition xml:lang="en">The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a Formal Parameter to determine the behavior of the bdqffdq:Specification.</skos:definition>
     <skos:prefLabel xml:lang="en">has Argument value</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/DataResource">
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
-    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">An owl:Thing to which a data quality bdqffdq:Response applies.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <rdfs:label xml:lang="en">Data Resource</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ReportConcept"/>
-    <skos:definition xml:lang="en">An owl:Thing to which a data quality bdqffdq:Response applies.</skos:definition>
-    <skos:note xml:lang="en">Describes a bdqffdq:DataResource containing terms from a vocabulary such as Darwin Core that can be related to bdqffdq:InformationElements, and represents the original values of the data operated on by a bdqffdq:Response Test (e.g., an instance of dwc:Occurrence). Ideally, bdqffdq:DataResources have persistent GUIDs.
-
-A bdqffdq:DataResource could be the oa:target of a oa:Annotation of which a bdqffdq:Response is the oa:body.
-
-DR = { dr | dr = &lt; id, rt, v &gt;, id ∈ ID, rt ∈ RT ⋀ v ∈ V }</skos:note>
-    <skos:prefLabel xml:lang="en">Data Resource</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>

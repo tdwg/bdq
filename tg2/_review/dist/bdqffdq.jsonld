@@ -474,7 +474,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-11-16"
+        "@value": "2026-11-20"
       }
     ],
     "http://purl.org/dc/terms/license": [
@@ -496,7 +496,7 @@
     ],
     "http://www.w3.org/2002/07/owl#versionIRI": [
       {
-        "@id": "https://rs.tdwg.org/version/bdqffdq/2026-11-16"
+        "@id": "https://rs.tdwg.org/version/bdqffdq/2026-11-20"
       }
     ]
   },
@@ -1672,7 +1672,7 @@
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2024-09-30"
+        "@value": "2026-11-20"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -1706,7 +1706,7 @@
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
-        "@value": "Describes a bdqffdq:DataResource containing terms from a vocabulary such as Darwin Core that can be related to bdqffdq:InformationElements, and represents the original values of the data operated on by a bdqffdq:Response Test (e.g., an instance of dwc:Occurrence). Ideally, bdqffdq:DataResources have persistent GUIDs.\n\nA bdqffdq:DataResource could be the oa:target of a oa:Annotation of which a bdqffdq:Response is the oa:body.\n\nDR = { dr | dr = < id, rt, v >, id ∈ ID, rt ∈ RT ⋀ v ∈ V }"
+        "@value": "Describes a bdqffdq:DataResource containing terms from a vocabulary such as Darwin Core that can be related to bdqffdq:InformationElements, and represents the original values of the data operated on by a bdqffdq:Response Test (e.g., an instance of dwc:Occurrence). Ideally, bdqffdq:DataResources have persistent GUIDs.\n\nA bdqffdq:DataResource could be the oa:hasTarget of an oa:Annotation of which a bdqffdq:Response is the oa:hasBody.\n\nDR = { dr | dr = < id, rt, v >, id ∈ ID, rt ∈ RT ⋀ v ∈ V }"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -4850,7 +4850,7 @@
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2024-09-30"
+        "@value": "2026-11-20"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -4879,7 +4879,7 @@
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@language": "en",
-        "@value": "If a bdqffdq:Response forms the oa:body of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:target of the bdqffdq:Annotation. If bdqffdq:Responses are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Responses on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record."
+        "@value": "If a bdqffdq:Response forms the oa:hasBody of an oa:Annotation, the bdqffdq:appliesTo bdqffdq:DataResource would be the oa:hasTarget of the oa:Annotation. If bdqffdq:Responses are composed in bdqffdq:DataQualityReports, the bdqffdq:appliesTo bdqffdq:DataResource is an item examined as part of the bdqffdq:DataQualityReport. Expectation for bdqffdq:SingleRecord Test bdqffdq:Responses on Darwin Core data in the BDQ standard is that bdqffdq:appliesTo would point at a dwc:Occurrence record."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
