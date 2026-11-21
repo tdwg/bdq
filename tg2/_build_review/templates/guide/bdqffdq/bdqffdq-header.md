@@ -775,7 +775,7 @@ These rules allow a `Response` to be traced back to a single `Data Quality Need`
 - Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties. _repeated_
 - Each instance of a `bdqffdq:AmendmentResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
 
-The definition of the `bdqffdq:Method` and its subclasses allows methods to serve as an associative entity between `Data Quality Needs` and `Specifications`, but these constraints limit this so that a method SHOULD be associated with only one `Data Quality Need` and one `Specification`. If a method is associated with multiple `Data Quality Needs` or multiple `Specifications`, it may be difficult to determine which `Data Quality Need` or which `Specification` is relevant to a given `Response`, and this may result in an inability to use the Framework effectively.
+The definition of the `bdqffdq:DataQualityMethod` and its subclasses allows methods to serve as an associative entity between `Data Quality Needs` and `Specifications`, but these constraints limit this so that a method SHOULD be associated with only one `Data Quality Need` and one `Specification`. If a method is associated with multiple `Data Quality Needs` or multiple `Specifications`, it may be difficult to determine which `Data Quality Need` or which `Specification` is relevant to a given `Response`, and this may result in an inability to use the Framework effectively.
 
 #### 3.3.1 Cardinality of bdqffdq: terms (non-normative)
 

@@ -438,7 +438,7 @@ The Index of Normative Sections lists, for each document of the standard, the se
 
 #### 3.5.1 Tests (non-normative)
 
-The Test definitions are provided in various serializations. Of these, the bdqtest_term_versions.csv is the canonical archive of all Test versions, both recommended and historical. The documentation about the details of Tests for this standard is generated from this file.  CSV files listing just the current test versions are also provided:
+The Test definitions are provided in various serializations. Of these, bdqtest_term_versions.csv lists all Test versions, both recommended and historical. It is a copy exported from rs.tdwg.org, where the Tests are maintained, and the documentation about the details of Tests for this standard is generated from it.  CSV files listing just the current test versions are also provided:
 
 - [**CSV List of all Tests (bdqtest_term_versions.csv)**](vocabulary/bdqtest_term_versions.csv)
 - [**CSV List of (current) Single Record Tests**](dist/bdqtest_singlerecord_tests_current.csv)
@@ -546,8 +546,8 @@ Note: Some terms are defined differently within different documents to align wit
 | <a name="glossary_Darwin_Core"/>Darwin Core | [Darwin Core](https://dwc.tdwg.org/). A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace [dwc:](http://rs.tdwg.org/dwc/terms/) | TDWG standard |
 | <a name="glossary_Database_of_record"/>Database of record | An information system which holds an authoritative or master record of some data. Records in a database of record are held to be correct over different values for the same records that might be found in other datasets. This is in distinction from aggregated datasets, derived research dataset, datasets for portals and other holders of non-authoritative copies of the data. | BDQ standard |
 | <a name="glossary_DCMI"/>DCMI | [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/). (Dublin Core). Hosts dc:Namespace [dc:](https://purl.org/dc/elements/1.1/)| Standard |
-| <a name="glossary_DefaultSourceAuthority"/>DefaultSourceAuthority | A provided default `bdqval:sourceAuthority` that is used when a required `bdqval:Parameter` specifying a `bdqval:sourceAuthority` has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
-| <a name="glossary_DefaultValue"/>DefaultValue | A preselected value (e.g., year, elevation) to be used where a required `bdqval:Parameter` value has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
+| <a name="glossary_DefaultSourceAuthority"/>DefaultSourceAuthority | A provided default `bdqval:sourceAuthority` that is used when a required `bdqffdq:Parameter` specifying a `bdqval:sourceAuthority` has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
+| <a name="glossary_DefaultValue"/>DefaultValue | A preselected value (e.g., year, elevation) to be used where a required `bdqffdq:Parameter` value has not been provided at the time the Test is run. | bdqffdq:hasAuthoritiesDefaults |
 | <a name="glossary_Dimension"/>Dimension | See [bdqffdq:DataQualityDimension.](docs/list/bdqffdq/index.md#dataqualitydimension) | bdqffdq: |
 | <a name="glossary_DO_NOT_IMPLEMENT"/>DO NOT IMPLEMENT | Tests that are not CORE and not recommended to be implemented with the current level of understanding for one or more reasons: Available vocabularies are ambiguous; the Test is too complex to implement concisely; implementation is expected to lead to ambiguous or inaccurate results. | Tests |
 | <a name="glossary_Dublin_Core"/>Dublin Core | [International Metadata Standard (DCMI).](https://www.dublincore.org/) | Standard | 
@@ -559,7 +559,7 @@ Note: Some terms are defined differently within different documents to align wit
 | Framework Ontology | A model of the Framework (Veiga 2016, Veiga et al. 2017) as an OWL ontology, present as the `bdqffdq:` vocabulary in the BDQ standard. | bdqffdq |
 | <a name="glossary_GBIF"/>GBIF | [Global Biodiversity Information Facility](https://www.gbif.org/) is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about all types of life on Earth. | Biodiversity Data Aggregator |
 | <a name="glossary_geodetic_coordinate_reference_system"/>geodetic coordinate reference system | A coordinate reference system based on a geodetic datum, used to describe positions on the surface of the earth (Chapman and Wieczorek 2020). | Tests |
-| <a name="glossary_geodetic_datum"/>geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2000). | Tests |
+| <a name="glossary_geodetic_datum"/>geodetic datum | A mathematical model that uses a reference ellipsoid to describe the size and shape of the surface of the earth and adds to it the information needed for the origin and orientation of coordinate systems on that surface (Chapman and Wieczorek 2020). | Tests |
 | <a name="glossary_Global_Biodiversity_Information_Facility"/>Global Biodiversity Information Facility | [Global Biodiversity Information Facility](https://www.gbif.org/) (GBIF) is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about all types of life on Earth. | Biodiversity Data Aggregator |
 | <a name="glossary_GUID"/>GUID | Globally Unique Identifier. In this document, the GUID for a Test is a UUID (128-bit universally unique identifier) which identifies the Test. | Tests |
 | <a name="glossary_iDigBio"/>iDigBio | [Integrated Digitized BioCollections](https://idigbio.gbif.us/) is the United States of America National Resource for Advancing Digitization of Biodiversity Collections (ADBC) funded by the National Science Foundation. | Biodiversity Data Aggregator |
@@ -591,7 +591,7 @@ Note: Some terms are defined differently within different documents to align wit
 | <a name="glossary_SPACE"/>SPACE | A BDQ GitHub label to indicate that the Test is related to Darwin Core terms in the `dwc:Location Class`. | bdqffdq:InformationElement |
 | <a name="glossary_SRS"/>SRS | spatial reference system - see CRS (Chapman and Wieczorek 2020). | Tests |
 | <a name="glossary_Supplementary"/>Supplementary | Tests regarded as not CORE because of one or more reasons: Not widely applicable; not clearly matched to an identified data quality need; not informative concerning the "quality" or lack of quality of the data; likely to return a high percentage of either `NOT_COMPLIANT` or `POTENTIAL_ISSUE` records. A Supplementary Test MAY be implemented in a local implementation if a suitable `Use Case` exists. | Tests |
-| <a name="glossary_TDWG"/>TDWG | [Biodiversity Information Standards](https://www.tdwg.org/standards/sds/) | Standards |
+| <a name="glossary_TDWG"/>TDWG | [Biodiversity Information Standards](https://www.tdwg.org/) | Standards |
 | <a name="glossary_TermAction"/>Term-Action | The last two components of the Label in the [BDQ GitHub](https://github.com/tdwg/bdq/issues). Test descriptors, useful in filtering Tests in CSV files. Example: "COUNTRYCODE_STANDARD" | GitHub |
 | <a name="glossary_Test"/>Test | A composition of a `bdqffdq:DataQualityNeed` with a `bdqffdq:DataQualityMethod` that links it to an instance of a `bdqffdq:Specification`, these instances being composed of `InformationElements`, `Arguments`, and `Parameters`. See the [Conceptual map diagram](./docs/guide/bdqtest/index.md#211-conceptual-map-how-bdq-uses-the-term-test-non-normative) | BDQ standard | 
 | Test (technical) | A composition of an instance of a subclass of `bdqffdq:DataQualityNeed` (which expresses a data quality need in the abstract) with an instance of a subclass of `bdqffdq:DataQualityMethod`, which links it to an instance of a `bdqffdq:Specification` (which spells out how to concretely evaluate the need). These class instances are composed with `bdqffdq:InformationElements`, `bdqffdq:Arguments`, and `bdqffdq:Parameters`. For example, the Test [VALIDATION_COUNTRY_FOUND](docs/terms/bdqtest/index.md#VALIDATION_COUNTRY_FOUND). | BDQ standard | 
@@ -615,7 +615,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>ALA (2013) Data Processing. https://www.ala.org.au/blogs-news/data-processing/</li>
 <li>ALA (2020) Locations - Species distributions as areas. https://support.ala.org.au/support/solutions/articles/6000234834-locations-species-distributions-as-areas</li>
 <li>Albertoni R and Isaac A (2016) Data on the Web Best Practices: Data Quality Vocabulary, W3C Working Group Note, W3C, https://www.w3.org/TR/vocab-dqv/</li>
-<li>Albertoni R and Isaac A (2020) Introducing the Data Quality Vocabulary (DQV). Semantic Web, 12(1), 81-97, doi: 10.3233/SW-20038</li>
+<li>Albertoni R and Isaac A (2020) Introducing the Data Quality Vocabulary (DQV). Semantic Web, 12(1), 81-97. https://doi.org/10.3233/SW-200382</li>
 <li>Belbin L, Daly J, Hirsch T, Hobern D, Salle JL (2013) A specialist’s audit of aggregated occurrence records: An ‘aggregator’s’ perspective. ZooKeys 305: 67–76. doi: 10.3897/zookeys.305.5438</li>
 <li>Biodiversity Information Standards (TDWG) (2010) TDWG GUID Applicability Statement. https://raw.githubusercontent.com/tdwg/guid-as/master/guid/tdwg_guid_applicability_statement.pdf</li>
 <li>Biodiversity Information Standards (TDWG) (n.dat.) Annotations Interest Group. https://www.tdwg.org/community/annotations/</li>
@@ -646,7 +646,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>EPSG (2024) About the EPSG Dataset. https://epsg.org/home.html</li>
 <li>EPSG.io (2024) Transform coordinates. https://epsg.io/transform</li>
 <li>ESRI (2020) World Administrative Divisions. https://www.arcgis.com/home/item.html?id=f0ceb8af000a4ffbae75d742538c548b</li> 
-<li>Flanders Marine Institute (2023) Maritime Boundaries Geodatabase, version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/628</li><li>Kelso NV and Patterson T (2010) Introducing Natural Earth data—Naturalearthdata.com. Geographica Technica. Special issue, 2010 pp 82–89. https://technicalgeography.org/pdf/sp_i_2010/12_introducing_natural_earth_data__naturaleart.pdf</li><li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</li><li>Natural Earth (2022) Admin 1 – States, Provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li>
+<li>Flanders Marine Institute (2023) Maritime Boundaries Geodatabase, version 12. Available online at https://www.marineregions.org/. https://doi.org/10.14284/628</li>
 <li>GADM (2018) GADM Maps and Data. http://gadm.org/about.html</li>
 <li>GBIF (2015) Darwin Core Vocabulary: Sex GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/sex.xml</li>
 <li>GBIF (2015) Taxonomic Rank GBIF Vocabulary. https://rs.gbif.org/vocabulary/gbif/rank.xml</li>
@@ -679,8 +679,8 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Morris PJ, Lowery D, Johaadien R (2026) FilteredPush/event_date_qc: Release version 3.2.0 of event_date_qc (v3.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386311</li>
 <li>Morris PJ, Lowery D, Morris RA (2026) kurator-org/kurator-ffdq: Release version 4.0.0 of kurator-ffdq (v4.0.0). Zenodo. https://doi.org/10.5281/zenodo.24386307</li>
 <li>Morris PJ, Lowery D, Wieczorek J (2026) FilteredPush/geo_ref_qc: Release version 2.2.0 of geo_ref_qc (v2.2.0). Zenodo. https://doi.org/10.5281/zenodo.24386313</li>
-<li>Natural Earth (2009)  Land 10m. https//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip</li>
-<li>Natural Earth (2009)  Minor Islands. https//www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip</li>
+<li>Natural Earth (2009) Land 10m. https://www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip</li>
+<li>Natural Earth (2009) Minor Islands. https://www.naturalearthdata.com/download/10m/physical/ne_10m_minor_islands.zip</li>
 <li>Natural Earth (2022) Admin 1 – States, provinces. v5.1.1 2022-05-12. https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/</li>
 <li>Natural Earth (2022) Natural Earth Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales. v5.1.2. https://www.naturalearthdata.com/,  https://github.com/nvkelso/natural-earth-vector/releases/tag/v5.1.2.</li>
 <li>OBIS (2024) Ocean Biodiversity Information System (OBIS). https://obis.org</li>
@@ -709,7 +709,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Wikipedia (2020) Great-circle distance. https://en.wikipedia.org/wiki/Great-circle_distance</li>
 <li>Wikipedia (2020) ISO 3166-1 alpha-2. https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</li>
 <li>Wikipedia (2020) ISO 8601. https://en.wikipedia.org/wiki/ISO_8601</li>
-<li>Wikipedia (2020) List of elevations extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_</li>
+<li>Wikipedia (2020) List of elevation extremes by country. https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country</li>
 <li>Wikipedia (2024) Extreme points on Earth. https://en.wikipedia.org/wiki/Extreme_points_of_Earth</li> 
 <li>Wikipedia (2024) LSID (Life Science Identifier). https://en.wikipedia.org/wiki/LSID</li>
 <li>Wikipedia (2024) Uniform Resource Name (URN). https://en.wikipedia.org/wiki/Uniform_Resource_Name</li>

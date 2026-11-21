@@ -62,7 +62,7 @@ Some familiarity with the structure of BDQ Tests and the Fitness For Use Framewo
 
 ### 1.3 Data Quality Enhancements (non-normative)
 
-The concept of `bdqffdq:Enhancement`, as defined by Veiga (2016) and Veiga et al. (2017), captures the general nature of a proposed change intended to improve data quality. Examples of `Enhancements` include `AssumedDefault`, `Converted`, `From`, `Standardized`, and `Transposed`. These represent high-level categories of `Amendment` strategies.
+The concept of `bdqffdq:Enhancement`, as defined by Veiga (2016) and Veiga et al. (2017), captures the general nature of a proposed change intended to improve data quality. Examples of `Enhancements` include `AssumedDefault`, `Converted`, `FilledInFrom`, `Standardized`, and `Transposed`. These represent high-level categories of `Amendment` strategies.
 
 `Enhancements` describe, in abstract terms, what a `bdqffdq:Specification` expresses concretely. While `Enhancements` are informally related to `Data Quality Dimensions` (e.g., a standardized `Enhancement` might relate to `Conformance`), those relationships are not formally encoded.
 

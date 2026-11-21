@@ -132,7 +132,7 @@ The terminology used to describe the terms in this vocabulary follows the [TDWG 
 
 In an RDF context, a reference to a term in the `{pref_namespace_prefix}:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/{pref_namespace_prefix}/terms/Completeness`) or Term Qualified name (e.g., `{pref_namespace_prefix}:Completeness`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `Completeness`) SHOULD be used. In a purely human context a label (e.g., `Completeness`) MAY be used.
 
-Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqffdq:hasdataQualityDimension` property relating it to a term in this `bdqdim:` vocabulary.
+Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property relating it to a term in this `bdqdim:` vocabulary.
 
 ### 2.1 Mapping to DQV Dimension (non-normative)
 

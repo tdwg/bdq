@@ -149,7 +149,7 @@ Data serialized from relational database systems may contain string representati
 
 String serializations of NULL outside of a database, present at the point of evaluation of a Test, MUST be treated as `bdqval:NotEmpty`. 
 
-A Test execution environment MAY deserialize these string serializations of NULL as null objects (see 5), and present them to a Test as NULL objects, where they would evaluate as `bdqval:notEmpty` (see 2).
+A Test execution environment MAY deserialize these string serializations of NULL as null objects (see 5), and present them to a Test as NULL objects, where they would evaluate as `bdqval:Empty` (see 2).
 
 (4) Data values indicating an unknown are treated as `bdqval:NotEmpty`.
 
@@ -659,11 +659,11 @@ The BDQ standard does not specify how the ordering of these Tests should be acco
 
 ##### 6.4.2.1 Terms for describing Test Dependencies (non-normative)
 
-The [Fitness For Use Framework Ontology](../../guide/bdqffdq/index.md) does not include a property to describe sequence inter-dependencies among `Amendments`. The Ontology does provide the terms `bdqffdq:targetedMeasure`, `bdqffdq:targetedValidation`, and `bdqffdq:TargetedIssue`, which could be used, together with `bdqffdq:improvedBy` to relate `Amendment` Tests to `Validation`, `Measure`, and `Issue` Tests. The BDQ standard does not use these terms to describe Test interrelationships, though they could be used for this purpose. 
+The [Fitness For Use Framework Ontology](../../guide/bdqffdq/index.md) does not include a property to describe sequence inter-dependencies among `Amendments`. The Ontology does provide the terms `bdqffdq:targetedMeasure`, `bdqffdq:targetedValidation`, and `bdqffdq:targetedIssue`, which could be used, together with `bdqffdq:improvedBy` to relate `Amendment` Tests to `Validation`, `Measure`, and `Issue` Tests. The BDQ standard does not use these terms to describe Test interrelationships, though they could be used for this purpose. 
 
 #### 6.4.3 Implementing a complete Test (normative)
 
-An implementation of a Test MAY be complete as described with `bdqffdq:` terms in [BDQ Tests List of Terms](../../list/bdqtest/index.md). A complete Test implementation MUST encompass the elements of the Test defined in an instance of `bdqffdq:DataQualityNeed`, plus its associated `bdqffdq:InformationElements`, instance of a subclass of `bdqffdq:Method`, instance of `bdqffdq:Specification`, any related `Arguments` and `Parameters`, and MUST be able to produce instances of `bdqffdq:Response` (carrying `Response.status`, `Response.result`, `Response.comment`). In contrast, see Section [6.4.6 Implementing an Abstract Test (normative)](#646-implementing-an-abstract-test-normative) for settings where implementations may abstractly consider only the instance of `bdqffdq:DataQualityNeed` with its associated `bdqffdq:InformationElements`.
+An implementation of a Test MAY be complete as described with `bdqffdq:` terms in [BDQ Tests List of Terms](../../list/bdqtest/index.md). A complete Test implementation MUST encompass the elements of the Test defined in an instance of `bdqffdq:DataQualityNeed`, plus its associated `bdqffdq:InformationElements`, instance of a subclass of `bdqffdq:DataQualityMethod`, instance of `bdqffdq:Specification`, any related `Arguments` and `Parameters`, and MUST be able to produce instances of `bdqffdq:Response` (carrying `Response.status`, `Response.result`, `Response.comment`). In contrast, see Section [6.4.6 Implementing an Abstract Test (normative)](#646-implementing-an-abstract-test-normative) for settings where implementations may abstractly consider only the instance of `bdqffdq:DataQualityNeed` with its associated `bdqffdq:InformationElements`.
 
 #### 6.4.4 Presenting Darwin Core Data to a Method that Implements a Test (non-normative)
 
@@ -753,10 +753,10 @@ Other approaches are also possible.
 A specification (the content of a `hasExpectedResponse` property of a `Specification`) is a sequence of statements in the form of a string representing the `Response` followed by the `Criteria` that would result in that `Response`. Thus, given the following specification: 
 
 ```
-EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:SourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY; COMPLIANT if the value of dwc:countryCode is found in bdqval:sourceAuthority; otherwise NOT_COMPLIANT
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode was EMPTY; COMPLIANT if the value of dwc:countryCode is found in bdqval:sourceAuthority; otherwise NOT_COMPLIANT
 ```
 
-'EXTERNAL_PREREQUISITES_NOT_MET' is a `Response` and 'if the `bdqval:SourceAuthority` is not available' is the `Criterion`.
+'EXTERNAL_PREREQUISITES_NOT_MET' is a `Response` and 'if the `bdqval:sourceAuthority` is not available' is the `Criterion`.
 
 The expected response provides a sequence of `Criteria` to evaluate. This should be done in the order specified in the expected response, except for EXTERNAL_PREREQUISITES_NOT_MET, which can be handled as an exception raised from an invocation of an external resource.
 
@@ -792,7 +792,7 @@ Following is pseudocode that follows the same order of evaluation of the `Criter
 
 The `Criteria` for EXTERNAL_PREREQUISITES_NOT_MET do not have to be evaluated first, but would be expected to be raised from wherever in the sequence the external resource first fails to be invoked, and is handled within the construct that builds a `Result` object.
 
-Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input `dwc:countryCode` contains a value. This deviation from the logical sequence implied by the specification (EXTERNAL_PREREQUISITES_NOT_MET if the `bdqval:SourceAuthority` is not available; INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
+Note that this implementation will reach the block that can return EXTERNAL_PREREQUISITES_NOT_MET only if the input `dwc:countryCode` contains a value. This deviation from the logical sequence implied by the specification (EXTERNAL_PREREQUISITES_NOT_MET if the `bdqval:sourceAuthority` is not available; INTERNAL_PREREQUISITES_NOT_MET if the `dwc:countryCode` was EMPTY;) is perfectly acceptable, for the case of network resources being evaluated later in the implementation than other conditions.
 
 Below is pseudocode for a similar implementation as a method on a Darwin Core domain object, less general, and more tightly bound to the domain concept, but making the concern of correctly binding input data to domain concepts not a concern of the Test. 
 
@@ -1370,7 +1370,7 @@ The header for the data in the Test Conformance Testing Data files includes a co
 **NOTE:** We have implemented examples of EXTERNAL_PREREQUISITES_NOT_MET using the `Input.Data` structure containing `bdqval:sourceAuthority`=`https://invalid/invalidservice`, for example:
 
 ```
-bdqval:taxonomyIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""
+bdqval:taxonIsMarine="https://invalid/invalidservice", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:scientificName=""
 ```
 
 ### 8.3 Examples of the Data for Conformance Testing (non-normative)

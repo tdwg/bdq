@@ -64,7 +64,7 @@ A working familiarity with the BDQ Test structure and the Fitness For Use Framew
 
 The concept of `bdqffdq:Criterion` — originally defined by Veiga (2016) and Veiga et al. (2017) — describes, in abstract terms, how a data value may be evaluated with respect to a particular `Use Case`. `Criteria` such as `Found`, `InRange`, `NotEmpty`, `Unambiguous`, and others express broad evaluation patterns that BDQ `Validation` and `Issue` Tests apply to one or more `bdqffdq:InformationElements`.
 
-While related informally to `bdqffdq:Dimensions`, `Criteria` serve a distinct purpose. A `bdqffdq:Criterion` articulates the *type of judgment* applied to data, whereas a `bdqffdq:Specification` captures the *specific logic* used to make that judgment.
+While related informally to `Data Quality Dimensions` (`bdqffdq:DataQualityDimension`), `Criteria` serve a distinct purpose. A `bdqffdq:Criterion` articulates the *type of judgment* applied to data, whereas a `bdqffdq:Specification` captures the *specific logic* used to make that judgment.
 
 Each `bdqtest:` `Validation` or `Issue` Test references a `Criterion` to clarify what kind of quality is being assessed. For example, the Test VALIDATION_COUNTRY_FOUND evaluates the value of `dwc:country` against a specified `sourceAuthority`, using the `Criterion` `bdqcrit:Found` to indicate that the key  quality concern is whether the value exists in the authority’s domain.
 
