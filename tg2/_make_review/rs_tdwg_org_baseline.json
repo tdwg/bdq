@@ -3,7 +3,7 @@
   "repository": "https://github.com/tdwg/rs.tdwg.org",
   "ref": "bdq",
   "commit": "b7ab47a30eb4e3bf328966225c21876447c4416e",
-  "exported": "2026-11-21T01:51:46Z",
+  "exported": "2026-11-21T02:11:46Z",
   "files": {
     "tg2/_review/dist/bdqffdq.jsonld": "1e2df3fb08dec925cefff3a843759a9aa35c36645a173239fa8b3de9038cfd9a",
     "tg2/_review/dist/bdqffdq.owl": "8d8b5bd5f60fc80ac0cbae63600be89bf14ec213b456a1ac42836d75b67eb7ba",
