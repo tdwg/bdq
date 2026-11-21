@@ -98,9 +98,11 @@ _PREFIX_MAP = {
     "dwciri":  "http://rs.tdwg.org/dwc/iri/",
     "dc":      "http://purl.org/dc/elements/1.1/",
     "dcterms": "http://purl.org/dc/terms/",
-    # Java/kurator-ffdq resolves "oa:" to http://www.w3.org/ns/ (not oa#),
-    # replicating this so that oa:hasTarget → http://www.w3.org/ns/hasTarget.
-    "oa":      "http://www.w3.org/ns/",
+    # The W3C Web Annotation namespace: oa:hasTarget is http://www.w3.org/ns/oa#hasTarget.
+    # Until 2026-11-20 this replicated kurator-ffdq before 4.0.1, which resolved "oa:" to
+    # http://www.w3.org/ns/ (oa:hasTarget became http://www.w3.org/ns/hasTarget); rs.tdwg.org's
+    # bdqtest_rdf.py makes the same correction from release 2026-11-20 (its change 6).
+    "oa":      "http://www.w3.org/ns/oa#",
     "bdqval":  "https://rs.tdwg.org/bdqval/terms/",
     "bdquc":   "https://rs.tdwg.org/bdquc/terms/",
     "bdqffdq": "https://rs.tdwg.org/bdqffdq/terms/",
