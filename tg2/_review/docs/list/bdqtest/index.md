@@ -6,7 +6,7 @@
 BDQ Tests List of Terms
 
 **Date version issued**<br>
-2026-11-17
+2026-11-20
 
 **Date created**<br>
 2022-03-25
@@ -18,13 +18,13 @@ BDQ Tests List of Terms
 bdqtest
 
 **This version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-17>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-20>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqtest/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-15>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-17>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting the Tests in the bdqtest: vocabulary, using terms from the Fitness For Use Framework ontology.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting the Tests in the 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-17>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-20>
 
 **Status**<br>
 Draft Standard for Review
@@ -178,8 +178,8 @@ See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../suppleme
 | Label (rdfs:label) | normative | A human-readable name for the subject. TDWG SDS: A a word or short phrase that serves as a human-readable name for the term. In present context: A descriptive label for humans to use to identify the Test. | AMENDMENT_BASISOFRECORD_STANDARDIZED |
 | Preferred Label (skos:prefLabel) | normative | The preferred lexical label for a resource, in a given language. In present context: An easy to read label for the Test, similar to the Label, but in words. | Amendment dwc:basisOfRecord Standardized |
 | Term IRI (dcterms:isVersionOf) | normative | A related resource of which the described resource is a version, edition, or adaptation. TDWG SDS: The HTTP IRI that uniquely identifies the current term. | [https://rs.tdwg.org/ bdqtest/terms/ 07c28ace-561a-476e-a9b9-3d5ad6e35933](https://rs.tdwg.org/bdqtest/terms/07c28ace-561a-476e-a9b9-3d5ad6e35933) |
-| Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the Test. | 2026-11-17 |
-| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqtest/terms/version/ 07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-17](https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-17) |
+| Modified (dcterms:issued) |  | Date of formal issuance of the resource. TDWG SDS: The date in ISO 8601 Date format on which the most recent version of the term was issued. In present context: The most recent date for any change to any element of the Test. | 2026-11-20 |
+| Term Version IRI (rdf:about) | normative | The HTTP IRI that identifies the version of the term that is currently in force. | [https://rs.tdwg.org/ bdqtest/terms/version/ 07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-20](https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-20) |
 | Description (dcterms:description) | non-normative | An account of the resource. In present context: A brief description of what the Test does. | Proposes an amendment to the value of dwc:basisOfRecord using the bdqval:sourceAuthority. |
 | Expected Response (bdqffdq:hasExpectedResponse) | normative | Text describing the logic to be followed by a bdqffdq:Implementation of a bdqffdq:Specification specifying the values of bdqffdq:ResponseStatus and bdqffdq:ResponseResults that should be produced from the evaluation of input bdqffdq:InformationElements. In present context: The formal definition of how the Test must be implemented. | EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; AMENDED the value of dwc:basisOfRecord if it could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED |
 | Specification IRI (bdqffdq:Specification) | normative | A specific statement about how to evaluate a bdqffdq:DataQualityNeed. | [https://rs.tdwg.org/ bdqtest/specification/ 76ee10e7-7be9-432b-ad9c-655b127bff27](https://rs.tdwg.org/bdqtest/specification/76ee10e7-7be9-432b-ad9c-655b127bff27) |
@@ -195,7 +195,7 @@ See section [2.4.1 Listing Identifiers for Tests (non-normative)](../../suppleme
 | Data Quality Dimension (bdqffdq:DataQualityDimension) | normative | An aspect of data quality. | Conformance |
 | Criterion (bdqffdq:Criterion) | normative | Rule against which data are evaluated for conformance to quality bdqffdq:Criteria. | NotEmpty |
 | Enhancement (bdqffdq:Enhancement) | normative | Description of a means by which data could be improved. | Standardized |
-| Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator/FilteredPush rec_occur_qc Library (Morris 2025) |
+| Example Implementations (skos:note) | non-normative | A general note, for any purpose. In present context: Name or links to one or more entities that have an implementation of the Test. | Kurator/FilteredPush rec_occur_qc Library (Morris 2026d) |
 | Example Implementation Source Code (skos:note) | non-normative | A general note, for any purpose. In present context: A link to code that implements the Test. | [https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/ DwCMetadataDQ.java#L834](https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L834) |
 | Source (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: The origin of the concept of the Test. | VertNet |
 | Developed As GitHub Issue (skos:historyNote) | non-normative | A note about the past state/use/meaning of a concept. In present context: A link to the GitHub issue that provided rationale management, recording a history (changes and comments) of the development of the Test. | [https://github.com/tdwg/bdq/issues/ 63](https://github.com/tdwg/bdq/issues/63) |
@@ -508,11 +508,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/07c28ace-561a-476e-a9b9-3d5ad6e35933-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -572,7 +572,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -627,11 +627,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3c2590c7-af8a-4eb4-af57-5f73ba9d1f8e-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -687,7 +687,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -742,11 +742,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -810,7 +810,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -869,11 +869,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -937,7 +937,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -996,11 +996,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1056,7 +1056,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1107,11 +1107,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/39bb2280-1215-447b-9221-fd13bc990641-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1163,7 +1163,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1218,11 +1218,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b129fa4d-b25b-43f7-9645-5ed4d44b357b-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1274,7 +1274,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1325,11 +1325,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/bd385eeb-44a2-464b-a503-7abe407ef904-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1385,7 +1385,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1440,11 +1440,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/74ef1034-e289-4596-b5b0-cde73796697d-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1504,7 +1504,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1563,11 +1563,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1623,7 +1623,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1682,11 +1682,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6d0a0c10-5e4a-4759-b448-88932f399812-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1742,7 +1742,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1797,11 +1797,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1857,7 +1857,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -1912,11 +1912,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1972,7 +1972,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2027,11 +2027,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/718dfc3c-cb52-4fca-b8e2-0e722f375da7-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2083,7 +2083,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2138,11 +2138,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2198,7 +2198,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2253,11 +2253,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2321,7 +2321,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2380,11 +2380,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0345b325-836d-4235-96d0-3b5caf150fc0-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2440,7 +2440,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2495,11 +2495,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2559,7 +2559,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2618,11 +2618,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c5658b83-4471-4f57-9d94-bf7d0a96900c-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2678,7 +2678,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2729,11 +2729,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2d638c8b-4c62-44a0-a14d-fa147bf9823d-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2789,7 +2789,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2840,11 +2840,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2e371d57-1eb3-4fe3-8a61-dff43ced50cf-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2896,7 +2896,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -2947,11 +2947,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3015,7 +3015,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3070,11 +3070,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3134,7 +3134,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3189,11 +3189,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3253,7 +3253,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3312,11 +3312,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3380,7 +3380,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025), Arctos, MCZbase, Symbiota</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026), Arctos, MCZbase, Symbiota</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3439,11 +3439,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3507,7 +3507,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3566,11 +3566,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3630,7 +3630,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3689,11 +3689,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3753,7 +3753,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -3812,11 +3812,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3876,7 +3876,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -4050,11 +4050,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/256e51b3-1e08-4349-bb7e-5186631c3f8e-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4118,7 +4118,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -4177,11 +4177,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/13d5a10e-188e-40fd-a22c-dbaa87b91df2-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4233,7 +4233,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -4288,11 +4288,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/acc8dff2-d8d1-483a-946d-65a02a452700-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4340,7 +4340,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -4486,11 +4486,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4538,7 +4538,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19134,11 +19134,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19186,7 +19186,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19237,11 +19237,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19301,7 +19301,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19356,11 +19356,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19420,7 +19420,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19479,11 +19479,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/2cd6884e-3d14-4476-94f7-1191cfff309b-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19543,7 +19543,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19598,11 +19598,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/adb27d29-9f0d-4d52-b760-a77ba57a69c9-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19662,7 +19662,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19721,11 +19721,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f18a470b-3fe1-4aae-9c65-a6d3db6b550c-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19785,7 +19785,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19844,11 +19844,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -19912,7 +19912,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -19971,11 +19971,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/1bf0e210-6792-4128-b8cc-ab6828aa4871-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20027,7 +20027,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20082,11 +20082,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c6adf2ea-3051-4498-97f4-4b2f8a105f57-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20138,7 +20138,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20193,11 +20193,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/853b79a2-b314-44a2-ae46-34a1e7ed85e4-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20249,7 +20249,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20300,11 +20300,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20360,7 +20360,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20415,11 +20415,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20475,7 +20475,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20530,11 +20530,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d257eb98-27cb-48e5-8d3c-ab9fca4edd11-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20594,7 +20594,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20653,11 +20653,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/69b2efdc-6269-45a4-aecb-4cb99c2ae134-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20717,7 +20717,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20776,11 +20776,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6ce2b2b4-6afe-4d13-82a0-390d31ade01c-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20836,7 +20836,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -20887,11 +20887,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/dc8aae4b-134f-4d75-8a71-c4186239178e-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20955,7 +20955,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21014,11 +21014,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/66269bdd-9271-4e76-b25c-7ab81eebe1d8-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21066,7 +21066,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21117,11 +21117,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8d787cb5-73e2-4c39-9cd1-67c7361dc02e-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21173,7 +21173,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21228,11 +21228,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/47ff73ba-0028-4f79-9ce1-ee7008d66498-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21284,7 +21284,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21335,11 +21335,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/374b091a-fc90-4791-91e5-c1557c649169-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21387,7 +21387,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21442,11 +21442,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21502,7 +21502,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21557,11 +21557,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b6ecda2a-ce36-437a-b515-3ae94948fe83-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21609,7 +21609,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21664,11 +21664,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7d2485d5-1ba7-4f25-90cb-f4480ff1a275-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21716,7 +21716,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21771,11 +21771,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0949110d-c06b-450e-9649-7c1374d940d1-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21823,7 +21823,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21878,11 +21878,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9beb9442-d942-4f42-8b6a-fcea01ee086a-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -21930,7 +21930,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -21981,11 +21981,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22045,7 +22045,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22104,11 +22104,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22164,7 +22164,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22215,11 +22215,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4eb48fdf-7299-4d63-9d08-246902e2857f-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22279,7 +22279,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22338,11 +22338,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22402,7 +22402,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22461,11 +22461,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22513,7 +22513,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22564,11 +22564,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4f2bf8fd-fc5c-493f-a44c-e7b16153c803-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22620,7 +22620,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22675,11 +22675,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/41267642-60ff-4116-90eb-499fee2cd83f-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22731,7 +22731,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22782,11 +22782,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/5618f083-d55a-4ac2-92b5-b9fb227b832f-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22838,7 +22838,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -22889,11 +22889,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -22953,7 +22953,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -23012,11 +23012,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f2ce7d55-5b1d-426a-b00e-6d4efe3058ec-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23076,7 +23076,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -23135,11 +23135,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/239ec40e-a729-4a8e-ba69-e0bf03ac1c44-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23187,7 +23187,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -23238,11 +23238,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7e0c0418-fe16-4a39-98bd-80e19d95b9d1-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23298,7 +23298,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -23353,11 +23353,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/125b5493-052d-4a0d-a3e1-ed5bf792689e-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23417,7 +23417,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -23476,11 +23476,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/36ed36c9-b1a7-40b2-b5e2-0d012e772098-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23528,7 +23528,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -23579,11 +23579,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/15f78619-811a-4c6f-997a-a4c7888ad849-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23635,7 +23635,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -23686,11 +23686,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23750,7 +23750,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -23809,11 +23809,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23865,7 +23865,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -23920,11 +23920,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -23984,7 +23984,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -24043,11 +24043,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24107,7 +24107,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -24166,11 +24166,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24230,7 +24230,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -24289,11 +24289,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/8f1e6e58-544b-4365-a569-fb781341644e-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24341,7 +24341,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -24396,11 +24396,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0bb8297d-8f8a-42d2-80c1-558f29efe798-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24460,7 +24460,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -24519,11 +24519,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24571,7 +24571,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -24626,11 +24626,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/01c6dafa-0886-4b7e-9881-2c3018c98bdc-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24678,7 +24678,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -24729,11 +24729,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ff59f77d-71e9-4eb1-aac9-8bd05c50ff70-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24781,7 +24781,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -24832,11 +24832,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c486546c-e6e5-48a7-b286-eba7f5ca56c4-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24884,7 +24884,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -24935,11 +24935,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -24987,7 +24987,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -25038,11 +25038,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7af25f1e-a4e2-4ff4-b161-d1f25a5c3e47-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25102,7 +25102,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -25157,11 +25157,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/81cc974d-43cc-4c0f-a5e0-afa23b455aa3-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25221,7 +25221,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -25280,11 +25280,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/5424e933-bee7-4125-839e-d8743ea69f93-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25344,7 +25344,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -25403,11 +25403,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25467,7 +25467,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -25526,11 +25526,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/17f03f1f-f74d-40c0-8071-2927cfc9487b-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25582,7 +25582,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -25637,11 +25637,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/49f1d386-5bed-43ae-bd43-deabf7df64fc-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25689,7 +25689,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -25740,11 +25740,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/6eeac3ed-f691-457f-a42e-eaa9c8a71ce8-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25796,7 +25796,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -25851,11 +25851,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/401bf207-9a55-4dff-88a5-abcd58ad97fa-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25903,7 +25903,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -25958,11 +25958,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/3f335517-f442-4b98-b149-1e87ff16de45-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26022,7 +26022,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -26081,11 +26081,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7c4b9498-a8d9-4ebb-85f1-9f200c788595-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26133,7 +26133,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -26188,11 +26188,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26252,7 +26252,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -26311,11 +26311,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26371,7 +26371,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -26422,11 +26422,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4daa7986-d9b0-4dd5-ad17-2d7a771ea71a-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26486,7 +26486,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush geo_ref_qc Library (Morris & Lowery 2025b)</td>
+			<td>Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -26545,11 +26545,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/14da5b87-8304-4b2b-911d-117e3c29e890-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26597,7 +26597,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -26652,11 +26652,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26716,7 +26716,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -26775,11 +26775,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/06851339-843f-4a43-8422-4e61b9a00e75-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26831,7 +26831,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -26882,11 +26882,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -26950,7 +26950,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2025)</td>
+			<td>Kurator/FilteredPush sci_name_qc Library (Morris & Dou 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -27009,11 +27009,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/4833a522-12eb-4fe0-b4cf-7f7a337a6048-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -27073,7 +27073,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2025)</td>
+			<td>Kurator/FilteredPush rec_occur_qc Library (Morris 2026d)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -27132,11 +27132,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/ad0c8855-de69-4843-a80c-a5387d20fbc8-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -27196,7 +27196,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -27251,11 +27251,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-17</td>
+			<td>2026-11-20</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2026-11-17">https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2026-11-17</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2026-11-17.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/c09ecbf9-34e3-4f3e-b74a-8796af15e59f-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -27303,7 +27303,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Example Implementations</td>
-			<td>Kurator/FilteredPush event_date_qc Library (Morris & Lowery 2025)</td>
+			<td>Kurator/FilteredPush event_date_qc Library (Morris, Lowery & Johaadien 2026)</td>
 		</tr>
 		<tr>
 			<td>Example Implementation Source Code</td>
@@ -27363,7 +27363,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-17>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-20>
 
 **Biodiversity Information Standards (TDWG)**
 
