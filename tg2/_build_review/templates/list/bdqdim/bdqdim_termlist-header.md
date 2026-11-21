@@ -124,7 +124,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.9 Key to Vocabulary Terms (normative)
 
-The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the [TDWG Standards Documentation Specification (SDS)](https://www.tdwg.org/standards/sds/). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 {term_key}
 
@@ -136,14 +136,14 @@ Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqff
 
 ### 2,1 Mapping to DQV Dimension (non-normative)
 
-The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dq/) (DQV) (Albertoni and Isaac, 2016; Albertoni and Isacc 2020) provides a metadata model for describing data quality information in RDF.  The W3C Data Quality Vocabulary defines (mostly by reuse) a set of data quality dimensions.  The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality".  This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension`.  
+The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dq/) (DQV) (Albertoni and Isaac, 2016; Albertoni and Isaac 2020) provides a metadata model for describing data quality information in RDF.  The W3C Data Quality Vocabulary defines (mostly by reuse) a set of data quality dimensions.  The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality".  This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension`.  
 
 A potential mapping of the `bdqdim:` terms to DQV dimensions is as follows:
 
 | DQV Concept | Related bdqdim: concept |
 | ----------- | ----------------------- |
 | ldqd:completeness| bdqdim:Completeness |
-| ldqd:itneroperability | bdqdim:Conformance | 
+| ldqd:interoperability | bdqdim:Conformance | 
 | ldqd:consistency | bdqdim:Consistency |
 | ldqd:semanticAccuracy | bdqdim:Likeliness | 
 | ldqd:semanticAccuracy |bdqdim:Reliability |

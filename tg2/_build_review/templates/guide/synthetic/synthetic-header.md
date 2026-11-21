@@ -50,7 +50,7 @@
 
 The purpose of this document is to provide guidance for marking and identifying synthetic or modified biodiversity data that has been created for purposes such as conformance testing BDQ Test implementations. It establishes conventions for distinguishing such artificial or altered data from authentic biodiversity occurrence records, ensuring that conformance testing datasets are not unintentionally incorporated into biodiversity analyses or downstream data pipelines.
 
-The document specifies how to explicitly mark confomance testing data, including wholly synthetic records, real-world data with synthetic modifications, and real data reused for illustrative or example purposes. These practices support the integrity of analytical results and uphold trust in biodiversity data platforms.
+The document specifies how to explicitly mark conformance testing data, including wholly synthetic records, real-world data with synthetic modifications, and real data reused for illustrative or example purposes. These practices support the integrity of analytical results and uphold trust in biodiversity data platforms.
 
 ### 1.2 Audience (non-normative)
 

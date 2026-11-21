@@ -212,7 +212,7 @@ We also observed that:
 
 (2) Most of the included `Single Record` Tests check for validity of a value, when corresponding Tests exist to check for the presence of a value in the same term. 
 
-We included, for example, VALIDATION_DECIMALLATITUDE_INRANGE and VALIDATION_DECIMALLONGITUDE_INRANGE, but not the corresponding NOTEMPTY tests VALIDATION_DECIMALLATITUDE_NOTEMPTY and VALIDATION_DECIMALLONGITUDE_NOTEMPTY.  This is entirely appropriate for `Quality Assurance` where we can set `Multi Record` `Measures` that return COMPLETE if the STANDARD and INRANGE `Validations` have a Response.result of COMPLIANT.   If, however, we wish to perform `Quality Control` and improve the fitness of a candiate data set, it will be very helpful to isolate and count which records have empty values for these critical terms, and which have out of range values (and we would include `Multi Record` `Measures` that count outcomes).  The kind and scope of data cleanup work that may be needed will differ depending on the distribution of these distinct kinds of problem in the data set.
+We included, for example, VALIDATION_DECIMALLATITUDE_INRANGE and VALIDATION_DECIMALLONGITUDE_INRANGE, but not the corresponding NOTEMPTY tests VALIDATION_DECIMALLATITUDE_NOTEMPTY and VALIDATION_DECIMALLONGITUDE_NOTEMPTY.  This is entirely appropriate for `Quality Assurance` where we can set `Multi Record` `Measures` that return COMPLETE if the STANDARD and INRANGE `Validations` have a Response.result of COMPLIANT.   If, however, we wish to perform `Quality Control` and improve the fitness of a candidate data set, it will be very helpful to isolate and count which records have empty values for these critical terms, and which have out of range values (and we would include `Multi Record` `Measures` that count outcomes).  The kind and scope of data cleanup work that may be needed will differ depending on the distribution of these distinct kinds of problem in the data set.
 
 (3) Selection of a threshold value for `dwc:coordinateUncertaintyInMeters` in relation to an analysis grid is fraught with complexities for the unwary.  See: Zermoglio et al. (2022) sections on [Coordinates and Grid Systems](https://docs.gbif.org/georeferencing-quick-reference-guide/1.0/en/#coordinates-grid-systems) and [Table of feature types and default geographic radials](https://docs.gbif.org/georeferencing-quick-reference-guide/1.0/en/#table-default-geographic-radial) and [geographic radial](https://docs.gbif.org/georeferencing-quick-reference-guide/1.0/en/#geographic-radial).
 
@@ -830,7 +830,7 @@ Given a `Use Case`, can one find the `Information Elements` that were `Acted Upo
     }
 ```
 
-This competency question aligns with the mathematical formulation of a narrow sense of Valuable Information Elements (VIEact) in Section [4.4.2.6 Valuable Information Elements (normative)](../guide/bdqffdq/index.md#4426-valuable-information-elements-normative) of the mathematical forumulation in the Fitness For Use Framework Ontology: Concepts and Use guide.
+This competency question aligns with the mathematical formulation of a narrow sense of Valuable Information Elements (VIEact) in Section [4.4.2.6 Valuable Information Elements (normative)](../guide/bdqffdq/index.md#4426-valuable-information-elements-normative) of the mathematical formulation in the Fitness For Use Framework Ontology: Concepts and Use guide.
 
 ```
 VIEact(u) = {ie | ie ∈ VIE(u) ⋀ ieType(ie) = ActedUpon }
@@ -864,7 +864,7 @@ Tests are identified by the `bdqffdq:` namespace classes of `Validation`, `Issue
 
 `Validation` Tests evaluate values in one or more [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) for fitness for a particular data quality need. In some cases, `Validation` Tests check for the presence or the lack of a value. `Validation` Tests are phrased as positive statements consistent with the Fitness For Use Framework (Veiga 2016, Veiga et al. 2017). For example, [VALIDATION_TAXONRANK_NOTEMPTY](../terms/bdqtest/index.md#VALIDATION_TAXONRANK_NOTEMPTY) will return a `Response.status`="RUN_HAS_RESULT" and `Response.result`="COMPLIANT" if a record being tested contains a value in `dwc:taxonRank`, rather being phrased in the negative (i.e., VALIDATION_TAXONRANK_EMPTY) and flagging a potential problem. Data are found to be fit for some `Use Case` if all `Validations` comprising that `Use Case` have a `Response.result`="COMPLIANT". The formal response of Validation Tests take one of three forms.
 
-1. A `Response.status` of "EXTERNAL_PREQUISITES_NOT_MET" when an external resource (e.g., a `bdqval:sourceAuthority`) is unavailable, and running the same Test on the same data at a different time may result in a different result.
+1. A `Response.status` of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., a `bdqval:sourceAuthority`) is unavailable, and running the same Test on the same data at a different time may result in a different result.
 2. A `Response.status` of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the `Information Elements` are such that the Test cannot be meaningfully run.
 3. A `Response.status` of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this situation:
   - A `Response.result` of either "COMPLIANT" if the values of the `Information Elements` meet the `Criteria`, or "NOT_COMPLIANT" when they do not.
@@ -1001,8 +1001,8 @@ Since a value supplied for a `Parameter` for the Test is an attribute of the `Me
 
 ### 3.6 Independence and Paired Tests (non-normative)
 
-BDQ Tests are designed to be independant and modular, allowing them to be combined in arbitrary orders and combinations to meet specific `Data Quality Needs`. We do not impose any particular model of Test execution on implementation frameworks.  The specification of any interdependencies among Tests would immediately impose constraints upon Test execution frameworks. 
-Implementations of Test execution frameworks may execute Tests on data records in parallel, in sequence, as queries on datasets, or operating on on distinct values.  For a subset of `Amendments`, we do, however, provide guidance on execution order to ennsure deterministic results.
+BDQ Tests are designed to be independent and modular, allowing them to be combined in arbitrary orders and combinations to meet specific `Data Quality Needs`. We do not impose any particular model of Test execution on implementation frameworks.  The specification of any interdependencies among Tests would immediately impose constraints upon Test execution frameworks. 
+Implementations of Test execution frameworks may execute Tests on data records in parallel, in sequence, as queries on datasets, or operating on on distinct values.  For a subset of `Amendments`, we do, however, provide guidance on execution order to ensure deterministic results.
 
 BDQ `Amendment` Tests are paired with a corresponding `Validation` Test that assesses the same aspect of data quality. Not all `Validation` Tests, however, have a corresponding `Amendment` Test. An `Amendment` Test may be able to improve the quality of data with respect to that `Validation`. The Framework contains terms for expressing such formal relationships among Tests.  We have chosen not to specify these to allow users to address their data quality needs more flexibly. What we would recommend, however, is that the data evaluation process generally runs all the relevant `Validation` Tests, then any relevant `Amendment` Tests, then re-run the `Validation` Tests a second time on the records with amendments applied.
 
@@ -1190,7 +1190,7 @@ However, all UPPER CASE is used for the names of Tests and for the identifiers a
   * Example: `bdqffdq:AMENDED` with its `rdfs:label` "AMENDED"
 * The labels of Tests in the `bdqtest:` namespace are in all upper case characters, with words separated by underscores.
   * Example: `bdqtest:47ff73ba-0028-4f79-9ce1-ee7008d66498` has `rdfs:label` "VALIDATION_DAY_STANDARD".
-  * A machine readable identifier for a test with no semantic content was a deliberate choice to support stability in the identification of tests by code implementations, as we found the labels of tests would change over time as we refined the specifications.  The `rdfs:label` is indended as the human identifier, and a `skos:preferredLabel` with spaces between words is intended to support accessibility and translations.
+  * A machine readable identifier for a test with no semantic content was a deliberate choice to support stability in the identification of tests by code implementations, as we found the labels of tests would change over time as we refined the specifications.  The `rdfs:label` is intended as the human identifier, and a `skos:preferredLabel` with spaces between words is intended to support accessibility and translations.
 
 The labels of Tests follow a small number of patterns.
 
@@ -1267,7 +1267,7 @@ The tables below list the terms used for the Test `Types`, the Labels for multip
 | YEARSTARTDAYOFYEARENDDAYOFYEAR | A general category of specific `bdqval:InformationElements` that represents a combination of the Darwin Core terms `dwc:year`, `dwc:startDayOfYear`, `dwc:endDayofYear`. | [AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR](../terms/bdqtest/index.md#AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR)       |
 | <strong><a name="evaluations">Evaluations</a></strong> ||| <!-- *************************************************************** -->
 | ASSUMEDDEFAULT | A `bdqffdq:Amendment` that replaces a `bdqval:EMPTY` term with a predefined default `bdqval:Parameter` value. | [AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT](../terms/bdqtest/index.md#AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT) |
-| CENTREOFCOUNTRY | Testing if `bdqffdq:EnformationElements` COORDINATES identify the center of the `dwc:country`, allowing for a spatial buffer.     | [ISSUE_COORDINATES_CENTEROFCOUNTRY](../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)   |
+| CENTREOFCOUNTRY | Testing if `bdqffdq:InformationElements` COORDINATES identify the center of the `dwc:country`, allowing for a spatial buffer.     | [ISSUE_COORDINATES_CENTEROFCOUNTRY](../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY)   |
 | COMPLETE       | Testing if the `bdqffdq:InformationElement` `dwc:scientificNameId` forms a valid and complete identifier. | [VALIDATION_SCIENTIFICNAMEID_COMPLETE](../terms/bdqtest/index.md#VALIDATION_SCIENTIFICNAMEID_COMPLETE)     |
 | CONSISTENT     | Identifies consistency among values between `bdqffdq:InformationElements`.  | [VALIDATION_CLASSIFICATION_CONSISTENT](../terms/bdqtest/index.md#VALIDATION_CLASSIFICATION_CONSISTENT)     |
 | DURATIONINSECONDS | The duration in seconds of the `bdqval:InformationElement dwc:eventDate`.      | [MEASURE_EVENTDATE_DURATIONINSECONDS](../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS)    |
@@ -1366,7 +1366,7 @@ Supplementary Tests have been exported to a CSV list and have RDF representation
 
 The tag 'NEEDS WORK' was repeatedly added and removed to issues and was a valuable support for the evaluation of Tests in repeated feedback loops that included: Frame the description of a Test, independently produce conformance testing data and an implementation, run the implementation against the conformance testing data, evaluate cases where the expectations in the conformance testing data differ from the Test results (which could be a defect in the implementation, in the conformance testing data, or a problem in the Test specification), discuss as a group, find consensus, make changes as needed, and repeat.
 
-### 5.2.1 Exploring relationships among tests (non-normative)
+#### 5.2.1 Exploring relationships among tests (non-normative)
 
 The following diagrams of tests illustrate sets of tests that examine related `Information Elements: Acted Upon`, highlighting cases where several tests evaluate different quality properties of the same term.
 
@@ -1378,25 +1378,25 @@ VALIDATION_COUNTRYCODE_STANDARD targetedValidation of AMENDMENT_COUNTRYCODE_FROM
 VALIDATION_BASISOFRECORD_STANDARD targetedValidation of AMENDMENT_BASISOFRECORD_STANDARDIZED
 ...
 
-#### 5.2.1.1 Diagram of the NAME-oriented Tests and Information Elements Acted Upon (non-normative)
+##### 5.2.1.1 Diagram of the NAME-oriented Tests and Information Elements Acted Upon (non-normative)
 
 ![Diagram of the 'NAME'-oriented tests and Information Elements Acted Upon.](TestsName.png "NAME by Information Elements")
 
 This diagram illustrates the relationships among the Tests that are oriented towards the `dwc:Taxon` class, and the `Information Elements: Acted Upon` that are targeted by those Tests. The Tests in this diagram are all related to the `dwc:Taxon` class, and include `Validation`, `Issue`, `Measure`, and `Amendment` Tests. The diagram illustrates how these Tests interact with each other and with the `Information Elements: Acted Upon`.
 
-#### 5.2.1.2 Diagram of the SPACE-oriented Tests and Information Elements Acted Upon (non-normative)
+##### 5.2.1.2 Diagram of the SPACE-oriented Tests and Information Elements Acted Upon (non-normative)
 
 ![Diagram of the 'SPACE'-oriented tests and Information Elements Acted Upon.](TestsSpace.png "SPACE by Information Elements")
 
 This diagram illustrates the relationships among the Tests that are oriented towards the `dwc:Location` class, and the `Information Elements: Acted Upon` that are targeted by those Tests. The Tests in this diagram are all related to the `dwc:Location` class, and include selected `Validation`, `Issue`, and `Amendment` Tests. The diagram illustrates how these Tests interact with each other and with the `Information Elements: Acted Upon`.
 
-#### 5.2.1.3 Diagram of the TIME-oriented Tests and Information Elements Acted Upon (non-normative)
+##### 5.2.1.3 Diagram of the TIME-oriented Tests and Information Elements Acted Upon (non-normative)
 
 ![Diagram of the 'TIME'-oriented tests and Information Elements Acted Upon.](TestsTime.png "TIME by Information Elements")
 
 This diagram illustrates the relationships among the Tests that are oriented towards the `dwc:Event` class, and the `Information Elements: Acted Upon` that are targeted by those Tests. The Tests in this diagram are all related to the `dwc:Event` class, and include selected `Validation`, `Issue`, `Measure`, and `Amendment` Tests. The diagram illustrates how these Tests interact with each other and with the `Information Elements: Acted Upon`.
 
-#### 5.2.1.4 Diagram of the OTHER-oriented Tests and Information Elements Acted Upon (non-normative)
+##### 5.2.1.4 Diagram of the OTHER-oriented Tests and Information Elements Acted Upon (non-normative)
 
 ![Diagram of the 'OTHER'- oriented tests and Information Elements Acted Upon.](TestsOther.png "OTHER by Information Elements")
 
@@ -1422,7 +1422,7 @@ Each Test issue in GitHub begins with a table in Markdown format describing the 
 
 **Information Elements Acted Upon** [normative]: The [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darwin Core Maintenance Group 2021) that are the focus of the Test (e.g., `dwc:verbatimCoordinates`, `dwc:verbatimLatitude`, `dwc:verbatimLongitude`, `dwc:verbatimCoordinateSystem`, and `dwc:verbatimSRS` for the Test [AMENDMENT_COORDINATES_FROM_VERBATIM](../terms/bdqtest/index.md#AMENDMENT_COORDINATES_FROM_VERBATIM)).
 
-**Expected Response (Specification)** [normative]: A concise description of the logic of the Test to clarify the expectations for its implementation. The Expected Response takes the form (for a `Validation`) of: EXTERNAL_PREREQUISITES_NOT_MET if _{condition}_; INTERNAL_PREREQUESITES_NOT_MET if _{condition}_; COMPLIANT if _{condition}_; otherwise NOT_COMPLIANT.  See the [Guidance for Reading a Specification](../guide/implementers/index.md#2322-guidance-for-reading-a-specification-normative) in the [Implementers Guide](../guide/implementers/index.md).
+**Expected Response (Specification)** [normative]: A concise description of the logic of the Test to clarify the expectations for its implementation. The Expected Response takes the form (for a `Validation`) of: EXTERNAL_PREREQUISITES_NOT_MET if _{condition}_; INTERNAL_PREREQUISITES_NOT_MET if _{condition}_; COMPLIANT if _{condition}_; otherwise NOT_COMPLIANT.  See the [Guidance for Reading a Specification](../guide/implementers/index.md#2322-guidance-for-reading-a-specification-normative) in the [Implementers Guide](../guide/implementers/index.md).
 
 Example: <br>
 ```
@@ -1470,7 +1470,7 @@ Example: For [AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON](../terms/bdqtest/index.md#A
 
 ## 6 Code for BDQ Components (non-normative)
 
-The specifications for the BDQ Tests were developed in Markdown Tables in GitHub issues (initially created by Alex Thompson by using the GitHub API from a spreadsheet of Tests developed in the BDQ TG2 Gainesville meeting). It was recognised early on that these would also need to be serialized to CSV (and later that this CSV would need to become a term-version file), so code was written (Python by Lee Belbin, and Java (`bdq_issue_to_csv` (Morris 2026e))) to extract the Markdown tables to CSV lists of Tests. The descriptors in the issue Markdown tables changed over time, and the columns in the CSV also changed over time (most markedly in late 2024 while preparing the BDQ standard for submission). The `kurator-ffdq` (Morris, Lowery & Morris 2026) code developed by David Lowery is capable of loading a CSV list of Test descriptors into a set of Java classes that model `bdqffdq:` and can serialize instances as RDF. This code was maintained and the configuration changed over time to accomodate changes in the Test CSV file. `Kurator-ffdq` was regularly used to produce RDF representations of the Tests. `Kurator-ffdq` is also able to generate stub Java (and Python) methods, and this functionality was used to add Tests to and maintain four FilteredPush/Kurator libraries of Test implementations.
+The specifications for the BDQ Tests were developed in Markdown Tables in GitHub issues (initially created by Alex Thompson by using the GitHub API from a spreadsheet of Tests developed in the BDQ TG2 Gainesville meeting). It was recognised early on that these would also need to be serialized to CSV (and later that this CSV would need to become a term-version file), so code was written (Python by Lee Belbin, and Java (`bdq_issue_to_csv` (Morris 2026e))) to extract the Markdown tables to CSV lists of Tests. The descriptors in the issue Markdown tables changed over time, and the columns in the CSV also changed over time (most markedly in late 2024 while preparing the BDQ standard for submission). The `kurator-ffdq` (Morris, Lowery & Morris 2026) code developed by David Lowery is capable of loading a CSV list of Test descriptors into a set of Java classes that model `bdqffdq:` and can serialize instances as RDF. This code was maintained and the configuration changed over time to accommodate changes in the Test CSV file. `Kurator-ffdq` was regularly used to produce RDF representations of the Tests. `Kurator-ffdq` is also able to generate stub Java (and Python) methods, and this functionality was used to add Tests to and maintain four FilteredPush/Kurator libraries of Test implementations.
 
 The preparation for public review of the BDQ standard was built with the following three sets of shell scripts:
 

@@ -256,7 +256,7 @@ It is expected that instances of `Response` objects will involve, in RDF, a comb
 
 See [4.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#41-structure-of-response-normative) in [BDQ Tests: Concepts and Use](../../guide/bdqtest/index.md) for further normative guidance on Responses as RDF or as data structures in non-RDF settings.
 
-### 2.4.1 Properties of Responses (normative) 
+#### 2.4.1 Properties of Responses (normative) 
 
 In an RDF context, the status property of a `Response` MUST be represented using an IRI (e.g., `bdqffdq:RUN_HAS_RESULT`) as the object of `bdqffdq:hasResponseStatus`.
 
@@ -270,7 +270,7 @@ Labels MAY be used purely for display.
 
 This section summarizes representation choices. Full normative constraints on the response structure of `Responses` is found in [4.1 Structure of Response (normative)](../bdqtest/index.md#41-structure-of-response-normative) of the [BDQ Tests: Concepts and Use](../bdqtest/index.md) document.
 
-#### 2.4.1.1 Table of Representations of Response Properties (non-normative)
+##### 2.4.1.1 Table of Representations of Response Properties (non-normative)
 
 Summary of the expected properties of a `Response` object, and the corresponding terms in the `bdqffdq:` vocabulary, with examples of RDF and non-RDF representations.
 
@@ -659,7 +659,7 @@ Each instance of a `bdqffdq:Implementation` MAY have zero to many `bdqffdq:produ
 
 Each instance of a `bdqffdq:Response` SHOULD be the object of exactly one `bdqffdq:producesResponse` object property. 
 
-#### 3.2 Identifying the Test that produced a Response (normative)
+### 3.2 Identifying the Test that produced a Response (normative)
 
 Following the object properties from an instance of a `bdqffdq:Response` to an instance of a subclass of a `bdqffdq:DataQualityNeed` SHOULD identify one and only one instance of a subclass of a `bdqffdq:DataQualityNeed` for a single instance of a `bdqffdq:Response`. If this condition is not met, it is not possible to tell which Test with which `Parameter` argument values produced the `Response`.
 
@@ -775,9 +775,9 @@ These rules allow a `Response` to be traced back to a single `Data Quality Need`
 - Each instance of a `bdqffdq:Implementation` MAY be the subject of zero to many `bdqffdq:producesResponse` properties. _repeated_
 - Each instance of a `bdqffdq:AmendmentResponse` SHOULD be the object of one and only one `bdqffdq:producesResponse` property.
 
-The definition of the `bdqffdq:Method` and its subclasses allows methods to serve as an associative entity between `Data Quality Needs` and `Specifications`, but thes constraints limit this so that a method SHOULD be associated with only one `Data Quality Need` and one `Specification`. If a method is associated with multiple `Data Quality Needs` or multiple `Specifications`, it may be difficult to determine which `Data Quality Need` or which `Specification` is relevant to a given `Response`, and this may result in an inability to use the Framework effectively.
+The definition of the `bdqffdq:Method` and its subclasses allows methods to serve as an associative entity between `Data Quality Needs` and `Specifications`, but these constraints limit this so that a method SHOULD be associated with only one `Data Quality Need` and one `Specification`. If a method is associated with multiple `Data Quality Needs` or multiple `Specifications`, it may be difficult to determine which `Data Quality Need` or which `Specification` is relevant to a given `Response`, and this may result in an inability to use the Framework effectively.
 
-### 3.3.1 Cardinality of bdqffdq: terms (non-normative)
+#### 3.3.1 Cardinality of bdqffdq: terms (non-normative)
 
 The non-normative expectations expressed in this section are based on the mathematical formalization of the Fitness For Use Framework, and are intended to expand upon the normative statements above to provide additional explanatory guidance on how class instances in `bdqffdq:` are expected to be related to each other through properties, failure to follow these expectations may result in an inability to use the Framework effectively.
 
@@ -848,7 +848,7 @@ The following changes have been made to the original formulation:
   - Veiga (2016) Acceptable Measure `AM(cd) = {cc | cd ∈ CD ⋀ cc ⊂ CC}` (criteria that bound a dimension) is replaced by `MEaq(u)` (categorical measures within a policy). This is conceptually related but not the same object.
 - The set-builder expressions for parameterized derived concepts (e.g., `VP(u)`, `MM(me)`, `I(s)`, `DQV(dr)`) are stated in terms of primitive associational relations (e.g., `rel_VP`, `rel_MM`, `rel_I`, `rel_DQV`) introduced in §4.2.1, rather than with trivially-true parameter-typing conjuncts as in Appendix A of Veiga (2016). This makes the associations the expressions name (e.g., "the `Validations` included in the `Validation Policy` for `u`") definitionally explicit; The worked examples of Appendix B of Veiga (2016) remain admissible extensional interpretations of these relations.
 
-The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how express concepts with that ontology, in particulary how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
+The Fitness For Use Framework ontology is framed with limited constraints and no `rdfs:range` axioms. Under open world principles, it could be used in ways other than the constraints framed by this mathematical formulation, but this formulation SHOULD be treated as a guide for how express concepts with that ontology, in particular how to phrase `Responses` using `bdqffdq:` terms, and how a set of `Responses` made with those terms SHOULD be queried.
 
 ### 4.1 Fundamental Concepts (normative)
 
@@ -1314,7 +1314,7 @@ In this formulation, `MEaq(u)` is the set of those `Measure` instances in the `M
 
 In the initial BDQ Tests, for a `Use Case`, `MEaq(u)` is the set of `Multi Record` `Measures` that define whether a filtered record set is acceptable for `QualityAssurance`, named with the convention `MULTIRECORD_MEASURE_QA_`.
 
-Example comptency question: "Which `Measure` instances in a given `Measurement Policy` appear to be categorical `QualityAssurance` measures?" expressed as sparql (note that `Measures` in the bdqffdq: ontology are not subtyped as categorical or numeric, so this query heuristically evaluates this by examining the `hasExpectedResponse`):
+Example competency question: "Which `Measure` instances in a given `Measurement Policy` appear to be categorical `QualityAssurance` measures?" expressed as sparql (note that `Measures` in the bdqffdq: ontology are not subtyped as categorical or numeric, so this query heuristically evaluates this by examining the `hasExpectedResponse`):
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>

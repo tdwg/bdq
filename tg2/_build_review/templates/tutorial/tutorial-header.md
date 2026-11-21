@@ -750,19 +750,19 @@ For example [VALIDATION_PHYLUM_FOUND](../terms/bdqtest/index.md#VALIDATION_PHYLU
 
 #### 6.7.5 On evaluating bdqval:NotEmpty (non-normative)
 
-When a value in a term is optional (as in dwc:minimiumDepthInMeters or dwc:minimumElevationInMeters, only one of which is sensibly populated for most data), then a `Use Case` should not include a `Validation` that tests whether the term is `bdqval:NotEmpty`, as such a test would assert that data are unfit for use if there is no value in that term, even if the absence of a value in that term does not make the data unfit for use.  
+When a value in a term is optional (as in dwc:minimumDepthInMeters or dwc:minimumElevationInMeters, only one of which is sensibly populated for most data), then a `Use Case` should not include a `Validation` that tests whether the term is `bdqval:NotEmpty`, as such a test would assert that data are unfit for use if there is no value in that term, even if the absence of a value in that term does not make the data unfit for use.  
 
-There is, however, a choice in how to evaluate emptyness in a Test that evaluates some other property of such a term (e.g. a `Validation` that tests if depth is a numeric value, or a `Validation` that tests if depth is in range).
+There is, however, a choice in how to evaluate emptiness in a Test that evaluates some other property of such a term (e.g. a `Validation` that tests if depth is a numeric value, or a `Validation` that tests if depth is in range).
 
-A Test that evaluates some property other than emptyness of a term in which a value could validly be `bdqval:Empty` could phrase the `Expected Response` in one of two ways:
+A Test that evaluates some property other than emptiness of a term in which a value could validly be `bdqval:Empty` could phrase the `Expected Response` in one of two ways:
 * COMPLIANT if the term is `bdqval:Empty`; COMPLIANT if the value in the term conforms to the expected property; otherwise NOT_COMPLIANT.
 * INTERNAL_PREREQUISITES_NOT_MET if the term is `bdqval:Empty`; COMPLIANT if the value in the term conforms to the expected property; otherwise NOT_COMPLIANT.
 
-This phrasing affects decision making for filtering critera for `Quality Assurance`.  See the discussion in Section [8.1.3.2 Framing MultiRecord Measures for Quality Assurance](#8132-framing-multirecord-measures-for-quality-assurance-non-normative) for details.
+This phrasing affects decision making for filtering criteria for `Quality Assurance`.  See the discussion in Section [8.1.3.2 Framing MultiRecord Measures for Quality Assurance](#8132-framing-multirecord-measures-for-quality-assurance-non-normative) for details.
 
-The initial BDQ Tests adopt a practice of evaluating emptyness as a prerequisite for evaluating other properties in all `Validations`, and thus use the second phrasing above for terms that may be optional.  This choice makes for clearer and more granular assertions concerning NON_COMPLIANT data for `Quality Control`, but passes the responsibility for filtering optional terms under `Quality Assurance` to the framing of `MultiRecord` `Measures`, and in consequence allows each `Validation` to be composed in a `Use Case` where a term is optional, or in a `Use Case` where that term is not.  This is a design choice, not a normative requirement.
+The initial BDQ Tests adopt a practice of evaluating emptiness as a prerequisite for evaluating other properties in all `Validations`, and thus use the second phrasing above for terms that may be optional.  This choice makes for clearer and more granular assertions concerning NON_COMPLIANT data for `Quality Control`, but passes the responsibility for filtering optional terms under `Quality Assurance` to the framing of `MultiRecord` `Measures`, and in consequence allows each `Validation` to be composed in a `Use Case` where a term is optional, or in a `Use Case` where that term is not.  This is a design choice, not a normative requirement.
 
-In short, when a term may be optional for a particular `Use Case`, generality of a Test is improved when it evaluates emptyness as a prerequisite for evaluating other properties of that term, and thus to use the second phrasing above for the `Expected Response` in Tests that evaluate some property other than emptyness of a (potentally) optional term.
+In short, when a term may be optional for a particular `Use Case`, generality of a Test is improved when it evaluates emptiness as a prerequisite for evaluating other properties of that term, and thus to use the second phrasing above for the `Expected Response` in Tests that evaluate some property other than emptiness of a (potentially) optional term.
 
 ### 6.8 Notes (non-normative)
 
@@ -1154,19 +1154,19 @@ A related pattern occurs at the `Single Record` level: when fitness depends on a
 
 ##### 8.1.3.2 Framing MultiRecord Measures for Quality Assurance (non-normative)
 
-There is a potential trap for the unwary in framing `MultiRecord` `Measures` for `Quality Assurance` in evaluating the output of `Validations` that test properties of terms where a value is optional for fitness for some use (e.g. dwc:minimumDepthInMeters and dwc:minimumElevationInMeters, only one of which is sensibly poplulated for most data).
+There is a potential trap for the unwary in framing `MultiRecord` `Measures` for `Quality Assurance` in evaluating the output of `Validations` that test properties of terms where a value is optional for fitness for some use (e.g. dwc:minimumDepthInMeters and dwc:minimumElevationInMeters, only one of which is sensibly populated for most data).
 
 This is a concern for both a Test and test suite design when data are:
 1. Filtered under `Quality Assurance` based on the results of `Single Record` `Validations` that evaluate some property of some term, and
 1. Some term under test is optional, and is expected to not contain values in all records (i.e. correctly be `bdqval:Empty` in some records), and
 1. When a `Validation` for that term has an Expected Response that includes a clause of INTERNAL_PREREQUISITES_NOT_MET if the term under test is `bdqval:Empty` and
-1. When the accompaning `MultiRecord` `Measure` for `Quality Assurance` is phrased such that only COMPLIANT results are considered COMPLETE, and INTERNAL_PREREQUISITES_NOT_MET results are not considered COMPLETE.
+1. When the accompanying `MultiRecord` `Measure` for `Quality Assurance` is phrased such that only COMPLIANT results are considered COMPLETE, and INTERNAL_PREREQUISITES_NOT_MET results are not considered COMPLETE.
 
-If some `Validation` assesses a property of some term that is expected to not contain a value, say evaluating the range of `dwc:maxDepthInMeters`, and in order to test one thing and better distinguish between causes of problems, assserts that the prerequisites for running the test are not met if the value of the term is `bdqval:Empty`, e.g. `INTERNAL_PREREQUISITES_NOT_MET if dwc:maxDepthInMeters is bdqval:Empty`, then the phrasing of the accompanying `Measure` for `Quality Assurance` is important.  If the `hasExpectedResponse` of the `MultiRecord` `Measure` is phrased as: `COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.` then all data for which `dwc:maxDepthInMeters` lacks a value will be deemed unfit for use for any `Use Case` that these Tests are composed with.   Thus, in a global data set, all terrestrial data would be unfit for use, likely not the desired conclusion.  
+If some `Validation` assesses a property of some term that is expected to not contain a value, say evaluating the range of `dwc:maxDepthInMeters`, and in order to test one thing and better distinguish between causes of problems, asserts that the prerequisites for running the test are not met if the value of the term is `bdqval:Empty`, e.g. `INTERNAL_PREREQUISITES_NOT_MET if dwc:maxDepthInMeters is bdqval:Empty`, then the phrasing of the accompanying `Measure` for `Quality Assurance` is important.  If the `hasExpectedResponse` of the `MultiRecord` `Measure` is phrased as: `COMPLETE if every VALIDATION_MAXDEPTH_INRANGE in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.` then all data for which `dwc:maxDepthInMeters` lacks a value will be deemed unfit for use for any `Use Case` that these Tests are composed with.   Thus, in a global data set, all terrestrial data would be unfit for use, likely not the desired conclusion.  
 
 There are two approaches to framing tests to evaluate properties of terms that may legitimately be empty.
-* One approach is to frame `Validations` of properties of terms other than emptyness as being COMPLIANT if the term under test is `bdqval:Empty`, and then evaluate whatever property of the term (e.g. depth in range) is actually under test, and keep the accompaning `MultiRecord` `Measure` as returning COMPLETE only for COMPLIANT results.  This approach is formally correct, but causes the `Validation` to mix concerns (both empty and in range values demeed COMPLIANT) and to be less flexible in composition with `Use Cases`. 
-* The second approach is to frame `Validations` of properties of terms other than emptyness as being INTERNAL_PREREQUISITES_NOT_MET if the value in the term under test is `bdqval:Empty`, and only evaluate COMPLIANT/NOT_COMPLIANT on an actual value.  This is cleaner in its separation of concerns, but for `Quality Assurance` this validation needs to be composed with a `MultiRecord` `Measure` which assesses both COMPLIANT and INTERNAL_PREREQUISITES_NOT_MET as COMPLETE, so that records where the term under test is legitimately empty will not be deemed unfit because of that emptyness.
+* One approach is to frame `Validations` of properties of terms other than emptiness as being COMPLIANT if the term under test is `bdqval:Empty`, and then evaluate whatever property of the term (e.g. depth in range) is actually under test, and keep the accompanying `MultiRecord` `Measure` as returning COMPLETE only for COMPLIANT results.  This approach is formally correct, but causes the `Validation` to mix concerns (both empty and in range values deemed COMPLIANT) and to be less flexible in composition with `Use Cases`. 
+* The second approach is to frame `Validations` of properties of terms other than emptiness as being INTERNAL_PREREQUISITES_NOT_MET if the value in the term under test is `bdqval:Empty`, and only evaluate COMPLIANT/NOT_COMPLIANT on an actual value.  This is cleaner in its separation of concerns, but for `Quality Assurance` this validation needs to be composed with a `MultiRecord` `Measure` which assesses both COMPLIANT and INTERNAL_PREREQUISITES_NOT_MET as COMPLETE, so that records where the term under test is legitimately empty will not be deemed unfit because of that emptiness.
 
 This second approach is used in the framing of the initial BDQ Tests.  Thus:
 
@@ -1174,14 +1174,14 @@ When framing Tests for a field is expected to contain a value for the data to ha
 
 * Include a `Validation` that is compliant if the term under test is `bdqval:NotEmpty`
   * Include a `MultiRecord` `Measure` which returns COMPLETE if this `Validation` is COMPLIANT for all rows of data.
-* Have each `Validation` that assesses some other property of the term return INTERNAL_REREQUISITES_NOT_MET if the term is `bdqval:Empty`
+* Have each `Validation` that assesses some other property of the term return INTERNAL_PREREQUISITES_NOT_MET if the term is `bdqval:Empty`
   * Include a `MultiRecord` `Measure` which returns COMPLETE if this `Validation` is COMPLIANT for all rows of data.
 
 When framing Tests for a field where presence of a value is not required for the data to be fit for some use, then:
  
 * Do not include a `Validation` that is compliant only if the term under test is `bdqval:NotEmpty` 
-  * That is, don't test for emptyness if both `bdqval:Empty` and `bdqval:NotEmpty` are fit for use.
-* Have each `Validation` that assesses some other property of the term return INTERNAL_REREQUISITES_NOT_MET if the term is `bdqval:Empty`
+  * That is, don't test for emptiness if both `bdqval:Empty` and `bdqval:NotEmpty` are fit for use.
+* Have each `Validation` that assesses some other property of the term return INTERNAL_PREREQUISITES_NOT_MET if the term is `bdqval:Empty`
   * Include a `MultiRecord` `Measure` which returns COMPLETE if this `Validation` is **Either** COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET.
 
 This choice can be seen in difference of the phrasing of the `hasExpectedResponse` for [MULTIRECORD_MEASURE_QA_BASISOFRECORD_NOTEMPTY](../list/bdqtest/index.md#bdqtest_c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8) and [MULTIRECORD_MEASURE_QA_MAXDEPTH_INRANGE](../list/bdqtest/index.md#bdqtest_c73d49d1-06e4-4272-8249-6a26e7f8abca) |

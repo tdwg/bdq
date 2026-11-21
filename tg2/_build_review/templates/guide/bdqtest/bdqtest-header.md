@@ -354,7 +354,7 @@ A `Single Record` (`bdqffdq:SingleRecord`) BDQ Test:
 * MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al. 2012).
   * For example, input Darwin Core data in RDF should be presented to a BDQ `Single Record` Test one `dwc:Occurrence` at a time, although the `dwc:Occurrence` could be linked to multiple other instances of other classes such as `dwc:Identifications`.
   * Handling of multiplicity of related rows in a `Single Record` is a responsibility of Test execution frameworks.
-  * See the disscussion of `Single Record` in relation to the Darwin Core Data Package (Dawin Core Maintinance Group, 2026) format below.
+  * See the discussion of `Single Record` in relation to the Darwin Core Data Package (Darwin Core Maintenance Group, 2026) format below.
 * SHOULD NOT take multiple rows from a flat file (e.g. Simple Darwin Core) as input. 
 * SHOULD NOT take multiple objects of the same core type in structured Darwin Core as input 
 

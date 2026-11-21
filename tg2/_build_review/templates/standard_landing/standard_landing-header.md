@@ -181,7 +181,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
       <th style="width: 100%;" colspan="3">Some Key Concepts: 
           <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
           <br>
-          <a href="./docs/guide/bdqtest/index.md#21-the-bdq-definition-of-test-non-normative">The BDQ Definition of "Test"</a> in BDQ Tests: Concepts and Use.</a>
+          <a href="./docs/guide/bdqtest/index.md#21-the-bdq-definition-of-test-non-normative">The BDQ Definition of "Test"</a> in BDQ Tests: Concepts and Use.
       </th>
     </tr>
     <tr>
@@ -199,7 +199,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
         <strong>Start with:</strong><br>
 		:green_book:
         <strong><a href="./docs/terms/bdqtest/index.md">BDQ Tests Quick Reference Guide</a></strong><br>
-        Concise descriptions of BDQ Tests. First stop for understanding Tests and their outcomes.</a><br>
+        Concise descriptions of BDQ Tests. First stop for understanding Tests and their outcomes.<br>
       </td>
       <td valign="top">
         <strong>Start with:</strong><br>
@@ -256,7 +256,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
 		:blue_book:
         <strong><a href="./docs/list/bdquc/index.md">The bdquc: Use Case Vocabulary</a></strong><br>
 		Describes each of the uses of data that the bdqtest: Tests are designed to support.<br>
-		See also the supporting controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new Tests.</a>
+		See also the supporting controlled vocabularies for criteria, dimensions, enhancements, and other elements needed to specify new Tests.
 		<a href="./docs/list/bdqval/index.md">bdqval: Vocabulary</a>, <a href="./docs/list/bdqcrit/index.md">bdqcrit: Vocabulary</a>, <a href="./docs/list/bdqdim/index.md">bdqdim: Vocabulary</a>, <a href="./docs/list/bdqenh/index.md">bdqenh: Vocabulary</a>.
       </td>
     </tr>
@@ -328,7 +328,7 @@ The Quick Reference Guide is a simple, informative reference and the first place
 
 ### 3.2 Guides (non-normative)
 
-**Note:** This section in this document is non-normative, however, the documents linked to here contain substantal normative content.
+**Note:** This section in this document is non-normative, however, the documents linked to here contain substantial normative content.
 
 These two documents provide overviews and normative guidance of the subjects they cover. The details of the individual terms in each vocabulary are provided in the corresponding term list documents. 
 
@@ -449,7 +449,7 @@ The Test definitions are provided in various serializations. Of these, the bdqte
 
 #### 3.5.2 Test Conformance Testing Data (non-normative)
 
-Test Confomance Testing Data are intended for implementers to use to evaluate whether Test Implementations produce the Expected Responses.
+Test Conformance Testing Data are intended for implementers to use to evaluate whether Test Implementations produce the Expected Responses.
 
 - [**Test Conformance Testing Data**](docs/guide/implementers/TG2_test_validation_data.csv)
 - [**Test Conformance Testing Data for non-printing characters**](docs/guide/implementers/TG2_test_validation_data_nonprintingchars.csv)
@@ -486,13 +486,13 @@ While **not part of the BDQ standard**, GBIF Norway has developed a tool called 
 
 ### 5.1 Acknowledgments (non-normative)
 
-The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of the BDQ standard, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA, and at Biodiversity Information Standards (TDWG) annual meetings (in Jönköping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowa, Japan; and the various virtual meetings). The Authors are also grateful for all those who responded to our email questions.
+The Authors gratefully acknowledge all those who have commented on the GitHub issues during the development of the BDQ standard, and all those who have contributed to discussions at various workshops in São Paulo, Brazil; Canberra, Australia; Monash, Australia; Leiden, The Netherlands; Gainesville, USA; and Seattle, USA, and at Biodiversity Information Standards (TDWG) annual meetings (in Jönköping, Sweden; Santa Clara de San Carlos, Costa Rica; Ottawa, Canada; Dunedin, New Zealand; Leiden, The Netherlands; Sofia, Bulgaria; Hobart, Australia; and Ginowan, Okinawa, Japan; and the various virtual meetings). The Authors are also grateful for all those who responded to our email questions.
 
 We'd also gratefully acknowledge the continued support of the Biodiversity Information Standards (TDWG) Executive over the 10 years of this project.
 
 #### 5.1.1 Funding and Support for Meetings (non-normative)
 
-We acknowledge the financial support of The Atlas of Living Australia and Biodiversity Information Standards (TDWG) for Lee Belbin and Arthur Chapman to attend two face-to-face meetings for the development of the BDQ standard, and the Atlas of Living Australia for support of John Wieczorek to attend meetings in Canberra Australia. The Museum of Comparative Zoology provided support for Paul Morris; VertNet, Kurator, and Rauthflor LLC provided support for John Wieczorek. The United States National Science Foundation through funding of the Kurator project, provided time for Paul Morris, Robert Morris and David Lowery for early work on the project.
+We acknowledge the financial support of The Atlas of Living Australia and Biodiversity Information Standards (TDWG) for Lee Belbin and Arthur Chapman to attend two face-to-face meetings for the development of the BDQ standard, and the Atlas of Living Australia for support of John Wieczorek to attend meetings in Canberra Australia. The Museum of Comparative Zoology provided support for Paul Morris; VertNet, Kurator, and Rauthiflor LLC provided support for John Wieczorek. The United States National Science Foundation through funding of the Kurator project, provided time for Paul Morris, Robert Morris and David Lowery for early work on the project.
 
 The São Paulo Research Foundation (FAPESP), the Universidade de São Paulo (USP) provided facilities, and with the Global Biodiversity Information Facility and others, supported participants to attend the meeting in São Paulo, Brazil. The US National Science Foundation through iDigBio provided support for the meeting in Gainesville, Florida.
 
@@ -529,7 +529,7 @@ There were many people who have made notable contributions at various times duri
 
 The glossary of terms used in the BDQ standard includes acronyms and these terms that are additional to the terms used in the `bdqffdq`, `bdqval:`, `bdqcrit:`, `bdqdim:`, and `bdqenh:` vocabularies or in one of the two tables that reference the [Test Vocabulary Terms](docs/list/bdqtest/index.md#18-key-to-vocabulary-terms-normative) or the [Test Label Components](docs/supplement/index.md#313-parts-of-test-labels-non-normative). Note: ‘Darwin Core terms’ refer to [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021).
 
-Note: Some terms are definied differently within different documents to align with the context of those documents.  For example, in the [BDQ Supplemental Information](./docs/supplement/index.md) Document, the [Table in #5.2](.//docs/supplement/index.html#52-github-tags-and-categorizing-issues-non-normative) describes the GitHub Tags that were used when preparing the Tests. These Tags and their definitions sometimes differ from the definitions used with the BDQ Standard. The definitions in the Glossary here do however take precedence for the Standard.
+Note: Some terms are defined differently within different documents to align with the context of those documents.  For example, in the [BDQ Supplemental Information](./docs/supplement/index.md) Document, the [Table in #5.2](.//docs/supplement/index.html#52-github-tags-and-categorizing-issues-non-normative) describes the GitHub Tags that were used when preparing the Tests. These Tags and their definitions sometimes differ from the definitions used with the BDQ Standard. The definitions in the Glossary here do however take precedence for the Standard.
 
 | **Label** | **Definition** | **Context** |
 | ---- | ---- | ---- |
@@ -572,7 +572,7 @@ Note: Some terms are definied differently within different documents to align wi
 | <a name="glossary_NEEDS_WORK"/>NEEDS WORK | Tag used in the GitHub version of the Tests to indicate that a test description needs further work before conclusion. | GitHub Tag |
 | <a name="glossary_nonprinting_characters"/>non-printing characters | ASCII 0-32 and 127 decimal. Non-printing characters or formatting marks that are not displayed when printing. These may include pilcrow, space, non-breaking space, tab character, etc. For the purposes of the Tests they are treated as `bdqval:Empty`. | Data |
 | <a name="glossary_null"/>null | A value that is used in some databases to signify that a value is unknown or missing. It may be represented in serializations of data outside of database environments by strings such as "NULL", "Null", "null". "/n", "9999", "NA", etc. These serializations should be treated as `bdqval:NotEmpty`. | Data |
-| <a name="glossary_OA"/>OA | [Web Annotation Vocabulary](https://www.w3.org/TR/annotation-vocab/) specifies the set of RDF classes, predicates and named entities that are used by the Web Annotation Data Mode. Hosts the namespace [oa:](https://www.w3.org/TR/annotation-vocab/) | W3C Standard |
+| <a name="glossary_OA"/>OA | [Web Annotation Vocabulary](https://www.w3.org/TR/annotation-vocab/) specifies the set of RDF classes, predicates and named entities that are used by the Web Annotation Data Model. Hosts the namespace [oa:](https://www.w3.org/TR/annotation-vocab/) | W3C Standard |
 | <a name="glossary_OTHER"/>OTHER | A bdq GitHub label to indicate that the Test is related to Darwin Core terms other than Classes `dwc:Taxon`, `dwc:Location` or `dwc:Event`. | bdqffdq:InformationElement |
 |<a name="glossary_OWL"/>OWL | [Web Ontology Language](https://www.w3.org/OWL/). A Semantic Web language designed to represent rich and complex knowledge about things. Hosts the namespace [owl:](http://www.w3.org/2002/07/owl#) | W3C Standard |
 | <a name="glossary_Parameterized"/>Parameterized | Pertains to a Test that allows a `bdqffdq:Parameter` to be set prior to the test being run. Where a `bdqffdq:Parameter` value has not been provided, a default is specified within the test. | Tests |
@@ -586,7 +586,7 @@ Note: Some terms are definied differently within different documents to align wi
 | Response.result | The element in a Response containing the value returned by a Test. A shortcut for `bdqffdq:ResponseResult`, `bdqffdq:hasResponseResult`, `bdqffdq:hasResponseResultValue` | Data Quality Report |
 | Response.status | A metadata element in a Response indicating whether a particular Test was able to be performed or not. A shortcut for `bdqffdq:ResponseStatus`, `bdqffdq:hasResponseStatus` | Data Quality Report |
 | <a name="glossary_Roman_numerals"/>Roman numerals | Numbers written with the characters I, V, X, L, C, D, and M in the latin alphabet, each letter representing an integer and combined to form arbitrary integers. Roman numerals are interpreted as the equivalent integer for months (e.g., "X" as "10") in certain Tests. Roman numerals may not be unambiguously interpreted for other Darwin Core terms such as `dwc:day` or in text fields as they may mean unknown or something else entirely. | Data | 
-| <a name="glossary_SDS"/>SDS | [TDWG Standards Documentation Standard](https://www.tdwg.org/standards/sds/) | TDWG Standard |
+| <a name="glossary_SDS"/>SDS | [TDWG Standards Documentation Specification](https://www.tdwg.org/standards/sds/) | TDWG Standard |
 | <a name="glossary_SKOS"/>SKOS | [Simple Knowledge Organization System](https://www.w3.org/TR/skos-reference/). Hosts the namespace [skos:](http://www.w3.org/2004/02/skos/core#) | W3C Standard |
 | <a name="glossary_SPACE"/>SPACE | A BDQ GitHub label to indicate that the Test is related to Darwin Core terms in the `dwc:Location Class`. | bdqffdq:InformationElement |
 | <a name="glossary_SRS"/>SRS | spatial reference system - see CRS (Chapman and Wieczorek 2020). | Tests |
@@ -695,7 +695,7 @@ We have used the formatting recommended by Pensoft, see https://checklist.pensof
 <li>Veiga AK, Saraiva AM, Chapman AD, Morris PJ, Gendreau C, Schigel D, Robertson TJ (2017) A conceptual framework for quality assessment and management of biodiversity data. PLOS ONE 12(6): e0178731. https://doi.org/10.1371/journal.pone.0178731</li>
 <li>Vertnet (2022) DwC Vocabs. https://github.com/VertNet/DwCVocabs/tree/master/vocabs</li>
 <li>VLIZ (2023). Marineregions.org. https://www.marineregions.org/downloads.php#marbound</li>
-<li>Vocabulary Maintenance Specification Task Group (2017). Standards Documentation Standard. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/147</li>
+<li>Vocabulary Maintenance Specification Task Group (2017). Standards Documentation Specification. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/147</li>
 <li>Vocabulary Maintenance Specification Task Group (2017). Vocabulary Maintenance Standard. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/642</li>
 <li>W3C (2013) PROV-O: The PROV Ontology. https://www.w3.org/TR/prov-o/</li>
 <li>W3C (2017) Web Annotation Data Model. https://www.w3.org/TR/annotation-model/</li>

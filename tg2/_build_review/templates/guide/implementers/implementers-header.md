@@ -285,7 +285,7 @@ EXTERNAL_PREREQUISITES_NOT_MET means
    bdqffdq:hasResponseStatus bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET ;
    bdqffdq:hasResponseComment "Source authority service was not available at time of evaluation."^^xsd:string .
 ```
-Note that in RDF representations, the `Response` is an instance of `bdqffdq:Response`, and the `Response.status` is a value of `bdqffdq:hasResponseStatus`, while the `Response.result` may be either a literal using `bdqffdq:hasResponseResultValue` or a Named Individual using bdqffdq:hasResponseResult, or, as a best practice with RDF, when null, is ommitted, and the `Response.comment` is a value of `bdqffdq:hasResponseComment`.
+Note that in RDF representations, the `Response` is an instance of `bdqffdq:Response`, and the `Response.status` is a value of `bdqffdq:hasResponseStatus`, while the `Response.result` may be either a literal using `bdqffdq:hasResponseResultValue` or a Named Individual using bdqffdq:hasResponseResult, or, as a best practice with RDF, when null, is omitted, and the `Response.comment` is a value of `bdqffdq:hasResponseComment`.
 
 
 For example, the `bdqffdq:hasExpectedResponse` for the `Specification` for [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD) states:
@@ -372,9 +372,11 @@ The following code snippet in Java from the FilteredPush `rec_occur_qc` library 
                 String pattern = "";
                 if (sourceAuthorityObject.getAuthority().equals(EnumMetadataSourceAuthority.CREATIVE_COMMONS)) {
                    ....
+```
 
 This library also includes a method whose signature does not include the parameter, but which runs the implementation of [AMENDMENT_LICENSE_STANDARDIZED](../../terms/bdqtest/index.md#AMENDMENT_LICENSE_STANDARDIZED) with the default parameter.
 
+```java
     @Amendment(label="AMENDMENT_LICENSE_STANDARDIZED", description="Propose amendment to the value of dwc:license using bdqval:sourceAuthority.")
     @Provides("dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8")
     @ProvidesVersion("https://rs.tdwg.org/bdqtest/terms/version/dcbe5bd2-42a0-4aab-bb4d-8f148c6490f8-2023-09-18")
@@ -1046,7 +1048,7 @@ The checklists below are designed to help implementers ensure that their impleme
 
 1. **Implement the Test logic (decision rules) following the expected response criteria in order**
    - **Evaluate internal prerequisites first**
-     - Evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently (with utilty functions).
+     - Evaluate `bdqval:Empty` and `bdqval:NotEmpty` consistently (with utility functions).
      - If the `Specification` states that one or more required `Information Elements` being `bdqval:Empty` prevents generating a proposal, return:
        - `Response.status` = `INTERNAL_PREREQUISITES_NOT_MET`
        - `Response.result` omitted / null
@@ -1096,9 +1098,9 @@ BDQ Test descriptions are intentionally independent of any particular software f
 * An execution framework has the responsibility to determine everything outside that API, including:
   * How and from where to **load** the raw data.
   * How to **bind** elements of the raw data onto the correct Test inputs, e.g., mapping a column in a CSV file to a particular `Information Element`,
-  * What execution mechanics and **workflow**, including paralellization, to follow.
+  * What execution mechanics and **workflow**, including parallelization, to follow.
   * **Which** Tests to execute, e.g. by `Use Case` and `Policy`, 
-    * Determine the **order** of Test excution.
+    * Determine the **order** of Test execution.
   * **Invoke** the correct implementation for a given Test (e.g., by Label, GUID/Term Name, or versioned IRI) with the correct bound inputs.
   * **Package** `Responses` into `Data Quality Reports` or pass them on to other downstream processes.
   * **Present** the results to users.
@@ -1118,7 +1120,7 @@ A Test execution framework (or “runner”) typically needs to accomplish the f
 1. **Determine the workflow for Test execution**
    - If the `Policies` for a `Use Case` include both `Validation` and `Amendment` Tests, determine the order of execution. For example, in a data pipeline, run all `Validation` Tests first, then down the pipeline, run all `Amendment` Tests; or compose a actors in a pipeline such that each `Validation` Test is followed immediately by its corresponding `Amendment` Test.
    - A workflow that may be expected, and is the responsibility of the execution framework, is to run:
-     - All `Validation` Tests, all `Issue` Tests and all `Measure` Tests in a pre-amendent phase.
+     - All `Validation` Tests, all `Issue` Tests and all `Measure` Tests in a pre-amendment phase.
      - Run all `Amendment` Tests in an amendment phase.
      - Apply all proposed changes from the `Amendment` Tests to a copy of the input data.
      - Apply all `Validation` Tests, all `Issue` Tests and all `Measure` Tests in a post-amendment phase using the amended copy of the data as input.
@@ -1315,7 +1317,7 @@ A set of "Test Conformance Testing Data" accompanies the BDQ Test descriptors. T
 
 The Test Conformance Testing Data are organized as two flat CSV files. Each row in each file is intended for the evaluation of a single behavior of a single Test, that is, each row represents a single test case. The file has columns identifying the Test, the input data, the expected `Response.status`, `Response.result`, an example `Response.comment`, `Parameter` values (if any), and a set of [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021). Most of the terms for a given Test are `bdqval:Empty`.
 
-The Test Conformance Testing Data records are all fragmentary [Simple Darwin Core](https://dwc.tdwg.org/simple/) (Wieczorek et al. 2012) `dwc:Occurrence` records. Each row contains values for only those Darwin Core terms that are relevant input to the particular cate and consists of a mixture of real and artificial data. The conformance testing data consist of over 1100 records, with an average of about 10 cases for each Test (designed to exercise all of the decision pathways in the specification of the Test (that is, all paths within each `ExpectedResponse`)). The set of rows for a given Test are intended to be sufficient to validate that an implementation of that particular Test performs as expected against the specification.
+The Test Conformance Testing Data records are all fragmentary [Simple Darwin Core](https://dwc.tdwg.org/simple/) (Wieczorek et al. 2012) `dwc:Occurrence` records. Each row contains values for only those Darwin Core terms that are relevant input to the particular case and consists of a mixture of real and artificial data. The conformance testing data consist of over 1100 records, with an average of about 10 cases for each Test (designed to exercise all of the decision pathways in the specification of the Test (that is, all paths within each `ExpectedResponse`)). The set of rows for a given Test are intended to be sufficient to validate that an implementation of that particular Test performs as expected against the specification.
 
 Additional conformance testing records can be readily generated or adapted from real data using the specifications in Section [8.2](#82-structure-of-the-test-conformance-testing-data-non-normative) and the template in Section [8.3](#83-examples-of-the-data-for-conformance-testing-non-normative) below, along with the existing Test Conformance Testing Data records as examples.  Such additional records can be added to the conformance testing dataset.
 
