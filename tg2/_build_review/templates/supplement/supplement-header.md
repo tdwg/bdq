@@ -458,8 +458,9 @@ Can one find a summary of Tests by Test Type with specific Darwin Core Terms in 
     ORDER BY ?sie ?testType
 ```
 
-Given a `Specification` (as would be known when starting with a `bdqffdq:Response` and following `bdqffdq:producesResponse` to a `bdqffdq:Implementation` then `bdqffdq:usesSpecification`), which Test was run with which argument values for which `Parameters`?
+Given a `Specification` version (as would be known when starting with a `bdqffdq:Response` and following `bdqffdq:producesResponse` to a `bdqffdq:Implementation` then `bdqffdq:usesSpecification`), which Test was run with which argument values for which `Parameters`? Run the query on the graph obtained by dereferencing the version IRI of the Test, which describes the versions of the Test's parts current on its date.
 
+<!-- test with data: sparql_test_data/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2023-09-18.ttl -->
 ```sparql
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -468,7 +469,7 @@ Given a `Specification` (as would be known when starting with a `bdqffdq:Respons
     
     SELECT ?test ?label ?description ?parameter ?argumentValue
     WHERE {
-      ?specification dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/f3e03531-7ee5-4721-aae2-f554389e0544-2023-09-18> .
+      VALUES ?specification { <https://rs.tdwg.org/bdqtest/specification/version/f3e03531-7ee5-4721-aae2-f554389e0544-2023-09-18> }
       ?method bdqffdq:hasSpecification ?specification .
       ?method bdqffdq:forValidation ?test .
     
