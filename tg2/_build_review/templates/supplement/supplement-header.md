@@ -1453,7 +1453,7 @@ Only a subset of all [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darw
 
 **Specification Last Updated**: The date of the most recent change to a normative part of the Test, such as to the wording of an Expected Response/Specification (e.g., "2023-06-23").
 
-**Examples** [non-normative]: Example of inputs and the expected output from an implementation of the Test given those inputs. ‘Pass’ and ‘Fail’ type examples are provided for clarity of each Test. All examples listed are also present in the conformance testing data suite. Example: `[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]`.
+**Examples** [non-normative]: Example of inputs and the expected output from an implementation of the Test given those inputs. ‘Pass’ and ‘Fail’ type examples are provided for clarity of each Test. All examples listed are also present in the conformance testing data suite. Example: `[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Tracheophyta for the Phylum including ferns"]`.
 
 **Source** [non-normative]: The origin of the concept of the Test (e.g., "The Atlas of Living Australia").
 

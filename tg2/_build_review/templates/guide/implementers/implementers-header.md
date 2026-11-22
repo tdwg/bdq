@@ -228,7 +228,7 @@ bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.1
 
 example: 
 ```
-dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"
+dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Tracheophyta for the Phylum including ferns"
 ```
 
 These properties describe the expected behavior of an Implementation of this Test. This section gives further guidance on how to interpret these properties in order to produce an implementation that follows this specification.
