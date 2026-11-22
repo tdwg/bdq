@@ -644,7 +644,7 @@ Darwin Core recommends that data from the high seas (outside national jurisdicti
 ###  VALIDATION_COUNTRYCODE_STANDARD
 
 ####  Validation dwc:countryCode Standard
-https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-23
 Acts upon  SingleRecord
 
 #### Description
@@ -662,7 +662,7 @@ dwc:countryCode
 
 #### Source Authority
 
-`bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}`
+`bdqval:sourceAuthority = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}`
 
 #### Examples
 
@@ -685,7 +685,7 @@ Locations outside of a jurisdiction covered by a country code may have a value i
 ###  VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT
 
 ####  Validation dwc:country dwc:countryCode Consistent
-https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-23
 Acts upon  SingleRecord
 
 #### Description
@@ -703,7 +703,7 @@ dwc:country,dwc:countryCode
 
 #### Source Authority
 
-`bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}`
+`bdqval:sourceAuthority = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}`
 
 #### Examples
 
@@ -2597,7 +2597,7 @@ The purpose of this Test is to check whether the value is a name that is a resul
 ###  VALIDATION_PHYLUM_FOUND
 
 ####  Validation dwc:phylum Found
-https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-23
 Acts upon  SingleRecord
 
 #### Description
@@ -2623,7 +2623,7 @@ bdqval:sourceAuthority
 
 #### Examples
 
-dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"
+dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Tracheophyta for the Phylum including ferns"
 
 dwc:phylum="Trachyophyta": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:phylum does not have an equivalent at the rank of Phylum in the bdqval:sourceAuthority."
 
@@ -3533,7 +3533,7 @@ Transformations between coordinate reference systems should not be made as a par
 ###  AMENDMENT_COORDINATES_TRANSPOSED
 
 ####  Amendment Coordinates Transposed
-https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-21
+https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-23
 Acts upon  SingleRecord
 
 #### Description
@@ -3564,7 +3564,7 @@ bdqval:sourceAuthority
 
 dwc:decimalLatitude="25.46", dwc:decimalLongitude="135.87", dwc:countryCode="AU": Response.status=AMENDED, Response.result=dwc:decimalLatitude="-25.46", dwc:decimalLongitude="135.87", Response.comment="dwc:decimalLatitude sign reversed to fit dwc:countryCode=AU"
 
-dwc:decimalLatitude="25.46", dwc:decimalLongitude="135.87", dwc:countryCode="AX": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:countryCode is uninterpretable"
+dwc:decimalLatitude="25.46", dwc:decimalLongitude="135.87", dwc:countryCode="XX": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:countryCode is uninterpretable"
 
 
 #### Use Cases
@@ -3629,7 +3629,7 @@ This amendment simply fills dwc:countryCode from a lookup of dwc:decimalLatitude
 ###  AMENDMENT_COUNTRYCODE_STANDARDIZED
 
 ####  Amendment dwc:countryCode Standard
-https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-23
 Acts upon  SingleRecord
 
 #### Description
@@ -3647,7 +3647,7 @@ dwc:countryCode
 
 #### Source Authority
 
-`bdqval:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}`
+`bdqval:sourceAuthority = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}`
 
 #### Examples
 
@@ -4233,7 +4233,7 @@ bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns
 ###  AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT
 
 ####  Amendment dwc:occurrenceStatus Assumed Default
-https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-23
 Acts upon  SingleRecord
 
 #### Description
@@ -4264,7 +4264,7 @@ bdqval:defaultOccurrenceStatus
 
 dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdqval:Empty; assumed "present""
 
-dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdqval:NotEmpty"
+dwc:occurrenceStatus="", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:individualCount is bdqval:NotEmpty"
 
 
 #### Use Cases
@@ -4326,7 +4326,7 @@ The recommended controlled vocabulary for this term consists of "present" and "a
 ###  AMENDMENT_PATHWAY_STANDARDIZED
 
 ####  Amendment dwc:pathway Standardized
-https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-23
 Acts upon  SingleRecord
 
 #### Description
@@ -4352,7 +4352,7 @@ bdqval:sourceAuthority
 
 #### Examples
 
-dwc:pathway="transportStowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway found in the bdqval:sourceAuthority"
+dwc:pathway="transport stowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway contains an interpretable value in the bdqval:sourceAuthority"
 
 dwc:pathway="escapeee": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:pathway not found in the bdqval:sourceAuthority"
 
@@ -8944,7 +8944,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-21>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-23>
 
 **Biodiversity Information Standards (TDWG)**
 

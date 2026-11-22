@@ -6,7 +6,7 @@
 BDQ Tests List of Terms
 
 **Date version issued**<br>
-2026-11-21
+2026-11-23
 
 **Date created**<br>
 2022-03-25
@@ -18,13 +18,13 @@ BDQ Tests List of Terms
 bdqtest
 
 **This version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-21>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-23>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqtest/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-20>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-21>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting the Tests in the bdqtest: vocabulary, using terms from the Fitness For Use Framework ontology.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting the Tests in the 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-21>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-23>
 
 **Status**<br>
 Draft Standard for Review
@@ -742,11 +742,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-21</td>
+			<td>2026-11-23</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-21">https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-21</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-21.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-23">https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-23</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-23.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -790,7 +790,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:decimalLatitude="25.46", dwc:decimalLongitude="135.87", dwc:countryCode="AU": Response.status=AMENDED, Response.result=dwc:decimalLatitude="-25.46", dwc:decimalLongitude="135.87", Response.comment="dwc:decimalLatitude sign reversed to fit dwc:countryCode=AU"],[dwc:decimalLatitude="25.46", dwc:decimalLongitude="135.87", dwc:countryCode="AX": Response.status=NOT_AMENDED, Response.result=, Response.comment="dwc:countryCode is uninterpretable"]</td>
+			<td>[dwc:decimalLatitude="25.46", dwc:decimalLongitude="135.87", dwc:countryCode="AU": Response.status=AMENDED, Response.result=dwc:decimalLatitude="-25.46", dwc:decimalLongitude="135.87", Response.comment="dwc:decimalLatitude sign reversed to fit dwc:countryCode=AU"],[dwc:decimalLatitude="25.46", dwc:decimalLongitude="135.87", dwc:countryCode="XX": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:countryCode is uninterpretable"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -996,11 +996,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-20</td>
+			<td>2026-11-23</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-23">https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-23</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-23.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1028,7 +1028,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td><code>bdqval:sourceAuthority default = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</code></td><!--- NO LINK LINE --->
+			<td><code>bdqval:sourceAuthority = "ISO 3166-1-alpha-2" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</code></td><!--- NO LINK LINE --->
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -2947,11 +2947,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-20</td>
+			<td>2026-11-23</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-23">https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-23</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-23.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2995,7 +2995,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdqval:Empty; assumed "present""],[dwc:occurrenceStatus="X", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:occurrenceStatus is bdqval:NotEmpty"]</td>
+			<td>[dwc:occurrenceStatus="", dwc:individualCount="", dwc:organismQuantity="": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus="present", Response.comment="dwc:occurrenceStatus is bdqval:Empty; assumed "present""],[dwc:occurrenceStatus="", dwc:individualCount="10", dwc:organismQuantity="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:individualCount is bdqval:NotEmpty"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -3189,11 +3189,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-20</td>
+			<td>2026-11-23</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-23">https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-23</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-23.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3233,7 +3233,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:pathway="transportStowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway found in the bdqval:sourceAuthority"],[dwc:pathway="escapeee": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:pathway not found in the bdqval:sourceAuthority"]</td>
+			<td>[dwc:pathway="transport stowaway": Response.status=AMENDED, Response.result=dwc:pathway="transportStowaway", Response.comment="dwc:pathway contains an interpretable value in the bdqval:sourceAuthority"],[dwc:pathway="escapeee": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:pathway not found in the bdqval:sourceAuthority"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -20300,11 +20300,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-20</td>
+			<td>2026-11-23</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-23">https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-23</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-23.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20332,7 +20332,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td><code>bdqval:sourceAuthority default = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</code></td><!--- NO LINK LINE --->
+			<td><code>bdqval:sourceAuthority = "ISO 3166 Country Codes" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}</code></td><!--- NO LINK LINE --->
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -20415,11 +20415,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-20</td>
+			<td>2026-11-23</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-23">https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-23</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-23.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -20447,7 +20447,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>SourceAuthorities/Defaults</td>
-			<td><code>bdqval:sourceAuthority default = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</code></td><!--- NO LINK LINE --->
+			<td><code>bdqval:sourceAuthority = "The Getty Thesaurus of Geographic Names (TGN)" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}</code></td><!--- NO LINK LINE --->
 		</tr>
 		<tr>
 			<td>Notes</td>
@@ -25403,11 +25403,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-20</td>
+			<td>2026-11-23</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-23">https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-23</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-23.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -25447,7 +25447,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"],[dwc:phylum="Trachyophyta": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:phylum does not have an equivalent at the rank of Phylum in the bdqval:sourceAuthority."]</td>
+			<td>[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Tracheophyta for the Phylum including ferns"],[dwc:phylum="Trachyophyta": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:phylum does not have an equivalent at the rank of Phylum in the bdqval:sourceAuthority."]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -27363,7 +27363,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-21>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-23>
 
 **Biodiversity Information Standards (TDWG)**
 

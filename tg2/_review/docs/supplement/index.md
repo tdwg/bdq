@@ -8,7 +8,7 @@
 BDQ Supplemental Information
 
 **Date version issued**<br>
-2026-11-21
+2026-11-23
 
 **Date created**<br>
 2026-11-13
@@ -22,13 +22,13 @@ BDQ Supplemental Information
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdq/doc/supplement/2026-11-21>
+<https://rs.tdwg.org/bdq/doc/supplement/2026-11-23>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdq/doc/supplement/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdq/doc/supplement/2026-11-20>
+<https://rs.tdwg.org/bdq/doc/supplement/2026-11-21>
 
 **Abstract**<br>
 This document provides information supplementary to the BDQ standard, describing some of the history of its development, and rationale management for decisions made while describing the tests.
@@ -40,7 +40,7 @@ This document provides information supplementary to the BDQ standard, describing
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/supplement/2026-11-21>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/supplement/2026-11-23>
 
 **Status**<br>
 Draft Standard for Review
@@ -1526,7 +1526,7 @@ Only a subset of all [Darwin Core Terms](http://rs.tdwg.org/dwc/doc/list/) (Darw
 
 **Specification Last Updated**: The date of the most recent change to a normative part of the Test, such as to the wording of an Expected Response/Specification (e.g., "2023-06-23").
 
-**Examples** [non-normative]: Example of inputs and the expected output from an implementation of the Test given those inputs. ‘Pass’ and ‘Fail’ type examples are provided for clarity of each Test. All examples listed are also present in the conformance testing data suite. Example: `[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"]`.
+**Examples** [non-normative]: Example of inputs and the expected output from an implementation of the Test given those inputs. ‘Pass’ and ‘Fail’ type examples are provided for clarity of each Test. All examples listed are also present in the conformance testing data suite. Example: `[dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Tracheophyta for the Phylum including ferns"]`.
 
 **Source** [non-normative]: The origin of the concept of the Test (e.g., "The Atlas of Living Australia").
 
@@ -1588,7 +1588,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/supplement/2026-11-21>
+[TDWG](<../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Supplemental Information. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/supplement/2026-11-23>
 
 **Biodiversity Information Standards (TDWG)**
 

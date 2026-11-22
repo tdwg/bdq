@@ -8,7 +8,7 @@
 BDQ Implementer's Guide
 
 **Date version issued**<br>
-2026-11-21
+2026-11-23
 
 **Date created**<br>
 2026-11-13
@@ -22,13 +22,13 @@ BDQ Implementer's Guide
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdq/doc/implementers/2026-11-21>
+<https://rs.tdwg.org/bdq/doc/implementers/2026-11-23>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdq/doc/implementers/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdq/doc/implementers/2026-11-20>
+<https://rs.tdwg.org/bdq/doc/implementers/2026-11-21>
 
 **Abstract**<br>
 This document is an implementer's guide for the BDQ standard, providing guidance for those wishing to create software implementations (bdqffdq:Mechanism) of BDQ Tests.
@@ -40,7 +40,7 @@ This document is an implementer's guide for the BDQ standard, providing guidance
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-21>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-23>
 
 **Status**<br>
 Draft Standard for Review
@@ -337,7 +337,7 @@ bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.1
 
 example: 
 ```
-dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns"
+dwc:phylum="Tracheophyta": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Tracheophyta for the Phylum including ferns"
 ```
 
 These properties describe the expected behavior of an Implementation of this Test. This section gives further guidance on how to interpret these properties in order to produce an implementation that follows this specification.
@@ -1603,7 +1603,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-21>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Implementer's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/implementers/2026-11-23>
 
 **Biodiversity Information Standards (TDWG)**
 

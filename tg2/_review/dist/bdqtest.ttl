@@ -51,8 +51,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/02f5a440-a473-42cf-a3f1-6c10334d5eb8> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_COUNTRYCODE_STANDARD with Specification: Specification for: VALIDATION_COUNTRYCODE_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/02f5a440-a473-42cf-a3f1-6c10334d5eb8-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/02f5a440-a473-42cf-a3f1-6c10334d5eb8-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:02f5a440-a473-42cf-a3f1-6c10334d5eb8> ;
     skos:historyNote "Source: TG2" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L99",
@@ -112,8 +112,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/06f9faab-102a-452a-b6e0-4eafd8d7e71d> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_PHYLUM_FOUND with Specification: Specification for: VALIDATION_PHYLUM_FOUND" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/06f9faab-102a-452a-b6e0-4eafd8d7e71d-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/06f9faab-102a-452a-b6e0-4eafd8d7e71d-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:06f9faab-102a-452a-b6e0-4eafd8d7e71d> ;
     skos:historyNote "Source: iDigBio" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L130",
@@ -515,8 +515,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/29b2e2ac-9667-4774-ac06-45333555c620> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_COUNTRYCODE_STANDARDIZED with Specification: Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/29b2e2ac-9667-4774-ac06-45333555c620-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/29b2e2ac-9667-4774-ac06-45333555c620-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:29b2e2ac-9667-4774-ac06-45333555c620> ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L931",
         "Example Implementations: Kurator/FilteredPush geo_ref_qc Library (Morris, Lowery & Wieczorek 2026)",
@@ -590,8 +590,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/2f59ef74-5439-44db-8d5a-85c9773c0cef> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification: Specification for: AMENDMENT_COORDINATES_TRANSPOSED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/2f59ef74-5439-44db-8d5a-85c9773c0cef-2026-11-21> ;
-    dcterms:modified "2026-11-21"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/2f59ef74-5439-44db-8d5a-85c9773c0cef-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef> ;
     skos:historyNote "Source: iDigBio, GBIF, BISON, FP, Kurator, ALA" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3473",
@@ -759,8 +759,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/3925c15a-2795-4cef-8a30-6e6e5e480eae> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT with Specification: Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/3925c15a-2795-4cef-8a30-6e6e5e480eae-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/3925c15a-2795-4cef-8a30-6e6e5e480eae-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:3925c15a-2795-4cef-8a30-6e6e5e480eae> ;
     skos:historyNote "Source: GBIF" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L1675",
@@ -1061,8 +1061,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/5e1ab035-a79f-4048-9330-e073d4b6c2c9> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_PATHWAY_STANDARDIZED with Specification: Specification for: AMENDMENT_PATHWAY_STANDARDIZED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/5e1ab035-a79f-4048-9330-e073d4b6c2c9-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/5e1ab035-a79f-4048-9330-e073d4b6c2c9-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:5e1ab035-a79f-4048-9330-e073d4b6c2c9> ;
     skos:historyNote "Source: TG2" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1941",
@@ -1175,8 +1175,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT with Specification: Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:637f7b40-1bdc-4ecc-a6ae-bb9b366da3fd> ;
     skos:historyNote "Source: ALA" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1021",
@@ -3010,8 +3010,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/0348eccf-fc7f-49b3-88b6-1d911e98cbbb> a bdqffdq:ValidationPolicy ;
     rdfs:label "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/0348eccf-fc7f-49b3-88b6-1d911e98cbbb-2026-11-21> ;
-    dcterms:modified "2026-11-21"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/0348eccf-fc7f-49b3-88b6-1d911e98cbbb-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:0348eccf-fc7f-49b3-88b6-1d911e98cbbb> ;
     skos:prefLabel "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
     bdqffdq:hasUseCase bdquc:Spatial-Temporal_Patterns ;
@@ -3365,8 +3365,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/9c87ce41-04a3-45e6-83d3-95ec70ae553f> a bdqffdq:ValidationPolicy ;
     rdfs:label "ValidationPolicy: (19) validations  in UseCase bdquc:Taxon-Management" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/9c87ce41-04a3-45e6-83d3-95ec70ae553f-2026-11-21> ;
-    dcterms:modified "2026-11-21"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/9c87ce41-04a3-45e6-83d3-95ec70ae553f-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:9c87ce41-04a3-45e6-83d3-95ec70ae553f> ;
     skos:prefLabel "ValidationPolicy: (19) validations  in UseCase bdquc:Taxon-Management" ;
     bdqffdq:hasUseCase bdquc:Taxon-Management ;
@@ -3392,8 +3392,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/bf24b955-7497-4d9e-b42e-2706e5bf0d48> a bdqffdq:AmendmentPolicy ;
     rdfs:label "AmendmentPolicy: (10) amendments  in UseCase bdquc:Alien-Species" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/bf24b955-7497-4d9e-b42e-2706e5bf0d48-2026-11-21> ;
-    dcterms:modified "2026-11-21"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/bf24b955-7497-4d9e-b42e-2706e5bf0d48-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:bf24b955-7497-4d9e-b42e-2706e5bf0d48> ;
     bdqffdq:hasUseCase bdquc:Alien-Species ;
     bdqffdq:includedInPolicy bdqtest:07c28ace-561a-476e-a9b9-3d5ad6e35933,
@@ -3443,8 +3443,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/f03dcc89-5e2b-41bc-b1d8-5a319fb18d22> a bdqffdq:AmendmentPolicy ;
     rdfs:label "AmendmentPolicy: (22) amendments  in UseCase bdquc:Spatial-Temporal_Patterns" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/f03dcc89-5e2b-41bc-b1d8-5a319fb18d22-2026-11-21> ;
-    dcterms:modified "2026-11-21"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/f03dcc89-5e2b-41bc-b1d8-5a319fb18d22-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:f03dcc89-5e2b-41bc-b1d8-5a319fb18d22> ;
     bdqffdq:hasUseCase bdquc:Spatial-Temporal_Patterns ;
     bdqffdq:includedInPolicy bdqtest:0345b325-836d-4235-96d0-3b5caf150fc0,
@@ -4571,13 +4571,13 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/01b96157-e4a1-4884-95d7-3bcfc5f3c047> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_COUNTRYCODE_STANDARD" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"ISO 3166 Country Codes\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/01b96157-e4a1-4884-95d7-3bcfc5f3c047-2024-09-19> ;
-    dcterms:modified "2024-09-19"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority = \"ISO 3166 Country Codes\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/01b96157-e4a1-4884-95d7-3bcfc5f3c047-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:01b96157-e4a1-4884-95d7-3bcfc5f3c047> ;
     skos:example "dwc:countryCode=\"GL\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:countryCode is a valid ISO (ISO 3166-1-alpha-2 country codes) value\"",
         "dwc:countryCode=\"GRL\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:countryCode is NOT a valid ISO (ISO 3166-1-alpha-2 country codes) value\"" ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"ISO 3166 Country Codes\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority = \"ISO 3166 Country Codes\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the dwc:countryCode is bdqval:Empty; COMPLIANT if dwc:countryCode can be unambiguously interpreted as a valid ISO 3166-1-alpha-2 country code in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT" .
 
 <https://rs.tdwg.org/bdqtest/specification/02242018-3e73-4e0a-8d6f-d1db06cf81a3> a bdqffdq:Specification ;
@@ -4678,10 +4678,10 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/1193230f-f188-4917-92da-bba3390ed3fa> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_PHYLUM_FOUND" ;
     dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:phylum is bdqval:Empty; COMPLIANT if the value of dwc:phylum is found as a value at the rank of Phylum in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/1193230f-f188-4917-92da-bba3390ed3fa-2022-03-25> ;
-    dcterms:modified "2022-03-25"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/1193230f-f188-4917-92da-bba3390ed3fa-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:1193230f-f188-4917-92da-bba3390ed3fa> ;
-    skos:example "dwc:phylum=\"Tracheophyta\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Trachyophyta for the Phylum including ferns\"",
+    skos:example "dwc:phylum=\"Tracheophyta\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:phylum has an equivalent at the rank of Phylum in the bdqval:sourceAuthority. GBIF.org uses Tracheophyta for the Phylum including ferns\"",
         "dwc:phylum=\"Trachyophyta\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:phylum does not have an equivalent at the rank of Phylum in the bdqval:sourceAuthority.\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/bd91e45d-691a-4d7e-9917-7b6231c05c43> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
@@ -5239,13 +5239,13 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/3e076cfa-56ff-4b79-9739-736d062eac5a> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_COUNTRYCODE_STANDARDIZED" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dwc:countryCode is bdqval:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"ISO 3166-1-alpha-2\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/3e076cfa-56ff-4b79-9739-736d062eac5a-2024-11-09> ;
-    dcterms:modified "2024-11-09"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dwc:countryCode is bdqval:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority = \"ISO 3166-1-alpha-2\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/3e076cfa-56ff-4b79-9739-736d062eac5a-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:3e076cfa-56ff-4b79-9739-736d062eac5a> ;
     skos:example "dwc:countryCode=\"Aust.\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"dwc:countryCode contains an ambiguous value\"",
         "dwc:countryCode=\"Australia\": Response.status=AMENDED, Response.result=dwc:countryCode=\"AU\", Response.comment=\"dwc:countryCode contains an interpretable value\"" ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"ISO 3166-1-alpha-2\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority = \"ISO 3166-1-alpha-2\" {[https://www.iso.org/iso-3166-country-codes.html]} {ISO 3166-1-alpha-2 Country Code search [https://www.iso.org/obp/ui/#search]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dwc:countryCode is bdqval:Empty; AMENDED the value of dwc:countryCode if it can be unambiguously interpreted to a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
 
 <https://rs.tdwg.org/bdqtest/specification/3eae7451-19c6-403c-ba36-29f8204d15ff> a bdqffdq:Specification ;
@@ -5405,11 +5405,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/46caea46-0c94-4efb-9e5f-1b170f2ad54e> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_COORDINATES_TRANSPOSED" ;
     dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdqval:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/46caea46-0c94-4efb-9e5f-1b170f2ad54e-2024-11-11> ;
-    dcterms:modified "2024-11-11"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/46caea46-0c94-4efb-9e5f-1b170f2ad54e-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:46caea46-0c94-4efb-9e5f-1b170f2ad54e> ;
     skos:example "dwc:decimalLatitude=\"25.46\", dwc:decimalLongitude=\"135.87\", dwc:countryCode=\"AU\": Response.status=AMENDED, Response.result=dwc:decimalLatitude=\"-25.46\", dwc:decimalLongitude=\"135.87\", Response.comment=\"dwc:decimalLatitude sign reversed to fit dwc:countryCode=AU\"",
-        "dwc:decimalLatitude=\"25.46\", dwc:decimalLongitude=\"135.87\", dwc:countryCode=\"AX\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"dwc:countryCode is uninterpretable\"" ;
+        "dwc:decimalLatitude=\"25.46\", dwc:decimalLongitude=\"135.87\", dwc:countryCode=\"XX\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:countryCode is uninterpretable\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/95e1332e-eeca-4b41-8698-88ffc33cef3f> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"10m-admin-1 boundaries UNION with Exclusive Economic Zones\" {[https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/] spatial UNION [https://www.marineregions.org/downloads.php#marbound]}" ;
     bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if any of dwc:decimalLatitude or dwc:decimalLongitude or dwc:countryCode are bdqval:Empty; AMENDED dwc:decimalLatitude and dwc:decimalLongitude if the coordinates were transposed or one or more of the signs of the coordinates were reversed to align the location with dwc:countryCode according to the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
@@ -5833,13 +5833,13 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/6f1093a0-0da5-4691-a95e-184d6d55eeb0> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdqval:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdqval:sourceAuthority bdqval:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/6f1093a0-0da5-4691-a95e-184d6d55eeb0-2024-09-25> ;
-    dcterms:modified "2024-09-25"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdqval:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdqval:sourceAuthority bdqval:sourceAuthority = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/6f1093a0-0da5-4691-a95e-184d6d55eeb0-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:6f1093a0-0da5-4691-a95e-184d6d55eeb0> ;
     skos:example "dwc:country=\"Australia\", dwc:countryCode=\"AU\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:country matches dwc:countryCode\"",
         "dwc:country=\"United States Minor Outlying Islands\", dwc:countryCode=\"US\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:country does not match dwc:countryCode\"" ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority = \"The Getty Thesaurus of Geographic Names (TGN)\" {[https://www.getty.edu/research/tools/vocabularies/tgn/index.html]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if either of the terms dwc:country or dwc:countryCode are bdqval:Empty; COMPLIANT if the values of dwc:country and dwc:countryCode match national-level country name and matching country code respectively in the bdqval:sourceAuthority" .
 
 <https://rs.tdwg.org/bdqtest/specification/6ff94a83-1f03-4f3d-aa10-14a16aa3fff9> a bdqffdq:Specification ;
@@ -6252,11 +6252,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/9c150f88-1fc4-47b7-b826-f6357c104946> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT" ;
     dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdqval:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdqval:Empty; otherwise NOT_AMENDED bdqval:defaultOccurrenceStatus default = \"present\"" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/9c150f88-1fc4-47b7-b826-f6357c104946-2024-11-13> ;
-    dcterms:modified "2024-11-13"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/9c150f88-1fc4-47b7-b826-f6357c104946-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:9c150f88-1fc4-47b7-b826-f6357c104946> ;
     skos:example "dwc:occurrenceStatus=\"\", dwc:individualCount=\"\", dwc:organismQuantity=\"\": Response.status=FILLED_IN, Response.result=dwc:occurrenceStatus=\"present\", Response.comment=\"dwc:occurrenceStatus is bdqval:Empty; assumed \"present\"\"",
-        "dwc:occurrenceStatus=\"X\", dwc:individualCount=\"10\", dwc:organismQuantity=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:occurrenceStatus is bdqval:NotEmpty\"" ;
+        "dwc:occurrenceStatus=\"\", dwc:individualCount=\"10\", dwc:organismQuantity=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:individualCount is bdqval:NotEmpty\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/a558165b-7014-4029-839f-33badcb0842f> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:defaultOccurrenceStatus default = \"present\"" ;
     bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:NotEmpty; FILLED_IN the value of dwc:occurrenceStatus using the bdqval:defaultOccurrenceStatus Parameter value if dwc:occurrenceStatus,dwc:individualCount and dwc:organismQuantity are bdqval:Empty; otherwise NOT_AMENDED" .
@@ -7259,11 +7259,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/fef3a7f9-edd8-41c9-9704-4798814077e3> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_PATHWAY_STANDARDIZED" ;
     dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"Pathway Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/fef3a7f9-edd8-41c9-9704-4798814077e3-2024-09-18> ;
-    dcterms:modified "2024-09-18"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/fef3a7f9-edd8-41c9-9704-4798814077e3-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:fef3a7f9-edd8-41c9-9704-4798814077e3> ;
     skos:example "dwc:pathway=\"escapeee\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:pathway not found in the bdqval:sourceAuthority\"",
-        "dwc:pathway=\"transportStowaway\": Response.status=AMENDED, Response.result=dwc:pathway=\"transportStowaway\", Response.comment=\"dwc:pathway found in the bdqval:sourceAuthority\"" ;
+        "dwc:pathway=\"transport stowaway\": Response.status=AMENDED, Response.result=dwc:pathway=\"transportStowaway\", Response.comment=\"dwc:pathway contains an interpretable value in the bdqval:sourceAuthority\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/0a7b3629-ecd9-47d2-b672-44ef47e03f7b> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Pathway Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/pw/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/Pathway/concepts]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:pathway is bdqval:Empty; AMENDED the value of dwc:pathway if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
@@ -9793,8 +9793,8 @@ bdqtest:f22539ef-029b-4edb-ad17-add4363f7395 a bdqffdq:Measure ;
 bdqtest:f2b4a50a-6b2f-4930-b9df-da87b6a21082 a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_COORDINATES_TRANSPOSED" ;
     dcterms:description "Proposes an amendment transposing or changing the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-21> ;
-    dcterms:modified "2026-11-21"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/doc-gg7h-s853> ;
     owl:sameAs <urn:uuid:f2b4a50a-6b2f-4930-b9df-da87b6a21082> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/54" ;
@@ -9855,8 +9855,8 @@ bdqtest:f4fa449c-4b74-4dcf-b4cf-0b73e1496375 a bdqffdq:Measure ;
 bdqtest:f9205977-f145-44f5-8cb9-e3e2e35ce908 a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_PATHWAY_STANDARDIZED" ;
     dcterms:description "Proposes an amendment to the value of dwc:pathway using the bdqval:sourceAuthority." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f9205977-f145-44f5-8cb9-e3e2e35ce908-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     dcterms:references <https://dwc.tdwg.org/pw/> ;
     owl:sameAs <urn:uuid:f9205977-f145-44f5-8cb9-e3e2e35ce908> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/278" ;
@@ -9886,8 +9886,8 @@ bdqtest:fcabd2c9-392c-4841-a5d7-e2680c9587ab a bdqffdq:Measure ;
 bdqtest:fec5ffe6-3958-4312-82d9-ebcca0efb350 a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_COUNTRYCODE_STANDARDIZED" ;
     dcterms:description "Proposes an amendment to the value of dwc:countryCode if it can be interpreted as an ISO 3166-1-alpha-2 country code." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/fec5ffe6-3958-4312-82d9-ebcca0efb350-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     dcterms:references <https://datahub.io/core/country-list>,
         <https://doi.org/10.15468/doc-gg7h-s853>,
         <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2>,
@@ -10061,8 +10061,8 @@ bdqtest:03049fe5-a575-404f-b564-ae63f5a1cf8b a bdqffdq:Measure ;
 bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe a bdqffdq:Validation ;
     rdfs:label "VALIDATION_COUNTRYCODE_STANDARD" ;
     dcterms:description "Is the value of dwc:countryCode a valid ISO 3166-1-alpha-2 country code?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/0493bcfb-652e-4d17-815b-b0cce0742fbe-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     dcterms:references <https://datahub.io/core/country-list>,
         <https://doi.org/10.15468/doc-gg7h-s853>,
         <https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2>,
@@ -10855,8 +10855,8 @@ bdqtest:8f1e6e58-544b-4365-a569-fb781341644e a bdqffdq:Validation ;
 bdqtest:96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5 a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_OCCURRENCESTATUS_ASSUMEDDEFAULT" ;
     dcterms:description "Proposes an amendment of the value of dwc:occurrenceStatus to the default parameter value if dwc:occurrenceStatus, dwc:individualCount and dwc:organismQuantity are empty." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     owl:sameAs <urn:uuid:96667a0a-ae59-446a-bbb0-b7f2b0ca6cf5> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/75" ;
     skos:note "There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/#dwc:occurrenceStatus recommended values and the GBIF vocabulary at (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts)." ;
@@ -11060,8 +11060,8 @@ bdqtest:adb27d29-9f0d-4d52-b760-a77ba57a69c9 a bdqffdq:Validation ;
 bdqtest:b23110e7-1be7-444a-a677-cdee0cf4330c a bdqffdq:Validation ;
     rdfs:label "VALIDATION_COUNTRYCOUNTRYCODE_CONSISTENT" ;
     dcterms:description "Does the ISO country code, determined from the value of dwc:country, equal the value of dwc:countryCode?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/b23110e7-1be7-444a-a677-cdee0cf4330c-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     dcterms:references <https://datahub.io/core/country-list>,
         <https://doi.org/10.15468/doc-gg7h-s853>,
         <https://www.iso.org/iso-3166-country-codes.html> ;
@@ -11313,8 +11313,8 @@ bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e a bdqffdq:Validation ;
 bdqtest:eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f a bdqffdq:Validation ;
     rdfs:label "VALIDATION_PHYLUM_FOUND" ;
     dcterms:description "Does the value of dwc:phylum occur at the rank of Phylum in the bdqval:sourceAuthority?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f-2026-11-23> ;
+    dcterms:modified "2026-11-23"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/39omei> ;
     owl:sameAs <urn:uuid:eaad41c5-1d46-4917-a08b-4fd1d7ff5c0f> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/22" ;
