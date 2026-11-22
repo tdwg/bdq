@@ -151,7 +151,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.9 Key to Vocabulary Terms (normative)
 
-The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the [TDWG Standards Documentation Specification (SDS)](https://www.tdwg.org/standards/sds/). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
@@ -169,7 +169,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 ## 2 Use of Terms (normative)
 
-In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdqval/terms/NotEmpty`) or Term Qualified name (e.g., `bdqval:NotEmpty`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `NotEmpty`) SHOULD be used. In a purely human context a label (e.g., `Not Empty`) MAY be used.
+In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdqval/terms/NotEmpty`) or Term Qualified name (e.g., `bdqval:NotEmpty`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `NotEmpty`) SHOULD be used. In a purely human context a label (e.g., `NotEmpty`) MAY be used.
 
 ## 3 Term index (non-normative)
 ### 3.1 Index By Term Name (non-normative)

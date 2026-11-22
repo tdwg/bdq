@@ -77,13 +77,11 @@ This term list defines the formal structure and meanings of these concepts and p
 
 ### 1.2 Audience (non-normative)
 
-TODO: Rework for just Use Cases
-
 This document is intended for users who need a precise understanding of the vocabulary elements used in the description of BDQ Use Cases. It will be useful for:
 
 - Implementers interpreting or extending BDQ Use Cases
 - Standards developers and data quality modelers working with BDQ vocabularies
-- Users who need to understand an potentially extend BDQ Use Cases, either inside or outside the BDQ standard
+- Users who need to understand and potentially extend BDQ Use Cases, either inside or outside the BDQ standard
 
 Familiarity with RDF vocabularies and the Fitness For Use Framework is recommended for full comprehension, but the document is organized to be accessible for any reader needing detailed term definitions.
 
@@ -147,7 +145,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.9 Key to Vocabulary Terms (normative)
 
-The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the [TDWG Standards Documentation Specification (SDS)](https://www.tdwg.org/standards/sds/). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
@@ -167,7 +165,7 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 ## 2 Use of Terms (normative)
 
-In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdquc/terms/NotEmpty`) or Term Qualified name (e.g., `bdquc:NotEmpty`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `NotEmpty`) SHOULD be used. In a purely human context a label (e.g., `Not Empty`) MAY be used.
+In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdquc/terms/Taxon-Management`) or Term Qualified name (e.g., `bdquc:Taxon-Management`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `Taxon-Management`) SHOULD be used. In a purely human context a label (e.g., `Taxon-Management`) MAY be used.
 
 ## 3 Term index (non-normative)
 ### 3.1 Index By Term Name (non-normative)

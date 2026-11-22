@@ -70,7 +70,7 @@ Draft Standard for Review
 
 The purpose of this document is to provide guidance for marking and identifying synthetic or modified biodiversity data that has been created for purposes such as conformance testing BDQ Test implementations. It establishes conventions for distinguishing such artificial or altered data from authentic biodiversity occurrence records, ensuring that conformance testing datasets are not unintentionally incorporated into biodiversity analyses or downstream data pipelines.
 
-The document specifies how to explicitly mark confomance testing data, including wholly synthetic records, real-world data with synthetic modifications, and real data reused for illustrative or example purposes. These practices support the integrity of analytical results and uphold trust in biodiversity data platforms.
+The document specifies how to explicitly mark conformance testing data, including wholly synthetic records, real-world data with synthetic modifications, and real data reused for illustrative or example purposes. These practices support the integrity of analytical results and uphold trust in biodiversity data platforms.
 
 ### 1.2 Audience (non-normative)
 
@@ -111,7 +111,7 @@ The following namespace abbreviations are used in this document:
 
 ## 2 Synthetic and Example Data (normative)
 
-Implementers of BDQ Tests, and other tests of biodiversity data quality may wish to use datasets containing known errors and issues for the purposes of testing the behavior of their Test implementations and to validate that they perform as expected. To do so, they may wish to create modified example data or synthetic data into which known errors have been introduced (and then see if Test implementations correctly identify those errors). To reduce the risk of such modified or synthetic data being mingled with actual biodiversity data in analyses, such data SHOULD BE marked in a consistent manner known to consumers of such data.
+Implementers of BDQ Tests, and other tests of biodiversity data quality may wish to use datasets containing known errors and issues for the purposes of testing the behavior of their Test implementations and to validate that they perform as expected. To do so, they may wish to create modified example data or synthetic data into which known errors have been introduced (and then see if Test implementations correctly identify those errors). To reduce the risk of such modified or synthetic data being mingled with actual biodiversity data in analyses, such data SHOULD be marked in a consistent manner known to consumers of such data.
 
 ### 2.1 Identifying Example Data (normative)
 
@@ -119,7 +119,7 @@ Datasets consisting of partly or wholly synthetic data, including datasets into 
 
 ### 2.2 Data Fragments and dwc:Occurrence Datasets (normative)
 
-Inputs to unit tests and testing frameworks for individual Test implementations are likely to be organized as fragments of `dwc:Occurrence` data not easily mistaken for actual data. A record forming a fragment of a `dwc:Occurrence` record for validating the behavior of the implementation of a particular Test SHOULD only contain the set of terms that form the `Information Element` for a particular Test, along with Test `Parameters`, expected outputs, and related metadata, and SHOULD NOT contain values in other [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) not relevant to the Test under consideration, except data fragments MAY be marked as synthetic by adding the term values described in 6.6.3 and 6.6.4. Testing frameworks MAY take as input more complete Darwin Core records, and when these are partly or wholly synthetic, they MUST be identified as synthetic, and MUST be treated as synthetic by consumers.
+Inputs to unit tests and testing frameworks for individual Test implementations are likely to be organized as fragments of `dwc:Occurrence` data not easily mistaken for actual data. A record forming a fragment of a `dwc:Occurrence` record for validating the behavior of the implementation of a particular Test SHOULD only contain the set of terms that form the `Information Element` for a particular Test, along with Test `Parameters`, expected outputs, and related metadata, and SHOULD NOT contain values in other [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) not relevant to the Test under consideration, except data fragments MAY be marked as synthetic by adding the term values described in [2.4](#24-real-data-with-synthetic-modifications-used-as-examples-normative) and [2.5](#25-wholly-synthetic-data-normative). Testing frameworks MAY take as input more complete Darwin Core records, and when these are partly or wholly synthetic, they MUST be identified as synthetic, and MUST be treated as synthetic by consumers.
 
 ### 2.3 Real Data Used as Examples (normative)
 
@@ -136,7 +136,7 @@ The dataset SHOULD use the following values, and consumers of biodiversity data 
 `dwc:collectionCode` = "Modified Example"
 `dwc:collectionID` = "urn:uuid:1887c794-7291-4005-8eee-1afbe9d7814e"
 
-B. Each modified record MUST provide a identifier for the modified record distinct from the original identifier. For example,
+B. Each modified record MUST provide an identifier for the modified record distinct from the original identifier. For example,
  			
 `dwc:occurrenceID` = urn:uuid: + a random type 4 UUID.
 

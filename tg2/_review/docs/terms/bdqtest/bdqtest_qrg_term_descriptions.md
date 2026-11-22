@@ -4,7 +4,7 @@
 Title
 : Terms Used in the BDQ Tests Quick Reference Guide
 
-This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md)
+This document is non-normative and part of the [BDQ Tests Quick Reference Guide](index.md).
 
 <!-- This is the list of descriptions of bdqtest terms included in the Quick Reference Guide. -->
 
@@ -63,7 +63,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-20>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-21>
 
 **Biodiversity Information Standards (TDWG)**
 

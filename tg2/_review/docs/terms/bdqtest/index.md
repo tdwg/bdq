@@ -9,7 +9,7 @@ Draft Standard for Review
 
 <!--- Note: This document deliberately diverges from many of the SHOULD expecations of section 3.2.3 Layout and style of the SDS for the express purpose of simplicity. Some header values have been included in the first paragraph of text, others have been omitted, a table of contents has been omitted, the introduction and abstract are combined, the introduction is not given a heading, and, in consequence, headings are not numbered. --->
 
-This document is intended to be an easy-to-read reference for the Tests maintained as part of the TDWG standard [BDQ](http://www.tdwg.org/standards/YYY) produced by the TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions and is maintained by the BDQ Maintenance Interest Group. This document lists the BDQ Tests, described by the [Terms Used in the BDQ Tests Quick Reference Guide](bdqtest_qrg_term_descriptions.md). Definitions, comments, and examples may include namespace abbreviations (e.g., `bdqval:`, `dwc:`). These are required as the meaning for the word is defined specifically in that namespace. Thus, `dwc:Event` means Event as defined by Darwin Core at [https://dwc.tdwg.org/terms/#event](https://dwc.tdwg.org/terms/#event).
+This document is intended to be an easy-to-read reference for the Tests maintained as part of the TDWG standard [BDQ](http://www.tdwg.org/standards/YYY) produced by the TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions and maintained by the BDQ Maintenance Interest Group. This document lists the BDQ Tests, described by the [Terms Used in the BDQ Tests Quick Reference Guide](bdqtest_qrg_term_descriptions.md). Definitions, comments, and examples may include namespace abbreviations (e.g., `bdqval:`, `dwc:`). These are required as the meaning for the word is defined specifically in that namespace. Thus, `dwc:Event` means Event as defined by Darwin Core at [https://dwc.tdwg.org/terms/#event](https://dwc.tdwg.org/terms/#event).
 
 * Learn More:  
     <!--- START HIDE IN HTML --->
@@ -22,7 +22,7 @@ This document is intended to be an easy-to-read reference for the Tests maintain
     * [Full vocabulary definition document](../../list/bdqtest/index.md) full details of the `bdqtest:` vocabulary (the Tests). 
     * [Fitness For Use Framework Ontology: Concepts and Use](../../guide/bdqffdq/index.md) describing the concepts used to define the Tests.
     <!--- END HIDE IN HTML --->
-* Questions or suggestions? Submit and issue in GitHub [BDQ Issues](https://github.com/tdwg/bdq/issues). 
+* Questions or suggestions? Submit an issue in GitHub [BDQ Issues](https://github.com/tdwg/bdq/issues). 
 * [How To Cite BDQ](#cite-bdq-non-normative)
 
 <!--- START HIDE IN HTML --->
@@ -31,9 +31,9 @@ This document is intended to be an easy-to-read reference for the Tests maintain
 <!--- END HIDE IN HTML --->
 ## Linked Indexes (non-normative)
 
-Index by: [Use Case](qrg_index_by_usecase.md), [Information Element Acted Upon](qrg_index_by_ie_actedupon.md), [Information Element Class](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md), 
+Index by: [Use Case](qrg_index_by_usecase.md), [Information Element Acted Upon](qrg_index_by_ie_actedupon.md), [Information Element Class](qrg_index_by_ie_class.md), [Data Quality Dimension](qrg_index_by_dimension.md).
 
-This document also includes `Measures` operating on Test `Responses` for `Multi Records` (datasets) indexed in [Multi Record Measures](qrg_multirecord_index.md)
+This document also includes `Measures` operating on Test `Responses` for `Multi Records` (datasets) indexed in [Multi Record Measures](qrg_multirecord_index.md).
 
 <!--- START HIDE IN HTML --->
 ## Alphabetical Index to Single Record Tests (non-normative)
@@ -192,7 +192,7 @@ bdquc:Alien-Species, bdquc:Species-Distribution-Modeling-Trees, bdquc:Spatial-Te
 ###  VALIDATION_BASISOFRECORD_STANDARD
 
 ####  Validation dwc:basisOfRecord Standard
-https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -214,7 +214,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-`bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}`
+`bdqval:sourceAuthority default = "Darwin Core basisOfRecord" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}`
 
 #### Examples
 
@@ -270,7 +270,7 @@ bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns
 ###  VALIDATION_DCTYPE_STANDARD
 
 ####  Validation dc:type Standard
-https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -288,7 +288,7 @@ dc:type
 
 #### Source Authority
 
-`DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}`
+`bdqval:sourceAuthority = "DCMI Type Vocabulary" {[http://purl.org/dc/terms/DCMIType]} {"DCMI Type Vocabulary List of Terms" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}`
 
 #### Examples
 
@@ -348,7 +348,7 @@ The license at the record level might be derived from the license of the dataset
 ###  VALIDATION_LICENSE_STANDARD
 
 ####  Validation dcterms:license Standard
-https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -370,7 +370,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-`bdqval:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }`
+`bdqval:sourceAuthority default = "Creative Commons 4.0 Licenses or CC0" {[https://creativecommons.org/]} {Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }`
 
 #### Examples
 
@@ -485,7 +485,7 @@ The geographic determination service is expected to return a list of names of fi
 ###  VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT
 
 ####  Validation Coordinates Terrestrial Marine
-https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -516,7 +516,7 @@ bdqval:taxonIsMarine,bdqval:geospatialLand,bdqval:spatialBufferInMeters,bdqval:a
 
 dwc:decimalLatitude="-41.0525925872862", dwc:decimalLongitude="-71.5310546742521", dwc:scientificName="Aegla neuquensis": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="The species is freshwater aquatic and the coordinates fall in a lake and thus COMPLIANT"
 
-dwc:decimalLatitude="20.0", dwc:decimalLongitude="-30.0", dwc:scientificName="Viviparus contectus (Millet, 1813)": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is non-marine according to dwc:taxonIsMarine but coordinates are marine"
+dwc:decimalLatitude="20.0", dwc:decimalLongitude="-30.0", dwc:scientificName="Viviparus contectus (Millet, 1813)": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:scientificName is non-marine according to bdqval:taxonIsMarine but coordinates are marine"
 
 
 #### Use Cases
@@ -1062,7 +1062,7 @@ Darwin Core recommends best practice is to use a controlled vocabulary. This Tes
 ###  VALIDATION_LOCATION_NOTEMPTY
 
 ####  Validation dcterms:Location Not Empty
-https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -1080,7 +1080,7 @@ dwc:higherGeographyID,dwc:higherGeography,dwc:continent,dwc:country,dwc:countryC
 
 #### Examples
 
-dwc:locationID="https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9", dwc:higherGeographyID="", dwc:higherGeography="",dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:LocationID is bdqval:NotEmpty"
+dwc:locationID="https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9", dwc:higherGeographyID="", dwc:higherGeography="",dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:locationID is bdqval:NotEmpty"
 
 dwc:locationID="", dwc:higherGeographyID="", dwc:higherGeography="", dwc:continent="", dwc:waterBody="", dwc:islandGroup="", dwc:island="", dwc:country="", dwc:countryCode="", dwc:stateProvince="", dwc:county="", dwc:municipality="", dwc:locality="", dwc:verbatimLocality="", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="", dwc:geodeticDatum="", dwc:verbatimCoordinates="", dwc:verbatimLatitude="", dwc:verbatimLongitude="", dwc:footprintWKT="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="All location fields are bdqval:Empty"
 
@@ -1099,7 +1099,7 @@ Only fails if all of the relevant fields of the Darwin Core Location class are E
 ###  VALIDATION_MAXDEPTH_INRANGE
 
 ####  Validation dwc:maximumDepthInMeters In Range
-https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -1121,7 +1121,7 @@ bdqval:minimumValidDepthInMeters,bdqval:maximumValidDepthInMeters
 
 #### Default Parameter Values
 
-`bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"`
+`bdqval:minimumValidDepthInMeters default = "0",bdqval:maximumValidDepthInMeters default = "11000"`
 
 #### Examples
 
@@ -1144,7 +1144,7 @@ The Challenger Deep in the Mariana Trench is the deepest known point in Earth's 
 ###  VALIDATION_MAXELEVATION_INRANGE
 
 ####  Validation dwc:maximumElevationInMeters In Range
-https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -1170,9 +1170,9 @@ bdqval:minimumValidElevationInMeters,bdqval:maximumValidElevationInMeters
 
 #### Examples
 
-dwc:maximumElevationInMeters="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:maximumElevation is in is range"
+dwc:maximumElevationInMeters="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:maximumElevationInMeters is in is range"
 
-dwc:maximumElevationInMeters="-500": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:maximumElevation is not in range, i.e. is <-430"
+dwc:maximumElevationInMeters="-500": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:maximumElevationInMeters is not in range, i.e. is <-430"
 
 
 #### Use Cases
@@ -1189,7 +1189,7 @@ We have rounded up the Parameter values. We are aware of sub-ice elevations in A
 ###  VALIDATION_MINDEPTH_INRANGE
 
 ####  Validation dwc:minimumDepthInMeters In Range
-https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -1211,7 +1211,7 @@ bdqval:minimumValidDepthInMeters,bdqval:maximumValidDepthInMeters
 
 #### Default Parameter Values
 
-`bdqval:minimumValidDepthInMeters default="0",bdqval:maximumValidDepthInMeters default="11000"`
+`bdqval:minimumValidDepthInMeters default = "0",bdqval:maximumValidDepthInMeters default = "11000"`
 
 #### Examples
 
@@ -1311,8 +1311,8 @@ We have rounded up the Parameter values. We are aware of sub-ice elevations in A
 
 ###  VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION
 
-####  Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters
-https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-20
+####  Validation dwc:minimumElevationInMeters less than dwc:maximumElevationInMeters
+https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -1321,7 +1321,7 @@ Is the value of dwc:minimumElevationInMeters a number less than or equal to the 
 
 #### Expected Response
 
-INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT
+INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT
 
 #### Information Elements
 
@@ -1330,7 +1330,7 @@ dwc:minimumElevationInMeters,dwc:maximumElevationInMeters
 
 #### Examples
 
-dwc:minimumElevationInMeters="0", dwc:maximumElevationInMeters="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:minimumElevationInMeters is equal to dwc: maximumElevationInMeters"
+dwc:minimumElevationInMeters="0", dwc:maximumElevationInMeters="0": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:minimumElevationInMeters is equal to dwc:maximumElevationInMeters"
 
 dwc:minimumElevationInMeters="1", dwc:maximumElevationInMeters="0": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:minimumElevationInMeters is greater than dwc:maximumElevationInMeters"
 
@@ -1464,7 +1464,7 @@ This is part of a group of similar Tests (VALIDATION_DAY_INRANGE (8d787cb5-73e2-
 ###  VALIDATION_ENDDAYOFYEAR_INRANGE
 
 ####  Validation dwc:endDayOfYear In Range
-https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -1496,7 +1496,7 @@ bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
-See Test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This Test only asks if dwc:endDayOfYear is a valid value for the relevant year, not if it is consistent with the end day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This Test should be run after the series of Tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENT_DATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d)).
+See Test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This Test only asks if dwc:endDayOfYear is a valid value for the relevant year, not if it is consistent with the end day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This Test should be run after the series of Tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d)).
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1504,7 +1504,7 @@ See Test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This Tes
 ###  VALIDATION_EVENTDATE_INRANGE
 
 ####  Validation dwc:eventDate In Range
-https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -1526,7 +1526,7 @@ bdqval:earliestValidDate,bdqval:latestValidDate
 
 #### Default Parameter Values
 
-`bdqval:earliestValidDate default ="1582-11-15",bdqval:latestValidDate default = "{current year}"`
+`bdqval:earliestValidDate default = "1582-11-15",bdqval:latestValidDate default = "{current year}"`
 
 #### Examples
 
@@ -1549,7 +1549,7 @@ This Test provides for a default earliest date, which is 1582-11-15 by conventio
 ###  VALIDATION_EVENTDATE_NOTEMPTY
 
 ####  Validation dwc:eventDate Not Empty
-https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -1567,7 +1567,7 @@ dwc:eventDate
 
 #### Examples
 
-dwc:eventDate="1964-11-01T10:00-0600": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventdate is bdqval:NotEmpty"
+dwc:eventDate="1964-11-01T10:00-0600": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:eventDate is bdqval:NotEmpty"
 
 dwc:eventDate="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:eventDate is bdqval:Empty"
 
@@ -1726,7 +1726,7 @@ bdquc:Spatial-Temporal_Patterns
 ###  VALIDATION_STARTDAYOFYEAR_INRANGE
 
 ####  Validation dwc:startDayOfYear In Range
-https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -1758,7 +1758,7 @@ bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
-See Test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This Test only asks if dwc:startDayOfYear is a valid value for the relevant year, not if it is consistent with the start day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This Test should be run after the series of Tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENT_DATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d)).
+See Test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This Test only asks if dwc:startDayOfYear is a valid value for the relevant year, not if it is consistent with the start day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This Test should be run after the series of Tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d)).
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -1924,8 +1924,8 @@ bdquc:Spatial-Temporal_Patterns
 
 ###  VALIDATION_DEGREEOFESTABLISHMENT_STANDARD
 
-####  Validation dwc:degreeofEstablishment Standard
-https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-20
+####  Validation dwc:degreeOfEstablishment Standard
+https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -2171,7 +2171,7 @@ This Test must return NOT_COMPLIANT if there is leading or trailing whitespace o
 ###  VALIDATION_SEX_STANDARD
 
 ####  Validation dwc:sex Standard
-https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -2193,7 +2193,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-`bdqval:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}`
+`bdqval:sourceAuthority default = "GBIF Sex Vocabulary" {[https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}`
 
 #### Examples
 
@@ -2261,7 +2261,7 @@ This Test must return NOT_COMPLIANT if there is leading or trailing whitespace o
 ###  VALIDATION_CLASSIFICATION_CONSISTENT
 
 ####  Validation Classification Consistent
-https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -2289,7 +2289,7 @@ bdqval:sourceAuthority
 
 dwc:kingdom="", dwc:phylum="", dwc:class="", dwc:order="Myrtales", dwc:superfamily="", dwc:family="Myrtaceae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="",dwc:genus="Punica": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms can be unambiguously resolved in the bdqval:sourceAuthority"
 
-dwc:kingdom="", dwc:phylum="Chordata", dwc:class="", dwc:order="Rhopalocera", dwc:superfamly="", dwc:family="Muricidae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="", dwc:genus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms cannot be unambiguously resolved in the bdqval:sourceAuthority"
+dwc:kingdom="", dwc:phylum="Chordata", dwc:class="", dwc:order="Rhopalocera", dwc:superfamily="", dwc:family="Muricidae", dwc:subfamily="", dwc:tribe="", dwc:subtribe="", dwc:genus="": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="The combination of values of higher classification taxonomic terms cannot be unambiguously resolved in the bdqval:sourceAuthority"
 
 
 #### Use Cases
@@ -2351,7 +2351,7 @@ The purpose of this Test is to check whether the value is a name that is a resul
 ###  VALIDATION_FAMILY_FOUND
 
 ####  Validation dwc:family Found
-https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -2377,9 +2377,9 @@ bdqval:sourceAuthority
 
 #### Examples
 
-dwc:family="Agaricaceae": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="bdqval:family has an equivalent at the rank of Family in the bdqval:sourceAuthority"
+dwc:family="Agaricaceae": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment="dwc:family has an equivalent at the rank of Family in the bdqval:sourceAuthority"
 
-dwc:family="Agaricacae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="bdqval:family does not have an equivalent at the rank of Family in the Parameterized Source Authority"
+dwc:family="Agaricacae": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment="dwc:family does not have an equivalent at the rank of Family in the Parameterized Source Authority"
 
 
 #### Use Cases
@@ -2893,7 +2893,7 @@ bdquc:Taxon-Management
 ###  VALIDATION_TAXONRANK_STANDARD
 
 ####  Validation dwc:taxonRank Standard
-https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -2915,7 +2915,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-`bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}`
+`bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" {[https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}`
 
 #### Examples
 
@@ -2975,7 +2975,7 @@ This tests for records that have no taxonomic (NAME) information. If there is an
 ###  VALIDATION_TAXON_UNAMBIGUOUS
 
 ####  Validation dwc:Taxon Unambiguous
-https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -3015,7 +3015,7 @@ bdquc:Taxon-Management, bdquc:Alien-Species, bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
-There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**
+There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:cultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (3f335517-f442-4b98-b149-1e87ff16de45) is a more specific Test for a subset of Information Elements from this Test. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3533,7 +3533,7 @@ Transformations between coordinate reference systems should not be made as a par
 ###  AMENDMENT_COORDINATES_TRANSPOSED
 
 ####  Amendment Coordinates Transposed
-https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -3573,7 +3573,7 @@ bdquc:Spatial-Temporal_Patterns
 
 #### Notes
 
-The dwc:geodeticDatum is not necessary for this Test. The maximum positional shift between any geographic coordinate reference system and WGS84 is less than 6 km, so any hemisphere Test that relies on a country code for consistency would not be affected by the potential shift. The prior VALIDATION for this Test is VALIDATION_COORDINATE_COUNTRYCODE_CONSISTENT (adb27d29-9f0d-4d52-b760-a77ba57a69c9).
+The dwc:geodeticDatum is not necessary for this Test. The maximum positional shift between any geographic coordinate reference system and WGS84 is less than 6 km, so any hemisphere Test that relies on a country code for consistency would not be affected by the potential shift. The prior VALIDATION for this Test is VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT (adb27d29-9f0d-4d52-b760-a77ba57a69c9).
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -3581,12 +3581,12 @@ The dwc:geodeticDatum is not necessary for this Test. The maximum positional shi
 ###  AMENDMENT_COUNTRYCODE_FROM_COORDINATES
 
 ####  Amendment dwc:countryCode from Coordinates
-https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
 
-Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdqval:countryShapes that is attributable to a single valid ISO 3166-1-alpha-2 country code.
+Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdqval:sourceAuthority that is attributable to a single valid ISO 3166-1-alpha-2 country code.
 
 #### Expected Response
 
@@ -3670,7 +3670,7 @@ This Test supports conformance with the recommendation in the comment on dwc:cou
 ###  AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT
 
 ####  Amendment dwc:geodeticDatum Assumed Default
-https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -3699,7 +3699,7 @@ bdqval:defaultGeodeticDatum
 
 #### Examples
 
-dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2836", Response.comment="dwc:godeticDatum is bdqval:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"
+dwc:geodeticDatum="[null]", dwc:decimalLatitude="-30.00", dwc:decimalLongitude="130.00", dwc:coordinateUncertaintyInMeters="50": Response.status=AMENDED, Response.result=dwc:geodeticDatum="EPSG:4326", dwc:coordinateUncertaintyInMeters="2836", Response.comment="dwc:geodeticDatum is bdqval:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value"
 
 dwc:geodeticDatum="WGS84", dwc:decimalLatitude="", dwc:decimalLongitude="", dwc:coordinateUncertaintyInMeters="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:geodeticDatum contains a value"
 
@@ -3916,7 +3916,7 @@ If the proposed eventDate is prior to 1918-02-14, the Response.comment will incl
 ###  AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY
 
 ####  Amendment dwc:eventDate from dwc:year dwc:month dwc:day
-https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -3925,7 +3925,7 @@ Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc
 
 #### Expected Response
 
-INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED
+INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -3956,7 +3956,7 @@ An attempt to populate dwc:eventDate from dwc:verbatimEventDate and from dwc:sta
 ###  AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR
 
 ####  Amendment dwc:eventDate from dwc:year dwc:startDayOfYear dwc:endDayOfYear
-https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -3979,7 +3979,7 @@ dwc:year,dwc:startDayOfYear,dwc:endDayOfYear
 
 dwc:year="1901", dwc:startDayOfYear="15", dwc:endDayOfYear="25", dwc:eventDate="": Response.status=FILLED_IN, Response.result=dwc:eventDate="1901-01-15/1901-01-25", Response.comment="dwc:eventDate was interpreted from dwc:year, dwc:startDayOfYear and dwc:endDayOfYear"
 
-dwc:year="1901", dwc:startDayOfYear="25", dwc:endDayOfYear="15", dwc:eventDate="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:startDayOfYear > dwc:endDayOfyear"
+dwc:year="1901", dwc:startDayOfYear="25", dwc:endDayOfYear="15", dwc:eventDate="": Response.status=NOT_AMENDED, Response.result="", Response.comment="dwc:startDayOfYear > dwc:endDayOfYear"
 
 
 #### Use Cases
@@ -4033,7 +4033,7 @@ The intent of the amended range is to capture the original uncertainty where pos
 ###  AMENDMENT_EVENT_FROM_EVENTDATE
 
 ####  Amendment dwc:Event from dwc:eventDate
-https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -4054,7 +4054,7 @@ dwc:eventDate
 
 #### Examples
 
-dwc:eventDate="2023-01-26", dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=FILLED_IN, Response.result=dwc:month="1", dwc:day="26", dwc:startDayOfYear="26", dwc:endDayOfYear="26", Response.comment="dwc:month, dwc:day, dwc:startDayOfyear and dwc:endDayOfYear filled in from dwc:eventDate"
+dwc:eventDate="2023-01-26", dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=FILLED_IN, Response.result=dwc:month="1", dwc:day="26", dwc:startDayOfYear="26", dwc:endDayOfYear="26", Response.comment="dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear filled in from dwc:eventDate"
 
 dwc:eventDate="2023",dwc:year="2023", dwc:month="", dwc:day="", dwc:startDayOfYear="", dwc:endDayOfYear="": Response.status=NOT_AMENDED, Response.result=, Response.comment="No amendments possible"
 
@@ -4192,7 +4192,7 @@ For reference, synonyms for values of dwc:degreeOfEstablishment can be found at 
 ###  AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED
 
 ####  Amendment dwc:establishmentMeans Standardized
-https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -4201,7 +4201,7 @@ Proposes an amendment to the value of dwc:establishmentMeans using the bdqval:so
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4281,7 +4281,7 @@ There is currently a capitalization mismatch between https://dwc.tdwg.org/terms/
 ###  AMENDMENT_OCCURRENCESTATUS_STANDARDIZED
 
 ####  Amendment dwc:occurrenceStatus Standardized
-https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -4290,7 +4290,7 @@ Proposes an amendment to the value of dwc:occurrenceStatus using the bdqval:sour
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4371,7 +4371,7 @@ For reference, synonyms for values of dwc:pathway can be found at https://regist
 ###  AMENDMENT_SEX_STANDARDIZED
 
 ####  Amendment dwc:sex Standardized
-https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -4380,7 +4380,7 @@ Proposes an amendment to the value of dwc:sex using the bdqval:sourceAuthority.
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4393,7 +4393,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-`bdqval:sourceAuthority default = "GBIF Sex Vocabulary" [https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}`
+`bdqval:sourceAuthority default = "GBIF Sex Vocabulary" {[https://api.gbif.org/v1/vocabularies/Sex]} {"dwc:sex vocabulary API" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}`
 
 #### Examples
 
@@ -4416,7 +4416,7 @@ For reference, a list of synonyms for dwc:sex values can be found at https://reg
 ###  AMENDMENT_TYPESTATUS_STANDARDIZED
 
 ####  Amendment dwc:typeStatus Standardized
-https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -4425,7 +4425,7 @@ Proposes an amendment to the value of dwc:typeStatus using the bdqval:sourceAuth
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED.
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED.
 
 #### Information Elements
 
@@ -4461,7 +4461,7 @@ Valuable for data quality needs related to voucher specimens in natural science 
 ###  AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON
 
 ####  Amendment dwc:scientificNameID from dwc:Taxon
-https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -4470,7 +4470,7 @@ Proposes an amendment to the value of dwc:scientificNameID if it can be unambigu
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonRank, and dwc:vernacularName; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4501,7 +4501,7 @@ bdquc:Taxon-Management
 
 #### Notes
 
-Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them). When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**
+Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:scientificNameAuthorship, to resolve them). When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace "gbif:" and the form "gbif:{integer}" as the value for dwc:scientificNameID. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**
 
 [🠱](#indexes-to-the-tests-non-normative)
 ********************
@@ -4509,7 +4509,7 @@ Return a result with no value and a Result.status of NOT_AMENDED with a Response
 ###  AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID
 
 ####  Amendment dwc:scientificName from dwc:scientificNameID
-https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -4518,7 +4518,7 @@ Proposes an amendment to the value of dwc:scientificName using the dwc:scientifi
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc:scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4557,7 +4557,7 @@ The value of dwc:scientificNameID is unambiguous if dwc:scientificNameID referen
 ###  AMENDMENT_TAXONRANK_STANDARDIZED
 
 ####  Amendment dwc:taxonRank Standardized
-https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-21
 Acts upon  SingleRecord
 
 #### Description
@@ -4566,7 +4566,7 @@ Proposes an amendment to the value of dwc:taxonRank using the bdqval:sourceAutho
 
 #### Expected Response
 
-EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
+EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED
 
 #### Information Elements
 
@@ -4579,7 +4579,7 @@ bdqval:sourceAuthority
 
 #### Default Parameter Values
 
-`bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}`
+`bdqval:sourceAuthority default = "GBIF TaxonRank Vocabulary" {[https://api.gbif.org/v1/vocabularies/TaxonRank]} {"dwc:taxonRank vocabulary API" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}`
 
 #### Examples
 
@@ -5444,8 +5444,8 @@ For Quality Control, compare the Response.result of this measure with the total 
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD
 
-####  Measurement over MultiRecord Counting Compliance of Vaildation dwc:geodeticDatum Standard
-https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2026-11-17
+####  Measurement over MultiRecord Counting Compliance of Validation dwc:geodeticDatum Standard
+https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2026-11-21
 Acts upon  MultiRecord
 
 #### Description
@@ -6194,8 +6194,8 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 
 ###  MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD
 
-####  Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard
-https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2026-11-17
+####  Measurement over MultiRecord for QualityAssurance of Validation dwc:geodeticDatum Standard
+https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2026-11-21
 Acts upon  MultiRecord
 
 #### Description
@@ -7304,8 +7304,8 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 
 ###  MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD
 
-####  Measurement over MultiRecord Counting Compliance of Validation dwc:degreeofEstablishment Standard
-https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2026-11-17
+####  Measurement over MultiRecord Counting Compliance of Validation dwc:degreeOfEstablishment Standard
+https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2026-11-21
 Acts upon  MultiRecord
 
 #### Description
@@ -7544,8 +7544,8 @@ For Quality Control, compare the Response.result of this measure with the total 
 
 ###  MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD
 
-####  Measurement over MultiRecord for QualityAssurance of Validation dwc:degreeofEstablishment Standard
-https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2026-11-17
+####  Measurement over MultiRecord for QualityAssurance of Validation dwc:degreeOfEstablishment Standard
+https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2026-11-21
 Acts upon  MultiRecord
 
 #### Description
@@ -8944,7 +8944,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-20>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-21>
 
 **Biodiversity Information Standards (TDWG)**
 

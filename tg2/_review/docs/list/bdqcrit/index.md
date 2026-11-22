@@ -86,7 +86,7 @@ A working familiarity with the BDQ Test structure and the Fitness For Use Framew
 
 The concept of `bdqffdq:Criterion` — originally defined by Veiga (2016) and Veiga et al. (2017) — describes, in abstract terms, how a data value may be evaluated with respect to a particular `Use Case`. `Criteria` such as `Found`, `InRange`, `NotEmpty`, `Unambiguous`, and others express broad evaluation patterns that BDQ `Validation` and `Issue` Tests apply to one or more `bdqffdq:InformationElements`.
 
-While related informally to `bdqffdq:Dimensions`, `Criteria` serve a distinct purpose. A `bdqffdq:Criterion` articulates the *type of judgment* applied to data, whereas a `bdqffdq:Specification` captures the *specific logic* used to make that judgment.
+While related informally to `Data Quality Dimensions` (`bdqffdq:DataQualityDimension`), `Criteria` serve a distinct purpose. A `bdqffdq:Criterion` articulates the *type of judgment* applied to data, whereas a `bdqffdq:Specification` captures the *specific logic* used to make that judgment.
 
 Each `bdqtest:` `Validation` or `Issue` Test references a `Criterion` to clarify what kind of quality is being assessed. For example, the Test VALIDATION_COUNTRY_FOUND evaluates the value of `dwc:country` against a specified `sourceAuthority`, using the `Criterion` `bdqcrit:Found` to indicate that the key  quality concern is whether the value exists in the authority’s domain.
 
@@ -145,7 +145,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.9 Key to Vocabulary Terms (normative)
 
-The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/) (SDS). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the [TDWG Standards Documentation Specification (SDS)](https://www.tdwg.org/standards/sds/). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
@@ -167,7 +167,7 @@ In an RDF context, a reference to a term in the `bdqcrit:` namespace MUST use th
 
 Each instance of `bdqffdq:Validation` and `bdqffdq:Issue` SHOULD have exactly one `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit:` vocabulary.
 
-An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit: vocabulary`.
+An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqffdq:hasCriterion` property relating it to a term in this `bdqcrit:` vocabulary.
 
 ## 3 Term index (non-normative)
 ### 3.1 Index By Term Name (non-normative)

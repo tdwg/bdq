@@ -51,7 +51,7 @@ Draft Standard for Review
   - [1.9 Key to Vocabulary Terms (normative)](#19-key-to-vocabulary-terms-normative)
 
 - [2 Use of Terms (normative)](#2-use-of-terms-normative)
-  - [2,1 Mapping to DQV Dimension (non-normative)](#21-mapping-to-dqv-dimension-non-normative)
+  - [2.1 Mapping to DQV Dimension (non-normative)](#21-mapping-to-dqv-dimension-non-normative)
 
 - [3 Term index (non-normative)](#3-term-index-non-normative)
   - [3.1 Index By Term Name (non-normative)](#31-index-by-term-name-non-normative)
@@ -87,11 +87,11 @@ A working familiarity with the BDQ Test structure and the Fitness For Use Framew
 
 The concept of `bdqffdq:DataQualityDimension`, originally introduced by Veiga (2016) and Veiga et al. (2017), represents the aspect or attribute of data quality being evaluated. Common `Dimensions` include `Completeness`, `Conformance`, `Consistency`, `Likeliness`, `Reliability`, and `Resolution`. These serve as high-level categories that group Tests according to the type of quality issue they address.
 
-`Dimensions` are measurable characteristics of an `bdqffdq:InformationElement` and provide insight into how quality is defined and assessed for a given `Use Case`.
+`Dimensions` are measurable characteristics of a `bdqffdq:InformationElement` and provide insight into how quality is defined and assessed for a given `Use Case`.
 
 Each BDQ Test typically evaluates one or more data values (`Information Elements`) with respect to a single `Data Quality Dimension`. For example, the Test VALIDATION_COUNTRY_FOUND assesses the value of `dwc:country` for conformance to a `sourceAuthority`. In this case, the relevant dimension is `bdqdim:Conformance`.
 
-Unlike `Criteria`, which apply only to `Validation` and `Issue` Tests, `Data Quality Dimensions` apply to all BDQ Test types: `bdqffdq:Validation`, `bdqffdq:Issue``bdqffdq:Measure`, and `bdqffdq:Amendment`.
+Unlike `Criteria`, which apply only to `Validation` and `Issue` Tests, `Data Quality Dimensions` apply to all BDQ Test types: `bdqffdq:Validation`, `bdqffdq:Issue`, `bdqffdq:Measure`, and `bdqffdq:Amendment`.
 
 ### 1.4 Associated Documents (non-normative)
 
@@ -147,7 +147,7 @@ The following namespace abbreviations are used in this document:
 
 ### 1.9 Key to Vocabulary Terms (normative)
 
-The terminology used to describe the terms in this vocabulary follows the TDWG [TDWG Standards Documentation Standard (SDS)](https://www.tdwg.org/standards/sds/). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
+The terminology used to describe the terms in this vocabulary follows the [TDWG Standards Documentation Specification (SDS)](https://www.tdwg.org/standards/sds/). Each term definition includes the original RDF definition, and may also provide a TDWG-specific interpretation from the SDS, as well as a definition tailored to this local context.
 
 | Label (Term) | Normative | Definition | Example |
 | ------------ | --------- | ---------- | ------- |
@@ -167,18 +167,18 @@ The terminology used to describe the terms in this vocabulary follows the TDWG [
 
 In an RDF context, a reference to a term in the `bdqdim:` namespace MUST use the Term IRI (e.g., `https://rs.tdwg.org/bdqdim/terms/Completeness`) or Term Qualified name (e.g., `bdqdim:Completeness`). In a non-RDF context in which resources may be used by software (e.g., a value in a spreadsheet or database table) the Controlled Value String (local name, e.g., `Completeness`) SHOULD be used. In a purely human context a label (e.g., `Completeness`) MAY be used.
 
-Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqffdq:hasdataQualityDimension` property relating it to a term in this `bdqdim:` vocabulary.
+Each instance of a Test, regardless of Test type, SHOULD have exactly one `bdqffdq:hasDataQualityDimension` property relating it to a term in this `bdqdim:` vocabulary.
 
-### 2,1 Mapping to DQV Dimension (non-normative)
+### 2.1 Mapping to DQV Dimension (non-normative)
 
-The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dq/) (DQV) (Albertoni and Isaac, 2016; Albertoni and Isacc 2020) provides a metadata model for describing data quality information in RDF.  The W3C Data Quality Vocabulary defines (mostly by reuse) a set of data quality dimensions.  The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality".  This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension`.  
+The W3C [Data Quality Vocabulary](https://www.w3.org/TR/vocab-dq/) (DQV) (Albertoni and Isaac, 2016; Albertoni and Isaac 2020) provides a metadata model for describing data quality information in RDF.  The W3C Data Quality Vocabulary defines (mostly by reuse) a set of data quality dimensions.  The `dqv:Dimension` class is [defined](https://www.w3.org/TR/vocab-dqv/#dqv:Dimension), in part, as "Represents criteria relevant for assessing quality".  This concept is similar to (skos:broader than) `bdqffdq:DataQualityDimension`.  
 
 A potential mapping of the `bdqdim:` terms to DQV dimensions is as follows:
 
 | DQV Concept | Related bdqdim: concept |
 | ----------- | ----------------------- |
 | ldqd:completeness| bdqdim:Completeness |
-| ldqd:itneroperability | bdqdim:Conformance | 
+| ldqd:interoperability | bdqdim:Conformance | 
 | ldqd:consistency | bdqdim:Consistency |
 | ldqd:semanticAccuracy | bdqdim:Likeliness | 
 | ldqd:semanticAccuracy |bdqdim:Reliability |

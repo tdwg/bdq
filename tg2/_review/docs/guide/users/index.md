@@ -8,7 +8,7 @@
 BDQ User's Guide
 
 **Date version issued**<br>
-2026-11-13
+2026-11-21
 
 **Date created**<br>
 2026-11-13
@@ -22,10 +22,13 @@ BDQ User's Guide
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdq/doc/users/2026-11-13>
+<https://rs.tdwg.org/bdq/doc/users/2026-11-21>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdq/doc/users/>
+
+**Previous version**<br>
+<https://rs.tdwg.org/bdq/doc/users/2026-11-13>
 
 **Abstract**<br>
 This document serves as a reference for the BDQ standard, outlining the BDQ Tests used in `Data Quality Reports`.
@@ -37,7 +40,7 @@ This document serves as a reference for the BDQ standard, outlining the BDQ Test
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ User's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/users/2026-11-13>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ User's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/users/2026-11-21>
 
 **Status**<br>
 Draft Standard for Review
@@ -186,7 +189,7 @@ The Framework provides a formal statement of [Quality Control](../../guide/bdqff
 
 When `Data Quality Reports` result from the analysis of data in databases of record, numerous reports of INTERNAL_PREREQUISITES_NOT_MET or NOT_COMPLIANT are likely, particularly in historical data where data values may be poorly known, or data may have passed through multiple life cycles of collection management systems. In a database of record, the focus of the quality control processes is very likely on the identification of tractable targeted data cleanup projects. Such data cleanup projects can involve multiple staff with different skills and are likely to last for long periods of time. Data cleaning projects are expensive, and `Data Quality Reports` driven by Tests organized by `Use Cases` can be an effective management tool for identifying and prioritizing suitable and tractable projects for data cleanup. 
 
-Complicating the analysis of `Data Quality Reports` on databases of record is that when relational database tables are denormalized to flat files for analyses and reporting, propagated errors could trace back to a single 'point of failure'. What appear in reports as large numbers of errors may result from a single problem in a single record of a relational table. A clear understanding of the structure of a database of record is needed to interpret `Data Quality Reports` into targeted data cleanup projects.  Simple counts of problems may be misleading.  A large number of identical errors may point to a single error in a single related table, while a smaller number of distinct errors may require a much more involved data cleanup project.  The keys for applying `Data Quality Reports` to improvement of databases of record is identification of focused areas for data cleanup projects, and identification of places where data quality problems may be reduced by improvements to workflow processes or user interfaces for entry and manipulation of data. Some `Validation` Tests may point to places where controlled vocabularies should be in use but are not, suggesting a need for a coordinated set of changes. For example, splitting a single free text field into a controlled vocabulary field and a free text field for further elaboration, a data cleanup project to map all existing values onto a controlled vocabulary, and then changes to user interfaces to reflect the split into a controlled field and associated remarks.
+Complicating the analysis of `Data Quality Reports` on databases of record is that when relational database tables are denormalized to flat files for analyses and reporting, propagated errors could trace back to a single 'point of failure'. What appear in reports as large numbers of errors may result from a single problem in a single record of a relational table. A clear understanding of the structure of a database of record is needed to interpret `Data Quality Reports` into targeted data cleanup projects.  Simple counts of problems may be misleading.  A large number of identical errors may point to a single error in a single related table, while a smaller number of distinct errors may require a much more involved data cleanup project.  The keys for applying `Data Quality Reports` to improvement of databases of record are identification of focused areas for data cleanup projects, and identification of places where data quality problems may be reduced by improvements to workflow processes or user interfaces for entry and manipulation of data. Some `Validation` Tests may point to places where controlled vocabularies should be in use but are not, suggesting a need for a coordinated set of changes. For example, splitting a single free text field into a controlled vocabulary field and a free text field for further elaboration, a data cleanup project to map all existing values onto a controlled vocabulary, and then changes to user interfaces to reflect the split into a controlled field and associated remarks.
  
 Correcting issues subsequent to data capture introduces further complexities in that any amendment to existing values requires careful human evaluation and a forking of data records to maintain original data and an audit trail. Data cleaning often requires far more time than data analysis.
 
@@ -254,7 +257,7 @@ We use a shorthand to describe a collection of formal Fitness For Use Framework 
 
 In this shorthand, each `Response` consists of the following elements:
 
-* __`Response.status`__ - Metadata describing the status of the Test run, including whether the Test was executed successfully.  Values include `RUN_HAS_RESULT`, `INTERNAL_PREREQUISITES_NOT_MET` `EXTERNAL_PREREQUISITES_NOT_MET`, `AMENDED`, `FILLED_IN`, and  `NOT_AMENDED``.
+* __`Response.status`__ - Metadata describing the status of the Test run, including whether the Test was executed successfully.  Values include `RUN_HAS_RESULT`, `INTERNAL_PREREQUISITES_NOT_MET`, `EXTERNAL_PREREQUISITES_NOT_MET`, `AMENDED`, `FILLED_IN`, and `NOT_AMENDED`.
 * __`Response.result`__ - The result of the evaluation of the Test against the input data.  Values include "COMPLIANT", "NOT_COMPLIANT", "COMPLETE", "NOT_COMPLETE", or data values (such as numeric measurement values), depending on the type of Test.
 * __`Response.comment`__ - A human-readable comment providing additional context or information to assist users in the interpretation of the Test result.
 
@@ -292,7 +295,7 @@ A Response.status of INTERNAL_PREREQUISITES_NOT_MET indicates that the data them
 
 `Issue` Tests can be thought of as warning flags. These Tests provide a warning that an issue may need further investigation by a human who could determine what action should be taken.
 
-If we look at the Test `ISSUE_DATAGENERALIZATIONS_NOTEMPTY`, the Test alerts users that there is value in the field that indicates that the data may have been generalized in some way.
+If we look at the Test `ISSUE_DATAGENERALIZATIONS_NOTEMPTY`, the Test alerts users that there is a value in the field that indicates that the data may have been generalized in some way.
 For example, the field for `dwc:dataGeneralizations` may say "placed on quarter degree grid". A `Response` could be:
 
 * `Response.status`=RUN_HAS_RESULT 
@@ -331,12 +334,12 @@ For example, if 17 Tests proposed amendments on a particular `Single Record`; th
 * `Response.result`="17"
 * `Response.comment`="17 Tests of Type Amendment proposed changes to the record"
 
-Most `Measure` Tests defined in BDQ are `Multi Record` Tests that take as input the results of `Single Record` Test on some data set and provide metrics or filters on those data.  These Tests are central to formal application of `Quality Control` and `Quality Assurance` in the Fitness For Use Framework. See the discussion in [Quality Control and Quality Assurance](#21-quality-control-and-quality-assurance-non-normative) above.
+Most `Measure` Tests defined in BDQ are `Multi Record` Tests that take as input the results of `Single Record` Tests on some data set and provide metrics or filters on those data.  These Tests are central to formal application of `Quality Control` and `Quality Assurance` in the Fitness For Use Framework. See the discussion in [Quality Control and Quality Assurance](#21-quality-control-and-quality-assurance-non-normative) above.
 
 `Measures` may be: 
-- `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., MEASURE_EVENTDATE_DURATIONINSECONDS), or that count the results of other Tests on the same `Single Record` (e.g., MEASURE_AMENDMENTS_PROPOSED).
-- `Single Record` `Measures` that take the outputs of other `Single Record` Tests as their inputs and return metrics on those particular records (e.g., MEASURE_AMENDMENTS_PROPOSED).
-- `Multi Record` `Measures` that take the outputs of `Single Record` Tests as their inputs and return metrics or filters on those data (e.g., MEASURE_VALIDATIONTESTS_NOTCOMPLIANT).
+- `Single Record` `Measures` that directly measure an `Information Element` value and return a metric (e.g., MEASURE_EVENTDATE_DURATIONINSECONDS, which returns the duration of the `dwc:eventDate` in seconds).
+- `Single Record` `Measures` that take the outputs of other `Single Record` Tests as their inputs and return metrics on those particular records (e.g., MEASURE_AMENDMENTS_PROPOSED, which counts the `Amendments` that proposed changes to a `Single Record` in the amendment phase of an analysis).
+- `Multi Record` `Measures` that take the outputs of `Single Record` Tests as their inputs and return metrics or filters on those data (e.g., MULTIRECORD_MEASURE_COUNT_COMPLIANT_COUNTRY_FOUND, which counts the `Single Records` in a `Multi Record` for which VALIDATION_COUNTRY_FOUND returned COMPLIANT).
 
 ##### 3.2.3.5 Amendment Test Reports (non-normative)
 
@@ -385,13 +388,13 @@ When a Test is parameterized, and a value other than the default value is used f
 * SHOULD indicate the non-default parameterization by including: 
   * the `Parameter`, and
   * the value of the `Argument` used for that `Parameter` in this specific execution.
-* In addition, non-default `Parameters`, values, SHOULD also be included in the `Response.comment`.
+* In addition, non-default `Parameter` values SHOULD also be included in the `Response.comment`.
 
 More normative guidance on Test `Parameters` can be found in the section [6.1 Parameters and Changing the Behavior of a Test (normative)](../implementers/index.md#61-parameters-and-changing-the-behavior-of-a-test-normative) of the [BDQ Implementer's Guide](../implementers/index.md).
 
 #### 3.4.2 Test Parameters Example (non-normative) 
 
-Consider the Test `VALIDATION_MAXELEVATION_INRANGE`.  If you are evaluating data that could come from anywhere in the world, you would want to use the default value for the 'Parameter' that sets the maximum elevation to that of the highest point on Earth.  However, if you are working on a dataset consisting entirely of data pertaining to locations in New Zealand, you may wish to set the `Parameter` [bdqval:maximumValidElevationInMeters](<../../list/bdqval/index.md#bdqval_maximumValidElevationInMeters> "Optionally establishes the highest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.") value to the maximum elevation in New Zealand (i.e., 3724 meters).  
+Consider the Test `VALIDATION_MAXELEVATION_INRANGE`.  If you are evaluating data that could come from anywhere in the world, you would want to use the default value for the `Parameter` that sets the maximum elevation to that of the highest point on Earth.  However, if you are working on a dataset consisting entirely of data pertaining to locations in New Zealand, you may wish to set the `Parameter` [bdqval:maximumValidElevationInMeters](<../../list/bdqval/index.md#bdqval_maximumValidElevationInMeters> "Optionally establishes the highest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.") value to the maximum elevation in New Zealand (i.e., 3724 meters).  
 
 So, for a record where `dwc:maximumElevationinMeters` is given as "4500" which is out of range for New Zealand, the `Response` for the Test with the default value for the parameter would be:
 
@@ -409,7 +412,7 @@ Thus the parameter changes the behavior of the Test to fit local needs.
 
 It is important to identify the use of non-default parameter values in reports, so that users can understand the context in the Test results.
 
-If a Test with a non-default `Parameter` value is used, this should be represented to consumers of data quality reports by combining at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MINDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MINDEPTH_INRANGE)) in combination with the `Parameter` (e.g., [bdqval:maximumValidDepthInMeters](<../../list/bdqval/index.md#bdqval_maximumValidDepthInMeters> "Optionally establishes the maximum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.")) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example, a Data Quality Report could identify this Test as `VALIDATION_MAXDEPTH_INRANGE with bdqval:maximumValidDepthInMeters=1642` rather than simply `VALIDATION_MAXDEPTH_INRANGE`
+If a Test with a non-default `Parameter` value is used, this should be represented to consumers of data quality reports by combining at least the Label (`rdfs:label`) for the Test class (e.g., [VALIDATION_MAXDEPTH_INRANGE](../../terms/bdqtest/index.md#VALIDATION_MAXDEPTH_INRANGE)) in combination with the `Parameter` (e.g., [bdqval:maximumValidDepthInMeters](<../../list/bdqval/index.md#bdqval_maximumValidDepthInMeters> "Optionally establishes the maximum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.")) and the value of the argument that replaced the default `Parameter` value in this specific case (e.g., 1642). For example, a Data Quality Report could identify this Test as `VALIDATION_MAXDEPTH_INRANGE with bdqval:maximumValidDepthInMeters=1642` rather than simply `VALIDATION_MAXDEPTH_INRANGE`
 
 Similarly, Test Results should be accompanied by a `Response.comment` that includes text expressing something similar to "Non-default bdqval:maximumValidDepthInMeters=1642" as in the example above.  Both are important to help users understand the context of Test results, and to allow users to identify where non-default parameter values are used.
 
@@ -423,7 +426,7 @@ For each Test, the [BDQ Tests Quick Reference Guide](../../terms/bdqtest/index.m
 
 * **Label:** - the brief human readable means for identifying a Test (e.g. VALIDATION_BASISOFRECORD_NOTEMPTY). The Label is expected to be the primary means for humans to identify a Test.  
 * **skos:prefLabel:** - the human readable label spelled out in words (e.g. "Validation dwc:basisOfRecord Not Empty"). The prefLabel is expected to support translations, screen readers and other means for improving accessibility for humans in the identification of a Test.
-* **Versioned [IRI](<../../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters."):** - the means for software to identify the Test (e.g. https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2023-09-17)). The Versioned IRI is the definitive identifier for a particular version of a Test and is intended for use by software.
+* **Versioned [IRI](<../../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters."):** - the means for software to identify the Test (e.g. https://rs.tdwg.org/bdqtest/terms/version/ac2b7648-d5f9-48ca-9b07-8ad5879a2536-2023-09-17). The Versioned IRI is the definitive identifier for a particular version of a Test and is intended for use by software.
 
 The Quick Reference Guide also identifies whether a Test operates on `Single Records` or a `Multi Record` (a dataset). A brief description of what the Test is intended to do follows, with a more detailed description for implementers, consisting of `Expected Response`, `Information Elements` `Acted Upon` and `Consulted`, any `Parameters` that could change the behavior of the Tests, default values for any `Parameters` or [bdqval:sourceAuthority](<../../list/bdqval/index.md#bdqval_sourceAuthority> "An authority using the 'bdqval' namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority 'bdqval:sourceAuthority default…") consulted by the Test.
 
@@ -438,9 +441,9 @@ The definitions of the terms used for the Tests can be found in [Terms Used in t
 New `Use Cases` and Tests can be defined outside of the BDQ standard, and users are particularly encouraged to define `Use Cases` for their own purposes. See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new `Use Case` and Tests.
 
 
-To propose to add a [Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") to the BDQ Standard (and to the bdqtest: vocabulary), follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Tests](../bdqtest/index.md#7-creating-new-tests-non-normative)
+To propose to add a [Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") to the BDQ Standard (and to the bdqtest: vocabulary), follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Tests](../bdqtest/index.md#7-creating-new-tests-non-normative).
 
-To propose to add a new `Use Case` to the BDQ Standard (and to the bdquc: vocabulary), follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Use Cases](../bdqtest/index.md#8-creating-new-use-cases-non-normative)
+To propose to add a new `Use Case` to the BDQ Standard (and to the bdquc: vocabulary), follow the instructions provided by the BDQ Maintenance Group. Details on how this would be done can be seen in [Creating New Use Cases](../bdqtest/index.md#8-creating-new-use-cases-non-normative).
 
 ## 6 Time of Day and Time Zones (non-normative)
 
@@ -448,7 +451,7 @@ Time of day (as opposed to dates) is not considered in any of the BDQ Tests. The
 
 ## 7 Dates and Calendars (non-normative)
 
-Different calendars have been used at different times in different places, and the transcription of an original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date. Metadata may or not be present to even identify such records. For more details of how the differences in Calendar dates should be treated see Section [4.1 Dates and Calendars (non-normative)](../../supplement/index.md#41-dates-and-calendars-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).
+Different calendars have been used at different times in different places, and the transcription of an original date in one calendar into dwc:eventDate, where a Gregorian Calendar is assumed, may or may not have been done with the correct translation of the date. Metadata may or may not be present to even identify such records. For more details of how the differences in Calendar dates should be treated see Section [4.1 Dates and Calendars (non-normative)](../../supplement/index.md#41-dates-and-calendars-non-normative) in [BDQ Supplemental Information](../../supplement/index.md).
 
 ## Glossary (non-normative)
 
@@ -471,7 +474,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ User's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/users/2026-11-13>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ User's Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdq/doc/users/2026-11-21>
 
 **Biodiversity Information Standards (TDWG)**
 

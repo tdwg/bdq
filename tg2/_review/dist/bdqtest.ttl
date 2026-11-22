@@ -88,8 +88,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/05104b96-267c-432a-9f30-88552404763e> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_TYPESTATUS_STANDARDIZED with Specification: Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/05104b96-267c-432a-9f30-88552404763e-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/05104b96-267c-432a-9f30-88552404763e-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:05104b96-267c-432a-9f30-88552404763e> ;
     skos:historyNote "Source: TG2" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2338",
@@ -151,8 +151,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/0997d841-9db9-40a8-b6ec-5867e9091532> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_FAMILY_FOUND with Specification: Specification for: VALIDATION_FAMILY_FOUND" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/0997d841-9db9-40a8-b6ec-5867e9091532-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/0997d841-9db9-40a8-b6ec-5867e9091532-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:0997d841-9db9-40a8-b6ec-5867e9091532> ;
     skos:historyNote "Source: iDigBio" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L171",
@@ -311,8 +311,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/12499336-882b-4186-b5a2-4a806af2e35b> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_EVENTDATE_NOTEMPTY with Specification: Specification for: VALIDATION_EVENTDATE_NOTEMPTY" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/12499336-882b-4186-b5a2-4a806af2e35b-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/12499336-882b-4186-b5a2-4a806af2e35b-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:12499336-882b-4186-b5a2-4a806af2e35b> ;
     skos:historyNote "Source: TG2-Gainesville" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L196",
@@ -357,8 +357,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/17f89e32-0174-4bf9-805e-ba7aec59477b> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_EVENTDATE_INRANGE with Specification: Specification for: VALIDATION_EVENTDATE_INRANGE" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/17f89e32-0174-4bf9-805e-ba7aec59477b-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/17f89e32-0174-4bf9-805e-ba7aec59477b-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:17f89e32-0174-4bf9-805e-ba7aec59477b> ;
     skos:historyNote "Source: VertNet" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2365",
@@ -381,8 +381,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/180c1a90-94c3-48b5-a9fe-4223d6f2bd60> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_LICENSE_STANDARD with Specification: Specification for: VALIDATION_LICENSE_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/180c1a90-94c3-48b5-a9fe-4223d6f2bd60-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/180c1a90-94c3-48b5-a9fe-4223d6f2bd60-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:180c1a90-94c3-48b5-a9fe-4223d6f2bd60> ;
     skos:historyNote "Source: John Wieczorek" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L635",
@@ -440,8 +440,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/1f014694-573d-46e0-b38a-2acf71b32071> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_LOCATION_NOTEMPTY with Specification: Specification for: VALIDATION_LOCATION_NOTEMPTY" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/1f014694-573d-46e0-b38a-2acf71b32071-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/1f014694-573d-46e0-b38a-2acf71b32071-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:1f014694-573d-46e0-b38a-2acf71b32071> ;
     skos:historyNote "Source: Lee Belbin" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L672",
@@ -564,8 +564,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/2bb364f7-118b-4258-8afe-978901e5cf67> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT with Specification: Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/2bb364f7-118b-4258-8afe-978901e5cf67-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/2bb364f7-118b-4258-8afe-978901e5cf67-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:2bb364f7-118b-4258-8afe-978901e5cf67> ;
     skos:historyNote "Source: ALA, OBIS" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3198",
@@ -577,8 +577,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/2bc15408-d0d0-4166-b6a6-6fdba5704379> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_EVENT_FROM_EVENTDATE with Specification: Specification for: AMENDMENT_EVENT_FROM_EVENTDATE" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/2bc15408-d0d0-4166-b6a6-6fdba5704379-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/2bc15408-d0d0-4166-b6a6-6fdba5704379-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:2bc15408-d0d0-4166-b6a6-6fdba5704379> ;
     skos:historyNote "Source: VertNet" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L2073",
@@ -590,8 +590,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/2f59ef74-5439-44db-8d5a-85c9773c0cef> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_COORDINATES_TRANSPOSED with Specification: Specification for: AMENDMENT_COORDINATES_TRANSPOSED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/2f59ef74-5439-44db-8d5a-85c9773c0cef-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/2f59ef74-5439-44db-8d5a-85c9773c0cef-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:2f59ef74-5439-44db-8d5a-85c9773c0cef> ;
     skos:historyNote "Source: iDigBio, GBIF, BISON, FP, Kurator, ALA" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L3473",
@@ -650,8 +650,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/316da14e-9477-4319-bd2c-c201f3b0f461> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON with Specification: Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/316da14e-9477-4319-bd2c-c201f3b0f461-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/316da14e-9477-4319-bd2c-c201f3b0f461-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:316da14e-9477-4319-bd2c-c201f3b0f461> ;
     skos:historyNote "Source: FP-Akka" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L393",
@@ -956,8 +956,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/55b60dd8-7054-4736-b9ac-88bef8967fb2> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_TAXON_UNAMBIGUOUS with Specification: Specification for: VALIDATION_TAXON_UNAMBIGUOUS" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/55b60dd8-7054-4736-b9ac-88bef8967fb2-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/55b60dd8-7054-4736-b9ac-88bef8967fb2-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:55b60dd8-7054-4736-b9ac-88bef8967fb2> ;
     skos:historyNote "Source: ALA, GBIF, CRIA" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L792",
@@ -991,8 +991,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/5a6eaed2-00bd-41ce-9531-ebeb986a3517> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID with Specification: Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/5a6eaed2-00bd-41ce-9531-ebeb986a3517-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/5a6eaed2-00bd-41ce-9531-ebeb986a3517-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:5a6eaed2-00bd-41ce-9531-ebeb986a3517> ;
     skos:historyNote "Source: iDigBio" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L1152",
@@ -1074,8 +1074,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/5e55d983-5667-438c-9754-a71dfe2472af> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_COUNTRYCODE_FROM_COORDINATES with Specification: Specification for: AMENDMENT_COUNTRYCODE_FROM_COORDINATES" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/5e55d983-5667-438c-9754-a71dfe2472af-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/5e55d983-5667-438c-9754-a71dfe2472af-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:5e55d983-5667-438c-9754-a71dfe2472af> ;
     skos:historyNote "Source: ALA, GBIF, iDigBio" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.1.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2019",
@@ -1210,8 +1210,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/64c18cac-e64d-4985-95d6-79dc22b5a15f> a bdqffdq:MeasurementMethod ;
     rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/64c18cac-e64d-4985-95d6-79dc22b5a15f-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/64c18cac-e64d-4985-95d6-79dc22b5a15f-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:64c18cac-e64d-4985-95d6-79dc22b5a15f> ;
     skos:historyNote "Source: TG2" ;
     skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE" ;
@@ -1560,8 +1560,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/8b06bef9-7fd4-4020-b08c-a07a1bf695b6> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_DCTYPE_STANDARD with Specification: Specification for: VALIDATION_DCTYPE_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/8b06bef9-7fd4-4020-b08c-a07a1bf695b6-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/8b06bef9-7fd4-4020-b08c-a07a1bf695b6-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:8b06bef9-7fd4-4020-b08c-a07a1bf695b6> ;
     skos:historyNote "Source: VertNet" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1070",
@@ -1584,8 +1584,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/8ca96a50-f1f5-4a4e-853e-755cc5aa82a7> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY with Specification: Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/8ca96a50-f1f5-4a4e-853e-755cc5aa82a7-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/8ca96a50-f1f5-4a4e-853e-755cc5aa82a7-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:8ca96a50-f1f5-4a4e-853e-755cc5aa82a7> ;
     skos:historyNote "Source: TG2-Gainesville" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1395",
@@ -1692,8 +1692,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/95627fe5-326a-4468-b220-82af19a6ce98> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT with Specification: Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/95627fe5-326a-4468-b220-82af19a6ce98-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/95627fe5-326a-4468-b220-82af19a6ce98-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:95627fe5-326a-4468-b220-82af19a6ce98> ;
     skos:historyNote "Source: ALA, GBIF" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2349",
@@ -1705,8 +1705,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/95b63dab-dd45-49e0-892f-44a73e76fc00> a bdqffdq:MeasurementMethod ;
     rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/95b63dab-dd45-49e0-892f-44a73e76fc00-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/95b63dab-dd45-49e0-892f-44a73e76fc00-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:95b63dab-dd45-49e0-892f-44a73e76fc00> ;
     skos:historyNote "Source: TG2" ;
     skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE" ;
@@ -1740,8 +1740,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/97fb9cdf-68c2-4b0b-8b1d-351435d30722> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_SEX_STANDARDIZED with Specification: Specification for: AMENDMENT_SEX_STANDARDIZED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/97fb9cdf-68c2-4b0b-8b1d-351435d30722-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/97fb9cdf-68c2-4b0b-8b1d-351435d30722-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:97fb9cdf-68c2-4b0b-8b1d-351435d30722> ;
     skos:historyNote "Source: TG2" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2148",
@@ -1753,8 +1753,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/99103239-1019-4d2e-b435-ecb28c190a3c> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_BASISOFRECORD_STANDARD with Specification: Specification for: VALIDATION_BASISOFRECORD_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/99103239-1019-4d2e-b435-ecb28c190a3c-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/99103239-1019-4d2e-b435-ecb28c190a3c-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:99103239-1019-4d2e-b435-ecb28c190a3c> ;
     skos:historyNote "Source: VertNet" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L342",
@@ -1790,8 +1790,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/9cc301b1-e303-4abb-9d24-d31506de9436> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_MINDEPTH_INRANGE with Specification: Specification for: VALIDATION_MINDEPTH_INRANGE" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/9cc301b1-e303-4abb-9d24-d31506de9436-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/9cc301b1-e303-4abb-9d24-d31506de9436-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:9cc301b1-e303-4abb-9d24-d31506de9436> ;
     skos:historyNote "Source: ALA, GBIF" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2421",
@@ -1803,8 +1803,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/a0486e4f-210d-4143-ae5a-f320bebc2cb5> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION with Specification: Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/a0486e4f-210d-4143-ae5a-f320bebc2cb5-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/a0486e4f-210d-4143-ae5a-f320bebc2cb5-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:a0486e4f-210d-4143-ae5a-f320bebc2cb5> ;
     skos:historyNote "Source: @Tasilee" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2497",
@@ -1816,8 +1816,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/a0c48217-97a2-41e2-9540-61939f2628c5> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_SEX_STANDARD with Specification: Specification for: VALIDATION_SEX_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/a0c48217-97a2-41e2-9540-61939f2628c5-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/a0c48217-97a2-41e2-9540-61939f2628c5-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:a0c48217-97a2-41e2-9540-61939f2628c5> ;
     skos:historyNote "Source: VertNet" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L2084",
@@ -1884,8 +1884,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/a5a657d0-7c16-4938-b542-057ffe4150cd> a bdqffdq:MeasurementMethod ;
     rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/a5a657d0-7c16-4938-b542-057ffe4150cd-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/a5a657d0-7c16-4938-b542-057ffe4150cd-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:a5a657d0-7c16-4938-b542-057ffe4150cd> ;
     skos:historyNote "Source: TG2" ;
     skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE" ;
@@ -1908,8 +1908,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/a6035033-0779-4a75-99ea-f7112c1dde2b> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_MAXELEVATION_INRANGE with Specification: Specification for: VALIDATION_MAXELEVATION_INRANGE" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/a6035033-0779-4a75-99ea-f7112c1dde2b-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/a6035033-0779-4a75-99ea-f7112c1dde2b-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:a6035033-0779-4a75-99ea-f7112c1dde2b> ;
     skos:historyNote "Source: ALA, GBIF" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2622",
@@ -1954,8 +1954,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/abdca718-5564-4dbd-9d98-0a1707d6ecf2> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED with Specification: Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/abdca718-5564-4dbd-9d98-0a1707d6ecf2-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/abdca718-5564-4dbd-9d98-0a1707d6ecf2-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:abdca718-5564-4dbd-9d98-0a1707d6ecf2> ;
     skos:historyNote "Source: ALA" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1119",
@@ -2098,8 +2098,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/b751c2ed-11a5-4bff-9c37-1eccc8138191> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_CLASSIFICATION_CONSISTENT with Specification: Specification for: VALIDATION_CLASSIFICATION_CONSISTENT" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/b751c2ed-11a5-4bff-9c37-1eccc8138191-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/b751c2ed-11a5-4bff-9c37-1eccc8138191-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:b751c2ed-11a5-4bff-9c37-1eccc8138191> ;
     skos:historyNote "Source: TG2-Gainesville" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2563",
@@ -2229,8 +2229,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/c3d0ce9b-2f40-4cd7-8e67-085b137e8e89> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_STARTDAYOFYEAR_INRANGE with Specification: Specification for: VALIDATION_STARTDAYOFYEAR_INRANGE" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/c3d0ce9b-2f40-4cd7-8e67-085b137e8e89-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/c3d0ce9b-2f40-4cd7-8e67-085b137e8e89-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:c3d0ce9b-2f40-4cd7-8e67-085b137e8e89> ;
     skos:historyNote "Source: TG2-Gainesville" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1087",
@@ -2308,8 +2308,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_ENDDAYOFYEAR_INRANGE with Specification: Specification for: VALIDATION_ENDDAYOFYEAR_INRANGE" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:ca1bc131-fa85-4fdf-902d-ad20bd4ba0f4> ;
     skos:historyNote "Source: TG2-Gainesville" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1189",
@@ -2321,8 +2321,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/cca7732f-c336-47b0-9d69-4514d39f5950> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR with Specification: Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/cca7732f-c336-47b0-9d69-4514d39f5950-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/cca7732f-c336-47b0-9d69-4514d39f5950-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:cca7732f-c336-47b0-9d69-4514d39f5950> ;
     skos:historyNote "Source: TG2-Gainesville" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L1296",
@@ -2650,8 +2650,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/e95df0f4-b6b6-4e04-ad00-95eef6e8d993> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_TAXONRANK_STANDARD with Specification: Specification for: VALIDATION_TAXONRANK_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/e95df0f4-b6b6-4e04-ad00-95eef6e8d993-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/e95df0f4-b6b6-4e04-ad00-95eef6e8d993-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:e95df0f4-b6b6-4e04-ad00-95eef6e8d993> ;
     skos:historyNote "Source: TDWG2018" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2161",
@@ -2663,8 +2663,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/e9b8e041-3579-483a-a6aa-74bea442f6bd> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_TAXONRANK_STANDARDIZED with Specification: Specification for: AMENDMENT_TAXONRANK_STANDARDIZED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/e9b8e041-3579-483a-a6aa-74bea442f6bd-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/e9b8e041-3579-483a-a6aa-74bea442f6bd-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:e9b8e041-3579-483a-a6aa-74bea442f6bd> ;
     skos:historyNote "Source: TDWG2018" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/sci_name_qc/blob/v1.1.2/src/main/java/org/filteredpush/qc/sciname/DwCSciNameDQ.java#L2272",
@@ -2709,8 +2709,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/ed60f87e-7ab7-446a-8565-903dbe6408d2> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_MAXDEPTH_INRANGE with Specification: Specification for: VALIDATION_MAXDEPTH_INRANGE" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/ed60f87e-7ab7-446a-8565-903dbe6408d2-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/ed60f87e-7ab7-446a-8565-903dbe6408d2-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:ed60f87e-7ab7-446a-8565-903dbe6408d2> ;
     skos:historyNote "Source: ALA, GBIF" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/geo_ref_qc/blob/v2.0.1/src/main/java/org/filteredpush/qc/georeference/DwCGeoRefDQ.java#L2726",
@@ -2936,8 +2936,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a> a bdqffdq:AmendmentMethod ;
     rdfs:label "AmendmentMethod: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED with Specification: Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:fcd9e46a-a31e-47f5-a18a-bb7ee5d1394a> ;
     skos:historyNote "Source: TG2" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1502",
@@ -2949,8 +2949,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/fd0d38cd-1a3d-46cd-83ac-aab2a367e21f> a bdqffdq:MeasurementMethod ;
     rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/fd0d38cd-1a3d-46cd-83ac-aab2a367e21f-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/fd0d38cd-1a3d-46cd-83ac-aab2a367e21f-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:fd0d38cd-1a3d-46cd-83ac-aab2a367e21f> ;
     skos:historyNote "Source: TG2" ;
     skos:note "TG2 Validation SPACE CODED Test VOCABULARY Conformance CORE" ;
@@ -2960,8 +2960,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/fd15e0a4-f49d-4566-b700-a9b46c284e68> a bdqffdq:ValidationMethod ;
     rdfs:label "ValidationMethod: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD with Specification: Specification for: VALIDATION_DEGREEOFESTABLISHMENT_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/fd15e0a4-f49d-4566-b700-a9b46c284e68-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/fd15e0a4-f49d-4566-b700-a9b46c284e68-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:fd15e0a4-f49d-4566-b700-a9b46c284e68> ;
     skos:historyNote "Source: TG2" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/rec_occur_qc/blob/v1.0.1/src/main/java/org/filteredpush/qc/metadata/DwCMetadataDQ.java#L1694",
@@ -3010,8 +3010,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/0348eccf-fc7f-49b3-88b6-1d911e98cbbb> a bdqffdq:ValidationPolicy ;
     rdfs:label "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/0348eccf-fc7f-49b3-88b6-1d911e98cbbb-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/0348eccf-fc7f-49b3-88b6-1d911e98cbbb-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:0348eccf-fc7f-49b3-88b6-1d911e98cbbb> ;
     skos:prefLabel "ValidationPolicy: (51) validations  in UseCase bdquc:Spatial-Temporal_Patterns" ;
     bdqffdq:hasUseCase bdquc:Spatial-Temporal_Patterns ;
@@ -3069,8 +3069,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/3a640869-d2ea-4447-8e42-06ddb217066c> a bdqffdq:ValidationPolicy ;
     rdfs:label "ValidationPolicy: (32) validations  in UseCase bdquc:Alien-Species" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/3a640869-d2ea-4447-8e42-06ddb217066c-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/3a640869-d2ea-4447-8e42-06ddb217066c-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:3a640869-d2ea-4447-8e42-06ddb217066c> ;
     skos:prefLabel "ValidationPolicy: (32) validations  in UseCase bdquc:Alien-Species" ;
     bdqffdq:hasUseCase bdquc:Alien-Species ;
@@ -3119,8 +3119,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/60c7e911-e72e-421f-be9b-4fb81eef1a54> a bdqffdq:AmendmentPolicy ;
     rdfs:label "AmendmentPolicy: (5) amendments  in UseCase bdquc:Species-Distribution-Modeling-Trees" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/60c7e911-e72e-421f-be9b-4fb81eef1a54-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/60c7e911-e72e-421f-be9b-4fb81eef1a54-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:60c7e911-e72e-421f-be9b-4fb81eef1a54> ;
     bdqffdq:hasUseCase bdquc:Species-Distribution-Modeling-Trees ;
     bdqffdq:includedInPolicy bdqtest:07c28ace-561a-476e-a9b9-3d5ad6e35933,
@@ -3139,8 +3139,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/89332ae7-a4d0-437a-9c15-b3cba92fb36d> a bdqffdq:MeasurementPolicy ;
     rdfs:label "MeasurementPolicy: (64) measures  in UseCase bdquc:Alien-Species" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/89332ae7-a4d0-437a-9c15-b3cba92fb36d-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/89332ae7-a4d0-437a-9c15-b3cba92fb36d-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:89332ae7-a4d0-437a-9c15-b3cba92fb36d> ;
     bdqffdq:hasUseCase bdquc:Alien-Species ;
     bdqffdq:includedInPolicy bdqtest:0df03601-3768-4805-906a-bbd0a41b0fda,
@@ -3210,8 +3210,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/962109a0-205f-4ea9-b7df-39ad3a5fc503> a bdqffdq:MeasurementPolicy ;
     rdfs:label "MeasurementPolicy: (107) measures  in UseCase bdquc:Spatial-Temporal_Patterns" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/962109a0-205f-4ea9-b7df-39ad3a5fc503-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/962109a0-205f-4ea9-b7df-39ad3a5fc503-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:962109a0-205f-4ea9-b7df-39ad3a5fc503> ;
     bdqffdq:hasUseCase bdquc:Spatial-Temporal_Patterns ;
     bdqffdq:includedInPolicy bdqtest:0028ef9a-6553-467b-a344-90327ed2babf,
@@ -3365,8 +3365,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/9c87ce41-04a3-45e6-83d3-95ec70ae553f> a bdqffdq:ValidationPolicy ;
     rdfs:label "ValidationPolicy: (19) validations  in UseCase bdquc:Taxon-Management" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/9c87ce41-04a3-45e6-83d3-95ec70ae553f-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/9c87ce41-04a3-45e6-83d3-95ec70ae553f-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:9c87ce41-04a3-45e6-83d3-95ec70ae553f> ;
     skos:prefLabel "ValidationPolicy: (19) validations  in UseCase bdquc:Taxon-Management" ;
     bdqffdq:hasUseCase bdquc:Taxon-Management ;
@@ -3392,8 +3392,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/bf24b955-7497-4d9e-b42e-2706e5bf0d48> a bdqffdq:AmendmentPolicy ;
     rdfs:label "AmendmentPolicy: (10) amendments  in UseCase bdquc:Alien-Species" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/bf24b955-7497-4d9e-b42e-2706e5bf0d48-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/bf24b955-7497-4d9e-b42e-2706e5bf0d48-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:bf24b955-7497-4d9e-b42e-2706e5bf0d48> ;
     bdqffdq:hasUseCase bdquc:Alien-Species ;
     bdqffdq:includedInPolicy bdqtest:07c28ace-561a-476e-a9b9-3d5ad6e35933,
@@ -3418,8 +3418,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/d001ff0b-ade0-4a73-b281-e92ae0129bec> a bdqffdq:ValidationPolicy ;
     rdfs:label "ValidationPolicy: (17) validations  in UseCase bdquc:Species-Distribution-Modeling-Trees" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/d001ff0b-ade0-4a73-b281-e92ae0129bec-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/d001ff0b-ade0-4a73-b281-e92ae0129bec-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:d001ff0b-ade0-4a73-b281-e92ae0129bec> ;
     skos:prefLabel "ValidationPolicy: (17) validations  in UseCase bdquc:Species-Distribution-Modeling-Trees" ;
     bdqffdq:hasUseCase bdquc:Species-Distribution-Modeling-Trees ;
@@ -3443,8 +3443,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/f03dcc89-5e2b-41bc-b1d8-5a319fb18d22> a bdqffdq:AmendmentPolicy ;
     rdfs:label "AmendmentPolicy: (22) amendments  in UseCase bdquc:Spatial-Temporal_Patterns" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/f03dcc89-5e2b-41bc-b1d8-5a319fb18d22-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/f03dcc89-5e2b-41bc-b1d8-5a319fb18d22-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:f03dcc89-5e2b-41bc-b1d8-5a319fb18d22> ;
     bdqffdq:hasUseCase bdquc:Spatial-Temporal_Patterns ;
     bdqffdq:includedInPolicy bdqtest:0345b325-836d-4235-96d0-3b5caf150fc0,
@@ -3472,8 +3472,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/f44333a6-6c09-42f7-bb14-82540abcbff5> a bdqffdq:AmendmentPolicy ;
     rdfs:label "AmendmentPolicy: (3) amendments  in UseCase bdquc:Taxon-Management" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/f44333a6-6c09-42f7-bb14-82540abcbff5-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/f44333a6-6c09-42f7-bb14-82540abcbff5-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:f44333a6-6c09-42f7-bb14-82540abcbff5> ;
     bdqffdq:hasUseCase bdquc:Taxon-Management ;
     bdqffdq:includedInPolicy bdqtest:431467d6-9b4b-48fa-a197-cd5379f5e889,
@@ -4635,15 +4635,15 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/08a4abb0-8977-4805-a4a1-c1a96b532322> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_SEX_STANDARDIZED" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/08a4abb0-8977-4805-a4a1-c1a96b532322-2024-03-25> ;
-    dcterms:modified "2024-03-25"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"GBIF Sex Vocabulary\" {[https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/08a4abb0-8977-4805-a4a1-c1a96b532322-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:08a4abb0-8977-4805-a4a1-c1a96b532322> ;
     skos:example "dwc:sex=\"f\": Response.status=AMENDED, Response.result=dwc:sex=\"Female\", Response.comment=\"dwc:sex found in the bdqval:sourceAuthority\"",
         "dwc:sex=\"x\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:sex not found in the bdqval:sourceAuthority\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/e35dd18a-9c69-4aef-9b70-3d36d7eb6bd4> ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
-    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
+    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF Sex Vocabulary\" {[https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
+    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; AMENDED the value of dwc:sex if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
 
 <https://rs.tdwg.org/bdqtest/specification/0a4b0450-5f8d-4425-9bf3-dc79498741c0> a bdqffdq:Specification ;
     rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_COORDINATES_NOTZERO" ;
@@ -4774,11 +4774,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/16f999d9-1cf5-4208-b2ca-1a93d6700085> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_FAMILY_FOUND" ;
     dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdqval:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/16f999d9-1cf5-4208-b2ca-1a93d6700085-2023-09-17> ;
-    dcterms:modified "2023-09-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/16f999d9-1cf5-4208-b2ca-1a93d6700085-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:16f999d9-1cf5-4208-b2ca-1a93d6700085> ;
-    skos:example "dwc:family=\"Agaricacae\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"bdqval:family does not have an equivalent at the rank of Family in the Parameterized Source Authority\"",
-        "dwc:family=\"Agaricaceae\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"bdqval:family has an equivalent at the rank of Family in the bdqval:sourceAuthority\"" ;
+    skos:example "dwc:family=\"Agaricacae\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:family does not have an equivalent at the rank of Family in the Parameterized Source Authority\"",
+        "dwc:family=\"Agaricaceae\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:family has an equivalent at the rank of Family in the bdqval:sourceAuthority\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/146784a4-b53c-4245-a813-c41896761279> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:family is bdqval:Empty; COMPLIANT if the value of dwc:family is found as a value at the rank of Family in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT" .
@@ -4871,11 +4871,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_EVENTDATE_NOTEMPTY" ;
     dcterms:description "COMPLIANT if dwc:eventDate is bdqval:NotEmpty; otherwise NOT_COMPLIANT" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4-2023-09-17> ;
-    dcterms:modified "2023-09-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:1fae3f77-7fcb-42c6-ab43-1ff28adf4fa4> ;
     skos:example "dwc:eventDate=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:eventDate is bdqval:Empty\"",
-        "dwc:eventDate=\"1964-11-01T10:00-0600\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:eventdate is bdqval:NotEmpty\"" ;
+        "dwc:eventDate=\"1964-11-01T10:00-0600\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:eventDate is bdqval:NotEmpty\"" ;
     bdqffdq:hasAuthoritiesDefaults "" ;
     bdqffdq:hasExpectedResponse "COMPLIANT if dwc:eventDate is bdqval:NotEmpty; otherwise NOT_COMPLIANT" .
 
@@ -4892,11 +4892,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/21d0b5f6-5b3e-4810-8413-c975b7cf343a> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_CLASSIFICATION_CONSISTENT" ;
     dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdqval:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/21d0b5f6-5b3e-4810-8413-c975b7cf343a-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/21d0b5f6-5b3e-4810-8413-c975b7cf343a-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:21d0b5f6-5b3e-4810-8413-c975b7cf343a> ;
     skos:example "dwc:kingdom=\"\", dwc:phylum=\"\", dwc:class=\"\", dwc:order=\"Myrtales\", dwc:superfamily=\"\", dwc:family=\"Myrtaceae\", dwc:subfamily=\"\", dwc:tribe=\"\", dwc:subtribe=\"\",dwc:genus=\"Punica\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"The combination of values of higher classification taxonomic terms can be unambiguously resolved in the bdqval:sourceAuthority\"",
-        "dwc:kingdom=\"\", dwc:phylum=\"Chordata\", dwc:class=\"\", dwc:order=\"Rhopalocera\", dwc:superfamly=\"\", dwc:family=\"Muricidae\", dwc:subfamily=\"\", dwc:tribe=\"\", dwc:subtribe=\"\", dwc:genus=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"The combination of values of higher classification taxonomic terms cannot be unambiguously resolved in the bdqval:sourceAuthority\"" ;
+        "dwc:kingdom=\"\", dwc:phylum=\"Chordata\", dwc:class=\"\", dwc:order=\"Rhopalocera\", dwc:superfamily=\"\", dwc:family=\"Muricidae\", dwc:subfamily=\"\", dwc:tribe=\"\", dwc:subtribe=\"\", dwc:genus=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"The combination of values of higher classification taxonomic terms cannot be unambiguously resolved in the bdqval:sourceAuthority\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/d6bc8db2-014b-47dc-9737-b0ecd98bf5bb> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if all of the fields dwc:kingdom dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus are bdqval:Empty; COMPLIANT if the combination of values of higher classification taxonomic terms (dwc:kingdom, dwc:phylum, dwc:class, dwc:order, dwc:superfamily, dwc:family, dwc:subfamily, dwc:tribe, dwc:subtribe, dwc:genus) are consistent with the lowest ranking matched element in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT" .
@@ -4974,15 +4974,15 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/29a1fdc6-326b-4017-880d-d11ff0225b8f> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_EVENTDATE_INRANGE" ;
-    dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdqval:earliestValidDate to bdqval:latestValidDate, inclusive, otherwise NOT_COMPLIANT bdqval:earliestValidDate default =\"1582-11-15\",bdqval:latestValidDate default = \"{current year}\"" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/29a1fdc6-326b-4017-880d-d11ff0225b8f-2024-09-16> ;
-    dcterms:modified "2024-09-16"^^xsd:date ;
+    dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdqval:earliestValidDate to bdqval:latestValidDate, inclusive, otherwise NOT_COMPLIANT bdqval:earliestValidDate default = \"1582-11-15\",bdqval:latestValidDate default = \"{current year}\"" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/29a1fdc6-326b-4017-880d-d11ff0225b8f-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:29a1fdc6-326b-4017-880d-d11ff0225b8f> ;
     skos:example "dwc:eventDate=\"1962-11-01T10:00-0600\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:eventDate is IN_RANGE\"",
         "dwc:eventDate=\"2300-11-01T10:00\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:eventDate is NOT_IN_RANGE\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/2e5c3e37-b6a9-4928-8436-0d83bdb3f0fc>,
         <https://rs.tdwg.org/bdqtest/argument/8b223050-f314-4601-9e20-d5f3d59d8e79> ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:earliestValidDate default =\"1582-11-15\",bdqval:latestValidDate default = \"{current year}\"" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:earliestValidDate default = \"1582-11-15\",bdqval:latestValidDate default = \"{current year}\"" ;
     bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; COMPLIANT if the range of dwc:eventDate is entirely within the range bdqval:earliestValidDate to bdqval:latestValidDate, inclusive, otherwise NOT_COMPLIANT" .
 
 <https://rs.tdwg.org/bdqtest/specification/2a5be256-6d25-4d05-bcc7-3b43a383d443> a bdqffdq:Specification ;
@@ -4997,14 +4997,14 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/2a9dbd16-d427-471e-8db5-c1de2b2cf030> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_LICENSE_STANDARD" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdqval:Empty; COMPLIANT if the value of the term dcterms:license is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0\" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/2a9dbd16-d427-471e-8db5-c1de2b2cf030-2024-03-21> ;
-    dcterms:modified "2024-03-21"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdqval:Empty; COMPLIANT if the value of the term dcterms:license is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0\" {[https://creativecommons.org/]} {Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/2a9dbd16-d427-471e-8db5-c1de2b2cf030-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:2a9dbd16-d427-471e-8db5-c1de2b2cf030> ;
     skos:example "dcterms:license=\"GPL\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dcterms:license does not match a term in the bdqval:sourceAuthority\"",
         "dcterms:license=\"https://creativecommons.org/licenses/by/4.0/\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT,Response.comment=\"dcterms:license matches a term in the bdqval:sourceAuthority\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/7308bf21-2648-40d8-bb2c-3f36d2789552> ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0\" {[https://creativecommons.org/]} { Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Creative Commons 4.0 Licenses or CC0\" {[https://creativecommons.org/]} {Regular Expression ^(http(s){0,1}://creativecommons.org/licenses/(by&#124;by-sa&#124;by-nc&#124;by-nc-sa&#124;by-nd&#124;by-nc-nd)/4.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;mi&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})&#124;(http(s){0,1}://creativecommons.org/publicdomain/zero/1.0/((deed&#124;legalcode)(.(id&#124;eu&#124;da&#124;de&#124;en&#124;es&#124;fr&#124;fy&#124;hr&#124;it&#124;lv&#124;lt&#124;ni&#124;no&#124;pl&#124;pt&#124;ro&#124;si&#124;fi&#124;sv&#124;tr&#124;cs&#124;el&#124;ru&#124;uk&#124;ar&#124;jp&#124;zh-hans&#124;zh-hant&#124;ko)){0,1})))$ }" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dcterms:license is bdqval:Empty; COMPLIANT if the value of the term dcterms:license is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT" .
 
 <https://rs.tdwg.org/bdqtest/specification/2b29c224-435f-49fd-b010-16def638be27> a bdqffdq:Specification ;
@@ -5054,11 +5054,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/30ed5e2d-ef30-4988-8dbb-12c119e94ac3> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_LOCATION_NOTEMPTY" ;
     dcterms:description "COMPLIANT if at least one term needed to determine the location of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/30ed5e2d-ef30-4988-8dbb-12c119e94ac3-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/30ed5e2d-ef30-4988-8dbb-12c119e94ac3-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:30ed5e2d-ef30-4988-8dbb-12c119e94ac3> ;
     skos:example "dwc:locationID=\"\", dwc:higherGeographyID=\"\", dwc:higherGeography=\"\", dwc:continent=\"\", dwc:waterBody=\"\", dwc:islandGroup=\"\", dwc:island=\"\", dwc:country=\"\", dwc:countryCode=\"\", dwc:stateProvince=\"\", dwc:county=\"\", dwc:municipality=\"\", dwc:locality=\"\", dwc:verbatimLocality=\"\", dwc:decimalLatitude=\"\", dwc:decimalLongitude=\"\", dwc:coordinateUncertaintyInMeters=\"\", dwc:geodeticDatum=\"\", dwc:verbatimCoordinates=\"\", dwc:verbatimLatitude=\"\", dwc:verbatimLongitude=\"\", dwc:footprintWKT=\"\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"All location fields are bdqval:Empty\"",
-        "dwc:locationID=\"https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9\", dwc:higherGeographyID=\"\", dwc:higherGeography=\"\",dwc:continent=\"\", dwc:waterBody=\"\", dwc:islandGroup=\"\", dwc:island=\"\", dwc:country=\"\", dwc:countryCode=\"\", dwc:stateProvince=\"\", dwc:county=\"\", dwc:municipality=\"\", dwc:locality=\"\", dwc:verbatimLocality=\"\", dwc:decimalLatitude=\"\", dwc:decimalLongitude=\"\", dwc:coordinateUncertaintyInMeters=\"\", dwc:geodeticDatum=\"\", dwc:verbatimCoordinates=\"\", dwc:verbatimLatitude=\"\", dwc:verbatimLongitude=\"\", dwc:footprintWKT=\"\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:LocationID is bdqval:NotEmpty\"" ;
+        "dwc:locationID=\"https://opencontext.org/subjects/e54377f7-4452-4315-b676-40679b10c4d9\", dwc:higherGeographyID=\"\", dwc:higherGeography=\"\",dwc:continent=\"\", dwc:waterBody=\"\", dwc:islandGroup=\"\", dwc:island=\"\", dwc:country=\"\", dwc:countryCode=\"\", dwc:stateProvince=\"\", dwc:county=\"\", dwc:municipality=\"\", dwc:locality=\"\", dwc:verbatimLocality=\"\", dwc:decimalLatitude=\"\", dwc:decimalLongitude=\"\", dwc:coordinateUncertaintyInMeters=\"\", dwc:geodeticDatum=\"\", dwc:verbatimCoordinates=\"\", dwc:verbatimLatitude=\"\", dwc:verbatimLongitude=\"\", dwc:footprintWKT=\"\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:locationID is bdqval:NotEmpty\"" ;
     bdqffdq:hasAuthoritiesDefaults "" ;
     bdqffdq:hasExpectedResponse "COMPLIANT if at least one term needed to determine the location of the entity exists and is bdqval:NotEmpty; otherwise NOT_COMPLIANT" .
 
@@ -5281,15 +5281,15 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/401e2562-cb26-43a7-8690-b06eabd5982a> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_TYPESTATUS_STANDARDIZED" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED. bdqval:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/401e2562-cb26-43a7-8690-b06eabd5982a-2024-11-11> ;
-    dcterms:modified "2024-11-11"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED. bdqval:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/401e2562-cb26-43a7-8690-b06eabd5982a-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:401e2562-cb26-43a7-8690-b06eabd5982a> ;
     skos:example "dwc:typeStatus=\"Holo.\": Response.status=AMENDED, Response.result=dwc:typeStatus=\"Holotype\", Response.comment=\"dwc:typeStatus found in the bdqval:sourceAuthority\"",
         "dwc:typeStatus=\"x\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:typeStatus not found in the bdqval:sourceAuthority\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/a10eb348-7fc5-4b96-88e3-619300cb0079> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF TypeStatus Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TypeStatus]} {dwc:typeStatus vocabulary API [https://api.gbif.org/v1/vocabularies/TypeStatus/concepts]}" ;
-    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED." .
+    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:typeStatus is bdqval:Empty; AMENDED the value of the first word in each &#124; delimited portion of dwc:typeStatus if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED." .
 
 <https://rs.tdwg.org/bdqtest/specification/4209fe3a-1fae-4cdb-b3cc-29696b4e7964> a bdqffdq:Specification ;
     rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_TAXON_NOTEMPTY" ;
@@ -5379,11 +5379,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/45cb9e13-7944-4535-a5ef-f6ededb77305> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT" ;
     dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if either bdqval:taxonIsMarine or bdqval:geospatialLand are not available; INTERNAL_PREREQUISITES_NOT_MET if (1) dwc:scientificName is bdqval:Empty or (2) the values of dwc:decimalLatitude or dwc:decimalLongitude are bdqval:Empty or (3) if bdqval:assumptionOnUnknownBiome is noassumption and the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine; COMPLIANT if (1) the taxon marine/nonmarine status from bdqval:taxonIsMarine matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters or (2) if the marine/nonmarine status of the taxon is not interpretable from bdqval:taxonIsMarine and bdqval:assumptionOnUnknownBiome matches the marine/nonmarine status of dwc:decimalLatitude and dwc:decimalLongitude on the boundaries given by bdqval:geospatialLand plus an exterior buffer given by bdqval:spatialBufferInMeters; otherwise NOT_COMPLIANT bdqval:taxonIsMarine default = \"World Register of Marine Species (WoRMS)\" {[https://www.marinespecies.org/]} {Web service [https://www.marinespecies.org/aphia.php?p=webservice]},bdqval:geospatialLand default = \"Union of NaturalEarth 10m-physical-vectors for Land and NaturalEarth Minor Islands\" {[https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip], [https://naciscdn.org/naturalearth/10m/physical/ne_10m_minor_islands.zip]},bdqval:spatialBufferInMeters default = \"3000\",bdqval:assumptionOnUnknownBiome default = \"noassumption\"" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/45cb9e13-7944-4535-a5ef-f6ededb77305-2024-08-30> ;
-    dcterms:modified "2024-08-30"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/45cb9e13-7944-4535-a5ef-f6ededb77305-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:45cb9e13-7944-4535-a5ef-f6ededb77305> ;
     skos:example "dwc:decimalLatitude=\"-41.0525925872862\", dwc:decimalLongitude=\"-71.5310546742521\", dwc:scientificName=\"Aegla neuquensis\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"The species is freshwater aquatic and the coordinates fall in a lake and thus COMPLIANT\"",
-        "dwc:decimalLatitude=\"20.0\", dwc:decimalLongitude=\"-30.0\", dwc:scientificName=\"Viviparus contectus (Millet, 1813)\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:scientificName is non-marine according to dwc:taxonIsMarine but coordinates are marine\"" ;
+        "dwc:decimalLatitude=\"20.0\", dwc:decimalLongitude=\"-30.0\", dwc:scientificName=\"Viviparus contectus (Millet, 1813)\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:scientificName is non-marine according to bdqval:taxonIsMarine but coordinates are marine\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/3968f8d0-7364-4f3d-9993-96b8678f1653>,
         <https://rs.tdwg.org/bdqtest/argument/b3bf69d3-061c-4e2a-ac53-a73cb51ecbe2>,
         <https://rs.tdwg.org/bdqtest/argument/cbb3483c-2bf7-4b42-9d74-71ddc0e41c5e>,
@@ -5394,11 +5394,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/46992280-0ed6-4c42-9e89-ed388ca1d43b> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_EVENT_FROM_EVENTDATE" ;
     dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdqval:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdqval:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdqval:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdqval:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/46992280-0ed6-4c42-9e89-ed388ca1d43b-2024-09-16> ;
-    dcterms:modified "2024-09-16"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/46992280-0ed6-4c42-9e89-ed388ca1d43b-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:46992280-0ed6-4c42-9e89-ed388ca1d43b> ;
     skos:example "dwc:eventDate=\"2023\",dwc:year=\"2023\", dwc:month=\"\", dwc:day=\"\", dwc:startDayOfYear=\"\", dwc:endDayOfYear=\"\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"No amendments possible\"",
-        "dwc:eventDate=\"2023-01-26\", dwc:year=\"2023\", dwc:month=\"\", dwc:day=\"\", dwc:startDayOfYear=\"\", dwc:endDayOfYear=\"\": Response.status=FILLED_IN, Response.result=dwc:month=\"1\", dwc:day=\"26\", dwc:startDayOfYear=\"26\", dwc:endDayOfYear=\"26\", Response.comment=\"dwc:month, dwc:day, dwc:startDayOfyear and dwc:endDayOfYear filled in from dwc:eventDate\"" ;
+        "dwc:eventDate=\"2023-01-26\", dwc:year=\"2023\", dwc:month=\"\", dwc:day=\"\", dwc:startDayOfYear=\"\", dwc:endDayOfYear=\"\": Response.status=FILLED_IN, Response.result=dwc:month=\"1\", dwc:day=\"26\", dwc:startDayOfYear=\"26\", dwc:endDayOfYear=\"26\", Response.comment=\"dwc:month, dwc:day, dwc:startDayOfYear and dwc:endDayOfYear filled in from dwc:eventDate\"" ;
     bdqffdq:hasAuthoritiesDefaults "" ;
     bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or contains an invalid value according to ISO 8601; FILLED_IN if any of (1) dwc:day from dwc:eventDate if dwc:day is bdqval:Empty and dwc:eventDate has a precision of a day or finer and is within a single day, (2) dwc:month from dwc:eventDate if dwc:month is bdqval:Empty and dwc:eventDate has a precision of a single month or finer and is within a single month, (3) dwc:year from dwc:eventDate if dwc:year is bdqval:Empty and dwc:eventDate has a precision of a single year or finer and is within a single year, (4) dwc:startDayOfYear and dwc:endDayOfYear if they are bdqval:Empty and dwc:eventDate has a precision of a day or better; otherwise NOT_AMENDED." .
 
@@ -5572,15 +5572,15 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/566faded-60b6-44bf-a335-dc78d5013582> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/566faded-60b6-44bf-a335-dc78d5013582-2023-09-17> ;
-    dcterms:modified "2023-09-17"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonRank, and dwc:vernacularName; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/566faded-60b6-44bf-a335-dc78d5013582-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:566faded-60b6-44bf-a335-dc78d5013582> ;
     skos:example "dwc:scientificNameID=\"\", dwc:taxonID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Graphis\", dwc:higherClassification=\"\", dwc:kingdom=\"\", dwc:phylum=\"\", dwc:class=\"\", dwc:order=\"\", dwc:family=\"\", dwc:subfamily=\"\", dwc:genus=\"\", dwc:genericName=\"\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"\", dwc:taxonRank=\"\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"dwc:scientificName=\"Graphis\" is ambiguous as could be either a lichen or a gastropod.\"",
         "dwc:taxonID=\"\", dwc:scientificNameID=\"\", dwc:acceptedNameUsageID=\"\", dwc:originalNameUsageID=\"\", dwc:taxonConceptID=\"\", dwc:scientificName=\"Chicoreus palmarosae (Lamarck, 1822)\", dwc:higherClassification=\"\", dwc:kingdom=\"Animalia\", dwc:phylum=\"Mollusca\", dwc:class=\"Gastropoda\", dwc:order=\"\", dwc:family=\"Muricidae\", dwc:subfamily=\"\", dwc:genus=\"Chicoreus\", dwc:genericName=\"Chicoreus\", dwc:subgenus=\"\", dwc:infragenericEpithet=\"\", dwc:specificEpithet=\"palmarosae\", dwc:infraspecificEpithet=\"\", dwc:cultivarEpithet=\"\", dwc:vernacularName=\"\", dwc:scientificNameAuthorship=\"(Lamarck, 1822)\", dwc:taxonRank=\"\", bdqval:sourceAuthority=”marinespecies.org”: Response.status=FILLED_IN, Response.result=dwc:scientificNameID=\"urn:lsid:marinespecies.org:taxname:208134\", Response.comment=\"dwc:scientificName matched to unique taxon record in WoRMS, exact match on name and authorship. Resolvable at https://marinespecies.org/aphia.php?p=taxdetails&id=208134\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/b1f2699b-3b7e-41a1-9e5c-f670559664ba> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
-    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonomicRank, and dwc:vernacularName; otherwise NOT_AMENDED" .
+    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:NotEmpty, or if all of dwc:scientificName, dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship, and dwc:cultivarEpithet are bdqval:Empty, FILLED_IN the value of dwc:scientificNameID for an unambiguously resolved single taxon record in the bdqval:sourceAuthority through (1) the value of dwc:scientificName or (2) if dwc:scientificName is bdqval:Empty through values of the terms dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:scientificNameAuthorship and dwc:cultivarEpithet, or (3) if ambiguity produced by multiple matches in (1) or (2) can be disambiguated to a single Taxon using the values of dwc:subtribe, dwc:tribe, dwc:subgenus, dwc:genus, dwc:subfamily, dwc:family, dwc:superfamily, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:taxonID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID, dwc:taxonRank, and dwc:vernacularName; otherwise NOT_AMENDED" .
 
 <https://rs.tdwg.org/bdqtest/specification/59566872-1968-40f5-916a-42297d58ac7b> a bdqffdq:Specification ;
     rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_COUNTRY_FOUND" ;
@@ -5709,11 +5709,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/647bf697-e432-4b31-9a69-778396e14a82> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR" ;
     dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdqval:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/647bf697-e432-4b31-9a69-778396e14a82-2024-08-18> ;
-    dcterms:modified "2024-08-18"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/647bf697-e432-4b31-9a69-778396e14a82-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:647bf697-e432-4b31-9a69-778396e14a82> ;
     skos:example "dwc:year=\"1901\", dwc:startDayOfYear=\"15\", dwc:endDayOfYear=\"25\", dwc:eventDate=\"\": Response.status=FILLED_IN, Response.result=dwc:eventDate=\"1901-01-15/1901-01-25\", Response.comment=\"dwc:eventDate was interpreted from dwc:year, dwc:startDayOfYear and dwc:endDayOfYear\"",
-        "dwc:year=\"1901\", dwc:startDayOfYear=\"25\", dwc:endDayOfYear=\"15\", dwc:eventDate=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:startDayOfYear > dwc:endDayOfyear\"" ;
+        "dwc:year=\"1901\", dwc:startDayOfYear=\"25\", dwc:endDayOfYear=\"15\", dwc:eventDate=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:startDayOfYear > dwc:endDayOfYear\"" ;
     bdqffdq:hasAuthoritiesDefaults "" ;
     bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:NotEmpty or any of dwc:year, dwc:startDayOfYear, or dwc:endDayOfYear are bdqval:Empty; FILLED_IN the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear if the values in each are independently interpretable and if the value of dwc:startDayOfYear is less than the value of dwc:endDayOfYear; otherwise NOT_AMENDED" .
 
@@ -5884,14 +5884,14 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/72471db4-226c-454f-bbe8-5c1718e6c834> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_SEX_STANDARD" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; COMPLIANT if the value of dwc:sex is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. bdqval:sourceAuthority default = \"GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/72471db4-226c-454f-bbe8-5c1718e6c834-2024-02-09> ;
-    dcterms:modified "2024-02-09"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; COMPLIANT if the value of dwc:sex is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. bdqval:sourceAuthority default = \"GBIF Sex Vocabulary\" {[https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/72471db4-226c-454f-bbe8-5c1718e6c834-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:72471db4-226c-454f-bbe8-5c1718e6c834> ;
     skos:example "dwc:sex=\"Male\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:sex found in the bdqval:sourceAuthority\"",
         "dwc:sex=\"f\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:sex not found in the bdqval:sourceAuthority\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/2964d61f-eab0-4a21-9ac6-3f6a7c4fbf86> ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF Sex Vocabulary\" [https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF Sex Vocabulary\" {[https://api.gbif.org/v1/vocabularies/Sex]} {\"dwc:sex vocabulary API\" [https://api.gbif.org/v1/vocabularies/Sex/concepts]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:sex is bdqval:Empty; COMPLIANT if the value of dwc:sex is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT." .
 
 <https://rs.tdwg.org/bdqtest/specification/728b4db4-aff0-484f-9a5d-976b1f36cfb4> a bdqffdq:Specification ;
@@ -6156,15 +6156,15 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57-2024-08-18> ;
-    dcterms:modified "2024-08-18"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc:scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:8e8355a6-e5d0-4ad7-9f2c-8a4148bfda57> ;
     skos:example "dwc:scientificNameID=\"gbif:8102122\", dwc:scientificName=\"\": Response.status=FILLED_IN, Response.result=dwc:scientificName=\"Harpullia pendula F.Muell.\", Response.comment=\"dwc:scientificNameID contains an interpretable value\"",
         "dwc:scientificNameID=\"gbif:8a\", dwc:scientificName=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:scientificNameID does not contain an interpretable value\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/0127389b-a68d-4393-a84c-aa9c690bd0e7> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF Backbone Taxonomy\" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}" ;
-    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc: scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
+    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:scientificNameID is bdqval:Empty, or dwc:scientificName is bdqval:NotEmpty; FILLED_IN the value of dwc:scientificName if the value of dwc:scientificNameID could be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
 
 <https://rs.tdwg.org/bdqtest/specification/8f1c623f-3e2c-4a6d-bc35-627100cab43b> a bdqffdq:Specification ;
     rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_OCCURRENCESTATUS_NOTEMPTY" ;
@@ -6522,13 +6522,13 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/b85129f0-28c2-4ede-aff2-5ce3791c6e86> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_DCTYPE_STANDARD" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; COMPLIANT if the value of dc:type is a term name in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT DCMI Type Vocabulary\" {[http://purl.org/dc/terms/DCMIType]} {\"DCMI Type Vocabulary List of Terms\" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/b85129f0-28c2-4ede-aff2-5ce3791c6e86-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; COMPLIANT if the value of dc:type is a term name in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority = \"DCMI Type Vocabulary\" {[http://purl.org/dc/terms/DCMIType]} {\"DCMI Type Vocabulary List of Terms\" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/b85129f0-28c2-4ede-aff2-5ce3791c6e86-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:b85129f0-28c2-4ede-aff2-5ce3791c6e86> ;
     skos:example "dc:type=\"Event\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dc:type matches a term in DCMI Vocabulary\"",
         "dc:type=\"StillerImage\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dc:type does not match terms in DCMI Vocabulary\"" ;
-    bdqffdq:hasAuthoritiesDefaults "DCMI Type Vocabulary\" {[http://purl.org/dc/terms/DCMIType]} {\"DCMI Type Vocabulary List of Terms\" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority = \"DCMI Type Vocabulary\" {[http://purl.org/dc/terms/DCMIType]} {\"DCMI Type Vocabulary List of Terms\" [https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/2010-10-11/]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if the value of dc:type is bdqval:Empty; COMPLIANT if the value of dc:type is a term name in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT" .
 
 <https://rs.tdwg.org/bdqtest/specification/ba1fa532-9612-4944-bfd1-8bd39ab47758> a bdqffdq:Specification ;
@@ -6545,14 +6545,14 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/bda7e8a3-3366-43d5-8a8b-e206101dc90d> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY" ;
-    dcterms:description "INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/bda7e8a3-3366-43d5-8a8b-e206101dc90d-2024-09-15> ;
-    dcterms:modified "2024-09-15"^^xsd:date ;
+    dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/bda7e8a3-3366-43d5-8a8b-e206101dc90d-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:bda7e8a3-3366-43d5-8a8b-e206101dc90d> ;
     skos:example "dwc:eventDate=\"\", dwc:year=\"1420\", dwc:month=\"10\", dwc:day=\"29\": Response.status=FILLED_IN, Response.result=dwc:eventDate=\"1420-10-29\", Response.comment=\"dwc:year, dwc:month and dwc:day are interpretable, even if pre-Linnaeus\"",
         "dwc:eventDate=\"\", dwc:year=\"2024\", dwc:month=\"2\", dwc:day=\"30\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"Not a valid date\"" ;
     bdqffdq:hasAuthoritiesDefaults "" ;
-    bdqffdq:hasExpectedResponse "INTERNAL _PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED" .
+    bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is not EMPTY or dwc:year is EMPTY or is not interpretable as an integer; FILLED_IN the value of dwc:eventDate if an ISO 8601 date was interpreted from the values in dwc:year, dwc:month and dwc:day; otherwise NOT_AMENDED" .
 
 <https://rs.tdwg.org/bdqtest/specification/be57619a-9c9d-459f-8fb6-02aa912cd696> a bdqffdq:Specification ;
     rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_CLASS_FOUND" ;
@@ -6674,27 +6674,27 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/c8964200-630e-47c6-baad-7e334fddbbdb> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_TAXONRANK_STANDARD" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. bdqval:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/c8964200-630e-47c6-baad-7e334fddbbdb-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT. bdqval:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/c8964200-630e-47c6-baad-7e334fddbbdb-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:c8964200-630e-47c6-baad-7e334fddbbdb> ;
     skos:example "dwc:taxonRank=\"kingdom\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:taxonRank has an equivalent in the bdqval:sourceAuthority\"",
         "dwc:taxonRank=\"sp.\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:taxonRank does not have an equivalent in the bdqval:sourceAuthority\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/da536dda-d467-450e-8b0a-6b6903fd1a1b> ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; COMPLIANT if the value of dwc:taxonRank is in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT." .
 
 <https://rs.tdwg.org/bdqtest/specification/ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_TAXONRANK_STANDARDIZED" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:ca6b9d39-4a1d-4ec5-925a-d1d67f95bea0> ;
     skos:example "dwc:taxonRank=\"sic.\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:taxonRank does not contain an interpretable value in the bdqval:sourceAuthority\"",
         "dwc:taxonRank=\"sp.\": Response.status=AMENDED, Response.result=dwc:taxonRank=\"species\", Response.comment=\"dwc:taxonRank contains an interpretable value in the bdqval:sourceAuthority\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/ef83a8c4-62f3-4e18-b589-07bc6f178cd7> ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" [https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}}" ;
-    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
+    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"GBIF TaxonRank Vocabulary\" {[https://api.gbif.org/v1/vocabularies/TaxonRank]} {\"dwc:taxonRank vocabulary API\" [https://api.gbif.org/v1/vocabularies/TaxonRank/concepts]}" ;
+    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:taxonRank is bdqval:Empty; AMENDED the value of dwc:taxonRank if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
 
 <https://rs.tdwg.org/bdqtest/specification/ce7203a9-bb58-4780-833e-c759b8824fc6> a bdqffdq:Specification ;
     rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_MINDEPTH_LESSTHAN_MAXDEPTH" ;
@@ -6708,15 +6708,15 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/cebc8ba0-ca02-4f1e-830e-ec693bc628e4> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_MAXDEPTH_INRANGE" ;
-    dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT bdqval:minimumValidDepthInMeters default=\"0\",bdqval:maximumValidDepthInMeters default=\"11000\"" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/cebc8ba0-ca02-4f1e-830e-ec693bc628e4-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT bdqval:minimumValidDepthInMeters default = \"0\",bdqval:maximumValidDepthInMeters default = \"11000\"" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/cebc8ba0-ca02-4f1e-830e-ec693bc628e4-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:cebc8ba0-ca02-4f1e-830e-ec693bc628e4> ;
     skos:example "dwc:maximumDepthInMeters=\"1200\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:maximumDepthInMeters is in range (<11,000)\"",
         "dwc:maximumDepthInMeters=\"99999\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:maximumDepthInMeters is not in range (>11,000)\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/edf69c59-056d-4c8a-b1fb-647ea684eb18>,
         <https://rs.tdwg.org/bdqtest/argument/f41be58e-2e1e-409e-a322-1de95df2ce0b> ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:minimumValidDepthInMeters default=\"0\",bdqval:maximumValidDepthInMeters default=\"11000\"" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:minimumValidDepthInMeters default = \"0\",bdqval:maximumValidDepthInMeters default = \"11000\"" ;
     bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumDepthInMeters is bdqval:Empty or is not interpretable as a number greater than or equal to zero; COMPLIANT if the value of dwc:maximumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT" .
 
 <https://rs.tdwg.org/bdqtest/specification/d153d4bd-b39d-43b0-b00a-395ff3e2ca62> a bdqffdq:Specification ;
@@ -6807,11 +6807,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/da49fa95-ce7b-46cf-825a-91d53f21a997> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT" ;
     dcterms:description "If dwc:geodeticDatum is bdqval:Empty, fill in dwc:geodeticDatum using the value of bdqval:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdqval:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdqval:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED. bdqval:defaultGeodeticDatum default = \"EPSG:4326\"" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/da49fa95-ce7b-46cf-825a-91d53f21a997-2024-11-12> ;
-    dcterms:modified "2024-11-12"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/da49fa95-ce7b-46cf-825a-91d53f21a997-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:da49fa95-ce7b-46cf-825a-91d53f21a997> ;
     skos:example "dwc:geodeticDatum=\"WGS84\", dwc:decimalLatitude=\"\", dwc:decimalLongitude=\"\", dwc:coordinateUncertaintyInMeters=\"\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:geodeticDatum contains a value\"",
-        "dwc:geodeticDatum=\"[null]\", dwc:decimalLatitude=\"-30.00\", dwc:decimalLongitude=\"130.00\", dwc:coordinateUncertaintyInMeters=\"50\": Response.status=AMENDED, Response.result=dwc:geodeticDatum=\"EPSG:4326\", dwc:coordinateUncertaintyInMeters=\"2836\", Response.comment=\"dwc:godeticDatum is bdqval:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value\"" ;
+        "dwc:geodeticDatum=\"[null]\", dwc:decimalLatitude=\"-30.00\", dwc:decimalLongitude=\"130.00\", dwc:coordinateUncertaintyInMeters=\"50\": Response.status=AMENDED, Response.result=dwc:geodeticDatum=\"EPSG:4326\", dwc:coordinateUncertaintyInMeters=\"2836\", Response.comment=\"dwc:geodeticDatum is bdqval:Empty so filled in with default and dwc:coordinateUncertaintyInMeters amended to maximum possible value\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/7fd3889a-0d1d-4054-8e68-807cfa5410f2> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:defaultGeodeticDatum default = \"EPSG:4326\"" ;
     bdqffdq:hasExpectedResponse "If dwc:geodeticDatum is bdqval:Empty, fill in dwc:geodeticDatum using the value of bdqval:defaultGeodeticDatum, report FILLED_IN and, if dwc:coordinateUncertaintyInMeters, dwc:decimalLatitude and dwc:decimalLongitude are bdqval:NotEmpty, amend the value of dwc:coordinateUncertaintyInMeters by adding the maximum datum shift between the specified bdqval:defaultGeodeticDatum and any other datum at the provided dwc:decimalLatitude and dwc:decimalLongitude and instead report AMENDED; otherwise NOT_AMENDED." .
@@ -7046,14 +7046,14 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/f094b94f-09b6-4fb0-8ba4-24252a2101c4> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_BASISOFRECORD_STANDARD" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"Darwin Core basisOfRecord\" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/f094b94f-09b6-4fb0-8ba4-24252a2101c4-2024-08-18> ;
-    dcterms:modified "2024-08-18"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT bdqval:sourceAuthority default = \"Darwin Core basisOfRecord\" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/f094b94f-09b6-4fb0-8ba4-24252a2101c4-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:f094b94f-09b6-4fb0-8ba4-24252a2101c4> ;
     skos:example "dwc:basisOfRecord=\"Specimen\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:basisOfRecord does not exactly match a standard label of one of the Darwin Core classes\"",
         "dwc:basisOfRecord=\"Taxon\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:basisOfRecord matches a standard label of one of the Darwin Core classes\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/a723528a-ee73-44a7-818d-5315323ec4e9> ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Darwin Core basisOfRecord\" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]}{dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Darwin Core basisOfRecord\" {[https://dwc.tdwg.org/terms/#dwc:basisOfRecord]} {dwc:basisOfRecord vocabulary [https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml]}" ;
     bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:basisOfRecord is bdqval:Empty; COMPLIANT if the value of dwc:basisOfRecord is valid in the bdqval:sourceAuthority; otherwise NOT_COMPLIANT" .
 
 <https://rs.tdwg.org/bdqtest/specification/f09fc9ad-a449-4422-b32f-63d8ccf2501f> a bdqffdq:Specification ;
@@ -7092,15 +7092,15 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/f3e03531-7ee5-4721-aae2-f554389e0544> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_MINDEPTH_INRANGE" ;
-    dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdqval:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT bdqval:minimumValidDepthInMeters default=\"0\",bdqval:maximumValidDepthInMeters default=\"11000\"" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/f3e03531-7ee5-4721-aae2-f554389e0544-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdqval:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT bdqval:minimumValidDepthInMeters default = \"0\",bdqval:maximumValidDepthInMeters default = \"11000\"" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/f3e03531-7ee5-4721-aae2-f554389e0544-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:f3e03531-7ee5-4721-aae2-f554389e0544> ;
     skos:example "dwc:minimumDepthInMeters=\"1\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:minimumDepthInMeters is in range\"",
         "dwc:minimumDepthInMeters=\"12000\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:minimumDepthInMeters is not in range\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/9f12e2c3-17ac-42c0-91f4-c40a02d3f133>,
         <https://rs.tdwg.org/bdqtest/argument/d23e61b3-07b6-4326-bac2-1457b030efef> ;
-    bdqffdq:hasAuthoritiesDefaults "bdqval:minimumValidDepthInMeters default=\"0\",bdqval:maximumValidDepthInMeters default=\"11000\"" ;
+    bdqffdq:hasAuthoritiesDefaults "bdqval:minimumValidDepthInMeters default = \"0\",bdqval:maximumValidDepthInMeters default = \"11000\"" ;
     bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:minimumDepthInMeters is bdqval:Empty, or the value is not interpretable as number greater than or equal to zero; COMPLIANT if the value of dwc:minimumDepthInMeters is within the range of bdqval:minimumValidDepthInMeters to bdqval:maximumValidDepthInMeters inclusive; otherwise NOT_COMPLIANT" .
 
 <https://rs.tdwg.org/bdqtest/specification/f41b08a1-afb0-4075-b591-dfdb4174af51> a bdqffdq:Specification ;
@@ -7145,14 +7145,14 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/f799fb5c-37e4-46d7-a07e-87eb071df9c6> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION" ;
-    dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/f799fb5c-37e4-46d7-a07e-87eb071df9c6-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/f799fb5c-37e4-46d7-a07e-87eb071df9c6-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:f799fb5c-37e4-46d7-a07e-87eb071df9c6> ;
-    skos:example "dwc:minimumElevationInMeters=\"0\", dwc:maximumElevationInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:minimumElevationInMeters is equal to dwc: maximumElevationInMeters\"",
+    skos:example "dwc:minimumElevationInMeters=\"0\", dwc:maximumElevationInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:minimumElevationInMeters is equal to dwc:maximumElevationInMeters\"",
         "dwc:minimumElevationInMeters=\"1\", dwc:maximumElevationInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:minimumElevationInMeters is greater than dwc:maximumElevationInMeters\"" ;
     bdqffdq:hasAuthoritiesDefaults "" ;
-    bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumlevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT" .
+    bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters or dwc:minimumElevationInMeters is bdqval:Empty, or if either is not a number; COMPLIANT if the value of dwc:minimumElevationInMeters is a number less than or equal to the value of the number dwc:maximumElevationInMeters, otherwise NOT_COMPLIANT" .
 
 <https://rs.tdwg.org/bdqtest/specification/f8dfc3fc-6580-4518-b2b4-595c29e9042e> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_COORDINATEUNCERTAINTY_INRANGE" ;
@@ -7168,11 +7168,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/f9471802-a5f7-4f4e-9810-f3f4f43dad1a> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_MAXELEVATION_INRANGE" ;
     dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:maximumElevationInMeters is bdqval:Empty or the value cannot be interpreted as a number; COMPLIANT if the value of dwc:maximumElevationInMeters is within the range of bdqval:minimumValidElevationInMeters to bdqval:maximumValidElevationInMeters inclusive; otherwise NOT_COMPLIANT bdqval:minimumValidElevationInMeters default = \"-430\",bdqval:maximumValidElevationInMeters default = \"8850\"" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/f9471802-a5f7-4f4e-9810-f3f4f43dad1a-2023-09-18> ;
-    dcterms:modified "2023-09-18"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/f9471802-a5f7-4f4e-9810-f3f4f43dad1a-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:f9471802-a5f7-4f4e-9810-f3f4f43dad1a> ;
-    skos:example "dwc:maximumElevationInMeters=\"-500\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:maximumElevation is not in range, i.e. is <-430\"",
-        "dwc:maximumElevationInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:maximumElevation is in is range\"" ;
+    skos:example "dwc:maximumElevationInMeters=\"-500\": Response.status=RUN_HAS_RESULT, Response.result=NOT_COMPLIANT, Response.comment=\"dwc:maximumElevationInMeters is not in range, i.e. is <-430\"",
+        "dwc:maximumElevationInMeters=\"0\": Response.status=RUN_HAS_RESULT, Response.result=COMPLIANT, Response.comment=\"dwc:maximumElevationInMeters is in is range\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/1766715d-e588-4361-8b27-1c9cc43662ab>,
         <https://rs.tdwg.org/bdqtest/argument/3ab181c2-a3d8-4317-af4d-f88181e2773a> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:minimumValidElevationInMeters default = \"-430\",bdqval:maximumValidElevationInMeters default = \"8850\"" ;
@@ -7180,27 +7180,27 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/fa4e531e-f45e-4dea-8c4b-27d364117808> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"Establishment Means Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/fa4e531e-f45e-4dea-8c4b-27d364117808-2024-02-08> ;
-    dcterms:modified "2024-02-08"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"Establishment Means Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/fa4e531e-f45e-4dea-8c4b-27d364117808-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:fa4e531e-f45e-4dea-8c4b-27d364117808> ;
     skos:example "dwc:establishmentMeans=\"cultivated\": Response.status=NOT_AMENDED, Response.result=\"\", Response.comment=\"dwc:establishmentMeans is not an interpretable value in the bdqval:sourceAuthority\"",
         "dwc:establishmentMeans=\"vag.\": Response.status=AMENDED, Response.result=dwc:establishmentMeans=\"vagrant\", Response.comment=\"dwc:establishmentMeans contains an interpretable value in the bdqval:sourceAuthority\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/17d785ee-6ac9-4ab4-9806-f4a2b0d8bbf1> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Establishment Means Controlled Vocabulary List of Terms\" {[https://dwc.tdwg.org/em/]} {GBIF vocabulary API [https://api.gbif.org/v1/vocabularies/EstablishmentMeans/concepts]}" ;
-    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
+    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:establishmentMeans is bdqval:Empty; AMENDED the value of dwc:establishmentMeans if it can be unambiguously matched to a term in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
 
 <https://rs.tdwg.org/bdqtest/specification/fae50773-a832-4e44-87fe-d66a1332c3e7> a bdqffdq:Specification ;
     rdfs:label "Specification for: AMENDMENT_OCCURRENCESTATUS_STANDARDIZED" ;
-    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/fae50773-a832-4e44-87fe-d66a1332c3e7-2025-03-03> ;
-    dcterms:modified "2025-03-03"^^xsd:date ;
+    dcterms:description "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}" ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/fae50773-a832-4e44-87fe-d66a1332c3e7-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:fae50773-a832-4e44-87fe-d66a1332c3e7> ;
     skos:example "dwc:occurrenceStatus=\"1\": Response.status=AMENDED, Response.result=dwc:occurrenceStatus=\"present\", Response.comment=\"Input field contains an interpretable value. \"",
         "dwc:occurrenceStatus=\"X\": Response.status=NOT_AMENDED, Response.result=, Response.comment=\"Input field contains uninterpretable value \"X\"" ;
     bdqffdq:hasArgument <https://rs.tdwg.org/bdqtest/argument/59635d6c-f265-45dd-8814-b80a1dc41540> ;
     bdqffdq:hasAuthoritiesDefaults "bdqval:sourceAuthority default = \"Regex present/absent\" {[\"^(present|absent)$\"]}" ;
-    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:ocurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
+    bdqffdq:hasExpectedResponse "EXTERNAL_PREREQUISITES_NOT_MET if the bdqval:sourceAuthority is not available; INTERNAL_PREREQUISITES_NOT_MET if dwc:occurrenceStatus is bdqval:Empty; AMENDED the value of dwc:occurrenceStatus if it can be unambiguously interpreted as a value in the bdqval:sourceAuthority; otherwise NOT_AMENDED" .
 
 <https://rs.tdwg.org/bdqtest/specification/fbe854d4-acf3-4c79-a654-81441fed644f> a bdqffdq:Specification ;
     rdfs:label "Specification for: VALIDATION_OCCURRENCESTATUS_STANDARD" ;
@@ -8395,13 +8395,13 @@ bdqtest:1b3bbac4-7c00-46d6-8179-1d57c92374ad a bdqffdq:Measure ;
 bdqtest:1b8ae68e-63f1-41c0-9025-fbe64db38d64 a bdqffdq:Measure ;
     rdfs:label "MULTIRECORD_MEASURE_COUNT_COMPLIANT_DEGREEOFESTABLISHMENT_STANDARD" ;
     dcterms:description "Count the number of VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set that are COMPLIANT." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/1b8ae68e-63f1-41c0-9025-fbe64db38d64-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.1371/journal.pone.0178731> ;
     owl:sameAs <urn:uuid:1b8ae68e-63f1-41c0-9025-fbe64db38d64> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/296" ;
     skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set." ;
-    skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:degreeofEstablishment Standard for MultiRecord" ;
+    skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:degreeOfEstablishment Standard for MultiRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/3ea77d56-e4b4-45b2-88d7-c6ab7c1d0f36> ;
     bdqffdq:hasDataQualityDimension bdqdim:Conformance ;
     bdqffdq:hasDateLastUpdated "2024-02-09"^^xsd:date ;
@@ -8519,8 +8519,8 @@ bdqtest:2e371d57-1eb3-4fe3-8a61-dff43ced50cf a bdqffdq:Amendment ;
 bdqtest:33c45ae1-e2db-462a-a59e-7169bb01c5d6 a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_SEX_STANDARDIZED" ;
     dcterms:description "Proposes an amendment to the value of dwc:sex using the bdqval:sourceAuthority." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/33c45ae1-e2db-462a-a59e-7169bb01c5d6-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://rs.gbif.org/vocabulary/gbif/sex.xml> ;
     owl:sameAs <urn:uuid:33c45ae1-e2db-462a-a59e-7169bb01c5d6> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/284" ;
@@ -8595,8 +8595,8 @@ bdqtest:388e74b3-2e18-4d78-8112-3142d1177e25 a bdqffdq:Measure ;
 bdqtest:3892f432-ddd0-4a0a-b713-f2e2ecbd879d a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY" ;
     dcterms:description "Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:month and dwc:day." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/3892f432-ddd0-4a0a-b713-f2e2ecbd879d-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://en.wikipedia.org/wiki/ISO_8601>,
         <https://www.iso.org/obp/ui/>,
         <https://www.loc.gov/standards/datetime/> ;
@@ -8709,12 +8709,12 @@ bdqtest:3de8af03-05d4-4fd8-8e6d-ba886dc5446f a bdqffdq:Measure ;
 bdqtest:431467d6-9b4b-48fa-a197-cd5379f5e889 a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_SCIENTIFICNAMEID_FROM_TAXON" ;
     dcterms:description "Proposes an amendment to the value of dwc:scientificNameID if it can be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/431467d6-9b4b-48fa-a197-cd5379f5e889-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/39omei> ;
     owl:sameAs <urn:uuid:431467d6-9b4b-48fa-a197-cd5379f5e889> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/57" ;
-    skos:note "Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:dwc:scientificNameAuthorship, to resolve them). When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**" ;
+    skos:note "Return a result with no value and a Result.status of NOT_AMENDED with a Response.comment of ambiguous if the information provided does not resolve to a unique result (e.g. if homonyms exist and there is insufficient information in the provided data, for example using the lowest ranking taxa in conjunction with dwc:scientificNameAuthorship, to resolve them). When referencing a GBIF taxon by GBIF's identifier for that taxon, use the the pseudo-namespace \"gbif:\" and the form \"gbif:{integer}\" as the value for dwc:scientificNameID. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**" ;
     skos:prefLabel "Amendment dwc:scientificNameID from dwc:Taxon for SingleRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/92a6c199-f1d7-493e-b643-57d09c5131dd> ;
     bdqffdq:hasConsultedInformationElement <https://rs.tdwg.org/bdqtest/informationelement/3d755ac9-e1ff-405e-b076-6a8fbbd5a804> ;
@@ -8986,8 +8986,8 @@ bdqtest:6d0a0c10-5e4a-4759-b448-88932f399812 a bdqffdq:Amendment ;
 bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7 a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT" ;
     dcterms:description "Proposes an amendment to fill in dwc:geodeticDatum using a parameterized value if the dwc:geodeticDatum is empty." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/7498ca76-c4d4-42e2-8103-acacccbdffa7-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/doc-gg7h-s853>,
         <https://epsg.io/>,
         <https://epsg.org/>,
@@ -9159,9 +9159,9 @@ bdqtest:8b73f37d-89ed-479a-8389-9e71ad2ac84d a bdqffdq:Measure ;
 
 bdqtest:8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_COUNTRYCODE_FROM_COORDINATES" ;
-    dcterms:description "Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdqval:countryShapes that is attributable to a single valid ISO 3166-1-alpha-2 country code." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:description "Proposes an amendment to the value of dwc:countryCode if dwc:decimalLatitude and dwc:decimalLongitude fall within a boundary from the bdqval:sourceAuthority that is attributable to a single valid ISO 3166-1-alpha-2 country code." ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <http://www.fao.org/3/a0118e/a0118e00.htm#Contents>,
         <https://datahub.io/core/country-list>,
         <https://doi.org/10.15468/doc-gg7h-s853>,
@@ -9184,13 +9184,13 @@ bdqtest:8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae a bdqffdq:Amendment ;
 bdqtest:8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63 a bdqffdq:Measure ;
     rdfs:label "MULTIRECORD_MEASURE_COUNT_COMPLIANT_GEODETICDATUM_STANDARD" ;
     dcterms:description "Count the number of VALIDATION_GEODETICDATUM_STANDARD in a record set that are COMPLIANT." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.1371/journal.pone.0178731> ;
     owl:sameAs <urn:uuid:8d8aba5c-f58a-49c9-a08d-1afb5ff1aa63> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/296" ;
     skos:note "For Quality Control, compare the Response.result of this measure with the total number of records to assess work needed on the record set." ;
-    skos:prefLabel "Measurement over MultiRecord Counting Compliance of Vaildation dwc:geodeticDatum Standard for MultiRecord" ;
+    skos:prefLabel "Measurement over MultiRecord Counting Compliance of Validation dwc:geodeticDatum Standard for MultiRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/32f5c5c1-ec68-462a-8f73-f54c5236c0d1> ;
     bdqffdq:hasDataQualityDimension bdqdim:Conformance ;
     bdqffdq:hasDateLastUpdated "2025-03-03"^^xsd:date ;
@@ -9334,8 +9334,8 @@ bdqtest:b21256c2-4bb7-4deb-852d-a9eaa05345e7 a bdqffdq:Measure ;
 bdqtest:b3471c65-b53e-453b-8282-abfa27bf1805 a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_TYPESTATUS_STANDARDIZED" ;
     dcterms:description "Proposes an amendment to the value of dwc:typeStatus using the bdqval:sourceAuthority." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/b3471c65-b53e-453b-8282-abfa27bf1805-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <http://rs.gbif.org/vocabulary/gbif/type_status> ;
     owl:sameAs <urn:uuid:b3471c65-b53e-453b-8282-abfa27bf1805> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/286" ;
@@ -9395,13 +9395,13 @@ bdqtest:b67f41f4-198c-41e9-9419-ba3919c1be8b a bdqffdq:Measure ;
 bdqtest:ba953672-6526-4375-97e8-b4e9d1a7d3a0 a bdqffdq:Measure ;
     rdfs:label "MULTIRECORD_MEASURE_QA_DEGREEOFESTABLISHMENT_STANDARD" ;
     dcterms:description "Measure if all VALIDATION_DEGREEOFESTABLISHMENT_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/ba953672-6526-4375-97e8-b4e9d1a7d3a0-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.1371/journal.pone.0178731> ;
     owl:sameAs <urn:uuid:ba953672-6526-4375-97e8-b4e9d1a7d3a0> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/297" ;
     skos:note "For Quality Assurance, filter record set until this measure is COMPLETE." ;
-    skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:degreeofEstablishment Standard for MultiRecord" ;
+    skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:degreeOfEstablishment Standard for MultiRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/3ea77d56-e4b4-45b2-88d7-c6ab7c1d0f36> ;
     bdqffdq:hasDataQualityDimension bdqdim:Conformance ;
     bdqffdq:hasDateLastUpdated "2024-02-09"^^xsd:date ;
@@ -9562,13 +9562,13 @@ bdqtest:c8250600-de61-4047-9d7c-6e06a38c7994 a bdqffdq:Measure ;
 bdqtest:cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e a bdqffdq:Measure ;
     rdfs:label "MULTIRECORD_MEASURE_QA_GEODETICDATUM_STANDARD" ;
     dcterms:description "Measure if all VALIDATION_GEODETICDATUM_STANDARD in a record set are COMPLIANT." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.1371/journal.pone.0178731> ;
     owl:sameAs <urn:uuid:cb88b6d9-85b2-4cd5-9bfa-c0d96f79552e> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/295" ;
     skos:note "For Quality Assurance, filter record set until this measure is COMPLETE." ;
-    skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Vaildation dwc:geodeticDatum Standard for MultiRecord" ;
+    skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:geodeticDatum Standard for MultiRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/32f5c5c1-ec68-462a-8f73-f54c5236c0d1> ;
     bdqffdq:hasDataQualityDimension bdqdim:Conformance ;
     bdqffdq:hasDateLastUpdated "2025-03-03"^^xsd:date ;
@@ -9684,8 +9684,8 @@ bdqtest:e0b8cff1-3322-40d2-b8b2-b99fc9ae130a a bdqffdq:Measure ;
 bdqtest:e39098df-ef46-464c-9aef-bcdeee2a88cb a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_TAXONRANK_STANDARDIZED" ;
     dcterms:description "Proposes an amendment to the value of dwc:taxonRank using the bdqval:sourceAuthority." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/e39098df-ef46-464c-9aef-bcdeee2a88cb-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://registry.gbif.org/vocabulary/TaxonRank/concepts> ;
     owl:sameAs <urn:uuid:e39098df-ef46-464c-9aef-bcdeee2a88cb> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/163" ;
@@ -9715,8 +9715,8 @@ bdqtest:e4d35063-2366-4dda-8eaa-326340361da3 a bdqffdq:Measure ;
 bdqtest:eb0a44fa-241c-4d64-98df-ad4aa837307b a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_EVENTDATE_FROM_YEARSTARTDAYOFYEARENDDAYOFYEAR" ;
     dcterms:description "Proposes an amendment to the value of dwc:eventDate from values in dwc:year, dwc:startDayOfYear and dwc:endDayOfYear." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/eb0a44fa-241c-4d64-98df-ad4aa837307b-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://en.wikipedia.org/wiki/ISO_8601>,
         <https://www.iso.org/obp/ui/> ;
     owl:sameAs <urn:uuid:eb0a44fa-241c-4d64-98df-ad4aa837307b> ;
@@ -9793,12 +9793,12 @@ bdqtest:f22539ef-029b-4edb-ad17-add4363f7395 a bdqffdq:Measure ;
 bdqtest:f2b4a50a-6b2f-4930-b9df-da87b6a21082 a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_COORDINATES_TRANSPOSED" ;
     dcterms:description "Proposes an amendment transposing or changing the signs of dwc:decimalLatitude and/or dwc:decimalLongitude to align the location with the dwc:countryCode." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f2b4a50a-6b2f-4930-b9df-da87b6a21082-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/doc-gg7h-s853> ;
     owl:sameAs <urn:uuid:f2b4a50a-6b2f-4930-b9df-da87b6a21082> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/54" ;
-    skos:note "The dwc:geodeticDatum is not necessary for this Test. The maximum positional shift between any geographic coordinate reference system and WGS84 is less than 6 km, so any hemisphere Test that relies on a country code for consistency would not be affected by the potential shift. The prior VALIDATION for this Test is VALIDATION_COORDINATE_COUNTRYCODE_CONSISTENT (adb27d29-9f0d-4d52-b760-a77ba57a69c9)." ;
+    skos:note "The dwc:geodeticDatum is not necessary for this Test. The maximum positional shift between any geographic coordinate reference system and WGS84 is less than 6 km, so any hemisphere Test that relies on a country code for consistency would not be affected by the potential shift. The prior VALIDATION for this Test is VALIDATION_COORDINATESCOUNTRYCODE_CONSISTENT (adb27d29-9f0d-4d52-b760-a77ba57a69c9)." ;
     skos:prefLabel "Amendment Coordinates Transposed for SingleRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/9d387033-c581-4fb5-9af2-73ec89c99e77> ;
     bdqffdq:hasConsultedInformationElement <https://rs.tdwg.org/bdqtest/informationelement/d24a7b73-972a-4fdd-a790-91acb5fcf725> ;
@@ -10080,8 +10080,8 @@ bdqtest:0493bcfb-652e-4d17-815b-b0cce0742fbe a bdqffdq:Validation ;
 bdqtest:04b2c8f3-c71b-4e95-8e43-f70374c5fb92 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_MINDEPTH_INRANGE" ;
     dcterms:description "Is the value of dwc:minimumDepthInMeters within the Parameter range?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/04b2c8f3-c71b-4e95-8e43-f70374c5fb92-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/doc-gg7h-s853>,
         <https://en.wikipedia.org/wiki/Extreme_points_of_Earth> ;
     owl:sameAs <urn:uuid:04b2c8f3-c71b-4e95-8e43-f70374c5fb92> ;
@@ -10097,14 +10097,14 @@ bdqtest:04b2c8f3-c71b-4e95-8e43-f70374c5fb92 a bdqffdq:Validation ;
 bdqtest:060e7734-607d-4737-8b2c-bfa17788bf1a a bdqffdq:Validation ;
     rdfs:label "VALIDATION_DEGREEOFESTABLISHMENT_STANDARD" ;
     dcterms:description "Does the value of dwc:degreeOfEstablishment occur in the bdqval:sourceAuthority?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/060e7734-607d-4737-8b2c-bfa17788bf1a-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <http://dwc.tdwg.org/doe/>,
         <https://doi.org/10.3897/biss.3.38084> ;
     owl:sameAs <urn:uuid:060e7734-607d-4737-8b2c-bfa17788bf1a> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/275" ;
     skos:note "This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters." ;
-    skos:prefLabel "Validation dwc:degreeofEstablishment Standard for SingleRecord" ;
+    skos:prefLabel "Validation dwc:degreeOfEstablishment Standard for SingleRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/c5abcb06-a1d0-4ed5-9513-c04c194293e6> ;
     bdqffdq:hasCriterion bdqcrit:Standard ;
     bdqffdq:hasDataQualityDimension bdqdim:Conformance ;
@@ -10196,8 +10196,8 @@ bdqtest:14da5b87-8304-4b2b-911d-117e3c29e890 a bdqffdq:Validation ;
 bdqtest:15d15927-7a22-43f8-88d6-298f5eb45c4c a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_ESTABLISHMENTMEANS_STANDARDIZED" ;
     dcterms:description "Proposes an amendment to the value of dwc:establishmentMeans using the bdqval:sourceAuthority." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/15d15927-7a22-43f8-88d6-298f5eb45c4c-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <http://rs.tdwg.org/dwc/doc/em/>,
         <https://doi.org/10.3897/biss.3.38084> ;
     owl:sameAs <urn:uuid:15d15927-7a22-43f8-88d6-298f5eb45c4c> ;
@@ -10291,8 +10291,8 @@ bdqtest:2d90d94b-d384-4bac-aa68-c6800d765882 a bdqffdq:Measure ;
 bdqtest:3136236e-04b6-49ea-8b34-a65f25e3aba1 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_LICENSE_STANDARD" ;
     dcterms:description "Does the value of dcterms:license occur in bdqval:sourceAuthority?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/3136236e-04b6-49ea-8b34-a65f25e3aba1-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://creativecommons.org/licenses/>,
         <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/LicenseDocument/> ;
     owl:sameAs <urn:uuid:3136236e-04b6-49ea-8b34-a65f25e3aba1> ;
@@ -10308,8 +10308,8 @@ bdqtest:3136236e-04b6-49ea-8b34-a65f25e3aba1 a bdqffdq:Validation ;
 bdqtest:3667556d-d8f5-454c-922b-af8af38f613c a bdqffdq:Validation ;
     rdfs:label "VALIDATION_FAMILY_FOUND" ;
     dcterms:description "Does the value of dwc:family occur at the rank of Family in the bdqval:sourceAuthority?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/3667556d-d8f5-454c-922b-af8af38f613c-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/39omei> ;
     owl:sameAs <urn:uuid:3667556d-d8f5-454c-922b-af8af38f613c> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/28" ;
@@ -10339,8 +10339,8 @@ bdqtest:36ed36c9-b1a7-40b2-b5e2-0d012e772098 a bdqffdq:Validation ;
 bdqtest:3cff4dc4-72e9-4abe-9bf3-8a30f1618432 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_EVENTDATE_INRANGE" ;
     dcterms:description "Is the value of dwc:eventDate entirely with the Parameter range?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/3cff4dc4-72e9-4abe-9bf3-8a30f1618432-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://en.wikipedia.org/wiki/ISO_8601>,
         <https://www.iso.org/obp/ui/>,
         <https://www.loc.gov/standards/datetime/> ;
@@ -10357,8 +10357,8 @@ bdqtest:3cff4dc4-72e9-4abe-9bf3-8a30f1618432 a bdqffdq:Validation ;
 bdqtest:3f1db29a-bfa5-40db-9fd1-fde020d81939 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_MAXDEPTH_INRANGE" ;
     dcterms:description "Is the value of dwc:maximumDepthInMeters within the Parameter range?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/3f1db29a-bfa5-40db-9fd1-fde020d81939-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/doc-gg7h-s853>,
         <https://en.wikipedia.org/wiki/Extreme_points_of_Earth> ;
     owl:sameAs <urn:uuid:3f1db29a-bfa5-40db-9fd1-fde020d81939> ;
@@ -10539,8 +10539,8 @@ bdqtest:5618f083-d55a-4ac2-92b5-b9fb227b832f a bdqffdq:Validation ;
 bdqtest:58486cb6-1114-4a8a-ba1e-bd89cfe887e9 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_LOCATION_NOTEMPTY" ;
     dcterms:description "Is there a value in any of the Darwin Core spatial terms that could specify a location?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/58486cb6-1114-4a8a-ba1e-bd89cfe887e9-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/doc-gg7h-s853> ;
     owl:sameAs <urn:uuid:58486cb6-1114-4a8a-ba1e-bd89cfe887e9> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/40" ;
@@ -10637,8 +10637,8 @@ bdqtest:6dd6fecf-6ba1-425c-afbe-6a9ed7b65ed7 a bdqffdq:Measure ;
 bdqtest:710fe118-17e1-440f-b428-88ba3f547d6d a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_EVENT_FROM_EVENTDATE" ;
     dcterms:description "Proposes an amendment to values in any of dwc:year, dwc:month, dwc:day, dwc:startDayOfYear or dwc:endDayOfYear from the content of dwc:eventDate." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/710fe118-17e1-440f-b428-88ba3f547d6d-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://en.wikipedia.org/wiki/ISO_8601>,
         <https://www.iso.org/obp/ui/>,
         <https://www.loc.gov/standards/datetime/> ;
@@ -10704,8 +10704,8 @@ bdqtest:76008c6b-c56a-4233-84e3-8584950037ec a bdqffdq:Measure ;
 bdqtest:7bdb13a4-8a51-4ee5-be7f-20693fdb183e a bdqffdq:Validation ;
     rdfs:label "VALIDATION_TAXONRANK_STANDARD" ;
     dcterms:description "Does the value of dwc:taxonRank occur in the bdqval:sourceAuthority?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/7bdb13a4-8a51-4ee5-be7f-20693fdb183e-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://registry.gbif.org/vocabulary/TaxonRank/concepts> ;
     owl:sameAs <urn:uuid:7bdb13a4-8a51-4ee5-be7f-20693fdb183e> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/162" ;
@@ -10775,8 +10775,8 @@ bdqtest:853b79a2-b314-44a2-ae46-34a1e7ed85e4 a bdqffdq:Validation ;
 bdqtest:88d8598b-3318-483d-9475-a5acf9887404 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_SEX_STANDARD" ;
     dcterms:description "Does the value of dwc:sex occur in bdqval:sourceAuthority?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/88d8598b-3318-483d-9475-a5acf9887404-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://rs.gbif.org/vocabulary/gbif/sex.xml> ;
     owl:sameAs <urn:uuid:88d8598b-3318-483d-9475-a5acf9887404> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/283" ;
@@ -10886,11 +10886,11 @@ bdqtest:977f7e75-a88e-4e29-a7b1-e8cdd35aa107 a bdqffdq:Measure ;
 bdqtest:9a39d88c-7eee-46df-b32a-c109f9f81fb8 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_ENDDAYOFYEAR_INRANGE" ;
     dcterms:description "Is the value of dwc:endDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/9a39d88c-7eee-46df-b32a-c109f9f81fb8-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:9a39d88c-7eee-46df-b32a-c109f9f81fb8> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/131" ;
-    skos:note "See Test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This Test only asks if dwc:endDayOfYear is a valid value for the relevant year, not if it is consistent with the end day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This Test should be run after the series of Tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENT_DATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d))." ;
+    skos:note "See Test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This Test only asks if dwc:endDayOfYear is a valid value for the relevant year, not if it is consistent with the end day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This Test should be run after the series of Tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d))." ;
     skos:prefLabel "Validation dwc:endDayOfYear In Range for SingleRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/ef8f4379-6691-4cb9-b606-ca445f9fb060> ;
     bdqffdq:hasConsultedInformationElement <https://rs.tdwg.org/bdqtest/informationelement/73513536-e916-4290-800a-c2daf8932e28> ;
@@ -11078,8 +11078,8 @@ bdqtest:b23110e7-1be7-444a-a677-cdee0cf4330c a bdqffdq:Validation ;
 bdqtest:b9c184ce-a859-410c-9d12-71a338200380 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT" ;
     dcterms:description "Does the marine/non-marine biome of a taxon from the bdqval:sourceAuthority match the biome at the location given by the coordinates?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/b9c184ce-a859-410c-9d12-71a338200380-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <http://www.fao.org/3/a0118e/a0118e00.htm#Contents>,
         <https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse>,
         <https://doi.org/10.15468/doc-gg7h-s853>,
@@ -11180,8 +11180,8 @@ bdqtest:c8c61535-ab1a-4ec6-b4e9-f5f02541d7d8 a bdqffdq:Measure ;
 bdqtest:c971fe3f-84c1-4636-9f44-b1ec31fd63c7 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_MAXELEVATION_INRANGE" ;
     dcterms:description "Is the value of dwc:maximumElevationInMeters within the Parameter range?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/c971fe3f-84c1-4636-9f44-b1ec31fd63c7-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/doc-gg7h-s853>,
         <https://en.wikipedia.org/wiki/Extreme_points_of_Antarctica>,
         <https://en.wikipedia.org/wiki/List_of_elevation_extremes_by_country_> ;
@@ -11233,13 +11233,13 @@ bdqtest:d2922585-2070-4851-a033-15e51977f9dc a bdqffdq:Measure ;
 bdqtest:d708526b-6561-438e-aa1a-82cd80b06396 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_MINELEVATION_LESSTHAN_MAXELEVATION" ;
     dcterms:description "Is the value of dwc:minimumElevationInMeters a number less than or equal to the value of dwc:maximumElevationInMeters?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/d708526b-6561-438e-aa1a-82cd80b06396-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/doc-gg7h-s853> ;
     owl:sameAs <urn:uuid:d708526b-6561-438e-aa1a-82cd80b06396> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/108" ;
     skos:note "" ;
-    skos:prefLabel "Validation dwc:minimumElevationInMeters less than dwcmaximumElevationInMeters for SingleRecord" ;
+    skos:prefLabel "Validation dwc:minimumElevationInMeters less than dwc:maximumElevationInMeters for SingleRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/3d5994c8-29df-4399-965c-c2c596a6767f> ;
     bdqffdq:hasCriterion bdqcrit:Consistent ;
     bdqffdq:hasDataQualityDimension bdqdim:Conformance ;
@@ -11382,8 +11382,8 @@ bdqtest:f18a470b-3fe1-4aae-9c65-a6d3db6b550c a bdqffdq:Validation ;
 bdqtest:f8f3a093-042c-47a3-971a-a482aaaf3b75 a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_OCCURRENCESTATUS_STANDARDIZED" ;
     dcterms:description "Proposes an amendment to the value of dwc:occurrenceStatus using the bdqval:sourceAuthority." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f8f3a093-042c-47a3-971a-a482aaaf3b75-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:f8f3a093-042c-47a3-971a-a482aaaf3b75> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/115" ;
     skos:note "The recommended controlled vocabulary for this term consists of \"present\" and \"absent\", which are the only two appropriate terms for a Darwin Core Occurrence. This is reflected in the suggested dwc:occurrenceStatus vocabulary for this Test. Other values for dwc:occurrenceStatus should only arise under circumstances that do not refer to an Occurrence. The GBIF API is listed in the sourceAuthority. However, there is currently a mismatch between the lower case recommended values at https://dwc.tdwg.org/terms/#dwc:occurrenceStatus and the GBIF vocabulary at bdqval:sourceAuthority that uses an upper case first letter (https://api.gbif.org/v1/vocabularies/OccurrenceStatus/concepts), thus implementations using the GBIF API should ensure that matches on alternate terms in that vocabulary are converted to the all lower case values in the present/absent vocabulary recommended in Darwin Core. Implementations should interpret the numeric value 1 as present, and the numeric value 0 as absent." ;
@@ -11575,8 +11575,8 @@ bdqtest:241a279c-76d5-499b-ab49-a47ad7f8df50 a bdqffdq:Measure ;
 bdqtest:2750c040-1d4a-4149-99fe-0512785f2d5f a bdqffdq:Validation ;
     rdfs:label "VALIDATION_CLASSIFICATION_CONSISTENT" ;
     dcterms:description "Is the combination of higher classification taxonomic terms consistent using bdqval:sourceAuthority?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/2750c040-1d4a-4149-99fe-0512785f2d5f-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/39omei> ;
     owl:sameAs <urn:uuid:2750c040-1d4a-4149-99fe-0512785f2d5f> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/123" ;
@@ -11842,11 +11842,11 @@ bdqtest:782773c9-7b37-483d-8ce2-c6683ba81882 a bdqffdq:Measure ;
 bdqtest:85803c7e-2a5a-42e1-b8d3-299a44cafc46 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_STARTDAYOFYEAR_INRANGE" ;
     dcterms:description "Is the value of dwc:startDayOfYear an integer between 1 and 365 inclusive, or 366 if a leap year?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/85803c7e-2a5a-42e1-b8d3-299a44cafc46-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:85803c7e-2a5a-42e1-b8d3-299a44cafc46> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/130" ;
-    skos:note "See Test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This Test only asks if dwc:startDayOfYear is a valid value for the relevant year, not if it is consistent with the start day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This Test should be run after the series of Tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENT_DATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d))." ;
+    skos:note "See Test VALIDATION_DAY_INRANGE (8d787cb5-73e2-4c39-9cd1-67c7361dc02e). This Test only asks if dwc:startDayOfYear is a valid value for the relevant year, not if it is consistent with the start day of the range specified in dwc:eventDate. In a non-leap year, the valid range is 1-365 inclusive, in a leap year 366 is also valid. This Test should be run after the series of Tests that assure that dwc:eventDate is populated, if possible (i.e., AMENDMENT_EVENTDATE_FROM_VERBATIM (6d0a0c10-5e4a-4759-b448-88932f399812), AMENDMENT_EVENTDATE_STANDARDIZED (718dfc3c-cb52-4fca-b8e2-0e722f375da7), and AMENDMENT_EVENTDATE_FROM_YEARMONTHDAY (3892f432-ddd0-4a0a-b713-f2e2ecbd879d))." ;
     skos:prefLabel "Validation dwc:startDayOfYear In Range for SingleRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/83d00e4e-6359-4545-87fc-94b080f46ead> ;
     bdqffdq:hasConsultedInformationElement <https://rs.tdwg.org/bdqtest/informationelement/73513536-e916-4290-800a-c2daf8932e28> ;
@@ -11980,8 +11980,8 @@ bdqtest:c70c4950-2246-4acc-a59d-81eaa47edf2b a bdqffdq:Measure ;
 bdqtest:cdaabb0d-a863-49d0-bc0f-738d771acba5 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_DCTYPE_STANDARD" ;
     dcterms:description "Does the value of dc:type occur as a value in the DCMI type vocabulary?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/cdaabb0d-a863-49d0-bc0f-738d771acba5-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/> ;
     owl:sameAs <urn:uuid:cdaabb0d-a863-49d0-bc0f-738d771acba5> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/91" ;
@@ -12144,8 +12144,8 @@ bdqtest:0f8b30e2-59dc-46ba-8b91-62049cd1a4e2 a bdqffdq:Measure ;
 bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_BASISOFRECORD_STANDARD" ;
     dcterms:description "Does the value of dwc:basisOfRecord occur in the bdqval:sourceAuthority?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/42408a00-bf71-4892-a399-4325e2bc1fb8-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:42408a00-bf71-4892-a399-4325e2bc1fb8> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/104" ;
     skos:note "The term dwc:basisOfRecord has the comment \"Recommended best practice is to use a controlled vocabulary such as the set of local names of the identifiers for classes in Darwin Core.\" The list of these values can be determined by searching https://github.com/tdwg/dwc/blob/master/vocabulary/term_versions.csv for rows with status=\"recommended\" and rdf_type=\"http://www.w3.org/2000/01/rdf-schema#Class\". For Tests against a dwc:Occurrence record, the set of valid terms is more limited and embodied in the resource found at https://rs.gbif.org/vocabulary/dwc/basis_of_record.xml. This Test must return NOT_COMPLIANT if there is leading or trailing whitespace or there are leading or trailing non-printing characters." ;
@@ -12159,12 +12159,12 @@ bdqtest:42408a00-bf71-4892-a399-4325e2bc1fb8 a bdqffdq:Validation ;
 bdqtest:4c09f127-737b-4686-82a0-7c8e30841590 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_TAXON_UNAMBIGUOUS" ;
     dcterms:description "Can the taxon be unambiguously resolved from bdqval:sourceAuthority using the available taxon terms?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/4c09f127-737b-4686-82a0-7c8e30841590-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/39omei> ;
     owl:sameAs <urn:uuid:4c09f127-737b-4686-82a0-7c8e30841590> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/70" ;
-    skos:note "There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:CultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (4c09f127-737b-4686-82a0-7c8e30841590) is a more specific Test for a subset of Information Elements from this Test. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**" ;
+    skos:note "There are any number of potential controlled vocabularies that might be used for this Test, including local vocabularies and taxon specific vocabularies. If dwc:scientificNameID is bdqval:Empty, use dwc:scientificName and dwc:cultivarEpithet to search for a unique taxon. If dwc:scientificName is bdqval:Empty, check with the terms that form atomic parts of it (dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship), and if more than one match is found, use the remaining terms to try to disambiguate to a single Taxon record. The terms dwc:subgenus, dwc:genus, dwc:family, dwc:order, dwc:class, dwc:phylum, dwc:kingdom, dwc:higherClassification, dwc:scientificNameID, dwc:acceptedNameUsageID, dwc:originalNameUsageID, dwc:taxonConceptID should not be used to make a match if dwc:scientificNameID and dwc:scientificName or dwc:genericName, dwc:specificEpithet, dwc:infraspecificEpithet, dwc:taxonRank, dwc:scientificNameAuthorship are bdqval:Empty. Note that Test VALIDATION_SCIENTIFICNAME_FOUND (3f335517-f442-4b98-b149-1e87ff16de45) is a more specific Test for a subset of Information Elements from this Test. **Review Note: GBIF has indicated that we should switch to the Catalog of Life for the default source authority for this test. That change is planned prior to ratification.**" ;
     skos:prefLabel "Validation dwc:Taxon Unambiguous for SingleRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/7dbf3aca-f028-4eba-a132-db6abbd4ff16> ;
     bdqffdq:hasConsultedInformationElement <https://rs.tdwg.org/bdqtest/informationelement/1a70260f-f70c-4c36-a325-e7bdcaecc170> ;
@@ -12347,8 +12347,8 @@ bdqtest:eb4a17f6-6bea-4cdd-93dd-d5a7e9d1eccf a bdqffdq:Validation ;
 bdqtest:f01fb3f9-2f7e-418b-9f51-adf50f202aea a bdqffdq:Amendment ;
     rdfs:label "AMENDMENT_SCIENTIFICNAME_FROM_SCIENTIFICNAMEID" ;
     dcterms:description "Proposes an amendment to the value of dwc:scientificName using the dwc:scientificNameID value from the bdqval:sourceAuthority." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f01fb3f9-2f7e-418b-9f51-adf50f202aea-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     dcterms:references <https://doi.org/10.15468/39omei> ;
     owl:sameAs <urn:uuid:f01fb3f9-2f7e-418b-9f51-adf50f202aea> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/71" ;
@@ -12364,8 +12364,8 @@ bdqtest:f01fb3f9-2f7e-418b-9f51-adf50f202aea a bdqffdq:Amendment ;
 bdqtest:f51e15a6-a67d-4729-9c28-3766299d2985 a bdqffdq:Validation ;
     rdfs:label "VALIDATION_EVENTDATE_NOTEMPTY" ;
     dcterms:description "Is there a value in dwc:eventDate?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/f51e15a6-a67d-4729-9c28-3766299d2985-2026-11-21> ;
+    dcterms:modified "2026-11-21"^^xsd:date ;
     owl:sameAs <urn:uuid:f51e15a6-a67d-4729-9c28-3766299d2985> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/33" ;
     skos:note "" ;

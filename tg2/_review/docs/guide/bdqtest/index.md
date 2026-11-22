@@ -8,7 +8,7 @@
 BDQ Tests: Concepts and Use
 
 **Date version issued**<br>
-2026-11-20
+2026-11-21
 
 **Date created**<br>
 2026-11-13
@@ -22,13 +22,13 @@ BDQ Tests: Concepts and Use
 -->
 
 **This version**<br>
-<https://rs.tdwg.org/bdqtest/doc/guide/2026-11-20>
+<https://rs.tdwg.org/bdqtest/doc/guide/2026-11-21>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqtest/doc/guide/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqtest/doc/guide/2026-11-17>
+<https://rs.tdwg.org/bdqtest/doc/guide/2026-11-20>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, providing context for and normative guidance on use of the bdqtest: vocabulary.
@@ -40,7 +40,7 @@ This document is a reference for the BDQ standard, providing context for and nor
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-20>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-21>
 
 **Status**<br>
 Draft Standard for Review
@@ -229,7 +229,7 @@ The emphasis in BDQ is on Tests that evaluate values from a `Single Record` ([bd
 
 ### 2.1 The BDQ Definition of "Test" (non-normative)
 
-This section defines the capitalized term "Test" as used in the BDQ standard and how it is constructed within the Fitness-for-Use framework. We use the capitalized term "Test" to mean something specific in the BDQ Standard. A Test is any instance of a subclass of [bdqffdq:DataQualityNeed](<../../list/bdqffdq/index.md#DataQualityNeed> "A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.") (e.g., [bdqffdq:Validation](<../../list/bdqffdq/index.md#Validation> "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.")) composed with an instance of a subclass of `bdqffdq:Method` (e.g., [bdqffdq:ValidationMethod](<../../list/bdqffdq/index.md#ValidationMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.")) composed with an instance of [bdqffdq:Specification](<../../list/bdqffdq/index.md#Specification> "A specific statement about how to evaluate a bdqffdq:DataQualityNeed."). When run by a [bdqffdq:Implementation](<../../list/bdqffdq/index.md#Implementation> "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification."), each BDQ Test can produce a [bdqffdq:DataQualityReport](<../../list/bdqffdq/index.md#DataQualityReport> "A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses.") consisting of `bdqffdq:Responses`. See the diagram in [BDQ Tests: An Operational Perspective](#51-bdq-tests-an-operational-perspective-non-normative) below.
+This section defines the capitalized term "Test" as used in the BDQ standard and how it is constructed within the Fitness-for-Use framework. We use the capitalized term "Test" to mean something specific in the BDQ Standard. A Test is any instance of a subclass of [bdqffdq:DataQualityNeed](<../../list/bdqffdq/index.md#DataQualityNeed> "A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.") (e.g., [bdqffdq:Validation](<../../list/bdqffdq/index.md#Validation> "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.")) composed with an instance of a subclass of [bdqffdq:DataQualityMethod](<../../list/bdqffdq/index.md#DataQualityMethod> "A bdqffdq:SolutionsConcept that relates a bdqffdq:DataQualityNeed to a bdqffdq:Specification.") (e.g., [bdqffdq:ValidationMethod](<../../list/bdqffdq/index.md#ValidationMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.")) composed with an instance of [bdqffdq:Specification](<../../list/bdqffdq/index.md#Specification> "A specific statement about how to evaluate a bdqffdq:DataQualityNeed."). When run by a [bdqffdq:Implementation](<../../list/bdqffdq/index.md#Implementation> "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification."), each BDQ Test can produce a [bdqffdq:DataQualityReport](<../../list/bdqffdq/index.md#DataQualityReport> "A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses.") consisting of `bdqffdq:Responses`. See the diagram in [BDQ Tests: An Operational Perspective](#51-bdq-tests-an-operational-perspective-non-normative) below.
 
 The scope of each BDQ Test is largely provided by the properties of a `bdqffdq:Specification`. The [Darwin Core Terms](https://dwc.tdwg.org/list/) (Darwin Core Maintenance Group 2021) used in the specification are included in the `Information Elements` ([bdqffdq:InformationElement](<../../list/bdqffdq/index.md#InformationElement> "A portion of data with which a bdqffdq:DataQualityNeed is concerned.")). The specification also includes references to external authorities (external to the Test specification, and usually also external to the Darwin Core standard, Wieczorek et al. 2012) that are required to implement the Test, for example, references to an [ISO](<../../../index.md#glossary_ISO> "International Organization for Standardization.") standard or a [GBIF](<../../../index.md#glossary_GBIF> "Global Biodiversity Information Facility is an international network and data infrastructure funded by the world’s governments and aimed at providing anyone, anywhere, open access to data about all types of life on Eart…") maintained controlled vocabulary. Such authoritative references are listed under `sourceAuthority` ([bdqval:sourceAuthority](<../../list/bdqval/index.md#bdqval_sourceAuthority> "An authority using the 'bdqval' namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority 'bdqval:sourceAuthority default…")) with a link to the authority and optionally, a link to a specific online resource required for the implementation of the Test.
 
@@ -258,9 +258,9 @@ Under the principle that data has quality only with respect to use, each of the 
 ## 3 Test Types (non-normative)
 
 <!-- validation directly linked below for consistent post-build rendering as it is autolinked above, while issue and other types have their first appeerance and autolinking here. -->
-The concept of "[Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…")" in the context of BDQ include four distinct types: `Validation` ([bdqffdq:Validation](../../list/bdqffdq/index.md#Validation)); `Issue` ([bdqffdq:Issue](<../../list/bdqffdq/index.md#Issue> "A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.")); `Amendment` ([bdqffdq:Amendment](<../../list/bdqffdq/index.md#Amendment> "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.")) and `Measure` ([bdqffdq:Measure](<../../list/bdqffdq/index.md#Measure> "A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.")).
+The concept of "[Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…")" in the context of BDQ includes four distinct types: `Validation` ([bdqffdq:Validation](../../list/bdqffdq/index.md#Validation)); `Issue` ([bdqffdq:Issue](<../../list/bdqffdq/index.md#Issue> "A bdqffdq:DataQualityNeed that expresses how quality problems may be identified in data.")); `Amendment` ([bdqffdq:Amendment](<../../list/bdqffdq/index.md#Amendment> "A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.")) and `Measure` ([bdqffdq:Measure](<../../list/bdqffdq/index.md#Measure> "A bdqffdq:DataQualityNeed that expresses how the fitness of data for some use may be measured.")).
 
-A Response serves as the formal output of a Test and consists of three primary components: `Response.status`, `Response.result` and `Response.comment` See [Structure of Response (normative)](#41-structure-of-response-normative).
+A Response serves as the formal output of a Test and consists of three primary components: `Response.status`, `Response.result` and `Response.comment`. See [Structure of Response (normative)](#41-structure-of-response-normative).
 
 ### 3.1 Validation Tests (normative)
 
@@ -280,10 +280,9 @@ In each case, a `Response.comment` MUST be present with text explaining to consu
 
 Each Issue Test is composed of an instance of `bdqffdq:Issue` (which expresses a data quality need in the abstract) with an instance of [bdqffdq:IssueMethod](<../../list/bdqffdq/index.md#IssueMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications."), which links it to an instance of a `bdqffdq:Specification` (which gives details of how that data quality need is to be concretely assessed).
 
-`Issue` Tests are a form of warning flag where the Test is drawing attention to potential problem with the value of an `Information Element` for at least one use of the data.
+`Issue` Tests are a form of warning flag where the Test is drawing attention to a potential problem with the value of an `Information Element` for at least one use of the data.
 
-We have used `Issue` Tests for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of these cases would take human review. For example, the Test [ISSUE_ANNOTATION_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) is informing the tester than there is at least one annotation associated with a record and this should be evaluated before using the record. Similarly for the two `Issue` Tests
-where some form of transformation has occurred: [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY), and for the Test [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY) where the value needs to be assessed for utility and the Test [ISSUE_COORDINATES_CENTEROFCOUNTRY](../../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY) which signals a likely high uncertainty for a georeference.
+We have used `Issue` Tests for a small number of cases where we wished to flag a value that might indicate a record is not fit for some purpose, but the evaluation of these cases would take human review. For example, the Test [ISSUE_ANNOTATION_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ANNOTATION_NOTEMPTY) is informing the tester that there is at least one annotation associated with a record and this should be evaluated before using the record. Similarly, the Test [ISSUE_DATAGENERALIZATIONS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_DATAGENERALIZATIONS_NOTEMPTY) flags data where some form of transformation has occurred, [ISSUE_ESTABLISHMENTMEANS_NOTEMPTY](../../terms/bdqtest/index.md#ISSUE_ESTABLISHMENTMEANS_NOTEMPTY) flags a value that needs to be assessed for utility, and [ISSUE_COORDINATES_CENTEROFCOUNTRY](../../terms/bdqtest/index.md#ISSUE_COORDINATES_CENTEROFCOUNTRY) signals a likely high uncertainty for a georeference.
 
 The response of an `Issue` Test (an instance of a [bdqffdq:IssueResponse](<../../list/bdqffdq/index.md#IssueResponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Issue for a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.")) MUST take one of three forms.
 
@@ -302,18 +301,17 @@ Each `Measure` Test is composed of an instance of `bdqffdq:Measure` (which expre
 
 `Measure` Tests return a `Response.result` of either a numeric value or one of the values "COMPLETE" or "NOT_COMPLETE". `Measure` Tests may directly measure properties of data. Alternatively, `Measure` Tests may measure the outputs of other Tests, for example, a `Measure` may count the number of `Response.results` from all COMPLIANT `Validation` Tests run on a [bdqffdq:SingleRecord](<../../list/bdqffdq/index.md#SingleRecord> "A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:DataQualityNeed.").
 
-The only `Measure` defined in the initial BDQ standard that directly examines data is the Test [MEASURE_EVENTDATE_DURATIONINSECONDS](../../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS). This Test returns a `Response.result` measuring the amount of time represented by the value in `dwc:eventDate`, and can be used in Quality Assurance under specific research `Data Quality Needs` to identify `dwc:Occurrences` where the date observed or collected is known well enough for particular analytical needs (e.g., to at least one day for phenology studies, to at least one year for other purposes). The Test basically interprets the results of running the `Validation` and `Amendment` Tests and provides an indication of the length of the period of the value of `dwc:eventDate`.
+The only `Measure` defined in the initial BDQ standard that directly examines data is the Test [MEASURE_EVENTDATE_DURATIONINSECONDS](../../terms/bdqtest/index.md#MEASURE_EVENTDATE_DURATIONINSECONDS). This Test returns a `Response.result` measuring the amount of time represented by the value in `dwc:eventDate`, and can be used in Quality Assurance under specific research `Data Quality Needs` to identify `dwc:Occurrences` where the date observed or collected is known well enough for particular analytical needs (e.g., to at least one day for phenology studies, to at least one year for other purposes). 
 
 Most `Single Record` `Measure` Tests defined in the BDQ standard count the number of `Validation` or `Amendment` Tests with a specified `Response.result` from a `Single Record` Test.
 
-The response of a `Measure` Test (an instance of a [bdqffdq:MeasurementResponse](<../../list/bdqffdq/index.md#MeasurementResponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.")) MUST take one of three forms.
+The response of a `Measure` Test (an instance of a [bdqffdq:MeasurementResponse](<../../list/bdqffdq/index.md#MeasurementResponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation measuring a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.")) MUST take one of three forms:
 
 1. A `Response.status` of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., a `bdqval:sourceAuthority`) is unavailable. Running the same Test on the same data at a different time may result in a different result. In this case, the `Response.result` MUST be empty.
 2. A `Response.status` of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the `Information Elements` are such that the Test cannot be meaningfully run. In this case, the `Response.result` MUST be empty.
 3. A `Response.status` of "RUN_HAS_RESULT" when the prerequisites for running the Test have been met, and in this case either:
-  - a `Response.result`="COMPLETE", or a `Response.result`="NOT_COMPLETE".
-or
-  - a `Response.result` containing a single number.
+  - a `Response.result`="COMPLETE", or a `Response.result`="NOT_COMPLETE",
+  - or a `Response.result` containing a single number.
 
 In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the Test produced this response in this case.
 
@@ -321,9 +319,9 @@ In each case, a `Response.comment` MUST be present with text explaining to consu
 
 Each `Amendment` Test is composed of an instance of `bdqffdq:Amendment` (which expresses how to improve data to fit a data quality need in the abstract) with an instance of [bdqffdq:AmendmentMethod](<../../list/bdqffdq/index.md#AmendmentMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Amendment to its bdqffdq:Specifications."), which links it to an instance of a `bdqffdq:Specification` (which gives details of how proposals could be made to improve data for that need).
 
-An `Amendment` Test MAY propose a change to one or more [Darwin Core](<../../../index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:") term values, or MAY propose to fill in missing values. The `Response` produced by an `Amendment` is intended to improve one or more components of the quality of the record. The `Response.result` from an `Amendment` MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database of record when a `Data Quality Report` is used for Quality Control of an existing database of record. Consumers of `Data Quality Reports` under Quality Assurance uses MAY choose to accept all proposed `Amendments` as part of a pipeline in preparing data for an analysis. `Amendments`, under the Fitness For Use Framework, may also propose changes to procedures rather than to data values, we have not framed any in this form in the BDQ Tests at the time of first release.
+An `Amendment` Test MAY propose a change to one or more [Darwin Core](<../../../index.md#glossary_Darwin_Core> "Darwin Core. A Standard intended to facilitate the sharing of information about biological diversity. Host of the dwc:namespace dwc:") term values, or MAY propose to fill in missing values. The `Response` produced by an `Amendment` is intended to improve one or more components of the quality of the record. The `Response.result` from an `Amendment` MUST always be treated as a proposal for a change, and MUST NOT be blindly applied to a database of record when a `Data Quality Report` is used for Quality Control of an existing database of record. Consumers of `Data Quality Reports` under Quality Assurance uses MAY choose to accept all proposed `Amendments` as part of a pipeline in preparing data for an analysis. `Amendments`, under the Fitness For Use Framework, may also propose changes to procedures rather than to data values; we have not framed any in this form in the BDQ Tests at the time of first release.
 
-The response of an `Amendment` Test (an instance of a [bdqffdq:AmendmentResponse](<../../list/bdqffdq/index.md#AmendmentResponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource.")) MUST take one of four forms.
+The response of an `Amendment` Test (an instance of a [bdqffdq:AmendmentResponse](<../../list/bdqffdq/index.md#AmendmentResponse> "A bdqffdq:Response expressing the result of a bdqffdq:Implementation evaluating a bdqffdq:Amendment supporting a particular bdqffdq:DataQualityNeed to improve a particular bdqffdq:DataResource.")) MUST take one of five forms.
 
 1. A `Response.status` of "EXTERNAL_PREREQUISITES_NOT_MET" when an external resource (e.g., `bdqval:sourceAuthority`) is unavailable. Running the same Test on the same data at a different time may result in a different result. In this case, the Response.result MUST be empty.
 2. A `Response.status` of "INTERNAL_PREREQUISITES_NOT_MET" when the values of one or more of the `Information Elements` are such that the Test cannot be meaningfully run. In this case, the Response.result MUST be empty.
@@ -331,6 +329,7 @@ The response of an `Amendment` Test (an instance of a [bdqffdq:AmendmentResponse
   - A `Response.result` containing a list of key-value pairs of the terms for which values are to be filled in, and the proposed new values for those terms.
 4. A `Response.status` of "AMENDED" when the prerequisites for running the Test have been met and a proposal is made to change a value for one or more input terms that were Empty, and in this situation:
   - A `Response.result` containing a list of key-value pairs of the terms for which new values are proposed, and the proposed new values for those terms.
+5. A `Response.status` of "NOT_AMENDED" when the prerequisites for running the Test have been met but no change or addition can be proposed. In this case, the `Response.result` MUST be empty.
 
 In each case, a `Response.comment` MUST be present with text explaining to consumers of the `Data Quality Report` why the Test produced this response in this case.
 
@@ -352,7 +351,7 @@ See the [Fitness For Use Framework Summary of Mathematical Formalization (normat
 
 The technical (normative) details of the BDQ [Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") terms (those in the `bdqtest:` namespace) are found in the [BDQ Tests List of Terms](../../list/bdqtest/index.md).
 
-The technical definitions of the `bdqtest:` terms are supported by terms in several additional namespaces in the BDQ standard, namely `bdqval:`, `bdquc`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:`. For the details and rationale, see Chapman et al. (2017).
+The technical definitions of the `bdqtest:` terms are supported by terms in several additional namespaces in the BDQ standard, namely `bdqval:`, `bdquc:`, `bdqffdq:`, `bdqdim:`, `bdqenh:`, and `bdqcrit:`. For the rationale behind BDQ see Chapman et al. (2020).
 
 | **Abbreviation**  | **Technical List of Terms** |
 | -------- | ----------------------- |
@@ -368,7 +367,7 @@ The technical definitions of the `bdqtest:` terms are supported by terms in seve
 
 Output from each of the Tests MUST be structured data, and MUST NOT be simple pass/fail flags. The output from a Test is a `Response`, which can form part of a `Data Quality Report` or be wrapped in an `Annotation`, and MUST include the following three components: 
 
-1. `Response.result` is the returned result for the Test, i.e., a strictly controlled vocabulary value (consisting of "COMPLIANT" or "NOT_COMPLIANT" only) for `Validation` Tests; a strictly controlled vocabulary value ("NOT_ISSUE" or "POTENTIAL_ISSUE" only) for `Issue` Tests; a numeric value or a strictly controlled vocabulary value (consisting of exactly "COMPLETE" or "NOT_COMPLETE" for `Measure` Tests; and a data structure (e.g., a list of key value pairs) for proposed changes for `Amendment` Tests.
+1. `Response.result` is the returned result for the Test, i.e., a strictly controlled vocabulary value (consisting of "COMPLIANT" or "NOT_COMPLIANT" only) for `Validation` Tests; a strictly controlled vocabulary value ("NOT_ISSUE", "POTENTIAL_ISSUE", or "IS_ISSUE" only) for `Issue` Tests; a numeric value or a strictly controlled vocabulary value (consisting of exactly "COMPLETE" or "NOT_COMPLETE") for `Measure` Tests; and a data structure (e.g., a list of key value pairs) for proposed changes for `Amendment` Tests.
 2. `Response.status` provides a controlled vocabulary, metadata concerning the success, failure, or problems with the Test. The Status also serves as a link to information about warning type values and where, with future development, probabilistic assertions about the likeliness of the value could be made.
 3. `Response.comment` supplies human-readable text describing reasons for the Test result output.
 
@@ -383,13 +382,13 @@ When responses are in the form of RDF, the RDF MUST meet the following condition
     - Unless the `bdqffdq:Response` is a `bdqffdq:MeasurementResponse` that returns a numeric value, in which case the `Response` MUST have one and only one `bdqffdq:hasResponseResultValue` data property linking it to a numeric value.
   - If the object of the `bdqffdq:hasResponseStatus` is one of `bdqffdq:AMENDED` or `bdqffdq:FILLED_IN`, then the instance of the `Response` MUST have one and only one `bdqffdq:hasResponseResultValue` data property linking it to structured data presenting the result of the `Amendment`. The string in the `bdqffdq:hasResponseResultValue` SHOULD be a JSON list of key:value pairs, where the keys are specific `Information Elements` (e.g., `dwc:eventDate`), and the values are the new values proposed by the `Amendment`.
   - If the object of the `bdqffdq:hasResponseStatus` is one of `bdqffdq:INTERNAL_PREREQUISITES_NOT_MET`, `bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET`, `bdqffdq:NOT_AMENDED`, then no `bdqffdq:hasResponseResult` SHOULD be present.
-4. The `Response` MUST have at least one [bdqffdq:hasResponseComment](<../../list/bdqffdq/index.md#hasResponseComment> "Free text describing the bdqffdq:Response made in the response and why that conclusion was reached.") data property. This `bdqffdq:hasResponseComment` must provide a human readable text explanation of why the conclusion expressed in the `Response` was reached. The `bdqffdq:hasResponseComment` MAY be repeated to provide the comment in different languages. Each `bdqffdq:hasResponseComment` SHOULD be a independent and complete explanation.
+4. The `Response` MUST have at least one [bdqffdq:hasResponseComment](<../../list/bdqffdq/index.md#hasResponseComment> "Free text describing the bdqffdq:Response made in the response and why that conclusion was reached.") data property. This `bdqffdq:hasResponseComment` must provide a human readable text explanation of why the conclusion expressed in the `Response` was reached. The `bdqffdq:hasResponseComment` MAY be repeated to provide the comment in different languages. Each `bdqffdq:hasResponseComment` SHOULD be an independent and complete explanation.
 5. The `Response` MAY have a [bdqffdq:hasResponseQualifier](<../../list/bdqffdq/index.md#hasResponseQualifier> "ResponseQualifier object asserted by an Response.") object property.
 
 When the `Response` is represented as a data structure in a form other than RDF, the data structure MUST:
 
 1. Have properties corresponding to `Response.status`, `Response.result`, and `Response.comment`. These properties SHOULD have these labels.
-2. Have one `Response.status` property, containing a string constant that MUST be one of the local names of one of the named individuals in `bdqffdq:` with a type `bdqffdq:ResponseStatus` ("INTERNAL_PREREQUISITES_NOT_MET", "EXTERNAL_PREREQUISITES_NOT_MET", "NOT_AMENDED", "AMENDED", "FILLED_IN", or "RUN_HAS_RESULT"").
+2. Have one `Response.status` property, containing a string constant that MUST be one of the local names of one of the named individuals in `bdqffdq:` with a type `bdqffdq:ResponseStatus` ("INTERNAL_PREREQUISITES_NOT_MET", "EXTERNAL_PREREQUISITES_NOT_MET", "NOT_AMENDED", "AMENDED", "FILLED_IN", or "RUN_HAS_RESULT").
 3. Have one `Response.result` property.
   - If the `Response.status` is "RUN_HAS_RESULT" then the value of the `Response.result` property MUST be a string constant that is one of the local names of one of the named individuals of type `bdqffdq:ResponseResult` ("COMPLETE", "COMPLIANT", "IS_ISSUE", "NOT_COMPLETE", "NOT_COMPLIANT", "NOT_ISSUE", or "POTENTIAL_ISSUE").
     - Unless the `Response` is from a `Measure` Test that returns a numeric value, in which case the value of the `Response.result` property MUST be a numeric value.
@@ -403,7 +402,7 @@ Nothing in this section should be taken as:
 * constraining how `Data Quality Reports` are presented to consumers of those reports, so long as all three elements of `Response.result`, `Response.status`, and `Response.comment` can be accessed.
 * constraining internationalization and languages of labels applied to human readable presentations of Responses from Tests.
 * a requirement for a particular format or serialization of `bdqffdq:Responses`. Implementations MAY serialize `Responses` in any appropriate form for the context. When `Responses` are wrapped in `oa:Annotations` or presented as linked open data, an RDF representation SHOULD be used.
-* a requirement to how `bdqffdq:Responses` are to be presented to consumers of `Data Quality Reports`. Implementations MAY present the results of Tests in any form appropriate for their consumers, so long as none of the required information is suppressed.
+* a requirement as to how `bdqffdq:Responses` are to be presented to consumers of `Data Quality Reports`. Implementations MAY present the results of Tests in any form appropriate for their consumers, so long as none of the required information is suppressed.
 
 ### 4.2 Resource Types (normative)
 
@@ -415,7 +414,7 @@ A `Single Record` ([bdqffdq:SingleRecord](<../../list/bdqffdq/index.md#SingleRec
 * MAY extend across one to many relations from that class instance to instances of classes of other types in a structured representation of Darwin Core data (Wieczorek et al. 2012).
   * For example, input Darwin Core data in RDF should be presented to a BDQ `Single Record` Test one `dwc:Occurrence` at a time, although the `dwc:Occurrence` could be linked to multiple other instances of other classes such as `dwc:Identifications`.
   * Handling of multiplicity of related rows in a `Single Record` is a responsibility of Test execution frameworks.
-  * See the disscussion of `Single Record` in relation to the Darwin Core Data Package (Dawin Core Maintinance Group, 2026) format below.
+  * See the discussion of `Single Record` in relation to the Darwin Core Data Package (Darwin Core Maintenance Group 2026) format below.
 * SHOULD NOT take multiple rows from a flat file (e.g. Simple Darwin Core) as input. 
 * SHOULD NOT take multiple objects of the same core type in structured Darwin Core as input 
 
@@ -512,7 +511,7 @@ Example values for `bdqffdq:hasAuthoritiesDefaults`:
 ```
      bdqval:earliestValidDate default ="1582-11-15"
 
-     bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&amp;name=]}
+     bdqval:sourceAuthority default = "GBIF Backbone Taxonomy" {[https://doi.org/10.15468/39omei]} {API endpoint [https://api.gbif.org/v1/species?datasetKey=d7dddbf4-2cf0-4f39-9b2a-bb099caae36c&name=]}
 ```
 
 Example RDF fragment showing use of `Arguments` and `bdqffdq:hasAuthoritiesDefaults`: 
@@ -614,11 +613,11 @@ _A workflow with a single validation step, with `Measures` evaluating the result
 
 Subsequent to this initial validation step, in an amendment phase, `Amendments` can be executed on the raw input data and their `Response.results` applied to modify the data (modified only locally in the test execution environment).  
 
-Then, in a post-amendment step and these amended data can undergo a second phase of validation, with `Measures` again evaluating the results of the `Validations`, but this time not on the raw input data, but on the data as if all changes proposed by `Amendments` were accepted (i.e., a hypothetical ‘all-amendments-applied’ view).
+Then, in a post-amendment step, these amended data can undergo a second phase of validation, with `Measures` again evaluating the results of the `Validations`, but this time not on the raw input data, but on the data as if all changes proposed by `Amendments` were accepted (i.e., a hypothetical ‘all-amendments-applied’ view).
 
 A comparison of the results of the `Measures` in the first validation phase with those in the second validation phase can be used to evaluate the impact of the proposed changes from the `Amendments`, that is, how much could the quality of the data be improved for the specific `Use Case` by accepting the proposed changes from the `Amendments`.
 
-One expected outcome of such a three phase (pre-amendment, amendment, post-amendment) workflow is a `Data Quality Report`, which supports both `Quality Control` and `Quality Assurance` purposes. The `Data Quality Report` can be used for `Quality Control` purposes by evaluating the number and distribution of quality issues in the data, as well the potential impact of proposed changes.  For `Quality Assurance` purposes, the `Measures` from the second validation phase can be used to filter the data for downstream use, retaining only those records that are fit for a particular purpose (the purpose specified by the `Use Case`).  
+One expected outcome of such a three phase (pre-amendment, amendment, post-amendment) workflow is a `Data Quality Report`, which supports both `Quality Control` and `Quality Assurance` purposes. The `Data Quality Report` can be used for `Quality Control` purposes by evaluating the number and distribution of quality issues in the data, as well as the potential impact of proposed changes.  For `Quality Assurance` purposes, the `Measures` from the second validation phase can be used to filter the data for downstream use, retaining only those records that are fit for a particular purpose (the purpose specified by the `Use Case`).  
 
 ![Diagram of workflow with pre-amendment validation+measure phase, followed by amendment phase, followed by post-amendment validation-measure phase](workflow_two_iterations.svg)
 
@@ -626,7 +625,7 @@ _A workflow with a pre-amendment validation+measure phase, followed by an amendm
 
 ## 6 Example RDF description of a Test (non-normative) 
 
-A complete description of BDQ Tests can be found in the [RDF](<../../../index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace rdf:") representation of this vocabulary. Following the Fitness For Use Framework Ontology (`bdqffdq:`), a [Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") is composed of an instance of a subclass of a [bdqffdq:DataQualityNeed](<../../list/bdqffdq/index.md#DataQualityNeed> "A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.") (e.g., [bdqffdq:Validation](<../../list/bdqffdq/index.md#Validation> "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.")), an instance of a [bdqffdq:ActedUpon](<../../list/bdqffdq/index.md#ActedUpon> "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Responses about the data quality in that bdqffdq:InformationElement.") `Information Element`, optionally an instance of a [bdqffdq:Consulted](<../../list/bdqffdq/index.md#Consulted> "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Responses about the data quality in another bdqffdq:InformationElement.") `Information Element`, an instance of a subclass of `bdqffdq:Method` (e.g., [bdqffdq:ValidationMethod](<../../list/bdqffdq/index.md#ValidationMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.")), and an instance of a [bdqffdq:Specification](<../../list/bdqffdq/index.md#Specification> "A specific statement about how to evaluate a bdqffdq:DataQualityNeed."). Most of the information associated with a `bdqtest:` term is expressed in other vocabularies, in particular `bdqffdq:`. This structure and dependence on other vocabularies can be seen in the formal example description of [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), below.
+A complete description of BDQ Tests can be found in the [RDF](<../../../index.md#glossary_RDF> "Resource Description Framework - a W3C standard for modeling, interchanging, and linking structured data on the web. Hosts the namespace rdf:") representation of this vocabulary. Following the Fitness For Use Framework Ontology (`bdqffdq:`), a [Test](<../../../index.md#glossary_Test> "A composition of a bdqffdq:DataQualityNeed with a bdqffdq:DataQualityMethod that links it to an instance of a bdqffdq:Specification, these instances being composed of InformationElements, Arguments, and Parameters. See…") is composed of an instance of a subclass of a [bdqffdq:DataQualityNeed](<../../list/bdqffdq/index.md#DataQualityNeed> "A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.") (e.g., [bdqffdq:Validation](<../../list/bdqffdq/index.md#Validation> "A bdqffdq:DataQualityNeed that expresses how data may be evaluated for fitness for use.")), an instance of a [bdqffdq:ActedUpon](<../../list/bdqffdq/index.md#ActedUpon> "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed expresses bdqffdq:Responses about the data quality in that bdqffdq:InformationElement.") `Information Element`, optionally an instance of a [bdqffdq:Consulted](<../../list/bdqffdq/index.md#Consulted> "A bdqffdq:InformationElement, expressed in concrete terms, about which a bdqffdq:DataQualityNeed examines in order to expresses bdqffdq:Responses about the data quality in another bdqffdq:InformationElement.") `Information Element`, an instance of a subclass of [bdqffdq:DataQualityMethod](<../../list/bdqffdq/index.md#DataQualityMethod> "A bdqffdq:SolutionsConcept that relates a bdqffdq:DataQualityNeed to a bdqffdq:Specification.") (e.g., [bdqffdq:ValidationMethod](<../../list/bdqffdq/index.md#ValidationMethod> "A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Validation to its bdqffdq:Specifications.")), and an instance of a [bdqffdq:Specification](<../../list/bdqffdq/index.md#Specification> "A specific statement about how to evaluate a bdqffdq:DataQualityNeed."). Most of the information associated with a `bdqtest:` term is expressed in other vocabularies, in particular `bdqffdq:`. This structure and dependence on other vocabularies can be seen in the formal example description of [VALIDATION_COUNTRYCODE_STANDARD](../../terms/bdqtest/index.md#VALIDATION_COUNTRYCODE_STANDARD), below.
 
 
 
@@ -735,7 +734,7 @@ Formally, the description of a Test is complex.  Informally, there are a few cen
 * Fourth, this plain language description of the Test must be expanded into specific language that allows an implementer to understand exactly what code implementing a Test should do, and what outputs it should provide for different possible input values, this is the `Expected Response`.   
 * Fifth, it is important to be clear whether a Test evaluates a `Single Record` or operates over multiple records in a data set (a `Multi Record` Test).
 
-Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of `ac:variantLiteral` in a `Single Record` is found in as a controlled value string in the Audiovisual Core variant: List of Terms, combined with an `Amendment` that proposes changes to values of `ac:variantLiteral` to conform them to that controlled vocabulary, combined with a `Multi Record` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by running the Tests in pre-amendment, amendment, and post-amendment phases) 
+Tests may be expected to form related clusters, for example, a `Validation` that assesses whether the value of `ac:variantLiteral` in a `Single Record` is found as a controlled value string in the Audiovisual Core variant: List of Terms, combined with an `Amendment` that proposes changes to values of `ac:variantLiteral` to conform them to that controlled vocabulary, combined with a `Multi Record` `Measure` that counts the number of `COMPLIANT` values for the `Validation` evaluated for each record in a data set.  Under `QualityControl`, this `Measure` can evaluate how much the data set could be improved for some purpose if all the proposed changes from the `Amendment` were accepted (by running the Tests in pre-amendment, amendment, and post-amendment phases) 
 
 See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new Test.
 
@@ -745,11 +744,11 @@ To propose to add a Test to the BDQ Standard, follow the instructions provided b
 
 ## 8 Creating New Use Cases (non-normative)
 
-BDQ is based on `Use Cases`: An evaluation of data quality must be within the context of a `Use Case`. In the Fitness For Use Framework, `Use Cases` are needs-layer concepts. A Use Case is linked to sets of relevant Tests through `Policies` (e.g., `ValidationPolicy`, `IssuePolicy`, `MeasurementPolicy`, and `AmendmentPolicy`). Together, these `Policies` identify which Tests should be run for a given `Use Case` and, therefore, which `Responses` about data quality are expected from running that set of Tests. See the Tutorial for a worked out example of the definition of a new Use Case. See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new `Use Case`.
+BDQ is based on `Use Cases`: An evaluation of data quality must be within the context of a `Use Case`. In the Fitness For Use Framework, `Use Cases` are needs-layer concepts. A Use Case is linked to sets of relevant Tests through `Policies` (e.g., `ValidationPolicy`, `IssuePolicy`, `MeasurementPolicy`, and `AmendmentPolicy`). Together, these `Policies` identify which Tests should be run for a given `Use Case` and, therefore, which `Responses` about data quality are expected from running that set of Tests. See the [Tutorial](../../tutorial/index.md) for a worked out example of the definition of a new `Use Case`.
 
 ### 8.1 Elements of a New Use Case (non-normative)
 
-A 'Use Case' has a Name, a Definition, a statement of Fitness Requirements ([bdqffdq:hasFitnessRequirements](<../../list/bdqffdq/index.md#hasFitnessRequirements> "The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.")) and a list of associated Tests. The list of Tests is expressed as four `Policies`, a `ValidationPolicy` comprised of the `Validations` related to the Use Case, an `AmendmentPolicy` listing related `Amendments`, a `MeasurementPolicy` listing related `Measures`, and an `IssuePolicy` listing any related `Issues`.
+A `Use Case` has a Name, a Definition, a statement of Fitness Requirements ([bdqffdq:hasFitnessRequirements](<../../list/bdqffdq/index.md#hasFitnessRequirements> "The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.")) and a list of associated Tests. The list of Tests is expressed as four `Policies`, a `ValidationPolicy` comprised of the `Validations` related to the Use Case, an `AmendmentPolicy` listing related `Amendments`, a `MeasurementPolicy` listing related `Measures`, and an `IssuePolicy` listing any related `Issues`.
 
 The Definition for a new Use Case should include a concise statement of the application. The Fitness Requirements should provide a succinct summary of the significant Information Elements needed for that application. It may be helpful to identify what are the primary information elements (InformationElements ActedUpon) and what informationElements may support the application (Information Elements Consulted). For example, dwc:eventDate may be required for the Use Case, but dwc:year, dwc:month and dwc:day may be required to populate an empty dwc:eventDate. It may help to focus on the VALIDATION Type Tests and then on AMENDMENT Type Tests required to support that application.
 
@@ -787,7 +786,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-20>
+[TDWG](<../../../index.md#glossary_TDWG> "Biodiversity Information Standards") Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests: Concepts and Use. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/guide/2026-11-21>
 
 **Biodiversity Information Standards (TDWG)**
 
