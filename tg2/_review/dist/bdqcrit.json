@@ -94,7 +94,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30",
+    "@id": "https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2026-11-22",
     "@type": [
       "https://rs.tdwg.org/bdqffdq/terms/Criterion"
     ],
@@ -111,7 +111,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2024-09-30"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -156,7 +156,7 @@
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
-        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A set of bdqffdq:InformationElements and bdqval:sourceAuthorities are consistent.  Corresponding dimension is bdqdim:Consistency.</div>"
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A set of bdqffdq:InformationElements and values of bdqval:sourceAuthority are consistent.  Corresponding dimension is bdqdim:Consistency.</div>"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [

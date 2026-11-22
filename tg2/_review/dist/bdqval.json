@@ -240,7 +240,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/Empty-2026-11-22",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#Concept"
     ],
@@ -257,7 +257,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -302,7 +302,7 @@
     "http://www.w3.org/2004/02/skos/core#note": [
       {
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
-        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">See also: bdqval:NotEmpty. In the BDQ standard, bdqval:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdqval:Empty is defined to be more broadly usable than just with bdqtest:. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdqval:NotEmpty and their invalidity must be separately detected. The definition of bdqval:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdqval:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdqval:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</div>"
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">See also: bdqval:NotEmpty. In the BDQ standard, bdqval:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evaluation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdqval:Empty is defined to be more broadly usable than just with bdqtest:. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdqval:NotEmpty and their invalidity must be separately detected. The definition of bdqval:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdqval:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdqval:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</div>"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -386,7 +386,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -404,7 +404,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -421,7 +421,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"
+        "@value": "Optionally establishes if an annotation exists in a Test with bdqffdq:Parameters within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the Test, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -438,7 +438,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"
+        "@value": "Optionally establishes if an annotation exists in a Test with bdqffdq:Parameters within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the Test, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -460,7 +460,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -478,7 +478,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -495,7 +495,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's \"oa:Annotation\""
+        "@value": "Optionally establishes a system for annotations in a Test with bdqffdq:Parameters, with the default being the W3C Annotations Data Model's \"oa:Annotation\""
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -512,7 +512,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's \"oa:Annotation\""
+        "@value": "Optionally establishes a system for annotations in a Test with bdqffdq:Parameters, with the default being the W3C Annotations Data Model's \"oa:Annotation\""
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -534,7 +534,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -552,7 +552,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -569,7 +569,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either \"marine\" or \"nonmarine\") to assume, with the default being \"noassumption\"."
+        "@value": "Used when a bdqval:taxonIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either \"marine\" or \"nonmarine\") to assume, with the default being \"noassumption\"."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -586,7 +586,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either \"marine\" or \"nonmarine\") to assume, with the default being \"noassumption\"."
+        "@value": "Used when a bdqval:taxonIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either \"marine\" or \"nonmarine\") to assume, with the default being \"noassumption\"."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -608,7 +608,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -626,7 +626,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -643,7 +643,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the default dwc:geodeticDatum in a bdqval:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the default dwc:geodeticDatum in a Test with bdqffdq:Parameters. A default dwc:geodeticDatum is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -660,7 +660,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the default dwc:geodeticDatum in a bdqval:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the default dwc:geodeticDatum in a Test with bdqffdq:Parameters. A default dwc:geodeticDatum is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -756,7 +756,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -774,7 +774,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -791,7 +791,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the earliest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the earliest date in a Test with bdqffdq:Parameters. A default date is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -808,7 +808,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the earliest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the earliest date in a Test with bdqffdq:Parameters. A default date is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -904,7 +904,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -922,7 +922,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -939,7 +939,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Allows dwc:eventDate to be excluded in a bdqval:ParameterizedTest. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate."
+        "@value": "Allows dwc:eventDate to be excluded in a Test with bdqffdq:Parameters. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -956,7 +956,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Allows dwc:eventDate to be excluded in a bdqval:ParameterizedTest. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate."
+        "@value": "Allows dwc:eventDate to be excluded in a Test with bdqffdq:Parameters. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -978,7 +978,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -996,7 +996,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -1013,7 +1013,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the latest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the latest date in a Test with bdqffdq:Parameters. A default date is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1030,7 +1030,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the latest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the latest date in a Test with bdqffdq:Parameters. A default date is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -1052,7 +1052,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -1070,7 +1070,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -1087,7 +1087,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the maximum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the maximum depth in a Test with bdqffdq:Parameters. A default depth is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1104,7 +1104,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the maximum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the maximum depth in a Test with bdqffdq:Parameters. A default depth is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -1126,7 +1126,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -1144,7 +1144,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -1161,7 +1161,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the highest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the highest elevation in a Test with bdqffdq:Parameters. A default elevation is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1178,7 +1178,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the highest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the highest elevation in a Test with bdqffdq:Parameters. A default elevation is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -1200,7 +1200,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -1218,7 +1218,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -1235,7 +1235,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the minimum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the minimum depth in a Test with bdqffdq:Parameters. A default depth is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1252,7 +1252,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the minimum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the minimum depth in a Test with bdqffdq:Parameters. A default depth is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -1274,7 +1274,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -1292,7 +1292,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -1309,7 +1309,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the lowest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the lowest elevation in a Test with bdqffdq:Parameters. A default elevation is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1326,7 +1326,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "Optionally establishes the lowest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."
+        "@value": "Optionally establishes the lowest elevation in a Test with bdqffdq:Parameters. A default elevation is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -1348,7 +1348,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-11-22",
     "@type": [
       "http://www.w3.org/2002/07/owl#NamedIndividual",
       "https://rs.tdwg.org/bdqffdq/terms/Parameter"
@@ -1366,7 +1366,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -1383,7 +1383,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "An authority using the \"bdqval\" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority (\"bdqval:sourceAuthority default = xxx\") is specified."
+        "@value": "An authority using the \"bdqval\" namespace that provides a reference for values required for a Test evaluation. Where the Test has bdqffdq:Parameters, a default bdqval:sourceAuthority (\"bdqval:sourceAuthority default = xxx\") is specified."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -1400,7 +1400,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "An authority using the \"bdqval\" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority (\"bdqval:sourceAuthority default = xxx\") is specified."
+        "@value": "An authority using the \"bdqval\" namespace that provides a reference for values required for a Test evaluation. Where the Test has bdqffdq:Parameters, a default bdqval:sourceAuthority (\"bdqval:sourceAuthority default = xxx\") is specified."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [

@@ -6,7 +6,7 @@
 BDQ Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2026-11-12
+2026-11-22
 
 **Date created**<br>
 2026-04-22
@@ -18,13 +18,13 @@ BDQ Controlled Vocabulary List of Terms
 bdqval
 
 **This version**<br>
-<https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
+<https://rs.tdwg.org/bdqval/doc/list/2026-11-22>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqval/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqval/doc/list/2026-04-27>
+<https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard. It covers some terms used in Test Specifications, and especially values used as bdqffdq:Parameters.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard. It covers some terms used in 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-11-22>
 
 **Status**<br>
 Draft Standard for Review
@@ -392,11 +392,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -404,7 +404,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'</td>
+			<td>Optionally establishes if an annotation exists in a Test with bdqffdq:Parameters within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the Test, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -438,11 +438,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -450,7 +450,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's "oa:Annotation"</td>
+			<td>Optionally establishes a system for annotations in a Test with bdqffdq:Parameters, with the default being the W3C Annotations Data Model's "oa:Annotation"</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -484,11 +484,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -496,7 +496,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine" or "nonmarine") to assume, with the default being "noassumption".</td>
+			<td>Used when a bdqval:taxonIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either "marine" or "nonmarine") to assume, with the default being "noassumption".</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -530,11 +530,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -542,7 +542,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes the default dwc:geodeticDatum in a bdqval:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</td>
+			<td>Optionally establishes the default dwc:geodeticDatum in a Test with bdqffdq:Parameters. A default dwc:geodeticDatum is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -622,11 +622,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -634,7 +634,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes the earliest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</td>
+			<td>Optionally establishes the earliest date in a Test with bdqffdq:Parameters. A default date is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -668,11 +668,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/Empty-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/Empty-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/Empty-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -684,7 +684,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>See also: bdqval:NotEmpty. In the BDQ standard, bdqval:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdqval:Empty is defined to be more broadly usable than just with bdqtest:. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdqval:NotEmpty and their invalidity must be separately detected. The definition of bdqval:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdqval:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdqval:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</td>
+			<td>See also: bdqval:NotEmpty. In the BDQ standard, bdqval:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evaluation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdqval:Empty is defined to be more broadly usable than just with bdqtest:. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdqval:NotEmpty and their invalidity must be separately detected. The definition of bdqval:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdqval:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdqval:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -760,11 +760,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -772,7 +772,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Allows dwc:eventDate to be excluded in a bdqval:ParameterizedTest. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate.</td>
+			<td>Allows dwc:eventDate to be excluded in a Test with bdqffdq:Parameters. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -806,11 +806,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -818,7 +818,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes the latest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</td>
+			<td>Optionally establishes the latest date in a Test with bdqffdq:Parameters. A default date is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -852,11 +852,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -864,7 +864,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes the maximum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</td>
+			<td>Optionally establishes the maximum depth in a Test with bdqffdq:Parameters. A default depth is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -898,11 +898,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -910,7 +910,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes the highest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</td>
+			<td>Optionally establishes the highest elevation in a Test with bdqffdq:Parameters. A default elevation is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -944,11 +944,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -956,7 +956,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes the minimum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</td>
+			<td>Optionally establishes the minimum depth in a Test with bdqffdq:Parameters. A default depth is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -990,11 +990,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1002,7 +1002,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Optionally establishes the lowest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run.</td>
+			<td>Optionally establishes the lowest elevation in a Test with bdqffdq:Parameters. A default elevation is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -1082,11 +1082,11 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22">https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-11-22">https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-11-22</a> <a href="https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1094,7 +1094,7 @@ In an RDF context, a reference to a term in the `bdqval:` namespace MUST use the
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>An authority using the "bdqval" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority ("bdqval:sourceAuthority default = xxx") is specified.</td>
+			<td>An authority using the "bdqval" namespace that provides a reference for values required for a Test evaluation. Where the Test has bdqffdq:Parameters, a default bdqval:sourceAuthority ("bdqval:sourceAuthority default = xxx") is specified.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -1229,7 +1229,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-11-12>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqval/doc/list/2026-11-22>
 
 **Biodiversity Information Standards (TDWG)**
 

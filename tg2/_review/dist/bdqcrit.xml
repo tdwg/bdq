@@ -33,14 +33,14 @@ xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
      <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Criterion"/>
      <dcterms:isVersionOf rdf:resource="https://rs.tdwg.org/bdqcrit/terms/Complete"/>
 </rdf:Description>
-<rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30">
+<rdf:Description rdf:about="https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2026-11-22">
      <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqcrit/terms/"/>
      <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqcrit/terms/"/>
-     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:issued>
+     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:issued>
      <tdwgutility:status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recommended</tdwgutility:status>
      <rdfs:label xml:lang="en">Consistent</rdfs:label>
      <skos:prefLabel xml:lang="en">Consistent</skos:prefLabel>
-     <skos:note rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">A set of bdqffdq:InformationElements and bdqval:sourceAuthorities are consistent.  Corresponding dimension is bdqdim:Consistency.</div></skos:note>
+     <skos:note rdf:parseType="Literal"><div xmlns="http://www.w3.org/1999/xhtml">A set of bdqffdq:InformationElements and values of bdqval:sourceAuthority are consistent.  Corresponding dimension is bdqdim:Consistency.</div></skos:note>
      <rdfs:comment xml:lang="en">Data are internally consistent and consistent with any authorities consulted.</rdfs:comment>
      <skos:definition xml:lang="en">Data are internally consistent and consistent with any authorities consulted.</skos:definition>
      <rdf:value>Consistent</rdf:value>

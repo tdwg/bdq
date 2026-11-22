@@ -106,7 +106,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-11-22",
     "@type": [
       "https://rs.tdwg.org/bdqffdq/terms/UseCase"
     ],
@@ -123,7 +123,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -140,7 +140,7 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analysies such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches."
+        "@value": "A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analyses such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
@@ -157,7 +157,7 @@
     "http://www.w3.org/2004/02/skos/core#definition": [
       {
         "@language": "en",
-        "@value": "A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analysies such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches."
+        "@value": "A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analyses such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches."
       }
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
@@ -191,7 +191,7 @@
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26",
+    "@id": "https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-11-22",
     "@type": [
       "https://rs.tdwg.org/bdqffdq/terms/UseCase"
     ],
@@ -208,7 +208,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-26"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -271,12 +271,12 @@
     "https://rs.tdwg.org/bdqffdq/terms/hasFitnessRequirements": [
       {
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
-        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data are fit for the use case bdquc:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = \"Occurrence\".   </li><li>dwc:occurrenceStatus = \"present\".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></div>"
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data are fit for the use case bdquc:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = \"Occurrence\".   </li><li>dwc:occurrenceStatus = \"present\".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:Empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></div>"
       }
     ]
   },
   {
-    "@id": "https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-04-22",
+    "@id": "https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-11-22",
     "@type": [
       "https://rs.tdwg.org/bdqffdq/terms/UseCase"
     ],
@@ -293,7 +293,7 @@
     "http://purl.org/dc/terms/issued": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-04-22"
+        "@value": "2026-11-22"
       }
     ],
     "http://rs.tdwg.org/dwc/terms/attributes/status": [
@@ -356,7 +356,7 @@
     "https://rs.tdwg.org/bdqffdq/terms/hasFitnessRequirements": [
       {
         "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral",
-        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data are fit for this use when when taxonomic information is sufficient to unambiguously determine which taxon is being referenced and to position it within a nomenclatural hierarchy. Taxon terms are sufficient to resolve an organism they may be applied to (or flag ambiguity), core name and rank terms (e.g., dwc:scientificName, dwc:taxonRank) are present and align with an appropriate bdqval:sourceAuthority, name strings are consistent with atomized name fields and identifiers or authorship. <ul><li>Taxon can be resolved: Taxon terms are present and sufficient to support unambiguous resolution (dwc:scientificName, dwc:scientificNameAuthorship, dwc:scientificNameID).  </li><li>Names and ranks are authoritative: dwc:scientificName and required rank and classification terms are present, standardizable, and consistent with the bdqval:sourceAuthority.  </li><li>Name fields are consistent: dwc:scientificName agrees with atomized name fields; authorship is provided where needed.  </li><li>Identifiers are usable: Identifiers (e.g., dwc:scientificNameID) are present when available and correctly formed; dwc:taxonRank is present and valid.  </li></ul></div>"
+        "@value": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data are fit for this use when taxonomic information is sufficient to unambiguously determine which taxon is being referenced and to position it within a nomenclatural hierarchy. Taxon terms are sufficient to resolve an organism they may be applied to (or flag ambiguity), core name and rank terms (e.g., dwc:scientificName, dwc:taxonRank) are present and align with an appropriate bdqval:sourceAuthority, name strings are consistent with atomized name fields and identifiers or authorship. <ul><li>Taxon can be resolved: Taxon terms are present and sufficient to support unambiguous resolution (dwc:scientificName, dwc:scientificNameAuthorship, dwc:scientificNameID).  </li><li>Names and ranks are authoritative: dwc:scientificName and required rank and classification terms are present, standardizable, and consistent with the bdqval:sourceAuthority.  </li><li>Name fields are consistent: dwc:scientificName agrees with atomized name fields; authorship is provided where needed.  </li><li>Identifiers are usable: Identifiers (e.g., dwc:scientificNameID) are present when available and correctly formed; dwc:taxonRank is present and valid.  </li></ul></div>"
       }
     ]
   }

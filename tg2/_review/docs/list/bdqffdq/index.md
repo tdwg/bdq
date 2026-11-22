@@ -6,7 +6,7 @@
 Fitness For Use Framework Ontology List of Terms
 
 **Date version issued**<br>
-2026-11-20
+2026-11-22
 
 **Date created**<br>
 2024-04-13
@@ -18,13 +18,13 @@ Fitness For Use Framework Ontology List of Terms
 bdqffdq
 
 **This version**<br>
-<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-20>
+<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-22>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqffdq/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-16>
+<https://rs.tdwg.org/bdqffdq/doc/list/2026-11-20>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting vocabulary values in the Fitness For Use Framework Ontology, excluding additional axioms.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting vocabulary values
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-20>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-22>
 
 **Status**<br>
 Draft Standard for Review
@@ -409,11 +409,11 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/Amendment-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/Amendment-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/Amendment-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/Amendment-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/Amendment-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/Amendment-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -431,7 +431,7 @@ In an RDF context, a reference to a term in the `bdqffdq:` namespace MUST use th
 			<td>Comments</td>
 			<td>ContextualizedEnhancement in the original framework. Describes an instance of a bdqffdq:Enhancement in the context of the associated bdqffdq:InformationElements from a controlled vocabulary (fields bdqffdq:ActedUpon or bdqffdq:Consulted), and a bdqffdq:ResourceType of bdqffdq:SingleRecord or bdqffdq:MultiRecord.<br>
 Describes a proposal for a bdqffdq:Enhancement of original data, which if accepted, would improve the quality of the data for a use. For example: 'Recommends valid value for taxon name in a Single Record.'<br>
-bdqffdq:Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example, a bdqffdq:Amendment on a bdqffdq:SingleRecord may provide bdqffdq:Criteria for proposing that dwc:decimalLatitude and dwc:decimalLongitude are transposed in that record. Similarly, a bdqffdq:Amendment on a bdqffdq:MultiRecord may provide bdqffdq:Critera for proposing that all dwc:decimalLatitudes and dwc:decimalLongitudes from a data source have been transposed, and the mapping of data values to transport terms should be changed.<br>
+bdqffdq:Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example, a bdqffdq:Amendment on a bdqffdq:SingleRecord may provide bdqffdq:Criteria for proposing that dwc:decimalLatitude and dwc:decimalLongitude are transposed in that record. Similarly, a bdqffdq:Amendment on a bdqffdq:MultiRecord may provide bdqffdq:Criteria for proposing that all dwc:decimalLatitude and dwc:decimalLongitude values from a data source have been transposed, and the mapping of data values to transport terms should be changed.<br>
 A bdqffdq:Amendment is the bdqffdq:DataQualityNeed that parallels a bdqffdq:AmendmentMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:AmendmentResponse in the Report layer (see Figure 3 in Veiga et al., 2017).<br>
 AM = { am | am = &lt; ie, e, d, rt &gt;, ie ∈ IE, e ∈ E, d ∈ D ⋀ rt ∈ RT }</td>
 		</tr>
@@ -909,11 +909,11 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/DataQualityNeed-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/DataQualityNeed-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/DataQualityNeed-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/DataQualityNeed-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/DataQualityNeed-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/DataQualityNeed-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -929,7 +929,7 @@ DQA(dr) = { dqa | dqa ∈ RespA ⋀ (dr, dqa) ∈ rel_DQA }</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Subtypes of bdqffdq:DataQualityNeed are the Test Types (Validation, Issue, Measure, and Amendment). The bdqffdq:DataQualityNeed appoximates the informal concept of a Test as used in the BDQ standard.</td>
+			<td>Subtypes of bdqffdq:DataQualityNeed are the Test Types (Validation, Issue, Measure, and Amendment). The bdqffdq:DataQualityNeed approximates the informal concept of a Test as used in the BDQ standard.</td>
 		</tr>
 		<tr>
 			<td>SubClass Of</td>
@@ -1208,11 +1208,11 @@ DR = { dr | dr = &lt; id, rt, v &gt;, id ∈ ID, rt ∈ RT ⋀ v ∈ V }</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/Implementation-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/Implementation-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/Implementation-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/Implementation-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/Implementation-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/Implementation-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1224,7 +1224,7 @@ DR = { dr | dr = &lt; id, rt, v &gt;, id ∈ ID, rt ∈ RT ⋀ v ∈ V }</td>
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.</td>
+			<td>A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the process described in a particular bdqffdq:Specification.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -1706,11 +1706,11 @@ MEaq(u) = { me | me ∈ ME ⋀ me ∈ MP(u) ⋀ u ∈ U ⋀ resultType(me) = cat
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/MeasurementMethod-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/MeasurementMethod-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/MeasurementMethod-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/MeasurementMethod-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/MeasurementMethod-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/MeasurementMethod-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1726,7 +1726,7 @@ MEaq(u) = { me | me ∈ ME ⋀ me ∈ MP(u) ⋀ u ∈ U ⋀ resultType(me) = cat
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measurement (a bdqffdq:DataQualityDimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).<br>
+			<td>A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measure (a bdqffdq:DataQualityDimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).<br>
 MM(me) = { s | s ∈ S ⋀ (me, s) ∈ rel_MM }</td>
 		</tr>
 		<tr>
@@ -1757,11 +1757,11 @@ MM(me) = { s | s ∈ S ⋀ (me, s) ∈ rel_MM }</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/MeasurementPolicy-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/MeasurementPolicy-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/MeasurementPolicy-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/MeasurementPolicy-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/MeasurementPolicy-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/MeasurementPolicy-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -1777,7 +1777,7 @@ MM(me) = { s | s ∈ S ⋀ (me, s) ∈ rel_MM }</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>A bdqffdq:MeasurementPolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Measurement relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Measures are supported by a given bdqffdq:UseCase.<br>
+			<td>A bdqffdq:MeasurementPolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Measure relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Measures are supported by a given bdqffdq:UseCase.<br>
 MP(u) = { me | me ∈ ME ⋀ (u, me) ∈ rel_MP }</td>
 		</tr>
 		<tr>
@@ -2057,11 +2057,11 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-05-16</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/QualityAssurance-2026-05-16">https://rs.tdwg.org/bdqffdq/terms/version/QualityAssurance-2026-05-16</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/QualityAssurance-2026-05-16.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/QualityAssurance-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/QualityAssurance-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/QualityAssurance-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2073,7 +2073,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.</td>
+			<td>The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:UseCase to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -2361,11 +2361,11 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/ResponseResult-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/ResponseResult-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/ResponseResult-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/ResponseResult-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/ResponseResult-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/ResponseResult-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2382,7 +2382,7 @@ A bdqffdq:Mechanism describes the entity that performs a bdqffdq:Response Test (
 		<tr>
 			<td>Comments</td>
 			<td>For a bdqffdq:Validation, a bdqffdq:ResponseResult may be bdqffdq:COMPLIANT, or bdqffdq:NOT_COMPLIANT. For a bdqffdq:Measure, a bdqffdq:ResponseResult object may be bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE. For a bdqffdq:Issue, a bdqffdq:ResponseResult may be bdqffdq:IS_ISSUE, bdqffdq:POTENTIAL_ISSUE, or bdqffdq:NOT_ISSUE. A bdqffdq:Measure may also use a numeric data property. A bdqffdq:Amendment asserts a string data property.<br>
-The bdqffdq:ResponseResult is represented as a value or a result object for bdqffdq:MeasureAsssertions, or just a result object for bdqffdq:ValidationResponses or just values for changes proposed in bdqffdq:AmendmentResponses.</td>
+The bdqffdq:ResponseResult is represented as a value or a result object for bdqffdq:MeasurementResponses, or just a result object for bdqffdq:ValidationResponses or just values for changes proposed in bdqffdq:AmendmentResponses.</td>
 		</tr>
 		<tr>
 			<td>SubClass Of</td>
@@ -2412,11 +2412,11 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/ResponseStatus-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/ResponseStatus-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/ResponseStatus-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/ResponseStatus-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/ResponseStatus-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/ResponseStatus-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2432,7 +2432,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>The bdqffdq:ResponseStatus is metadata, indicating if data should be present in a bdqffdq:ResponseResult. Any bdqffdq:Response may have the values bdqffdq:INTERNAL_PREREQUISITES_NOT_MET or bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying bdqffdq:ResponseResult. Other values depend on the bdqffdq:Response type; bdqffdq:RUN_HAS_RESULT for a bdqffdq:Validation, bdqffdq:Issue or bdqffdq:Measure, and bdqffdq:FILLED_IN, bdqffdq:AMENDED, or bdqffdq:NOT_AMENDED for a bdqffdq:Amendment. Additional metadata qualifying the bdqffdq:Response in a bdqffdq:ResponseResult, such as statements of uncertainy or ambiguity may be placed in the bdqffdq:ResponseQualifier.</td>
+			<td>The bdqffdq:ResponseStatus is metadata, indicating if data should be present in a bdqffdq:ResponseResult. Any bdqffdq:Response may have the values bdqffdq:INTERNAL_PREREQUISITES_NOT_MET or bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying bdqffdq:ResponseResult. Other values depend on the bdqffdq:Response type; bdqffdq:RUN_HAS_RESULT for a bdqffdq:Validation, bdqffdq:Issue or bdqffdq:Measure, and bdqffdq:FILLED_IN, bdqffdq:AMENDED, or bdqffdq:NOT_AMENDED for a bdqffdq:Amendment. Additional metadata qualifying the bdqffdq:Response in a bdqffdq:ResponseResult, such as statements of uncertainty or ambiguity may be placed in the bdqffdq:ResponseQualifier.</td>
 		</tr>
 		<tr>
 			<td>SubClass Of</td>
@@ -2558,11 +2558,11 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/UseCase-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/UseCase-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/UseCase-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/UseCase-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/UseCase-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/UseCase-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2578,7 +2578,7 @@ The bdqffdq:ResponseResult is represented as a value or a result object for bdqf
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>A bdqffdq:UseCase describes a purpose or use for which data must have quality. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Responses cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, but is similar in that it is a formal bdqffdq: statement derived from analyis of user stories concerning data use.  A bdqffdq:UseCase is expected to have a bdqffdq:hasFitnessRequirements property.</td>
+			<td>A bdqffdq:UseCase describes a purpose or use for which data must have quality. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Responses cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, but is similar in that it is a formal bdqffdq: statement derived from analysis of user stories concerning data use.  A bdqffdq:UseCase is expected to have a bdqffdq:hasFitnessRequirements property.</td>
 		</tr>
 		<tr>
 			<td>SubClass Of</td>
@@ -2809,11 +2809,11 @@ VP(u) = { va | va ∈ VA ⋀ (u, va) ∈ rel_VP }</td>
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-13</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/ValidationResponse-2026-04-13">https://rs.tdwg.org/bdqffdq/terms/version/ValidationResponse-2026-04-13</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/ValidationResponse-2026-04-13.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/ValidationResponse-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/ValidationResponse-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/ValidationResponse-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -2830,7 +2830,7 @@ VP(u) = { va | va ∈ VA ⋀ (u, va) ∈ rel_VP }</td>
 		<tr>
 			<td>Comments</td>
 			<td>The bdqffdq:ValidationResponse is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the output of the execution of a Test that performs a bdqffdq:ValidationMethod following a bdqffdq:Specification to assess the validity of some data with respect to the bdqffdq:Criteria of a bdqffdq:Validation. <br>
-The bdqffdq:ValidationResponse concept is expected to carry through bdqffdq:hasResponseResult a bdqffdq:ResponseResult of bdqffdq:COMPLIANT or bdqffdq:NON_COMPLIANT.<br>
+The bdqffdq:ValidationResponse concept is expected to carry through bdqffdq:hasResponseResult a bdqffdq:ResponseResult of bdqffdq:COMPLIANT or bdqffdq:NOT_COMPLIANT.<br>
 DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</td>
 		</tr>
 		<tr>
@@ -3879,11 +3879,11 @@ If bdqffdq:ResponseResults are not objects, use the datatype property bdqffdq:ha
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/hasResponseStatus-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/hasResponseStatus-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/hasResponseStatus-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/hasResponseStatus-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/hasResponseStatus-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/hasResponseStatus-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3899,7 +3899,7 @@ If bdqffdq:ResponseResults are not objects, use the datatype property bdqffdq:ha
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Used in a bdqffdq:DataQualityReport to describe bdqffdq:ResponseStatus. For example, in the case of a bdqffdq:ValidationResponse, bdqffdq:ResponseStatus values could be bdqffdq:RUN_HAS_RESULT, bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQISITES_NOT_MET. Similarly, bdqffdq:AmendmentResponses can assert bdqffdq:ResponesStatus objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.<br>
+			<td>Used in a bdqffdq:DataQualityReport to describe bdqffdq:ResponseStatus. For example, in the case of a bdqffdq:ValidationResponse, bdqffdq:ResponseStatus values could be bdqffdq:RUN_HAS_RESULT, bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET. Similarly, bdqffdq:AmendmentResponses can assert bdqffdq:ResponseStatus objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.<br>
 The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, where either the object property bdqffdq:hasResponseResult or the data property bdqffdq:hasResponseResultValue may apply.</td>
 		</tr>
 		<tr>
@@ -3930,11 +3930,11 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/hasSpecification-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/hasSpecification-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/hasSpecification-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/hasSpecification-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/hasSpecification-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/hasSpecification-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -3946,11 +3946,11 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Relates a bdqffdq:Method to a bdqffdq:Specification.</td>
+			<td>Relates a bdqffdq:DataQualityMethod to a bdqffdq:Specification.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>Describes the relationship between a derived bdqffdq: concept that is a bdqffdq:Method and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test).</td>
+			<td>Describes the relationship between a derived bdqffdq: concept that is a bdqffdq:DataQualityMethod and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test).</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -4622,11 +4622,11 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/hasAuthoritiesDefaults-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/hasAuthoritiesDefaults-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/hasAuthoritiesDefaults-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/hasAuthoritiesDefaults-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/hasAuthoritiesDefaults-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/hasAuthoritiesDefaults-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4638,7 +4638,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.</td>
+			<td>Text describing values of bdqval:sourceAuthority and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -4760,11 +4760,11 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-03-23</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/hasFitnessRequirements-2026-03-23">https://rs.tdwg.org/bdqffdq/terms/version/hasFitnessRequirements-2026-03-23</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/hasFitnessRequirements-2026-03-23.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/hasFitnessRequirements-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/hasFitnessRequirements-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/hasFitnessRequirements-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4780,7 +4780,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>The bdqffdq:hasFitnessRequirements should sumarize the properties that data need to have to be fit for purpose for that bdqffdq:UseCase.   It should briefly list the general properties that bdqffdq:DataQualityNeeds associated with the UseCase need to assess (for example, stating that georeferences must be correctly formatted and have adequate metadata), and can identify particular threshold values (such as a coordinate uncertainty greater than some value) that would make data unfit for that use.   The hasFitnessRequirements property should not, however, simply list bdqffdq:DataQualityNeeds instances, but should provide a succinct human readable summary of the quality requirements.</td>
+			<td>The bdqffdq:hasFitnessRequirements should summarize the properties that data need to have to be fit for purpose for that bdqffdq:UseCase.   It should briefly list the general properties that bdqffdq:DataQualityNeeds associated with the UseCase need to assess (for example, stating that georeferences must be correctly formatted and have adequate metadata), and can identify particular threshold values (such as a coordinate uncertainty greater than some value) that would make data unfit for that use.   The hasFitnessRequirements property should not, however, simply list bdqffdq:DataQualityNeeds instances, but should provide a succinct human readable summary of the quality requirements.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -4945,11 +4945,11 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/SingleRecord-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/SingleRecord-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/SingleRecord-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/SingleRecord-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/SingleRecord-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/SingleRecord-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4965,7 +4965,7 @@ Object property that describes a bdqffdq:Amendment, as part of the bdqffdq:Impro
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>A record from a dcmitype:Dataset. May be a database tuple, in the strict sense (i.e, a single row in a table) or may be rows related across several tables, or a graph of data. A bdqffdq:SingleRecord is single in that it has one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:UseCase. For example, in a bdqffdq:UseCase where dwc:Occurences are central, a bdqffdq:SingleRecord would represent a single dwc:Occurrence, but could have multiple dwc:Identifications and multiple dwc:Taxa related to it in a graph or data structure. However, in a bdqffdq:UseCase where dwc:Taxa are central, a bdqffdq:SingleRecord would represent a single dwc:Taxon entity (and might have multiple dwc:Occurrences related to it as part of the bdqffdq:SingleRecord, so long as the graph was limited before reaching other dwc:Taxon entities).<br>
+			<td>A record from a dcmitype:Dataset. May be a database tuple, in the strict sense (i.e, a single row in a table) or may be rows related across several tables, or a graph of data. A bdqffdq:SingleRecord is single in that it has one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:UseCase. For example, in a bdqffdq:UseCase where dwc:Occurrence instances are central, a bdqffdq:SingleRecord would represent a single dwc:Occurrence, but could have multiple dwc:Identification and multiple dwc:Taxon instances related to it in a graph or data structure. However, in a bdqffdq:UseCase where dwc:Taxon instances are central, a bdqffdq:SingleRecord would represent a single dwc:Taxon entity (and might have multiple dwc:Occurrence instances related to it as part of the bdqffdq:SingleRecord, so long as the graph was limited before reaching other dwc:Taxon entities).<br>
 A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defined structure that can be described as dcmitype:Dataset</td>
 		</tr>
 		<tr>
@@ -5572,11 +5572,11 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/RUN_HAS_RESULT-2024-09-30">https://rs.tdwg.org/bdqffdq/terms/version/RUN_HAS_RESULT-2024-09-30</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/RUN_HAS_RESULT-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqffdq/terms/version/RUN_HAS_RESULT-2026-11-22">https://rs.tdwg.org/bdqffdq/terms/version/RUN_HAS_RESULT-2026-11-22</a> <a href="https://rs.tdwg.org/bdqffdq/terms/version/RUN_HAS_RESULT-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -5588,7 +5588,7 @@ A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defi
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.</td>
+			<td>A bdqffdq:ResponseStatus used to indicate that a result was correctly generated.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -5630,7 +5630,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-20>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Fitness For Use Framework Ontology List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqffdq/doc/list/2026-11-22>
 
 **Biodiversity Information Standards (TDWG)**
 

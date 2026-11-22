@@ -6,7 +6,7 @@
 Data Quality Criterion Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2024-09-30
+2026-11-22
 
 **Date created**<br>
 2024-09-30
@@ -18,10 +18,13 @@ Data Quality Criterion Controlled Vocabulary List of Terms
 bdqcrit
 
 **This version**<br>
-<https://rs.tdwg.org/bdqcrit/doc/list/2024-09-30>
+<https://rs.tdwg.org/bdqcrit/doc/list/2026-11-22>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqcrit/doc/list/>
+
+**Previous version**<br>
+<https://rs.tdwg.org/bdqcrit/doc/list/2024-09-30>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard. It covers the vocabulary terms that are types of bdqffdq:Criterion (originally defined in Veiga 2016 and Veiga et al. 2017) and form the controlled vocabulary for bdqffdq:hasCriterion.
@@ -33,7 +36,7 @@ This document is a reference for the BDQ standard. It covers the vocabulary term
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqcrit/doc/list/2024-09-30>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqcrit/doc/list/2026-11-22>
 
 **Status**<br>
 Draft Standard for Review
@@ -258,11 +261,11 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2024-09-30</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30">https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30</a> <a href="https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2026-11-22">https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2026-11-22</a> <a href="https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -274,7 +277,7 @@ An instance of `bdqffdq:Measure` or `bdqffdq:Amendment` SHOULD NOT have a `bdqff
 		</tr>
 		<tr>
 			<td>Comments</td>
-			<td>A set of bdqffdq:InformationElements and bdqval:sourceAuthorities are consistent.  Corresponding dimension is bdqdim:Consistency.</td>
+			<td>A set of bdqffdq:InformationElements and values of bdqval:sourceAuthority are consistent.  Corresponding dimension is bdqdim:Consistency.</td>
 		</tr>
 		<tr>
 			<td>Status</td>
@@ -589,7 +592,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2024. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqcrit/doc/list/2024-09-30>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. Data Quality Criterion Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqcrit/doc/list/2026-11-22>
 
 **Biodiversity Information Standards (TDWG)**
 

@@ -52,18 +52,18 @@
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Measure of Single Record Tests</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "AllValidationTestsRunOnSingleRecord"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/Empty-2026-04-22> a skos:Concept ;
+<https://rs.tdwg.org/bdqval/terms/version/Empty-2026-11-22> a skos:Concept ;
     rdfs:label "Empty"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:Empty ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "Empty" ;
     rdfs:comment "An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true."@en ;
     rdfs:isDefinedBy bdqval: ;
     skos:definition "An evaluation of a value, which in the context of the evaluation, returns false if the value contains any characters or values other than those in the range U+0000 to U+0020, otherwise returns true."@en ;
     skos:inScheme bdqval: ;
-    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">See also: bdqval:NotEmpty. In the BDQ standard, bdqval:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evauation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdqval:Empty is defined to be more broadly usable than just with bdqtest:. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdqval:NotEmpty and their invalidity must be separately detected. The definition of bdqval:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdqval:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdqval:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</div>"^^rdf:XMLLiteral ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">See also: bdqval:NotEmpty. In the BDQ standard, bdqval:Empty is used to evaluate bdqffdq:InformationElements within a Test specification, it therefore means empty if the dataset being evaluated does not contain the term matching the Information Element, or if the dataset contains that term but the value for that term is empty. The phrasing 'in the context of the evaluation' is to allow the Test implementations to be independent of, and agnostic about the data structures presented to a framework for executing the Tests and the framework within which the Tests are run. The term bdqval:Empty is defined to be more broadly usable than just with bdqtest:. Note: A bdqffdq:InformationElement containing invalid characters (e.g., letters in an Information Element that would be expected to contain integers) or values (including string serializations of the NULL value) are bdqval:NotEmpty and their invalidity must be separately detected. The definition of bdqval:Empty is not applicable to a discussion of what value to include in a controlled vocabulary to indicate that no meaningful value is present, so no suggestion is made that bdqval:Empty should be used as a data value to represent some form of 'Null', 'unknown', 'not recorded', etc. Choices there would fall into the semantics for some set of controlled vocabularies. The relevance to such a discussion is that the definition of bdqval:Empty would treat an empty string as an empty value, with no semantics attached as to why the value is empty</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "Empty"@en .
 
 <https://rs.tdwg.org/bdqval/terms/version/NotEmpty-2026-04-22> a skos:Concept ;
@@ -80,62 +80,62 @@
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">See also: bdqval:Empty. In the BDQ standard, bdqval:NotEmpty is used to evaluate bdqffdq:InformationElements within a Test specification. Common string serializations of null such as '\\N', 'NA', 'NaN', and NULL are treated as bdqval:NotEmpty. If '\\N' is present in a dataset, Tests are expected to explicitly treat that value as bdqval:NotEmpty, and then try to evaluate it against whatever other criteria may apply. The term bdqval:NotEmpty is defined to be more broadly usable than the scope of BDQ Tests. </div>"^^rdf:XMLLiteral ;
     skos:prefLabel "NotEmpty"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/annotationAlertIf-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "annotationAlertIf"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:annotationAlertIf ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "annotationAlertIf" ;
-    rdfs:comment "Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"@en ;
+    rdfs:comment "Optionally establishes if an annotation exists in a Test with bdqffdq:Parameters within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the Test, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Optionally establishes if an annotation exists in a bdqval:ParameterizedTest within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the bdqval:ParameterizedTest, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"@en ;
+    skos:definition "Optionally establishes if an annotation exists in a Test with bdqffdq:Parameters within a bdqval:annotationSystem by describing the criteria for relating annotations in the system to records within the Test, by default the presence of an oa:hasTarget with the bdqffdq:SingleRecord under evaluation as its object.  'PREFIX oa: <http://www.w3.org/ns/oa#> SELECT ?annotation WHERE { ?annotation a oa:Annotation ; oa:hasTarget <evaluated_instance_iri> .  }'"@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ANNOTATION_ISSUE_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "annotationAlertIf"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/annotationSystem-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "annotationSystem"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:annotationSystem ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "annotationSystem" ;
-    rdfs:comment "Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's \"oa:Annotation\""@en ;
+    rdfs:comment "Optionally establishes a system for annotations in a Test with bdqffdq:Parameters, with the default being the W3C Annotations Data Model's \"oa:Annotation\""@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Optionally establishes a system for annotations in a bdqval:ParameterizedTest, with the default being the W3C Annotations Data Model's \"oa:Annotation\""@en ;
+    skos:definition "Optionally establishes a system for annotations in a Test with bdqffdq:Parameters, with the default being the W3C Annotations Data Model's \"oa:Annotation\""@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"ANNOTATION_ISSUE_NOTEMPTY\" (bdqtest:fecaa8a3-bbd8-4c5a-a424-13c37c4bb7b1).</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "annotationSystem"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/assumptionOnUnknownBiome-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "assumptionOnUnknownBiome"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:assumptionOnUnknownBiome ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "assumptionOnUnknownBiome" ;
-    rdfs:comment "Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either \"marine\" or \"nonmarine\") to assume, with the default being \"noassumption\"."@en ;
+    rdfs:comment "Used when a bdqval:taxonIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either \"marine\" or \"nonmarine\") to assume, with the default being \"noassumption\"."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Used when a bdqval:taxonomyIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either \"marine\" or \"nonmarine\") to assume, with the default being \"noassumption\"."@en ;
+    skos:definition "Used when a bdqval:taxonIsMarine sourceAuthority is unable to assert the marine or non-marine status of a taxon, the biome (either \"marine\" or \"nonmarine\") to assume, with the default being \"noassumption\"."@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380).</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "assumptionOnUnknownBiome"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/defaultGeodeticDatum-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "defaultGeodeticDatum"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:defaultGeodeticDatum ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "defaultGeodeticDatum" ;
-    rdfs:comment "Optionally establishes the default dwc:geodeticDatum in a bdqval:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    rdfs:comment "Optionally establishes the default dwc:geodeticDatum in a Test with bdqffdq:Parameters. A default dwc:geodeticDatum is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Optionally establishes the default dwc:geodeticDatum in a bdqval:ParameterizedTest. A default dwc:geodeticDatum is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    skos:definition "Optionally establishes the default dwc:geodeticDatum in a Test with bdqffdq:Parameters. A default dwc:geodeticDatum is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">See Test AMENDMENT_GEODETICDATUM_ASSUMEDDEFAULT (bdqtest:7498ca76-c4d4-42e2-8103-acacccbdffa7).</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "defaultGeodeticDatum"@en .
@@ -155,17 +155,17 @@
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"^^rdf:XMLLiteral ;
     skos:prefLabel "defaultOccurrenceStatus"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/earliestValidDate-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "earliestValidDate"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:earliestValidDate ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "earliestValidDate" ;
-    rdfs:comment "Optionally establishes the earliest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    rdfs:comment "Optionally establishes the earliest date in a Test with bdqffdq:Parameters. A default date is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Optionally establishes the earliest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    skos:definition "Optionally establishes the earliest date in a Test with bdqffdq:Parameters. A default date is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"^^rdf:XMLLiteral ;
     skos:prefLabel "earliestValidDate"@en .
@@ -185,107 +185,107 @@
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">See VALIDATION_COORDINATESTERRESTRIALMARINE_CONSISTENT (bdqtest:b9c184ce-a859-410c-9d12-71a338200380)</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "geospatialLand"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/includeEventDate-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "includeEventDate"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:includeEventDate ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "includeEventDate" ;
-    rdfs:comment "Allows dwc:eventDate to be excluded in a bdqval:ParameterizedTest. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate."@en ;
+    rdfs:comment "Allows dwc:eventDate to be excluded in a Test with bdqffdq:Parameters. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Allows dwc:eventDate to be excluded in a bdqval:ParameterizedTest. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate."@en ;
+    skos:definition "Allows dwc:eventDate to be excluded in a Test with bdqffdq:Parameters. The default is to include the dwc:eventDate in the Test, but it may be excluded to allow a dwc:dateIdentified to be prior to the dwc:eventDate."@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Used in Test \"VALIDATION_DATEIDENTIFIED_INRANGE\" (bdqtest:dc8aae4b-134f-4d75-8a71-c4186239178e).</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "includeEventDate"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/latestValidDate-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "latestValidDate"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:latestValidDate ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "latestValidDate" ;
-    rdfs:comment "Optionally establishes the latest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    rdfs:comment "Optionally establishes the latest date in a Test with bdqffdq:Parameters. A default date is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Optionally establishes the latest date in a bdqval:ParameterizedTest. A default date is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    skos:definition "Optionally establishes the latest date in a Test with bdqffdq:Parameters. A default date is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"^^rdf:XMLLiteral ;
     skos:prefLabel "latestValidDate"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/maximumValidDepthInMeters-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "maximumValidDepthInMeters"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:maximumValidDepthInMeters ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "maximumValidDepthInMeters" ;
-    rdfs:comment "Optionally establishes the maximum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    rdfs:comment "Optionally establishes the maximum depth in a Test with bdqffdq:Parameters. A default depth is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Optionally establishes the maximum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    skos:definition "Optionally establishes the maximum depth in a Test with bdqffdq:Parameters. A default depth is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"^^rdf:XMLLiteral ;
     skos:prefLabel "maximumValidDepthInMeters"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/maximumValidElevationInMeters-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "maximumValidElevationInMeters"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:maximumValidElevationInMeters ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "maximumValidElevationInMeters" ;
-    rdfs:comment "Optionally establishes the highest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    rdfs:comment "Optionally establishes the highest elevation in a Test with bdqffdq:Parameters. A default elevation is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Optionally establishes the highest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    skos:definition "Optionally establishes the highest elevation in a Test with bdqffdq:Parameters. A default elevation is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"^^rdf:XMLLiteral ;
     skos:prefLabel "maximumValidElevationInMeters"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/minimumValidDepthInMeters-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "minimumValidDepthInMeters"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:minimumValidDepthInMeters ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "minimumValidDepthInMeters" ;
-    rdfs:comment "Optionally establishes the minimum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    rdfs:comment "Optionally establishes the minimum depth in a Test with bdqffdq:Parameters. A default depth is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Optionally establishes the minimum depth in a bdqval:ParameterizedTest. A default depth is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    skos:definition "Optionally establishes the minimum depth in a Test with bdqffdq:Parameters. A default depth is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"^^rdf:XMLLiteral ;
     skos:prefLabel "minimumValidDepthInMeters"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/minimumValidElevationInMeters-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "minimumValidElevationInMeters"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:minimumValidElevationInMeters ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "minimumValidElevationInMeters" ;
-    rdfs:comment "Optionally establishes the lowest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    rdfs:comment "Optionally establishes the lowest elevation in a Test with bdqffdq:Parameters. A default elevation is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "Optionally establishes the lowest elevation in a bdqval:ParameterizedTest. A default elevation is supplied in cases where a bdqval:Parameter is not set at the time the Test is run."@en ;
+    skos:definition "Optionally establishes the lowest elevation in a Test with bdqffdq:Parameters. A default elevation is supplied in cases where a bdqffdq:Parameter is not set at the time the Test is run."@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"^^rdf:XMLLiteral ;
     skos:prefLabel "minimumValidElevationInMeters"@en .
 
-<https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-04-22> a owl:NamedIndividual,
+<https://rs.tdwg.org/bdqval/terms/version/sourceAuthority-2026-11-22> a owl:NamedIndividual,
         bdqffdq:Parameter ;
     rdfs:label "sourceAuthority"@en ;
     dcterms:isPartOf bdqval: ;
     dcterms:isVersionOf bdqval:sourceAuthority ;
-    dcterms:issued "2026-04-22"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "sourceAuthority" ;
-    rdfs:comment "An authority using the \"bdqval\" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority (\"bdqval:sourceAuthority default = xxx\") is specified."@en ;
+    rdfs:comment "An authority using the \"bdqval\" namespace that provides a reference for values required for a Test evaluation. Where the Test has bdqffdq:Parameters, a default bdqval:sourceAuthority (\"bdqval:sourceAuthority default = xxx\") is specified."@en ;
     rdfs:isDefinedBy bdqval: ;
-    skos:definition "An authority using the \"bdqval\" namespace that provides a reference for values required for a Test evaluation. Where the Test is a bdqval:ParameterizedTest a bdqval:defaultSourceAuthority (\"bdqval:sourceAuthority default = xxx\") is specified."@en ;
+    skos:definition "An authority using the \"bdqval\" namespace that provides a reference for values required for a Test evaluation. Where the Test has bdqffdq:Parameters, a default bdqval:sourceAuthority (\"bdqval:sourceAuthority default = xxx\") is specified."@en ;
     skos:inScheme bdqval: ;
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\"/>"^^rdf:XMLLiteral ;
     skos:prefLabel "sourceAuthority"@en .

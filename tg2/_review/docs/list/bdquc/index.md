@@ -6,7 +6,7 @@
 BDQ Use Case Controlled Vocabulary List of Terms
 
 **Date version issued**<br>
-2026-04-26
+2026-11-22
 
 **Date created**<br>
 2026-04-22
@@ -18,13 +18,13 @@ BDQ Use Case Controlled Vocabulary List of Terms
 bdquc
 
 **This version**<br>
-<https://rs.tdwg.org/bdquc/doc/list/2026-04-26>
+<https://rs.tdwg.org/bdquc/doc/list/2026-11-22>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdquc/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdquc/doc/list/2026-04-22>
+<https://rs.tdwg.org/bdquc/doc/list/2026-04-26>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard. It covers named individual Use Cases.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard. It covers named individual Us
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Use Case Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdquc/doc/list/2026-04-26>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Use Case Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdquc/doc/list/2026-11-22>
 
 **Status**<br>
 Draft Standard for Review
@@ -256,11 +256,11 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-04-22">https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-04-22</a> <a href="https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-11-22">https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-11-22</a> <a href="https://rs.tdwg.org/bdquc/terms/version/Spatial-Temporal_Patterns-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -268,7 +268,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Definition</td>
-			<td>A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analysies such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches.</td>
+			<td>A bdqffdq:UseCase that pertains to dwc:Occurrence data where the Information Elements concerning what dwc:Organism occurred when at what location are used for analyses such as of taxon distributions across space and time to quantify biodiversity patterns, identify range shifts, or modeling of ecological niches.</td>
 		</tr>
 		<tr>
 			<td>Comments</td>
@@ -310,11 +310,11 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-26</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26">https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26</a> <a href="https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-04-26.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-11-22">https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-11-22</a> <a href="https://rs.tdwg.org/bdquc/terms/version/Species-Distribution-Modeling-Trees-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -330,7 +330,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Fitness requirements</td>
-			<td>Data are fit for the use case bdquc:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></td>
+			<td>Data are fit for the use case bdquc:Species-Distribution-Modeling-Trees when records have valid:  <ul><li>dwc:scientificName identified to species level.  </li><li>dwc:basisOfRecord = "Occurrence".   </li><li>dwc:occurrenceStatus = "present".  </li><li>dwc:decimalLatitude and dwc:decimalLongitude.  </li><li>dwc:coordinateUncertaintyInMeters less than 500.  </li><li>dwc:dataGeneralizations = bdqval:Empty.  </li><li>dwc:year or dwc:eventDate within provided temporal limits. </li></ul></td>
 		</tr>
 		<tr>
 			<td>Scope note</td>
@@ -364,11 +364,11 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-04-22</td>
+			<td>2026-11-22</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-04-22">https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-04-22</a> <a href="https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-04-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-11-22">https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-11-22</a> <a href="https://rs.tdwg.org/bdquc/terms/version/Taxon-Management-2026-11-22.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -384,7 +384,7 @@ In an RDF context, a reference to a term in the `bdquc:` namespace MUST use the 
 		</tr>
 		<tr>
 			<td>Fitness requirements</td>
-			<td>Data are fit for this use when when taxonomic information is sufficient to unambiguously determine which taxon is being referenced and to position it within a nomenclatural hierarchy. Taxon terms are sufficient to resolve an organism they may be applied to (or flag ambiguity), core name and rank terms (e.g., dwc:scientificName, dwc:taxonRank) are present and align with an appropriate bdqval:sourceAuthority, name strings are consistent with atomized name fields and identifiers or authorship. <ul><li>Taxon can be resolved: Taxon terms are present and sufficient to support unambiguous resolution (dwc:scientificName, dwc:scientificNameAuthorship, dwc:scientificNameID).  </li><li>Names and ranks are authoritative: dwc:scientificName and required rank and classification terms are present, standardizable, and consistent with the bdqval:sourceAuthority.  </li><li>Name fields are consistent: dwc:scientificName agrees with atomized name fields; authorship is provided where needed.  </li><li>Identifiers are usable: Identifiers (e.g., dwc:scientificNameID) are present when available and correctly formed; dwc:taxonRank is present and valid.  </li></ul></td>
+			<td>Data are fit for this use when taxonomic information is sufficient to unambiguously determine which taxon is being referenced and to position it within a nomenclatural hierarchy. Taxon terms are sufficient to resolve an organism they may be applied to (or flag ambiguity), core name and rank terms (e.g., dwc:scientificName, dwc:taxonRank) are present and align with an appropriate bdqval:sourceAuthority, name strings are consistent with atomized name fields and identifiers or authorship. <ul><li>Taxon can be resolved: Taxon terms are present and sufficient to support unambiguous resolution (dwc:scientificName, dwc:scientificNameAuthorship, dwc:scientificNameID).  </li><li>Names and ranks are authoritative: dwc:scientificName and required rank and classification terms are present, standardizable, and consistent with the bdqval:sourceAuthority.  </li><li>Name fields are consistent: dwc:scientificName agrees with atomized name fields; authorship is provided where needed.  </li><li>Identifiers are usable: Identifiers (e.g., dwc:scientificNameID) are present when available and correctly formed; dwc:taxonRank is present and valid.  </li></ul></td>
 		</tr>
 		<tr>
 			<td>Scope note</td>
@@ -427,7 +427,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Use Case Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdquc/doc/list/2026-04-26>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Use Case Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdquc/doc/list/2026-11-22>
 
 **Biodiversity Information Standards (TDWG)**
 

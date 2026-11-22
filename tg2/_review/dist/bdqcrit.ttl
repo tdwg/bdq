@@ -23,18 +23,18 @@
     skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">Data in a bdqffdq:InformationElement are present and sufficiently comprehensive for use. Corresponding dimension is bdqdim:Completeness.</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "Complete"@en .
 
-<https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2024-09-30> a bdqffdq:Criterion ;
+<https://rs.tdwg.org/bdqcrit/terms/version/Consistent-2026-11-22> a bdqffdq:Criterion ;
     rdfs:label "Consistent"@en ;
     dcterms:isPartOf bdqcrit: ;
     dcterms:isVersionOf bdqcrit:Consistent ;
-    dcterms:issued "2024-09-30"^^xsd:date ;
+    dcterms:issued "2026-11-22"^^xsd:date ;
     tdwgutility:status "recommended"^^xsd:string ;
     rdf:value "Consistent" ;
     rdfs:comment "Data are internally consistent and consistent with any authorities consulted."@en ;
     rdfs:isDefinedBy bdqcrit: ;
     skos:definition "Data are internally consistent and consistent with any authorities consulted."@en ;
     skos:inScheme bdqcrit: ;
-    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">A set of bdqffdq:InformationElements and bdqval:sourceAuthorities are consistent.  Corresponding dimension is bdqdim:Consistency.</div>"^^rdf:XMLLiteral ;
+    skos:note "<div xmlns=\"http://www.w3.org/1999/xhtml\">A set of bdqffdq:InformationElements and values of bdqval:sourceAuthority are consistent.  Corresponding dimension is bdqdim:Consistency.</div>"^^rdf:XMLLiteral ;
     skos:prefLabel "Consistent"@en .
 
 <https://rs.tdwg.org/bdqcrit/terms/version/Found-2024-09-30> a bdqffdq:Criterion ;

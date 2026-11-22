@@ -361,7 +361,7 @@ See [4.1 Structure of a Response (normative)](../../guide/bdqtest/index.md#41-st
 
 #### 2.4.1 Properties of Responses (normative) 
 
-In an RDF context, the status property of a `Response` MUST be represented using an [IRI](<../../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters.") (e.g., [bdqffdq:RUN_HAS_RESULT](<../../list/bdqffdq/index.md#RUN_HAS_RESULT> "A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.")) as the object of `bdqffdq:hasResponseStatus`.
+In an RDF context, the status property of a `Response` MUST be represented using an [IRI](<../../../index.md#glossary_IRI> "Internationalized Resource Identifier is an internet protocol standard which builds on the Uniform Resource Identifier URI protocol by greatly expanding the set of permitted characters.") (e.g., [bdqffdq:RUN_HAS_RESULT](<../../list/bdqffdq/index.md#RUN_HAS_RESULT> "A bdqffdq:ResponseStatus used to indicate that a result was correctly generated.")) as the object of `bdqffdq:hasResponseStatus`.
 
 In an RDF context, the result property of a `Response` MUST be represented using:
 - `bdqffdq:hasResponseResult` when the result is categorical and comes from the controlled set of [bdqffdq:ResponseResult](<../../list/bdqffdq/index.md#ResponseResult> "A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Responses about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.") named individuals (e.g., [bdqffdq:COMPLIANT](<../../list/bdqffdq/index.md#COMPLIANT> "A bdqffdq:ResponseResult of a bdqffdq:Validation where the data conforms to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification."), [bdqffdq:NOT_COMPLIANT](<../../list/bdqffdq/index.md#NOT_COMPLIANT> "A bdqffdq:ResponseResult of a bdqffdq:Validation where the data do not conform to the bdqffdq:Criteria for quality in the Test bdqffdq:Specification."), [bdqffdq:COMPLETE](<../../list/bdqffdq/index.md#COMPLETE> "A bdqffdq:ResponseResult of a bdqffdq:Measure that asserts that data are present and sufficiently comprehensive for use."), [bdqffdq:NOT_COMPLETE](<../../list/bdqffdq/index.md#NOT_COMPLETE> "A bdqffdq:ResponseResult of a bdqffdq:Measure which asserts that data are not present or are not sufficiently comprehensive for a use."), [bdqffdq:POTENTIAL_ISSUE](<../../list/bdqffdq/index.md#POTENTIAL_ISSUE> "A bdqffdq:ResponseResult of a bdqffdq:Issue that indicates that the data may not have sufficient quality for a use. The user will need to evaluate if the data are fit for their particular use or not."), [bdqffdq:NOT_ISSUE](<../../list/bdqffdq/index.md#NOT_ISSUE> "A bdqffdq:ResponseResult of a bdqffdq:Issue where no potential problems were detected.")); or
@@ -495,7 +495,7 @@ See [7.2 Annotations](../implementers/index.md#72-annotations-normative) in the 
 
 [PROV-O: The PROV Ontology](https://www.w3.org/TR/prov-o/) (W3C 2013) is a W3C recommendation that provides a framework for representing provenance information in RDF. PROV-O defines a set of classes and properties for representing the entities, activities, and agents involved in the production of data and other resources, as well as the relationships between them.
 
-A [bdqffdq:DataQualityReport](<../../list/bdqffdq/index.md#DataQualityReport> "A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses.") is a formal description of the results produced by a [bdqffdq:Implementation](<../../list/bdqffdq/index.md#Implementation> "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.") implemented by a [bdqffdq:Mechanism](<../../list/bdqffdq/index.md#Mechanism> "An entity that can execute bdqffdq:DataQualityMethods.") applying one or more Tests to a [bdqffdq:DataResource](<../../list/bdqffdq/index.md#DataResource> "An owl:Thing to which a data quality bdqffdq:Response applies.").
+A [bdqffdq:DataQualityReport](<../../list/bdqffdq/index.md#DataQualityReport> "A bdqffdq:ReportConcept comprising a set of data quality bdqffdq:Responses.") is a formal description of the results produced by a [bdqffdq:Implementation](<../../list/bdqffdq/index.md#Implementation> "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the process described in a particular bdqffdq:Specification.") implemented by a [bdqffdq:Mechanism](<../../list/bdqffdq/index.md#Mechanism> "An entity that can execute bdqffdq:DataQualityMethods.") applying one or more Tests to a [bdqffdq:DataResource](<../../list/bdqffdq/index.md#DataResource> "An owl:Thing to which a data quality bdqffdq:Response applies.").
 
 In PROV-O, a `bdqffdq:DataQualityReport` and a `bdqffdq:DataResource` may be represented as `prov:Entity` instances. An execution of a Test implementation may be represented as a `prov:Activity`, and a `bdqffdq:Mechanism` (or an agent operating a mechanism) may be represented as a `prov:Agent`. The relationships between these entities can be represented using PROV properties such as `prov:wasGeneratedBy`, `prov:used`, and `prov:wasAssociatedWith`.
 
@@ -706,7 +706,7 @@ Each `bdqffdq:Issue` method SHOULD have exactly one `bdqffdq:forIssue` object pr
 
 Each description of a data quality Test SHOULD include the following properties and related instances.
 
-The [bdqffdq:hasSpecification](<../../list/bdqffdq/index.md#hasSpecification> "Relates a bdqffdq:Method to a bdqffdq:Specification.") object property SHOULD have an instance of a subclass of [bdqffdq:DataQualityMethod](<../../list/bdqffdq/index.md#DataQualityMethod> "A bdqffdq:SolutionsConcept that relates a bdqffdq:DataQualityNeed to a bdqffdq:Specification.") as its subject.
+The [bdqffdq:hasSpecification](<../../list/bdqffdq/index.md#hasSpecification> "Relates a bdqffdq:DataQualityMethod to a bdqffdq:Specification.") object property SHOULD have an instance of a subclass of [bdqffdq:DataQualityMethod](<../../list/bdqffdq/index.md#DataQualityMethod> "A bdqffdq:SolutionsConcept that relates a bdqffdq:DataQualityNeed to a bdqffdq:Specification.") as its subject.
 
 An axiom restricts the values of `bdqffdq:hasSpecification` on a `bdqffdq:DataQualityMethod` to instances of [bdqffdq:Specification](<../../list/bdqffdq/index.md#Specification> "A specific statement about how to evaluate a bdqffdq:DataQualityNeed.") (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 3.2](../../extension/bdqffdq/index.md#32-restrictions-on-classes-normative)).
 
@@ -724,7 +724,7 @@ Each instance of `bdqffdq:Argument` SHOULD be related to exactly one instance of
 
 Each instance of a `bdqffdq:Specification` MAY have zero to many `bdqffdq:hasArgument` object properties relating it to zero to many `bdqffdq:Argument` instances.
 
-Each instance of a `bdqffdq:Specification` with a [bdqffdq:hasAuthoritiesDefaults](<../../list/bdqffdq/index.md#hasAuthoritiesDefaults> "Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.") value that references at least one parameter MUST have a corresponding `bdqffdq:hasArgument` object property. The instances of `bdqffdq:Argument` related through these `bdqffdq:hasArgument` object properties SHOULD have appropriate `bdqffdq:hasArgumentValue` and `bdqffdq:hasParameter` triples to express the actual and formal parameters for the `bdqffdq:Specification` instance.
+Each instance of a `bdqffdq:Specification` with a [bdqffdq:hasAuthoritiesDefaults](<../../list/bdqffdq/index.md#hasAuthoritiesDefaults> "Text describing values of bdqval:sourceAuthority and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.") value that references at least one parameter MUST have a corresponding `bdqffdq:hasArgument` object property. The instances of `bdqffdq:Argument` related through these `bdqffdq:hasArgument` object properties SHOULD have appropriate `bdqffdq:hasArgumentValue` and `bdqffdq:hasParameter` triples to express the actual and formal parameters for the `bdqffdq:Specification` instance.
 
 The `bdqffdq:hasParameter` object property SHOULD have a `bdqffdq:Argument` as its subject.
 
@@ -734,7 +734,7 @@ An axiom types the object of the `bdqffdq:hasParameter` object property as a `bd
 
 Each data quality `Mechanism` that produces `Data Quality Reports` using the `bdqffdq:` vocabulary SHOULD include the following properties and related instances.
 
-The [bdqffdq:usesSpecification](<../../list/bdqffdq/index.md#usesSpecification> "The bdqffdq:Specification that a bdqffdq:Implementation implements.") object property SHOULD have a [bdqffdq:Implementation](<../../list/bdqffdq/index.md#Implementation> "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.") as its subject.
+The [bdqffdq:usesSpecification](<../../list/bdqffdq/index.md#usesSpecification> "The bdqffdq:Specification that a bdqffdq:Implementation implements.") object property SHOULD have a [bdqffdq:Implementation](<../../list/bdqffdq/index.md#Implementation> "A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the process described in a particular bdqffdq:Specification.") as its subject.
 
 An axiom restricts the values of `bdqffdq:usesSpecification` on a `bdqffdq:Implementation` to instances of `bdqffdq:Specification` (an `owl:allValuesFrom` restriction on the subject class; see [Vocabulary Extension, 3.2](../../extension/bdqffdq/index.md#32-restrictions-on-classes-normative)).
 
@@ -2028,7 +2028,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### Implementation
 
 - Name: [bdqffdq:Implementation](../../list/bdqffdq/index.md#Implementation)
-- Definition: A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.
+- Definition: A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the process described in a particular bdqffdq:Specification.
 - SubClass Of: [SolutionsConcept](../../list/bdqffdq/index.md#SolutionsConcept)
 
 ********************
@@ -2163,7 +2163,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### QualityAssurance
 
 - Name: [bdqffdq:QualityAssurance](../../list/bdqffdq/index.md#QualityAssurance)
-- Definition: The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
+- Definition: The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:UseCase to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.
 - SubClass Of: [FundamentalConcept](../../list/bdqffdq/index.md#FundamentalConcept)
 
 ********************
@@ -2469,7 +2469,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasSpecification
 
 - Name: [bdqffdq:hasSpecification](../../list/bdqffdq/index.md#hasSpecification)
-- Definition: Relates a bdqffdq:Method to a bdqffdq:Specification.
+- Definition: Relates a bdqffdq:DataQualityMethod to a bdqffdq:Specification.
 - [Restriction](../../extension/bdqffdq/index.md#DataQualityMethod) on bdqffdq:DataQualityMethod: [ owl:onProperty bdqffdq:hasSpecification ; owl:allValuesFrom bdqffdq:Specification ]
 
 ********************
@@ -2584,7 +2584,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 #### hasAuthoritiesDefaults
 
 - Name: [bdqffdq:hasAuthoritiesDefaults](../../list/bdqffdq/index.md#hasAuthoritiesDefaults)
-- Definition: Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
+- Definition: Text describing values of bdqval:sourceAuthority and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.
 - [Range](../../extension/bdqffdq/index.md#hasAuthoritiesDefaults) xsd:string
 
 ********************
@@ -2744,7 +2744,7 @@ This list brings together definitions of terms in the Fitness For Use Framework 
 
 - Name: [bdqffdq:RUN_HAS_RESULT](../../list/bdqffdq/index.md#RUN_HAS_RESULT)
 - Type: bdqffdq:ResponseStatus
-- Definition: A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.
+- Definition: A bdqffdq:ResponseStatus used to indicate that a result was correctly generated.
 
 ********************
 

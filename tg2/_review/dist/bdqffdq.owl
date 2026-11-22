@@ -39,7 +39,7 @@ DR = { dr | dr = &lt; id, rt, v &gt;, id ∈ ID, rt ∈ RT ⋀ v ∈ V }</skos:n
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -48,7 +48,7 @@ DR = { dr | dr = &lt; id, rt, v &gt;, id ∈ ID, rt ∈ RT ⋀ v ∈ V }</skos:n
     <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/DataQualityMethod"/>
     <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementConcept"/>
     <skos:definition xml:lang="en">A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Measure to its bdqffdq:Specifications.</skos:definition>
-    <skos:note xml:lang="en">A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measurement (a bdqffdq:DataQualityDimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).
+    <skos:note xml:lang="en">A bdqffdq:MeasurementMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Measure (a bdqffdq:DataQualityDimension in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).
 
 MM(me) = { s | s ∈ S ⋀ (me, s) ∈ rel_MM }</skos:note>
     <skos:prefLabel xml:lang="en">Measurement Method</skos:prefLabel>
@@ -79,18 +79,6 @@ MM(me) = { s | s ∈ S ⋀ (me, s) ∈ rel_MM }</skos:note>
     <skos:definition xml:lang="en">Describes the bdqffdq:InformationElements assessed by a bdqffdq:DataQualityNeed in order to make bdqffdq:Responses concerning bdqffdq:ActedUpon bdqffdq:InformationElements.</skos:definition>
     <skos:note xml:lang="en">Provides a relationship between bdqffdq: concepts and the bdqffdq:InformationElements that are bdqffdq:Consulted, but not bdqffdq:ActedUpon in a Test.</skos:note>
     <skos:prefLabel xml:lang="en">has Consulted Information Element</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/hasSpecification">
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
-    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Relates a bdqffdq:Method to a bdqffdq:Specification.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <rdfs:label xml:lang="en">has Specification</rdfs:label>
-    <skos:definition xml:lang="en">Relates a bdqffdq:Method to a bdqffdq:Specification.</skos:definition>
-    <skos:note xml:lang="en">Describes the relationship between a derived bdqffdq: concept that is a bdqffdq:Method and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test).</skos:note>
-    <skos:prefLabel xml:lang="en">has Specification</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/ImprovementTarget">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
@@ -135,7 +123,7 @@ IT(am) = { x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ (am, x) ∈ rel_IT }</sk
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/ResponseResult">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Responses about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -144,7 +132,7 @@ IT(am) = { x | (x ∈ ME ⋁ x ∈ VA ⋁ x ∈ IS) ⋀ (am, x) ∈ rel_IT }</sk
     <skos:definition xml:lang="en">A bdqffdq:ReportConcept to which controlled vocabulary bdqffdq:Responses about the result of the execution of the bdqffdq:Specification of a bdqffdq:DataQualityNeed are attached.</skos:definition>
     <skos:note xml:lang="en">For a bdqffdq:Validation, a bdqffdq:ResponseResult may be bdqffdq:COMPLIANT, or bdqffdq:NOT_COMPLIANT. For a bdqffdq:Measure, a bdqffdq:ResponseResult object may be bdqffdq:COMPLETE or bdqffdq:NOT_COMPLETE. For a bdqffdq:Issue, a bdqffdq:ResponseResult may be bdqffdq:IS_ISSUE, bdqffdq:POTENTIAL_ISSUE, or bdqffdq:NOT_ISSUE. A bdqffdq:Measure may also use a numeric data property. A bdqffdq:Amendment asserts a string data property.
 
-The bdqffdq:ResponseResult is represented as a value or a result object for bdqffdq:MeasureAsssertions, or just a result object for bdqffdq:ValidationResponses or just values for changes proposed in bdqffdq:AmendmentResponses.</skos:note>
+The bdqffdq:ResponseResult is represented as a value or a result object for bdqffdq:MeasurementResponses, or just a result object for bdqffdq:ValidationResponses or just values for changes proposed in bdqffdq:AmendmentResponses.</skos:note>
     <skos:prefLabel xml:lang="en">Response.result</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept">
@@ -267,7 +255,7 @@ Under the original formulation of the Framework, only Measures have Dimensions.<
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Amendment">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A bdqffdq:DataQualityNeed that expresses how proposals may be made to improve the fitness for use of data.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -281,7 +269,7 @@ Under the original formulation of the Framework, only Measures have Dimensions.<
 
 Describes a proposal for a bdqffdq:Enhancement of original data, which if accepted, would improve the quality of the data for a use. For example: 'Recommends valid value for taxon name in a Single Record.'
 
-bdqffdq:Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example, a bdqffdq:Amendment on a bdqffdq:SingleRecord may provide bdqffdq:Criteria for proposing that dwc:decimalLatitude and dwc:decimalLongitude are transposed in that record. Similarly, a bdqffdq:Amendment on a bdqffdq:MultiRecord may provide bdqffdq:Critera for proposing that all dwc:decimalLatitudes and dwc:decimalLongitudes from a data source have been transposed, and the mapping of data values to transport terms should be changed.
+bdqffdq:Amendments may describe proposed changes to data values, or proposed changes to processes for the production and manipulation of data, for example, a bdqffdq:Amendment on a bdqffdq:SingleRecord may provide bdqffdq:Criteria for proposing that dwc:decimalLatitude and dwc:decimalLongitude are transposed in that record. Similarly, a bdqffdq:Amendment on a bdqffdq:MultiRecord may provide bdqffdq:Criteria for proposing that all dwc:decimalLatitude and dwc:decimalLongitude values from a data source have been transposed, and the mapping of data values to transport terms should be changed.
 
 A bdqffdq:Amendment is the bdqffdq:DataQualityNeed that parallels a bdqffdq:AmendmentMethod in the Solutions layer (see Figure 3 in Veiga et al., 2017), and a bdqffdq:AmendmentResponse in the Report layer (see Figure 3 in Veiga et al., 2017).
 
@@ -438,6 +426,19 @@ VM(va) = { s | s ∈ S ⋀ (va, s) ∈ rel_VM }</skos:note>
     <skos:definition xml:lang="en">The value of a bdqffdq:Argument that is used in a bdqffdq:Specification to replace a Formal Parameter to determine the behavior of the bdqffdq:Specification.</skos:definition>
     <skos:prefLabel xml:lang="en">has Argument value</skos:prefLabel>
   </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/ResponseStatus">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
+    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A bdqffdq:ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality bdqffdq:Specification by a bdqffdq:Implementation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <rdfs:label xml:lang="en">Response.status</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ReportConcept"/>
+    <skos:definition xml:lang="en">A bdqffdq:ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality bdqffdq:Specification by a bdqffdq:Implementation.</skos:definition>
+    <skos:note xml:lang="en">The bdqffdq:ResponseStatus is metadata, indicating if data should be present in a bdqffdq:ResponseResult. Any bdqffdq:Response may have the values bdqffdq:INTERNAL_PREREQUISITES_NOT_MET or bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying bdqffdq:ResponseResult. Other values depend on the bdqffdq:Response type; bdqffdq:RUN_HAS_RESULT for a bdqffdq:Validation, bdqffdq:Issue or bdqffdq:Measure, and bdqffdq:FILLED_IN, bdqffdq:AMENDED, or bdqffdq:NOT_AMENDED for a bdqffdq:Amendment. Additional metadata qualifying the bdqffdq:Response in a bdqffdq:ResponseResult, such as statements of uncertainty or ambiguity may be placed in the bdqffdq:ResponseQualifier.</skos:note>
+    <skos:prefLabel xml:lang="en">Response.status</skos:prefLabel>
+  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/DataQualityDimension">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -467,7 +468,7 @@ VM(va) = { s | s ∈ S ⋀ (va, s) ∈ rel_VM }</skos:note>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/ValidationResponse">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-13</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-13</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A bdqffdq:Response expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -477,7 +478,7 @@ VM(va) = { s | s ∈ S ⋀ (va, s) ∈ rel_VM }</skos:note>
     <skos:definition xml:lang="en">A bdqffdq:Response expressing the result of a bdqffdq:Implementation validating compliance with a particular bdqffdq:DataQualityNeed in a particular bdqffdq:DataResource.</skos:definition>
     <skos:note xml:lang="en">The bdqffdq:ValidationResponse is a Report layer concept (see Figure 3 in Veiga et al., 2017) that describes the output of the execution of a Test that performs a bdqffdq:ValidationMethod following a bdqffdq:Specification to assess the validity of some data with respect to the bdqffdq:Criteria of a bdqffdq:Validation. 
 
-The bdqffdq:ValidationResponse concept is expected to carry through bdqffdq:hasResponseResult a bdqffdq:ResponseResult of bdqffdq:COMPLIANT or bdqffdq:NON_COMPLIANT.
+The bdqffdq:ValidationResponse concept is expected to carry through bdqffdq:hasResponseResult a bdqffdq:ResponseResult of bdqffdq:COMPLIANT or bdqffdq:NOT_COMPLIANT.
 
 DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</skos:note>
     <skos:prefLabel xml:lang="en">Validation Response</skos:prefLabel>
@@ -485,7 +486,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</skos:note>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/DataQualityNeed">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -493,7 +494,7 @@ DQV(dr) = { dqv | dqv ∈ RespV ⋀ (dr, dqv) ∈ rel_DQV }</skos:note>
     <rdfs:subClassOf rdf:nodeID="cb22ebd8846050328936bc9d9788cdf451888922aa0e83d99326cf9669f69a05b35"/>
     <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/NeedConcept"/>
     <skos:definition xml:lang="en">A bdqffdq:NeedConcept that expresses what bdqffdq:Responses may be made about data with respect to fitness for use.</skos:definition>
-    <skos:note xml:lang="en">Subtypes of bdqffdq:DataQualityNeed are the Test Types (Validation, Issue, Measure, and Amendment). The bdqffdq:DataQualityNeed appoximates the informal concept of a Test as used in the BDQ standard.</skos:note>
+    <skos:note xml:lang="en">Subtypes of bdqffdq:DataQualityNeed are the Test Types (Validation, Issue, Measure, and Amendment). The bdqffdq:DataQualityNeed approximates the informal concept of a Test as used in the BDQ standard.</skos:note>
     <skos:prefLabel xml:lang="en">Data Quality Need</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/DataQualityProfile">
@@ -514,7 +515,7 @@ DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U</skos:note>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -522,7 +523,7 @@ DQP(u) = MP(u) ⋃ VP(u) ⋃ ISP(u) ⋃ AP(u),  where u ∈ U</skos:note>
     <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementConcept"/>
     <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Policy"/>
     <skos:definition xml:lang="en">A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Measures.</skos:definition>
-    <skos:note xml:lang="en">A bdqffdq:MeasurementPolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Measurement relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Measures are supported by a given bdqffdq:UseCase.
+    <skos:note xml:lang="en">A bdqffdq:MeasurementPolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Measure relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Measures are supported by a given bdqffdq:UseCase.
 
 MP(u) = { me | me ∈ ME ⋀ (u, me) ∈ rel_MP }</skos:note>
     <skos:prefLabel xml:lang="en">Measurement Policy</skos:prefLabel>
@@ -541,6 +542,20 @@ MP(u) = { me | me ∈ ME ⋀ (u, me) ∈ rel_MP }</skos:note>
     <skos:definition xml:lang="en">A data quality bdqffdq:SolutionsConcept that relates a bdqffdq:Issue to its bdqffdq:Specifications.</skos:definition>
     <skos:note xml:lang="en">A bdqffdq:IssueMethod is a data quality Solutions layer concept (see Figure 3 in Veiga et al., 2017) describing the relationship between a bdqffdq:Specification (technical description of a Test) and a bdqffdq:Issue (a bdqffdq:Criterion in the context of bdqffdq:ResourceType (bdqffdq:SingleRecord or bdqffdq:MultiRecord) and associated bdqffdq:InformationElements).  ISM(is) = { s | s ∈ S ⋀ (is, s) ∈ rel_ISM }</skos:note>
     <skos:prefLabel xml:lang="en">Issue Method</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/QualityAssurance">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-16</dcterms:created>
+    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:UseCase to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <rdfs:label xml:lang="en">Quality Assurance</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept"/>
+    <skos:definition xml:lang="en">The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:UseCase to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.</skos:definition>
+    <skos:note xml:lang="en">The output of a BDQ Quality Assurance operation is a set of records (a MultiRecord).  The records contained in a data set filtered for Quality Assurance will comply with the fitness criteria for the given Use Case, this may include accepting changes proposed by Amendments to the data.  QA(dr, u) = { dr' | dr' ∈ DR ⋀ dr'.rt = ds ⋀ records(dr') ⊆ records(dr) ⋀ dr ∈ DR ⋀ dr.rt = ds ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( need(dqm) = me ⋀ result(dqm) = COMPLETE ) }</skos:note>
+    <skos:prefLabel xml:lang="en">Quality Assurance</skos:prefLabel>
+    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This concept of Quality Assurance encompasses Check and Act phases of Plan, Do, Check, Act of Shewhart (1939).</skos:scopeNote>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/NOT_COMPLETE">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
@@ -578,14 +593,14 @@ Subtypes bdqffdq:hasActedUponInformationElement and bdqffdq:hasConsultedInformat
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/SingleRecord">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ResourceType"/>
     <rdfs:comment xml:lang="en">A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:DataQualityNeed.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
     <rdfs:label xml:lang="en">Single Record</rdfs:label>
     <skos:definition xml:lang="en">A single entity comprised of encoded data with a defined structure that contains one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:DataQualityNeed.</skos:definition>
-    <skos:note xml:lang="en">A record from a dcmitype:Dataset. May be a database tuple, in the strict sense (i.e, a single row in a table) or may be rows related across several tables, or a graph of data. A bdqffdq:SingleRecord is single in that it has one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:UseCase. For example, in a bdqffdq:UseCase where dwc:Occurences are central, a bdqffdq:SingleRecord would represent a single dwc:Occurrence, but could have multiple dwc:Identifications and multiple dwc:Taxa related to it in a graph or data structure. However, in a bdqffdq:UseCase where dwc:Taxa are central, a bdqffdq:SingleRecord would represent a single dwc:Taxon entity (and might have multiple dwc:Occurrences related to it as part of the bdqffdq:SingleRecord, so long as the graph was limited before reaching other dwc:Taxon entities).
+    <skos:note xml:lang="en">A record from a dcmitype:Dataset. May be a database tuple, in the strict sense (i.e, a single row in a table) or may be rows related across several tables, or a graph of data. A bdqffdq:SingleRecord is single in that it has one instance of a core concept from the perspective of bdqffdq:InformationElements assessed for a bdqffdq:UseCase. For example, in a bdqffdq:UseCase where dwc:Occurrence instances are central, a bdqffdq:SingleRecord would represent a single dwc:Occurrence, but could have multiple dwc:Identification and multiple dwc:Taxon instances related to it in a graph or data structure. However, in a bdqffdq:UseCase where dwc:Taxon instances are central, a bdqffdq:SingleRecord would represent a single dwc:Taxon entity (and might have multiple dwc:Occurrence instances related to it as part of the bdqffdq:SingleRecord, so long as the graph was limited before reaching other dwc:Taxon entities).
 
 A bdqffdq:SingleRecord, like a bdqffdq:MultiRecord, consists of data with a defined structure that can be described as dcmitype:Dataset</skos:note>
     <skos:prefLabel xml:lang="en">Single Record</skos:prefLabel>
@@ -786,14 +801,14 @@ AMM(am) = { s | s ∈ S ⋀ (am, s) ∈ rel_AMM }</skos:note>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/hasResponseStatus">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The bdqffdq:ResponseStatus object asserted by a bdqffdq:Response.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
     <rdfs:label xml:lang="en">has Response Status</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/reportProperty"/>
     <skos:definition xml:lang="en">The bdqffdq:ResponseStatus object asserted by a bdqffdq:Response.</skos:definition>
-    <skos:note xml:lang="en">Used in a bdqffdq:DataQualityReport to describe bdqffdq:ResponseStatus. For example, in the case of a bdqffdq:ValidationResponse, bdqffdq:ResponseStatus values could be bdqffdq:RUN_HAS_RESULT, bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQISITES_NOT_MET. Similarly, bdqffdq:AmendmentResponses can assert bdqffdq:ResponesStatus objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.
+    <skos:note xml:lang="en">Used in a bdqffdq:DataQualityReport to describe bdqffdq:ResponseStatus. For example, in the case of a bdqffdq:ValidationResponse, bdqffdq:ResponseStatus values could be bdqffdq:RUN_HAS_RESULT, bdqffdq:INTERNAL_PREREQUISITES_NOT_MET, or bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET. Similarly, bdqffdq:AmendmentResponses can assert bdqffdq:ResponseStatus objects including bdqffdq:AMENDED or bdqffdq:FILLED_IN.
 
 The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, where either the object property bdqffdq:hasResponseResult or the data property bdqffdq:hasResponseResultValue may apply.</skos:note>
     <skos:prefLabel xml:lang="en">has Response Status</skos:prefLabel>
@@ -815,6 +830,20 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
     <owl:distinctMembers rdf:nodeID="cb1463ea28c44603de4487a6aaa49d7d8f5a8654f4f479a01f6679a319c83b2cb60"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/UseCase">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
+    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <rdfs:label xml:lang="en">Use Case</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept"/>
+    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/NeedConcept"/>
+    <skos:definition xml:lang="en">A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.</skos:definition>
+    <skos:note xml:lang="en">A bdqffdq:UseCase describes a purpose or use for which data must have quality. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Responses cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, but is similar in that it is a formal bdqffdq: statement derived from analysis of user stories concerning data use.  A bdqffdq:UseCase is expected to have a bdqffdq:hasFitnessRequirements property.</skos:note>
+    <skos:prefLabel xml:lang="en">Use Case</skos:prefLabel>
+  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/targetedIssue">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -826,20 +855,6 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
     <skos:definition xml:lang="en">A bdqffdq:Issue for which the data conformance with a bdqffdq:NeedConcept may be improved by accepting proposals from a bdqffdq:Amendment via a bdqffdq:ImprovementTarget.</skos:definition>
     <skos:note xml:lang="en">The bdqffdq:Issue targeted by a problem via the bdqffdq:ImprovementTarget object. Describes the relationship between a bdqffdq:ImprovementTarget and a bdqffdq:Issue.</skos:note>
     <skos:prefLabel xml:lang="en">targeted Issue</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/UseCase">
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
-    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <rdfs:label xml:lang="en">Use Case</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept"/>
-    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/NeedConcept"/>
-    <skos:definition xml:lang="en">A bdqffdq:NeedConcept expressing a purpose to which data are put for which the data must have quality for the result to have meaning and reliability.</skos:definition>
-    <skos:note xml:lang="en">A bdqffdq:UseCase describes a purpose or use for which data must have quality. The bdqffdq:ValidationPolicies, bdqffdq:MeasurementPolicies and bdqffdq:AmendmentPolicies that make up a bdqffdq:UseCase define which bdqffdq:Responses cover a given bdqffdq:UseCase. An example of a bdqffdq:UseCase could be 'Check for internal consistency of dates', with bdqffdq:ValidationPolicies for checking consistency between atomic date fields and a bdqffdq:Amendment such as 'eventDate filled in from verbatim'. A bdqffdq:UseCase is not the same as a use cases in the software engineering sense, but is similar in that it is a formal bdqffdq: statement derived from analyis of user stories concerning data use.  A bdqffdq:UseCase is expected to have a bdqffdq:hasFitnessRequirements property.</skos:note>
-    <skos:prefLabel xml:lang="en">Use Case</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/IssuePolicy">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
@@ -854,6 +869,20 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
     <skos:definition xml:lang="en">A bdqffdq:NeedConcept that relates a bdqffdq:UseCase to a set of supporting bdqffdq:Issues.</skos:definition>
     <skos:note xml:lang="en">A bdqffdq:IssuePolicy is a data quality Need layer concept (see Figure 3 in Veiga et al., 2017) that describes how a bdqffdq:Issue relates to a bdqffdq:UseCase. This relationship defines which bdqffdq:Issues are supported by a given bdqffdq:UseCase.  ISP(u) = { is | is ∈ IS ⋀ (u, is) ∈ rel_ISP }</skos:note>
     <skos:prefLabel xml:lang="en">Issue Policy</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
+    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ResponseStatus"/>
+    <rdfs:comment xml:lang="en">A bdqffdq:ResponseStatus used to indicate that a result was correctly generated.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <rdfs:label xml:lang="en">RUN_HAS_RESULT</rdfs:label>
+    <skos:definition xml:lang="en">A bdqffdq:ResponseStatus used to indicate that a result was correctly generated.</skos:definition>
+    <skos:notation>RUN_HAS_RESULT</skos:notation>
+    <skos:note xml:lang="en">Applies to bdqffdq:Validations, bdqffdq:Issues and bdqffdq:Measures, but not bdqffdq:Amendments. For a bdqffdq:Validation or a bdqffdq:Issue, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult. For a bdqffdq:Measure, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.</skos:note>
+    <skos:prefLabel xml:lang="en">RUN_HAS_RESULT</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/IS_ISSUE">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
@@ -943,20 +972,6 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
     <skos:note xml:lang="en">A bdqffdq:Parameter is a Formal Parameter for which an bdqffdq:Argument is an Actual Parameter that replaces it to determine the behavior of a bdqffdq:Specification. An extension to the original fitness for use framework as described in Veiga et al., 2017.</skos:note>
     <skos:prefLabel xml:lang="en">Parameter</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/QualityAssurance">
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-16</dcterms:created>
-    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-16</dcterms:modified>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <rdfs:label xml:lang="en">Quality Assurance</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/FundamentalConcept"/>
-    <skos:definition xml:lang="en">The process of evaluating data for fitness for some use and selecting just those data that are fit for that use. This includes, in BDQ, the operation of filtering a bdqffdq:MultiRecord bdqffdq:DataResource for a specified bdqffdq:Use Case to retain only the data subset where every associated bdqffdq:MultiRecord bdqffdq:Measure that evaluates as COMPLETE/NOT_COMPLETE has a Response.result of COMPLETE, signifying that all contained records are fit for use for the specified bdqffdq:UseCase.</skos:definition>
-    <skos:note xml:lang="en">The output of a BDQ Quality Assurance operation is a set of records (a MultiRecord).  The records contained in a data set filtered for Quality Assurance will comply with the fitness criteria for the given Use Case, this may include accepting changes proposed by Amendments to the data.  QA(dr, u) = { dr' | dr' ∈ DR ⋀ dr'.rt = ds ⋀ records(dr') ⊆ records(dr) ⋀ dr ∈ DR ⋀ dr.rt = ds ⋀ u ∈ U ⋀ ∀ me ∈ MEaq(u), ∃ dqm ∈ DQM(dr') ( need(dqm) = me ⋀ result(dqm) = COMPLETE ) }</skos:note>
-    <skos:prefLabel xml:lang="en">Quality Assurance</skos:prefLabel>
-    <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This concept of Quality Assurance encompasses Check and Act phases of Plan, Do, Check, Act of Shewhart (1939).</skos:scopeNote>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="cbb56c7c9b0751963ca43928a539dec044fa3caa55bb3ec2d9c3943b52cc4ce3a3">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
     <owl:members rdf:nodeID="cbf4e94b6ed37e2505e7ed6145187ca60c68718ff08f874489deff7e8d57ef8310"/>
@@ -973,6 +988,18 @@ The bdqffdq:ResponseStatus is always an object, unlike bdqffdq:ResponseResult, w
     <skos:note xml:lang="en">Relates bdqffdq:Policies to Tests (bdqffdq:DataQualityNeed).</skos:note>
     <skos:prefLabel xml:lang="en">included In Policy</skos:prefLabel>
     <skos:scopeNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The subject is the bdqffdq:Policy (e.g. a bdqffdq:ValidationPolicy) and the object is the bdqffdq:DataQualityNeed (the Test): &lt;policy&gt; bdqffdq:includedInPolicy bdqtest:{uuid}.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/">
+    <dcterms:creator>TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions</dcterms:creator>
+    <dcterms:description xml:lang="en">The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al., available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731 as modified to describe data quality fitness for use Tests in the TDWG BDQ Standard.</dcterms:description>
+    <dcterms:hasPart rdf:resource="https://rs.tdwg.org/bdqffdq/extension/"/>
+    <dcterms:hasPart rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:issued>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment xml:lang="en">Generated by rs.tdwg.org process/build_ontology.py from the term list https://rs.tdwg.org/bdqffdq/terms/ and the vocabulary extension term list https://rs.tdwg.org/bdqffdq/extension/. For OWL 2 DL, rdf:value is replaced by skos:notation (rs.tdwg.org uses rdf:value for controlled value strings, TDWG Standards Documentation Specification 4.5.4).</rdfs:comment>
+    <rdfs:label xml:lang="en">Biodiversity Data Quality Fitness for Use Framework (Ontology)</rdfs:label>
+    <owl:versionIRI rdf:resource="https://rs.tdwg.org/version/bdqffdq/2026-11-22"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/ValidationPolicy">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
@@ -1002,19 +1029,6 @@ VP(u) = { va | va ∈ VA ⋀ (u, va) ∈ rel_VP }</skos:note>
     <skos:note xml:lang="en">Category of properties used in reports (object properties associated with response objects (bdqffdq:Responses)). See also the data properties bdqffdq:hasResponseComment and bdqffdq:hasResponseResultValue.</skos:note>
     <skos:prefLabel xml:lang="en">report Property</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults">
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
-    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <rdfs:label xml:lang="en">has Authorities and Defaults</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <skos:definition xml:lang="en">Text describing bdqval:sourceAuthorities and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.</skos:definition>
-    <skos:note xml:lang="en">Details of the bdqval:sourceAuthority listed in a bdqffdq:Specification, with bdqffdq:Parameters that may affect the bdqffdq:hasExpectedResponse, and with their default values.</skos:note>
-    <skos:prefLabel xml:lang="en">has Authorities and Defaults</skos:prefLabel>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="cb21ea04cbb596468cb2b590b6691a6c1630fc25f269b0c89901bff8ecafda65326">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:allValuesFrom rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
@@ -1033,6 +1047,23 @@ VP(u) = { va | va ∈ VA ⋀ (u, va) ∈ rel_VP }</skos:note>
     <skos:notation>COMPLETE</skos:notation>
     <skos:note xml:lang="en">This value can be used to filter data for bdqffdq:QualityAssurance. This value can be asserted, for example, by bdqffdq:Measures of bdqffdq:MultiRecords where all the bdqffdq:Validation bdqffdq:ResponseResults from all included records in the dataset are bdqffdq:COMPLIANT.</skos:note>
     <skos:prefLabel xml:lang="en">COMPLETE</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Implementation">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
+    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the process described in a particular bdqffdq:Specification.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <rdfs:label xml:lang="en">Implementation</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="cb26a59a073be5395868d0e61870ee38196accfb72a8b5a83530000813df2b90ace"/>
+    <rdfs:subClassOf rdf:nodeID="cb2fe2d5f58cfa0aea16f955f87cde6b4896d380040b26fd9dc87bfa184267df04b"/>
+    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept"/>
+    <skos:definition xml:lang="en">A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the process described in a particular bdqffdq:Specification.</skos:definition>
+    <skos:note xml:lang="en">A bdqffdq:Implementation describes the relationship between a bdqffdq:Specification (technical description of a Test) and the bdqffdq:Mechanism that implements it.
+
+I(s) = { m | m ∈ M ⋀ (s, m) ∈ rel_I }</skos:note>
+    <skos:prefLabel xml:lang="en">Implementation</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Policy">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
@@ -1094,18 +1125,6 @@ DQI(dr) = { dqi | dqi ∈ RespI ⋀ (dr, dqi) ∈ rel_DQI }</skos:note>
   <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/hasFitnessRequirements">
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-23</dcterms:created>
-    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-23</dcterms:modified>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <rdfs:label xml:lang="en">has Fitness Requirements</rdfs:label>
-    <skos:definition xml:lang="en">The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.</skos:definition>
-    <skos:note xml:lang="en">The bdqffdq:hasFitnessRequirements should sumarize the properties that data need to have to be fit for purpose for that bdqffdq:UseCase.   It should briefly list the general properties that bdqffdq:DataQualityNeeds associated with the UseCase need to assess (for example, stating that georeferences must be correctly formatted and have adequate metadata), and can identify particular threshold values (such as a coordinate uncertainty greater than some value) that would make data unfit for that use.   The hasFitnessRequirements property should not, however, simply list bdqffdq:DataQualityNeeds instances, but should provide a succinct human readable summary of the quality requirements.</skos:note>
-    <skos:prefLabel xml:lang="en">has Fitness Requirements</skos:prefLabel>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="cb1e33d19bf603f868ac63b99527ee8b0820a43a4d65bf570b089a3245aba0a87e6">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:allValuesFrom rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Amendment"/>
@@ -1123,6 +1142,18 @@ DQI(dr) = { dqi | dqi ∈ RespI ⋀ (dr, dqi) ∈ rel_DQI }</skos:note>
     <skos:definition xml:lang="en">A bdqffdq:ResponseStatus used to indicate that a bdqffdq:ResponseResult was not generated because a bdqval:sourceAuthority was not accessible. If the Test is run at a later time, it may produce a different bdqffdq:ResponseStatus.</skos:definition>
     <skos:notation>EXTERNAL_PREREQUISITES_NOT_MET</skos:notation>
     <skos:prefLabel xml:lang="en">EXTERNAL_PREREQUISITES_NOT_MET</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/hasFitnessRequirements">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-23</dcterms:created>
+    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <rdfs:label xml:lang="en">has Fitness Requirements</rdfs:label>
+    <skos:definition xml:lang="en">The property of a bdqffdq:UseCase that provides text listing the qualities that data must have to be fit for a given use.</skos:definition>
+    <skos:note xml:lang="en">The bdqffdq:hasFitnessRequirements should summarize the properties that data need to have to be fit for purpose for that bdqffdq:UseCase.   It should briefly list the general properties that bdqffdq:DataQualityNeeds associated with the UseCase need to assess (for example, stating that georeferences must be correctly formatted and have adequate metadata), and can identify particular threshold values (such as a coordinate uncertainty greater than some value) that would make data unfit for that use.   The hasFitnessRequirements property should not, however, simply list bdqffdq:DataQualityNeeds instances, but should provide a succinct human readable summary of the quality requirements.</skos:note>
+    <skos:prefLabel xml:lang="en">has Fitness Requirements</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/MeasurementConcept">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
@@ -1277,6 +1308,18 @@ DQM(dr) = { dqm | dqm ∈ RespM ⋀ (dr, dqm) ∈ rel_DQM }</skos:note>
     <skos:note xml:lang="en">Use to link a bdqffdq:AmendmentMethod to a bdqffdq:Amendment. Describes the relationship between a bdqffdq:AmendmentMethod (Solutions layer, see Figure 3 in Veiga et al., 2017) and a bdqffdq:Amendment (Need layer, see Figure 3 in Veiga et al., 2017).</skos:note>
     <skos:prefLabel xml:lang="en">for Amendment</skos:prefLabel>
   </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/hasSpecification">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
+    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a bdqffdq:DataQualityMethod to a bdqffdq:Specification.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <rdfs:label xml:lang="en">has Specification</rdfs:label>
+    <skos:definition xml:lang="en">Relates a bdqffdq:DataQualityMethod to a bdqffdq:Specification.</skos:definition>
+    <skos:note xml:lang="en">Describes the relationship between a derived bdqffdq: concept that is a bdqffdq:DataQualityMethod and the bdqffdq:FundamentalConcept of a bdqffdq:Specification (technical description of a Test).</skos:note>
+    <skos:prefLabel xml:lang="en">has Specification</skos:prefLabel>
+  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/INTERNAL_PREREQUISITES_NOT_MET">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -1332,18 +1375,6 @@ DQM(dr) = { dqm | dqm ∈ RespM ⋀ (dr, dqm) ∈ rel_DQM }</skos:note>
     <skos:note xml:lang="en">Category of concepts forming the Need layer of the fitness for use framework (see Figure 3 in Veiga et al., 2017).</skos:note>
     <skos:prefLabel xml:lang="en">Need Concept</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/">
-    <dcterms:creator>TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions</dcterms:creator>
-    <dcterms:description xml:lang="en">The classes and object properties found in this ontology are dedicated to fundamental and derived concepts from the Fitness For Use Framework described in the paper by Veiga et al., available at: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178731 as modified to describe data quality fitness for use Tests in the TDWG BDQ Standard.</dcterms:description>
-    <dcterms:hasPart rdf:resource="https://rs.tdwg.org/bdqffdq/extension/"/>
-    <dcterms:hasPart rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-20</dcterms:issued>
-    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <rdfs:comment xml:lang="en">Generated by rs.tdwg.org process/build_ontology.py from the term list https://rs.tdwg.org/bdqffdq/terms/ and the vocabulary extension term list https://rs.tdwg.org/bdqffdq/extension/. For OWL 2 DL, rdf:value is replaced by skos:notation (rs.tdwg.org uses rdf:value for controlled value strings, TDWG Standards Documentation Specification 4.5.4).</rdfs:comment>
-    <rdfs:label xml:lang="en">Biodiversity Data Quality Fitness for Use Framework (Ontology)</rdfs:label>
-    <owl:versionIRI rdf:resource="https://rs.tdwg.org/version/bdqffdq/2026-11-20"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Response">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-13</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -1356,6 +1387,19 @@ DQM(dr) = { dqm | dqm ∈ RespM ⋀ (dr, dqm) ∈ rel_DQM }</skos:note>
     <skos:definition xml:lang="en">A bdqffdq:ReportConcept produced by a bdqffdq:Implementation expressing a statement about data quality resulting from the application of the logic of a bdqffdq:Specification to a bdqffdq:DataResource.</skos:definition>
     <skos:note xml:lang="en">The bdqffdq:Response type is the bdqffdq:FundamentalConcept that makes up a bdqffdq:DataQualityReport. A bdqffdq:Response can be any one of four types (represented as subclasses), bdqffdq:ValidationResponse, bdqffdq:IssueResponse, bdqffdq:MeasurementResponse, and bdqffdq:AmendmentResponse. The bdqffdq:Response concept relates a bdqffdq:Specification (the technical description of a performed Test), a bdqffdq:DataResource (initial values of input data expressed in terms of a controlled vocabulary), the bdqffdq:Mechanism (external service, actor, or code that performs the Test), and represents the output of the performed Test.  Response was called Response in the original formulation of the Framework.</skos:note>
     <skos:prefLabel xml:lang="en">Response</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
+    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-22</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Text describing values of bdqval:sourceAuthority and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
+    <rdfs:label xml:lang="en">has Authorities and Defaults</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <skos:definition xml:lang="en">Text describing values of bdqval:sourceAuthority and bdqffdq:Parameters with their default values to attach to a bdqffdq:Specification to further specify the behavior described in the bdqffdq:hasExpectedResponse.</skos:definition>
+    <skos:note xml:lang="en">Details of the bdqval:sourceAuthority listed in a bdqffdq:Specification, with bdqffdq:Parameters that may affect the bdqffdq:hasExpectedResponse, and with their default values.</skos:note>
+    <skos:prefLabel xml:lang="en">has Authorities and Defaults</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/forValidation">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
@@ -1371,19 +1415,6 @@ DQM(dr) = { dqm | dqm ∈ RespM ⋀ (dr, dqm) ∈ rel_DQM }</skos:note>
     <skos:note xml:lang="en">Use to link bdqffdq:ValidationMethods to bdqffdq:Validations. Describes the relationship between a bdqffdq:ValidationMethod (Solutions layer, see Figure 3 in Veiga et al., 2017) and a bdqffdq:Validation (Need layer, see Figure 3 in Veiga et al., 2017). Parallel concepts are bdqffdq:forAmendment, bdqffdq:forMeasure, and bdqffdq:forIssue.</skos:note>
     <skos:prefLabel xml:lang="en">for Validation</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/ResponseStatus">
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
-    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A bdqffdq:ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality bdqffdq:Specification by a bdqffdq:Implementation.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <rdfs:label xml:lang="en">Response.status</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ReportConcept"/>
-    <skos:definition xml:lang="en">A bdqffdq:ReportConcept expressing controlled vocabulary values about the exit state of an execution process of a data quality bdqffdq:Specification by a bdqffdq:Implementation.</skos:definition>
-    <skos:note xml:lang="en">The bdqffdq:ResponseStatus is metadata, indicating if data should be present in a bdqffdq:ResponseResult. Any bdqffdq:Response may have the values bdqffdq:INTERNAL_PREREQUISITES_NOT_MET or bdqffdq:EXTERNAL_PREREQUISITES_NOT_MET, indicating that no value would be present in the accompanying bdqffdq:ResponseResult. Other values depend on the bdqffdq:Response type; bdqffdq:RUN_HAS_RESULT for a bdqffdq:Validation, bdqffdq:Issue or bdqffdq:Measure, and bdqffdq:FILLED_IN, bdqffdq:AMENDED, or bdqffdq:NOT_AMENDED for a bdqffdq:Amendment. Additional metadata qualifying the bdqffdq:Response in a bdqffdq:ResponseResult, such as statements of uncertainy or ambiguity may be placed in the bdqffdq:ResponseQualifier.</skos:note>
-    <skos:prefLabel xml:lang="en">Response.status</skos:prefLabel>
-  </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/measurementProperty">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
     <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
@@ -1395,20 +1426,6 @@ DQM(dr) = { dqm | dqm ∈ RespM ⋀ (dr, dqm) ∈ rel_DQM }</skos:note>
     <skos:definition xml:lang="en">Category of object properties that apply to bdqffdq:Measures.</skos:definition>
     <skos:note xml:lang="en">Subproperties of this type group object properties that apply to bdqffdq:MeasurementConcepts such as bdqffdq:MeasurementPolicy (bdqffdq:DataQualityNeed), bdqffdq:MeasurementMethod (bdqffdq:DataQualityMethod) and bdqffdq:Measure (bdqffdq:DataQualityReport).</skos:note>
     <skos:prefLabel xml:lang="en">measurement Property</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/RUN_HAS_RESULT">
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
-    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/ResponseStatus"/>
-    <rdfs:comment xml:lang="en">A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <rdfs:label xml:lang="en">RUN_HAS_RESULT</rdfs:label>
-    <skos:definition xml:lang="en">A bdqffdq:ResponseStatus used to indicate that that a result was correctly generated.</skos:definition>
-    <skos:notation>RUN_HAS_RESULT</skos:notation>
-    <skos:note xml:lang="en">Applies to bdqffdq:Validations, bdqffdq:Issues and bdqffdq:Measures, but not bdqffdq:Amendments. For a bdqffdq:Validation or a bdqffdq:Issue, the value will be found as a bdqffdq:ResponseResult object by following bdqffdq:hasResponseResult. For a bdqffdq:Measure, the value could be either in the data property bdqffdq:hasResponseResultValue or could be a ResponseResult object.</skos:note>
-    <skos:prefLabel xml:lang="en">RUN_HAS_RESULT</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:nodeID="cb14222be084d1809620307bf14a1348f7677acddcc680a5cc07597caf7be8f8866">
     <rdf:first rdf:resource="https://rs.tdwg.org/bdqffdq/terms/POTENTIAL_ISSUE"/>
@@ -1607,23 +1624,6 @@ MEaq(u) = { me | me ∈ ME ⋀ me ∈ MP(u) ⋀ u ∈ U ⋀ resultType(me) = cat
   <rdf:Description rdf:nodeID="cb3a14589717c3079e71a81a5f715f291ed4f1a83a1986c07a6af9d8ea66d2553">
     <rdf:first rdf:resource="https://rs.tdwg.org/bdqffdq/terms/COMPLIANT"/>
     <rdf:rest rdf:nodeID="cb516ee8a992faf319bed8378f6010b7d2a5bd0ea2c5092aad4f0b76758070cbbc"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/Implementation">
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
-    <dcterms:isPartOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:modified>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="https://rs.tdwg.org/bdqffdq/terms/"/>
-    <rdfs:label xml:lang="en">Implementation</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="cb26a59a073be5395868d0e61870ee38196accfb72a8b5a83530000813df2b90ace"/>
-    <rdfs:subClassOf rdf:nodeID="cb2fe2d5f58cfa0aea16f955f87cde6b4896d380040b26fd9dc87bfa184267df04b"/>
-    <rdfs:subClassOf rdf:resource="https://rs.tdwg.org/bdqffdq/terms/SolutionsConcept"/>
-    <skos:definition xml:lang="en">A bdqffdq:SolutionsConcept that describes the portion of a bdqffdq:Mechanism that carries out the proccess described in a particular bdqffdq:Specification.</skos:definition>
-    <skos:note xml:lang="en">A bdqffdq:Implementation describes the relationship between a bdqffdq:Specification (technical description of a Test) and the bdqffdq:Mechanism that implements it.
-
-I(s) = { m | m ∈ M ⋀ (s, m) ∈ rel_I }</skos:note>
-    <skos:prefLabel xml:lang="en">Implementation</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqffdq/terms/hasUseCase">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</dcterms:created>
