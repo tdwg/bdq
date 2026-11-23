@@ -6,7 +6,7 @@
 BDQ Tests List of Terms
 
 **Date version issued**<br>
-2026-11-23
+2026-11-24
 
 **Date created**<br>
 2022-03-25
@@ -18,13 +18,13 @@ BDQ Tests List of Terms
 bdqtest
 
 **This version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-23>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-24>
 
 **Latest version**<br>
 <https://rs.tdwg.org/bdqtest/doc/list/>
 
 **Previous version**<br>
-<https://rs.tdwg.org/bdqtest/doc/list/2026-11-21>
+<https://rs.tdwg.org/bdqtest/doc/list/2026-11-23>
 
 **Abstract**<br>
 This document is a reference for the BDQ standard, documenting the Tests in the bdqtest: vocabulary, using terms from the Fitness For Use Framework ontology.
@@ -36,7 +36,7 @@ This document is a reference for the BDQ standard, documenting the Tests in the 
 TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-23>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-24>
 
 **Status**<br>
 Draft Standard for Review
@@ -4486,11 +4486,11 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2026-11-20</td>
+			<td>2026-11-24</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-20">https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-20</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-20.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
+			<td><a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-24">https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-24</a> <a href="https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-24.ttl" title="RDF (Turtle)"><img src="/assets/img/rdf-graph.svg" alt="RDF (Turtle)" class="rdf-icon"></a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -4522,7 +4522,7 @@ Including MultiRecord Measures
 		</tr>
 		<tr>
 			<td>Examples</td>
-			<td>[dwc:eventDate="1880-05-08/10": Response.status=RUN_HAS_RESULT, Response.result="259200", Response.comment="dwc:eventDate duration is 3 days = 259,200 seconds"],[dwc:eventDate="95": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.result=NOT_REPORTED, Response.comment="dwc:eventDate does not contain a valid ISO 8601-1:2019 date"]</td>
+			<td>[dwc:eventDate="1880-05-08/10": Response.status=RUN_HAS_RESULT, Response.result="259200", Response.comment="dwc:eventDate duration is 3 days = 259,200 seconds"],[dwc:eventDate="95": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.comment="dwc:eventDate does not contain a valid ISO 8601-1:2019 date"]</td>
 		</tr>
 		<tr>
 			<td>Type</td>
@@ -27363,7 +27363,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-23>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests List of Terms. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/list/2026-11-24>
 
 **Biodiversity Information Standards (TDWG)**
 

@@ -22,22 +22,22 @@ Draft Standard for Review
 <http://www.tdwg.org/standards/YYY>
 
 **Date version issued**<br>
-2026-11-23
+2026-11-24
 
 **Date created**<br>
 2022-03-25
 
 **This version**<br>
-<http://www.tdwg.org/standards/YYY/version/2026-11-23>
+<http://www.tdwg.org/standards/YYY/version/2026-11-24>
 
 **Latest version**<br>
 <http://www.tdwg.org/standards/YYY>
 
 **Previous version**<br>
-<http://www.tdwg.org/standards/YYY/version/2026-11-22>
+<http://www.tdwg.org/standards/YYY/version/2026-11-23>
 
 **Bibliographic citation**<br>
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://www.tdwg.org/standards/YYY/version/2026-11-23>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://www.tdwg.org/standards/YYY/version/2026-11-24>
 
 **Abstract**<br>
 This is the landing and overview page for the **Biodiversity Data Quality (BDQ)** standard.<br>  BDQ is a standard maintained by the Biodiversity Data Quality Maintenance Interest Group (to be constituted) and designed to facilitate the consistent development and use of a set of biodiversity data quality tests and assertions. The standard consists of vocabularies needed to define the tests, a guide to support the implementation of tests, a guide to support the interpretation of outputs of implemented tests, test data and expected responses from tests against this data to validate implemented tests.
@@ -230,7 +230,7 @@ This section provides a reader‑focused roadmap to that document set. Its purpo
     </tr>
     <tr>
       <th style="width: 100%;" colspan="3">Some Key Concepts: 
-          <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the Users Guide.
+          <a href="./docs/guide/users/index.md#31-test-types-non-normative">Test Types</a> and <a href="./docs/guide/users/index.md#32-test-inputs-and-outputs-non-normative">Test Inputs and Outputs</a> in the User's Guide.
           <br>
           <a href="./docs/guide/bdqtest/index.md#21-the-bdq-definition-of-test-non-normative">The BDQ Definition of "Test"</a> in BDQ Tests: Concepts and Use.
       </th>
@@ -784,7 +784,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://www.tdwg.org/standards/YYY/version/2026-11-23>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. The Biodiversity Data Quality (BDQ) Standard. Biodiversity Information Standards (TDWG). <http://www.tdwg.org/standards/YYY/version/2026-11-24>
 
 **Biodiversity Information Standards (TDWG)**
 

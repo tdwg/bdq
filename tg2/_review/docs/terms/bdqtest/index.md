@@ -3163,7 +3163,7 @@ We have three individual measures for pass (MEASURE_VALIDATIONTESTS_COMPLIANT (4
 ###  MEASURE_EVENTDATE_DURATIONINSECONDS
 
 ####  Measure dwc:eventDate Duration in Seconds
-https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-20
+https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-24
 Acts upon  SingleRecord
 
 #### Description
@@ -3183,7 +3183,7 @@ dwc:eventDate
 
 dwc:eventDate="1880-05-08/10": Response.status=RUN_HAS_RESULT, Response.result="259200", Response.comment="dwc:eventDate duration is 3 days = 259,200 seconds"
 
-dwc:eventDate="95": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.result=NOT_REPORTED, Response.comment="dwc:eventDate does not contain a valid ISO 8601-1:2019 date"
+dwc:eventDate="95": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.comment="dwc:eventDate does not contain a valid ISO 8601-1:2019 date"
 
 
 #### Use Cases
@@ -8944,7 +8944,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-23>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-24>
 
 **Biodiversity Information Standards (TDWG)**
 
