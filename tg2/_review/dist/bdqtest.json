@@ -20792,13 +20792,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/method/version/d5732888-e5d4-4fa7-89dd-09baf1773e07-2026-11-20"
+        "@id": "https://rs.tdwg.org/bdqtest/method/version/d5732888-e5d4-4fa7-89dd-09baf1773e07-2026-11-24"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-11-20"
+        "@value": "2026-11-24"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -24078,13 +24078,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/policy/version/962109a0-205f-4ea9-b7df-39ad3a5fc503-2026-11-21"
+        "@id": "https://rs.tdwg.org/bdqtest/policy/version/962109a0-205f-4ea9-b7df-39ad3a5fc503-2026-11-24"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-11-21"
+        "@value": "2026-11-24"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -34473,13 +34473,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/specification/version/be93a0ef-9bf7-417f-a26e-daae5d00dabb-2024-09-16"
+        "@id": "https://rs.tdwg.org/bdqtest/specification/version/be93a0ef-9bf7-417f-a26e-daae5d00dabb-2026-11-24"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2024-09-16"
+        "@value": "2026-11-24"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -34497,7 +34497,7 @@
         "@value": "dwc:eventDate=\"1880-05-08/10\": Response.status=RUN_HAS_RESULT, Response.result=\"259200\", Response.comment=\"dwc:eventDate duration is 3 days = 259,200 seconds\""
       },
       {
-        "@value": "dwc:eventDate=\"95\": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.result=NOT_REPORTED, Response.comment=\"dwc:eventDate does not contain a valid ISO 8601-1:2019 date\""
+        "@value": "dwc:eventDate=\"95\": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.comment=\"dwc:eventDate does not contain a valid ISO 8601-1:2019 date\""
       }
     ],
     "https://rs.tdwg.org/bdqffdq/terms/hasAuthoritiesDefaults": [
@@ -45231,13 +45231,13 @@
     ],
     "http://purl.org/dc/terms/hasVersion": [
       {
-        "@id": "https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-20"
+        "@id": "https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-24"
       }
     ],
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-11-20"
+        "@value": "2026-11-24"
       }
     ],
     "http://purl.org/dc/terms/references": [

@@ -2446,8 +2446,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/d5732888-e5d4-4fa7-89dd-09baf1773e07> a bdqffdq:MeasurementMethod ;
     rdfs:label "MeasurementMethod: MEASURE_EVENTDATE_DURATIONINSECONDS with Specification: Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/d5732888-e5d4-4fa7-89dd-09baf1773e07-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/d5732888-e5d4-4fa7-89dd-09baf1773e07-2026-11-24> ;
+    dcterms:modified "2026-11-24"^^xsd:date ;
     owl:sameAs <urn:uuid:d5732888-e5d4-4fa7-89dd-09baf1773e07> ;
     skos:historyNote "Source: Alex Thompson" ;
     skos:note "Example Implementations Source Code: https://github.com/FilteredPush/event_date_qc/blob/v3.0.5/src/main/java/org/filteredpush/qc/date/DwCEventDQ.java#L120",
@@ -3210,8 +3210,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/962109a0-205f-4ea9-b7df-39ad3a5fc503> a bdqffdq:MeasurementPolicy ;
     rdfs:label "MeasurementPolicy: (107) measures  in UseCase bdquc:Spatial-Temporal_Patterns" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/962109a0-205f-4ea9-b7df-39ad3a5fc503-2026-11-21> ;
-    dcterms:modified "2026-11-21"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/962109a0-205f-4ea9-b7df-39ad3a5fc503-2026-11-24> ;
+    dcterms:modified "2026-11-24"^^xsd:date ;
     owl:sameAs <urn:uuid:962109a0-205f-4ea9-b7df-39ad3a5fc503> ;
     bdqffdq:hasUseCase bdquc:Spatial-Temporal_Patterns ;
     bdqffdq:includedInPolicy bdqtest:0028ef9a-6553-467b-a344-90327ed2babf,
@@ -6567,11 +6567,11 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 <https://rs.tdwg.org/bdqtest/specification/be93a0ef-9bf7-417f-a26e-daae5d00dabb> a bdqffdq:Specification ;
     rdfs:label "Specification for: MEASURE_EVENTDATE_DURATIONINSECONDS" ;
     dcterms:description "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/be93a0ef-9bf7-417f-a26e-daae5d00dabb-2024-09-16> ;
-    dcterms:modified "2024-09-16"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/be93a0ef-9bf7-417f-a26e-daae5d00dabb-2026-11-24> ;
+    dcterms:modified "2026-11-24"^^xsd:date ;
     owl:sameAs <urn:uuid:be93a0ef-9bf7-417f-a26e-daae5d00dabb> ;
     skos:example "dwc:eventDate=\"1880-05-08/10\": Response.status=RUN_HAS_RESULT, Response.result=\"259200\", Response.comment=\"dwc:eventDate duration is 3 days = 259,200 seconds\"",
-        "dwc:eventDate=\"95\": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.result=NOT_REPORTED, Response.comment=\"dwc:eventDate does not contain a valid ISO 8601-1:2019 date\"" ;
+        "dwc:eventDate=\"95\": Response.status=INTERNAL_PREREQUISITES_NOT_MET, Response.comment=\"dwc:eventDate does not contain a valid ISO 8601-1:2019 date\"" ;
     bdqffdq:hasAuthoritiesDefaults "" ;
     bdqffdq:hasExpectedResponse "INTERNAL_PREREQUISITES_NOT_MET if dwc:eventDate is bdqval:Empty or if the value of dwc:eventDate is not a valid ISO 8601 date; otherwise RUN_HAS_RESULT with the result being the duration (sensu ISO 8601) expressed in the dwc:eventDate, in seconds." .
 
@@ -8846,8 +8846,8 @@ bdqtest:563872eb-f544-45a0-8f91-8098d62768d4 a bdqffdq:Measure ;
 bdqtest:56b6c695-adf1-418e-95d2-da04cad7be53 a bdqffdq:Measure ;
     rdfs:label "MEASURE_EVENTDATE_DURATIONINSECONDS" ;
     dcterms:description "What is the duration of dwc:eventDate in seconds?" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-20> ;
-    dcterms:modified "2026-11-20"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/56b6c695-adf1-418e-95d2-da04cad7be53-2026-11-24> ;
+    dcterms:modified "2026-11-24"^^xsd:date ;
     dcterms:references <https://en.wikipedia.org/wiki/ISO_8601>,
         <https://www.iso.org/obp/ui/> ;
     owl:sameAs <urn:uuid:56b6c695-adf1-418e-95d2-da04cad7be53> ;
