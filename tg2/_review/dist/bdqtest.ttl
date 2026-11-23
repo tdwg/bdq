@@ -2595,8 +2595,8 @@
 
 <https://rs.tdwg.org/bdqtest/method/e581e111-a7ef-4f16-9899-175b131b304e> a bdqffdq:MeasurementMethod ;
     rdfs:label "MeasurementMethod: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/e581e111-a7ef-4f16-9899-175b131b304e-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/method/version/e581e111-a7ef-4f16-9899-175b131b304e-2026-11-25> ;
+    dcterms:modified "2026-11-25"^^xsd:date ;
     owl:sameAs <urn:uuid:e581e111-a7ef-4f16-9899-175b131b304e> ;
     skos:historyNote "Source: TG2" ;
     skos:note "TG2 Validation OTHER CODED Test VOCABULARY Conformance Parameterized CORE" ;
@@ -3139,8 +3139,8 @@
 
 <https://rs.tdwg.org/bdqtest/policy/89332ae7-a4d0-437a-9c15-b3cba92fb36d> a bdqffdq:MeasurementPolicy ;
     rdfs:label "MeasurementPolicy: (64) measures  in UseCase bdquc:Alien-Species" ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/89332ae7-a4d0-437a-9c15-b3cba92fb36d-2026-11-21> ;
-    dcterms:modified "2026-11-21"^^xsd:date ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/policy/version/89332ae7-a4d0-437a-9c15-b3cba92fb36d-2026-11-25> ;
+    dcterms:modified "2026-11-25"^^xsd:date ;
     owl:sameAs <urn:uuid:89332ae7-a4d0-437a-9c15-b3cba92fb36d> ;
     bdqffdq:hasUseCase bdquc:Alien-Species ;
     bdqffdq:includedInPolicy bdqtest:0df03601-3768-4805-906a-bbd0a41b0fda,
@@ -4954,13 +4954,13 @@ bdqenh:Transposed a bdqffdq:Enhancement ;
 
 <https://rs.tdwg.org/bdqtest/specification/296980d9-a8bf-4fe4-8596-ee2bbd140e38> a bdqffdq:Specification ;
     rdfs:label "Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD" ;
-    dcterms:description "COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/296980d9-a8bf-4fe4-8596-ee2bbd140e38-2024-11-11> ;
-    dcterms:modified "2024-11-11"^^xsd:date ;
+    dcterms:description "COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE." ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/specification/version/296980d9-a8bf-4fe4-8596-ee2bbd140e38-2026-11-25> ;
+    dcterms:modified "2026-11-25"^^xsd:date ;
     owl:sameAs <urn:uuid:296980d9-a8bf-4fe4-8596-ee2bbd140e38> ;
     skos:example "" ;
     bdqffdq:hasAuthoritiesDefaults "" ;
-    bdqffdq:hasExpectedResponse "COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE." .
+    bdqffdq:hasExpectedResponse "COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE." .
 
 <https://rs.tdwg.org/bdqtest/specification/296e60bb-6872-420d-9769-d3f26d205714> a bdqffdq:Specification ;
     rdfs:label "Specification for: MULTIRECORD_MEASURE_COUNT_COMPLIANT_YEAR_INRANGE" ;
@@ -8424,9 +8424,9 @@ bdqtest:1ba18c8b-66a6-47d9-a709-404439332dba a bdqffdq:Measure ;
 
 bdqtest:1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88 a bdqffdq:Measure ;
     rdfs:label "MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD" ;
-    dcterms:description "Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT." ;
-    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2026-11-17> ;
-    dcterms:modified "2026-11-17"^^xsd:date ;
+    dcterms:description "Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value)." ;
+    dcterms:hasVersion <https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2026-11-25> ;
+    dcterms:modified "2026-11-25"^^xsd:date ;
     dcterms:references <https://doi.org/10.1371/journal.pone.0178731> ;
     owl:sameAs <urn:uuid:1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88> ;
     skos:historyNote "https://github.com/tdwg/bdq/issues/295" ;
@@ -8434,7 +8434,7 @@ bdqtest:1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88 a bdqffdq:Measure ;
     skos:prefLabel "Measurement over MultiRecord for QualityAssurance of Validation dwc:typeStatus Standard for MultiRecord" ;
     bdqffdq:hasActedUponInformationElement <https://rs.tdwg.org/bdqtest/informationelement/521ea0c6-8eb7-4d41-b1b6-40bbf1b2651e> ;
     bdqffdq:hasDataQualityDimension bdqdim:Conformance ;
-    bdqffdq:hasDateLastUpdated "2024-11-11"^^xsd:date ;
+    bdqffdq:hasDateLastUpdated "2026-11-25"^^xsd:date ;
     bdqffdq:hasResourceType bdqffdq:MultiRecord .
 
 bdqtest:23aced89-d613-479c-bc4c-837d74b73be0 a bdqffdq:Measure ;

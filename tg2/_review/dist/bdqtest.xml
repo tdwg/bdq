@@ -372,8 +372,8 @@
     <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MultiRecord"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/policy/89332ae7-a4d0-437a-9c15-b3cba92fb36d">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/89332ae7-a4d0-437a-9c15-b3cba92fb36d-2026-11-21"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-21</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/policy/version/89332ae7-a4d0-437a-9c15-b3cba92fb36d-2026-11-25"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-25</dcterms:modified>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementPolicy"/>
     <rdfs:label>MeasurementPolicy: (64) measures  in UseCase bdquc:Alien-Species</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:89332ae7-a4d0-437a-9c15-b3cba92fb36d"/>
@@ -1258,8 +1258,8 @@
     <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MultiRecord"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/method/e581e111-a7ef-4f16-9899-175b131b304e">
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/e581e111-a7ef-4f16-9899-175b131b304e-2026-11-17"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-17</dcterms:modified>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/e581e111-a7ef-4f16-9899-175b131b304e-2026-11-25"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-25</dcterms:modified>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MeasurementMethod"/>
     <rdfs:label>MeasurementMethod: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD with Specification: Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</rdfs:label>
     <owl:sameAs rdf:resource="urn:uuid:e581e111-a7ef-4f16-9899-175b131b304e"/>
@@ -4259,9 +4259,9 @@
     <bdqffdq:hasExpectedResponse>Count the number of VALIDATION_ENDDAYOFYEAR_INRANGE in the MultiRecord that have Response.result=COMPLIANT.</bdqffdq:hasExpectedResponse>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88">
-    <dcterms:description>Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT.</dcterms:description>
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2026-11-17"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-17</dcterms:modified>
+    <dcterms:description>Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).</dcterms:description>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2026-11-25"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-25</dcterms:modified>
     <dcterms:references rdf:resource="https://doi.org/10.1371/journal.pone.0178731"/>
     <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Measure"/>
     <rdfs:label>MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</rdfs:label>
@@ -4271,7 +4271,7 @@
     <skos:prefLabel>Measurement over MultiRecord for QualityAssurance of Validation dwc:typeStatus Standard for MultiRecord</skos:prefLabel>
     <bdqffdq:hasActedUponInformationElement rdf:resource="https://rs.tdwg.org/bdqtest/informationelement/521ea0c6-8eb7-4d41-b1b6-40bbf1b2651e"/>
     <bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Conformance"/>
-    <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-11</bdqffdq:hasDateLastUpdated>
+    <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-25</bdqffdq:hasDateLastUpdated>
     <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MultiRecord"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/terms/8c5fe9c9-4ba9-49ef-b15a-9ccd0424e6ae">
@@ -5018,6 +5018,17 @@
     <skos:prefLabel>MeasurementMethod: MULTIRECORD_MEASURE_QA_CLASS_FOUND with Specification: Specification for: MULTIRECORD_MEASURE_QA_CLASS_FOUND</skos:prefLabel>
     <bdqffdq:forMeasure rdf:resource="https://rs.tdwg.org/bdqtest/terms/21541436-641d-45a9-938c-537484d94eb7"/>
     <bdqffdq:hasSpecification rdf:resource="https://rs.tdwg.org/bdqtest/specification/33abe762-eeca-41d0-a2b1-9847e2a07a59"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/296980d9-a8bf-4fe4-8596-ee2bbd140e38">
+    <dcterms:description>COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</dcterms:description>
+    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/specification/version/296980d9-a8bf-4fe4-8596-ee2bbd140e38-2026-11-25"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-25</dcterms:modified>
+    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
+    <rdfs:label>Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</rdfs:label>
+    <owl:sameAs rdf:resource="urn:uuid:296980d9-a8bf-4fe4-8596-ee2bbd140e38"/>
+    <skos:example></skos:example>
+    <bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
+    <bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/method/e4baa0f4-ee8c-4521-b9c0-89e6976d6c91">
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/e4baa0f4-ee8c-4521-b9c0-89e6976d6c91-2026-11-17"/>
@@ -8636,17 +8647,6 @@
     <bdqffdq:hasDataQualityDimension rdf:resource="https://rs.tdwg.org/bdqdim/terms/Conformance"/>
     <bdqffdq:hasDateLastUpdated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-18</bdqffdq:hasDateLastUpdated>
     <bdqffdq:hasResourceType rdf:resource="https://rs.tdwg.org/bdqffdq/terms/MultiRecord"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/specification/296980d9-a8bf-4fe4-8596-ee2bbd140e38">
-    <dcterms:description>COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</dcterms:description>
-    <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/specification/version/296980d9-a8bf-4fe4-8596-ee2bbd140e38-2024-11-11"/>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-11</dcterms:modified>
-    <rdf:type rdf:resource="https://rs.tdwg.org/bdqffdq/terms/Specification"/>
-    <rdfs:label>Specification for: MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD</rdfs:label>
-    <owl:sameAs rdf:resource="urn:uuid:296980d9-a8bf-4fe4-8596-ee2bbd140e38"/>
-    <skos:example></skos:example>
-    <bdqffdq:hasAuthoritiesDefaults></bdqffdq:hasAuthoritiesDefaults>
-    <bdqffdq:hasExpectedResponse>COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.</bdqffdq:hasExpectedResponse>
   </rdf:Description>
   <rdf:Description rdf:about="https://rs.tdwg.org/bdqtest/method/b95086d3-3d4d-4c95-9ea8-8b5894d0aede">
     <dcterms:hasVersion rdf:resource="https://rs.tdwg.org/bdqtest/method/version/b95086d3-3d4d-4c95-9ea8-8b5894d0aede-2026-11-17"/>
