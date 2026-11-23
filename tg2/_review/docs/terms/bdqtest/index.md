@@ -7755,16 +7755,16 @@ For Quality Assurance, filter record set until this measure is COMPLETE.
 ###  MULTIRECORD_MEASURE_QA_TYPESTATUS_STANDARD
 
 ####  Measurement over MultiRecord for QualityAssurance of Validation dwc:typeStatus Standard
-https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2026-11-17
+https://rs.tdwg.org/bdqtest/terms/version/1ca359ea-4df3-4dca-b92b-2bc8fa8e0c88-2026-11-25
 Acts upon  MultiRecord
 
 #### Description
 
-Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT.
+Measure if all VALIDATION_TYPESTATUS_STANDARD in a record set are COMPLIANT or INTERNAL_PREREQUISITES_NOT_MET (indicating some empty value).
 
 #### Specification
 
-COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT; otherwise NOT_COMPLETE.
+COMPLETE if every VALIDATION_TYPESTATUS_STANDARD in the MultiRecord has Response.result=COMPLIANT or Response.status=INTERNAL_PREREQUISITES_NOT_MET, otherwise NOT_COMPLETE.
 
 #### Information Elements
 
@@ -8944,7 +8944,7 @@ https://doi.org/10.3897/biss.4.50889
 
 **To cite this document specifically, use the following:**
 
-TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-24>
+TDWG Biodiversity Data Quality Interest Group Task Group 2: Data Quality Tests and Assertions. 2026. BDQ Tests Quick Reference Guide. Biodiversity Information Standards (TDWG). <https://rs.tdwg.org/bdqtest/doc/qrg/2026-11-25>
 
 **Biodiversity Information Standards (TDWG)**
 
