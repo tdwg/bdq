@@ -32,14 +32,16 @@ with open (expandedFileName) as csvfile:
 		# "LineNumber","dataID","LineForTest","GitHubIssueNo","GUID","Label","Response.status","Response.result","Response.comment","IssuesWithThisRow",
 		# into input.data
 		separate = ["LineNumber","dataID","LineForTest","GitHubIssueNo","GUID","Label","Response.status","Response.result","Response.comment","IssuesWithThisRow"]
-		header_names_to_combine = list(set(header_names).difference(separate))
+		# keep the column order of the expanded file, so the output is the same on every run
+		header_names_to_combine = [h for h in header_names if h not in separate]
 		try: 
 			for index, row in dataFrame.iterrows():
 				combinedTerms = ''
 				separator = ""
 				for term in header_names_to_combine:
 					if not pandas.isna(row[term]) : 
-						combinedTerms += separator + "{}=\"\"{}\"\"".format(term,row[term])
+						# quotes within a value (e.g. an Amendment's JSON) are doubled, as CSV requires
+						combinedTerms += separator + "{}=\"\"{}\"\"".format(term,str(row[term]).replace('"','""'))
 						separator = ", "
 				line = '"{}","{}","{}",'.format(str(row['LineNumber']),str(row['dataID']),str(row['LineForTest']))
 				line += '"{}","{}","{}",'.format(str(row['GitHubIssueNo']),str(row['GUID']),str(row['Label']))
